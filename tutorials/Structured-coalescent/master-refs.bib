@@ -1,0 +1,231 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: MacRoman
+
+@STRING{AHG = {Annals of Human Genetics}}
+
+@STRING{AJHG = {American Journal of Human Genetics}}
+
+@STRING{ARB = {Annual Review of Biochemistry}}
+
+@STRING{ARCB = {Annual Review of Cell Biology}}
+
+@STRING{BI = {Bioinformatics}}
+
+@STRING{BIOGEN = {Biochemical Genetics}}
+
+@STRING{BJLS = {Biological Journal of the Linnean Society}}
+
+@STRING{BMB = {Bulletin of Mathematical Biology}}
+
+@STRING{BMCBI = {BMC Bioinformatics}}
+
+@STRING{CABIOS = {Computer Applications in the Biosciences}}
+
+@STRING{CACM = {Communications of the ACM}}
+
+@STRING{CELL = {Cell}}
+
+@STRING{COCB = {Current Opinion in Cell Biology}}
+
+@STRING{COGD = {Current Opinion in Genetics and Development}}
+
+@STRING{ComputChem = {Computers and Chemistry}}
+
+@STRING{COSB = {Current Opinion in Structural Biology}}
+
+@STRING{CSHSQB = {Cold Spring Harbor Symposia Quantitative Biology}}
+
+@STRING{EMBO = {EMBO Journal}}
+
+@STRING{EVO = {Evolution}}
+
+@STRING{GB = {Genome Biology}}
+
+@STRING{GEN = {Genetics}}
+
+@STRING{GR = {Genome Research}}
+
+@STRING{JBSD = {Journal of Biomolecular Structure and Dynamics}}
+
+@STRING{JCB = {Journal of Computational Biology}}
+
+@STRING{JMB = {Journal of Molecular Biology}}
+
+@STRING{JME = {Journal of Molecular Evolution}}
+
+@STRING{JRSS = {Journal of the Royal Statistical Society, B}}
+
+@STRING{JTB = {Journal of Theoretical Biology}}
+
+@STRING{MBE = {Molecular Biology and Evolution}}
+
+@STRING{MBIO = {Mathematical Biosciences}}
+
+@STRING{MCB = {Molecular Cell Biology}}
+
+@STRING{ME = {Methods in Enzymology}}
+
+@STRING{MPE = {Molecular Phylogenetics and Evolution}}
+
+@STRING{NAR = {Nucleic Acids Research}}
+
+@STRING{Nature = {Nature}}
+
+@STRING{NB = {Nature Biotechnology}}
+
+@STRING{NC = {Neural Computation}}
+
+@STRING{NG = {Nature Genetics}}
+
+@STRING{NNB = {Nature New Biology}}
+
+@STRING{PE = {Protein Engineering}}
+
+@STRING{PHTRANSRB = {Philosophical Transactions of the Royal Society B}}
+
+@STRING{PLOSCOMPBIO = {PLoS Computational Biology}}
+
+@STRING{PNAS = {Proceedings of the National Academy of Sciences, USA}}
+
+@STRING{PROCROYB = {Proceedings of the Royal Society B}}
+
+@STRING{PROT = {Proteins}}
+
+@STRING{PROTSCI = {Protein Science}}
+
+@STRING{Science = {Science}}
+
+@STRING{S = Science}
+
+@STRING{SIAM = {SIAM Journal of Applied Mathematics}}
+
+@STRING{SYSB = {Systematic Biology}}
+
+@STRING{SZ = {Systematic Zoology}}
+
+@STRING{TIBTECH = {Trends in Biotechnology}}
+
+@STRING{TIGS = {Trends in Genetics}}
+
+@article{Bouckaert2014,
+abstract = {We present a new open source, extensible and flexible software platform for Bayesian evolutionary analysis called BEAST 2. This software platform is a re-design of the popular BEAST 1 platform to correct structural deficiencies that became evident as the BEAST 1 software evolved. Key among those deficiencies was the lack of post-deployment extensibility. BEAST 2 now has a fully developed package management system that allows third party developers to write additional functionality that can be directly installed to the BEAST 2 analysis platform via a package manager without requiring a new software release of the platform. This package architecture is showcased with a number of recently published new models encompassing birth-death-sampling tree priors, phylodynamics and model averaging for substitution models and site partitioning. A second major improvement is the ability to read/write the entire state of the MCMC chain to/from disk allowing it to be easily shared between multiple instances of the BEAST software. This facilitates checkpointing and better support for multi-processor and high-end computing extensions. Finally, the functionality in new packages can be easily added to the user interface (BEAUti 2) by a simple XML template-based mechanism because BEAST 2 has been re-designed to provide greater integration between the analysis engine and the user interface so that, for example BEAST and BEAUti use exactly the same XML file format.},
+author = {Bouckaert, Remco and Heled, Joseph and K{\"{u}}hnert, Denise and Vaughan, Tim and Wu, Chieh-Hsi and Xie, Dong and Suchard, Marc A and Rambaut, Andrew and Drummond, Alexei J},
+doi = {10.1371/journal.pcbi.1003537},
+file = {:Users/nicmuell/Library/Application Support/Mendeley Desktop/Downloaded/Bouckaert et al. - 2014 - BEAST 2 a software platform for Bayesian evolutionary analysis.pdf:pdf},
+issn = {1553-7358},
+journal = {PLoS computational biology},
+mendeley-groups = {Methods,SkylineTutorial},
+month = {apr},
+number = {4},
+pages = {e1003537},
+pmid = {24722319},
+publisher = {Public Library of Science},
+title = {{BEAST 2: a software platform for Bayesian evolutionary analysis.}},
+url = {http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003537},
+volume = {10},
+year = {2014}
+}
+@article{Vaughan2014,
+abstract = {MOTIVATION: Population structure significantly affects evolutionary dynamics. Such structure may be due to spatial segregation, but may also reflect any other gene-flow-limiting aspect of a model. In combination with the structured coalescent, this fact can be used to inform phylogenetic tree reconstruction, as well as to infer parameters such as migration rates and subpopulation sizes from annotated sequence data. However, conducting Bayesian inference under the structured coalescent is impeded by the difficulty of constructing Markov Chain Monte Carlo (MCMC) sampling algorithms (samplers) capable of efficiently exploring the state space.
+
+RESULTS: In this article, we present a new MCMC sampler capable of sampling from posterior distributions over structured trees: timed phylogenetic trees in which lineages are associated with the distinct subpopulation in which they lie. The sampler includes a set of MCMC proposal functions that offer significant mixing improvements over a previously published method. Furthermore, its implementation as a BEAST 2 package ensures maximum flexibility with respect to model and prior specification. We demonstrate the usefulness of this new sampler by using it to infer migration rates and effective population sizes of H3N2 influenza between New Zealand, New York and Hong Kong from publicly available hemagglutinin (HA) gene sequences under the structured coalescent.
+
+AVAILABILITY AND IMPLEMENTATION: The sampler has been implemented as a publicly available BEAST 2 package that is distributed under version 3 of the GNU General Public License at http://compevol.github.io/MultiTypeTree.},
+author = {Vaughan, Timothy G and K{\"{u}}hnert, Denise and Popinga, Alex and Welch, David and Drummond, Alexei J},
+doi = {10.1093/bioinformatics/btu201},
+file = {:Users/nicmuell/Library/Application Support/Mendeley Desktop/Downloaded/Vaughan et al. - 2014 - Efficient Bayesian inference under the structured coalescent.pdf:pdf},
+issn = {1367-4811},
+journal = {Bioinformatics (Oxford, England)},
+month = {aug},
+number = {16},
+pages = {2272--9},
+pmid = {24753484},
+title = {{Efficient Bayesian inference under the structured coalescent.}},
+url = {http://bioinformatics.oxfordjournals.org/content/early/2014/04/20/bioinformatics.btu201.short},
+volume = {30},
+year = {2014}
+}
+
+@article{Rambaut2008,
+abstract = {The evolutionary interaction between influenza A virus and the human immune system, manifest as 'antigenic drift' of the viral haemagglutinin, is one of the best described patterns in molecular evolution. However, little is known about the genome-scale evolutionary dynamics of this pathogen. Similarly, how genomic processes relate to global influenza epidemiology, in which the A/H3N2 and A/H1N1 subtypes co-circulate, is poorly understood. Here through an analysis of 1,302 complete viral genomes sampled from temperate populations in both hemispheres, we show that the genomic evolution of influenza A virus is characterized by a complex interplay between frequent reassortment and periodic selective sweeps. The A/H3N2 and A/H1N1 subtypes exhibit different evolutionary dynamics, with diverse lineages circulating in A/H1N1, indicative of weaker antigenic drift. These results suggest a sink?source model of viral ecology in which new lineages are seeded from a persistent influenza reservoir, which we hypothesize to be located in the tropics, to sink populations in temperate regions.},
+author = {Rambaut, Andrew and Pybus, Oliver G. and Nelson, Martha I. and Viboud, Cecile and Taubenberger, Jeffery K. and Holmes, Edward C.},
+doi = {10.1038/nature06945},
+issn = {0028-0836},
+journal = {Nature},
+mendeley-groups = {Influenza},
+month = {apr},
+number = {7195},
+pages = {615--619},
+publisher = {Nature Publishing Group},
+shorttitle = {Nature},
+title = {{The genomic and epidemiological dynamics of human influenza A virus}},
+url = {http://dx.doi.org/10.1038/nature06945},
+volume = {453},
+year = {2008}
+}
+@article{Russell2008,
+abstract = {Antigenic and genetic analysis of the hemagglutinin of ?13,000 human influenza A (H3N2) viruses from six continents during 2002?2007 revealed that there was continuous circulation in east and Southeast Asia (E-SE Asia) via a region-wide network of temporally overlapping epidemics and that epidemics in the temperate regions were seeded from this network each year. Seed strains generally first reached Oceania, North America, and Europe, and later South America. This evidence suggests that once A (H3N2) viruses leave E-SE Asia, they are unlikely to contribute to long-term viral evolution. If the trends observed during this period are an accurate representation of overall patterns of spread, then the antigenic characteristics of A (H3N2) viruses outside E-SE Asia may be forecast each year based on surveillance within E-SE Asia, with consequent improvements to vaccine strain selection.},
+author = {Russell, C. A. and Jones, T. C. and Barr, I. G. and Cox, N. J. and Garten, R. J. and Gregory, V. and Gust, I. D. and Hampson, A. W. and Hay, A. J. and Hurt, A. C. and de Jong, J. C. and Kelso, A. and Klimov, A. I. and Kageyama, T. and Komadina, N. and Lapedes, A. S. and Lin, Y. P. and Mosterin, A. and Obuchi, M. and Odagiri, T. and Osterhaus, A. D. M. E. and Rimmelzwaan, G. F. and Shaw, M. W. and Skepner, E. and Stohr, K. and Tashiro, M. and Fouchier, R. A. M. and Smith, D. J.},
+doi = {10.1126/science.1154137},
+issn = {0036-8075},
+journal = {Science},
+month = {apr},
+number = {5874},
+pages = {340--346},
+title = {{The Global Circulation of Seasonal Influenza A (H3N2) Viruses}},
+url = {http://www.sciencemag.org/content/320/5874/340.abstract},
+volume = {320},
+year = {2008}
+}
+@article{Lemey2014,
+abstract = {Information on global human movement patterns is central to spatial epidemiological models used to predict the behavior of influenza and other infectious diseases. Yet it remains difficult to test which modes of dispersal drive pathogen spread at various geographic scales using standard epidemiological data alone. Evolutionary analyses of pathogen genome sequences increasingly provide insights into the spatial dynamics of influenza viruses, but to date they have largely neglected the wealth of information on human mobility, mainly because no statistical framework exists within which viral gene sequences and empirical data on host movement can be combined. Here, we address this problem by applying a phylogeographic approach to elucidate the global spread of human influenza subtype H3N2 and assess its ability to predict the spatial spread of human influenza A viruses worldwide. Using a framework that estimates the migration history of human influenza while simultaneously testing and quantifying a range of potential predictive variables of spatial spread, we show that the global dynamics of influenza H3N2 are driven by air passenger flows, whereas at more local scales spread is also determined by processes that correlate with geographic distance. Our analyses further confirm a central role for mainland China and Southeast Asia in maintaining a source population for global influenza diversity. By comparing model output with the known pandemic expansion of H1N1 during 2009, we demonstrate that predictions of influenza spatial spread are most accurate when data on human mobility and viral evolution are integrated. In conclusion, the global dynamics of influenza viruses are best explained by combining human mobility data with the spatial information inherent in sampled viral genomes. The integrated approach introduced here offers great potential for epidemiological surveillance through phylogeographic reconstructions and for improving predictive models of disease control.},
+author = {Lemey, Philippe and Rambaut, Andrew and Bedford, Trevor and Faria, Nuno and Bielejec, Filip and Baele, Guy and Russell, Colin A and Smith, Derek J and Pybus, Oliver G and Brockmann, Dirk and Suchard, Marc A},
+doi = {10.1371/journal.ppat.1003932},
+file = {:Users/nicmuell/Library/Application Support/Mendeley Desktop/Downloaded/Lemey et al. - 2014 - Unifying viral genetics and human transportation data to predict the global transmission dynamics of human influen.pdf:pdf},
+issn = {1553-7374},
+journal = {PLoS pathogens},
+keywords = {Biological Evolution,Human Migration,Human Migration: trends,Humans,Influenza A Virus, H3N2 Subtype,Influenza A Virus, H3N2 Subtype: genetics,Influenza, Human,Influenza, Human: epidemiology,Influenza, Human: transmission,Models, Theoretical,Phylogeny},
+month = {feb},
+number = {2},
+pages = {e1003932},
+pmid = {24586153},
+publisher = {Public Library of Science},
+title = {{Unifying viral genetics and human transportation data to predict the global transmission dynamics of human influenza H3N2.}},
+url = {http://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003932},
+volume = {10},
+year = {2014}
+}
+
+
+@BOOK{gilks96a,
+  title = {Markov chain {M}onte {C}arlo in practice},
+  publisher = {Chapman and Hall/CRC},
+  year = {1996},
+  editor = {W. R. Gilks and S. Richardson and D. J. Spiegelhalter},
+  address = {Boca Raton}
+}
+
+@BOOK{jordan99,
+  title = {Learning in graphical models},
+  publisher = {MIT Press},
+  year = {1999},
+  editor = {M. I. Jordan},
+  address = {Cambridge, MA}
+}
+
+@MISC{penguinBlog,
+  title = {March of the Fossil Penguins},
+  howpublished = {\url{https://fossilpenguins.wordpress.com}}
+}
+
+@MISC{revbayesGH,
+  title = {The RevBayes GitHub Repository},
+  howpublished = {\url{https://github.com/revbayes/revbayes}}
+}
+
+@BOOK{BEAST2book2014,
+  title = {Bayesian evolutionary analysis with {BEAST} 2},
+  publisher = {Cambridge University Press},
+  year = {2014},
+  author = {Alexei J. Drummond and Remco R. Bouckaert}
+}

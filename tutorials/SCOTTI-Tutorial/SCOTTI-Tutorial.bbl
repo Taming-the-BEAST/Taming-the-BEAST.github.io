@@ -1,0 +1,282 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Cottam2008PlosPath}{article}{}
+    \name{author}{18}{}{%
+      {{hash=CEM}{%
+         family={Cottam},
+         familyi={C\bibinitperiod},
+         given={Eleanor\bibnamedelima M.},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wadsworth},
+         familyi={W\bibinitperiod},
+         given={Jemma},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SAE}{%
+         family={Shaw},
+         familyi={S\bibinitperiod},
+         given={Andrew\bibnamedelima E.},
+         giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=RRJ}{%
+         family={Rowlands},
+         familyi={R\bibinitperiod},
+         given={Rebecca\bibnamedelima J.},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GL}{%
+         family={Goatley},
+         familyi={G\bibinitperiod},
+         given={Lynnette},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Maan},
+         familyi={M\bibinitperiod},
+         given={Sushila},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MNS}{%
+         family={Maan},
+         familyi={M\bibinitperiod},
+         given={Narender\bibnamedelima S.},
+         giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MPPC}{%
+         family={Mertens},
+         familyi={M\bibinitperiod},
+         given={Peter P.\bibnamedelima C.},
+         giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+      {{hash=EK}{%
+         family={Ebert},
+         familyi={E\bibinitperiod},
+         given={Katja},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yanmin},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=RED}{%
+         family={Ryan},
+         familyi={R\bibinitperiod},
+         given={Eoin\bibnamedelima D.},
+         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=JN}{%
+         family={Juleff},
+         familyi={J\bibinitperiod},
+         given={Nicholas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=FNP}{%
+         family={Ferris},
+         familyi={F\bibinitperiod},
+         given={Nigel\bibnamedelima P.},
+         giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=WJW}{%
+         family={Wilesmith},
+         familyi={W\bibinitperiod},
+         given={John\bibnamedelima W.},
+         giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=HDT}{%
+         family={Haydon},
+         familyi={H\bibinitperiod},
+         given={Daniel\bibnamedelima T.},
+         giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=KDP}{%
+         family={King},
+         familyi={K\bibinitperiod},
+         given={Donald\bibnamedelima P.},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=PDJ}{%
+         family={Paton},
+         familyi={P\bibinitperiod},
+         given={David\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=KNJ}{%
+         family={Knowles},
+         familyi={K\bibinitperiod},
+         given={Nick\bibnamedelima J.},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{Cattle, DNA sequence analysis, Foot and mouth disease, Genomics,
+  Nucleotide sequencing, Sequence analysis, Veterinary diseases, Viral
+  genomics}
+    \strng{namehash}{CEM+1}
+    \strng{fullhash}{CEMWJSAERRJGLMSMNSMPPCEKLYREDJNFNPWJWHDTKDPPDJKNJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1371/journal.ppat.1000050
+    \endverb
+    \field{issn}{1553-7374}
+    \field{number}{4}
+    \field{pages}{e1000050}
+    \field{title}{Transmission {Pathways} of {Foot}-and-{Mouth} {Disease}
+  {Virus} in the {United} {Kingdom} in 2007}
+    \field{volume}{4}
+    \field{journaltitle}{PLOS Pathogens}
+    \field{month}{04}
+    \field{year}{2008}
+  \endentry
+
+  \entry{deMaio2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DMN}{%
+         family={De\bibnamedelima Maio},
+         familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Nicola},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=OKM}{%
+         family={O’Reilly},
+         familyi={O\bibinitperiod},
+         given={Kathleen\bibnamedelima M.},
+         giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \keyw{Animal phylogenetics, Ebola Virus, effective population size,
+  Phylogenetic analysis, phylogenetics, Phylogeography, Probability density,
+  Zoonoses}
+    \strng{namehash}{DMN+1}
+    \strng{fullhash}{DMNWCHOKMWD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2015}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1371/journal.pgen.1005421
+    \endverb
+    \field{issn}{1553-7404}
+    \field{number}{8}
+    \field{pages}{e1005421}
+    \field{shorttitle}{New {Routes} to {Phylogeography}}
+    \field{title}{New {Routes} to {Phylogeography}: {A} {Bayesian} {Structured}
+  {Coalescent} {Approximation}}
+    \field{volume}{11}
+    \field{journaltitle}{PLOS Genetics}
+    \field{month}{08}
+    \field{year}{2015}
+  \endentry
+
+  \entry{deMaio2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DMN}{%
+         family={De\bibnamedelima Maio},
+         familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Nicola},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=WDJ}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={Daniel\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{epidemiology, Genetic epidemiology, Klebsiella pneumoniae, Pathogens,
+  Phylogenetic analysis, phylogenetics, Simulation and modeling, Viral
+  evolution}
+    \strng{namehash}{DMN+1}
+    \strng{fullhash}{DMNWCHWDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1371/journal.pcbi.1005130
+    \endverb
+    \field{issn}{1553-7358}
+    \field{number}{9}
+    \field{pages}{e1005130}
+    \field{title}{{SCOTTI}: {Efficient} {Reconstruction} of {Transmission}
+  within {Outbreaks} with the {Structured} {Coalescent}}
+    \field{volume}{12}
+    \field{journaltitle}{PLOS Computational Biology}
+    \field{month}{09}
+    \field{year}{2016}
+  \endentry
+
+  \entry{BEAST2book2014}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{DAJBRR1}
+    \strng{fullhash}{DAJBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Bayesian evolutionary analysis with {BEAST} 2}
+    \field{year}{2014}
+  \endentry
+\endsortlist
+\endinput

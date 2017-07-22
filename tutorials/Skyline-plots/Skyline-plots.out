@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [1][-]{section.2}{Programs used in this Exercise}{}% 2
+\BOOKMARK [2][-]{subsubsection.2.0.1}{BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.0.2}{BEAUti - Bayesian Evolutionary Analysis Utility}{subsubsection.2.0.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.0.3}{Tracer}{subsubsection.2.0.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.0.4}{R}{subsubsection.2.0.1}% 6
+\BOOKMARK [1][-]{section.3}{Practical: Bayesian and birth-death skyline plot}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{The Data}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Creating the Analysis File with BEAUti}{section.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Install BEAST 2 Plug-Ins}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Setting up the analysis with Bayesian Coalescent Skyline}{subsection.3.2}% 11
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Effective Population Size}{subsection.3.2}% 12
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Exploring the results of Bayesian Coalescent Skyline analysis}{subsection.3.2}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Choosing the Dimension}{subsection.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Birth-Death Skyline}{subsection.3.2}% 15
+\BOOKMARK [3][-]{subsubsection.3.2.7}{The parameterization of the Birth-Death Model}{subsection.3.2}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.8}{Visualizing the Birth-Death Skyline Output}{subsection.3.2}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Some considerations for using skyline plots}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{Useful Links}{}% 19

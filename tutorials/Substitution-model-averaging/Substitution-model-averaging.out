@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [1][-]{section.2}{Programs used in this Exercise}{}% 2
+\BOOKMARK [2][-]{subsubsection.2.0.1}{BEAST2 - Bayesian Evolutionary Analysis Sampling Trees}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.0.2}{BEAUti2 - Bayesian Evolutionary Analysis Utility}{subsubsection.2.0.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.0.3}{Tracer}{subsubsection.2.0.1}% 5
+\BOOKMARK [1][-]{section.3}{Practical: Selecting a substitution model}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Installing the bModelTest Package}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{The Data}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{Setting up the analysis in BEAUti}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Run the analysis in BEAST}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.5}{Analyzing the output in Tracer}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.6}{Analyzing the output using BModelAnalyzer}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Acknowledgment}{}% 13
+\BOOKMARK [1][-]{section.5}{Useful Links}{}% 14

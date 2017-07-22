@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Style</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li class="active">
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	
+
+<div class="blog-post">
+	<div class="row">
+		<div class="col-md-1"></div>	
+		<div class="col-md-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/contribute/Style/" class="off">Style</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						28 Aug 2016
+						
+						by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+								
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>					
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">	
+			
+			<div class="post">
+				<h2>Introduction</h2>
+
+<p>This is a style guide to help in formatting Markdown content for the site. This page is very similar to the style cheatsheet on Trevor Bedford&#39;s site.
+In general, I&#39;ve tried to adhere to GitHub style, with the intention that anything that renders on GitHub will render here as well.  The following isn&#39;t meant to be exhaustive, just a reminder of what&#39;s possible with Markdown. </p>
+
+<hr>
+
+<h2>Headings</h2>
+<div class="highlight"><pre><code class="language-" data-lang=""># Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre></div>
+<h1>Heading 1</h1>
+
+<h2>Heading 2</h2>
+
+<h3>Heading 3</h3>
+
+<h4>Heading 4</h4>
+
+<h5>Heading 5</h5>
+
+<h6>Heading 6</h6>
+
+<hr>
+
+<h2>Text styling</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">Italicize text by surrounding it in *asterisks* or _underscores_.
+Bold text by surrounding it with **double asterisks** or __double underscores__.
+Combine with **_double asterisks plus underscores_**.
+Strike-through text with ~~double tildes~~.
+Superscript contiguous text with carrots like x^2y, surround with parentheses for more complex expressions like x^(2y + 3z).
+</code></pre></div>
+<p>Italicize text by surrounding it in <em>asterisks</em> or <em>underscores</em>.</p>
+
+<p>Bold text by surrounding it with <strong>double asterisks</strong> or <strong>double underscores</strong>.</p>
+
+<p>Combine with <strong><em>double asterisks plus underscores</em></strong>.</p>
+
+<p>Strike-through text with <del>double tildes</del>.</p>
+
+<p>Superscript contiguous text with carrots like 7<sup>th</sup> or x<sup>2y,</sup> surround with parentheses for more complex expressions like x<sup>2y + 3z</sup> or x<sup>2y + 5(x-y</sup>).</p>
+
+<hr>
+
+<h2>Lists</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">* Thing one with an asterisk
++ Thing two with a plus
+- Thing three with a minus
+
+1. The first order of business
+2. The second order of business
+  * The first part of the 2nd order
+  * The second part of the 2nd order
+3. The third order of business
+</code></pre></div>
+<ul>
+<li>Thing one with an asterisk</li>
+<li>Thing two with a plus</li>
+<li>Thing three with a minus</li>
+</ul>
+
+<ol>
+<li>The first order of business</li>
+<li>The second order of business
+
+<ul>
+<li>The first part of the 2nd order</li>
+<li>The second part of the 2nd order</li>
+</ul></li>
+<li>The third order of business</li>
+</ol>
+
+<hr>
+
+<h2>Images</h2>
+
+<p>Images work like links, but with a prefaced !.  This supports SVG as well PNG, JPG, etc...</p>
+<div class="highlight"><pre><code class="language-" data-lang="">![](http://octodex.github.com/images/minion.png)
+![An image with alt text](http://octodex.github.com/images/dojocat.jpg)
+</code></pre></div>
+<p><img src="http://octodex.github.com/images/minion.png" alt=""></p>
+
+<p><img src="http://octodex.github.com/images/dojocat.jpg" alt="An image with alt text"></p>
+
+<hr>
+
+<p>Can always drop in HTML, so sizing adjustments can be done with:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;img style="width:50px;" src="/images/logo_bw.svg"/&gt;
+</code></pre></div>
+<p><img style="width:50px;" src="/images/logo_bw.svg"/></p>
+
+<p>To add a caption to an image use the figure tag, like so: </p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/logo_bw.svg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"beastie"</span><span class="nt">/&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;figcaption&gt;</span>A rat in a cage.<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div>
+<figure>
+  <img src="/images/logo_bw.svg" alt="">
+  <figcaption>A rat in a cage.</figcaption>
+  <a id="fig:beastie"/></a>
+</figure>
+
+<p>The <code>&lt;a&gt;</code> tag is optional, but allows us to insert a reference to the figure (see Links section below).</p>
+
+<hr>
+
+<h2>Code</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">A bit of inline monospaced font can be made `by surrounding text with backticks`.
+</code></pre></div>
+<p>A bit of inline monospaced font can be made <code>by surrounding text with backticks</code>.</p>
+
+<hr>
+
+<p>Larger code blocks can be made by surrounding the block with three backticks <code>```</code>, and code can be highlighted by specifying language (most languages are supported) after the backticks, like so:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">```java
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+
+}
+```
+</code></pre></div>
+<p>results in:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Prints "Hello, World" to the terminal window.</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, World"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>
+<p><br></p>
+<div class="highlight"><pre><code class="language-" data-lang="">```xml
+&lt;BirthDeathSkylineModel spec="BirthDeathSkylineModel" id="birthDeath" tree="@tree" contemp="true"&gt;
+      &lt;parameter name="origin" id="origin" value ="100" lower="0."/&gt;    
+      &lt;parameter name="R0" id="R0" value="2" lower="0." dimension ="10"/&gt;
+      &lt;parameter name="becomeUninfectiousRate" id="becomeUninfectiousRate" value="1" lower="0." dimension ="10"/&gt;
+      &lt;parameter name="samplingProportion" id="samplingProportion" value="0."/&gt;
+      &lt;parameter name="rho" id="rho" value="1e-6" lower="0." upper="1."/&gt;
+&lt;/BirthDeathSkylineModel&gt;
+```
+</code></pre></div>
+<p>results in:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;BirthDeathSkylineModel</span> <span class="na">spec=</span><span class="s">"BirthDeathSkylineModel"</span> <span class="na">id=</span><span class="s">"birthDeath"</span> <span class="na">tree=</span><span class="s">"@tree"</span> <span class="na">contemp=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">name=</span><span class="s">"origin"</span> <span class="na">id=</span><span class="s">"origin"</span> <span class="na">value =</span><span class="s">"100"</span> <span class="na">lower=</span><span class="s">"0."</span><span class="nt">/&gt;</span>    
+      <span class="nt">&lt;parameter</span> <span class="na">name=</span><span class="s">"R0"</span> <span class="na">id=</span><span class="s">"R0"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">lower=</span><span class="s">"0."</span> <span class="na">dimension =</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">name=</span><span class="s">"becomeUninfectiousRate"</span> <span class="na">id=</span><span class="s">"becomeUninfectiousRate"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">lower=</span><span class="s">"0."</span> <span class="na">dimension =</span><span class="s">"10"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">name=</span><span class="s">"samplingProportion"</span> <span class="na">id=</span><span class="s">"samplingProportion"</span> <span class="na">value=</span><span class="s">"0."</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">name=</span><span class="s">"rho"</span> <span class="na">id=</span><span class="s">"rho"</span> <span class="na">value=</span><span class="s">"1e-6"</span> <span class="na">lower=</span><span class="s">"0."</span> <span class="na">upper=</span><span class="s">"1."</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/BirthDeathSkylineModel&gt;</span>
+</code></pre></div>
+<p><br></p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">myString</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"Hello, World!"</span><span class="w">
+    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">print</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">myString</span><span class="p">)</span><span class="w">
+    </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"Hello, World!"</span><span class="w">
+    </span><span class="err">``</span><span class="n">`
+results in:
+
+`</span><span class="err">``</span><span class="n">R</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myString</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"Hello, World!"</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">print</span><span class="w"> </span><span class="p">(</span><span class="n">myString</span><span class="p">)</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"Hello, World!"</span><span class="w">
+</span></code></pre></div>
+<hr>
+
+<h2>Tables</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">column A | column B | column C | column D
+-------- | -------- | -------- | --------
+1A       | 1B       | 1C       | 1D
+2A       | 2B       | 2C       | 2D
+3A       | 3B       | 3C       | 3D
+</code></pre></div>
+<table><thead>
+<tr>
+<th>column A</th>
+<th>column B</th>
+<th>column C</th>
+<th>column D</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1A</td>
+<td>1B</td>
+<td>1C</td>
+<td>1D</td>
+</tr>
+<tr>
+<td>2A</td>
+<td>2B</td>
+<td>2C</td>
+<td>2D</td>
+</tr>
+<tr>
+<td>3A</td>
+<td>3B</td>
+<td>3C</td>
+<td>3D</td>
+</tr>
+</tbody></table>
+
+<p>Text can be right-, left- or center-aligned within tables, like so:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+</code></pre></div>
+<table><thead>
+<tr>
+<th style="text-align: left">Left-aligned</th>
+<th style="text-align: center">Center-aligned</th>
+<th style="text-align: right">Right-aligned</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">git status</td>
+<td style="text-align: center">git status</td>
+<td style="text-align: right">git status</td>
+</tr>
+<tr>
+<td style="text-align: left">git diff</td>
+<td style="text-align: center">git diff</td>
+<td style="text-align: right">git diff</td>
+</tr>
+</tbody></table>
+
+<hr>
+
+<h2>Equations</h2>
+
+<p>Equations are rendered using KaTeX and follow LaTeX syntax. Equations are delimited by Liquid tags.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Inline equations: {`% eqinline \dot{x} = \sigma(y-x) %`}
+
+Displayed equations: 
+{`% eq \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) %`}
+
+Except remove the ` from between { and %.
+</code></pre></div>
+<p>Inline equations: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>x</mi></mrow><mo>˙</mo></mover><mo>=</mo><mi>σ</mi><mo>(</mo><mi>y</mi><mo>−</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\dot{x} = \sigma(y-x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">x</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>˙</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03588em;">σ</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mbin">−</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></p>
+
+<p>Displayed equations: 
+<div style='text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msup><mrow><mo fence="true">(</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>a</mi><mi>k</mi></msub><msub><mi>b</mi><mi>k</mi></msub><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo>≤</mo><mrow><mo fence="true">(</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>a</mi><mi>k</mi><mn>2</mn></msubsup><mo fence="true">)</mo></mrow><mrow><mo fence="true">(</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>b</mi><mi>k</mi><mn>2</mn></msubsup><mo fence="true">)</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \left( \sum_{k=1}<sup>n</sup> a_k b_k \right)<sup>2</sup> \leq \left( \sum_{k=1}<sup>n</sup> a_k<sup>2</sup> \right) \left( \sum_{k=1}<sup>n</sup> b_k<sup>2</sup> \right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.815108em;"></span><span class="strut bottom" style="height:3.117221em;vertical-align:-1.302113em;"></span><span class="base displaystyle textstyle uncramped"><span class="reset-textstyle displaystyle textstyle uncramped"><span class="minner"><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mop op-limits"><span class="vlist"><span style="top:1.202113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span style="top:-1.250005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">)</span></span></span><span class="vlist"><span style="top:-1.3639999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">≤</span><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mop op-limits"><span class="vlist"><span style="top:1.202113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span style="top:-1.250005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.247em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span style="top:-0.4129999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">)</span></span></span><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mop op-limits"><span class="vlist"><span style="top:1.202113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span style="top:-1.250005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.247em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span><span style="top:-0.4129999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">)</span></span></span></span></span></span></span></span></div></p>
+
+<hr>
+
+<h2>Instruction boxes (blockquotes)</h2>
+
+<p>Use blockquotes to give instructions in a framed box with a non-monospaced font and a different background, like so:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&gt; The data we have is not the data we want, and the data we need is not the data we have.
+
+&gt; We can input **any** formatted text in here:
+
+&gt; - Even
+&gt; - Lists
+
+&gt; or equations:
+
+&gt; {`% eq (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
+      \vdots &amp; \ddots &amp; \vdots \\
+      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right) %`}
+</code></pre></div>
+<blockquote>
+<p>The data we have is not the data we want, and the data we need is not the data we have.</p>
+
+<p>We can input <strong>any</strong> formatted text in here:</p>
+
+<ul>
+<li>Even</li>
+<li>Lists</li>
+</ul>
+
+<p>or equations:</p>
+
+<div style='text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mo>(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>)</mo><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mrow><mi>ϕ</mi><mo>(</mo><msub><mi>e</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>e</mi><mn>1</mn></msub><mo>)</mo></mrow></mtd><mtd><mrow><mo>⋯</mo></mrow></mtd><mtd><mrow><mi>ϕ</mi><mo>(</mo><msub><mi>e</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>)</mo></mrow></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">⋮</mi></mrow></mtd><mtd><mrow><mo>⋱</mo></mrow></mtd><mtd><mrow><mi mathvariant="normal">⋮</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>ϕ</mi><mo>(</mo><msub><mi>e</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mn>1</mn></msub><mo>)</mo></mrow></mtd><mtd><mrow><mo>⋯</mo></mrow></mtd><mtd><mrow><mi>ϕ</mi><mo>(</mo><msub><mi>e</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>)</mo></mrow></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mrow><msub><mi>y</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">⋮</mi></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
+      \vdots &amp; \ddots &amp; \vdots \\
+      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.08em;"></span><span class="strut bottom" style="height:3.66em;vertical-align:-1.5799999999999998em;"></span><span class="base displaystyle textstyle uncramped"><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="minner">…</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.24em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathit">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span><span style="top:0.01999999999999985em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">⋮</span></span></span><span style="top:1.2199999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathit">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.24em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="minner">⋯</span></span></span><span style="top:0.01999999999999985em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="minner">⋱</span></span></span><span style="top:1.2199999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="minner">⋯</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.24em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathit">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span><span style="top:0.01999999999999985em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">⋮</span></span></span><span style="top:1.2199999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathit">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.24em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:0.01999999999999985em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">⋮</span></span></span><span style="top:1.2199999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></span></span></span></div>
+</blockquote>
+
+<hr>
+
+<h2>Links</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">[This is an external link to Google](http://www.google.com/)
+
+[This is a relative link to elsewhere in the site](/projects/)
+
+[This is a link to a figure on the same page](#fig:beastie)
+</code></pre></div>
+<p><a href="http://www.google.com/">This is an external link to Google</a></p>
+
+<p><a href="/tutorials/">This is a relative link to elsewhere in the site</a></p>
+
+<p><a href="#fig:beastie">This is a link to a figure on the same page</a></p>
+
+<hr>
+
+<h2>Horizontal rule</h2>
+
+<p>Use more than three hyphens, asterisks or underscores. Using only three hyphens will still draw a line, but may cause interference with the yaml header in some parsers.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">****
+----
+____
+</code></pre></div>
+<hr>
+
+<hr>
+
+<hr>
+
+<h2>Line breaks</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">Here's a line for us to start with.
+
+This line is separated by two newlines, so it will be a separate paragraph.
+
+This line is also a separate paragraph, though...
+Adding a single line break does not create a new paragraph.
+
+For multiple line breaks use `&lt;br&gt;` tags: 
+
+&lt;br&gt;
+&lt;br&gt;
+like above.
+
+</code></pre></div>
+<p>Here&#39;s a line for us to start with.</p>
+
+<p>This line is separated by two newlines, so it will be a separate paragraph.</p>
+
+<p>This line is also a separate paragraph, though...
+Adding a single line break does not create a new paragraph.</p>
+
+<p>For multiple line breaks use <code>&lt;br&gt;</code> tags: </p>
+
+<p><br>
+<br>
+like above.</p>
+
+			</div>	
+		</div>			
+		<div class="col-md-1"></div>
+	</div>
+	
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>	
+
+</div>
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

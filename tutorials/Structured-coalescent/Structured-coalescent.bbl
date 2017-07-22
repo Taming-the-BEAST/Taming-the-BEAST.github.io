@@ -1,0 +1,683 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Bouckaert2014}{article}{}
+    \name{author}{9}{}{%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={K{\"{u}}hnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRHJKDVTWCHXDSMARADAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    We present a new open source, extensible and flexible software platform for
+  Bayesian evolutionary analysis called BEAST 2. This software platform is a
+  re-design of the popular BEAST 1 platform to correct structural deficiencies
+  that became evident as the BEAST 1 software evolved. Key among those
+  deficiencies was the lack of post-deployment extensibility. BEAST 2 now has a
+  fully developed package management system that allows third party developers
+  to write additional functionality that can be directly installed to the BEAST
+  2 analysis platform via a package manager without requiring a new software
+  release of the platform. This package architecture is showcased with a number
+  of recently published new models encompassing birth-death-sampling tree
+  priors, phylodynamics and model averaging for substitution models and site
+  partitioning. A second major improvement is the ability to read/write the
+  entire state of the MCMC chain to/from disk allowing it to be easily shared
+  between multiple instances of the BEAST software. This facilitates
+  checkpointing and better support for multi-processor and high-end computing
+  extensions. Finally, the functionality in new packages can be easily added to
+  the user interface (BEAUti 2) by a simple XML template-based mechanism
+  because BEAST 2 has been re-designed to provide greater integration between
+  the analysis engine and the user interface so that, for example BEAST and
+  BEAUti use exactly the same XML file format.%
+    }
+    \verb{doi}
+    \verb 10.1371/journal.pcbi.1003537
+    \endverb
+    \field{issn}{1553-7358}
+    \field{number}{4}
+    \field{pages}{e1003537}
+    \field{title}{{BEAST 2: a software platform for Bayesian evolutionary
+  analysis.}}
+    \verb{url}
+    \verb http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
+    \verb .1003537
+    \endverb
+    \field{volume}{10}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Bouckaert et al. - 2014 - BEAST 2 a software platform for Bayesian
+    \verb  evolutionary analysis.pdf:pdf
+    \endverb
+    \field{journaltitle}{PLoS computational biology}
+    \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{BEAST2book2014}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{DAJBRR1}
+    \strng{fullhash}{DAJBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Bayesian evolutionary analysis with {BEAST} 2}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Lemey2014}{article}{}
+    \name{author}{11}{}{%
+      {{hash=LP}{%
+         family={Lemey},
+         familyi={L\bibinitperiod},
+         given={Philippe},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Bedford},
+         familyi={B\bibinitperiod},
+         given={Trevor},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=FN}{%
+         family={Faria},
+         familyi={F\bibinitperiod},
+         given={Nuno},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Bielejec},
+         familyi={B\bibinitperiod},
+         given={Filip},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Baele},
+         familyi={B\bibinitperiod},
+         given={Guy},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=RCA}{%
+         family={Russell},
+         familyi={R\bibinitperiod},
+         given={Colin\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=SDJ}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Derek\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={Oliver\bibnamedelima G},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Brockmann},
+         familyi={B\bibinitperiod},
+         given={Dirk},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \keyw{Biological Evolution,Human Migration,Human Migration:
+  trends,Humans,Influenza A Virus, H3N2 Subtype,Influenza A Virus, H3N2
+  Subtype: genetics,Influenza, Human,Influenza, Human: epidemiology,Influenza,
+  Human: transmission,Models, Theoretical,Phylogeny}
+    \strng{namehash}{LP+1}
+    \strng{fullhash}{LPRABTFNBFBGRCASDJPOGBDSMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    Information on global human movement patterns is central to spatial
+  epidemiological models used to predict the behavior of influenza and other
+  infectious diseases. Yet it remains difficult to test which modes of
+  dispersal drive pathogen spread at various geographic scales using standard
+  epidemiological data alone. Evolutionary analyses of pathogen genome
+  sequences increasingly provide insights into the spatial dynamics of
+  influenza viruses, but to date they have largely neglected the wealth of
+  information on human mobility, mainly because no statistical framework exists
+  within which viral gene sequences and empirical data on host movement can be
+  combined. Here, we address this problem by applying a phylogeographic
+  approach to elucidate the global spread of human influenza subtype H3N2 and
+  assess its ability to predict the spatial spread of human influenza A viruses
+  worldwide. Using a framework that estimates the migration history of human
+  influenza while simultaneously testing and quantifying a range of potential
+  predictive variables of spatial spread, we show that the global dynamics of
+  influenza H3N2 are driven by air passenger flows, whereas at more local
+  scales spread is also determined by processes that correlate with geographic
+  distance. Our analyses further confirm a central role for mainland China and
+  Southeast Asia in maintaining a source population for global influenza
+  diversity. By comparing model output with the known pandemic expansion of
+  H1N1 during 2009, we demonstrate that predictions of influenza spatial spread
+  are most accurate when data on human mobility and viral evolution are
+  integrated. In conclusion, the global dynamics of influenza viruses are best
+  explained by combining human mobility data with the spatial information
+  inherent in sampled viral genomes. The integrated approach introduced here
+  offers great potential for epidemiological surveillance through
+  phylogeographic reconstructions and for improving predictive models of
+  disease control.%
+    }
+    \verb{doi}
+    \verb 10.1371/journal.ppat.1003932
+    \endverb
+    \field{issn}{1553-7374}
+    \field{number}{2}
+    \field{pages}{e1003932}
+    \field{title}{{Unifying viral genetics and human transportation data to
+  predict the global transmission dynamics of human influenza H3N2.}}
+    \verb{url}
+    \verb http://journals.plos.org/plospathogens/article?id=10.1371/journal.ppa
+    \verb t.1003932
+    \endverb
+    \field{volume}{10}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Lemey et al. - 2014 - Unifying viral genetics and human transporta
+    \verb tion data to predict the global transmission dynamics of human influe
+    \verb n.pdf:pdf
+    \endverb
+    \field{journaltitle}{PLoS pathogens}
+    \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Rambaut2008}{article}{}
+    \name{author}{6}{}{%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={Oliver\bibnamedelima G.},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=NMI}{%
+         family={Nelson},
+         familyi={N\bibinitperiod},
+         given={Martha\bibnamedelima I.},
+         giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=VC}{%
+         family={Viboud},
+         familyi={V\bibinitperiod},
+         given={Cecile},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TJK}{%
+         family={Taubenberger},
+         familyi={T\bibinitperiod},
+         given={Jeffery\bibnamedelima K.},
+         giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=HEC}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={Edward\bibnamedelima C.},
+         giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{RA+1}
+    \strng{fullhash}{RAPOGNMIVCTJKHEC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2008}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{abstract}{%
+    The evolutionary interaction between influenza A virus and the human immune
+  system, manifest as 'antigenic drift' of the viral haemagglutinin, is one of
+  the best described patterns in molecular evolution. However, little is known
+  about the genome-scale evolutionary dynamics of this pathogen. Similarly, how
+  genomic processes relate to global influenza epidemiology, in which the
+  A/H3N2 and A/H1N1 subtypes co-circulate, is poorly understood. Here through
+  an analysis of 1,302 complete viral genomes sampled from temperate
+  populations in both hemispheres, we show that the genomic evolution of
+  influenza A virus is characterized by a complex interplay between frequent
+  reassortment and periodic selective sweeps. The A/H3N2 and A/H1N1 subtypes
+  exhibit different evolutionary dynamics, with diverse lineages circulating in
+  A/H1N1, indicative of weaker antigenic drift. These results suggest a
+  sink?source model of viral ecology in which new lineages are seeded from a
+  persistent influenza reservoir, which we hypothesize to be located in the
+  tropics, to sink populations in temperate regions.%
+    }
+    \verb{doi}
+    \verb 10.1038/nature06945
+    \endverb
+    \field{issn}{0028-0836}
+    \field{number}{7195}
+    \field{pages}{615\bibrangedash 619}
+    \field{shorttitle}{Nature}
+    \field{title}{{The genomic and epidemiological dynamics of human influenza
+  A virus}}
+    \verb{url}
+    \verb http://dx.doi.org/10.1038/nature06945
+    \endverb
+    \field{volume}{453}
+    \field{journaltitle}{Nature}
+    \field{year}{2008}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Russell2008}{article}{}
+    \name{author}{28}{}{%
+      {{hash=RCA}{%
+         family={Russell},
+         familyi={R\bibinitperiod},
+         given={C.\bibnamedelima A.},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=JTC}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={T.\bibnamedelima C.},
+         giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=BIG}{%
+         family={Barr},
+         familyi={B\bibinitperiod},
+         given={I.\bibnamedelima G.},
+         giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=CNJ}{%
+         family={Cox},
+         familyi={C\bibinitperiod},
+         given={N.\bibnamedelima J.},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GRJ}{%
+         family={Garten},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima J.},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GV}{%
+         family={Gregory},
+         familyi={G\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=GID}{%
+         family={Gust},
+         familyi={G\bibinitperiod},
+         given={I.\bibnamedelima D.},
+         giveni={I\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=HAW}{%
+         family={Hampson},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima W.},
+         giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=HAJ}{%
+         family={Hay},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HAC}{%
+         family={Hurt},
+         familyi={H\bibinitperiod},
+         given={A.\bibnamedelima C.},
+         giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=dJJC}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Jong},
+         familyi={J\bibinitperiod},
+         given={J.\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kelso},
+         familyi={K\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KAI}{%
+         family={Klimov},
+         familyi={K\bibinitperiod},
+         given={A.\bibnamedelima I.},
+         giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=KT}{%
+         family={Kageyama},
+         familyi={K\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KN}{%
+         family={Komadina},
+         familyi={K\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LAS}{%
+         family={Lapedes},
+         familyi={L\bibinitperiod},
+         given={A.\bibnamedelima S.},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=LYP}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Y.\bibnamedelima P.},
+         giveni={Y\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mosterin},
+         familyi={M\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=OM}{%
+         family={Obuchi},
+         familyi={O\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=OT}{%
+         family={Odagiri},
+         familyi={O\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=OADME}{%
+         family={Osterhaus},
+         familyi={O\bibinitperiod},
+         given={A.\bibnamedelima D. M.\bibnamedelima E.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod
+  M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=RGF}{%
+         family={Rimmelzwaan},
+         familyi={R\bibinitperiod},
+         given={G.\bibnamedelima F.},
+         giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=SMW}{%
+         family={Shaw},
+         familyi={S\bibinitperiod},
+         given={M.\bibnamedelima W.},
+         giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Skepner},
+         familyi={S\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Stohr},
+         familyi={S\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tashiro},
+         familyi={T\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FRAM}{%
+         family={Fouchier},
+         familyi={F\bibinitperiod},
+         given={R.\bibnamedelima A.\bibnamedelima M.},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=SDJ}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={D.\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RCA+1}
+  \strng{fullhash}{RCAJTCBIGCNJGRJGVGIDHAWHAJHACJJCdKAKAIKTKNLASLYPMAOMOTOADMERGFSMWSESKTMFRAMSDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{abstract}{%
+    Antigenic and genetic analysis of the hemagglutinin of ?13,000 human
+  influenza A (H3N2) viruses from six continents during 2002?2007 revealed that
+  there was continuous circulation in east and Southeast Asia (E-SE Asia) via a
+  region-wide network of temporally overlapping epidemics and that epidemics in
+  the temperate regions were seeded from this network each year. Seed strains
+  generally first reached Oceania, North America, and Europe, and later South
+  America. This evidence suggests that once A (H3N2) viruses leave E-SE Asia,
+  they are unlikely to contribute to long-term viral evolution. If the trends
+  observed during this period are an accurate representation of overall
+  patterns of spread, then the antigenic characteristics of A (H3N2) viruses
+  outside E-SE Asia may be forecast each year based on surveillance within E-SE
+  Asia, with consequent improvements to vaccine strain selection.%
+    }
+    \verb{doi}
+    \verb 10.1126/science.1154137
+    \endverb
+    \field{issn}{0036-8075}
+    \field{number}{5874}
+    \field{pages}{340\bibrangedash 346}
+    \field{title}{{The Global Circulation of Seasonal Influenza A (H3N2)
+  Viruses}}
+    \verb{url}
+    \verb http://www.sciencemag.org/content/320/5874/340.abstract
+    \endverb
+    \field{volume}{320}
+    \field{journaltitle}{Science}
+    \field{year}{2008}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Vaughan2014}{article}{}
+    \name{author}{5}{}{%
+      {{hash=VTG}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Timothy\bibnamedelima G},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={K{\"{u}}hnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Popinga},
+         familyi={P\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Welch},
+         familyi={W\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VTG+1}
+    \strng{fullhash}{VTGKDPAWDDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{abstract}{%
+    MOTIVATION: Population structure significantly affects evolutionary
+  dynamics. Such structure may be due to spatial segregation, but may also
+  reflect any other gene-flow-limiting aspect of a model. In combination with
+  the structured coalescent, this fact can be used to inform phylogenetic tree
+  reconstruction, as well as to infer parameters such as migration rates and
+  subpopulation sizes from annotated sequence data. However, conducting
+  Bayesian inference under the structured coalescent is impeded by the
+  difficulty of constructing Markov Chain Monte Carlo (MCMC) sampling
+  algorithms (samplers) capable of efficiently exploring the state space.
+  RESULTS: In this article, we present a new MCMC sampler capable of sampling
+  from posterior distributions over structured trees: timed phylogenetic trees
+  in which lineages are associated with the distinct subpopulation in which
+  they lie. The sampler includes a set of MCMC proposal functions that offer
+  significant mixing improvements over a previously published method.
+  Furthermore, its implementation as a BEAST 2 package ensures maximum
+  flexibility with respect to model and prior specification. We demonstrate the
+  usefulness of this new sampler by using it to infer migration rates and
+  effective population sizes of H3N2 influenza between New Zealand, New York
+  and Hong Kong from publicly available hemagglutinin (HA) gene sequences under
+  the structured coalescent. AVAILABILITY AND IMPLEMENTATION: The sampler has
+  been implemented as a publicly available BEAST 2 package that is distributed
+  under version 3 of the GNU General Public License at
+  http://compevol.github.io/MultiTypeTree.%
+    }
+    \verb{doi}
+    \verb 10.1093/bioinformatics/btu201
+    \endverb
+    \field{issn}{1367-4811}
+    \field{number}{16}
+    \field{pages}{2272\bibrangedash 9}
+    \field{title}{{Efficient Bayesian inference under the structured
+  coalescent.}}
+    \verb{url}
+    \verb http://bioinformatics.oxfordjournals.org/content/early/2014/04/20/bio
+    \verb informatics.btu201.short
+    \endverb
+    \field{volume}{30}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Vaughan et al. - 2014 - Efficient Bayesian inference under the str
+    \verb uctured coalescent.pdf:pdf
+    \endverb
+    \field{journaltitle}{Bioinformatics (Oxford, England)}
+    \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+\endsortlist
+\endinput

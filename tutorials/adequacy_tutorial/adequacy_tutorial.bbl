@@ -1,0 +1,155 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Bollback2002}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BJP}{%
+         family={Bollback},
+         familyi={B\bibinitperiod},
+         given={Jonathan\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJP1}
+    \strng{fullhash}{BJP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1093/oxfordjournals.molbev.a004175
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/Content_public/Journal/mbe/19/7/10.1093/oxfordjournals.
+    \verb molbev.a004175/2/mbev_19_07_1171.pdf
+    \endverb
+    \field{number}{7}
+    \field{pages}{1171}
+    \field{title}{Bayesian Model Adequacy and Choice in Phylogenetics}
+    \verb{url}
+    \verb + http://dx.doi.org/10.1093/oxfordjournals.molbev.a004175
+    \endverb
+    \field{volume}{19}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2002}
+  \endentry
+
+  \entry{Duchene2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DDA}{%
+         family={Duchêne},
+         familyi={D\bibinitperiod},
+         given={David\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Duchêne},
+         familyi={D\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HEC}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={Edward\bibnamedelima C.},
+         giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=HSY}{%
+         family={Ho},
+         familyi={H\bibinitperiod},
+         given={Simon\bibnamedelima Y.W.},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DDA+1}
+    \strng{fullhash}{DDADSHECHSY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1093/molbev/msv154
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/Content_public/Journal/mbe/32/11/10.1093/molbev/msv154/
+    \verb 2/msv154.pdf
+    \endverb
+    \field{number}{11}
+    \field{pages}{2986}
+    \field{title}{Evaluating the Adequacy of Molecular Clock Models Using
+  Posterior Predictive Simulations}
+    \verb{url}
+    \verb + http://dx.doi.org/10.1093/molbev/msv154
+    \endverb
+    \field{volume}{32}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Goldman1993}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GN}{%
+         family={Goldman},
+         familyi={G\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GN1}
+    \strng{fullhash}{GN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1993}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    Penny et al. have written that ``The most fundamental criterion for a
+  scientific method is that the data must, in principle, be able to reject the
+  model. Hardly any [phylogenetic] tree-reconstruction methods meet this simple
+  requirement.'' The ability to reject models is of such great importance
+  because the results of all phylogenetic analyses depend on their underlying
+  models---to have confidence in the inferences, it is necessary to have
+  confidence in the models. In this paper, a test statistics suggested by Cox
+  is employed to test the adequacy of some statistical models of DNA sequence
+  evolution used in the phylogenetic inference method introduced by Felsentein.
+  Monte Carlo simulations are used to assess significance levels. The resulting
+  statistical tests provide an objective and very general assessment of all the
+  components of a DNA substitution model; more specific versions of the test
+  are devised to test individual components of a model. In all cases, the new
+  analyses have the additional advantage that values of phylogenetic parameters
+  do not have to be assumed in order to perform the tests.%
+    }
+    \verb{doi}
+    \verb 10.1007/BF00166252
+    \endverb
+    \field{issn}{1432-1432}
+    \field{number}{2}
+    \field{pages}{182\bibrangedash 198}
+    \field{title}{Statistical tests of models of DNA substitution}
+    \verb{url}
+    \verb http://dx.doi.org/10.1007/BF00166252
+    \endverb
+    \field{volume}{36}
+    \field{journaltitle}{Journal of Molecular Evolution}
+    \field{year}{1993}
+  \endentry
+\endsortlist
+\endinput

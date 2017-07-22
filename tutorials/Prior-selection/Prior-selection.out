@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [1][-]{section.2}{Programs used in this Exercise}{}% 2
+\BOOKMARK [2][-]{subsubsection.2.0.1}{BEAST2 - Bayesian Evolutionary Analysis Sampling Trees}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.0.2}{BEAUti2 - Bayesian Evolutionary Analysis Utility}{subsubsection.2.0.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.0.3}{TreeAnnotator}{subsubsection.2.0.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.0.4}{Tracer}{subsubsection.2.0.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.0.5}{FigTree}{subsubsection.2.0.1}% 7
+\BOOKMARK [1][-]{section.3}{Practical: H3N2 flu dynamics - Heterochronous data}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{The Data}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Creating the Analysis File with BEAUti}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Installing BEAST2 Plug-Ins}{subsection.3.2}% 11
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Importing alignment}{subsection.3.2}% 12
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Setting up tip dates}{subsection.3.2}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Specifying the Site Model}{subsection.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Specifying the Clock Model}{subsection.3.2}% 15
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Selecting Priors}{subsection.3.2}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.7}{MCMC}{subsection.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.8}{Running the analysis}{subsection.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.9}{Analysing the results}{subsection.3.2}% 19
+\BOOKMARK [1][-]{section.4}{Practical: H3N2 flu dynamics - Homochronous data}{}% 20
+\BOOKMARK [2][-]{subsection.4.1}{Estimating the substitution rate from homochronous data}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Creating Taxon Sets}{subsection.4.1}% 22
+\BOOKMARK [1][-]{section.5}{Comparison between runs}{}% 23
+\BOOKMARK [1][-]{section.6}{Useful Links}{}% 24

@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Skyline-plots.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Skyline-plots-blx.bib
+Database file #2: master-refs.bib
+Biblatex version: 3.3
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 11 entries,
+            6256 wiz_defined-function locations,
+            1397 strings with 22693 characters,
+and the built_in function-call counts, 158553 in all, are:
+= -- 13584
+> -- 1925
+< -- 458
++ -- 5400
+- -- 885
+* -- 12490
+:= -- 19547
+add.period$ -- 0
+call.type$ -- 11
+change.case$ -- 326
+chr.to.int$ -- 38
+cite$ -- 20
+duplicate$ -- 17064
+empty$ -- 12924
+format.name$ -- 1599
+if$ -- 30143
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 0
+newline$ -- 1009
+num.names$ -- 646
+pop$ -- 4428
+preamble$ -- 1
+purify$ -- 548
+quote$ -- 0
+skip$ -- 2619
+stack$ -- 0
+substring$ -- 25388
+swap$ -- 3275
+text.length$ -- 358
+text.prefix$ -- 14
+top$ -- 1
+type$ -- 362
+warning$ -- 0
+while$ -- 2462
+width$ -- 0
+write$ -- 999

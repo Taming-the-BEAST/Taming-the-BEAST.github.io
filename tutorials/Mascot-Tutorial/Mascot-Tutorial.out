@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [1][-]{section.2}{Programs used in this Exercise}{}% 2
+\BOOKMARK [2][-]{subsubsection.2.0.1}{BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.0.2}{BEAUti2 - Bayesian Evolutionary Analysis Utility}{subsubsection.2.0.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.0.3}{TreeAnnotator}{subsubsection.2.0.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.0.4}{Tracer}{subsubsection.2.0.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.0.5}{FigTree}{subsubsection.2.0.1}% 7
+\BOOKMARK [1][-]{section.3}{Practical: Parameter and State inference using the approximate structured coalescent}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Setting up an analysis in BEAUti}{section.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Download MASCOT}{subsection.3.1}% 10
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Loading the template}{subsection.3.1}% 11
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Loading the Influenza A/H3N2 Sequences \(Partitions\)}{subsection.3.1}% 12
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Get the sampling times \(Tip Dates\)}{subsection.3.1}% 13
+\BOOKMARK [3][-]{subsubsection.3.1.5}{Get the sampling locations \(Tip Locations\)}{subsection.3.1}% 14
+\BOOKMARK [3][-]{subsubsection.3.1.6}{Specify the Site Model \(Site Model\)}{subsection.3.1}% 15
+\BOOKMARK [3][-]{subsubsection.3.1.7}{Set the clock model \(Clock Model\)}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.8}{Specify the priors and set dimensions \(Priors\)}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.9}{Specify the MCMC chain length \(MCMC\)}{subsection.3.1}% 18
+\BOOKMARK [3][-]{subsubsection.3.1.10}{Run the Analysis using BEAST2}{subsection.3.1}% 19
+\BOOKMARK [3][-]{subsubsection.3.1.11}{Analyse the log file using Tracer}{subsection.3.1}% 20
+\BOOKMARK [3][-]{subsubsection.3.1.12}{Make the MCC tree using TreeAnnotator}{subsection.3.1}% 21
+\BOOKMARK [3][-]{subsubsection.3.1.13}{Check the MCC tree using FigTree}{subsection.3.1}% 22
+\BOOKMARK [1][-]{section.4}{Useful Links}{}% 23

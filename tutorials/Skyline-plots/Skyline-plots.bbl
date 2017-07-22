@@ -1,0 +1,1110 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Bouckaert2014}{article}{}
+    \name{author}{9}{}{%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={K{\"{u}}hnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRHJKDVTWCHXDSMARADAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    We present a new open source, extensible and flexible software platform for
+  Bayesian evolutionary analysis called BEAST 2. This software platform is a
+  re-design of the popular BEAST 1 platform to correct structural deficiencies
+  that became evident as the BEAST 1 software evolved. Key among those
+  deficiencies was the lack of post-deployment extensibility. BEAST 2 now has a
+  fully developed package management system that allows third party developers
+  to write additional functionality that can be directly installed to the BEAST
+  2 analysis platform via a package manager without requiring a new software
+  release of the platform. This package architecture is showcased with a number
+  of recently published new models encompassing birth-death-sampling tree
+  priors, phylodynamics and model averaging for substitution models and site
+  partitioning. A second major improvement is the ability to read/write the
+  entire state of the MCMC chain to/from disk allowing it to be easily shared
+  between multiple instances of the BEAST software. This facilitates
+  checkpointing and better support for multi-processor and high-end computing
+  extensions. Finally, the functionality in new packages can be easily added to
+  the user interface (BEAUti 2) by a simple XML template-based mechanism
+  because BEAST 2 has been re-designed to provide greater integration between
+  the analysis engine and the user interface so that, for example BEAST and
+  BEAUti use exactly the same XML file format.%
+    }
+    \verb{doi}
+    \verb 10.1371/journal.pcbi.1003537
+    \endverb
+    \field{issn}{1553-7358}
+    \field{number}{4}
+    \field{pages}{e1003537}
+    \field{title}{BEAST 2: a software platform for Bayesian evolutionary
+  analysis.}
+    \verb{url}
+    \verb http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
+    \verb .1003537
+    \endverb
+    \field{volume}{10}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Bouckaert et al. - 2014 - BEAST 2 a software platform for Bayesian
+    \verb  evolutionary analysis.pdf:pdf
+    \endverb
+    \field{journaltitle}{PLoS computational biology}
+    \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Drummond2005}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=SB}{%
+         family={Shapiro},
+         familyi={S\bibinitperiod},
+         given={B},
+         giveni={B},
+      }}%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={O\bibnamedelima G},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \keyw{Algorithms,Animals,Bayes Theorem,Bison,Bison: genetics,DNA,
+  Mitochondrial,DNA, Mitochondrial: genetics,Egypt,Egypt:
+  epidemiology,Evolution, Molecular,Genetics,
+  Population,Hepacivirus,Hepacivirus: genetics,Hepacivirus:
+  pathogenicity,Hepatitis C,Hepatitis C: epidemiology,Hepatitis C:
+  transmission,Humans,Markov Chains,Models, Genetic,Monte Carlo
+  Method,Population Density,Population Dynamics,Time Factors}
+    \strng{namehash}{DAJ+1}
+    \strng{fullhash}{DAJRASBPOG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{abstract}{%
+    We introduce the Bayesian skyline plot, a new method for estimating past
+  population dynamics through time from a sample of molecular sequences without
+  dependence on a prespecified parametric model of demographic history. We
+  describe a Markov chain Monte Carlo sampling procedure that efficiently
+  samples a variant of the generalized skyline plot, given sequence data, and
+  combines these plots to generate a posterior distribution of effective
+  population size through time. We apply the Bayesian skyline plot to simulated
+  data sets and show that it correctly reconstructs demographic history under
+  canonical scenarios. Finally, we compare the Bayesian skyline plot model to
+  previous coalescent approaches by analyzing two real data sets (hepatitis C
+  virus in Egypt and mitochondrial DNA of Beringian bison) that have been
+  previously investigated using alternative coalescent methods. In the bison
+  analysis, we detect a severe but previously unrecognized bottleneck,
+  estimated to have occurred 10,000 radiocarbon years ago, which coincides with
+  both the earliest undisputed record of large numbers of humans in Alaska and
+  the megafaunal extinctions in North America at the beginning of the
+  Holocene.%
+    }
+    \verb{doi}
+    \verb 10.1093/molbev/msi103
+    \endverb
+    \field{issn}{0737-4038}
+    \field{number}{5}
+    \field{pages}{1185\bibrangedash 92}
+    \field{title}{Bayesian coalescent inference of past population dynamics
+  from molecular sequences.}
+    \verb{url}
+    \verb http://mbe.oxfordjournals.org/content/22/5/1185.abstract
+    \endverb
+    \field{volume}{22}
+    \field{journaltitle}{Molecular biology and evolution}
+    \field{year}{2005}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{BEAST2book2014}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{DAJBRR1}
+    \strng{fullhash}{DAJBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Bayesian evolutionary analysis with {BEAST} 2}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Heled2008}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {BioMed Central}%
+    }
+    \strng{namehash}{HJDAJ1}
+    \strng{fullhash}{HJDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1186/1471-2148-8-289
+    \endverb
+    \field{issn}{1471-2148}
+    \field{number}{1}
+    \field{pages}{289}
+    \field{title}{Bayesian inference of population size history from multiple
+  loci}
+    \verb{url}
+    \verb http://bmcevolbiol.biomedcentral.com/articles/10.1186/1471-2148-8-289
+    \endverb
+    \field{volume}{8}
+    \field{journaltitle}{BMC Evolutionary Biology}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Heller2013}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HR}{%
+         family={Heller},
+         familyi={H\bibinitperiod},
+         given={Rasmus},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CL}{%
+         family={Chikhi},
+         familyi={C\bibinitperiod},
+         given={Lounes},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SHR}{%
+         family={Siegismund},
+         familyi={S\bibinitperiod},
+         given={Hans\bibnamedelima Redlef},
+         giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \keyw{Animals,Bayes Theorem,Buffaloes,Buffaloes: genetics,DNA,
+  Mitochondrial,DNA, Mitochondrial: genetics,Demography,Models,
+  Statistical,Population Dynamics}
+    \strng{namehash}{HR+1}
+    \strng{fullhash}{HRCLSHR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Many coalescent-based methods aiming to infer the demographic history of
+  populations assume a single, isolated and panmictic population (i.e. a
+  Wright-Fisher model). While this assumption may be reasonable under many
+  conditions, several recent studies have shown that the results can be
+  misleading when it is violated. Among the most widely applied demographic
+  inference methods are Bayesian skyline plots (BSPs), which are used across a
+  range of biological fields. Violations of the panmixia assumption are to be
+  expected in many biological systems, but the consequences for skyline plot
+  inferences have so far not been addressed and quantified. We simulated DNA
+  sequence data under a variety of scenarios involving structured populations
+  with variable levels of gene flow and analysed them using BSPs as implemented
+  in the software package BEAST. Results revealed that BSPs can show false
+  signals of population decline under biologically plausible combinations of
+  population structure and sampling strategy, suggesting that the
+  interpretation of several previous studies may need to be re-evaluated. We
+  found that a balanced sampling strategy whereby samples are distributed on
+  several populations provides the best scheme for inferring demographic change
+  over a typical time scale. Analyses of data from a structured African buffalo
+  population demonstrate how BSP results can be strengthened by simulations. We
+  recommend that sample selection should be carefully considered in relation to
+  population structure previous to BSP analyses, and that alternative scenarios
+  should be evaluated when interpreting signals of population size change.%
+    }
+    \verb{doi}
+    \verb 10.1371/journal.pone.0062992
+    \endverb
+    \field{issn}{1932-6203}
+    \field{number}{5}
+    \field{pages}{e62992}
+    \field{title}{The confounding effect of population structure on Bayesian
+  skyline plot inferences of demographic history.}
+    \verb{url}
+    \verb http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0062
+    \verb 992
+    \endverb
+    \field{volume}{8}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Heller, Chikhi, Siegismund - 2013 - The confounding effect of popu
+    \verb lation structure on Bayesian skyline plot inferences of demographic h
+    \verb i.pdf:pdf
+    \endverb
+    \field{journaltitle}{PloS one}
+    \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Minin2008}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MVN}{%
+         family={Minin},
+         familyi={M\bibinitperiod},
+         given={Vladimir\bibnamedelima N},
+         giveni={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=BEW}{%
+         family={Bloomquist},
+         familyi={B\bibinitperiod},
+         given={Erik\bibnamedelima W},
+         giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MVN+1}
+    \strng{fullhash}{MVNBEWSMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    Kingman's coalescent process opens the door for estimation of population
+  genetics model parameters from molecular sequences. One paramount parameter
+  of interest is the effective population size. Temporal variation of this
+  quantity characterizes the demographic history of a population. Because
+  researchers are rarely able to choose a priori a deterministic model
+  describing effective population size dynamics for data at hand, nonparametric
+  curve-fitting methods based on multiple change-point (MCP) models have been
+  developed. We propose an alternative to change-point modeling that exploits
+  Gaussian Markov random fields to achieve temporal smoothing of the effective
+  population size in a Bayesian framework. The main advantage of our approach
+  is that, in contrast to MCP models, the explicit temporal smoothing does not
+  require strong prior decisions. To approximate the posterior distribution of
+  the population dynamics, we use efficient, fast mixing Markov chain Monte
+  Carlo algorithms designed for highly structured Gaussian models. In a
+  simulation study, we demonstrate that the proposed temporal smoothing method,
+  named Bayesian skyride, successfully recovers "true" population size
+  trajectories in all simulation scenarios and competes well with the MCP
+  approaches without evoking strong prior assumptions. We apply our Bayesian
+  skyride method to 2 real data sets. We analyze sequences of hepatitis C virus
+  contemporaneously sampled in Egypt, reproducing all key known aspects of the
+  viral population dynamics. Next, we estimate the demographic histories of
+  human influenza A hemagglutinin sequences, serially sampled throughout 3 flu
+  seasons.%
+    }
+    \verb{doi}
+    \verb 10.1093/molbev/msn090
+    \endverb
+    \field{issn}{1537-1719}
+    \field{number}{7}
+    \field{pages}{1459\bibrangedash 71}
+    \field{title}{Smooth skyride through a rough skyline: Bayesian
+  coalescent-based inference of population dynamics.}
+    \verb{url}
+    \verb http://www.ncbi.nlm.nih.gov/pubmed/18408232 http://www.pubmedcentral.
+    \verb nih.gov/articlerender.fcgi?artid=PMC3302198
+    \endverb
+    \field{volume}{25}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Minin, Bloomquist, Suchard - 2008 - Smooth skyride through a rough
+    \verb  skyline Bayesian coalescent-based inference of population dynamics.p
+    \verb df:pdf
+    \endverb
+    \field{journaltitle}{Molecular biology and evolution}
+    \field{year}{2008}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Pybus2001}{article}{}
+    \name{author}{73}{}{%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={O\bibnamedelima G},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=CMA}{%
+         family={Charleston},
+         familyi={C\bibinitperiod},
+         given={M\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=HEC}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={E\bibnamedelima C},
+         giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=HPH}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={P\bibnamedelima H},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Simmonds},
+         familyi={S\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=FX}{%
+         family={Forns},
+         familyi={F\bibinitperiod},
+         given={X.},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Bukh},
+         familyi={B\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Mellor},
+         familyi={M\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SDB}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={D.\bibnamedelima B.},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Jeannel},
+         familyi={J\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KJFC}{%
+         family={Kingman},
+         familyi={K\bibinitperiod},
+         given={J.\bibnamedelima F.\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+      {{hash=GRC}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima C.},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=TS}{%
+         family={Tavar{\'{e}}},
+         familyi={T\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=NS}{%
+         family={Nee},
+         familyi={N\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HEC}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={E.\bibnamedelima C.},
+         giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HPH}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={P.\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={O.\bibnamedelima G.},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HPH}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={P.\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={O.\bibnamedelima G.},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=HEC}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={E.\bibnamedelima C.},
+         giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=HPH}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={P.\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=FP}{%
+         family={Farci},
+         familyi={F\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=PJP}{%
+         family={Power},
+         familyi={P\bibinitperiod},
+         given={J.\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PS}{%
+         family={Pol},
+         familyi={P\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PJM}{%
+         family={Pawlotsky},
+         familyi={P\bibinitperiod},
+         given={J.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=RH}{%
+         family={Rosen},
+         familyi={R\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Chou},
+         familyi={C\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Sasaki},
+         familyi={S\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GD}{%
+         family={Gretch},
+         familyi={G\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SLB}{%
+         family={Seeff},
+         familyi={S\bibinitperiod},
+         given={L.\bibnamedelima B.},
+         giveni={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Silini},
+         familyi={S\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=DF}{%
+         family={Dubois},
+         familyi={D\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={Desenclos},
+         familyi={D\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Mariotte},
+         familyi={M\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Goudeau},
+         familyi={G\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KJH}{%
+         family={Kao},
+         familyi={K\bibinitperiod},
+         given={J.\bibnamedelima H.},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=CDS}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={D.\bibnamedelima S.},
+         giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SO}{%
+         family={Shobokshi},
+         familyi={S\bibinitperiod},
+         given={O.},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Serebour},
+         familyi={S\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Skakni},
+         familyi={S\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ASY}{%
+         family={Al-Saffy},
+         familyi={A\bibinitperiod-S\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Ahdal},
+         familyi={A\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FC}{%
+         family={Frank},
+         familyi={F\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PLE}{%
+         family={Prescott},
+         familyi={P\bibinitperiod},
+         given={L.\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wong},
+         familyi={W\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={Tong},
+         familyi={T\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LW}{%
+         family={Lim},
+         familyi={L\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=MY}{%
+         family={Morice},
+         familyi={M\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=KY}{%
+         family={Kimura},
+         familyi={K\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={Hayashida},
+         familyi={H\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=IH}{%
+         family={Ishibashi},
+         familyi={I\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=NY}{%
+         family={Niho},
+         familyi={N\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yanagi},
+         familyi={Y\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=GRS}{%
+         family={Garfein},
+         familyi={G\bibinitperiod},
+         given={R.\bibnamedelima S.},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=VD}{%
+         family={Vlahov},
+         familyi={V\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GN}{%
+         family={Galai},
+         familyi={G\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Doherty},
+         familyi={D\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=NK}{%
+         family={Nelson},
+         familyi={N\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PLE}{%
+         family={Prescott},
+         familyi={P\bibinitperiod},
+         given={L.\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=MRH}{%
+         family={Miller},
+         familyi={M\bibinitperiod},
+         given={R.\bibnamedelima H.},
+         giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=PRH}{%
+         family={Purcell},
+         familyi={P\bibinitperiod},
+         given={R.\bibnamedelima H.},
+         giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SDB}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={D.\bibnamedelima B.},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Simmonds},
+         familyi={S\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TK}{%
+         family={Trenholme},
+         familyi={T\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=ARM}{%
+         family={Anderson},
+         familyi={A\bibinitperiod},
+         given={R.\bibnamedelima M.},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=DKP}{%
+         family={Day},
+         familyi={D\bibinitperiod},
+         given={K.\bibnamedelima P.},
+         giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=FJ}{%
+         family={Felsenstein},
+         familyi={F\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{POG+2}
+  \strng{fullhash}{POGCMAGSRAHECHPHSPFXBJMJSDBJDKJFCGRCTSNSHECRAHPHPOGRAHPHPOGHECHPHFPPJPRAPSPJMRHCSSAGDSLBSEDFDJMNGAKJHCDSSOSFSLASYAMFCPLEWDTLLWMYKYHKIHNYYYGRSVDGNDMNKPLEMRHPRHSDBSPGSTKARMDKPFJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    Hepatitis C virus (HCV) is a leading worldwide cause of liver disease.
+  Here, we use a new model of HCV spread to investigate the epidemic behavior
+  of the virus and to estimate its basic reproductive number from gene sequence
+  data. We find significant differences in epidemic behavior among HCV subtypes
+  and suggest that these differences are largely the result of subtype-specific
+  transmission patterns. Our model builds a bridge between the disciplines of
+  population genetics and mathematical epidemiology by using pathogen gene
+  sequences to infer the population dynamic history of an infectious disease.%
+    }
+    \verb{doi}
+    \verb 10.1126/science.1058321
+    \endverb
+    \field{issn}{0036-8075}
+    \field{number}{5525}
+    \field{pages}{2323\bibrangedash 5}
+    \field{title}{The epidemic behavior of the hepatitis C virus.}
+    \verb{url}
+    \verb http://www.ncbi.nlm.nih.gov/pubmed/11423661
+    \endverb
+    \field{volume}{292}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Pybus et al. - 2001 - The epidemic behavior of the hepatitis C vir
+    \verb us.pdf:pdf
+    \endverb
+    \field{journaltitle}{Science (New York, N.Y.)}
+    \field{year}{2001}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Pybus2003}{article}{}
+    \name{author}{5}{}{%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={O.\bibnamedelima G.},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=NT}{%
+         family={Nakano},
+         familyi={N\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RBH}{%
+         family={Robertson},
+         familyi={R\bibinitperiod},
+         given={B.\bibnamedelima H.},
+         giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{POG+1}
+    \strng{fullhash}{POGDAJNTRBHRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1093/molbev/msg043
+    \endverb
+    \field{issn}{07374038}
+    \field{number}{3}
+    \field{pages}{381\bibrangedash 387}
+    \field{title}{The Epidemiology and Iatrogenic Transmission of Hepatitis C
+  Virus in Egypt: A Bayesian Coalescent Approach}
+    \verb{url}
+    \verb http://mbe.oupjournals.org/cgi/doi/10.1093/molbev/msg043
+    \endverb
+    \field{volume}{20}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Pybus et al. - 2003 - The Epidemiology and Iatrogenic Transmission
+    \verb  of Hepatitis C Virus in Egypt A Bayesian Coalescent Approach(3).pdf:
+    \verb pdf
+    \endverb
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2003}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Ray2000}{article}{}
+    \name{author}{5}{}{%
+      {{hash=RS}{%
+         family={Ray},
+         familyi={R\bibinitperiod},
+         given={StuartÊC.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Arthur},
+         familyi={A\bibinitperiod},
+         given={RayÊR.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Carella},
+         familyi={C\bibinitperiod},
+         given={Anthony},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Bukh},
+         familyi={B\bibinitperiod},
+         given={Jens},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TD}{%
+         family={Thomas},
+         familyi={T\bibinitperiod},
+         given={DavidÊL.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{RS+1}
+    \strng{fullhash}{RSARCABJTD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2000}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1086/315786
+    \endverb
+    \field{issn}{0022-1899}
+    \field{number}{3}
+    \field{pages}{698\bibrangedash 707}
+    \field{title}{Genetic Epidemiology of Hepatitis C Virus throughout Egypt}
+    \verb{url}
+    \verb http://jid.oxfordjournals.org/lookup/doi/10.1086/315786
+    \endverb
+    \field{volume}{182}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Ray et al. - 2000 - Genetic Epidemiology of Hepatitis C Virus thro
+    \verb ughout Egypt.pdf:pdf
+    \endverb
+    \field{journaltitle}{The Journal of Infectious Diseases}
+    \field{year}{2000}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Stadler2013}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kuhnert},
+         familyi={K\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bonhoeffer},
+         familyi={B\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {National Acad Sciences}%
+    }
+    \strng{namehash}{ST+1}
+    \strng{fullhash}{STKDBSDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1073/pnas.1207965110
+    \endverb
+    \field{issn}{0027-8424}
+    \field{number}{1}
+    \field{pages}{228\bibrangedash 233}
+    \field{title}{Birth-death skyline plot reveals temporal changes of epidemic
+  spread in HIV and hepatitis C virus (HCV)}
+    \verb{url}
+    \verb http://www.pnas.org/cgi/doi/10.1073/pnas.1207965110
+    \endverb
+    \field{volume}{110}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Stadler et al. - 2013 - Birth-death skyline plot reveals temporal
+    \verb changes of epidemic spread in HIV and hepatitis C virus (HCV).pdf:pdf
+    \endverb
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+\endsortlist
+\endinput

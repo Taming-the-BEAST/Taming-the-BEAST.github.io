@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Prior-selection</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Prior-selection/">Prior selection</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Prior selection and clock calibration using Influenza A data.
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Veronika Bošková
+					
+			
+				
+						, Venelin Mitov
+				
+			
+				
+						
+							and Louis du Plessis
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/Prior-selection/Prior-selection.pdf">Prior-selection.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Prior-selection" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Prior-selection/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/data/InfluenzaAH3N2_HAgene_2009_California_heterochronous.nexus" target="_blank" rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/data/InfluenzaAH3N2_HAgene_2009_California_homochronous.nexus" target="_blank" rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/xml/Heterochronous.xml" target="_blank" download rel="nofollow">
+						Heterochronous.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/xml/Homochronous.xml" target="_blank" download rel="nofollow">
+						Homochronous.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/xml/Homochronous_tMRCA.xml" target="_blank" download rel="nofollow">
+						Homochronous_tMRCA.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_heterochronous.log" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_heterochronous.tree" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_heterochronous.trees" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_heterochronous_30M.log" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_heterochronous_30M.trees" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous.log" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous.trees" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous_30M.log" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous_30M.trees" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous_tMRCA.log" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous_tMRCA.trees" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous_tMRCA_30M.log" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Prior-selection/raw/master/precooked_runs/InfluenzaAH3N2_HAgene_2009_California_homochronous_tMRCA_30M.trees" target="_blank" download rel="nofollow">
+						InfluenzaAH3N2_HAgene_2009_...
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/725dc9fd9b315c15198706d157c395038a49a540">
+					13 Jul 2017 - <span class="text-gray">Update latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/ee294f9eed34ca3e992769c77ea488d32069b996">
+					13 Jul 2017 - <span class="text-gray">Small changes</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/d5ad0c7eca385e5f776ab7c42e593be95a56fb3b">
+					13 Jul 2017 - <span class="text-gray">Update figures</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/f273e3017d195065e02555d50a53ea5ccc0e6f73">
+					13 Jul 2017 - <span class="text-gray">Update text</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/bfbe478e90ed3f09849aed7d88e8d8b5a0181c07">
+					12 Jul 2017 - <span class="text-gray">Update programs used section</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>In the Bayesian analysis of sequence data, priors play an important role. When priors are not specified correctly, it may cause runs to take very long to converge, not converge at all or cause a bias in the inferred trees and model parameters. Selection of proper priors and starting values is crucial and can be a difficult exercise in the beginning. It is not always easy to pick a proper model of tree generation (tree prior), substitution model, molecular clock model or the prior distribution for an unknown parameter. </p>
+
+<p>The molecular clock model aims to estimate the substitution rate of the data. It is important to understand under which circumstances to use which model and when molecular calibration works. This will help the investigator determine which estimates of parameters can be trusted and which cannot.</p>
+
+<p>In this tutorial we will explore how priors are selected and how molecular clock calibration works using H3N2 influenza A data from the flu virus spreading in the USA in 2009. </p>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.7 <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
+
+<h3>FigTree</h3>
+
+<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.2.</p>
+
+<hr>
+
+<h1>Practical: H3N2 flu dynamics - Heterochronous data</h1>
+
+<p>In this tutorial, we will estimate the rate of evolution from a set of virus sequences that have been isolated either at one point in time (homochronous) or at different points in time (heterochronous or time-stamped data). We use the hemagglutinin (HA) gene of the H3N2 strain spreading across America alongside the pandemic H1N1 virus in 2009 <a href="#cdc2009">(CDC, 2009/2010)</a>. </p>
+
+<p>The aim of this tutorial is to obtain estimates for the: </p>
+
+<ul>
+<li> rate of molecular evolution</li>
+<li> phylogenetic relationships with measures of internal node heights</li>
+<li> date of the most recent common ancestor of the sampled virus sequences.</li>
+</ul>
+
+<p>The more general aim of this tutorial is to:</p>
+
+<ul>
+<li> understand how to set priors and why this is important</li>
+<li> understand why and when the rate of evolution can be estimated from the data.</li>
+</ul>
+
+<h2>The Data</h2>
+
+<p>The full heterochronous dataset contains an alignment of 139 HA sequences 1738 nucleotides long. The samples were obtained from California between April and June 2009 (file named 
+<code>InfluenzaAH3N2_HAgene_2009_California_heterochronous.nexus</code>). The homochronous data is a subset of the heterochronous data, consisting of an alignment of 29 sequences of 1735 nucleotides all sampled on April 28, 2009 (file named <code>InfluenzaAH3N2_HAgene_2009_California_homochronous.nexus</code>). </p>
+
+<h2>Creating the Analysis File with BEAUti</h2>
+
+<p>We will use BEAUti to select the priors and starting values for our analysis and save these settings into a BEAST-readable XML file. </p>
+
+<blockquote>
+<p>Begin by starting BEAUti2.</p>
+</blockquote>
+
+<h3>Installing BEAST2 Plug-Ins</h3>
+
+<p>Since we will be using the birth-death skyline model (<strong>BDSKY</strong>) <a href="#Stadler2013">(Stadler, Kühnert, Bonhoeffer, &amp; Drummond, 2013)</a>, we need to make sure it is available in BEAUti. It is not one of the default models but rather an add-on (also called a plug-in or package). You only need to install a BEAST2 package once. Thus, if you close BEAUti, you do not have to load <strong>BDSKY</strong> the next time you open the program. However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST2. For this tutorial we need to ensure that we have at least BDSKY v1.3.3 installed.</p>
+
+<blockquote>
+<p>Open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="packageManage1"></a>
+    <img style="width:75.0%;" src="figures/beast2_package_manager_opening.png" alt="">
+    <figcaption>Figure 1: Finding the BEAST2 Package Manager.</figcaption>
+</figure>
+
+<p><br></p>
+
+<blockquote>
+<p>Install the <strong>BDSKY</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button. (<a href="#packageManage2">Figure 2</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="packageManage2"></a>
+    <img style="width:75.0%;" src="figures/beast2_package_manager.png" alt="">
+    <figcaption>Figure 2: The BEAST2 Package Manager.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>After the installation of an add-on, the program is on your computer, but BEAUti is unable to load the template files for the newly installed model unless it is restarted. So, let&#39;s restart BEAUti to make sure we have the <strong>BDSKY</strong> model at hand.</p>
+
+<blockquote>
+<p>Close the <strong>BEAST2 Package Manager</strong> and <strong><em>restart</em></strong> BEAUti to fully load the <strong>BDSKY</strong> package.</p>
+</blockquote>
+
+<h3>Importing alignment</h3>
+
+<p>We will first analyse the alignment of sequences sampled through time (heterochronous sequences). </p>
+
+<blockquote>
+<p>In the <strong>Partitions</strong> panel, import the nexus file with the alignment by navigating to <strong>File &gt; Import Alignment</strong> in the menu (<a href="#importAlignment">Figure 3</a>) and then finding the file called <code>InfluenzaAH3N2_HAgene_2009_California_heterochronous.nexus</code>  file on your computer.</p>
+</blockquote>
+
+<figure>
+    <a id="importAlignment"></a>
+    <img style="width:75.0%;" src="figures/beast2_import_alignment.png" alt="">
+    <figcaption>Figure 3: Importing alignment into BEAUti.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>You can view the alignment by double-clicking on the name of the alignment in BEAUti. Since we only have one partition there is nothing more we can do in the <strong>Partitions</strong> panel and proceed to specifying the tip dates. </p>
+
+<h3>Setting up tip dates</h3>
+
+<p>The heterochronous dataset contains information on the dates sequences were sampled. We want to use this information to specify the tip dates in BEAUti. </p>
+
+<blockquote>
+<p>In the <strong>Tip Dates</strong> panel, click the <strong>Use tip dates</strong> option. </p>
+</blockquote>
+
+<p>We want all the tree information to be specified for units of time in &quot;years&quot;, thus we leave the <strong>Dates specified as</strong> option set to default &quot;year&quot;. Also we want the time to flow forward in time in the tree, therefore, we keep to default option of tip dates being specified as &quot;Since some time in the past&quot; (<a href="#timeUnitsAndFlow">Figure 4</a>).</p>
+
+<figure>
+    <a id="timeUnitsAndFlow"></a>
+    <img style="width:100.0%;" src="figures/beast2_time_specification.png" alt="">
+    <figcaption>Figure 4: Specifying time units and direction of time flow.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>You could specify the tip dates by hand, by clicking for each row (i.e. for each sequence) into the <strong>Date</strong> column and typing the date information in for each sequence in turn. However, this is a laborious and error-prone procedure and can take a long time to finish. Fortunately, we can use BEAUti, to read off the dates from the sequence names for us. Each sequence is named such that the expression after the last underscore character (&quot;_&quot;) contains the sampling date information. BEAUti can search for this expression to extract the sequence date.</p>
+
+<blockquote>
+<p>Press the <strong>Auto-configure</strong> button. A window will appear where you can specify how BEAUti can find the date of sampling of each sequence. (<a href="#guessDates">Figure 5</a>)</p>
+
+<p>Select <strong>use everything</strong> and specify <strong>after last</strong> _.</p>
+</blockquote>
+
+<figure>
+    <a id="guessDates"></a>
+    <img style="width:50.0%;" src="figures/beast2_guess_dates.png" alt="">
+    <figcaption>Figure 5: Specifying tip dates.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>You should now see that the tip ages have been filled in for all of the taxa and that the <strong>Date</strong> columns shows a number in form 2009.xyz and the <strong>Height</strong> column shows the number in form 0.abc (the height of the tip from present time, where present is 0.0).</p>
+
+<p>Now we are done with the data specification and we are about to start specifying models and priors for the model parameters. </p>
+
+<h3>Specifying the Site Model</h3>
+
+<blockquote>
+<p>Navigate to the <strong>Site Model</strong> panel, where we can choose the model of nucleotide evolution that we want to assume to underly our dataset. </p>
+</blockquote>
+
+<p>Our dataset is made of nucleotide sequences. There are four models of nucleotide evolution available in BEAUti2: <strong>JC69, HKY, TN93</strong> and <strong>GTR</strong>. The <strong>JC69</strong> model is the simplest evolutionary model. All the substitutions are assumed to happen at the same rate and all the bases are assumed to have identical frequencies, i.e. each base <strong>A, C, G</strong> and <strong>T</strong> is assumed to have an equilibrium frequency of 0.25. In the <strong>HKY</strong> model, the rate of transitions <strong>A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> G</strong> and <strong>C <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T</strong> is allowed to be different from the rate of transversions <strong>A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> C, G <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T</strong>. Furthermore, the frequency of each base can be either &quot;Estimated&quot;, &quot;Empirical&quot; or &quot;All Equal&quot;. When we set the frequencies to &quot;Estimated&quot;, the frequency of each base will be co-estimated as a parameter during the BEAST run. If we use &quot;Empirical&quot;, base frequencies will be set to the frequencies of each base found in the alignment. Finally, if set to &quot;All Equal&quot;, the base frequencies will be set to 0.25. The <strong>TN93</strong> model is slightly more complicated than <strong>HKY</strong>, by allowing for different rates of <strong>A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> G</strong> and <strong>C <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">↔</span></span></span></span> T</strong> transitions. Finally, the <strong>GTR</strong> model is the most general model and allows for different substitution rates between each pair of nucleotides as well as different base frequencies, resulting in a total of 9 free parameters. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Which substitution model may be the most appropriate for our dataset and why? </p>
+</blockquote>
+
+<p>Since we do not have any extra information on how the data evolved, the decision is not clear cut. The best would be to have some independent information on what model fits the influenza data the best. Alternatively, one could perform model comparison, or apply reversible jump MCMC (see for example the  <strong>bModelTest</strong> and <strong>substBMA</strong> packages) to choose the best model. Let&#39;s assume, we have done some independent data analyses and found the HKY model to fit the influenza data the best. In general, this model captures the major biases that can arise in the analysis of the nucleotide data. </p>
+
+<p>Now we have to decide whether we want to assume all of the sites to have been subject to the same substitution rate or if we want to allow for the possibility that some sites are evolving faster than others. For this, we choose the number of gamma rate categories. This model scales the substitution rate by a factor, which is defined by a Gamma distribution. If we choose to split the Gamma distribution into 4 categories, we will have 4 possible scalings that will be applied to the substitution rate. The probability of a substitution at each site will be calculated under each scaled substitution rate (and corresponding transition probability matrix) and averaged over the 4 outcomes.</p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Do you think a model that assumes one rate for all the sites is preferable over a model which allows different substitution rates across sites (i.e. allows for several gamma rate categories)? Why or why not? </p>
+</blockquote>
+
+<p>Once again, a proper model comparison, i.e. comparing a model without gamma rate heterogeneity to a model with some number of gamma rate categories, should ideally be done. We do not have any independent information on whether Gamma rate categories are needed or not. Thus, we take our best guess in order not to bias our analyses. Since the data are the sequences of the HA (hemagglutinin) gene of influenza, we may want to allow for variation of the substitution rates between sites. Hemagglutinin is a surface protein on the virus and is under significant evolutionary pressure from the immune system of the host organism. It is not unrealistic to assume that some sites may be under more pressure to escape from the immune system.</p>
+
+<p>Let us therefore choose the HKY model with 4 gamma rate categories for the substitution rate. </p>
+
+<blockquote>
+<p>Change the <strong>Gamma Category Count</strong> to 4, tick the estimate box next to the <strong>Shape</strong> parameter of the Gamma distribution and set the <strong>Subst Model</strong> to <strong>HKY</strong>. Make sure that both <strong>Kappa</strong> and <strong>Frequencies</strong> are estimated. (<a href="#substitutionModel">Figure 6</a>) </p>
+</blockquote>
+
+<figure>
+    <a id="substitutionModel"></a>
+    <img style="width:75.0%;" src="figures/beast2_substitution_model.png" alt="">
+    <figcaption>Figure 6: Specifying substitution model.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Notice that we estimate the shape parameter of the Gamma distribution as well. This is generally recommended, unless one is sure that the Gamma distribution with the shape parameter equal to 1 captures exactly the rate variation in the given dataset.
+Notice also, that we leave the substitution rate fixed to 1.0 and do not estimate it. In fact, the overall substitution rate is the product of the clock rate and the substitution rate (one of the two acting as a scalar rather than a quantity measured in number of substitutions per site per time unit), and thus fixing one to 1.0 and estimating the other one allows for estimation of the overall rate of substitution. We will therefore use the clock rate to estimate the number of substitutions per site per year. </p>
+
+<h3>Specifying the Clock Model</h3>
+
+<blockquote>
+<p>Navigate to the <strong>Clock Model</strong> panel.</p>
+</blockquote>
+
+<p>Four different clock models are available in BEAST2, allowing us to specify lineage-specific substitution rate variation. The default model in BEAUti is the <em>Strict Clock</em>. The other three models relax the assumption of a constant substitution rate. The <em>Relaxed Clock Log Normal</em> allows for the substitution rates associated with each branch to be independently drawn from a single, discretized log normal distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Under the <em>Relaxed Clock Exponential</em> model, the rates associated with each branch are drawn from an exponential distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Both of these models are uncorrelated relaxed clock models. The log normal distribution has the advantage that one can estimate its variance, which reflects the extent to which the molecular clock needs to be relaxed. In both models, BEAUti sets by default the <strong>Number Of Discrete Rates</strong> to -1. This means that the number of bins that the distribution is divided into is equal to the number of branches. The last available model is the <em>Random Local Clock</em> which averages over all possible local clock models <a href="#drummond10">(Drummond &amp; Suchard, 2010)</a>. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Which clock model may be the most appropriate for our dataset and why?</p>
+</blockquote>
+
+<p>Since we are observing the sequence data from a single epidemic of H3N2 virus in humans in a single location (southwest USA), we do not have any reason to assume different substitution rates for different lineages. Thus, the most straightforward option is to choose the default <strong>Strict Clock</strong> model (<a href="#clockModel">Figure 7</a>). Note however, that a rigorous model comparison would be the best way to proceed with the choice of the clock model.</p>
+
+<figure>
+    <a id="clockModel"></a>
+    <img style="width:75.0%;" src="figures/beast2_clock_model.png" alt="">
+    <figcaption>Figure 7: Specifying the clock model.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>Selecting Priors</h3>
+
+<blockquote>
+<p>Navigate to the <strong>Priors</strong> panel.</p>
+</blockquote>
+
+<p>Since the dynamics of influenza virus is likely to change due to the depletion of the susceptible population and/or the presence of the resistant individuals, we choose the birth-death skyline model of population dynamics with 5 time intervals for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, to capture this likely change of dynamics over time. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">R_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, the basic reproductive number, is an important variable for the study of infectious diseases, since it defines how many individuals a single infected individual infects on average in a completely susceptible population over the course of her/his infection. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, the effective reproduction number, is the average number of secondary infections caused by an infected individual at a given time during the epidemic. Thus, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> is a function of time. In other words, it tells us how quickly the disease is spreading in a population. As long as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> is above 1 the epidemic is likely to continue spreading, therefore prevention efforts aim to push <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> below 1. Note that as more people become infected and the susceptible population decreases <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> will naturally decrease over the course of an epidemic, however treatment, vaccinations, quarantine and changes in behaviour can all contribute to decreasing <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> faster. In a birth-death process, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> is defined as the ratio of the birth (or speciation) rate and the total death (or extinction) rate.  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> for any infection is rarely above 10, so we set this as the upper value for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> in our analysis.</p>
+
+<blockquote>
+<p>For the <strong>Tree</strong> model, select the option <strong>Birth Death Skyline Serial</strong>. </p>
+
+<p>Then, click in the arrow to the left from <strong>reproductiveNumber</strong> to open all the options for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> settings (<a href="#treePrior">Figure 8</a>). Leave all the settings to the default, since it specifies a prior that is not too strong and centered around 1. This is exactly what we want. </p>
+
+<p>Then, click on the button where it says <strong>initial = [2.0] [0.0, Infinity]</strong>. A pop-up window will show up (<a href="#RePrior">Figure 9</a>).</p>
+
+<p>In the pop-up window change the <strong>Upper</strong>, the upper limit of the prior distribution, from Infinity to 10 and the <strong>Dimension</strong> of the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> from 10 to 5 and click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="treePrior"></a>
+    <img  src="figures/beast2_prior_Re.png" alt="">
+    <figcaption>Figure 8: Specifying the tree prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="RePrior"></a>
+    <img src="figures/beast2_prior_Redimension.png" alt="">
+    <figcaption>Figure 9: Specifying the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Notice that the pop-up window allows one to specify not only the <strong>Dimension</strong> but also the <strong>Minordimension</strong>. If the parameter is specified as a vector of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> entries, we only use the <strong>Dimension</strong> with input <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>. If the parameter is specified as an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n \times m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mbin">×</span><span class="mord mathit">m</span></span></span></span> matrix, we then use the <strong>Minordimension</strong> to specify the number of columns (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span>) the parameter is split into. In the birth-death skyline model, we use the parameter vector only, and thus the <strong>Minordimension</strong> always stays specified as 1. (In fact, <strong>Minordimension</strong> is only used very rarely in any BEAST2 model).</p>
+
+<p>After we have specified the prior for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, the next prior that needs our attention is the <strong>becomeUninfectiousRate</strong>. This specifies how quickly a person infected with influenza recovers. From our personal experience, we would say, it takes around one week to 10 days from infection to recovery. Since the rate of becoming uninfectious is the reciprocal of the period of infectiousness this translates to a becoming uninfectious rate of 365/10=36.5 to 365/7 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 52.14 per year (recall that we specified dates in our tree in years, and not days). Let us set the prior for <strong>becomeUninfectiousRate</strong> rate accordingly. </p>
+
+<blockquote>
+<p>Click on the arrow next to <strong>becomeUninfectiousRate</strong> and change the value for <strong>M</strong> (mean) of the default log normal distribution to 52 and tick the box <strong>Mean In Real Space</strong> to specify the mean of the distribution in real space instead of log space (<a href="#becomeUninfectiousPrior">Figure 10</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="becomeUninfectiousPrior"></a>
+    <img  src="figures/beast2_prior_becomeUninfectious.png" alt="">
+    <figcaption>Figure 10: Specifying the become uninfectious prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Looking at the 2.5% and 97.5% quantiles for the distribution we see that 95% of the weight of our becoming uninfectious rate prior falls between 4.44 and 224, i.e. our prior on the period of infectiousness is between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 1.63 and 82.2 days. Thus, our prior is quite diffuse. If we wanted to use a more specific prior we could decrease the standard deviation of the distribution (the <strong>S</strong> parameter).</p>
+
+<p>Now we have to specify the clock rate prior. This is the prior for the substitution rate.</p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> What substitution rate is appropriate for viruses? More specifically, what substitution rate is expected for influenza virus, in your opinion? </p>
+</blockquote>
+
+<p>By default, the clock rate in BEAST2 has a uniform prior between 0 and infinity. This is not only extremely unspecific, but also an improper prior (it does not integrate to 1). In general, a log-normal distribution works well for rates, since it does not allow negative values. Furthermore, it places most weight close to 0, while also allowing for larger values, making it an appropriate prior for the clock rate, which we expect to be quite low in general, but may be higher in exceptional cases. You could set your best guess as a prior by, for example, choosing a log-normal distribution centered around your best guess for the substitution rate.</p>
+
+<p>Now consider the following information: Influenza virus is an RNA virus <a href="#kawaoka2006">(Kawaoka, 2006)</a> and RNA viruses in general, have a mutation rate of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 10<sup>-3</sup> substitutions per site per year <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Did you change your best guess, for the substitution rate appropriate for RNA viruses? What would it be? How would you specify the prior?</p>
+</blockquote>
+
+<p>Our best guess would be to set the prior distribution peaked around 10<sup>-3</sup> substitutions per site per year.</p>
+
+<blockquote>
+<p>Change the prior for the clock rate from a <strong>Uniform</strong> to <strong>Log Normal</strong> distribution. Click on the arrow next to the <strong>clockRate</strong> and change the value for <strong>M</strong> (mean) of the default log normal distribution to 0.001 and tick the box <strong>Mean In Real Space</strong> (<a href="#clockRatePrior">Figure 11</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="clockRatePrior"></a>
+    <img  src="figures/beast2_prior_clockRate.png" alt="">
+    <figcaption>Figure 11: Specifying the clock rate prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We also need to estimate the Gamma shape parameter, which governs the shape of the Gamma distribution of the rates across different sites. The default setting of the Gamma shape parameter of <strong>alpha=beta=1.0</strong> reflects our belief that on average, the rate scaler is equal to 1, i.e. on average all the sites mutate with the same substitution rate. The distribution on the gamma shape parameter allows us to deviate from this assumption. The default exponential distribution with <strong>M</strong> (mean) of 1.0 and 95%HPD of [0.0253,3.69] covers a wide range of possible shape parameters. This looks fine for our analysis, and thus, we leave the Gamma shape settings at its defaults (<a href="#gammaShapeprior">Figure 12</a>).</p>
+
+<figure>
+    <a id="gammaShapeprior"></a>
+    <img  src="figures/beast2_prior_gammaShape.png" alt="">
+    <figcaption>Figure 12: Specifying the gamma shape prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We do not have any prior information on transition-transversion ratio besides the fact that it is a value usually larger than 1 (transitions are more frequent than transversions). We therefore set a weakly informative prior for this parameter. The default log normal prior perfectly fits to these requirements and usually does not need to be changed (<a href="#kappaPrior">Figure 13</a>). </p>
+
+<figure>
+    <a id="kappaPrior"></a>
+    <img  src="figures/beast2_prior_kappa.png" alt="">
+    <figcaption>Figure 13: Specifying the kappa (transition/transversion ratio) prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>For the next parameter, the origin of the epidemic, we ask ourselves whether there is any reasonable expectation we might have in terms of when the infection in California started, i.e. what is the date when the ancestor of all of the sequences first appeared.</p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Do you have any feeling for what the origin should/could be set to?</p>
+</blockquote>
+
+<p>The data span a period of 3 months and come from a limited area; thus, it would be unreasonable to assume that a single season flu epidemic would last longer than a few months. The best guess for the origin parameter prior we could make is therefore on the order of at least 3-4, but probably no more than 6 months. We set the prior according to this expectation.</p>
+
+<blockquote>
+<p>Click on the arrow next to the <strong>origin</strong> and change the prior distribution from <strong>Uniform</strong> to <strong>Gamma</strong> with <strong>Alpha</strong> parameter set to 0.5 and <strong>Beta</strong> parameter set to 2.0 (<a href="#originPrior">Figure 14</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="originPrior"></a>
+    <img  src="figures/beast2_prior_origin.png" alt="">
+    <figcaption>Figure 14: Specifying the origin prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Lastly, for the sampling proportion, we know that we certainly did not sample every single infected individual. Therefore, setting a prior close to 1 would not be reasonable. Actually, it is more reasonable to usually expect only a proportion of less than 0.1 of all flu cases to be sampled. Here, we specify something on the order of 10<sup>-3</sup>. The default prior for the sampling proportion is a Beta distribution, which is only defined between 0 and 1, making it a natural choice for proportions. However, this is not the only prior that can be used, and here we specify a log-normal distribution, while ensuring that an appropriate upper limit is set, to prevent a sampling proportion higher than 1, which is not defined. </p>
+
+<blockquote>
+<p>Click on the arrow next to the <strong>samplingProportion</strong> and change the distribution from <strong>Beta</strong> to <strong>Log Normal</strong>. </p>
+
+<p>Next, change the value for the <strong>M</strong> (mean) to 0.001 and tick the box <strong>Mean In Real Space</strong> (<a href="#samplingProportionPrior">Figure 15</a>).</p>
+
+<p>Also, make sure that the <strong>Lower</strong> is set to 0.0 and the <strong>Upper</strong> is set to 1.0.</p>
+</blockquote>
+
+<figure>
+    <a id="samplingProportionPrior"></a>
+    <img  src="figures/beast2_prior_samplingProportion.png" alt="">
+    <figcaption>Figure 15: Specifying the sampling proportion prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>MCMC</h3>
+
+<blockquote>
+<p>Navigate to the <strong>MCMC</strong> panel.</p>
+</blockquote>
+
+<p>We want to shorten the chain length, in order for it to run in a reasonable time and we want to decrease the tree sampling frequency.</p>
+
+<blockquote>
+<p>Change the <strong>Chain Length</strong> from 10&#39;000&#39;000 to 5&#39;000&#39;000.</p>
+
+<p>Click on the arrow next to the <strong>treelog</strong> and set the <strong>Log Every</strong> to 100&#39;000 (<a href="#mcmc">Figure 16</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="mcmc"></a>
+    <img  src="figures/beast2_mcmc.png" alt="">
+    <figcaption>Figure 16: Specifying the MCMC properties.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Now, all the specifications are done. We want to save and run the XML.</p>
+
+<blockquote>
+<p>Save the XML file as <code>Heterochronous.xml</code>.</p>
+</blockquote>
+
+<h3>Running the analysis</h3>
+
+<blockquote>
+<p>Within BEAST, specify the file Heterochronous.xml. </p>
+
+<p>If you have BEAGLE installed tick the box to <strong>Use BEAGLE library if available</strong>, which will make the run faster.</p>
+
+<p>Hit <strong>Run</strong> to start the analysis.</p>
+</blockquote>
+
+<p>The run should take about 15-20 minutes. While waiting for your results, you can start preparing the XML file for the homochronous data.</p>
+
+<h3>Analysing the results</h3>
+
+<blockquote>
+<p>Load the file into <strong>Tracer</strong> to check mixing and the parameter estimates. </p>
+</blockquote>
+
+<figure>
+    <a id="tracershort"></a>
+    <img  src="figures/tracer_short.png" alt="">
+    <figcaption>Figure 17: Loading the log file into Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>First thing you may notice is that most of the parameters do have low ESS (effective sample size below 200) marked in red (<a href="#tracershort">Figure 17</a>). This is because our chain did not run long enough. However, the estimates we obtained with a chain of length 5&#39;000&#39;000 are very similar to those obtained with a longer chain. </p>
+
+<blockquote>
+<p>Click on <strong>clockRate</strong> and then click on <strong>Trace</strong> to examine the trace of the parameter (<a href="#tracerclocktrace">Figure 18</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="tracerclocktrace"></a>
+    <img  src="figures/tracer_clock_trace.png" alt="">
+    <figcaption>Figure 18: The trace of the clock rate parameter.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Note that even though the parameter has a low ESS, the chain appears to have passed the burn-in phase and seems to be sampling from across the posterior without getting stuck in any local optima. This is not a proof that the run is mixing well, however it gives us a good intuition that the parameter will have a good ESS value if we run the chain for longer. You should always examine the parameter traces to check convergence; a high ESS value is not proof that a run has converged to the true posterior.</p>
+
+<p>If you like, you can compare your results with the example results we obtained with identical settings and a chain of 30,000,000. </p>
+
+<blockquote>
+<p>Load the file <code>InfluenzaAH3N2_HAgene_2009_California_heterochronous_30M.log</code>. </p>
+
+<p>Do the parameter traces look better?</p>
+
+<p>Examine the posterior estimates for the <strong>becomeUninfectiousRate</strong>, <strong>samplingProportion</strong> and <strong>clockRate</strong> in Tracer.
+Do the estimates look realistic? 
+Are they different from the priors we set and if so, how?</p>
+</blockquote>
+
+<p>The estimated posterior distribution for the <strong>becomeUninfectiousRate</strong> has a median of 58.376 and a 95% HPD between 43.2389 and 77.6039 (<a href="#tracerdelta">Figure 19</a>). This is between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 4.7 and 8.44 days, thus, roughly one week. This is a lot more specific than the prior we set, which allowed for a much longer infectious period. The estimates also agree with what we know about Influenza A. In this case there was enough information in the sequencing data to estimate a more specific becoming uninfectious rate. If we had relied more on our prior knowledge we could have set a tighter prior on the <strong>becomeUninfectiousRate</strong> parameter, which may have helped the run to converge faster, by preventing it from sampling unrealistic parameter values. However, if you are unsure about a parameter it is always better to set more diffuse priors. </p>
+
+<figure>
+    <a id="tracerdelta"></a>
+    <img  src="figures/tracer_becomeUninfectiousRate.png" alt="">
+    <figcaption>Figure 19: Estimated posterior distribution for the becoming uninfectious rate.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We see that the sampling proportion (<a href="#tracersampling">Figure 20</a>) is estimated to be below 5 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">×</span></span></span></span> 10<sup>-5</sup>. This a lot lower than the mean we set for the prior on the sampling proportion (0.001). Therefore our prior estimate of the sampling proportion was much too high. Consequently, we see that the number of cases is also much higher than we initially thought. We assumed that there are around 1,000 cases when we set the prior, however our posterior indicates that the epidemic has on the order of tens of thousands of cases. </p>
+
+<figure>
+    <a id="tracersampling"></a>
+    <img  src="figures/tracer_samplingProportion.png" alt="">
+    <figcaption>Figure 20: Estimated posterior distribution for the sampling proportion.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Looking at the clock rate estimates (<a href="#tracerclockRate">Figure 21</a>) we see that they are about 2 to 3 times faster than the usual substitution rate for human influenza A <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. This is not a cause for concern and is actually a well-documented phenomenon. When viral samples are collected over a short time period the clock rate is often overestimated. The exact cause of the bias is not known, but it is suspected that incomplete purifying selection plays a role. What is important to keep in mind is that this is does not mean that the virus is mutating or evolving faster than usual. When samples are collected over a longer time period the estimated clock rate slows down and eventually reaches the long-term substitution rate.</p>
+
+<figure>
+    <a id="tracerclockRate"></a>
+    <img  src="figures/tracer_clockRate.png" alt="">
+    <figcaption>Figure 21: Estimated posterior distribution for the clock rate.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h1>Practical: H3N2 flu dynamics - Homochronous data</h1>
+
+<p>We could also use the homochronous data to investigate the dynamics of the H3N2 spread in California in 2009. We use the 29 sequences from April 28, 2009 to investigate whether this is possible. </p>
+
+<p>Follow the same procedure as for the heterochronous sampling. Now, however, use the alignment file called <code>InfluenzaAH3N2_HAgene_2009_California_homochronous.nexus</code> and use the <strong>Birth Death Skyline Contemporary</strong> model.</p>
+
+<p>Note that for the <strong>Birth Death Skyline Contemporary</strong> model the sampling proportion is called <strong>rho</strong>, and refers only to the proportion of infected individuals sampled at the present time. This is to distinguish it from the sampling proportion in the <strong>Birth Death Skyline Serial</strong> model, which refers to the proportion of individuals sampled through time. </p>
+
+<figure>
+    <a id="rho"></a>
+    <img  src="figures/beast2_prior_rho.png" alt="">
+    <figcaption>Figure 22: Specifying the sampling proportion prior for homochronous data.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Save the file as <code>Homochronous.xml</code> and run it in BEAST2.</p>
+
+<h2>Estimating the substitution rate from homochronous data</h2>
+
+<p>After the run is finished, load the log file into Tracer and examine the traces of the parameters. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Do you think running the analysis for longer will lead to the run mixing well?</p>
+</blockquote>
+
+<p>Most of the parameters again have ESS values below 200, however in this case the ESS values are lower than for heterochronous data and it is not clear that running the analysis for longer will lead to mixing. Indeed, while running the analysis for longer increases increases the ESS values for some parameters, they remain low for some parameters, in particular the <strong>origin</strong>, <strong>TreeHeight</strong> (tMRCA) and <strong>clockRate</strong>. Low ESS values for these parameters in turn translate into low ESS values for the tree prior (<strong>BirthDeathSkyContemporary</strong>), prior and posterior. </p>
+
+<figure>
+    <a id="tracerclocktrace2"></a>
+    <img  src="figures/tracer_clockTrace2.png" alt="">
+    <figcaption>Figure 23: The trace of the clock rate parameter.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Now, check the clock rate and the tree height parameters. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Do you think that homochronous samples allow for good substitution rate estimation?</p>
+
+<p>If yes, how would you know?</p>
+
+<p>If not, how can you see that and where do you think might the problem be? Can we address this problem in our analysis? </p>
+</blockquote>
+
+<p>Notice the values of the substitution rate estimates. From literature, one can read that influenza&#39;s HA gene has a substitution rate of about 10<sup>-3</sup> substitutions per site per year <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. Our estimate of the clock rate is of the same order as this value, but has a very large confidence interval. Notice also, that the confidence interval of the tree height is very large [0.1305,2.7393].</p>
+
+<p>Another way to see that the homochronous sampling does not allow for the estimation of the clock rate is to observe a very strong negative correlation of the clock rate with the tree height.</p>
+
+<blockquote>
+<p>In <strong>Tracer</strong> click on the <strong>Joint Marginal</strong> panel, select the <strong>TreeHeight</strong> and the <strong>clockRate</strong> simultaneously, and uncheck the <strong>Sample only</strong> box below the graphics (<a href="#clockRatetreeHeightCorrelation">Figure 23</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="clockRatetreeHeightCorrelation"></a>
+    <img  src="figures/tracer_homochronous_treeHeightclockRatecorrelation.png" alt="">
+    <figcaption>Figure 23: Clock rate and tree height correlation in homochronous data.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The correlation between the tree height and the clock rate is obvious: the taller the tree, the slower the clock. One way to solve this problem is to break this correlation by setting a strong prior on one of the two parameters. We describe how to set a prior on the tree height in the section below. </p>
+
+<h3>Creating Taxon Sets</h3>
+
+<p>We will use the results from the heterochronous data, to find out what a good estimate for the tree height of these homochronous samples is. For this aim, we first create an MCC (maximum clade credibility) tree in the <strong>TreeAnnotator</strong> and then check with <strong>FigTree</strong> what the estimate of the tMRCA (time to the most recent common ancestor) of the samples from April 28, 2009 is.</p>
+
+<p>Note, however, that we do this for illustration purposes only. In good practice, one should avoid re-using the data or using the results of an analyses to inform any further analyses containing the same data. Let&#39;s pretend therefore that the heterochronous dataset is an independent dataset from the homochronous one. </p>
+
+<blockquote>
+<p>Open the <strong>TreeAnnotator</strong> and set <strong>Burnin percentage</strong> to 10, <strong>Posterior probability limit</strong> to 0.5. Leave the other options unchanged.</p>
+
+<p>Set the <strong>Input Tree File</strong> to <code>InfluenzaAH3N2_HAgene_2009_California_heterochronous.trees</code> and the <strong>Output File</strong> to <code>InfluenzaAH3N2_HAgene_2009_California_heterochronous.tree</code>. (<a href="#treeAnnotator">Figure 24</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="treeAnnotator"></a>
+    <img style="width:50.0%;" src="figures/treeAnnotator.png" alt="">
+    <figcaption>Figure 24: Creating the MCC tree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>How can we find out what the tMRCA of our homochronous data may be? The best may be to have a look at the estimates of the heterochronous data in the <strong>FigTree</strong>.</p>
+
+<blockquote>
+<p>Now open <strong>FigTree</strong> and load <code>InfluenzaAH3N2_HAgene_2009_California_heterochronous.tree</code>.</p>
+
+<p>In the upper right corner, next to the magnifier glass sign, type <strong>2009/04/28</strong> to highlight all the sequences from April 28, 2009. (<a href="#tMRCAmedian">Figure 25</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="tMRCAmedian"></a>
+    <img  src="figures/FigTree_tMRCA_median.png" alt="">
+    <figcaption>Figure 25: Displaying median estimates of the node height in the MCC tree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<blockquote>
+<p>Tick the <strong>Node Labels</strong> in the left menu, and click the arrow next to it to open the full options. Change the <strong>Display</strong> from <strong>age</strong> to <strong>height_median</strong> (<a href="#tMRCAmedian">Figure 25</a>) and then to <strong>height_95%_HPD</strong> (<a href="#tMRCA95HPD">Figure 26</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="tMRCA95HPD"></a>
+    <img  src="figures/FigTree_tMRCA_HPD.png" alt="">
+    <figcaption>Figure 26: Displaying 95% HPD estimates of the node height in the MCC tree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Notice, that since we are using only a subset of all the heterochronous sequences, we are interested in the tMRCA of the samples from April 28, 2009 which may not coincide with the tree height of all the heterochronous data. These samples are spread around over all the clades in the tree, and the most recent common ancestor of all of them turns out to be the root of the MCC tree of the heterochronous samples. We therefore want to set the tMRCA prior of the tree formed by the homochronous sequences to be peaked around the median value of the MCC tree height, which is 0.5488 and we want 95% of the density of the prior distribution to be between 0.5343-0.5603.</p>
+
+<blockquote>
+<p>Open BEAUti, load the homochronous data and use the same settings as for the <code>Homochronous.xml</code> file.</p>
+
+<p>Create a new taxon set for root node by clicking the <strong>+ Add Prior</strong> button at the bottom of the parameter list in the <strong>Priors</strong> window. Select <strong>MRCA prior</strong> in the dropdown menu and press <strong>OK</strong>. This will reveal the <strong>Taxon set editor</strong>.</p>
+
+<p>Change the <strong>Taxon set</strong> label to <strong>allseq</strong>.</p>
+
+<p>Select the sequences belonging to this clade, i.e. all the tips, and move them from the left column to the right column using the <strong>&gt; &gt;</strong> button and click <strong>OK</strong>. (<a href="#tMRCAPrior">Figure 27</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="tMRCAPrior"></a>
+    <img style="width:75.0%;" src="figures/beast2_homochronous_tMRCA.png" alt="">
+    <figcaption>Figure 27: Specifying the root height prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The prior that we are specifying is the date (not the height) of the tMRCA of all the samples in our dataset. Thus, we need to recalculate the date from the tMRCA height estimates that we obtained above. All the tips are sampled at the date <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 2009.3233. The median date of the MRCA should therefore be calculated as follows 2009.3233 - 0.5488 = 2008.7745 and the 95% HPD should be [2009.3233-0.5603, 2009.3233-0.5343]=[2008.763,2008.789].</p>
+
+<blockquote>
+<p>Back in the <strong>Priors</strong> window, check the box labeled <strong>monophyletic</strong> for the <strong>allseq.prior</strong>.</p>
+
+<p>Click on the arrow next to the <strong>allseq.prior</strong>. Change the prior distribution on the time of the MRCA of selected sequences from <strong>[none]</strong> to <strong>Laplace Distribution</strong> and set the <strong>Mu</strong> to 2008.7745 and the <strong>Scale</strong> to 0.01 (<a href="#tMRCAPrior2">Figure 28</a>). </p>
+
+<p>You can check that these settings correspond to the height of tMRCA from the MCC tree by setting <strong>Mu</strong> to 0.5488 and observing the distribution to the right. When you are done, do not forget to set <strong>Mu</strong> back to 2008.7745.</p>
+</blockquote>
+
+<figure>
+    <a id="tMRCAPrior2"></a>
+    <img  src="figures/beast2_homochronous_tMRCA_prior.png" alt="">
+    <figcaption>Figure 28: Specifying the root height prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We also need to change the names of the output files so that we do not overwrite the results of the previous analyses.</p>
+
+<blockquote>
+<p>In the <strong>MCMC</strong> window, click on the arrow next to the <strong>tracelog</strong> and change the <strong>File Name</strong> to <code>InfluenzaAH3N2_HAgene_2009_California_homochronous_tMRCA.log</code>.</p>
+
+<p>Then, click on the arrow next to the <strong>treelog</strong> and add <code>_tMRCA</code> between <code>$(tree)</code> and <code>.trees</code> in the <strong>File Name</strong> field.</p>
+</blockquote>
+
+<p>Save the XML file as <code>Homochronous_tMRCA.xml</code> and run the analysis and compare to the original analysis of the homochronous data. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Are the substitution rate estimates more precise now?  What about the correlation between the tMRCA and the clock rate?</p>
+</blockquote>
+
+<h1>Comparison between runs</h1>
+
+<blockquote>
+<p>Load the log files for all three analyses into Tracer.</p>
+
+<p>Select <strong>clockRate</strong> and then press <code>shift</code> to select all three trace files.</p>
+
+<p>Click on <strong>Marginal Prob Distribution</strong>, selected <strong>Top-Right</strong> for the legend and colour by <strong>Trace File</strong>.</p>
+
+<p>How do the estimates for the three analyses compare to each other?</p>
+
+<p>Now repeat for the <strong>TreeHeight</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="tracerclockcompare"></a>
+    <img  src="figures/tracer_clockcomparison.png" alt="">
+    <figcaption>Figure 29: Comparing the marginal posteriors of the clock rate.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="tracertmrcacompare"></a>
+    <img  src="figures/tracer_tmrcacomparison.png" alt="">
+    <figcaption>Figure 30: Comparing the marginal posteriors of the tMRCA.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We see that the heterochronous analysis has the tightest posterior estimates for the clock rate. Hence, it is clear that this dataset contains the most information about the clock rate. This is obvious, since this dataset not only contains sequences sampled across time, but it also contains many more sequences than the homochronous dataset. The marginal posterior for the clock rate estimated from homochronous data with a prior on the tMRCA approaches this distribution, however it is still more diffuse. On the other hand, the clock rate estimates made on the homochronous data without a tMRCA prior are very diffuse. It is important to note that these estimates are <strong>not</strong> wrong, but simply indicates that there is a lot of uncertainty in the data. Importantly, the true clock rate still falls within the 95% HPD of the estimated clock rate from homochronous data. If this were not the case then the estimates would be wrong. Thus, when there is not a lot of information in our data, it is always better to have an uncertain estimate that contains the truth than to have a very specific, but wrong estimate. </p>
+
+<p>On the <strong>TreeHeight</strong> we see that the marginal posterior estimated from homochronous data with a tMRCA prior is almost identical to the marginal posterior estimated on heterochronous data. However, estimates on homochronous data without a tMRCA prior are very diffuse, because there is not enough information in the data to accurately date the tMRCA. </p>
+
+<p>Note that while we can compare parameter estimates between heterochronous and homochronous data easily enough you should never compare the likelihoods or posteriors between analyses that were run on different datasets!</p>
+
+<hr>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li> <a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a>  <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li> BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+<li> BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+<li> Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: A Software Platform for Bayesian Evolutionary Analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537.</span></li>
+<li><span id="cdc2009">CDC. (2009/20102009/2010). The 2009 H1N1 Pandemic: Summary Highlights, April 2009–April 2010. Centers for Disease Control and Prevention. Retrieved from http://http://www.cdc.gov/h1n1flu/cdcresponse.htm</span></li>
+<li><span id="Stadler2013">Stadler, T., Kühnert, D., Bonhoeffer, S., &amp; Drummond, A. J. (2013). Birth–death skyline plot reveals temporal changes of epidemic spread
+    in HIV and hepatitis C virus (HCV). <i>Proceedings of the National Academy of Sciences</i>, <i>110</i>(1), 228–233.</span></li>
+<li><span id="drummond06">Drummond, A. J., Ho, S. Y., Phillips, M. J., &amp; Rambaut, A. (2006). Relaxed phylogenetics and dating with confidence. <i>PLoS Biology</i>, <i>4</i>, e88.</span></li>
+<li><span id="drummond10">Drummond, A. J., &amp; Suchard, M. A. (2010). Bayesian random local clocks, or one rate to rule them all. <i>BMC Biology</i>, <i>8</i>, 114.</span></li>
+<li><span id="kawaoka2006">Kawaoka, Y. (2006). <i>Influenza virology: current topics</i>. Horizon Scientific Press.</span></li>
+<li><span id="jenkins2002">Jenkins, G. M., Rambaut, A., Pybus, O. G., &amp; Holmes, E. C. (2002). Rates of molecular evolution in RNA viruses: a quantitative phylogenetic analysis. <i>Journal of Molecular Evolution</i>, <i>54</i>(2), 156–165.</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

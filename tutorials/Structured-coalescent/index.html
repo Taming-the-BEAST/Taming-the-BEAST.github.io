@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Structured coalescent</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Structured-coalescent/">Structured coalescent</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Population structure using MultiTypeTree
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Nicola F. Müller
+					
+			
+				
+						
+							and Tim Vaughan
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/Structured-coalescent/Structured-coalescent.pdf">Structured-coalescent.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/raw/master/data/h3n2_2deme.fna" target="_blank" rel="nofollow">
+						h3n2_2deme.fna
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/raw/master/xml/MTT.xml" target="_blank" download rel="nofollow">
+						MTT.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/raw/master/precooked_runs/MTT.h3n2_2deme.map.trees" target="_blank" download rel="nofollow">
+						MTT.h3n2_2deme.map.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/raw/master/precooked_runs/MTT.h3n2_2deme.trees" target="_blank" download rel="nofollow">
+						MTT.h3n2_2deme.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/raw/master/precooked_runs/MTT.h3n2_2deme.typedNode.MCC.tree" target="_blank" download rel="nofollow">
+						MTT.h3n2_2deme.typedNode.MC...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/raw/master/precooked_runs/MTT.h3n2_2deme.typedNode.trees" target="_blank" download rel="nofollow">
+						MTT.h3n2_2deme.typedNode.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-coalescent/raw/master/precooked_runs/MTT.log" target="_blank" download rel="nofollow">
+						MTT.log
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-coalescent/commit/a99e9fd4f3b0e2351a5130fd136a3e8e5d56e40d">
+					12 Jul 2017 - <span class="text-gray">Update programs used section</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-coalescent/commit/54671ed23159e131c4aeab3a670aea0fe0137146">
+					09 Feb 2017 - <span class="text-gray">Fix quotation marks</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-coalescent/commit/b02a1d6c728502eb4a6e2cd8db6ce4c860719e80">
+					07 Feb 2017 - <span class="text-gray">Add heading</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-coalescent/commit/2fadb0032e04f9fc441e3d93a515cc0d21b9ea53">
+					07 Feb 2017 - <span class="text-gray">Merge</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-coalescent/commit/4409d19714e2afea2c36846a2f53320ca65b1406">
+					07 Feb 2017 - <span class="text-gray">Update latex tutorial</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>Population dynamics can influence the shape of a tree. Another thing that has strong influence on the shape of the tree is structure in a population. This is the case as soon as sequences do not mix well, i.e. they cluster together. One cause of this clustering is due to geography. Samples may not have been taken from the same geographic region, leading to clustering of samples from the same region. This clustering of samples can bias the estimation of parameters. The extension of the classic coalescent to the structured coalescent by allowing for migration between regions is trying to circumvent this by allowing individual regions to have distinct coalescent rates and by allowing migration between those regions.</p>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.2 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
+
+<h3>FigTree</h3>
+
+<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.2.</p>
+
+<hr>
+
+<h1>Practical: MultiTypeTree</h1>
+
+<p>In this tutorial we will estimate migration rates, effective population sizes and locations of internal nodes using the structured coalescent implemented in BEAST2, MultiTypeTree <a href="#Vaughan2014">(Vaughan, Kühnert, Popinga, Welch, &amp; Drummond, 2014)</a>.</p>
+
+<p>The aim is to:</p>
+
+<ul>
+<li> Learn how to infer structure from trees with sampling location</li>
+<li> Get to know how to choose the set-up of such an analysis</li>
+<li> Get to know the advantages and disadvantages of working with structured trees</li>
+</ul>
+
+<h2>The Data</h2>
+
+<p>The dataset consists of 60 Influenza A/H3N2 sequences sampled in Hong Kong and in New Zealand between 2001 and 2005. South-East Asia has been hypothesized to be a global source location of seasonal Influenza, while more temperate regions such as New Zealand are assumed to be global sinks (missing reference), meaning that Influenza strains are more likely to migrate from the tropic to the temperate regions then vice versa. We want to see if we can infer this source-sink dynamic from sequence data using the structured coalescent. </p>
+
+<h2>Creating the Analysis File with BEAUti</h2>
+
+<p>We will use BEAUti to generate the input XML for BEAST2 from the sequence alignment.</p>
+
+<h3>Install BEAST 2 Plug-Ins</h3>
+
+<p>The packages MultiTypeTree is not implemented in the core of BEAST, but has to be installed (Figure <a href="#fig:install_mtt">1</a>). </p>
+
+<figure>
+    <a id="fig:install_mtt"></a>
+    <img style="width:50.0%;" src="figures/install_mtt.png" alt="">
+    <figcaption>Figure 1: Install MultiTypeTree.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>To be able to make <code>.xml</code>&#39;s for MultiTypeTree, we have to load the MultiTypeTree template <code>File &gt; Template &gt; MultiTypeTree</code>. This template allows to specify additional things, such as sampling location, which one can not specify using the standard interface, as well as parameters such as the migration rates.
+After setting the template, we can load the alignment of the H3N2 data <code>File &gt; Add Alignment</code>.
+Since the sequences were sampled through time, we have to specify the sampling dates. These are included in the sequence names. To set the sampling dates, go to <strong>Tip Dates</strong>, guess them by splitting after the &quot;_&quot; and then choose the last group. There are two different ways in how BEAST can interpret sampling dates. They are labeled as <strong>Since some time in the past</strong> and <strong>Before the present</strong>. The easiest way to check if you have used the correct one is by checking <code>Height</code>. If the setup is correct, the sequences sampled the most recently (i.e. 2005.66) should have a Height of 0 while all other tips should be larger then 0 (Figure <a href="#fig:sampling_dates">2</a>).</p>
+
+<figure>
+    <a id="fig:sampling_dates"></a>
+    <img  src="figures/dates.png" alt="">
+    <figcaption>Figure 2: Sampling dates.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The main contrast in the setup to previous analyses is that we include additional information about the sampling location of sequences. Sequences were taken from patients in Hong Kong and New Zealand. We can specify these sampling locations by going to <strong>Tip Locations</strong> in BEAUti and guessing the locations. Use here the second group after splitting the names on the character &quot;_&quot;. After guessing the tip locations, the column <strong>Location</strong> should contain the entries Hong Kong and New Zealand (Figure <a href="#fig:sampling_locations">3</a>).</p>
+
+<figure>
+    <a id="fig:sampling_locations"></a>
+    <img  src="figures/locations.png" alt="">
+    <figcaption>Figure 3: Sampling locations.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>For this analysis, we will be using the HKY model. The HKY model infers different rates for transversion and transition. Transition being the change within purines (<strong>A</strong> and <strong>G</strong>) and pyrimidines (<strong>T</strong> and <strong>C</strong>) and transversion being the change among those groups. </p>
+
+<p>We also want to allow for heterogeneity between sites, which we can do by setting the <strong>Gamma Category Count</strong> to a value greater than 0 (normally between 4 and 6) and ticking the <strong>estimate</strong> box for the shape parameter (Figure <a href="#fig:hky">4</a>). </p>
+
+<figure>
+    <a id="fig:hky"></a>
+    <img  src="figures/choose_hky.png" alt="">
+    <figcaption>Figure 4: Setup of the site model.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>To speed up convergence, we leave the branch model on the Strict Clock model and  set a different value for the clock rate (default is 1). A value of 0.005 substitutions * site<sup>-1</sup> * year<sup>-1</sup>  is closer to the truth.</p>
+
+<p>Since we have more than one deme (Hong Kong and New Zealand), we can estimate the effective population size of those two demes separately. Additionally, these demes are connected, so we can (or need to) allow for migration between them.
+By default, the migration rates and population sizes are not estimated. To change this, we have to go to the Priors setting. There, we have to check the two <strong>estimate</strong> boxes for the population sizes and the migration rates. </p>
+
+<p>After checking those two boxes, there will be two new fields appearing, where we can set the priors for the population sizes and the migration rates. 
+Since we know the time scale of our data (few years), we can choose a proper prior for the migration rates, like an exponential prior distribution with mean 1.<br>
+Figure <a href="#fig:est_migrates">5</a> shows the final setup for the priors.</p>
+
+<figure>
+    <a id="fig:est_migrates"></a>
+    <img  src="figures/estimate_migration.png" alt="">
+    <figcaption>Figure 5: Check the boxes that say estimate for the population size and the migration rates and change it to an exponential prior with mean 1.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The rest of the settings we can leave as they are.</p>
+
+<p>After saving, we get an <code>*.xml</code>, which we can use in BEAST2. The run will take a bit of time. If the MultiTypeTree run consumes too much CPU power, you can just close it and then use the &quot;pre-cooked&quot; <code>*.log</code> and <code>*.trees</code> files later instead.</p>
+
+<h3>Analysis of the MultiTypeTree run</h3>
+
+<p>Load the <code>*.log</code> files into tracer. First, we should check that the run has converged by looking at the ESS values. If all ESS values are above 200, we should be on the safe side.</p>
+
+<p>Next, we can have a look at the estimates of the effective population sizes (Figure <a href="#fig:estimated_peff">6</a>). </p>
+
+<figure>
+    <a id="fig:estimated_peff"></a>
+    <img style="width:60.0%;" src="figures/effectivePsize_tracer.png" alt="">
+    <figcaption>Figure 6: Estimated effective population sizes.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Hong Kong (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∼</mo></mrow><annotation encoding="application/x-tex">\sim</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">∼</span></span></span></span>7 Mio Inhabitants) is inferred to have the larger effective population size than New Zealand (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∼</mo></mrow><annotation encoding="application/x-tex">\sim</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">∼</span></span></span></span> 4.5 Mio Inhabitants). Keep in mind though that the effective population size is not only dependent on the population size itself, but also on e.g. transmission rates or contact rates. Differences in the real population size are therefore not necessarily reflected in the effective population size. However, they can still act as a sanity test. Next, we want to have a look at the inferred migration rates (Figure <a href="#fig:etimated_mig">7</a>).</p>
+
+<figure>
+    <a id="fig:etimated_mig"></a>
+    <img style="width:60.0%;" src="figures/migrationrates_tracer.png" alt="">
+    <figcaption>Figure 7: Estimated migration rates.</figcaption>
+</figure>
+
+<p><br></p>
+
+<hr>
+
+<p>As we stated at the beginning, it is assumed that South-East Asia works as a global source of influenza, while e.g. Oceania acts as a sink.</p>
+
+<blockquote>
+<p>Do the inferred migration rates agree with this hypothesis?</p>
+</blockquote>
+
+<p>After having looked at the inferred parameters, we can look at the inferred trees.
+We can either look at all the sampled trees individually or can use a summary of all tree. This can be done by using the program TreeAnnotator:</p>
+
+<blockquote>
+<p>We need to specify at least 4 settings there. First, the burn-in percentage, then the input tree file, the output tree file for which we have to specify a file name and the <code>Node Heights</code> (set it to <code>Mean Heights</code>)</p>
+</blockquote>
+
+<p>MultiTypeTree logs 3 different tree files:</p>
+
+<ul>
+<li> The first one is the <code>*.map.trees</code> file. It contains the maximum posterior tree for the analysis up to a sample of the MCMC. This tree is the tree with the highest posterior probability that has been visited so far.</li>
+<li>The second one is the <code>*.trees</code> file. It contains the logged trees with so called single child node. In a normal tree, all nodes have two (or sometimes more) children. The nodes there are coalescent events. The single child nodes on the other hand are migration events (in this case a migration event between Hong Kong and New Zealand). MultiTypeTree infers the timing of those migration events on a branch and logs them in the <code>*.trees</code> file.</li>
+<li>The third tree file logged is the <code>*.typedNode.trees</code>. This file does not use single child nodes. Instead, every coalescent event (here always a node with two daughter lineages) has a location (or state or color or type) where it was inferred to take place (see Figure <a href="#fig:single_child">8</a>)</li>
+</ul>
+
+<figure>
+    <a id="fig:single_child"></a>
+    <img  src="figures/single_child.png" alt="">
+    <figcaption>Figure 8: An example of a tree where the migration events are logged as single child nodes (left) and of the same tree where only the location of a coalescent event is logged (right).</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>To summarize all the trees, we will need the <code>*.typedNode.trees</code> files, since TreeAnnotator cannot handle single child nodes. We will also need to specify the <strong>Burnin percentage</strong>, which we can guess from looking at the traces of the parameter estimates in Tracer (10% should be more than enough). Next, we also need to specify where the output will be saved and under what name. After that, we can run the analysis.</p>
+
+<p>When TreeAnnotator is finished, we can visualize the summarized MultiTypeTree run with FigTree. </p>
+
+<blockquote>
+<p>Open the program and go to <code>File &gt; Open</code>, and open the output tree file from TreeAnnotator. </p>
+
+<p>To color the tree, go to <strong>Appearance</strong> and change <strong>Colour by</strong> and <strong>Width by</strong>. </p>
+
+<p>To get the coloring by inferred location, one has to set it to <strong>type</strong>. The expressions <strong>type, state, location and color</strong> are often used interchangeably.
+The color gives the estimated (most likely) location of a node (red for Hong Kong and blue for New Zealand), the width gives the certainty of a color. The more certain the estimate is, the wider the branch above (towards the root of) the node. You can also change the <strong>Line Weight</strong> to better see difference in the width of branches. </p>
+</blockquote>
+
+<figure>
+    <a id="fig:example"></a>
+    <img  src="figures/figtree_color.png" alt="">
+    <figcaption>Figure 9: Color tree according to the inferred location.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Next, we would like to know how certain we are about the node heights. </p>
+
+<blockquote>
+<p>This can be visualized by going to <strong>Node Bars</strong> and there <strong>Display</strong> the 95% HPD of node heights, which gives the 95% credibility interval of node heights (the mean is indicated by the shown node height).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:example"></a>
+    <img  src="figures/figtree_nodeheights.png" alt="">
+    <figcaption>Figure 10: Set the 95% HPD for the node heights.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>Some considerations for using the structured Coalescent (or any structured method)</h3>
+
+<ul>
+<li> Inferring structure on a tree is hard and requires a lot of assumptions, e.g. that the migration rates don&#39;t change over time or populations are constant. </li>
+<li> The number of migration events on a tree might be very low, to infer a rate from such a low number of events can be very hard. In general, it is easier to infer rates within a region (here the effective population size) than it is to infer rates between them, as there are simply more events within than between regions.</li>
+<li> Despite considering structure in a tree, there might still be states or locations etc. that were not sampled. Even if a node is inferred to be in a location with high certainty, the results could look completely different if samples from other locations would be considered as well.</li>
+</ul>
+
+<hr>
+
+<h1>Acknowledgment</h1>
+
+<p>The content of this tutorial is based on the <a href="https://github.com/CompEvol/MultiTypeTree/wiki/Beginner&#x27;s-Tutorial">MultiTypeTree</a> tutorial by Tim Vaughan.</p>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li> <a href="http://www.beast2.org/book.html"><em>Bayesian Evolutionary Analysis with BEAST 2</em></a>  <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li> BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a> </li>
+<li> BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a> </li>
+<li> Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
+<li><span id="Vaughan2014">Vaughan, T. G., Kühnert, D., Popinga, A., Welch, D., &amp; Drummond, A. J. (2014). Efficient Bayesian inference under the structured coalescent. <i>Bioinformatics (Oxford, England)</i>, <i>30</i>(16), 2272–9. http://doi.org/10.1093/bioinformatics/btu201</span></li></ol>
+
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

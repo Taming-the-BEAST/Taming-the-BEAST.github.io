@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: SCOTTI-Tutorial.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: SCOTTI-Tutorial-blx.bib
+Database file #2: master-refs.bib
+Biblatex version: 3.3
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 5 entries,
+            6256 wiz_defined-function locations,
+            1318 strings with 11780 characters,
+and the built_in function-call counts, 49078 in all, are:
+= -- 4076
+> -- 637
+< -- 139
++ -- 1379
+- -- 260
+* -- 4034
+:= -- 5877
+add.period$ -- 0
+call.type$ -- 5
+change.case$ -- 70
+chr.to.int$ -- 48
+cite$ -- 8
+duplicate$ -- 4595
+empty$ -- 4329
+format.name$ -- 454
+if$ -- 9673
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 0
+newline$ -- 272
+num.names$ -- 196
+pop$ -- 1616
+preamble$ -- 1
+purify$ -- 125
+quote$ -- 0
+skip$ -- 840
+stack$ -- 0
+substring$ -- 8237
+swap$ -- 951
+text.length$ -- 143
+text.prefix$ -- 4
+top$ -- 1
+type$ -- 158
+warning$ -- 0
+while$ -- 672
+width$ -- 0
+write$ -- 268

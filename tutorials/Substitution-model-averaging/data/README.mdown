@@ -1,0 +1,2 @@
+# Data
+The data needed in the "Substiution model selection in BEAST2" tutorial is built into BEAST2 as "primate-mtDNA.nex".

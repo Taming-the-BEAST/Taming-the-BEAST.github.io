@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Writing a new tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li class="active">
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	
+
+<div class="blog-post">
+	<div class="row">
+		<div class="col-md-1"></div>	
+		<div class="col-md-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/contribute/Writing-a-new-tutorial/" class="off">Writing a new tutorial</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						01 Nov 2016
+						
+						by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+								
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>					
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">	
+			
+			<div class="post">
+				<p>There are four different types of tutorials that can be contributed to the website:</p>
+
+<ol>
+<li>Write a new tutorial in Markdown <em>(preferred option)</em></li>
+<li>Write a new tutorial in LaTeX</li>
+<li>Contribute an existing PDF tutorial (with or without the source code)</li>
+<li>Contribute an existing Wiki tutorial (e.g. a tutorial on GitHub or GitLab)</li>
+</ol>
+
+<p>They are described in more detail below.</p>
+
+<h2>Writing a new tutorial in Markdown</h2>
+
+<p>Markdown is our preferred format, because it is the most flexible.
+Markdown is a lightweight, readable markup language that can be easily converted to many different formats. Tutorials written in Markdown can be displayed in html in a web browser or easily converted to printable PDF documents. Because Markdown is very readable, it also makes it easier to maintain and update tutorials.</p>
+
+<p>Tutorials written in Markdown should be saved into the file <code>README.md</code>. If you write the tutorial in Markdown you do not need to include any LaTeX or PDF files with the tutorial. 
+In the <a href="https://github.com/Taming-the-BEAST/Tutorial-Template">tutorial template repository</a> there is an example tutorial written in Markdown. More Markdown syntax is given in the <a href="/contribute/Style">Markdown style guide</a>. </p>
+
+<p>References can be added to a Markdown tutorial using <a href="/contribute/Jekyll-scholar">Jekyll-scholar</a>. An example is given in the <a href="https://github.com/Taming-the-BEAST/Tutorial-Template">tutorial template repository</a>. </p>
+
+<p>Although you should be able to preview the tutorial by looking at the repository on GitHub, some objects will not be in the correct format, because the website uses a custom stylesheet with a few extra extensions. The best way to preview what the tutorial will look like on the website is to <a href="/contribute/Building-a-local-copy-of-the-site/">build a local copy of the site</a>. Then simply add a link to your tutorial to <code>config.yml</code> and recompile the website to preview it. (The website will compile faster if you remove all other tutorials from <code>config.yml</code>).</p>
+
+<h2>Writing a new tutorial in LaTeX</h2>
+
+<p>Tutorials written in LaTeX should be saved into <code>main.tex</code>. We would appreciate if you used <code>preamble.tex</code> and <code>biblatex_macros.tex</code> along with the outline <code>main.tex</code> in the <a href="https://github.com/Taming-the-BEAST/Tutorial-Template">tutorial template repository</a> to ensure that all of our tutorials have the same style. </p>
+
+<p>Please also write a small description of your tutorial in <code>README.md</code>. 
+Please do not add the compiled PDF file to the repository. We will build it ourselves.</p>
+
+<h2>Contributing an existing PDF tutorial</h2>
+
+<p>Sometimes it may be the case that you already have an existing tutorial for BEAST2 that would be difficult to convert to Markdown or LaTeX. As long as you have a PDF file for the tutorial we can still use it! In this case just add the PDF file to the root of the GitHub project, and write a small description of the tutorial in <code>README.md</code> and you&#39;re done! </p>
+
+<h2>Contribute an existing Wiki tutorial</h2>
+
+<p>If a tutorial is already on a GitHub or GitLab Wiki it should already be written in Markdown and could be ported very easily for Taming the BEAST. Keep in mind that the Taming the BEAST website allows more flexibility for the tutorial style and allows references and figure captions. In addition, the tutorial would be available in a central location with other BEAST2 tutorials, bundled with all the data and XML files needed to run it.</p>
+
+			</div>	
+		</div>			
+		<div class="col-md-1"></div>
+	</div>
+	
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>	
+
+</div>
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

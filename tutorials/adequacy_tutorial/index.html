@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Model adequacy using BEAST2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/adequacy_tutorial/">Model adequacy using BEAST2</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Assessing clock and substitution models
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						David Duchêne
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/adequacy_tutorial/adequacy_tutorial.pdf">adequacy_tutorial.pdf</a>	
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/adequacy_tutorial/main.pdf">main.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/duchene/adequacy_tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/duchene/adequacy_tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/data/chron.tre" target="_blank" rel="nofollow">
+						chron.tre
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/data/corvid.tre" target="_blank" rel="nofollow">
+						corvid.tre
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/data/cp3.nex" target="_blank" rel="nofollow">
+						cp3.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/xml/cp3.xml" target="_blank" download rel="nofollow">
+						cp3.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/scripts/adeq.R" target="_blank" download rel="nofollow">
+						adeq.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/scripts/compile.results.R" target="_blank" download rel="nofollow">
+						compile.results.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/scripts/getRatogs.R" target="_blank" download rel="nofollow">
+						getRatogs.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/scripts/make.pps.als.R" target="_blank" download rel="nofollow">
+						make.pps.als.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/scripts/make.pps.trs.R" target="_blank" download rel="nofollow">
+						make.pps.trs.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/scripts/multlik.R" target="_blank" download rel="nofollow">
+						multlik.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/precooked_runs/cp3.log" target="_blank" download rel="nofollow">
+						cp3.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/precooked_runs/cp3.trees" target="_blank" download rel="nofollow">
+						cp3.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/raw/master/precooked_runs/results.Rdata" target="_blank" download rel="nofollow">
+						results.Rdata
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/duchene">
+    			<img class="pull-left avatar" src="https://avatars0.githubusercontent.com/u/6667921?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				duchene
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/commit/20bedb145a7907aeec898fb858f71ddaabc7061c">
+					09 Feb 2017 - <span class="text-gray">Merge pull request #3 from Taming-the-BEAST/master
+
+Actually fixed references</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/commit/ddf68ad5263f2d5453a16ca6e19850eac20115fa">
+					09 Feb 2017 - <span class="text-gray">Fix pdf</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/commit/2b60757e9c0de9170f7b0611ee97be4109a18753">
+					09 Feb 2017 - <span class="text-gray">Fix references</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/duchene/adequacy_tutorial/commit/3ae862d853dce461a04eb32893fd3589a3fbdb15">
+					09 Feb 2017 - <span class="text-gray">Merge pull request #2 from Taming-the-BEAST/master
+
+Updated figures, markdown and latex</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>This tutorial will guide you through methods to assess model adequacy in
+BEAST v2.4.x. In common practice, evolutionary
+models are selected based on their statistical fit <em>relative to
+each other</em>. This might be sufficient in some cases, but there is a risk
+that all of the candidate models lead to inferences that poorly
+represent the true evolutionary process. Indeed, even the most complex
+or best fitting model from a set of candidates can produce highly
+erroneous estimates of parameters of interest. In this tutorial we will
+explore methods to investigate the absolute merits of the model. This
+kind of assessment of the absolute performance of models is also known
+as model checking or assessment of model adequacy or plausibility.</p>
+
+<p>Before starting the tutorial, it is important that you understand the
+methods used in Bayesian inference for assessing model adequacy. A
+typical assessment of model adequacy is done by comparing a test
+statistic, calculated from the empirical data set, with the values of
+the statistic calculated from a large number of data sets simulated
+under the model. The simulated data sets from the model are often referred to
+as posterior predictive simulations (PPS), and they represent future or
+alternative data sets under the candidate model. The test statistic
+should be informative about the assumptions of the model in question.</p>
+
+<p>A large number of test statistics have been proposed to assess the
+components of phylogenetic analyses. In this tutorial we will
+investigate two test statistics, one for assessing the substitution
+model, and one for assessing the priors on rates and times used for
+molecular dating (Figure <a href="#fig:example1">1</a>).</p>
+
+<ul>
+<li>The multinomial likelihood, which is the likelihood of the data under
+a model with only a single general assumption: that substitution
+events are independent and identically distributed across sites. This statistic can
+be used to assess overall substitution model fit. Note that sites with
+missing data or indels should not be included when estimating the
+multinomial likelihood.</li>
+<li>The <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> index assesses the power of the molecular-clock
+model to estimate the number of substitutions across branches,
+assuming a tree topology and an adequate substitution model. We will
+go through this statistic in more detail during this exercise.</li>
+</ul>
+
+<h1>Programs used in this</h1>
+
+<p>Exercise</p>
+
+<ul>
+<li>BEAST v2.4.x.</li>
+<li>R programming environment.</li>
+<li>R packages <em>ape</em> and <em>phangorn</em>. Before starting the exercise, install these packages by typing the following in your R console:</li>
+</ul>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+      </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"phangorn"</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<hr>
+
+<h1>Run the empirical data</h1>
+
+<p>The evolutionary history of birds has been widely studied using mitochondrial DNA. Mitochondrial genomes have been sequenced for a diversity of birds, including passerines (perching birds). However, can show substantial differences in nucleotide composition between species. This potentially violates an assumption that is commonly made in phylogenetic analyses: that of compositional homogeneity across lineages. </p>
+
+<p>When we analyse nucleotide sequences, we often compare a number of substitution models from the GTR family to identify the one that provides the best fit to our data. However, we typically only consider a small subset of the models in this family, such as the JC, HKY, and GTR models. But it is possible that all of the models in this subset actually provide a poor absolute fit to our data.</p>
+
+<p>Here we investigate whether the widely used GTR+G model of nucleotide substitution provides an adequate description of the evolutionary process in mitochondrial DNA from 13 corvid birds (plus an outgroup taxon). This group of birds includes crows, ravens, and the Eurasian magpie. The data set comprises 1000 sites from the third codon positions of mitochondrial protein-coding genes.</p>
+
+<p>In the <code>data</code> folder you will find the in nexus format (<code>cp3.nex</code>)
+and a previously-estimated topology in newick format (<code>corvid.tre</code>)
+with our corvid taxa. You will also find an XML file (<code>cp3.xml</code>) in the
+<code>xml</code> folder to run BEAST 2 for this data set.</p>
+
+<p>The settings in this XML file include:</p>
+
+<ul>
+<li>A GTR+G substitution model.</li>
+<li>A <strong>strict clock</strong> with a uniform prior from 0 to 1 (substitution per site per million years).</li>
+<li>A Yule tree prior.</li>
+<li>A normally distributed root calibration with standard deviation of 2 and mean of 40.</li>
+<li>Run length of 10 million steps and the sampling frequency as 1K.</li>
+</ul>
+
+<p>Importantly, this XML file has been modified directly such that the starting tree has been provided and it remains fixed throughout the run. The steps to modify the XML to fix the tree topology are explained in a box at the end of this tutorial. </p>
+
+<p>Run the XML file using BEAST 2. The output
+of this run can also be found in the folder <code>precooked_runs</code>.</p>
+
+<h1>One step model assessment</h1>
+
+<p>In this section we will run substitution and clock model assessment. We will be using the output from the BEAST 2 analysis that we ran in the previous section. However, <strong>if you wish to perform model assessment for your own data, you should follow the steps in this section.</strong> </p>
+
+<p>The results for the example data set in this section can also be found in the folder <code>precooked_runs</code>. In that folder you will also
+find the results for the BEAST 2 run of <code>cp3.xml</code>.</p>
+
+<p>Begin by opening R. By typing the following, you will set the working directory to the scripts folder, and then load all the necessary scripts inside it.</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">setwd</span><span class="p">(</span><span class="s2">"INSERT THE PATH TO SCRIPTS FOLDER"</span><span class="p">)</span><span class="w">
+    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">dir</span><span class="p">())</span><span class="w"> </span><span class="n">source</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>In the next box will set the directory to <code>precooked_runs</code>, and run the
+function <code>adeq()</code>. The information in quotes in <code>adeq()</code> are:</p>
+
+<ul>
+<li> The path to the posterior of trees from BEAST 2</li>
+<li> The path to the log file from BEAST 2 </li>
+<li> The path to the empirical data alignment in nexus format</li>
+</ul>
+
+<p>In addition, <code>Nsim = 100</code> specifies the number of posterior predictive simulations to be performed.</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">setwd</span><span class="p">(</span><span class="s2">"../precooked_runs"</span><span class="p">)</span><span class="w">
+    </span><span class="n">clock_adequacy_example</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">adeq</span><span class="p">(</span><span class="n">trees.file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"cp3.trees"</span><span class="p">,</span><span class="w"> </span><span class="n">log.file</span><span class="w"> </span><span class="o">=</span><span class="s2">"cp3.log"</span><span class="p">,</span><span class="w"> </span><span class="n">empdat.file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"../data/cp3.nex"</span><span class="p">,</span><span class="w"> </span><span class="n">Nsim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+    </span><span class="nf">names</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>The contents of <code>clock_adequacy_example</code> should appear after the latest
+line of code. The contents include each of the components used to assess
+clock and substitution model adequacy. Elements that have the word <code>empirical</code> are test statistics calculated for empirical data. Elements that say <code>pps</code> are data for each of the simulated data sets. </p>
+
+<p>The following are some detailed elements in <code>clock_adequacy_example</code>:</p>
+
+<ul>
+<li> The seventh element <code>empirical_multlik</code> is the multinomial likelihood calculated for the empirical data set.</li>
+<li> The eighth element <code>pps_multliks</code> are the values of the multinomial likelihood calculated for each of the simulated data sets.</li>
+<li> The ninth element <code>mlik_pvalue</code> is the <em>P</em>-value for the multinomial likelihood, a proxy for the distance between the simulations and the empirical data.</li>
+</ul>
+
+<p>The <code>clock_adequacy_example</code> object should have the same contents as
+object `<code>assessment_provided&#39;&#39; in the file</code>results.Rdata`:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">load</span><span class="p">(</span><span class="s2">"results.Rdata"</span><span class="p">)</span><span class="w">
+    </span><span class="nf">names</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>The following section of this tutorial describes the steps for assessing model adequacy in more detail.</p>
+
+<h1>Steps for assessing model adequacy</h1>
+
+<h2>Reading the runs and simulating data</h2>
+
+<p>We will study the code in R and Figure <a href="#fig:example1">1</a> in
+detail. This section is mainly for reading and discussion, and is aimed for you to cement the steps required for assessing model adequacy.</p>
+
+<p>Open the <code>adeq.R</code> file in a text editor of your preference and
+you should see the following:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+  </span><span class="n">adeq</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">trees.file</span><span class="p">,</span><span class="w"> </span><span class="n">log.file</span><span class="p">,</span><span class="w"> </span><span class="n">empdat.file</span><span class="p">,</span><span class="w"> </span><span class="n">Nsim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">){</span><span class="w">
+     </span><span class="n">empdat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.phyDat</span><span class="p">(</span><span class="n">as.DNAbin</span><span class="p">(</span><span class="n">read.nexus.data</span><span class="p">(</span><span class="n">empdat.file</span><span class="p">)))</span><span class="w">
+     </span><span class="n">seqlen</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ncol</span><span class="p">(</span><span class="n">as.matrix</span><span class="p">(</span><span class="n">as.DNAbin</span><span class="p">(</span><span class="n">empdat</span><span class="p">)))</span><span class="w">
+     </span><span class="n">tree.topo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.nexus</span><span class="p">(</span><span class="n">trees.file</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+     </span><span class="n">sims</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">make.pps.als</span><span class="p">(</span><span class="n">trees.file</span><span class="p">,</span><span class="w"> </span><span class="n">log.file</span><span class="p">,</span><span class="w"> </span><span class="n">Nsim</span><span class="p">,</span><span class="w"> </span><span class="n">seqlen</span><span class="p">)</span><span class="w">
+     </span><span class="n">sims</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">make.pps.tr</span><span class="p">(</span><span class="n">sims</span><span class="p">,</span><span class="w"> </span><span class="n">empdat</span><span class="p">,</span><span class="w"> </span><span class="n">tree.topo</span><span class="p">)</span><span class="w">
+     </span><span class="n">bls</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">compile.results</span><span class="p">(</span><span class="n">sims</span><span class="p">)</span><span class="w">
+     </span><span class="nf">return</span><span class="p">(</span><span class="n">bls</span><span class="p">)</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<p>The analysis of empirical data is shown in the blue box in Figure 
+<a href="#fig:example2">2</a>. We then need to read the posterior trees and parameter
+estimates of the BEAST 2 analysis. The R package <em>phangorn</em> allows
+us to take these data and run the posterior predictive simulations, which is shown in the green box in Figure <a href="#fig:example1">1</a>. You
+will find the code to read data from the posterior and for simulating genetic alignments in
+<code>make.pps.als</code>. This script identifies the model being assessed and
+simulates data accordingly. The input required in this step includes:</p>
+
+<ul>
+<li>The paths of the posterior files for your analysis.</li>
+<li>The number of simulations you want to perform.</li>
+<li>The sequence length (number of sites in your alignment).</li>
+</ul>
+
+<p>If you are interested in how we read and simulate data in R, you
+can investigate the <code>make.pps.als</code> code. The following is the
+line in <code>adeq.R</code> in question:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">sims</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">make.pps.als</span><span class="p">(</span><span class="n">trees.file</span><span class="p">,</span><span class="w"> </span><span class="n">log.file</span><span class="p">,</span><span class="w"> </span><span class="n">Nsim</span><span class="p">,</span><span class="w"> </span><span class="n">seqlen</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>If the input file has a greater number of samples than the number of
+simulations requested, this will randomly select samples from the
+posterior. This is a good moment to discuss or read about how an alignment can be simulated using parameter estimates from the posterior.</p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:80.0%;" src="figures/Figure_1.svg" alt="">
+    <figcaption>Figure 1: Two of the existing approaches to using posterior predictive simulations to assess model adequacy in Bayesian phylogenetics. (a) One group of methods use characteristics of the data for model assessment, like the multinomial likelihood or the GC content. (b) Another method can assess clock models using estimates from clock-free methods. Under this approach, the number of substitutions per site expected along each branch under the clock hierarchical model are compared with those inferred in a clock-free analysis of the empirical data.</figcaption>
+</figure>
+
+<p><br></p>
+
+<hr>
+
+<h3>Calculate test statistics</h3>
+
+<p>Once we have simulated data sets, we can calculate the test statistics.
+The function <code>make.pps.trs</code> takes the assumed tree,
+substitution model, and the empirical and simulated data sets. The
+function estimates phylogenetic branch lengths for the empirical data
+set and each of the simulated data sets. In this step we also estimate
+the multinomial likelihood test statistic for the empirical data and
+each of the simulated data sets.</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">sims</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">make.pps.tr</span><span class="p">(</span><span class="n">sims</span><span class="p">,</span><span class="w"> </span><span class="n">empdat</span><span class="p">,</span><span class="w"> </span><span class="n">tree.topo</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>The output of this function is what we need for model assessment: the
+test statistic for the empirical data, and the distribution of test
+statistics for the simulated data sets.</p>
+
+<h3>Calculate <em>P</em>-values</h3>
+
+<p>We can now compare the test statistic for the empirical data and each of
+the simulated data sets, which is the step shown in the red box in Figure
+<a href="#fig:example1">1</a>. The most common way to do this is to calculate
+the tail area probability, which is the number of simulations with a
+test statistic greater than the value for the empirical data.</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">bls</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">compile.results</span><span class="p">(</span><span class="n">sims</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>This function will provide the test statistics for simulations, as well
+as <em>P</em>-values for each of the test statistics. Following practice
+from frequentist statistics, we can consider the model to be inadequate
+if the <em>P</em>-value for a given test statistic is below 0.05.
+Importantly, the assessment of the clock model allows us to identify the 
+branches for which the molecular clock model can estimate the number of
+substitutions. We will explore the interpretation of these data in the following section.</p>
+
+<h1>Interpreting the results of model assessment</h1>
+
+<h2>Results of substitution model assessment</h2>
+
+<p>It is strongly recommended to use qualitative checks of models using
+graphical analyses. In this section we will graph different components
+for assessing clock model adequacy using posterior predictive
+simulations.</p>
+
+<p>We will first visualise the results for assessing substitution model
+adequacy. The following code makes a histogram of the distribution of
+the multinomial likelihood for the PPS data, and will show the position
+of the value for empirical data on this distribution.</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">hist</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="p">[[</span><span class="m">8</span><span class="p">]],</span><span class="w"> 
+         </span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="p">[[</span><span class="m">8</span><span class="p">]])</span><span class="o">-</span><span class="n">sd</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="p">[[</span><span class="m">8</span><span class="p">]]),</span><span class="w"> 
+                  </span><span class="nf">max</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="p">[[</span><span class="m">8</span><span class="p">]])</span><span class="o">+</span><span class="n">sd</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="p">[[</span><span class="m">8</span><span class="p">]])),</span><span class="w"> 
+         </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Multinomial likelihood"</span><span class="p">)</span><span class="w">
+
+    </span><span class="n">abline</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clock_adequacy_example</span><span class="p">[[</span><span class="m">7</span><span class="p">]],</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>Your plot will be identical or very similar to Figure
+<a href="#fig:example2">2</a>. When assessing model adequacy, we consider the model
+to be an adequate representation of the evolutionary process if the test
+statistic for the empirical data is a typical value arising from the
+model. The multinomial likelihood for the empirical data falls inside
+the distribution of values for simulated data (Figure
+<a href="#fig:example2">2</a>), so our substitution model is possibly a reasonable description of the process
+that generated the data.</p>
+
+<p>This result can also be observed in the <em>P</em>-value for the
+multinomial likelihood in R:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">clock_adequacy_example</span><span class="p">[</span><span class="m">9</span><span class="p">]</span><span class="w">
+
+</span></code></pre></div>
+<figure>
+    <a id="fig:example2"></a>
+    <img style="width:70.0%;" src="figures/Figure_2_multinomial_dist.svg" alt="">
+    <figcaption>Figure 2: Distribution of PPS multinomial likelihood values with the value of the test statistic for the empirical data shown as a vertical line in red.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>Results of clock model assessment</h3>
+
+<p>The following script shows a simple example to explore the branch-wise
+posterior predictive <em>P</em>-values. We will first load the tree. In
+this example we will use the original tree provided (<code>data/corvid.tre</code>), but usually the
+tree with the median posterior branching times would be appropriate. We
+will colour the branches with the best accuracy in blue, and the
+branches that have the lowest accuracy in green (Figure
+<a href="#fig:example3">3</a>).</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+   </span><span class="n">tr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.tree</span><span class="p">(</span><span class="s2">"../data/corvid.tre"</span><span class="p">)</span><span class="w">
+   </span><span class="n">plot</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span><span class="w"> </span><span class="n">edge.col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rainbow</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="o">$</span><span class="n">branch_wise_pppvalues</span><span class="p">),</span><span class="w"> 
+        </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">/</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="o">/</span><span class="m">6</span><span class="p">)[</span><span class="n">rank</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="o">$</span><span class="n">branch_wise_pppvalues</span><span class="p">)],</span><span class="w"> 
+        </span><span class="n">edge.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+   </span><span class="n">edgelabels</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="o">$</span><span class="n">branch_wise_pppvalues</span><span class="p">,</span><span class="w"> </span><span class="n">bg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>The values along each branch indicate the proportion of simulations in which
+the branch length was greater than the length estimated using the
+empirical data. The expected value under the model is 0.5. If this value
+is 0 branch lengths are being underestimated with respect to the model.
+Similarly, if the value is 1 branch lengths are being overestimated with
+respect to the model.</p>
+
+<p>You can also investigate the  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>  index:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+   </span><span class="n">clock_adequacy_example</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="w">
+
+</span></code></pre></div>
+<p>This index is the proportion of branches in the tree for which the
+branch-wise posterior predictive <em>P</em>-values are inside the central
+95 percent of the distribution. The rates and times models can be
+considered adequate when the  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>  index is high.</p>
+
+<p>You might find it surprising that the  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>  index for this
+data set is closer to 0 than 1. The reason for this is possibly that we used an overly simple model of rate variation across lineages. As described in section 3, the analyses in BEAST 2 were done using a strict clock. Furthermore, these data have very high overall rates, such that they have a very large amount of variation, and possibly contain substantial
+substitutional saturation. </p>
+
+<figure>
+    <a id="fig:example3"></a>
+    <img style="width:90.0%;" src="figures/Figure_3_branchwise_p.svg" alt="">
+    <figcaption>Figure 3: Estimated chronogram with branches coloured by their clock adequacy P-value.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="fig:example4"></a>
+    <img style="width:90.0%;" src="figures/Figure_4_branchwise_dev.svg" alt="">
+    <figcaption>Figure 4: Estimated chronogram with branches coloured by their deviation between the empirical and simulated lengths.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The following script shows a simple example to explore the branch-wise
+length deviation. This metric is a proxy for the difference between the
+branch-length estimate using empirical data and the mean branch-length
+estimate using posterior predictive simulations. To make the values comparable across branches, the difference between the empirical branch length and mean PPS branch-length has been divided by the empirical branch length.
+If this value is close to zero, the priors for times and molecular evolutionary rates can be considered adequate. We
+apply the same colouring system as the plot above. Note that in the
+case of branch length deviation, larger numbers indicate greater
+deviation from the empirical branch length, and therefore lower accuracy
+(Figure <a href="#fig:example4">4</a>).</p>
+
+<p>Have a look at the alignment file to observe the large amount of variation in the data, and why some of the values in Figure <a href="#fig:example4">4</a> seem extremely large. One thing you might notice is that the sites seem highly variable, suggesting that there might be a large degree of substitutional saturation. Our conclusion form these analyses is that the strict clock provides a very poor fit to these data, and a more flexible clock model might be better suited. In addition, it might be appropriate to use the first and second codon positions of these mitochondrial genes, because they are likely to be less saturated.</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="w">
+    </span><span class="n">plot</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span><span class="w"> </span><span class="n">edge.col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rev</span><span class="p">(</span><span class="n">rainbow</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="o">$</span><span class="n">branch_length_deviation</span><span class="p">),</span><span class="w"> 
+         </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">/</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="o">/</span><span class="m">6</span><span class="p">)[</span><span class="n">rank</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="o">$</span><span class="n">branch_length_deviation</span><span class="p">)]),</span><span class="w"> 
+         </span><span class="n">edge.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+    </span><span class="n">edgelabels</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="n">clock_adequacy_example</span><span class="o">$</span><span class="n">branch_length_deviation</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">bg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div>
+<p>Note that in this simple method to graph the results, the branches in
+the two plots above have been coloured by their rank, rather than their
+magnitude.</p>
+
+<hr>
+
+<h1>Concluding remarks</h1>
+
+<ul>
+<li>Assessing model adequacy provides insight into the <em>absolute</em> merits of a candidate model. This means that it can identify cases when even the best-fitting candidate model is a poor representation of the evolutionary process, such that inferences are unreliable. Assessment of model adequacy is an alternative to traditional model selection approaches that assess the <em>relative</em> support among candidate models.</li>
+<li>The choice of test statistic is critical to the assessment of model adequacy. The test statistic can define what aspect of a model is being assessed. Most test statistics are not complete descriptions of the model, so it is convenient to explore a model using several test statistics where possible.</li>
+<li>There are cases in which the inferences of some parameters are reliable, while others are not (e.g. some branch rates are accurate while others are not). Closer examination of test statistics can sometimes bring additional insight into when the model is adequate for the data at hand.</li>
+</ul>
+
+<hr>
+
+<blockquote>
+<p><strong>Optional: Fixing the tree topology</strong></p>
+
+<p>Load the data <code>cp3.nex</code> to BEAUti, setting the model as described in the first section, and saving the XML file. Then open the XML file in your preferred text editor, and add a <code>tree</code> statement as follows above line with the <code>&lt;run ...</code> statement.</p>
+<div class="highlight"><pre><code class="language-XML" data-lang="XML">
+    &lt;tree id="Tree.t:treename" spec='beast.util.TreeParser' newick="((A, B), (C, D), E);" taxa="@alignmentname"/&gt;
+
+</code></pre></div>
+<p>Newick refers to a format to express the tree structure. Replace the dummy newick tree with the correct tree, which you will find in <code>corvid.tre</code> in the <code>data</code> folder. Also modify the names of the tree and the taxa: the name of your tree appears after <code>&quot;Tree.t:</code> elsewhere in the XML, and the name of the taxa is an <code>@</code> followed by your data <code>id</code> in the line immediately above the alignment.</p>
+
+<p>Now remove the <code>tree</code> statement, which is inside the <code>state</code> and looks like the following.</p>
+<div class="highlight"><pre><code class="language-XML" data-lang="XML">
+    &lt;tree id="Tree.t:treename" name="stateNode"&gt;
+            &lt;taxonset id="TaxonSet.alignmentname" spec="TaxonSet"&gt;
+                &lt;alignment idref="alignmentname"/&gt;
+            &lt;/taxonset&gt;
+     &lt;/tree&gt;
+
+</code></pre></div>
+<p>In the place of that <code>tree</code> statement, type an <code>input</code> statement, which will lead  to a new <code>statenode</code> as follows.</p>
+<div class="highlight"><pre><code class="language-XML" data-lang="XML">
+    &lt;input name='stateNode' idref='Tree.t:treename'/&gt;
+
+</code></pre></div>
+<p>Once again, make sure that the tree name is correct.</p>
+
+<p>Now remove the whole random tree initialiser, which begins and ends with the following lines.</p>
+<div class="highlight"><pre><code class="language-XML" data-lang="XML">
+    &lt;init id="RandomTree.t:treename" ...
+    ...
+    &lt;/init&gt;
+
+</code></pre></div>
+<p>Lastly, remove the lines (or set the weights to 0) of the operators on the tree topology. These include the lines that have any of <code>SubtreeSlide</code>, <code>Narrow</code>, <code>Wide</code>, and <code>WilsonBalding</code>. You might find these words together with the tree model selected (in this case <code>BirthDeath</code>).</p>
+</blockquote>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Goldman1993">Goldman, N. (1993). Statistical tests of models of DNA substitution. <i>Journal of Molecular Evolution</i>, <i>36</i>(2), 182–198. http://doi.org/10.1007/BF00166252</span></li>
+<li><span id="Bollback2002">Bollback, J. P. (2002). Bayesian Model Adequacy and Choice in Phylogenetics. <i>Molecular Biology and Evolution</i>, <i>19</i>(7), 1171. http://doi.org/10.1093/oxfordjournals.molbev.a004175</span></li>
+<li><span id="Duchene2015">Duchêne, D. A., Duchêne, S., Holmes, E. C., &amp; Ho, S. Y. W. (2015). Evaluating the Adequacy of Molecular Clock Models Using Posterior Predictive Simulations. <i>Molecular Biology and Evolution</i>, <i>32</i>(11), 2986. http://doi.org/10.1093/molbev/msv154</span></li></ol>
+
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

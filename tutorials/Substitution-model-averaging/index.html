@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Substitution-model-averaging</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Substitution-model-averaging/">Substitution model averaging</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				A tutorial using bModelTest
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						David A. Rasmussen
+					
+			
+				
+						, Carsten Magnus
+				
+			
+				
+						
+							and Remco Bouckaert
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/Substitution-model-averaging/Substitution-model-averaging.pdf">Substitution-model-averaging.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/data/primate-mtDNA.nex" target="_blank" rel="nofollow">
+						primate-mtDNA.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/xml/primate-mtDNA-bMT.xml" target="_blank" download rel="nofollow">
+						primate-mtDNA-bMT.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/precooked_runs/primate-mtDNA-bMT.log" target="_blank" download rel="nofollow">
+						primate-mtDNA-bMT.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/precooked_runs/primate-mtDNA-bMT.trees" target="_blank" download rel="nofollow">
+						primate-mtDNA-bMT.trees
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/magnuscar">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/23211536?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				magnuscar
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/6cc996feb0e220b13b8ef533593ceaaf261c7df2">
+					25 Jul 2017 - <span class="text-gray">BMT_Rates.6 actually mixes poorly</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/b23815a6a3dffbca68dfe7c9a96869e6e89edfa3">
+					21 Jul 2017 - <span class="text-gray">Small update for clarity</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/6e0415bef717ae7b33473636127654cf411b59eb">
+					12 Jul 2017 - <span class="text-gray">Cleanup</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/54c84d73959f93f9cbe1898051b51ae5784bbb0e">
+					12 Jul 2017 - <span class="text-gray">Small style changes</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/88018afbb4872cb0fa2a1fdf522bc4763f50165d">
+					12 Jul 2017 - <span class="text-gray">Small changes</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>Before running any phylogenetic analysis in BEAST, we need to decide on a model of molecular evolution that describes how our sequence data evolved. In particular, we need to decide on a substitution model that describes the relative rates at which different types of substitutions occur. For nucleotide data, the substitution model is typically represented as a 4x4 symmetric rate matrix <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">Q</span></span></span></span> with the general form:</p>
+
+<div style='text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>Q</mi><mo>=</mo><mrow><mo fence="true">(</mo><mtable><mtr><mtd><mrow><mo>−</mo></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>c</mi></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>g</mi></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>t</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>c</mi></mrow></msub></mrow></mtd><mtd><mrow><mo>−</mo></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>c</mi><mi>g</mi></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>c</mi><mi>t</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>g</mi></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>c</mi><mi>g</mi></mrow></msub></mrow></mtd><mtd><mrow><mo>−</mo></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>g</mi><mi>t</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>t</mi></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>c</mi><mi>t</mi></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>r</mi><mrow><mi>g</mi><mi>t</mi></mrow></msub></mrow></mtd><mtd><mrow><mo>−</mo></mrow></mtd></mtr><mtr><mtd><mrow></mrow></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle Q =
+    \begin{pmatrix}
+        - &amp; r_{ac} &amp; r_{ag} &amp; r_{at} \\
+        r_{ac} &amp; - &amp; r_{cg} &amp; r_{ct} \\
+        r_{ag} &amp; r_{cg} &amp; - &amp; r_{gt} \\
+        r_{at} &amp; r_{ct} &amp; r_{gt} &amp; - \\
+    \end{pmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:3.2500400000000003em;"></span><span class="strut bottom" style="height:6.0000800000000005em;vertical-align:-2.75004em;"></span><span class="base displaystyle textstyle uncramped"><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mord mathit">Q</span><span class="mrel">=</span><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:2.1050199999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:0.9500099999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎜</span></span></span><span style="top:0.3499999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎜</span></span></span><span style="top:-0.25001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎜</span></span></span><span style="top:-0.8500199999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎜</span></span></span><span style="top:-2.09504em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-2.41em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord">−</span></span></span><span style="top:-1.2100000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit">c</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:-0.009999999999999953em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:1.1900000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:2.3900000000000006em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-2.41em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit">c</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:-1.2100000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord">−</span></span></span><span style="top:-0.009999999999999953em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">c</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:1.1900000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">c</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-2.41em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:-1.2100000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">c</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:-0.009999999999999953em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord">−</span></span></span><span style="top:1.1900000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-2.41em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:-1.2100000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">c</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:-0.009999999999999953em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span style="top:1.1900000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord">−</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:2.1050199999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:0.9500099999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎟</span></span></span><span style="top:0.3499999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎟</span></span></span><span style="top:-0.25001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎟</span></span></span><span style="top:-0.8500199999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎟</span></span></span><span style="top:-2.09504em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></span></span></span></div>
+
+<p>The different named substitution models (e.g. JC69, HKY, TN93 and GTR) group these rates into different categories. For example, the JC69 model groups all rates together into a single rate category and assumes equal equilibrium frequencies whereas the GTR model assigns each rate to a different category and assumes a different equilibrium frequency for each nucleotide. We are therefore faced with the difficult choice of deciding <em>a priori</em> which one of these substitution models is most appropriate for our data.</p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> In terms of phylogenetic inference, what would the consequences be of picking a substitution model that is overparameterized (too complex) for a given data set? What would the consequences be of picking a model that is underparameterized? </p>
+</blockquote>
+
+<p>In addition to the substitution model, we also need to decide whether to include rate heterogeneity across sites. We might also want to include a proportion of invariant sites. On top of all this, we need to decide whether to estimate nucleotide base frequencies or fix them at their empirical frequencies. All of these choices leads to a bewildering number of different models to choose from. For this reason, researchers have often based their model choice on common conventions rather than on which model is most appropriate for their data.   </p>
+
+<p>Fortunately, nowadays we can be more sophisticated in our modeling choices and let the data inform us about which model is most appropriate using Bayesian model averaging. In this tutorial, we will use BEAST2&#39;s model averaging tool <strong>bModelTest</strong> <a href="#Bouckaert2017">(Bouckaert &amp; Drummond, 2017)</a> to select the most appropriate substitution model for the primate mitochondrial data set we already saw in the introductory tutorial. <strong>bModelTest</strong> uses reversible jump MCMC (rjMCMC), which allows the Markov chain to jump between states representing different possible substitution models, much like we jump between different parameter states in standard Bayesian MCMC inference. 
+This allows us to treat the substitution model as a nuisance parameter and integrate over all <em>available</em> (more on this later) substitution models while simultaneously estimating the phylogeny and other model parameters. Thus, parameter estimates are effectively averaged over different substitution models, weighted by the support of each model.
+A useful consequence is that as we are exploring the space of different substitution models we also log the proportion of time that the Markov chain spends in a particular model state. This can be interpreted as the posterior support of a model, which tells us how strongly the data and our prior beliefs support a model in comparison to other competing models.</p>
+
+<p>Note that <strong>bModelTest</strong> is only able to average over a subset of substitution models that are (a) implemented in BEAST2 and (b) that it knows how to move between. Ideally we would want to integrate over all possible substitution models, but since non-reversible models are mathematically inconvenient we restrict ourselves to the set of time-reversible (symmetric) nucleotide substitution models, which leaves us with 203 possible models. In addition, we can jump between models with empirical/estimated base frequencies, with/without gamma distributed rate heterogeneity and with/without invariant sites, resulting in a total of 203 x 2 x 2 x 2 = 1,624 possible model combinations. </p>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.7 <a href="#Bouckaert2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
+
+<hr>
+
+<h1>Practical: Selecting a substitution model</h1>
+
+<p>In this tutorial we will go through an analysis using bModelTest in BEAST v2.4.7 and look into how to interpret the results. This tutorial assumes that you have already done some of the other tutorials and that you are familiar with the basics of using BEAUti, BEAST and Tracer.</p>
+
+<h2>Installing the bModelTest Package</h2>
+
+<p>We first have to install the bModelTest (version 1.0.4 or above) package.</p>
+
+<blockquote>
+<p>Open BEAUti and navigate to <strong>File &gt; Manage Packages</strong>. Select bModelTest and then click <strong>Install/Upgrade</strong> (<a href="#fig:install">Figure 1</a>). Then <strong><em>restart BEAUti</em></strong> to load the package.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:install"></a>
+    <img style="width:80.0%;" src="figures/install_bModelTest.png" alt="">
+    <figcaption>Figure 1: Installing bModelTest in the Manage Packages window in BEAUti</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>The Data</h2>
+
+<p>We will continue analyzing the primate mitochondrial data set from the introductory tutorial.</p>
+
+<blockquote>
+<p>Open BEAUti and navigate to <strong>File &gt; Import Alignment</strong>. Select the file <code>primate-mtDNA.nex</code> in the data directory. </p>
+</blockquote>
+
+<h2>Setting up the analysis in BEAUti</h2>
+
+<p>In this tutorial, we will simplify things by having all four partitions in the alignment evolve under the same Site, Clock and Tree models.  </p>
+
+<blockquote>
+<p>In the <strong>Partitions</strong> panel select all four partitions (with <strong>shift+click</strong>) and then click <strong>Link Site Models</strong>, <strong>Link Clock Models</strong> and <strong>Link Trees</strong>. You should rename each model something more informative than noncoding, such as <strong>site</strong>, <strong>clock</strong> and <strong>tree</strong>. Rename models by <strong>double-clicking</strong> on the drop-down boxes.</p>
+</blockquote>
+
+<p>The Partition window should now look like <a href="#fig:partitions">Figure 2</a>.</p>
+
+<figure>
+    <a id="fig:partitions"></a>
+    <img style="width:80.0%;" src="figures/partitions.png" alt="">
+    <figcaption>Figure 2: Linking the Site Model across partitions in BEAUti.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Now we want to set up our Site Model to run the model averaging analysis.</p>
+
+<blockquote>
+<p>Click the <strong>Site Model</strong> tab in BEAUti and then select the drop-down box at the top which says <strong>Gamma Site Model</strong> and change it to <strong>BEAST ModelTest</strong> (<a href="#fig:siteModel">Figure 3</a>). </p>
+</blockquote>
+
+<figure>
+    <a id="fig:siteModel"></a>
+    <img style="width:80.0%;" src="figures/siteModel.png" alt="">
+    <figcaption>Figure 3: Setting up the BEAST ModelTest.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>In the lower drop-down box we will keep <strong>transitionTransversionSplit</strong> selected. This tells bModelTest to only consider substitution models that differentiate between transitions (A <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> G and C <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">→</span></span></span></span> T) and transversions (all other substitutions). Considering all the different ways we can group the rates in the substitution matrix, there are a total of 203 reversible models with symmetric matrices <a href="#Bouckaert2017">(Bouckaert &amp; Drummond, 2017)</a>. However, if we only consider models that do not group transitions together with transversions, there are only 31 models. Selecting <strong>transitionTransversionSplit</strong> therefore dramatically reduces the number of models that we need to explore.</p>
+
+<p>In the <strong>Clock Model</strong> and <strong>Prior</strong> tabs, we do not need to change any of the default settings for this tutorial.</p>
+
+<blockquote>
+<p>Click the <strong>MCMC</strong> tab in BEAUti. Change the chain length to 5,000,000 and the sampling frequency to every 5,000 by changing <strong>Log Every</strong> under <strong>tracelog</strong> and <strong>treelog</strong>. This will help us to avoid autocorrelation by ensuring that we are not sampling too frequently. (You can also increase <strong>Log Every</strong> under <strong>screenlog</strong> to keep BEAST2 from producing too much screen output). Change the <strong>tracelog</strong> and <strong>treelog</strong> file names to <code>primate-mtDNA-bMT</code> and click <strong>File &gt; Save As</strong> and save as <code>primate-mtDNA-bMT.xml</code>.</p>
+</blockquote>
+
+<h2>Run the analysis in BEAST</h2>
+
+<blockquote>
+<p>Open BEAST and choose <code>primate-mtDNA-bMT.xml</code> as the BEAST XML File (<a href="#fig:beastRun">Figure 4</a>). If BEAGLE is installed check the box to use it. Then click <strong>run</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:beastRun"></a>
+    <img style="width:50.0%;" src="figures/beastRun.png" alt="">
+    <figcaption>Figure 4: Running the analysis in BEAST.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>While BEAST is running consider the following discussion points.</p>
+
+<p>We did not check <strong>estimate</strong> in the box next to the Mutation Rate in the <strong>Site Model</strong> tab. Doing so makes no difference, since BEAUti constrains the mean mutation rate of all partitions to be equal to 1 (by default). Since we linked the substitution model across all partitions we effectively have only one partition, thus the mutation rate is fixed to 1. </p>
+
+<p>Note that BEAUti (by default) does not allow us to estimate the clock rate in the <strong>Clock Model</strong> tab. In this analysis we only have contemporaneously sampled sequences and we did not set a calibration node as in the introductory tutorial. Thus, we have no temporal information and the clock rate is not uniquely identifiable. To make the model identifiable BEAUti arbitrarily fixes the clock rate to 1.</p>
+
+<blockquote>
+<p><strong>Topics for discussion:</strong> </p>
+
+<ul>
+<li><p>We cannot estimate the substitution rate, so branches in the tree will not be measured in calendar time. What will be the units for branch lengths in the estimated tree?</p></li>
+<li><p>Suppose we used individual substitution models for each partition. What does the estimated mutation rate for each partition represent? Would the rate of each partition be identifiable?</p></li>
+<li><p>What would happen if we removed the constraint to have a mean mutation rate of 1? What if we also added a calibration point?</p></li>
+</ul>
+</blockquote>
+
+<h2>Analyzing the output in Tracer</h2>
+
+<blockquote>
+<p>Open the <code>primate-mtDNA-bMT.log</code> file in Tracer. There should be a long list of entries in the window on the left hand side (<a href="#fig:modelTrace">Figure 5</a>).</p>
+</blockquote>
+
+<p>If we select <strong>BMT_ModelIndicator</strong> from the list of entries and then <strong>(I)nt</strong> for the Data type below, we can see how the Markov chain explored the space of different models by jumping between substitution models. This is best seen if we click on the <strong>Trace</strong> tab (<a href="#fig:modelTrace">Figure 5</a>). Here, the sampled integer values refer to the indexes of the different substitution models. To see which index corresponds to which model, refer to (<a href="#fig:modelIndexes">Figure 6</a>).</p>
+
+<p>Now click on the <strong>Estimates</strong> tab above. This frequency histogram shows us how much time the Markov chain spent in each model state relative to other model states, and therefore reflects the posterior support for each model. We can see that the chain spent the most time in model number 1 (<a href="#fig:modelPosterior">Figure 7</a>), which by consulting <a href="#fig:modelIndexes">Figure 6</a> we see corresponds to the HKY model. </p>
+
+<figure>
+    <a id="fig:modelTrace"></a>
+    <img style="width:80.0%;" src="figures/modelTrace.png" alt="">
+    <figcaption>Figure 5: Visualizing how the Markov chain explored different models in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="fig:modelIndexes"></a>
+    <img style="width:50.0%;" src="figures/modelIndexes.png" alt="">
+    <figcaption>Figure 6: A list of substitution models, their associated model number (index) and how the substitution rates are grouped.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="fig:modelPosterior"></a>
+    <img style="width:80.0%;" src="figures/modelPosterior.png" alt="">
+    <figcaption>Figure 7: Visualizing the posterior support for different substitution models in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Did the chain ever visit the JC69 model? Why not?</p>
+</blockquote>
+
+<p>We can also use the output of our analysis to see if a model with (gamma) rate heterogeneity and/or a proportion of invariant sites is supported. If we select <strong>hasGammaRates</strong> in the window on the left and then click <strong>Estimates</strong> we see the proportion of time the chain spent in a model state with rate heterogeneity on (1) versus off (0), and thus the posterior support for a model with rate heterogeneity. Here, the chain seems to remain in a state with rate heterogeneity on, indicating very strong support for heterogeneity (<a href="#fig:hasGammaRates">Figure 8</a>).  We can also select <strong>hasInvariableSites</strong> to see if a model with invariant sites is supported. Here we see that the model spends more time in a model state with invariant sites off (0) than on (1), indicating that the presence of invariant sites are not as strongly supported important (<a href="#fig:hasInvariableSites">Figure 9</a>). Note that we can also look at the traces for <strong>BMT_gammaShape</strong> and <strong>BMT_ProportionInvariant</strong> to see which values of these two parameters the chain visited.</p>
+
+<p>There are a few other things we can look at in Tracer as well:</p>
+
+<ul>
+<li> <strong>rateAC, ... ,rateGT</strong> are the substitution rates between pairs of nucleotides in the substitution matrix. Note that these rates are averaged over all the models, weighted by the time the Markov chain spent in each model state.</li>
+<li> <strong>BMT_Rates.1 to 6</strong> are the independent substitution rates used to build up the rate matrix. They are indexed by how they are grouped into the six different possible rate categories (see <a href="#fig:modelIndexes">Figure 6</a>). Note that not all the models averaged over use all 6 independent rate parameters.</li>
+<li> <strong>ActiveGammaShape/PropInvariable</strong> are the gamma shape parameter and the proportion of variables sites when active, that is, when <strong>hasGammaRates</strong> and <strong>hasInvariableSites</strong> are selected. To get the estimate of the mean of the shape parameter, divide the mean <strong>ActiveGammaShape</strong> by the mean of <strong>hasGammaRates</strong>.</li>
+<li> <strong>hasEqualFreqs</strong> indicates if the chain is in a state with equal nucleotide base frequencies. </li>
+</ul>
+
+<figure>
+    <a id="fig:hasGammaRates"></a>
+    <img style="width:80.0%;" src="figures/hasGammaRates.png" alt="">
+    <figcaption>Figure 8: The posterior support for including gamma rate heterogeneity.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="fig:hasInvariableSites"></a>
+    <img style="width:80.0%;" src="figures/hasInvariableSites.png" alt="">
+    <figcaption>Figure 9: The posterior support for including a proportion of invariant sites.</figcaption>
+</figure>
+
+<p><br></p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Why does <strong>BMT_Rates.6</strong> mix poorly? </p>
+
+<p><strong>Hint:</strong> Look at the table of substitution models and the distribution and trace of <strong>BMT_ModelIndicator</strong> in Tracer. </p>
+
+<p><strong>Bonus hint:</strong> Look at the trace for <strong>BMT_Rates.6</strong> and plot the joint-marginal between <strong>BMT_Rates.1</strong> and <strong>BMT_Rates.2</strong>.</p>
+</blockquote>
+
+<p>Select pairs of the <strong>rateAC, ... ,rateGT</strong> parameters (using <strong>shift+click</strong>) and click on the <strong>Joint-Marginal</strong> tab to investigate parameter correlations (<a href="#fig:rateCorrelations">Figure 10</a>). Try looking at <strong>rateAT</strong> vs. <strong>rateCG</strong> and <strong>rateCG</strong> vs <strong>rateGT</strong>). </p>
+
+<figure>
+    <a id="fig:rateCorrelations"></a>
+    <img style="width:80.0%;" src="figures/rateCorrelations.png" alt="">
+    <figcaption>Figure 10: Correlations between rate parameters.</figcaption>
+</figure>
+
+<p><br></p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> It appears that some pairs of the rate parameters are highly correlated for some samples and uncorrelated for the rest. What is happening here? Should we be worried about these parameter correlations? </p>
+
+<p>Do you also see correlations between the <strong>BMT_Rates.1 to 6</strong> parameters?</p>
+</blockquote>
+
+<h2>Analyzing the output using BModelAnalyzer</h2>
+
+<p>Another really nice feature of bModelTest is that we can graphically analyze the output using the <strong>BModelAnalyser App</strong>.</p>
+
+<blockquote>
+<p>In BEAUti, select <strong>File &gt; Launch Apps</strong> and then launch the <strong>BModelAnalyser App</strong>.  A dialogue window should pop up (<a href="#fig:analyzerDialogue">Figure 11</a>). Enter <code>primate-mtDNA-bMT.log</code> as the file to analyze. You can leave the other entries at their default settings but make sure <strong>transitionTransversionSplit</strong> is selected for the Model Set and the box next to <strong>Use Browser For Visualization</strong> is checked. Then click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:analyzerDialogue"></a>
+    <img style="width:60.0%;" src="figures/analyzerDialogue.png" alt="">
+    <figcaption>Figure 11: Running the BModelAnalyser App.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>After BModelAnalyser runs, a new window should appear in your default web browser that represents the model selection results graphically (<a href="#fig:modelGraph">Figure 12</a>). This graph depicts the nested relationship of the different substitution models: an arrow pointing from one model to another indicates that the model at the tail is nested within the model at the head of the arrow. As we can see, JC69 is nested within all other models and all other models are nested within GTR.</p>
+
+<figure>
+    <a id="fig:modelGraph"></a>
+    <img src="figures/modelGraph2.png" alt="">
+    <figcaption>Figure 12: A graphical representation of the model selection results produced by BModelAnalyzer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The area of the circle surrounding each model is proportional to the the posterior support for that model. The colours represent whether the model is contained within the 95% credible set (blue) or not (red). For the primate data set, the HKY model clearly has the highest posterior support (<a href="#fig:modelGraph">Figure 12</a>). However, other models such as TN93 and two unnamed models, <strong>121323</strong> and <strong>121123</strong>, also have fairly high posterior support. The six digit model code describes how the different substitution rates are grouped in the order of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{ac}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit">c</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>g</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{ag}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>a</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{at}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>c</mi><mi>g</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{cg}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">c</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>c</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{ct}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">c</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>g</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{gt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>. For instance, <strong>121323</strong> is a slight variant of the HKY model with an additional group for the rates <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>c</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{ct}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">c</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi>g</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_{gt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>. The six digit codes for all models are shown in <a href="#fig:modelIndexes">Figure 6</a>.</p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> We have used bModelTest to explore a large set of substitution models. But how do we know that any of the substitution models actually fit the observed sequence data well?</p>
+</blockquote>
+
+<hr>
+
+<h1>Acknowledgment</h1>
+
+<p>This tutorial is based on the original bModelTest tutorial by Remco Bouckaert.</p>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li>Official bModelTest documentation: <a href="https://github.com/BEAST2-Dev/bModelTest/wiki">https://github.com/BEAST2-Dev/bModelTest/wiki</a></li>
+<li> The original bModelTest tutorial is available here: <a href="https://github.com/BEAST2-Dev/bModelTest/releases/download/v0.3.0/bModelTestTutorial.pdf">https://github.com/BEAST2-Dev/bModelTest/releases/download/v0.3.0/bModelTestTutorial.pdf</a> and is also included in the source code.</li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Bouckaert2017">Bouckaert, R. R., &amp; Drummond, A. J. (2017). bModelTest: Bayesian phylogenetic site model averaging and model comparison. <i>BMC Evolutionary Biology</i>, <i>17</i>(1), 42. http://doi.org/10.1186/s12862-017-0890-6</span></li>
+<li><span id="Bouckaert2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Taming the BEAST / tutorials</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li class="active">
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	<div class="row">
+	<div class="col-md-12">
+		<div class="centered-pills">
+			<ul class="nav nav-pills note">
+				
+				<li role="presentation">
+				
+					<a class="off" href="/tutorials/">
+						<i class="fa fa-reply-all fa-fw"></i> All
+					</a>
+				</li>				
+				
+				<li role="presentation">
+				
+					<a class="off" href="/tutorials/beginner/">
+						<i class="fa fa-user fa-fw"></i> Beginner
+					</a>
+				</li>				
+				
+				<li role="presentation" class="active">
+				
+					<a class="off" href="/tutorials/intermediate/">
+						<i class="fa fa-truck fa-fw"></i> Intermediate
+					</a>
+				</li>				
+				
+				<li role="presentation">
+				
+					<a class="off" href="/tutorials/professional/">
+						<i class="fa fa-rocket fa-fw"></i> Professional
+					</a>
+				</li>
+				<li role="presentation">
+					<a class="off" href="/news/archive/">
+						<a class="off" type="application/rss+xml" href="/feed.tutorials.xml"><i class="fa fa-rss"></i> Subscribe</a>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="bigspacer"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+	
+	
+	    		
+	<div class="row">
+		<div class="col-md-4 tutorialbox"> 
+			<div class="head">
+				<a href="/tutorials/Bacter-Tutorial/" class="off">Bacter Tutorial</a>
+			</div>	
+			<div class="smallspacer"></div>
+			<div class="note">
+				<a href="/tutorials/Bacter-Tutorial/" class="off">Inferring ARGs from bacterial sequence data.</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote text-gray">
+			
+			
+				
+						Tim Vaughan
+					
+						
+					
+			
+			</div>
+			<div class="smallnote text-gray">
+				Updated
+				<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/7a237f49117040ebb4689790a20c2eac63a6c7cd">
+				10 Feb 2017
+				</a>
+				by
+				<a class="off" href="https://github.com/tgvaughan">				
+				tgvaughan
+				</a>
+			</div>
+			<div class="bigspacer"></div>
+			<div class="spacer"></div>
+		</div>
+	
+	
+
+	
+	
+	    		
+	
+		<div class="col-md-4 tutorialbox"> 
+			<div class="head">
+				<a href="/tutorials/calibrated-species-trees/" class="off">Calibrated Species Trees</a>
+			</div>	
+			<div class="smallspacer"></div>
+			<div class="note">
+				<a href="/tutorials/calibrated-species-trees/" class="off">Estimating species divergence times using StarBEAST2</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote text-gray">
+			
+			
+				
+						Huw A. Ogilvie
+					
+						
+					
+			
+			</div>
+			<div class="smallnote text-gray">
+				Updated
+				<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf">
+				2 Feb 2017
+				</a>
+				by
+				<a class="off" href="https://github.com/genomescale">				
+				genomescale
+				</a>
+			</div>
+			<div class="bigspacer"></div>
+			<div class="spacer"></div>
+		</div>
+	
+	
+
+	
+	
+	    		
+	
+		<div class="col-md-4 tutorialbox"> 
+			<div class="head">
+				<a href="/tutorials/FBD-tutorial/" class="off">Divergence Time Estimation using BEAST v2.x</a>
+			</div>	
+			<div class="smallspacer"></div>
+			<div class="note">
+				<a href="/tutorials/FBD-tutorial/" class="off">Dating Species Divergences with the Fossilized Birth-Death Process</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote text-gray">
+			
+			
+				
+						Tracy A. Heath
+					
+						
+					
+			
+			</div>
+			<div class="smallnote text-gray">
+				Updated
+				<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/5ea008ed48bb808bf2787302b4ff5d9c564fcd71">
+				22 Jul 2017
+				</a>
+				by
+				<a class="off" href="https://github.com/laduplessis">				
+				laduplessis
+				</a>
+			</div>
+			<div class="bigspacer"></div>
+			<div class="spacer"></div>
+		</div>
+	</div>
+	
+
+	
+	
+
+	
+	
+	    		
+	<div class="row">
+		<div class="col-md-4 tutorialbox"> 
+			<div class="head">
+				<a href="/tutorials/Mascot-Tutorial/" class="off">MASCOT v0.0.4 Tutorial</a>
+			</div>	
+			<div class="smallspacer"></div>
+			<div class="note">
+				<a href="/tutorials/Mascot-Tutorial/" class="off">Parameter and State inference using the approximate structured coalescent</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote text-gray">
+			
+			
+				
+						Nicola F. Müller
+					
+						
+					
+			
+			</div>
+			<div class="smallnote text-gray">
+				Updated
+				<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/486a6e6bdfe40568b5414b943a5e9cce29a6a5af">
+				20 Aug 2017
+				</a>
+				by
+				<a class="off" href="https://github.com/nicfel">				
+				nicfel
+				</a>
+			</div>
+			<div class="bigspacer"></div>
+			<div class="spacer"></div>
+		</div>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+	    		
+	
+		<div class="col-md-4 tutorialbox"> 
+			<div class="head">
+				<a href="/tutorials/StarBeast-Tutorial/" class="off">StarBeast Tutorial</a>
+			</div>	
+			<div class="smallspacer"></div>
+			<div class="note">
+				<a href="/tutorials/StarBeast-Tutorial/" class="off">Estimating species tree from multilocus sequence data</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote text-gray">
+			
+			
+				
+						Joseph Heled
+					
+			
+				
+						, Remco Bouckaert
+				
+			
+				
+						, Walter Xie
+				
+			
+				
+						, Alexei J. Drummond
+				
+			
+				
+						
+							and Chi Zhang
+						
+					
+			
+			</div>
+			<div class="smallnote text-gray">
+				Updated
+				<a class="off" href="https://github.com/Taming-the-BEAST/StarBeast-Tutorial/commit/128840d025a64b8d5e562098c6f91e270dc63c0c">
+				2 Feb 2017
+				</a>
+				by
+				<a class="off" href="https://github.com/laduplessis">				
+				laduplessis
+				</a>
+			</div>
+			<div class="bigspacer"></div>
+			<div class="spacer"></div>
+		</div>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+	    		
+	
+		<div class="col-md-4 tutorialbox"> 
+			<div class="head">
+				<a href="/tutorials/Substitution-model-averaging/" class="off">Substitution model averaging</a>
+			</div>	
+			<div class="smallspacer"></div>
+			<div class="note">
+				<a href="/tutorials/Substitution-model-averaging/" class="off">A tutorial using bModelTest</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote text-gray">
+			
+			
+				
+						David A. Rasmussen
+					
+			
+				
+						, Carsten Magnus
+				
+			
+				
+						
+							and Remco Bouckaert
+						
+					
+			
+			</div>
+			<div class="smallnote text-gray">
+				Updated
+				<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/6cc996feb0e220b13b8ef533593ceaaf261c7df2">
+				25 Jul 2017
+				</a>
+				by
+				<a class="off" href="https://github.com/laduplessis">				
+				laduplessis
+				</a>
+			</div>
+			<div class="bigspacer"></div>
+			<div class="spacer"></div>
+		</div>
+	</div>
+	
+
+	
+	
+
+
+	
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

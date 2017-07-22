@@ -1,0 +1,2517 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{abella2011}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AJ}{%
+         family={Abella},
+         familyi={A\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+      {{hash=MP}{%
+         family={Montoya},
+         familyi={M\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=MJ}{%
+         family={Morales},
+         familyi={M\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+    }
+    \strng{namehash}{AJ+1}
+    \strng{fullhash}{AJMPMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{2}
+    \field{pages}{187\bibrangedash 191}
+    \field{title}{Una nueva especie de \textit{{A}griarctos} ({A}iluropodinae,
+  {U}rsidae, {C}arnivora) en la localidad de {N}ombrevilla 2 ({Z}aragoza,
+  {E}spa{\~n}a)}
+    \field{volume}{67}
+    \field{journaltitle}{Estudios Geol{\'o}gicos}
+    \field{year}{2011}
+  \endentry
+
+  \entry{abella12}{article}{}
+    \name{author}{8}{}{%
+      {{hash=AJ}{%
+         family={Abella},
+         familyi={A\bibinitperiod},
+         given={Juan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ADM}{%
+         family={Alba},
+         familyi={A\bibinitperiod},
+         given={David\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=RJM}{%
+         family={Robles},
+         familyi={R\bibinitperiod},
+         given={Josep\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Valenciano},
+         familyi={V\bibinitperiod},
+         given={Alberto},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RC}{%
+         family={Rotgers},
+         familyi={R\bibinitperiod},
+         given={Cheyenn},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Carmona},
+         familyi={C\bibinitperiod},
+         given={Ra\"ul},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Montoya},
+         familyi={M\bibinitperiod},
+         given={Plinio},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Morales},
+         familyi={M\bibinitperiod},
+         given={Jorge},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AJ+2}
+    \strng{fullhash}{AJADMRJMVARCCRMPMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{e48985}
+    \field{title}{\textit{{K}retzoiarctos} gen. nov., the Oldest Member of the
+  Giant Panda Clade}
+    \field{volume}{17}
+    \field{journaltitle}{PLoS One}
+    \field{year}{2012}
+  \endentry
+
+  \entry{aldous01}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AD}{%
+         family={Aldous},
+         familyi={A\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AD1}
+    \strng{fullhash}{AD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{23\bibrangedash 34}
+    \field{title}{Stochastic Models and Descriptive Statistics for Phylogenetic
+  Trees, from {Y}ule to Today}
+    \field{volume}{16}
+    \field{journaltitle}{Statistical Science}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Aldous2005}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AD}{%
+         family={Aldous},
+         familyi={A\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Popovic},
+         familyi={P\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Applied Probability Trust}%
+    }
+    \strng{namehash}{ADPL1}
+    \strng{fullhash}{ADPL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{4}
+    \field{pages}{1094\bibrangedash 1115}
+    \field{title}{A critical branching process model for biodiversity}
+    \field{volume}{37}
+    \field{journaltitle}{Advances in Applied Probability}
+    \field{year}{2005}
+  \endentry
+
+  \entry{andrews1977}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AP}{%
+         family={Andrews},
+         familyi={A\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=TH}{%
+         family={Tobien},
+         familyi={T\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+    }
+    \strng{namehash}{APTH1}
+    \strng{fullhash}{APTH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1977}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{5622}
+    \field{pages}{699}
+    \field{title}{New {M}iocene locality in Turkey with evidence on the origin
+  of \textit{{R}amapithecus} and \textit{{S}ivapithecus}}
+    \field{volume}{268}
+    \field{journaltitle}{Nature}
+    \field{year}{1977}
+  \endentry
+
+  \entry{baele13}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BG}{%
+         family={Baele},
+         familyi={B\bibinitperiod},
+         given={Guy},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LWLS}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Wai Lok\bibnamedelima Sibon},
+         giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Lemey},
+         familyi={L\bibinitperiod},
+         given={Philippe},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BG+1}
+    \strng{fullhash}{BGLWLSDAJSMALP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{239\bibrangedash 243}
+    \field{title}{Accurate Model Selection of Relaxed Molecular Clocks in
+  {B}ayesian Phylogenetics}
+    \field{volume}{30}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2013}
+  \endentry
+
+  \entry{baryshnikov2002}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BGF}{%
+         family={Baryshnikov},
+         familyi={B\bibinitperiod},
+         given={Gennady\bibnamedelima F},
+         giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BGF1}
+    \strng{fullhash}{BGF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{2}
+    \field{pages}{83\bibrangedash 89}
+    \field{title}{Late {M}iocene \textit{{I}ndarctos punjabiensis atticus}
+  ({C}arnivora, {U}rsidae) in {U}kraine with survey of \textit{{I}ndarctos}
+  records from the former {USSR}}
+    \field{volume}{1}
+    \field{journaltitle}{Russian J. Theriol}
+    \field{year}{2002}
+  \endentry
+
+  \entry{bell2014strap}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BMA}{%
+         family={Bell},
+         familyi={B\bibinitperiod},
+         given={Mark\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=LGT}{%
+         family={Lloyd},
+         familyi={L\bibinitperiod},
+         given={Graeme\bibnamedelima T},
+         giveni={G\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{BMALGT1}
+    \strng{fullhash}{BMALGT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{strap: an {R} package for plotting phylogenies against
+  stratigraphy and assessing their stratigraphic congruence}
+    \field{journaltitle}{Palaeontology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{bjork1970}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BPR}{%
+         family={Bjork},
+         familyi={B\bibinitperiod},
+         given={Philip\bibnamedelima Reese},
+         giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BPR1}
+    \strng{fullhash}{BPR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1970}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{7}
+    \field{pages}{3\bibrangedash 54}
+    \field{title}{The {C}arnivora of the {H}agerman local fauna (late
+  {P}liocene) of {S}outhwestern Idaho}
+    \field{volume}{60}
+    \field{journaltitle}{Transactions of the American Philosophical Society}
+    \field{year}{1970}
+  \endentry
+
+  \entry{Bouckaert2014}{article}{}
+    \name{author}{9}{}{%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={K{\"u}hnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRHJKDVTWCHXDSMARADAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{4}
+    \field{pages}{e1003537}
+    \field{title}{BEAST 2: A Software Platform for {B}ayesian Evolutionary
+  Analysis}
+    \field{volume}{10}
+    \field{journaltitle}{PLoS computational biology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{churcher1993}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CC}{%
+         family={Churcher},
+         familyi={C\bibinitperiod},
+         given={CS},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Morgan},
+         familyi={M\bibinitperiod},
+         given={AV},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CL}{%
+         family={Carter},
+         familyi={C\bibinitperiod},
+         given={LD},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CC+1}
+    \strng{fullhash}{CCMACL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1993}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{5}
+    \field{pages}{1007\bibrangedash 1013}
+    \field{title}{\textit{{A}rctodus simus} from the {A}laskan {A}rctic slope}
+    \field{volume}{30}
+    \field{journaltitle}{Canadian Journal of Earth Sciences}
+    \field{year}{1993}
+  \endentry
+
+  \entry{clark1972}{book}{}
+    \name{author}{2}{}{%
+      {{hash=CJ}{%
+         family={Clark},
+         familyi={C\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GTE}{%
+         family={Guensburg},
+         familyi={G\bibinitperiod},
+         given={Thomas\bibnamedelima Edgar},
+         giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Field Museum of Natural History}%
+    }
+    \strng{namehash}{CJGTE1}
+    \strng{fullhash}{CJGTE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1972}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Arctoid Genetic Characters as Related to the Genus
+  \emph{{P}arictis}}
+    \field{volume}{1150}
+    \list{location}{1}{%
+      {Chicago, Ill.}%
+    }
+    \field{year}{1972}
+  \endentry
+
+  \entry{dosReis2012}{article}{}
+    \name{author}{6}{}{%
+      {{hash=dM}{%
+         family={{dos Reis}},
+         familyi={d\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=IJ}{%
+         family={Inoue},
+         familyi={I\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hasegawa},
+         familyi={H\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Asher},
+         familyi={A\bibinitperiod},
+         given={R.J.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Donoghue},
+         familyi={D\bibinitperiod},
+         given={P.C.J.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{dM+1}
+    \strng{fullhash}{dMIJHMARDPYZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{1742}
+    \field{pages}{3491\bibrangedash 3500}
+    \field{title}{Phylogenomic datasets provide both precision and accuracy in
+  estimating the timescale of placental mammal phylogeny}
+    \field{volume}{279}
+    \field{journaltitle}{Proceedings of the Royal Society B: Biological
+  Sciences}
+    \field{year}{2012}
+  \endentry
+
+  \entry{drummond07}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DAJRA1}
+    \strng{fullhash}{DAJRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{214}
+    \field{title}{{BEAST}: {B}ayesian evolutionary analysis by sampling trees}
+    \field{volume}{7}
+    \field{journaltitle}{BMC Evolutionary Biology}
+    \field{year}{2007}
+  \endentry
+
+  \entry{drummond10}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={M.\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DAJSMA1}
+    \strng{fullhash}{DAJSMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{114}
+    \field{title}{Bayesian random local clocks, or one rate to rule them all}
+    \field{volume}{8}
+    \field{journaltitle}{BMC Biology}
+    \field{year}{2010}
+  \endentry
+
+  \entry{drummond06}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HSY}{%
+         family={Ho},
+         familyi={H\bibinitperiod},
+         given={S.\bibnamedelima Y.},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+      {{hash=PMJ}{%
+         family={Phillips},
+         familyi={P\bibinitperiod},
+         given={M.\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DAJ+1}
+    \strng{fullhash}{DAJHSYPMJRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{e88}
+    \field{title}{Relaxed phylogenetics and dating with confidence}
+    \field{volume}{4}
+    \field{journaltitle}{PLoS Biology}
+    \field{year}{2006}
+  \endentry
+
+  \entry{BEAST2book2014}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{DAJBRR1}
+    \strng{fullhash}{DAJBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Bayesian evolutionary analysis with {BEAST} 2}
+    \field{year}{2014}
+  \endentry
+
+  \entry{foote1996}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FM}{%
+         family={Foote},
+         familyi={F\bibinitperiod},
+         given={Mike},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FM1}
+    \strng{fullhash}{FM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{pages}{141\bibrangedash 151}
+    \field{title}{On the probability of ancestors in the fossil record}
+    \field{volume}{22}
+    \field{journaltitle}{Paleobiology}
+    \field{year}{1996}
+  \endentry
+
+  \entry{gavryushkina2014}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GA}{%
+         family={Gavryushkina},
+         familyi={G\bibinitperiod},
+         given={Alexandra},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Welch},
+         familyi={W\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Tanja},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{GA+1}
+    \strng{fullhash}{GAWDSTDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{12}
+    \field{pages}{e1003919}
+    \field{title}{Bayesian inference of sampled ancestor trees for epidemiology
+  and fossil calibration}
+    \field{volume}{10}
+    \field{journaltitle}{PLoS Computational Biology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{geraads2005}{article}{}
+    \true{moreauthor}
+    \name{author}{3}{}{%
+      {{hash=GD}{%
+         family={Geraads},
+         familyi={G\bibinitperiod},
+         given={Denis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KT}{%
+         family={Kaya},
+         familyi={K\bibinitperiod},
+         given={Tanju},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Mayda},
+         familyi={M\bibinitperiod},
+         given={Serdar},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GD+1}
+    \strng{fullhash}{GDKTMS+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{3}
+    \field{pages}{523\bibrangedash 544}
+    \field{title}{Late Miocene large mammals from {Y}ulafli, {T}hrace region,
+  {T}urkey, and their biogeographic implications}
+    \field{volume}{50}
+    \field{journaltitle}{Acta Palaeontologica Polonica}
+    \field{year}{2005}
+  \endentry
+
+  \entry{gernhard08}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GT}{%
+         family={Gernhard},
+         familyi={G\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GT1}
+    \strng{fullhash}{GT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{pages}{769\bibrangedash 778}
+    \field{title}{The conditioned reconstructed process}
+    \field{volume}{253}
+    \field{journaltitle}{Journal of Theoretical Biology}
+    \field{year}{2008}
+  \endentry
+
+  \entry{ginsburg1995}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GL}{%
+         family={Ginsburg},
+         familyi={G\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=MJ}{%
+         family={Morales},
+         familyi={M\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GLMJ1}
+    \strng{fullhash}{GLMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1995}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{9}
+    \field{pages}{811\bibrangedash 815}
+    \field{title}{\textit{{Z}aragocyon daamsi n. gen. sp. nov.}, U{}rsidae
+  primitif du {M}ioc{\`e}ne inf{\'e}rieur d'{E}spagne}
+    \field{volume}{321}
+    \field{journaltitle}{Comptes Rendus de l'Acad{\'e}mie des Sciences.
+  S{\'e}rie 2. Sciences de la Terre et des Plan{\`e}tes}
+    \field{year}{1995}
+  \endentry
+
+  \entry{ginsburg1998}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=GL}{%
+         family={Ginsburg},
+         familyi={G\bibinitperiod},
+         given={L{\'e}onard},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Morales},
+         familyi={M\bibinitperiod},
+         given={Jorge},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GLMJ2}
+    \strng{fullhash}{GLMJ2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booktitle}{Annales de Pal{\'e}ontologie}
+    \field{number}{1}
+    \field{pages}{71\bibrangedash 123}
+    \field{title}{{Les Hemicyoninae (Ursidae, Carnivora, Mammalia) et les
+  formes apparent{\'e}es du Mioc{\`e}ne inf{\'e}rieur et moyen d'Europe
+  occidentale}}
+    \field{volume}{84}
+    \field{year}{1998}
+  \endentry
+
+  \entry{griffiths1994}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GR}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={RC},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=TS}{%
+         family={Tavare},
+         familyi={T\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GRTS1}
+    \strng{fullhash}{GRTS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1994}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{2}
+    \field{pages}{131\bibrangedash 159}
+    \field{title}{Simulating probability distributions in the coalescent}
+    \field{volume}{46}
+    \field{journaltitle}{Theoretical Population Biology}
+    \field{year}{1994}
+  \endentry
+
+  \entry{heath12}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HTA}{%
+         family={Heath},
+         familyi={H\bibinitperiod},
+         given={T.\bibnamedelima A.},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HTA1}
+    \strng{fullhash}{HTA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{793\bibrangedash 809}
+    \field{title}{A hierarchical {B}ayesian model for calibrating estimates of
+  species divergence times}
+    \field{volume}{61}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2012}
+  \endentry
+
+  \entry{heath11}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HTA}{%
+         family={Heath},
+         familyi={H\bibinitperiod},
+         given={T.\bibnamedelima A.},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HMT}{%
+         family={Holder},
+         familyi={H\bibinitperiod},
+         given={M.\bibnamedelima T.},
+         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=HJP}{%
+         family={Huelsenbeck},
+         familyi={H\bibinitperiod},
+         given={J.\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HTA+1}
+    \strng{fullhash}{HTAHMTHJP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{939\bibrangedash 255}
+    \field{title}{A {D}irichlet process prior for estimating lineage-specific
+  substitution rates}
+    \field{volume}{29}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2012}
+  \endentry
+
+  \entry{heath2013fossilized}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HTA}{%
+         family={Heath},
+         familyi={H\bibinitperiod},
+         given={Tracy\bibnamedelima A},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HJP}{%
+         family={Huelsenbeck},
+         familyi={H\bibinitperiod},
+         given={John\bibnamedelima P},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Tanja},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HTA+2}
+    \strng{fullhash}{HTAHJPST1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{E2957\bibrangedash E2966}
+    \field{title}{The fossilized birth-death process for coherent calibration
+  of divergence-time estimates}
+    \field{volume}{111}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences, USA}
+    \field{year}{2014}
+  \endentry
+
+  \entry{heibl2008phyloch}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HC}{%
+         family={Heibl},
+         familyi={H\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HC1}
+    \strng{fullhash}{HC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{\url{http://www.christophheibl.de/Rpackages.html}}
+    \field{title}{PHYLOCH: {R} language tree plotting tools and interfaces to
+  diverse phylogenetic software packages}
+    \field{year}{2008}
+  \endentry
+
+  \entry{heizmann1980}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HE}{%
+         family={Heizmann},
+         familyi={H\bibinitperiod},
+         given={E},
+         giveni={E},
+      }}%
+      {{hash=GL}{%
+         family={Ginsburg},
+         familyi={G\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=BC}{%
+         family={Bulot},
+         familyi={B\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+    }
+    \strng{namehash}{HE+1}
+    \strng{fullhash}{HEGLBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1980}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{1\bibrangedash 27}
+    \field{title}{\textit{{P}rosansanosmilus peregrinus}, ein neuer
+  machairodontider {F}elidae aus dem {M}ioz\"{a}n {D}eutschlands und
+  {F}rankreichs}
+    \field{volume}{58}
+    \field{journaltitle}{Stuttgarter Beitr. Naturk. B}
+    \field{year}{1980}
+  \endentry
+
+  \entry{heled10}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJDAJ1}
+    \strng{fullhash}{HJDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{570\bibrangedash 580}
+    \field{title}{Bayesian inference of species trees from multilocus data}
+    \field{volume}{27}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2010}
+  \endentry
+
+  \entry{heled12}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJDAJ1}
+    \strng{fullhash}{HJDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{138\bibrangedash 149}
+    \field{title}{Calibrated tree priors for relaxed phylogenetics and
+  divergence time estimation}
+    \field{volume}{61}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2012}
+  \endentry
+
+  \entry{heleddrummond2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJDAJ2}
+    \strng{fullhash}{HJDAJ2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Calibrated birth-death phylogenetic time-tree priors for
+  {B}ayesian inference}
+    \field{journaltitle}{arXiv preprint arXiv:1311.4921}
+    \field{year}{2013}
+  \endentry
+
+  \entry{ho09}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HSYW}{%
+         family={Ho},
+         familyi={H\bibinitperiod},
+         given={S.\bibnamedelima Y.\bibnamedelima W.},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=PMJ}{%
+         family={Phillips},
+         familyi={P\bibinitperiod},
+         given={M.\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HSYWPMJ1}
+    \strng{fullhash}{HSYWPMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{367\bibrangedash 380}
+    \field{title}{Accounting for calibration uncertainty in phylogenetic
+  estimation of evolutionary divergence times}
+    \field{volume}{58}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2009}
+  \endentry
+
+  \entry{huelsenbeck00a}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HJP}{%
+         family={Huelsenbeck},
+         familyi={H\bibinitperiod},
+         given={J.\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Larget},
+         familyi={L\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SDL}{%
+         family={Swofford},
+         familyi={S\bibinitperiod},
+         given={D.\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJP+1}
+    \strng{fullhash}{HJPLBSDL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2000}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{pages}{1879\bibrangedash 1892}
+    \field{title}{A compound {P}oisson process for relaxing the molecular
+  clock}
+    \field{volume}{154}
+    \field{journaltitle}{Genetics}
+    \field{year}{2000}
+  \endentry
+
+  \entry{jin2007}{article}{}
+    \name{author}{7}{}{%
+      {{hash=JC}{%
+         family={Jin},
+         familyi={J\bibinitperiod},
+         given={Changzhu},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CRL}{%
+         family={Ciochon},
+         familyi={C\bibinitperiod},
+         given={Russell\bibnamedelima L},
+         giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DW}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=HRM}{%
+         family={Hunt},
+         familyi={H\bibinitperiod},
+         given={Robert\bibnamedelima M},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Jinyi},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=JM}{%
+         family={Jaeger},
+         familyi={J\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ZQ}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Qizhi},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JC+1}
+    \strng{fullhash}{JCCRLDWHRMLJJMZQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{number}{26}
+    \field{pages}{10932\bibrangedash 10937}
+    \field{title}{The first skull of the earliest giant panda}
+    \field{volume}{104}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2007}
+  \endentry
+
+  \entry{kendall48}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KDG}{%
+         family={Kendall},
+         familyi={K\bibinitperiod},
+         given={D.\bibnamedelima G.},
+         giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KDG1}
+    \strng{fullhash}{KDG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1948}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{pages}{1\bibrangedash 15}
+    \field{title}{On the generalized ``birth-and-death'' process}
+    \field{volume}{19}
+    \field{journaltitle}{Annals of Mathematical Statistics}
+    \field{year}{1948}
+  \endentry
+
+  \entry{kingman82b}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=KJFC}{%
+         family={Kingman},
+         familyi={K\bibinitperiod},
+         given={J.\bibnamedelima F.\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=KG}{%
+         family={Koch},
+         familyi={K\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Spizzichino},
+         familyi={S\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {North-Holland}%
+    }
+    \strng{namehash}{KJFC1}
+    \strng{fullhash}{KJFC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1982}
+    \field{extrayear}{1}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{Exchangeability in {P}robability and {S}tatistics}
+    \field{pages}{97\bibrangedash 112}
+    \field{title}{Exchangeability and the evolution of large populations}
+    \field{year}{1982}
+  \endentry
+
+  \entry{kingman82c}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=KJFC}{%
+         family={Kingman},
+         familyi={K\bibinitperiod},
+         given={J.\bibnamedelima F.\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=GJ}{%
+         family={Gani},
+         familyi={G\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HEJ}{%
+         family={Hannan},
+         familyi={H\bibinitperiod},
+         given={E.\bibnamedelima J.},
+         giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Applied Probability Trust}%
+    }
+    \strng{namehash}{KJFC1}
+    \strng{fullhash}{KJFC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1982}
+    \field{extrayear}{2}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{Essays in {S}tatistical {S}cience: {P}apers in {H}onour
+  of {P. A. P. M}oran, Journal of Applied Probability, Special Volume 19A}
+    \field{pages}{27\bibrangedash 43}
+    \field{title}{On the genealogy of large populations}
+    \field{year}{1982}
+  \endentry
+
+  \entry{kingman82a}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KJFC}{%
+         family={Kingman},
+         familyi={K\bibinitperiod},
+         given={J.\bibnamedelima F.\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KJFC1}
+    \strng{fullhash}{KJFC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1982}
+    \field{extrayear}{3}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{pages}{235\bibrangedash 248}
+    \field{title}{The coalescent}
+    \field{volume}{13}
+    \field{journaltitle}{Stochastic Processes and their Applications}
+    \field{year}{1982}
+  \endentry
+
+  \entry{kishino90}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KH}{%
+         family={Kishino},
+         familyi={K\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Miyata},
+         familyi={M\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hasegawa},
+         familyi={H\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KH+1}
+    \strng{fullhash}{KHMTHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1990}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{pages}{151\bibrangedash 160}
+    \field{title}{Maximum likelihood inference of protein phylogeny and the
+  origin of chloroplasts}
+    \field{volume}{31}
+    \field{journaltitle}{Journal of Molecular Evolution}
+    \field{year}{1990}
+  \endentry
+
+  \entry{kishino01}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KH}{%
+         family={Kishino},
+         familyi={K\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=TJL}{%
+         family={Thorne},
+         familyi={T\bibinitperiod},
+         given={J.\bibnamedelima L.},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={Bruno},
+         familyi={B\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KH+1}
+    \strng{fullhash}{KHTJLBW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{pages}{352\bibrangedash 361}
+    \field{title}{Performance of a divergence time estimation method under a
+  probabilistic model of rate evolution}
+    \field{volume}{18}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2001}
+  \endentry
+
+  \entry{krause2008}{article}{}
+    \true{moreauthor}
+    \name{author}{10}{}{%
+      {{hash=KJ}{%
+         family={Krause},
+         familyi={K\bibinitperiod},
+         given={Johannes},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=UT}{%
+         family={Unger},
+         familyi={U\bibinitperiod},
+         given={Tina},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=NA}{%
+         family={No{\c{c}}on},
+         familyi={N\bibinitperiod},
+         given={Aline},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MAS}{%
+         family={Malaspinas},
+         familyi={M\bibinitperiod},
+         given={Anna-Sapfo},
+         giveni={A\bibinitperiod-S\bibinitperiod},
+      }}%
+      {{hash=KSO}{%
+         family={Kolokotronis},
+         familyi={K\bibinitperiod},
+         given={Sergios-Orestis},
+         giveni={S\bibinitperiod-O\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Stiller},
+         familyi={S\bibinitperiod},
+         given={Mathias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Soibelzon},
+         familyi={S\bibinitperiod},
+         given={Leopoldo},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Spriggs},
+         familyi={S\bibinitperiod},
+         given={Helen},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=DPH}{%
+         family={Dear},
+         familyi={D\bibinitperiod},
+         given={Paul\bibnamedelima H},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=BAW}{%
+         family={Briggs},
+         familyi={B\bibinitperiod},
+         given={Adrian\bibnamedelima W},
+         giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {BioMed Central Ltd}%
+    }
+    \strng{namehash}{KJ+1}
+    \strng{fullhash}{KJUTNAMASKSOSMSLSHDPHBAW+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{1}
+    \field{pages}{220}
+    \field{title}{Mitochondrial genomes reveal an explosive radiation of
+  extinct and extant bears near the {M}iocene-{P}liocene boundary}
+    \field{volume}{8}
+    \field{journaltitle}{BMC Evolutionary Biology}
+    \field{year}{2008}
+  \endentry
+
+  \entry{landis2013}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LMJ}{%
+         family={Landis},
+         familyi={L\bibinitperiod},
+         given={Michael\bibnamedelima J},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MNJ}{%
+         family={Matzke},
+         familyi={M\bibinitperiod},
+         given={Nicholas\bibnamedelima J},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MBR}{%
+         family={Moore},
+         familyi={M\bibinitperiod},
+         given={Brian\bibnamedelima R},
+         giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=HJP}{%
+         family={Huelsenbeck},
+         familyi={H\bibinitperiod},
+         given={John\bibnamedelima P},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{LMJ+1}
+    \strng{fullhash}{LMJMNJMBRHJP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{789\bibrangedash 804}
+    \field{title}{Bayesian analysis of biogeography when the number of areas is
+  large}
+    \field{journaltitle}{Systematic biology}
+    \field{year}{2013}
+  \endentry
+
+  \entry{lemey09}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LP}{%
+         family={Lemey},
+         familyi={L\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={M.\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LP+1}
+    \strng{fullhash}{LPRADAJSMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{e1000520}
+    \field{title}{Bayesian Phylogeography Finds Its Roots}
+    \field{volume}{5}
+    \field{journaltitle}{PLoS Computational Biology}
+    \field{year}{2009}
+  \endentry
+
+  \entry{lepage07}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LT}{%
+         family={Lepage},
+         familyi={L\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bryant},
+         familyi={B\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PH}{%
+         family={Philippe},
+         familyi={P\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LN}{%
+         family={Lartillot},
+         familyi={L\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LT+1}
+    \strng{fullhash}{LTBDPHLN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{2669\bibrangedash 2680}
+    \field{title}{A general comparison of relaxed molecular clock models}
+    \field{volume}{24}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2007}
+  \endentry
+
+  \entry{lepage06}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LT}{%
+         family={Lepage},
+         familyi={L\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Lawi},
+         familyi={L\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TP}{%
+         family={Tupper},
+         familyi={T\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bryant},
+         familyi={B\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LT+1}
+    \strng{fullhash}{LTLSTPBD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{216\bibrangedash 233}
+    \field{title}{Continuous and tractable models for the variation of
+  evolutionary rates}
+    \field{volume}{199}
+    \field{journaltitle}{Mathematical Biosciences}
+    \field{year}{2006}
+  \endentry
+
+  \entry{li12}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LWLS}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={W.\bibnamedelima L.\bibnamedelima S.},
+         giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={A.\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LWLSDAJ1}
+    \strng{fullhash}{LWLSDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{751\bibrangedash 761}
+    \field{title}{Model averaging and {B}ayes factor calculation of relaxed
+  molecular clocks in {B}ayesian phylogenetics}
+    \field{volume}{29}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2012}
+  \endentry
+
+  \entry{loreille2001}{article}{}
+    \name{author}{6}{}{%
+      {{hash=LO}{%
+         family={Loreille},
+         familyi={L\bibinitperiod},
+         given={Odile},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=OL}{%
+         family={Orlando},
+         familyi={O\bibinitperiod},
+         given={Ludovic},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=PMM}{%
+         family={Patou-Mathis},
+         familyi={P\bibinitperiod-M\bibinitperiod},
+         given={Maryl{\`e}ne},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Philippe},
+         familyi={P\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TP}{%
+         family={Taberlet},
+         familyi={T\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={H{\"a}nni},
+         familyi={H\bibinitperiod},
+         given={Catherine},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LO+1}
+    \strng{fullhash}{LOOLPMMPMTPHC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{3}
+    \field{pages}{200\bibrangedash 203}
+    \field{title}{Ancient {DNA} analysis reveals divergence of the cave bear,
+  \textit{{U}rsus spelaeus}, and brown bear, \textit{{U}rsus arctos}, lineages}
+    \field{volume}{11}
+    \field{journaltitle}{Current Biology}
+    \field{year}{2001}
+  \endentry
+
+  \entry{montoya2001}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MP}{%
+         family={Montoya},
+         familyi={M\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=AL}{%
+         family={Alcal{\'a}},
+         familyi={A\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+      {{hash=MJ}{%
+         family={Morales},
+         familyi={M\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+    }
+    \strng{namehash}{MP+1}
+    \strng{fullhash}{MPALMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{123\bibrangedash 151}
+    \field{title}{\textit{{I}ndarctos} ({U}rsidae, {M}ammalia) from the
+  {S}panish {T}urolian ({U}pper {M}iocene)}
+    \field{volume}{122}
+    \field{journaltitle}{Scripta Geologica}
+    \field{year}{2001}
+  \endentry
+
+  \entry{nee94}{article}{}
+    \name{author}{3}{}{%
+      {{hash=NS}{%
+         family={Nee},
+         familyi={N\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MRM}{%
+         family={May},
+         familyi={M\bibinitperiod},
+         given={R.\bibnamedelima M.},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HPH}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={P.\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NS+1}
+    \strng{fullhash}{NSMRMHPH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1994}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{pages}{305\bibrangedash 311}
+    \field{title}{The reconstructed evolutionary process}
+    \field{volume}{344}
+    \field{journaltitle}{Philosophical Transactions of the Royal Society B}
+    \field{year}{1994}
+  \endentry
+
+  \entry{popovic04}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PL}{%
+         family={Popovic},
+         familyi={P\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PL1}
+    \strng{fullhash}{PL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{2120\bibrangedash 2148}
+    \field{title}{Asymptotic genealogy of a critical branching process}
+    \field{volume}{14}
+    \field{journaltitle}{Annals of Applied Probability}
+    \field{year}{2004}
+  \endentry
+
+  \entry{pyron11}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PRA}{%
+         family={Pyron},
+         familyi={P\bibinitperiod},
+         given={R.\bibnamedelima A.},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PRA1}
+    \strng{fullhash}{PRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{466\bibrangedash 481}
+    \field{title}{Divergence Time Estimation Using Fossils as Terminal Taxa and
+  the Origins of {Lissamphibia}}
+    \field{volume}{60}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2011}
+  \endentry
+
+  \entry{rambaut98}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Bromham},
+         familyi={B\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RABL1}
+    \strng{fullhash}{RABL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{442\bibrangedash 448}
+    \field{title}{Estimating divergence dates from molecular sequences}
+    \field{volume}{15}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{1998}
+  \endentry
+
+  \entry{rannala07}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RB}{%
+         family={Rannala},
+         familyi={R\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RBYZ1}
+    \strng{fullhash}{RBYZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{453\bibrangedash 466}
+    \field{title}{Inferring speciation times under an episodic molecular clock}
+    \field{volume}{56}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2007}
+  \endentry
+
+  \entry{rannala96}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RB}{%
+         family={Rannala},
+         familyi={R\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RBYZ1}
+    \strng{fullhash}{RBYZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{304\bibrangedash 311}
+    \field{title}{Probability distribution of molecular evolutionary trees: {A}
+  new method of phylogenetic inference}
+    \field{volume}{43}
+    \field{journaltitle}{Journal of Molecular Evolution}
+    \field{year}{1996}
+  \endentry
+
+  \entry{revell2012phytools}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RLJ}{%
+         family={Revell},
+         familyi={R\bibinitperiod},
+         given={Liam\bibnamedelima J},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{RLJ1}
+    \strng{fullhash}{RLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{2}
+    \field{pages}{217\bibrangedash 223}
+    \field{title}{{phytools}: an {R} package for phylogenetic comparative
+  biology (and other things)}
+    \field{volume}{3}
+    \field{journaltitle}{Methods in Ecology and Evolution}
+    \field{year}{2012}
+  \endentry
+
+  \entry{ronquist11}{article}{}
+    \name{author}{6}{}{%
+      {{hash=RF}{%
+         family={Ronquist},
+         familyi={R\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Klopfstein},
+         familyi={K\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VL}{%
+         family={Vilhelmsen},
+         familyi={V\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Schulmeister},
+         familyi={S\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MDL}{%
+         family={Murray},
+         familyi={M\bibinitperiod},
+         given={D.\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=RAP}{%
+         family={Rasnitsyn},
+         familyi={R\bibinitperiod},
+         given={A.\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RF+1}
+    \strng{fullhash}{RFKSVLSSMDLRAP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{973\bibrangedash 999}
+    \field{title}{A total-evidence approach to dating with fossils, applied to
+  the early radiation of the {H}ymenoptera}
+    \field{volume}{61}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2012}
+  \endentry
+
+  \entry{stadler09}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ST1}
+    \strng{fullhash}{ST1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{pages}{58\bibrangedash 66}
+    \field{title}{On incomplete sampling under birth-death models and
+  connections to the sampling-based coalescent}
+    \field{volume}{261}
+    \field{journaltitle}{Journal of Theoretical Biology}
+    \field{year}{2009}
+  \endentry
+
+  \entry{stadler10}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ST1}
+    \strng{fullhash}{ST1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{pages}{396\bibrangedash 404}
+    \field{title}{Sampling-through-time in birth-death trees}
+    \field{volume}{267}
+    \field{journaltitle}{Journal of Theoretical Biology}
+    \field{year}{2010}
+  \endentry
+
+  \entry{thompson75}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TEA}{%
+         family={Thompson},
+         familyi={T\bibinitperiod},
+         given={E.\bibnamedelima A.},
+         giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{TEA1}
+    \strng{fullhash}{TEA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Human {E}volutionary {T}rees}
+    \list{location}{1}{%
+      {Cambridge, England}%
+    }
+    \field{year}{1975}
+  \endentry
+
+  \entry{thorne02}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TJ}{%
+         family={Thorne},
+         familyi={T\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kishino},
+         familyi={K\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TJKH1}
+    \strng{fullhash}{TJKH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{pages}{689\bibrangedash 702}
+    \field{title}{Divergence time and evolutionary rate estimation with
+  multilocus data}
+    \field{volume}{51}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2002}
+  \endentry
+
+  \entry{thorne98}{article}{}
+    \name{author}{3}{}{%
+      {{hash=TJ}{%
+         family={Thorne},
+         familyi={T\bibinitperiod},
+         given={J.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kishino},
+         familyi={K\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=PIS}{%
+         family={Painter},
+         familyi={P\bibinitperiod},
+         given={I.\bibnamedelima S.},
+         giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TJ+1}
+    \strng{fullhash}{TJKHPIS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{pages}{1647\bibrangedash 1657}
+    \field{title}{Estimating the rate of evolution of the rate of molecular
+  evolution}
+    \field{volume}{15}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{1998}
+  \endentry
+
+  \entry{Vaughan2017}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VTG}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Timothy\bibnamedelima Glenn},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VTG1}
+    \strng{fullhash}{VTG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb https://doi.org/10.1093/bioinformatics/btx155
+    \endverb
+    \field{pages}{in press}
+    \field{title}{{IcyTree}: Rapid browser-based visualization for phylogenetic
+  trees and networks}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2017}
+  \endentry
+
+  \entry{warnock12}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WRCM}{%
+         family={Warnock},
+         familyi={W\bibinitperiod},
+         given={R.\bibnamedelima C.\bibnamedelima M.},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=DPCJ}{%
+         family={Donoghue},
+         familyi={D\bibinitperiod},
+         given={P.\bibnamedelima C.\bibnamedelima J.},
+         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WRCM+1}
+    \strng{fullhash}{WRCMYZDPCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{pages}{156\bibrangedash 159}
+    \field{title}{Exploring the uncertainty in the calibration of the molecular
+  clock}
+    \field{volume}{8}
+    \field{journaltitle}{Biology Letters}
+    \field{year}{2012}
+  \endentry
+
+  \entry{warnock2015}{article}{}
+    \name{author}{5}{}{%
+      {{hash=WRC}{%
+         family={Warnock},
+         familyi={W\bibinitperiod},
+         given={Rachel\bibnamedelima CM},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=PJF}{%
+         family={Parham},
+         familyi={P\bibinitperiod},
+         given={James\bibnamedelima F},
+         giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=JWG}{%
+         family={Joyce},
+         familyi={J\bibinitperiod},
+         given={Walter\bibnamedelima G},
+         giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=LTR}{%
+         family={Lyson},
+         familyi={L\bibinitperiod},
+         given={Tyler\bibnamedelima R},
+         giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=DPC}{%
+         family={Donoghue},
+         familyi={D\bibinitperiod},
+         given={Philip\bibnamedelima CJ},
+         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WRC+1}
+    \strng{fullhash}{WRCPJFJWGLTRDPC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{number}{1798}
+    \field{pages}{20141013}
+    \field{title}{Calibration uncertainty in molecular dating analyses: there
+  is no substitute for the prior evaluation of time priors}
+    \field{volume}{282}
+    \field{journaltitle}{Proceedings of the Royal Society B: Biological
+  Sciences}
+    \field{year}{2015}
+  \endentry
+
+  \entry{yang06}{article}{}
+    \name{author}{2}{}{%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Rannala},
+         familyi={R\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YZRB1}
+    \strng{fullhash}{YZRB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{pages}{212\bibrangedash 226}
+    \field{title}{Bayesian estimation of species divergence times under a
+  molecular clock using multiple fossil calibrations with soft bounds}
+    \field{volume}{23}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2006}
+  \endentry
+
+  \entry{yang97b}{article}{}
+    \name{author}{2}{}{%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=RB}{%
+         family={Rannala},
+         familyi={R\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YZRB1}
+    \strng{fullhash}{YZRB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1997}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{pages}{717\bibrangedash 724}
+    \field{title}{{B}ayesian phylogenetic inference using {DNA} sequences: {A}
+  {Markov} chain {Monte {C}arlo} method}
+    \field{volume}{14}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{1997}
+  \endentry
+
+  \entry{yang03}{article}{}
+    \name{author}{2}{}{%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=YAD}{%
+         family={Yoder},
+         familyi={Y\bibinitperiod},
+         given={A.\bibnamedelima D.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YZYAD1}
+    \strng{fullhash}{YZYAD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{pages}{705\bibrangedash 716}
+    \field{title}{Comparison of likelihood and {B}ayesian methods for
+  estimating divergence times using multiple gene loci and calibration points,
+  with application to a radiation of cute-looking mouse lemur species}
+    \field{volume}{52}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2003}
+  \endentry
+
+  \entry{yule24}{article}{}
+    \name{author}{1}{}{%
+      {{hash=YGU}{%
+         family={Yule},
+         familyi={Y\bibinitperiod},
+         given={G.\bibnamedelima U.},
+         giveni={G\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YGU1}
+    \strng{fullhash}{YGU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1924}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{pages}{21\bibrangedash 87}
+    \field{title}{A mathematical theory of evolution, based on the conclusions
+  of {Dr. J. C. Wills, F. R. S.}}
+    \field{volume}{213}
+    \field{journaltitle}{Philosophical Transactions of the Royal Society of
+  London, Biology}
+    \field{year}{1924}
+  \endentry
+
+  \entry{zuckerkandl62}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=ZE}{%
+         family={Zuckerkandl},
+         familyi={Z\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Pauling},
+         familyi={P\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=KM}{%
+         family={Kasha},
+         familyi={K\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PB}{%
+         family={Pullman},
+         familyi={P\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press, New York}%
+    }
+    \strng{namehash}{ZEPL1}
+    \strng{fullhash}{ZEPL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1962}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{booktitle}{Horizons in Biochemistry}
+    \field{pages}{189\bibrangedash 225}
+    \field{title}{Molecular disease, evolution, and genetic heterogeneity}
+    \field{year}{1962}
+  \endentry
+\endsortlist
+\endinput

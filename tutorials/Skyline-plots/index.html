@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Skyline plots</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://taming-the-beast.github.io//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="http://taming-the-beast.github.io//images/favicon.png"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-86786826-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button-->
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a>
+					</li>
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Skyline-plots/">Skyline plots</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Nicola F. Müller
+					
+			
+				
+						
+							and Louis du Plessis
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/Skyline-plots/Skyline-plots.pdf">Skyline-plots.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Skyline-plots" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/data/hcv.nexus" target="_blank" rel="nofollow">
+						hcv.nexus
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/xml/hcv_bdsky.xml" target="_blank" download rel="nofollow">
+						hcv_bdsky.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/xml/hcv_coal.xml" target="_blank" download rel="nofollow">
+						hcv_coal.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/Figure_Utilities.R" target="_blank" download rel="nofollow">
+						Figure_Utilities.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/Logfile_Utilities.R" target="_blank" download rel="nofollow">
+						Logfile_Utilities.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/Skyline_Example.R" target="_blank" download rel="nofollow">
+						Skyline_Example.R
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/SkylinePlot.R" target="_blank" download rel="nofollow">
+						SkylinePlot.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/precooked_runs/hcv_bdsky.log" target="_blank" download rel="nofollow">
+						hcv_bdsky.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/precooked_runs/hcv_bdsky.trees" target="_blank" download rel="nofollow">
+						hcv_bdsky.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/precooked_runs/hcv_coal.log" target="_blank" download rel="nofollow">
+						hcv_coal.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/precooked_runs/hcv_coal.trees" target="_blank" download rel="nofollow">
+						hcv_coal.trees
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/8ed7feee4ce4ea754428857f2ffc93f9db1a14b0">
+					01 Jun 2017 - <span class="text-gray">Update latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/f056d58fdc0e2f520e6bd26269b10c92a88c3908">
+					01 Jun 2017 - <span class="text-gray">Commit changes from Waiheke</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/2cd567dd6be3d27128213fda2d4e9da72b71df37">
+					06 Feb 2017 - <span class="text-gray">Fix R-script</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/718378bee095df27ebdce040695519b1bb0c8010">
+					04 Feb 2017 - <span class="text-gray">Fix latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/ce590702611676b1eb82cca43c4de3d672d17686">
+					04 Feb 2017 - <span class="text-gray">Fix README.md</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>Population dynamics influence the shape of the tree and consequently, the shape of the tree contains some information about past population dynamics. The so-called Skyline methods allow to extract this information from phylogenetic trees in a non-parametric manner. It is non-parametric since there is no underlying system of differential equations governing the inference of these dynamics. In this tutorial we will look at two different methods to infer these dynamics from sequence data. The first one is the Bayesian Coalescent Skyline plot <a href="#Drummond2005">(Drummond, Rambaut, Shapiro, &amp; Pybus, 2005)</a>, which is based on the coalescent model, and the second one is the Birth-Death skyline <a href="#Stadler2013">(Stadler, Kuhnert, Bonhoeffer, &amp; Drummond, 2013)</a> plot based on the birth-death model. The conceptual difference between coalescent and birth-death approaches lies in the direction of the flow of time. In the coalescent, the time is modeled to go backwards, from present to past, while in the birth-death approach it is modeled to go forwards. Two other fundamental differences are the parameters that are inferred and the way sampling is treated. </p>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.4.2.</p>
+
+<h3>BEAUti - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<h3>Tracer</h3>
+
+<p><a href="http://tree.bio.ed.ac.uk/software/tracer">Tracer</a> is used to summarise the posterior estimates of the various parameters sampled by the Markov chain. This program can be used for visual inspection and assessment of convergence. It helps to quickly view median estimates 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It also helps to visualise potential parameter correlations.</p>
+
+<h3>R</h3>
+
+<p>We will be using <a href="href%7Bhttps://www.r-project.org">R</a> to analyze the output of the birth-death skyline plot. We will start the provided R script from the terminal, hence there is no need for applications like RStudio, which provides a graphical user interface for R. If you prefer using RStudio feel free to do so.</p>
+
+<hr>
+
+<h1>Practical: Bayesian and birth-death skyline plot</h1>
+
+<p>In this tutorial we will estimate the dynamics of the Egyptian Hepatitis C epidemic from genetic sequence data collected in 1993.</p>
+
+<p>The aim of this tutorial is to:</p>
+
+<ul>
+<li>Learn how to infer population dynamics;</li>
+<li>Get to know how to choose the set-up of a skyline analysis;</li>
+<li>Get to know the advantages and disadvantages of the Bayesian Coalescent Skyline and the Birth-Death Skyline.</li>
+</ul>
+
+<h2>The Data</h2>
+
+<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt <a href="#Ray2000">(Ray, Arthur, Carella, Bukh, &amp; Thomas, 2000)</a>. This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
+
+<p>With an estimated 15-25%, Egypt has the highest Hepatits C prevalence in the world. In the mid 20<sup>th</sup> century, the prevalence of Hepatitis C increased drastically (see <a href="#fig:prevalence">Figure 1</a> for estimates). We will try to infer this increase from sequence data. </p>
+
+<figure>
+    <a id="fig:prevalence"></a>
+    <img style="width:50%;" src="figures/Estimated_number_hcv.png" alt="">
+    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt <a href="#Pybus2003">(Pybus, Drummond, Nakano, Robertson, &amp; Rambaut, 2003)</a>.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Creating the Analysis File with BEAUti</h2>
+
+<p>We will use BEAUti to generate the configuration file for BEAST2 from the sequence alignment.</p>
+
+<h3>Install BEAST 2 Plug-Ins</h3>
+
+<p>While the Bayesian Coalescent Skyline plot is integrated in the core of BEAST2, we need to install the BDSKY package, which contains the birth-death skyline plot functionality. Installation of packages is done using the package manager, which is integrated into BEAUti. Open the package manager with <code>File &gt; Manage Packages</code> in BEAUti. Select the BDSKY package and install it using the <code>Install/Upgrade</code> button (<a href="#fig:install">Figure 2</a>).</p>
+
+<figure>
+    <a id="fig:install"></a>
+    <img style="width:50%;" src="figures/install_bdsky.png" alt="">
+    <figcaption>Figure 2: Install the package BDSKY which contains the birth-death skyline functionality.</figcaption>
+</figure>
+
+<p><br></p>
+
+<hr>
+
+<h3>Setting up the analysis with Bayesian Coalescent Skyline</h3>
+
+<p>To import the aligned sequences into BEAUti, use <code>File &gt; Import Alignment</code> to select the <code>*.nexus</code> file.</p>
+
+<p>BEAUti will recognize the sequences from the <code>*.nexus</code> file as nucleotide data. It will do so for sequence files with the character set of <strong>A | C | G | T | N</strong>, where <strong>N</strong> indicates an unknown nucleotide. As soon as other non-gap characters are included (e.g. using <strong>R</strong> or <strong>Y</strong> to indicate purines and pyramidines) BEAUti will not recognize the data as nucleotides anymore, unless the type of data is specified in the <code>*.nexus</code> file.</p>
+
+<p>After we have loaded the sequences into BEAUti, we have to specify the evolutionary model. We will be using the very general GTR model (<a href="#fig:model">Figure 3</a>), which estimates transition probabilities between individual nucleotides separately, meaning that transition probabilities between e.g. <strong>A</strong> and <strong>T</strong> will be inferred separately to the ones between <strong>A</strong> and <strong>C</strong>. Additionally, we should allow for rate heterogeneity among sites. We can do this by changing the Gamma Category Count to 4 (normally between 4 and 6).</p>
+
+<figure>
+    <a id="fig:model"></a>
+    <img src="figures/choose_gtr.png" alt="">
+    <figcaption>Figure 3: Set GTR as a site model. Also use a Gamma Category Count of 4.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>As we use sequences that were sampled at the same point in time, we need to fix the clock rate (for more information on this please refer to the tutorial on molecular clocks). We will use an estimate inferred in <a href="#Pybus2001">(Pybus et al., 2001)</a> to fix the clock rate. In this case all the samples were contemporaneous (at the same time) and the clock rate works as a mapping of the estimated tree branch lengths into calendar time.</p>
+
+<p>We will keep the strict clock model and will set <code>Clock.rate</code> to 0.00079.</p>
+
+<p>Next, we need to go the the <code>Priors</code> tab and set the Bayesian Coalescent Skyline as a tree prior (<a href="#fig:coalescent">Figure 4</a>).</p>
+
+<figure>
+    <a id="fig:coalescent"></a>
+    <img src="figures/choose_coalescentSkyline.png" alt="">
+    <figcaption>Figure 4: Choose the Coalescent Bayesian Skyline as a population prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The Bayesian Coalescent Skyline works by dividing the time between the present and the root of the tree into intervals, thus the number of these intervals has to be defined. Each interval will have a different effective population size. 
+The Bayesian Coalescent Skyline will estimate the number of coalescent events within each interval (which is captured in the Group Size parameter) as well as the effective population size for that interval. The number of intervals is equal to the dimension specified. If we have <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span>  intervals, the effective population size is allowed to change <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span> times. To specify the number of dimensions, we need to first go to the initialization panel. This is by default not visible <code>View &gt; Show Initialization Panel</code>.</p>
+
+<p>For this analysis we will set the number of dimensions to 4 (the default value is 5). Keep in mind that one has to change the dimension of <code>bPopSizes</code> as well as <code>bGroupSizes</code>. The dimension of both parameters has to be the same (<a href="#fig:dimensions">Figure 5</a>).</p>
+
+<figure>
+    <a id="fig:dimensions"></a>
+    <img src="figures/set_dimension.png" alt="">
+    <figcaption>Figure 5: Set the dimension of the two parameters, bPopSizes and bGroupSizes, to 4.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline <a href="#Heled2008">(Heled &amp; Drummond, 2008)</a>) or do not require dimensions to be specified (Skyride <a href="#Minin2008">(Minin, Bloomquist, &amp; Suchard, 2008)</a>).</p>
+
+<p>We can leave the priors as they are and save the settings to <code>*.xml</code>.</p>
+
+<h3>Effective Population Size</h3>
+
+<p>The effective population size is the inverse of the rate of coalescence <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span></span></span></span>. The larger the effective population size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">f</mi></mrow></mrow></msub></mrow><annotation encoding="application/x-tex">N_{\mathrm{eff}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">e</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> the less likely lineages are to coalesce.</p>
+
+<div style='text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>λ</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mi>N</mi><mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">f</mi></mrow></mrow></msub></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \lambda = \frac{1}{N_{\mathrm{eff}}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.1574400000000002em;vertical-align:-0.8360000000000001em;"></span><span class="base displaystyle textstyle uncramped"><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mord mathit">λ</span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">e</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></span></div>
+
+<p>For an SIR model (<strong>S</strong>usceptible, <strong>I</strong>nfected and <strong>R</strong>ecovered), it is proportional to the overall population size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span> and the number of infected <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span> and inversely proportional to the transmission rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">θ</span></span></span></span>. </p>
+
+<div style='text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>N</mi><mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">f</mi></mrow></mrow></msub><mo>=</mo><mfrac><mrow><mi>I</mi></mrow><mrow><mi>θ</mi></mrow></mfrac><mfrac><mrow><mi>N</mi></mrow><mrow><mi>S</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle N_{\mathrm{eff}} = \frac{I}{\theta} \frac{N}{S}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.36033em;"></span><span class="strut bottom" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="base displaystyle textstyle uncramped"><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">e</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.02778em;">θ</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></span></div>
+
+<p>Estimates of the effective population size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">f</mi></mrow></mrow></msub></mrow><annotation encoding="application/x-tex">N_{\mathrm{eff}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">e</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> therefore do not directly tell us something about the number of infected, nor the transmission rate. Changes of e.g. the transmission rate or the number of infected can show in the effective population size (if they do not cancel out).</p>
+
+<figure>
+    <a id="fig:coal_principle"></a>
+    <img style="width:50%;" src="figures/coalescent_intervals.png" alt="">
+    <figcaption>Figure 6: Example tree where the red dotted lines show the time-points of coalescent events.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>What the Bayesian Coalescent Skyline is doing is dividing the full tree into dimension <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span> intervals between coalescent events. It then estimates based on what happens in those intervals, what the effective population size is (the actual estimation additionally involves smoothing priors which restrict the difference in effective population sizes between two intervals). The length of an interval is therefore not a fixed value but dependent on where the coalescent events are (<a href="#fig:coal_principle">Figure 6</a>, compare later to <a href="#fig:bdsky_principle">Figure 18</a> for the birth-death skyline), as well as the number of events contained within an interval (the <code>GroupSize</code> parameter). Intervals are grouped together, because as <a href="#fig:coal_principle">Figure 6</a> shows, some of the intervals can be very small, which may lead to erratic estimates. Grouping intervals together leads to smoother estimates.</p>
+
+<h3>Exploring the results of Bayesian Coalescent Skyline analysis</h3>
+
+<p>For the reconstruction of the population dynamics, we need two files: the <code>*.log</code> file and the <code>*.trees</code> file. The log files contain the information about the group size and the population size. The group size specifies how many intervals are combined to have the same effective population size. </p>
+
+<p>After the runs have finished, load the finished <code>*.log</code> file into Tracer. Alternatively you can use the <code>*.log</code> files and the <code>*.trees</code> files you downloaded with the data. To run the analysis, open the finished <code>*.log</code> file into Tracer, then go to <code>Analysis &gt; Bayesian Skyline Reconstruction</code>. From there open the finished <code>*.trees</code> file. To get the correct years in the analysis we should specify the <code>Age of the youngest tip</code>. In our case it is 1993, the year where all the samples were taken. If the samples were taken through time, the age of the youngest tip is the time when the most recent sample was taken. If you now press the <code>Ok</code> button, the reconstruction of the past population dynamics will be performed (<a href="#fig:trees">Figure 7</a>).</p>
+
+<figure>
+    <a id="fig:trees"></a>
+    <img style="width:50%;" src="figures/open_trees.png" alt="">
+    <figcaption>Figure 7: Reconstructing the Bayesian Skyline plot in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The output will have the years on the x-axis and the effective population size on the y-axis. By default, the y-axis is on a log-scale. If everything worked as it is supposed to work you will see a sharp increase in the effective population size in the mid 20<sup>th</sup> century, similar to what is seen on <a href="#fig:skyline">Figure 8</a>.</p>
+
+<figure>
+    <a id="fig:skyline"></a>
+    <img style="width:50%;" src="figures/skyline_analysis.png" alt="">
+    <figcaption>Figure 8: Bayesian Coalescent Skyline analysis output. The black line is the median estimate of the estimated effective population size (can be changed to the mean estimate). The two blue lines are the upper an the lower estimates of 95% interval. The x-axis is the time in years.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>There are two ways to save the analysis, it can either be saved as a <code>*.pdf</code> or as a tab delimited file. To save it as a tab delimited file, you can go to <code>File &gt; Export Data</code>. The exported file will have five rows, the time, the mean, median lower 95% interval and the upper 95% interval of the estimates, which you can use to plot the data with other software (R, Matlab, etc).</p>
+
+<h3>Choosing the Dimension</h3>
+
+<p>If we compare the estimates of the population dynamics using different dimensions, we see that most of the dynamics are already captured with having only 2 dimensions, as shown in <a href="#fig:comparison">Figure 9</a>. Adding more dimensions mainly only changes the inferred effective population size before 1900. Note that adding more dimensions adds a slight dip before the increase in the effective population size (around 1900). When comparing to the HPD intervals (<a href="#fig:skyline">Figure 8</a>) we see that this dip is not significant and may not be indicative of a real decrease in the effective population size before the subsequent increase.</p>
+
+<figure>
+    <a id="fig:comparison"></a>
+    <img style="width:50%;" src="figures/comparison_dimension.png" alt="">
+    <figcaption>Figure 9: Estimated mean effective population sizes using different dimensions.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The choice of the number of dimensions can also have a direct effect on how fast the MCMC converges (<a href="#fig:ess">Figure 10</a>). The slower convergence with increasing dimension can be caused by e.g. less information in intervals. To some extent it is simply caused by the need to estimate more parameters though.</p>
+
+<figure>
+    <a id="fig:ess"></a>
+    <img style="width:50%;" src="figures/ess_vs_dim_coal.png" alt="">
+    <figcaption>Figure 10: The ESS value of the posterior after running an MCMC chain with <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>7</mn></msup></mrow><annotation encoding="application/x-tex">10^7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">7</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> samples, logged every <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">10^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> steps and a burnin of 10% for using different dimensions of the Bayesian Coalescent Skyline.</figcaption>
+</figure>
+
+<p><br></p>
+
+<hr>
+
+<h3>Birth-Death Skyline</h3>
+
+<p>In the first analysis, we used the coalescent approach to estimate population dynamics, we now want to do the inference using the birth-death skyline model. We will mostly need the same setups as for the previous analysis. In case you closed BEAUti, you can reopen the previously used configuration file in BEAUti (<code>File &gt; Load</code> the <code>*.xml</code>) and modify it to have a birth-death skyline prior on the tree. We will need to set the prior to <code>Birth Death Skyline Contemporary</code>, since the sequences were all sampled at the same point in time (see <a href="#fig:bdsky">Figure 11</a>). For samples that were taken through time, we would take <code>Birth Death Skyline Serial</code>.</p>
+
+<figure>
+    <a id="fig:bdsky"></a>
+    <img src="figures/choose_bdsky.png" alt="">
+    <figcaption>Figure 11: Setting the prior on the tree to the birth-death skyline.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>As in the Bayesian Coalescent Skyline, we need to choose the number of dimensions. Here we choose the dimensions for the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, the basic reproduction number, which denotes the number of secondary infections caused by a single infected person in a completely susceptible population, i.e. an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> of 2 would mean that every infected person causes two new infections on average. Or in other words, an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> above 1 means that the number of cases are increasing, therefore the disease will cause an epidemic, and an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> below 1 means that the epidemic will die out. (Note that since the birth-death skyline infers changes in <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> over time, it technically infers the effective reproduction number, the average number of new infections caused by an infected person at a certain time during the outbreak).</p>
+
+<p>The dimension of the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> has to be chosen in the initialization panel. Choosing this dimension can again be arbitrary and may require the testing of a few different values. Too few intervals and not all rate shifts are captured. Too many intervals and the intervals may not contain enough information to infer parameters.</p>
+
+<p>In this case we will keep the default value of 10 dimensions (<a href="#fig:dimensions_bdsky">Figure 12</a>).</p>
+
+<figure>
+    <a id="fig:dimensions_bdsky"></a>
+    <img src="figures/choose_dimension_bdsky.png" alt="">
+    <figcaption>Figure 12: Setting the dimensions for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> estimates.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="fig:bdsky_model"></a>
+    <img style="width:25%;" src="figures/bdsky_model.png" alt="">
+    <figcaption>Figure 13: A schematic of the BDSKY model.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>BDSKY infers 3 parameters (<a href="#fig:bdsky_model">Figure 13</a>), the transmission rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span></span></span></span>, the becoming noninfectious rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03785em;">δ</span></span></span></span> and the sampling proportion, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span> (when the samples were taken at the same time) or the sampling proportion, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span> (when the samples were taken through time). The <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mrow><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">R_{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> is then a function of those values (more about that later).
+The rates we estimate using the birth-death model are per lineage rates. Some of these rates we know or we can estimate them from other data. The becoming noninfectious rate for example, we can get from the average time a patient can transmit a disease. This prior knowledge we can incorporate in the MCMC.
+This we can do in the <code>Priors</code> panel. We can use prior information about the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mrow><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">R_{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, the becoming noninfectious rate, the origin and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span> (Figures <a href="#fig:r0prior">14</a>,<a href="#fig:bURprior">15</a>,<a href="#fig:oriprior">16</a>,<a href="#fig:rhoprior">17</a>). Note that the origin inferred by the birth-death skyline is not the time of the most recent common ancestor of the tree (TMRCA), but is earlier and denotes the start of the outbreak, i.e. when there was only one infected person. </p>
+
+<p>We use a lognormal prior for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>. This is a good prior distribution to use for rates since it is always positive (a rate cannot be negative) and has a long tail defined over all positive numbers. The long tail allows arbitrarily high estimates of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, but does not place much weight on very high rates. This agrees with our prior knowledge about the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> of other diseases (most diseases have an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> between 1.2 and 5. Measles is one of the most infectious diseases we know about and has an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> of around 18). </p>
+
+<p>If an epidemic is neither growing nor declining, it has an <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> of 1, which we will use as a null hypothesis (we assume that as long as there is no strong signal in an interval for an epidemic to grow or decline that the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> is 1, i.e. the epidemic stays constant). Thus, we set the mean of the lognormal distribution to 0, which results in a median of 1. We set the variance to 1.25, which places most weight below 7.82 (95% quantile). (<a href="#fig:r0prior">Figure 14</a>).</p>
+
+<figure>
+    <a id="fig:r0prior"></a>
+    <img src="figures/bdsky_prior_r0.png" alt="">
+    <figcaption>Figure 14: Setting the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>For the becoming noninfectious rate we again use a lognormal prior. The inverse of the becoming noninfectious rate is the average infectious period. In some patients an HCV infection only lasts a few weeks, while in others it is a chronic infection lasting for many years. Setting <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">M=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">.</mi><mn>2</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">S=1.25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span></span></span></span> results in the same prior we used for the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> (<a href="#fig:bURprior">Figure 15</a>).  In terms of the becoming noninfectious rate, this translates to the 95% quantiles for the infectious period falling between 0.128 years (46.67 days) and 11.59 years, with a median of 1 year. We will see later that there is a strong signal in the data for a longer becoming noninfectious period. </p>
+
+<figure>
+    <a id="fig:bURprior"></a>
+    <img src="figures/bdsky_prior_uninf.png" alt="">
+    <figcaption>Figure 15: Setting the becoming noninfectious prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>For the origin of the epidemic we once again use a lognormal prior. Note that the origin also has to be positive and needs to be bigger than the MRCA of the tree. We know that HCV has been circulating in Egypt for at least a hundred years, so we set <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">M=5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mrel">=</span><span class="mord mathrm">5</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">S=0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span></span></span></span> (<a href="#fig:oriprior">Figure 16</a>), resulting in a median prior estimate for the origin of 148 years.</p>
+
+<figure>
+    <a id="fig:oriprior"></a>
+    <img src="figures/bdsky_prior_ori.png" alt="">
+    <figcaption>Figure 16: Setting the prior on the origin of the epidemic.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Finally, we need a prior for the sampling probability, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span>, which represents the proportion of HCV cases in Egypt in 1993, included in the analysis. Egypt had a population of roughly 60 million in 1993, and with a prevalence of at least 15% this translates into millions of cases, whereas we have only 63 sequences. </p>
+
+<p>We use a beta distribution for the prior on <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span>. Beta distributions are a very flexible class of distributions that are only defined between 0 and 1, making them ideal to use for proportions. We set Alpha to 1 and Beta to 9999, reflecting our prior knowledge that we have only a minuscule fraction of all cases in our dataset (<a href="#fig:rhoprior">Figure 17</a>).</p>
+
+<figure>
+    <a id="fig:rhoprior"></a>
+    <img src="figures/bdsky_prior_rho.png" alt="">
+    <figcaption>Figure 17: Setting the prior on <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span>.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We can leave the rest of the priors as they are. First, we should increase the chain length (at least double it). To not get too large log files, we can increase the <code>sampling every</code> to 2000 (reducing the sampling frequency). Now we can change the names of the output files. If we want to run the analysis in the same directory as the coalescent analyses, the output files and the <code>*.xml</code> name need to be different.</p>
+
+<h3>The parameterization of the Birth-Death Model</h3>
+
+<p>The Birth-Death model is parameterized very differently from the coalescent model. While the coalescent uses the effective population size, which as the name already tells us is defined on a population level, the birth-death model uses per lineage rates. The transmission rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span></span></span></span> tells us at which rate infected individuals infect susceptibles. This rate is also referred to as the birth rate. The sampling rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">ψ</span></span></span></span> and the sampling probability <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span> describe how likely it is for an infected individual to be sampled and therefore how likely they are to appear in the tree as tips. The becoming noninfectious rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03785em;">δ</span></span></span></span> is the sum of the death rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">μ</span></span></span></span> and the sampling rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">ψ</span></span></span></span>.</p>
+
+<div style='text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>δ</mi><mo>=</mo><mi>ψ</mi><mo>+</mo><mi>μ</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \delta = \psi + \mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base displaystyle textstyle uncramped"><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.03785em;">δ</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03588em;">ψ</span><span class="mbin">+</span><span class="mord mathit">μ</span></span></span></span></span></span></div>
+
+<p>The death rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">μ</span></span></span></span> is the rate at which lineages disappear (go extinct) from a population without being sampled. You can also see from the above equation that we assume that a sampled lineage cannot transmit anymore. The consequence for the phylogeny is that a sampled lineage cannot be an ancestor of any lineage. This assumption can be relaxed, but we will not do so during this tutorial.</p>
+
+<p>The <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> we estimate is then defined as follows:</p>
+
+<div style='text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>R</mi><mrow><mn>0</mn></mrow></msub><mo>=</mo><mfrac><mrow><mi>λ</mi></mrow><mrow><mi>ψ</mi><mo>+</mo><mi>μ</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>λ</mi></mrow><mrow><mi>δ</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle R_{0} = \frac{\lambda}{\psi + \mu} = \frac{\lambda}{\delta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.37144em;"></span><span class="strut bottom" style="height:2.25188em;vertical-align:-0.8804400000000001em;"></span><span class="base displaystyle textstyle uncramped"><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6860000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">ψ</span><span class="mbin">+</span><span class="mord mathit">μ</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">λ</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03785em;">δ</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">λ</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></span></div>
+
+<table><thead>
+<tr>
+<th style="text-align: right"></th>
+<th style="text-align: left"></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right">if <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi><mo>&gt;</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">\lambda &gt; \delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span><span class="mrel">&gt;</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span></span></span></span> then <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">R_e &gt; 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">&gt;</span><span class="mord mathrm">1</span></span></span></span></td>
+<td style="text-align: left">epidemic grows</td>
+</tr>
+<tr>
+<td style="text-align: right">if <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi><mo>=</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">\lambda = \delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span></span></span></span> then <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">R_e = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span></td>
+<td style="text-align: left">epidemic stays constant</td>
+</tr>
+<tr>
+<td style="text-align: right">if <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi><mo>&lt;</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">\lambda &lt; \delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span><span class="mrel">&lt;</span><span class="mord mathit" style="margin-right:0.03785em;">δ</span></span></span></span> then <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">R_e &lt; 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">&lt;</span><span class="mord mathrm">1</span></span></span></span></td>
+<td style="text-align: left">epidemic declines</td>
+</tr>
+</tbody></table>
+
+<p>The birth-death skyline allows these rates to change over time. This is done by dividing the time from the origin (of the epidemic, which is not necessarily the same as the root of the tree) to the most recent sample into dimension <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span> equally spaced intervals (see <a href="#fig:bdsky_principle">Figure 18</a>). The rates are then allowed to change between two intervals. Within an interval rates are constant. In principle, all rates in all intervals could be different. Since the transmission rate and the becoming noninfectious rate are highly correlated, this is not always practical. Often we assume the becoming noninfectious rate to be the same in all intervals while changing the transmission rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span></span></span></span>. </p>
+
+<figure>
+    <a id="fig:bdsky_principle"></a>
+    <img style="width:50%;" src="figures/bdsky_intervals5.png" alt="">
+    <figcaption>Figure 18: Example tree where the red dotted lines are an example of where rates could be allowed to change on the tree. The branch at the root (compare Figure 6) is indicating the origin of the epidemic, which is also estimated in the BDSKY.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>There are some clear differences between the birth-death and the coalescent skyline. First, the way intervals are defined. In the coalescent skyline, intervals are always between coalescent events, while this restriction does not exist for the birth-death skyline. Second, the birth-death skyline does not infer changes in population sizes.</p>
+
+<p>The coalescent on the other hand does infer the effective population size, which is a parameter proportional to absolute sizes. The third difference is the inference of the origin of an epidemic by the birth death model, which is not done by the coalescent.</p>
+
+<h3>Visualizing the Birth-Death Skyline Output</h3>
+
+<p>There is no equivalent visualization of the <code>*.log</code> file of a BDSKY analysis in tracer as there is for the Bayesian Coalescent Skyline. But because BDSKY separates the full tree into equally spaced intervals, we can already get an idea of the inference just by looking at the inferred <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> values (see <a href="#fig:bdsky_dynamics">Figure 19</a>). This gives us a good idea of the trend, but it is not completely accurate. Since every posterior sample has a different origin, the time spanned by each interval is slightly different in each posterior sample. Thus, the different intervals overlap slightly. The advantage to this is that we get a smooth estimate through time. The disadvantage is that we need to do some extra post-processing to plot the skyline.</p>
+
+<figure>
+    <a id="fig:bdsky_dynamics"></a>
+    <img src="figures/bdsky_tracer.png" alt="">
+    <figcaption>Figure 19: Estimated population dynamics by BDSKY in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We will instead use the R package <code>bdskytools</code> to plot the output of the bdsky. The package is still in development and currently not available over CRAN. Thus, we have to install the package directly over GitHub (note that you only have to install the package once): </p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">install.packages</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span><span class="w">
+
+</span><span class="n">devtools</span><span class="o">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">"laduplessis/bdskytools"</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<p>Once the package is installed we have to load the package into our R workspace before we can use the functions in the package.
+To plot the results, we need to tell R where to find the <code>*.log</code> file of our run and load it into R (discarding 10% of samples as burn-in): </p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">library</span><span class="p">(</span><span class="n">bdskytools</span><span class="p">)</span><span class="w">
+
+</span><span class="n">fname</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"Replace this string with the path to your log file"</span><span class="w">
+</span><span class="n">lf</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLogfile</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="w"> </span><span class="n">burnin</span><span class="o">=</span><span class="m">0.1</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<p>Next, we can extract the HPDs of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and the becoming noninfectious rate: </p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">Re_sky</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getSkylineSubset</span><span class="p">(</span><span class="n">lf</span><span class="p">,</span><span class="w"> </span><span class="s2">"reproductiveNumber"</span><span class="p">)</span><span class="w">
+</span><span class="n">Re_hpd</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getMatrixHPD</span><span class="p">(</span><span class="n">Re_sky</span><span class="p">)</span><span class="w">
+</span><span class="n">delta_hpd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getHPD</span><span class="p">(</span><span class="n">lf</span><span class="o">$</span><span class="n">becomeUninfectiousRate</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<p>Next we plot the raw HPD intervals of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>. This is equivalent to the output in tracer. </p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">plotSkyline</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">Re_hpd</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'step'</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"R"</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<figure>
+    <a id="fig:bdsky_hpds"></a>
+    <img style="width:80%;" src="figures/bdsky_hpds.png" alt="">
+    <figcaption>Figure 20: The HPDs of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> (equivalent to the previous figure).</figcaption>
+</figure>
+
+<p>In order to plot the smooth skyline we have to calculate the HPD on a finer timegrid. To do this we first calculate the marginal posterior at every time of interest using the function <code>gridSkyline</code> and then calculate the HPD for each of the finer time intervals. The times to grid the skyline on (<code>timegrid</code>), refers to years in the past. </p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">timegrid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">400</span><span class="p">,</span><span class="n">length.out</span><span class="o">=</span><span class="m">100</span><span class="p">)</span><span class="w">
+</span><span class="n">Re_gridded</span><span class="w">     </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gridSkyline</span><span class="p">(</span><span class="n">Re_sky</span><span class="p">,</span><span class="w"> </span><span class="n">lf</span><span class="o">$</span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">timegrid</span><span class="p">)</span><span class="w">
+</span><span class="n">Re_gridded_hpd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getMatrixHPD</span><span class="p">(</span><span class="n">Re_gridded</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<p>Now we are ready to plot the smooth skyline (remember that the sequences were sampled in 1993):</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">times</span><span class="w">     </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1993</span><span class="o">-</span><span class="n">timegrid</span><span class="w">
+</span><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded_hpd</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'smooth'</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"R"</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<figure>
+    <a id="fig:bdsky_smooth"></a>
+    <img style="width:80%;" src="figures/bdsky_smooth.png" alt="">
+    <figcaption>Figure 21: The smooth <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> skyline.</figcaption>
+</figure>
+
+<p>We can plot the gridded skyline (not its HPDs) for a few of the samples to see what it really looks like. Note that the intervals overlap between different posterior samples. This is because the origin is different in each sample. As we add more samples to the plot we start to see the smooth skyline appear. </p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'steplines'</span><span class="p">,</span><span class="w"> </span><span class="n">traces</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cblue</span><span class="p">,</span><span class="m">0.5</span><span class="p">),</span><span class="n">ylims</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"R"</span><span class="p">)</span><span class="w">
+</span><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'steplines'</span><span class="p">,</span><span class="w"> </span><span class="n">traces</span><span class="o">=</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cblue</span><span class="p">,</span><span class="m">0.5</span><span class="p">),</span><span class="n">ylims</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"R"</span><span class="p">)</span><span class="w">
+</span><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'steplines'</span><span class="p">,</span><span class="w"> </span><span class="n">traces</span><span class="o">=</span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cblue</span><span class="p">,</span><span class="m">0.1</span><span class="p">),</span><span class="n">ylims</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"R"</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<figure>
+    <a id="fig:bdsky_traces"></a>
+    <img style="width:80%;" src="figures/bdsky_traces.png" alt="">
+    <figcaption>Figure 22: Increasing the number of traces plotted from 10 to 100, to 1000.</figcaption>
+</figure>
+
+<p>Finally, we can plot both the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and the becoming noninfectious rate on a single set of axes. Since we left the dimension of the becoming noninfectious rate at 1, it is constant through time. (Normally we would not plot constant parameters over a time period). The output should be similar to <a href="#fig:bdsky_out">Figure 23</a>.</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">4</span><span class="p">)</span><span class="m">+0.1</span><span class="p">)</span><span class="w">
+
+</span><span class="n">plotSkylinePretty</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="n">times</span><span class="p">),</span><span class="w"> </span><span class="n">as.matrix</span><span class="p">(</span><span class="n">delta_hpd</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'step'</span><span class="p">,</span><span class="w"> </span><span class="n">axispadding</span><span class="o">=</span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cblue</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cblue</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">),</span><span class="w"> </span><span class="n">col.axis</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cblue</span><span class="p">),</span><span class="w">
+</span><span class="n">ylab</span><span class="o">=</span><span class="nf">expression</span><span class="p">(</span><span class="n">delta</span><span class="p">),</span><span class="w"> </span><span class="n">side</span><span class="o">=</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">yline</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ylims</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">xaxis</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+
+</span><span class="n">plotSkylinePretty</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded_hpd</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'smooth'</span><span class="p">,</span><span class="w"> </span><span class="n">axispadding</span><span class="o">=</span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">corange</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">corange</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">),</span><span class="w"> </span><span class="n">col.axis</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">corange</span><span class="p">),</span><span class="w">
+</span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="nf">expression</span><span class="p">(</span><span class="s2">"R"</span><span class="p">[</span><span class="n">e</span><span class="p">]),</span><span class="w"> </span><span class="n">side</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">yline</span><span class="o">=</span><span class="m">2.5</span><span class="p">,</span><span class="w"> </span><span class="n">xline</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">xgrid</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">ygrid</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">gridcol</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cgray</span><span class="p">),</span><span class="w"> </span><span class="n">ylims</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">new</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<figure>
+    <a id="fig:bdsky_out"></a>
+    <img style="width:80%;" src="figures/bdsky_output.png" alt="">
+    <figcaption>Figure 23: Estimates of the inferred <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> (orange) over time and the estimate of the becoming un-infectious rate (blue), for which we only used one value.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>An R script with the above commands (and a few extras) is in the <code>scripts/</code> directory (<code>Skyline_Example.R</code>). 
+If the bdskytools package cannot be installed from GitHub the relevant scripts are also provided in the <code>scripts/</code> directory.</p>
+
+<hr>
+
+<h2>Some considerations for using skyline plots</h2>
+
+<p>Both the coalescent and the birth-death skylines assume that the population is well-mixed. That is, they assume that there is no significant population structure and that the sequences are a random sample from the population. However, if there is population structure, for instance sequences were sampled from two different villages and there is much more contact within than between villages, then the results will be biased <a href="#Heller2013">(Heller, Chikhi, &amp; Siegismund, 2013)</a>. Instead a structured model should be used to account for these biases.</p>
+
+<hr>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+<li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Drummond2005">Drummond, A. J., Rambaut, A., Shapiro, B., &amp; Pybus, O. G. (2005). Bayesian coalescent inference of past population dynamics from molecular sequences. <i>Molecular Biology and Evolution</i>, <i>22</i>(5), 1185–92. http://doi.org/10.1093/molbev/msi103</span></li>
+<li><span id="Stadler2013">Stadler, T., Kuhnert, D., Bonhoeffer, S., &amp; Drummond, A. J. (2013). Birth-death skyline plot reveals temporal changes of epidemic spread in HIV and hepatitis C virus (HCV). <i>Proceedings of the National Academy of Sciences</i>, <i>110</i>(1), 228–233. http://doi.org/10.1073/pnas.1207965110</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. http://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Ray2000">Ray, S. Ê. C., Arthur, R. Ê. R., Carella, A., Bukh, J., &amp; Thomas, D. Ê. L. (2000). Genetic Epidemiology of Hepatitis C Virus throughout Egypt. <i>The Journal of Infectious Diseases</i>, <i>182</i>(3), 698–707. http://doi.org/10.1086/315786</span></li>
+<li><span id="Pybus2003">Pybus, O. G., Drummond, A. J., Nakano, T., Robertson, B. H., &amp; Rambaut, A. (2003). The Epidemiology and Iatrogenic Transmission of Hepatitis C Virus in Egypt: A Bayesian Coalescent Approach. <i>Molecular Biology and Evolution</i>, <i>20</i>(3), 381–387. http://doi.org/10.1093/molbev/msg043</span></li>
+<li><span id="Pybus2001">Pybus, O. G., Charleston, M. A., Gupta, S., Rambaut, A., Holmes, E. C., Harvey, P. H., … Felsenstein, J. (2001). The epidemic behavior of the hepatitis C virus. <i>Science (New York, N.Y.)</i>, <i>292</i>(5525), 2323–5. http://doi.org/10.1126/science.1058321</span></li>
+<li><span id="Heled2008">Heled, J., &amp; Drummond, A. J. (2008). Bayesian inference of population size history from multiple loci. <i>BMC Evolutionary Biology</i>, <i>8</i>(1), 289. http://doi.org/10.1186/1471-2148-8-289</span></li>
+<li><span id="Minin2008">Minin, V. N., Bloomquist, E. W., &amp; Suchard, M. A. (2008). Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics. <i>Molecular Biology and Evolution</i>, <i>25</i>(7), 1459–71. http://doi.org/10.1093/molbev/msn090</span></li>
+<li><span id="Heller2013">Heller, R., Chikhi, L., &amp; Siegismund, H. R. (2013). The confounding effect of population structure on Bayesian skyline plot inferences of demographic history. <i>PloS One</i>, <i>8</i>(5), e62992. http://doi.org/10.1371/journal.pone.0062992</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/workshops/">workshops</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

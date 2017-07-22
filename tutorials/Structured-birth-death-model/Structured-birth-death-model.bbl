@@ -1,0 +1,320 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Bouckaert2014}{article}{}
+    \name{author}{9}{}{%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={K{\"{u}}hnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRHJKDVTWCHXDSMARADAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    We present a new open source, extensible and flexible software platform for
+  Bayesian evolutionary analysis called BEAST 2. This software platform is a
+  re-design of the popular BEAST 1 platform to correct structural deficiencies
+  that became evident as the BEAST 1 software evolved. Key among those
+  deficiencies was the lack of post-deployment extensibility. BEAST 2 now has a
+  fully developed package management system that allows third party developers
+  to write additional functionality that can be directly installed to the BEAST
+  2 analysis platform via a package manager without requiring a new software
+  release of the platform. This package architecture is showcased with a number
+  of recently published new models encompassing birth-death-sampling tree
+  priors, phylodynamics and model averaging for substitution models and site
+  partitioning. A second major improvement is the ability to read/write the
+  entire state of the MCMC chain to/from disk allowing it to be easily shared
+  between multiple instances of the BEAST software. This facilitates
+  checkpointing and better support for multi-processor and high-end computing
+  extensions. Finally, the functionality in new packages can be easily added to
+  the user interface (BEAUti 2) by a simple XML template-based mechanism
+  because BEAST 2 has been re-designed to provide greater integration between
+  the analysis engine and the user interface so that, for example BEAST and
+  BEAUti use exactly the same XML file format.%
+    }
+    \verb{doi}
+    \verb 10.1371/journal.pcbi.1003537
+    \endverb
+    \field{issn}{1553-7358}
+    \field{number}{4}
+    \field{pages}{e1003537}
+    \field{title}{BEAST 2: a software platform for Bayesian evolutionary
+  analysis.}
+    \verb{url}
+    \verb http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
+    \verb .1003537
+    \endverb
+    \field{volume}{10}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Bouckaert et al. - 2014 - BEAST 2 a software platform for Bayesian
+    \verb  evolutionary analysis.pdf:pdf
+    \endverb
+    \field{journaltitle}{PLoS computational biology}
+    \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{BEAST2book2014}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{DAJBRR1}
+    \strng{fullhash}{DAJBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Bayesian evolutionary analysis with {BEAST} 2}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Kuhnert2016}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KD}{%
+         family={Kühnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Tanja},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=VTG}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Timothy\bibnamedelima G.},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KD+1}
+    \strng{fullhash}{KDSTVTGDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    When viruses spread, outbreaks can be spawned in previously unaffected
+  regions. Depending on the time and mode of introduction, each regional
+  outbreak can have its own epidemic dynamics. The migration and phylodynamic
+  processes are often intertwined and need to be taken into account when
+  analyzing temporally and spatially structured virus data. In this article, we
+  present a fully probabilistic approach for the joint reconstruction of
+  phylodynamic history in structured populations (such as geographic structure)
+  based on a multitype birth–death process. This approach can be used to
+  quantify the spread of a pathogen in a structured population. Changes in
+  epidemic dynamics through time within subpopulations are incorporated through
+  piecewise constant changes in transmission parameters.We analyze a global
+  human influenza H3N2 virus data set from a geographically structured host
+  population to demonstrate how seasonal dynamics can be inferred
+  simultaneously with the phylogeny and migration process. Our results suggest
+  that the main migration path among the northern, tropical, and southern
+  region represented in the sample analyzed here is the one leading from the
+  tropics to the northern region. Furthermore, the time-dependent transmission
+  dynamics between and within two HIV risk groups, heterosexuals and injecting
+  drug users, in the Latvian HIV epidemic are investigated. Our analyses
+  confirm that the Latvian HIV epidemic peaking around 2001 was mainly driven
+  by the injecting drug user risk group.%
+    }
+    \verb{doi}
+    \verb 10.1093/molbev/msw064
+    \endverb
+    \verb{eprint}
+    \verb http://mbe.oxfordjournals.org/content/early/2016/05/20/molbev.msw064.
+    \verb full.pdf+html
+    \endverb
+    \field{title}{Phylodynamics with Migration: A Computational Framework to
+  Quantify Population Structure from Genomic Data}
+    \verb{url}
+    \verb http://mbe.oxfordjournals.org/content/early/2016/05/20/molbev.msw064.
+    \verb abstract
+    \endverb
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Vaughan2014}{article}{}
+    \name{author}{5}{}{%
+      {{hash=VTG}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Timothy\bibnamedelima G.},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kühnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Popinga},
+         familyi={P\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Welch},
+         familyi={W\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VTG+1}
+    \strng{fullhash}{VTGKDPAWDDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{abstract}{%
+    Motivation: Population structure significantly affects evolutionary
+  dynamics. Such structure may be due to spatial segregation, but may also
+  reflect any other gene-flow-limiting aspect of a model. In combination with
+  the structured coalescent, this fact can be used to inform phylogenetic tree
+  reconstruction, as well as to infer parameters such as migration rates and
+  subpopulation sizes from annotated sequence data. However, conducting
+  Bayesian inference under the structured coalescent is impeded by the
+  difficulty of constructing Markov Chain Monte Carlo (MCMC) sampling
+  algorithms (samplers) capable of efficiently exploring the state
+  space.Results: In this article, we present a new MCMC sampler capable of
+  sampling from posterior distributions over structured trees: timed
+  phylogenetic trees in which lineages are associated with the distinct
+  subpopulation in which they lie. The sampler includes a set of MCMC proposal
+  functions that offer significant mixing improvements over a previously
+  published method. Furthermore, its implementation as a BEAST 2 package
+  ensures maximum flexibility with respect to model and prior specification. We
+  demonstrate the usefulness of this new sampler by using it to infer migration
+  rates and effective population sizes of H3N2 influenza between New Zealand,
+  New York and Hong Kong from publicly available hemagglutinin (HA) gene
+  sequences under the structured coalescent.Availability and implementation:
+  The sampler has been implemented as a publicly available BEAST 2 package that
+  is distributed under version 3 of the GNU General Public License at
+  http://compevol.github.io/MultiTypeTree.Contact:
+  tgvaughan@gmail.comSupplementary information: Supplementary data are
+  available at Bioinformatics online.%
+    }
+    \verb{doi}
+    \verb 10.1093/bioinformatics/btu201
+    \endverb
+    \verb{eprint}
+    \verb http://bioinformatics.oxfordjournals.org/content/30/16/2272.full.pdf+
+    \verb html
+    \endverb
+    \field{number}{16}
+    \field{pages}{2272\bibrangedash 2279}
+    \field{title}{Efficient Bayesian inference under the structured coalescent}
+    \verb{url}
+    \verb http://bioinformatics.oxfordjournals.org/content/30/16/2272.abstract
+    \endverb
+    \field{volume}{30}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2014}
+  \endentry
+\endsortlist
+\endinput
