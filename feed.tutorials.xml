@@ -12,6 +12,49 @@
 		</image>
 				
 			<item>
+				<title>MASCOT v0.0.4 Tutorial</title>
+				<description>
+					Parameter and State inference using the approximate structured coalescent
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel/Mascot-Tutorial/commit/ec5ebe3cd74dfaa3d187d8f57a4a96a956fcd712'
+					&gt;
+						16 Jan 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel'
+					&gt;
+						nicfel
+					&lt;/a&gt;
+					: Merge pull request #3 from tgvaughan/master
+
+Incorporated Michael Matschiner's suggestions/fixes.
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.7
+					
+				</description>
+				<pubDate>Tue, 16 Jan 2018 18:13:25 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Structured birth death model</title>
 				<description>
 					Population structure using the multi-type birth-death model
@@ -50,53 +93,10 @@
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Wed, 30 Aug 2017 14:35:21 +0100</pubDate>
+				<pubDate>Wed, 30 Aug 2017 13:35:21 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</guid>
-			</item>
-				
-			<item>
-				<title>MASCOT v0.0.4 Tutorial</title>
-				<description>
-					Parameter and State inference using the approximate structured coalescent
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/nicfel/Mascot-Tutorial/commit/486a6e6bdfe40568b5414b943a5e9cce29a6a5af'
-					&gt;
-						20 Aug 2017
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/nicfel'
-					&gt;
-						nicfel
-					&lt;/a&gt;
-					: Merge pull request #2 from tgvaughan/patch-1
-
-Fixed incorrect case in bibtex file path.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.7
-					
-				</description>
-				<pubDate>Sun, 20 Aug 2017 07:23:19 +0100</pubDate>
-				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -142,7 +142,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Tue, 25 Jul 2017 08:29:30 +0100</pubDate>
+				<pubDate>Tue, 25 Jul 2017 07:29:30 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</guid>
@@ -187,7 +187,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Mon, 24 Jul 2017 15:10:26 +0100</pubDate>
+				<pubDate>Mon, 24 Jul 2017 14:10:26 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://taming-the-beast.github.io//tutorials/SCOTTI-Tutorial/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/SCOTTI-Tutorial/</guid>
@@ -228,7 +228,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.4
 					
 				</description>
-				<pubDate>Sat, 22 Jul 2017 21:49:57 +0100</pubDate>
+				<pubDate>Sat, 22 Jul 2017 20:49:57 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://taming-the-beast.github.io//tutorials/FBD-tutorial/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/FBD-tutorial/</guid>
@@ -273,7 +273,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.2
 					
 				</description>
-				<pubDate>Thu, 13 Jul 2017 15:52:06 +0100</pubDate>
+				<pubDate>Thu, 13 Jul 2017 14:52:06 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</guid>
@@ -314,7 +314,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.1
 					
 				</description>
-				<pubDate>Thu, 13 Jul 2017 15:30:41 +0100</pubDate>
+				<pubDate>Thu, 13 Jul 2017 14:30:41 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Troubleshooting/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Troubleshooting/</guid>
@@ -363,7 +363,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Thu, 13 Jul 2017 15:24:56 +0100</pubDate>
+				<pubDate>Thu, 13 Jul 2017 14:24:56 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Prior-selection/</guid>
@@ -408,7 +408,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.2
 					
 				</description>
-				<pubDate>Wed, 12 Jul 2017 16:33:51 +0100</pubDate>
+				<pubDate>Wed, 12 Jul 2017 15:33:51 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://taming-the-beast.github.io//tutorials/Structured-coalescent/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-coalescent/</guid>
@@ -453,7 +453,7 @@ Fixed incorrect case in bibtex file path.
 						Requires: BEAST v2.4.2
 					
 				</description>
-				<pubDate>Thu, 01 Jun 2017 14:55:11 +0100</pubDate>
+				<pubDate>Thu, 01 Jun 2017 13:55:11 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://taming-the-beast.github.io//tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Skyline-plots/</guid>
