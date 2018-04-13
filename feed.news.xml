@@ -3,12 +3,12 @@
 	<channel>
 		<title>Taming the BEAST - News</title>
 		<description>BEAST2 tutorials for the community, by the community!</description>
-		<link>http://taming-the-beast.github.io/</link>
-		<atom:link href="http://taming-the-beast.github.io/feed.news.xml" rel="self" type="application/rss+xml" />
+		<link>https://taming-the-beast.org/</link>
+		<atom:link href="https://taming-the-beast.org/feed.news.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>http://taming-the-beast.github.io//images/logo_bw.svg</url>
+			<url>https://taming-the-beast.org//images/logo_bw.svg</url>
 			<title>Taming the BEAST</title>
-			<link>http://taming-the-beast.github.io//tutorials</link>
+			<link>https://taming-the-beast.org//tutorials</link>
 		</image>
 		
 			<item>
@@ -33,8 +33,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 08 Feb 2018 00:00:00 +0100</pubDate>
-				<link>http://taming-the-beast.github.io//news/Taming-the-BEAST-returns-to-Switzerland!/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/Taming-the-BEAST-returns-to-Switzerland!/</guid>
+				<link>https://taming-the-beast.org//news/Taming-the-BEAST-returns-to-Switzerland!/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-returns-to-Switzerland!/</guid>
 			</item>
 		
 			<item>
@@ -65,8 +65,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;Finally, it is now also possible to read the news feed and see tutorial updates by subscribing to the RSS feeds.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Aug 2017 00:00:00 +0200</pubDate>
-				<link>http://taming-the-beast.github.io//news/London-wrap-up/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/London-wrap-up/</guid>
+				<link>https://taming-the-beast.org//news/London-wrap-up/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/London-wrap-up/</guid>
 			</item>
 		
 			<item>
@@ -80,8 +80,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Wed, 12 Jul 2017 00:00:00 +0200</pubDate>
-				<link>http://taming-the-beast.github.io//news/Taming-the-BEAST-in-Systematic-Biology!/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/Taming-the-BEAST-in-Systematic-Biology!/</guid>
+				<link>https://taming-the-beast.org//news/Taming-the-BEAST-in-Systematic-Biology!/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-in-Systematic-Biology!/</guid>
 			</item>
 		
 			<item>
@@ -91,8 +91,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;Just a reminder that &lt;a href=&quot;http://www.lshtm.ac.uk/newsevents/events/2017/07/taming-the-beast-2017&quot;&gt;registration&lt;/a&gt; is still open until 26 June and that the workshop costs only £245!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
-				<link>http://taming-the-beast.github.io//news/London-programme/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/London-programme/</guid>
+				<link>https://taming-the-beast.org//news/London-programme/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/London-programme/</guid>
 			</item>
 		
 			<item>
@@ -114,8 +114,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 03 Apr 2017 00:00:00 +0200</pubDate>
-				<link>http://taming-the-beast.github.io//news/Taming-the-BEAST-comes-to-London!/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/Taming-the-BEAST-comes-to-London!/</guid>
+				<link>https://taming-the-beast.org//news/Taming-the-BEAST-comes-to-London!/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-comes-to-London!/</guid>
 			</item>
 		
 			<item>
@@ -147,8 +147,8 @@ Finally, all of the lecture slides from the workshop have been uploaded and are 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Tue, 28 Feb 2017 00:00:00 +0100</pubDate>
-				<link>http://taming-the-beast.github.io//news/Waiheke-and-what-comes-next/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/Waiheke-and-what-comes-next/</guid>
+				<link>https://taming-the-beast.org//news/Waiheke-and-what-comes-next/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Waiheke-and-what-comes-next/</guid>
 			</item>
 		
 			<item>
@@ -171,8 +171,8 @@ The workshop program can be found &lt;a href=&quot;/workshops/Taming-the-BEAST-i
 &lt;p&gt;I would also like to congratulate Tanja Stadler and her &lt;a href=&quot;https://www.bsse.ethz.ch/cevo&quot;&gt;group&lt;/a&gt; for successfully writing a grant to host another Taming the BEAST workshop and to support 3 more workshops in the future! Keep checking the &lt;a href=&quot;/workshops/&quot;&gt;workshops&lt;/a&gt; page for updates on future workshops!&lt;/p&gt;
 </description>
 				<pubDate>Sun, 05 Feb 2017 00:00:00 +0100</pubDate>
-				<link>http://taming-the-beast.github.io//news/Welcome-to-Waiheke!/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/Welcome-to-Waiheke!/</guid>
+				<link>https://taming-the-beast.org//news/Welcome-to-Waiheke!/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Welcome-to-Waiheke!/</guid>
 			</item>
 		
 			<item>
@@ -180,8 +180,8 @@ The workshop program can be found &lt;a href=&quot;/workshops/Taming-the-BEAST-i
 				<description>&lt;p&gt;All of the lecture slides from the workshop held in Engelberg are now available for download. The slides are kept in a GitHub repository, and there is a link to the repository on the &lt;a href=&quot;/workshops/&quot;&gt;workshops&lt;/a&gt; page. Thanks to everyone for making their slides available! Please do not forget to attribute the authors if you use the slides anywhere!&lt;/p&gt;
 </description>
 				<pubDate>Mon, 19 Dec 2016 00:00:00 +0100</pubDate>
-				<link>http://taming-the-beast.github.io//news/Engelberg-lecture-slides/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/Engelberg-lecture-slides/</guid>
+				<link>https://taming-the-beast.org//news/Engelberg-lecture-slides/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Engelberg-lecture-slides/</guid>
 			</item>
 		
 			<item>
@@ -220,8 +220,8 @@ For instance, someone who has developed a new BEAST 2 package can add a tutorial
 The resources on the website are not only useful for individuals who want to learn how to use BEAST2, but also as a teaching aid, for workshops or even regular university courses. &lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate>
-				<link>http://taming-the-beast.github.io//news/Welcome-BEAST-tamers!/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//news/Welcome-BEAST-tamers!/</guid>
+				<link>https://taming-the-beast.org//news/Welcome-BEAST-tamers!/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Welcome-BEAST-tamers!/</guid>
 			</item>
 		
 	</channel>

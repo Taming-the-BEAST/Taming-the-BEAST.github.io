@@ -3,12 +3,12 @@
 	<channel>
 		<title>Taming the BEAST - Tutorials</title>
 		<description>BEAST2 tutorials for the community, by the community! - Recently modified tutorials</description>
-		<link>http://taming-the-beast.github.io//tutorials</link>
-		<atom:link href="http://taming-the-beast.github.io/feed.tutorials.xml" rel="self" type="application/rss+xml" />
+		<link>https://taming-the-beast.org//tutorials</link>
+		<atom:link href="https://taming-the-beast.org/feed.tutorials.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>http://taming-the-beast.github.io//images/logo_bw.svg</url>
+			<url>https://taming-the-beast.org//images/logo_bw.svg</url>
 			<title>Taming the BEAST</title>
-			<link>http://taming-the-beast.github.io//tutorials</link>
+			<link>https://taming-the-beast.org//tutorials</link>
 		</image>
 				
 			<item>
@@ -50,8 +50,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Tue, 16 Jan 2018 18:13:25 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Mascot-Tutorial/</guid>
+				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -95,8 +95,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Wed, 30 Aug 2017 13:35:21 +0000</pubDate>
 				<category>Professional</category>
-				<link>http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-birth-death-model/</guid>
+				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
@@ -144,8 +144,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Tue, 25 Jul 2017 07:29:30 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Substitution-model-averaging/</guid>
+				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
 			</item>
 				
 			<item>
@@ -189,8 +189,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Mon, 24 Jul 2017 14:10:26 +0000</pubDate>
 				<category>Professional</category>
-				<link>http://taming-the-beast.github.io//tutorials/SCOTTI-Tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/SCOTTI-Tutorial/</guid>
+				<link>https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -230,8 +230,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Sat, 22 Jul 2017 20:49:57 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/FBD-tutorial/</guid>
+				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -275,8 +275,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Thu, 13 Jul 2017 14:52:06 +0000</pubDate>
 				<category>Beginner</category>
-				<link>http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Introduction-to-BEAST2/</guid>
+				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
@@ -316,8 +316,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Thu, 13 Jul 2017 14:30:41 +0000</pubDate>
 				<category>Beginner</category>
-				<link>http://taming-the-beast.github.io//tutorials/Troubleshooting/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Troubleshooting/</guid>
+				<link>https://taming-the-beast.org//tutorials/Troubleshooting/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting/</guid>
 			</item>
 				
 			<item>
@@ -365,8 +365,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Thu, 13 Jul 2017 14:24:56 +0000</pubDate>
 				<category>Beginner</category>
-				<link>http://taming-the-beast.github.io//tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Prior-selection/</guid>
+				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
@@ -410,8 +410,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Wed, 12 Jul 2017 15:33:51 +0000</pubDate>
 				<category>Professional</category>
-				<link>http://taming-the-beast.github.io//tutorials/Structured-coalescent/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Structured-coalescent/</guid>
+				<link>https://taming-the-beast.org//tutorials/Structured-coalescent/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-coalescent/</guid>
 			</item>
 				
 			<item>
@@ -455,8 +455,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Thu, 01 Jun 2017 13:55:11 +0000</pubDate>
 				<category>Beginner</category>
-				<link>http://taming-the-beast.github.io//tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Skyline-plots/</guid>
+				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
@@ -496,8 +496,8 @@ Incorporated Michael Matschiner's suggestions/fixes.
 				</description>
 				<pubDate>Fri, 10 Feb 2017 03:15:16 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/Bacter-Tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/Bacter-Tutorial/</guid>
+				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -539,8 +539,8 @@ Actually fixed references
 				</description>
 				<pubDate>Thu, 09 Feb 2017 01:43:32 +0000</pubDate>
 				<category>Professional</category>
-				<link>http://taming-the-beast.github.io//tutorials/adequacy_tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/adequacy_tutorial/</guid>
+				<link>https://taming-the-beast.org//tutorials/adequacy_tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/adequacy_tutorial/</guid>
 			</item>
 				
 			<item>
@@ -582,8 +582,8 @@ Add input data
 				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/calibrated-species-trees/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/calibrated-species-trees/</guid>
+				<link>https://taming-the-beast.org//tutorials/calibrated-species-trees/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/calibrated-species-trees/</guid>
 			</item>
 				
 			<item>
@@ -625,8 +625,8 @@ Add data files and make bibtex compatible
 				</description>
 				<pubDate>Thu, 02 Feb 2017 23:19:09 +0000</pubDate>
 				<category>Basic</category>
-				<link>http://taming-the-beast.github.io//tutorials/species-tree-clocks/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/species-tree-clocks/</guid>
+				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
 			</item>
 				
 			<item>
@@ -682,8 +682,8 @@ Add data files and make bibtex compatible
 				</description>
 				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</link>
-				<guid isPermaLink="true">http://taming-the-beast.github.io//tutorials/StarBeast-Tutorial/</guid>
+				<link>https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</guid>
 			</item>
 		
 	</channel>
