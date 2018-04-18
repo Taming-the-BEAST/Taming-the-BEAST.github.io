@@ -9582,8 +9582,10 @@ figcaption {
 .pad-left {
   padding-left: 10px;
 }
-#sidebar.sidebar-fixed {
-  position: fixed;
+@media (min-width: 992px) {
+  #sidebar.sidebar-fixed {
+    position: fixed;
+  }
 }
 .footer {
   position: fixed;
