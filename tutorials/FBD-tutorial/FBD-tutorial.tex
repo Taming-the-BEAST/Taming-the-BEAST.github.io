@@ -315,7 +315,7 @@ When multiple (identical) analyses are run using BEAST (or MrBayes), LogCombiner
 TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis. 
 
 \dhead{Tracer} 
-Tracer is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95\% credible intervals (which approximate the 95\% highest posterior density intervals) and effective sample sizes (ESS) of parameters (\href{http://tree.bio.ed.ac.uk/software/tracer}{http://tree.bio.ed.ac.uk/software/tracer}).
+Tracer is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95\% credible intervals (which approximate the 95\% highest posterior density intervals) and effective sample sizes (ESS) of parameters (\href{http://beast.community/tracer}{http://beast.community/tracer}).
 
 \dhead{FigTree} 
 FigTree is an excellent program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities) in a visually appealing way (\href{http://tree.bio.ed.ac.uk/software/figtree}{\small http://tree.bio.ed.ac.uk/software/figtree}). 
@@ -583,9 +583,9 @@ For some types of analyses, such as serially sampled viruses, the dates given ar
 
 When inputing the dates for each tip species, one option is to enter each one by hand. 
 This may be quite onerous if you have many fossils or many sequences sampled back in time.
-Conveniently, these dates can be included in the taxon names so that BEAUti can easily extract them for us using the \mi{Guess} option. 
+Conveniently, these dates can be included in the taxon names so that BEAUti can easily extract them for us using the \mi{Auto-configure} option. 
 \begin{framed}
-Click on the \mi{Guess} button.
+Click on the \mi{Auto-configure} button.
 \end{framed}
 This will open a window where you can specify the pattern in the taxon names from which the tip ages can be extracted. 
 Obviously, it's better to make this a fairly simple code that doesn't require multiple iterations of searches. 
@@ -1172,7 +1172,7 @@ Find the parameter \mi{ucldStdev} and compare the estimates of the standard devi
 The \mi{ucldStdev} indicates the amount of variation in the substitution rates across branches. Our prior on this parameter is an exponential distribution with $\nu = 2.997$ ($mean = 0.3337$). Thus, there is a considerable amount of prior weight on \mi{ucldStdev} $= 0$. A standard deviation of 0 indicates support for no variation in substitution rates and the presence of a molecular clock. 
 
 \begin{framed}
-With \mi{ucldStdev} highlighted for all three runs, go to the \mi{Marginal Prob Distribution} window, which allows you to compare the marginal posterior densities for each parameter. (By default Tracer gives the kernel density estimate (\mi{KDE}) of the marginal density. You can change this to a \mi{Histogram} using the options at the bottom of the window.)
+With \mi{ucldStdev} highlighted for all three runs, go to the \mi{Marginal Density} window, which allows you to compare the marginal posterior densities for each parameter. (By default Tracer gives the kernel density estimate (\mi{KDE}) of the marginal density. You can change this to a \mi{Histogram} using the options at the top of the window.)
 
 Color (or ``colour'') the densities by \mi{Trace File} next to \mi{Colour by} at the bottom of the window (if you do not see this option, increase the size of your Tracer window). You can also add a \mi{Legend} to reveal which density belongs to which run file. [Figure \ref{tracerStdev}]
 \end{framed}
@@ -1182,8 +1182,9 @@ Color (or ``colour'') the densities by \mi{Trace File} next to \mi{Colour by} at
 
 \begin{figure}[h!]
 \centering
-\fbox{\includegraphics[width=3.4in]{figures/tracer_image_stdev.pdf}}
-\caption{\small Comparing the marginal densities (using the kernel density estimate) of the \mi{ucldStdev} parameter from 2 independent runs (red and blue) and the prior (gray) in Tracer.}
+%\fbox{\includegraphics[width=6in]{figures/tracer_image_stdev.png}}
+\includegraphics[width=6in]{figures/tracer_image_stdev.png}
+\caption{\small Comparing the marginal densities (using the kernel density estimate) of the \mi{ucldStdev} parameter from 2 independent runs (blue and green) and the prior (red) in Tracer.}
 \label{tracerStdev}
 \end{figure}
 
@@ -1199,15 +1200,16 @@ When fossils are used without character data, alternative implementations of the
 
 Next, we will look at the \mi{Marginal Prob Distribution} for the turnover parameter (\mi{turnoverFBD}).
 \begin{framed}
-Select all trace files for the \mi{turnoverFBD} parameter and go to the \mi{Marginal Prob Distribution} window.
+Select all trace files for the \mi{turnoverFBD} parameter and go to the \mi{Marginal Density} window.
 
-Color the densities by \mi{TraceFile} and add a legend. [Figure \ref{tracerTurnover}]
+Color the densities by \mi{Trace file} and add a legend. [Figure \ref{tracerTurnover}]
 \end{framed}
 
 \begin{figure}[h!]
 \centering
-\fbox{\includegraphics[width=3.4in]{figures/tracer_image_turnover.pdf}}
-\caption{\small Comparing the marginal densities (using the histogram) of the \mi{turnoverFBD} parameter from 2 independent runs (red and blue) and the prior (gray) in Tracer.}
+%\fbox{\includegraphics[width=3.4in]{figures/tracer_image_turnover.png}}
+\includegraphics[width=6in]{figures/tracer_image_turnover.png}
+\caption{\small Comparing the marginal densities (using the histogram) of the \mi{turnoverFBD} parameter from 2 independent runs (blue and green) and the prior (red) in Tracer.}
 \label{tracerTurnover}
 \end{figure}
 
@@ -1230,7 +1232,7 @@ Open the program LogCombiner and set the \mi{File type} to \mi{Tree Files}. Next
 
 Set a burn-in percentage of 20 for each file, thus discarding the first 20\% of the samples in each tree file. 
 
-Both of these files have 50,000 trees, so it is helpful to thin the tree samples and summarize fewer states (to avoid hitting the maximum memory allotted for this program). Turn on \mi{Resample states at lower frequency} and set this value to 2000.
+Both of these files have 50,000 trees, so it is helpful to thin the tree samples and summarize fewer states (to avoid hitting the maximum memory allotted for this program). Turn on \mi{Resample states at lower frequency} and set this value to 10000.
 
 Click on the \mi{Choose file ...} button to create an output file and run the program. Name the file: \cl{bearsDivtime.combined.trees}.
 \end{framed}
@@ -1239,7 +1241,7 @@ Once LogCombiner has terminated, you will have a file containing 40,000 trees wh
 TreeAnnotator takes a collection of trees and summarizes them by identifying the topology with the best support, calculating clade posterior probabilities, and calculating 95\% credible intervals for node-specific parameters. All of the node statistics are annotated on the tree topology for each node in the Newick string. 
 
 \begin{framed}
-Open the program TreeAnnotator. Since we already discarded a set of burn-in trees when combining the tree files, we can leave \mi{Burnin} set to \cl{0} (though, if TreeAnnotator is taking a long time to load the trees, set the burnin to 10--60\% to reduce the number of trees).
+Open the program TreeAnnotator. Since we already discarded a set of burn-in trees when combining the tree files, we can leave \mi{Burnin} set to \cl{0} (though, if TreeAnnotator is taking a long time to load the trees, click on the \mi{Low memory} option at the bottom left and set the burnin to 10--60\% to reduce the number of trees).
 
 For the \mi{Target tree type}, choose \mi{Maximum clade credibility tree}.
 \end{framed}

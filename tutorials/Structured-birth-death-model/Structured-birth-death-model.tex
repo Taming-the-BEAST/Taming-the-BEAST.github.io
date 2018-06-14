@@ -25,7 +25,7 @@
 \begin{center}
 
 	% Enter the name of your tutorial here
-	\textbf{\LARGE Tutorial using BEAST v2.4.7}\\\vspace{2mm}
+	\textbf{\LARGE Tutorial using BEAST v2.5.0}\\\vspace{2mm}
 
 	% Enter a short description of your tutorial here
 	\textbf{\textcolor{mycol}{\Large Structured birth-death model}}\\
@@ -63,7 +63,7 @@ Trees}\label{beast2---bayesian-evolutionary-analysis-sampling-trees}
 BEAST2 is a free software package for Bayesian evolutionary analysis of
 molecular sequences using MCMC and strictly oriented toward inference
 using rooted, time-measured phylogenetic trees. This tutorial is written
-for BEAST v2.4.7 \citep{Bouckaert2014}.
+for BEAST v2.5.0 \citep{Bouckaert2014}.
 
 \subsubsection{BEAUti2 - Bayesian Evolutionary Analysis
 Utility}\label{beauti2---bayesian-evolutionary-analysis-utility}
@@ -98,7 +98,7 @@ assess convergence. It helps to quickly view median estimates and 95\%
 highest posterior density intervals of the parameters, and calculates
 the effective sample sizes (ESS) of parameters. It can also be used to
 investigate potential parameter correlations. We will be using Tracer
-v1.6.0.
+v1.7.0.
 
 \subsubsection{IcyTree}\label{icytree}
 
@@ -142,6 +142,8 @@ select to install \lstinline!bdmm!.
 
 Finally, \textbf{restart BEAUti.} The restart is necessary for the
 packages to be successfully installed.
+
+If you get an error message stating that you are missing a package on which  \lstinline!bdmm! depends, install that package manually using the package manager as done above, and \textbf{restart BEAUti} again.
 
 \section{Setting up the analysis using
 BEAUti}\label{setting-up-the-analysis-using-beauti}
@@ -598,8 +600,9 @@ BEAST}\label{running-the-analysis-using-beast}
 To run the analysis, simply start BEAST 2 in the manner appropriate for
 your platform, then select the configuration file you generated in the
 last section as the input. Unfortunately, this particular run will take
-quite some time to mix, e.g.~on a 2.5 GHz i7 MacBook Pro it takes about
-6 hours for 10'000'000 samples. Feel free to run it and observe the
+quite some time to mix, e.g.~on a on a MacBook Pro with 3.1 GHz Intel Core i5
+ processor it takes about 3 hours for 10'000'000 samples. 
+ Feel free to run it and observe the
 results, but for the purpose of finishing the tutorial in a reasonable
 time, check out the provided log file to see the results.
 
@@ -636,7 +639,7 @@ parameter log file. To do this, start Tracer and then press the
 also simply drag your log file from the file browser to the Tracer
 window. The \lstinline!Traces! table will then be populated with
 parameters and summary statistics corresponding to our multitype
-birth-death analysis.
+birth-death analysis. Note that the screen captures below were taken using Tracer 1.6 and may therefore slightly differ from what you see on screen.
 
 Important traces are:
 
@@ -796,9 +799,7 @@ dialog. Follow the instructions provided above to colour the tree by the
 addition, open the \lstinline!Style! menu and select
 \lstinline!Node height error bars > height_95%_HPD! to add error bars to
 the internal node heights. Finally, open the \lstinline!Style! menu and
-select \lstinline!Edge opacity > type.prob!. This make cause the edges
-become increasingly transparent as the posterior probability for the
-displayed branch decreases.
+select \lstinline!Relative edge width > type.prob!. This makes the edges become increasingly thinner as the posterior probability for the displayed branch decreases.
 
 Once these style preferences have been set, you should see something
 similar to the tree shown in Figure \ref{fig:icyTree-summary}.
@@ -812,7 +813,7 @@ similar to the tree shown in Figure \ref{fig:icyTree-summary}.
 
 Here we have a full consensus tree annotated by the locations at
 coalescence nodes and showing node height uncertainty, with the
-width/transparency of the edges representing how certain we can be of
+width of the edges representing how certain we can be of
 the location estimate at each point on the tree. This is a much more
 comprehensive summary of the phylogenetic side of our analysis. One
 thing to pay attention to here is that the most probable root location

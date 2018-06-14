@@ -140,8 +140,12 @@
 					
 			
 				
+						, Veronika Bošková
+				
+			
+				
 						
-							and Veronika Bošková
+							and Louis du Plessis
 						
 					
 			
@@ -320,40 +324,40 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/1cab7feefff4052ca4c1faa4d796d197338e6069">
-					13 Jul 2017 - <span class="text-gray">Fix references</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/1ccc6fc468d3ff943036b82715fcac3ad5464bf8">
+					13 Jun 2018 - <span class="text-gray">Update LaTeX tutorial</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/efff0daacc26c9e4d0f51d5434f81c39c98f199c">
-					13 Jul 2017 - <span class="text-gray">Update Latex tutorial</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/4785261b8f896e99914fa23aea12d5fbfd81b05e">
+					13 Jun 2018 - <span class="text-gray">Final text changes</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/b24b9ae6fdea627b00b14ed9080c52d4c45cb75f">
-					12 Jul 2017 - <span class="text-gray">Add bib file</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/ebe86780ac2436fd2dd179c2fc5d8623f5e10f89">
+					13 Jun 2018 - <span class="text-gray">Remove unnecessary xml</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/881729e62bd445b7ea7b6072db0c0e5a5f152efb">
-					12 Jul 2017 - <span class="text-gray">Unbreak Latex tutorial</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/240cf392838bcc58f1541411ecec9b9788ff6525">
+					13 Jun 2018 - <span class="text-gray">Add more discussion and update versioins</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/00a3bb0a90ecf54f64ed4da47fd2deb8cac4868c">
-					12 Jul 2017 - <span class="text-gray">Update references and programs used section</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/ce3a33471f2e21acf46e1c32f988228c272a078f">
+					13 Jun 2018 - <span class="text-gray">Update figures</span>
 					</a> 
 				</li>
 			
@@ -370,7 +374,7 @@
 
 <p>Before diving into performing complex analyses with the BEAST2 one needs to understand the basic workflow and concepts. While BEAST2 tries to be as user-friendly as possible, the amount of possibilities can be overwhelming.</p>
 
-<p>Therefore, in this simple tutorial you will get acquainted with the basic workflow of BEAST2 and the software most commonly used to interpret the results of the analyses. Bear in mind that this tutorial is designed just to help you get started using BEAST2. We will not discuss all the choices and concepts in detail, as they will be sequentially discussed in further classes and tutorials.</p>
+<p>In this simple tutorial you will get acquainted with the basic workflow of BEAST2 and the software tools most commonly used to interpret the results of  analyses. Bear in mind that this tutorial is designed only to help you get started using BEAST2. This tutorial does not discuss all the choices and concepts in detail, as they are discussed in further  tutorials. Interspersed throughout the tutorial are topics for discussion. These discussion topics are optional, however if you work through them you will have a much better understanding of the concepts discussed in this tutorial. Feel free to skip the discussion topics and come back to them later, while running the analysis file, or after finishing the whole tutorial.</p>
 
 <hr>
 
@@ -378,7 +382,7 @@
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.2 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.0 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -392,49 +396,87 @@
 
 <p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://beast.community/tracer">http://beast.community/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.0.</p>
+
+<h3>FigTree</h3>
+
+<p>FigTree (<a href="http://beast.community/figtree">http://beast.community/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.3.</p>
+
 <h3>DensiTree</h3>
 
 <p>Bayesian analysis using BEAST2 provides an estimate of the uncertainty in tree space. This distribution is represented by a set of trees, which can be rather large and difficult to interpret. DensiTree is a program for qualitative analysis of sets of trees. DensiTree allows to quickly get an impression of properties of the tree set such as well-supported clades, distribution of tree heights and areas of topological uncertainty.</p>
 
 <p>DensiTree is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>Tracer</h3>
-
-<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
-
-<h3>FigTree</h3>
-
-<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.2.</p>
-
 <hr>
 
 <h1>Practical: Running a simple analysis with BEAST2</h1>
 
-<p>This tutorial will guide you through the analysis of an alignment of sequences sampled from twelve primate species. The aim of this tutorial is to co-estimate the following:</p>
+<p>This tutorial will guide you through the analysis of an alignment of sequences sampled from twelve primate species. The aim of this tutorial is to co-estimate the gene phylogeny and the rate of evolution. 
+More generally, this tutorial aims to introduce new users to a basic workflow and point out the steps towards performing a full analysis of sequencing data within a Bayesian framework using BEAST2.</p>
 
-<ol>
-<li>The gene phylogeny;</li>
-<li>The rate of evolution on each lineage based on divergence times of their host species.</li>
-</ol>
+<h2>The Data</h2>
 
-<p>More generally, this tutorial aims to introduce new users to a basic workflow and point out the steps towards performing a full analysis of sequencing data within Bayesian framework.</p>
+<p>Before we can start, we need to download the input data for the tutorial. For this tutorial we use a single NEXUS file, <code>primate-mtDNA.nex</code>, which contains a sequence alignment and metadata of the twelve primate mitochondrial genomes we will be analysing. Among other information, the metadata contains information to partition the alignment into 4 regions:</p>
 
-<h2>Creating analysis configuration</h2>
+<ul>
+<li>Non-coding region</li>
+<li>1st codon positions</li>
+<li>2nd codon positions</li>
+<li>3rd codon positions</li>
+</ul>
 
-<p>To run analyses with BEAST, one needs to prepare a configuration file in XML format that contains all the input information and setup of initial values and priors. Even though it is possible to create such files by hand from scratch, it can be complicated and not exactly straightforward. BEAUti is designed to aid you in producing a valid setup file for BEAST. If necessary that file can later be edited by hand, but it is recommended to use BEAUti for generating the files at least for the initial round of analysis.</p>
+<p>The alignment file can be downloaded from the Taming the BEAST website at <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/</a> or from Github.</p>
 
 <blockquote>
-<p>Begin by starting up BEAUti.</p>
+<p><strong>Downloading from taming-the-beast.org</strong></p>
+
+<p>A link to the alignment file, <code>primate-mtDNA.nex</code>, is on the left-hand panel, under the heading <strong>Data</strong>.
+<strong>Right-click</strong> on the link and select <strong>&quot;Save Link As...&quot;</strong> (Firefox and Chrome) or <strong>&quot;Download Linked File As...&quot;</strong> (Safari) and save the file to a convenient location on your local drive. Note that some browsers will automatically change the extension of the file from <code>.nex</code> to <code>.nex.txt</code>. If this is the case, simply rename the file again. </p>
+
+<p>Alternatively, if you <strong>left-click</strong> on the link most browsers will display the alignment file. You can then press <strong>File &gt; Save As</strong> to store a local copy of the file. Note that some browsers will inject an HTML header into the file, which will make it unusable in BEAST2 (making this the less preferable option for downloading data files).</p>
+
+<p>In the same way you can also download example <code>.xml</code> files for the analyses in this tutorial, as well as <em>pre-cooked</em> output <code>.log</code> and <code>.trees</code> files. We recommend only downloading these files to check your results or if you become seriously stuck.</p>
 </blockquote>
 
-<h3>Loading the data</h3>
-
-<p>In the folder with the extracted tutorial materials you should see the <code>Data</code> folder containing a single NEXUS file. This file contains sequences and meta-information on the twelve primate mitochondrial genomes which we will be analysing.</p>
-
-<p>To give BEAST2 access to the data, one has to add the alignment to the configuration file. To do this, open BEAUti and either drag and drop the Nexus file into the open BEAUti window (it should be on <code>Partitions</code> tab), or use <code>File &gt; Import Alignment</code> and then locate and click the alignment file.</p>
+<p><br></p>
 
 <blockquote>
-<p>Import the alignment into BEAUti by either dragging and dropping the <code>*.nex</code> file into the BEAUti window open on the Partitions tab, or use <code>File &gt; Import Alignment</code> and then locate and click the alignment file.</p>
+<p><strong>Downloading from Github</strong></p>
+
+<p>If you navigate to the Github repository you can either download the raw data files directly from <strong>Github</strong> or clone/download the repository to your local drive.</p>
+
+<p>Note that this tutorial is distributed under a <strong>CC BY 4.0</strong> license, which gives anyone the right to freely use (and modify) it, as long as appropriate credit is given and the updated material is licensed in the same fashion.</p>
+</blockquote>
+
+<h2>Creating the Analysis File with BEAUti</h2>
+
+<p>To run analyses with BEAST, one needs to prepare a configuration file in XML format that contains everything BEAST2 needs to run an analysis. A BEAST2 XML file contains: </p>
+
+<ul>
+<li>The data (typically a sequence alignment)</li>
+<li>The model specification</li>
+<li>Initial values and parameter constraints</li>
+<li>Settings of the MCMC algorithm</li>
+<li>Output options</li>
+</ul>
+
+<p>Even though it is possible to create such files by hand from scratch, it can be complicated and is not exactly straightforward. BEAUti is a user-friendly program designed to aid you in producing a valid configuration file for BEAST. If necessary, that file can later be edited by hand, but it is recommended to use BEAUti for generating the files (at least for the initial round of analysis).</p>
+
+<blockquote>
+<p>Begin by starting <strong>BEAUti2</strong>.</p>
+</blockquote>
+
+<h3>Importing the alignment</h3>
+
+<p>To give BEAST2 access to the data, the alignment has to be added to the configuration file. </p>
+
+<blockquote>
+<p>Drag and drop the file <code>primate-mtDNA.nex</code> into the open BEAUti window (it should be on the <strong>Partitions</strong> tab). </p>
+
+<p>Alternatively, use <strong>File &gt; Import Alignment</strong> or click on the <strong>+</strong> in the bottom left-hand corner of the window, then locate and click on the alignment file.</p>
 </blockquote>
 
 <p>Once you have done that, the data should appear in the BEAUti window which should look as shown in <a href="#fig:data">Figure 1</a>.</p>
@@ -442,450 +484,602 @@
 <figure>
     <a id="fig:data"></a>
     <img src="figures/data.png" alt="">
-    <figcaption>Figure 1: Data imported into BEAUti.</figcaption>
+    <figcaption>Figure 1: Data imported into BEAUti2.</figcaption>
 </figure>
+
+<p><br></p>
 
 <h3>Setting up shared models</h3>
 
-<p>One way to account for variation in substitution rates between different sites is to include gamma rate categories. In this scenario, one defines a Gamma distribution and discretises it in the desired number of bins (4-6 usually). The mean of each bin is then acting as a multiplier for the overall substitution rate. The transitions probabilities are then calculated for each scaled substitution rate. P(data | tree, substitution model) can then be calculated under each gamma rate category and the results are summed up to average over all possible rates. This is a handy approach if one suspects that some sites can be mutating faster than others but the precise position of the sites in the alignment is unknown or random.</p>
+<p>A common way to account for site-to-site rate heterogeneity (variation in substitution rates between different sites) is to use a Gamma site model. In this model, one assumes that rate variation follows a Gamma distribution. To make the analysis tractable the Gamma distribution is discretised to a small number of bins (4-6 usually). The mean of each bin then acts as a multiplier for the overall substitution rate. The transition probabilities are then calculated for each scaled substitution rate. To calculate the likelihood for a site, <strong>P(data | tree, substitution model)</strong> is calculated under each Gamma rate category and the results are summed up to average over all possible rates. This is a handy approach if one suspects that some sites are mutating faster than others but the precise position of these sites in the alignment is unknown or random.</p>
 
-<p>Another way to account for site rate heterogeneity is to split the alignment into explicit partitions. This is especially relevant, when one knows exactly which positions in the alignment have different substitution rates from the rest of the sites. In our example, we split the alignment into coding and non-coding parts, and split the coding part further into 1st, 2nd and 3rd codon positions. We can now specify a separate substitution model for each partition. </p>
-
-<p>Since all of the sequences in this data set are from the mitochondrial genome (which is not believed to undergo recombination in birds and mammals) they all share the same ancestry. By default BEAST2 would recover a time-tree for each partition, so we need to make sure that it uses all data to recover a single shared tree. For the sake of simplicity, we will also assume the partitions have the same evolutionary rate for each branch, and hence share the clock model as well.</p>
-
-<p>To make sure that the partitions share the same evolutionary history we need to link the clock model and the tree in BEAUti, which can be done by selecting all four partitions and clicking the <code>Link Trees</code> and <code>Link Clock Models</code> buttons.</p>
+<p>Another way to account for site-to-site rate heterogeneity is to split the alignment into explicit partitions, and specify an independent substitution model for each partition. This is especially relevant, when one knows exactly which positions in the alignment have different substitution rates from the rest of the sites. In our example, we split the alignment into coding and non-coding regions, and further split the coding region into 1st, 2nd and 3rd codon positions. This information is encoded as metadata into the <code>.nex</code> file, which BEAUti automatically processes to produce the four partitions in the <strong>Partitions</strong> tab as shown in <a href="#fig:data">Figure 1</a>.</p>
 
 <blockquote>
-<p>Select all four data partitions the <code>Partitions</code> panel and click the <code>Link Trees</code> and <code>Link Clock Models</code> buttons.</p>
+<p><strong>Double-click</strong> on the different partitions (under the <strong>File</strong> column) to view the individual alignments.</p>
 </blockquote>
 
-<p>You will see that the <code>Clock Model</code> and the <code>Tree</code> columns in the table both changed to say <code>noncoding</code>. Now we will rename both models such that the following options and generated log files more easy to read. The resulting setup should look as shown in <a href="#fig:link">Figure 2</a>.</p>
+<figure>
+    <a id="fig:2ndpos"></a>
+    <img src="figures/2ndpos.png" alt="">
+    <figcaption>Figure 2: The partition for the 2nd codon positions in the coding region of the primate mtDNA alignment.</figcaption>
+</figure>
+
+<figure>
+    <a id="fig:3rdpos"></a>
+    <img src="figures/3rdpos.png" alt="">
+    <figcaption>Figure 3: The partition for the 3rd codon positions in the coding region of the primate mtDNA alignment.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>By looking at the alignments for the 2nd and 3rd codon positions (<a href="#fig:2ndpos">Figure 2</a> and <a href="#fig:3rdpos">Figure 3</a>) we can immediately see a clear difference between the two codon positions. For the 2nd codon position many of the ancestral relationships are clear from shared substitutions between groups, for instance between the great apes (<em>Homo sapiens</em>, <em>Pan</em>, <em>Gorilla</em> and <em>Pongo</em> - humans, chimpanzees, gorillas and orangutans) and between the old-world monkeys (<em>Macaca fuscata</em>, <em>M. mulatta</em>, <em>M. fascicularis</em> and <em>M. sylvanus</em> - the macaques). The lesser apes (represented by <em>Hylobates</em> - gibbons) share most substitutions with the great apes, but occasionally share a substitution with the macaques. For the 3rd codon position there are many more substitutions and the groupings are not as clear. </p>
 
 <blockquote>
-<p>Click on the first drop-down menu in the <code>Clock Model</code> column and rename the shared clock model to <code>clock</code>.</p>
+<p><strong>Topic for discussion:</strong> Do you think there is a good case for using independent substitution models on the different partitions in the <code>.nex</code> file? Do you think this is sufficient for taking all site-to-site rate variation into account? </p>
 
-<p>Likewise rename the shared tree to <code>tree</code>.</p>
+<p>How would you account for rate variation between sites in each partition? </p>
+</blockquote>
+
+<p>Since all of the sequences in this dataset are from the mitochondrial genome (which is not believed to undergo recombination in birds and mammals) they all share the same ancestry. By default BEAST2 would recover a separate, independent time-tree for each partition, so we need to make sure that it uses all data to recover only a single shared tree. For the sake of simplicity, we will also assume that the partitions have the same evolutionary branch-rate distribution, and hence share the clock model as well.</p>
+
+<p>To make sure that the partitions share the same evolutionary history we need to link the <strong>clock model</strong> and the <strong>tree</strong> in BEAUti.</p>
+
+<blockquote>
+<p>Select all four data partitions the <strong>Partitions</strong> panel (use <strong>shift+click</strong>) and click the <strong>Link Trees</strong> and <strong>Link Clock Models</strong> buttons.</p>
+</blockquote>
+
+<p>You will see that the <strong>Clock Model</strong> and the <strong>Tree</strong> columns in the table both changed to say <code>noncoding</code>. Now we will rename both models such that the following options and generated log files are easier to read. The resulting setup should look as shown in <a href="#fig:link">Figure 4</a>.</p>
+
+<blockquote>
+<p>Click on the first drop-down menu in the <strong>Clock Model</strong> column and rename the shared clock model to <code>clock</code>.</p>
+
+<p>Likewise, rename the shared tree to <code>tree</code>.</p>
 </blockquote>
 
 <figure>
     <a id="fig:link"></a>
     <img src="figures/link.png">
-    <figcaption>Figure 2: Linked models.</figcaption>
+    <figcaption>Figure 4: Linked clock and tree models.</figcaption>
 </figure>
+
+<p><br></p>
 
 <h3>Setting the substitution model</h3>
 
-<p>Next we need to set up the substitution model in the <code>Site Model</code> tab.</p>
+<p>In this analysis all of our sequences come from extant species and were thus all sampled in the present day (assumed to be <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span>). Therefore we do not need to set up sampling dates and we skip the <strong>Tip Dates</strong> panel. Next, we need to set up the substitution model in the <strong>Site Model</strong> tab.</p>
 
 <blockquote>
-<p>Select the <code>Site Model</code> tab.</p>
+<p>Select the <strong>Site Model</strong> tab.</p>
 </blockquote>
 
-<p>The options available in this panel depend on whether the alignment data is in nucleotides, aminoacids, binary data or general data. The settings available after loading the alignment will contain the default values which we normally want to modify.</p>
+<p>The options available in this panel depend on whether the alignment data are in nucleotides, amino-acids, binary data or general data. The settings available after loading the alignment will contain the default values which we normally want to modify.</p>
 
-<p>The panel on the left shows each part of the alignment. Remember that we did not link the substitution models in the previous step for the different partition, so each partition is allowed to evolve under different substitution model, i.e. we assume that different positions in the alignment accumulate substitutions differently. We will need to set the site substitution model separately for each part of the alignment as these models are unlinked. However, we think that all partitions evolve according to the same model (although with different parameters) so we can temporarily link the site models in the <code>Partitions</code> panel so that we can change the model of all partitions simultaneously. </p>
-
-<p>Navigate to the <code>Partitions</code> tab again, select all the partitions and temporarily link the site models. Then go back to the <code>Site Model</code> tab. The panel on the left is now gone as we are setting one model for all of the partitions.</p>
+<p>The panel on the left shows each partition. Remember that we did not link the substitution models in the previous step for the different partitions, so each partition evolves under a different substitution model, i.e. we assume that different positions in the alignment accumulate substitutions differently. We will need to set the site substitution model separately for each part of the alignment as these models are unlinked. However, we think that all partitions evolve according to the same model (although with different parameters).</p>
 
 <blockquote>
-<p>Go to the <code>Partitions</code> tab, select all partitions and click the <code>Link Site Models</code> button.</p>
+<p>Make sure that <code>noncoding</code> is selected. </p>
 
-<p>Return to the <code>Site Model</code> tab.</p>
-</blockquote>
+<ul>
+<li>Check the <strong>estimate</strong> checkbox for <strong>Substitution Rate</strong>.</li>
+<li>Set the <strong>Gamma Category Count</strong> to 4.</li>
+<li>Check the <strong>estimate</strong> box for the <strong>Shape</strong> parameter (it should already be checked).</li>
+<li>Select <strong>HKY</strong> in the <strong>Subst Model</strong> drop-down menu.</li>
+<li>Select <strong>Empirical</strong> from the <strong>Frequencies</strong> drop-down menu.</li>
+</ul>
 
-<p>First, check the <code>estimate</code> checkbox at the <code>Substitution Rate</code>, as we want to estimate relative substitution rates for each partition. Next, set the <code>Gamma Category Count</code>  to 4 and check the <code>estimate</code> box for the <code>Shape</code> parameter. This will allow rate variation between sites in each partition to be modelled. Then select <code>HKY</code> in the <code>Subst Model</code> drop-down and select <code>Empirical</code> from the <code>Frequencies</code> drop-down. This will fix the frequencies to the proportions observed in the data (for each partition individually, once we unlink the site models again). This approach means that we can get a good fit to the data without explicitly estimating these parameters. The setup should look now as shown in <a href="#fig:subst">Figure 3</a>.</p>
-
-<blockquote>
-<p>Check the <code>estimate</code> checkbox at the <code>Substitution Rate</code>.</p>
-
-<p>Set the <code>Gamma Category Count</code> to 4.</p>
-
-<p>Check the <code>estimate</code> box for the <code>Shape</code> parameter.</p>
-
-<p>Select <code>HKY</code> in the <code>Subst Model</code> drop-down.</p>
-
-<p>Select <code>Empirical</code> from the <code>Frequencies</code> drop-down.</p>
-</blockquote>
-
-<p>Now return to the <code>Partitions</code> panel and unlink the site models such that each partition has its own named site model with independent substitution model parameters and relative rate. You can make sure this is the case by returning to the <code>Site Model</code> tab and clicking through the different partitions. </p>
-
-<blockquote>
-<p>Go to the <code>Partitions</code> tab again, select all partitions and click the <code>Unlink Site Models</code> button.</p>
+<p>Note that when you checked <strong>estimate</strong> for the substitution rate a yellow circle with a cross appeared to the right of <strong>Fix mean substitution rate</strong>. If you hover your cursor above the circle you will see a warning. <strong>Ignore</strong> the warning and continue with the next step.</p>
 </blockquote>
 
 <figure>    
     <a id="fig:subst"></a>
     <img src="figures/substitution.png">
-    <figcaption>Figure 3: Substitution model setup.</figcaption>
+    <figcaption>Figure 5: Site model setup.</figcaption>
 </figure>
+
+<p><br></p>
+
+<p>The panel should look like <a href="#fig:subst">Figure 5</a>. </p>
+
+<p>We are using an HKY substitution model with empirical frequencies. This will fix the frequencies to the proportions observed in the partition. This approach means that we can get a good fit to the data without explicitly estimating these parameters. To model site-to-site rate variation within each partition we use a discrete Gamma site model with 4 categories. Now we <em>could</em> repeat the above steps for each of the remaining partitions or we can take a shortcut.</p>
+
+<blockquote>
+<p>Select the remaining three partitions (use <strong>shift+click</strong>). The window will now look like <a href="#fig:clone">Figure 6</a>. </p>
+
+<p>Click <strong>OK</strong> to to clone the site model for the other three partitions from <code>noncoding</code>.</p>
+</blockquote>
+
+<figure>    
+    <a id="fig:clone"></a>
+    <img src="figures/clone.png">
+    <figcaption>Figure 6: Shortcut to clone site models between partitions.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>If you did everything correctly the yellow circle with a cross to the right of <strong>Fix mean substitution rate</strong> would have disappeared. </p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> Can you figure out the reason for the warning when you checked <strong>estimate</strong> for the substitution rate?
+Don&#39;t worry if you can&#39;t figure it out, the reason for the warning is explained in detail in later tutorials.</p>
+</blockquote>
 
 <h3>Setting the clock model</h3>
 
-<p>Next, select the <code>Clock Models</code> tab at the top of the main window. This is where we set up the molecular clock model. For this exercise we are going to leave the selection at the default value of a strict molecular clock, because this data is very clock-like and does not need rate variation among branches to be included in the model.</p>
+<p>Next, select the <strong>Clock Model</strong> tab at the top of the main window. This is where we set up the molecular clock model. For this exercise we are going to leave the selection at the default value of a strict molecular clock, because this data is very clock-like and does not need rate variation among branches to be included in the model.</p>
 
 <blockquote>
-<p>Go to the <code>Clock Models</code> tab and view the setup.</p>
+<p>Click on the <strong>Clock Models</strong> tab and view the setup <em>(but don&#39;t do anything)</em>.</p>
 </blockquote>
 
 <h3>Setting priors</h3>
 
-<p>The <code>Priors</code> tab allows priors to be specified for each parameter in the model. The model selections made in the site model and clock model tabs, result in the inclusion of various parameters in the model. For each of these parameters a prior distribution needs to be specified.</p>
+<p>The <strong>Priors</strong> tab allows prior distributions to be specified for each model parameter. The model selections made in the <strong>Site Model</strong> and <strong>Clock Model</strong> tabs determine which parameters are included in the model. For each of these parameters a prior distribution needs to be specified. It is also possible to specify hyperpriors (and hyper-hyperpriors etc.) for each of the model parameters.</p>
 
 <p>Here we specify that we wish to use the Calibrated Yule model as the tree prior. This is a simple model of speciation that is generally more appropriate when considering sequences from different species.</p>
 
 <blockquote>
-<p>Go to the <code>Priors</code> tab and select the <code>Calibrated Yule Model</code> in the <code>Tree.t:tree</code> dropdown menu.</p>
+<p>Go to the <strong>Priors</strong> tab and select <strong>Calibrated Yule Model</strong> in the drop-down menu next to <strong>Tree.t:tree</strong>.</p>
 </blockquote>
 
-<p>We will set the prior for <code>birthRateY.t:tree</code> to a <code>Gamma</code> distribution with an <code>Alpha</code> of 0.001 and <code>Beta</code> of 1000.</p>
+<p>The <strong>birthRate</strong> parameter measures the rate of speciation in the calibrated Yule model. We will set an unspecific Gamma prior for this parameter.</p>
 
 <blockquote>
-<p>For <code>birthRateY.t:tree</code> select <code>Gamma</code> from the dropdown menu</p>
+<p>For <strong>birthRateY.t:tree</strong> select <strong>Gamma</strong> from the drop-down menu</p>
 
-<p>Expand the options for <code>birthRateY.t:tree</code> using the arrow button on the left.</p>
-
-<p>Set the <code>Alpha</code> (shape) parameter to 0.001 and the <code>Beta</code> (scale) parameter to 1000.</p>
+<ul>
+<li>Expand the options for <strong>birthRateY.t:tree</strong> using the arrow button on the left.</li>
+<li>Set the <strong>Alpha</strong> (shape) parameter to <strong>0.001</strong> and the <strong>Beta</strong> (scale) parameter to <strong>1000</strong>.</li>
+</ul>
 </blockquote>
 
-<p>We will leave the rest of the priors on their default values, which should look as shown in <a href="#fig:priors">Figure 4</a>.</p>
+<p>Note that BEAUti displays a plot of the prior distribution on the right, as well as a few of its quantiles. This is for easy reference and can help us to decide if a prior is appropriate. The unspecific Gamma prior we are using is defined on <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(0,\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">∞</span><span class="mclose">)</span></span></span></span> and has a very broad range of values included between its 2.5% and 97.5% quantiles. </p>
 
-<p>Please note that in general using default priors is highly frowned upon as priors are meant to convey your prior knowledge of the parameters. It is important to know what exactly do the priors tell MCMC and whether this fits your particular situation. In our case the default priors are suitable for this particular analysis, however for further, more complex analyses, we will require a clear idea of what do the priors mean. Getting this understanding is hard so we will leave it to the later Taming the Beast classes and tutorials in order to keep the introduction as simple as possible.</p>
+<p>If we wanted to add a hyperprior on one of the parameters of the Gamma prior we would check the <strong>estimate</strong> box on the right of the parameter. We could also change the initial values or limits of the model parameters by clicking on the boxes next to the drop-down menus. Do <strong>not</strong> do this here, as we are <strong>not</strong> adding any hyperpriors or changing limits in this analysis! </p>
+
+<p><strong>We will leave the rest of the priors on their default values!</strong> The BEAUti panel should look as shown in <a href="#fig:priors">Figure 7</a>.</p>
+
+<p>Please note that in general using default priors is frowned upon as priors are meant to convey your prior knowledge of the parameters. It is important to know what information the priors add to the MCMC analysis and whether this fits your particular situation. In our case the default priors are suitable for this particular analysis, however for further, more complex analyses, we will require a clear idea of what the priors mean. Getting this understanding is difficult and comes with experience. The topic of choosing priors is discussed in more detail in later tutorials.</p>
 
 <figure>
     <a id="fig:priors"></a>
     <img src="figures/priors.png">
-    <figcaption>Figure 4: Prior setup.</figcaption>
+    <figcaption>Figure 7: Prior setup.</figcaption>
 </figure>
+
+<p><br></p>
 
 <h3>Adding a calibration node</h3>
 
-<p>Since all of the samples come from a single time point, there is no information on the actual height of the phylogenetic tree in time units. Tree height and substitution rate will not be distinguishable and BEAST2 will only be able to estimate their product. To give BEAST2 the possibility to separate these two parameters we need to input additional information that will help calibrate the tree in time.</p>
+<p>Since all of the samples come from a single time point, there is no information on the actual height of the phylogenetic tree in time units. The tree height (tMRCA) and substitution rate parameters will not be distinguishable and BEAST2 will only be able to estimate their product. To give BEAST2 the possibility of separating these two parameters we need to input additional information that will help calibrate the tree in time.</p>
 
-<p>Since in the Bayesian analysis such information should be encoded in the form of a prior distribution, we will have to add a new prior that is not available yet. To define an extra prior, press the small <code>+</code> button below list of priors. You will see a dialogue that allows you to define a subset of the taxa in the phylogenetic tree. Once you have created a taxa set you will be able to add calibration information for its most recent common ancestor (MRCA) later on.</p>
+<p>In a Bayesian analysis, additional information from external sources should be encoded in the form of a prior distribution. Thus, we will have to add a new prior to the model. </p>
 
 <blockquote>
-<p>Click the small <code>+</code> button below all the priors.</p>
+<p>To add an extra prior to the model, press the <strong>+ Add Prior</strong> button below list of priors and select <strong>MRCA Prior</strong> from the drop-down menu.</p>
+
+<p>You will see a dialogue box that allows you to select a subset of taxa from the phylogenetic tree. Once you have created a taxon set you will be able to add calibration information for its most recent common ancestor (MRCA) later on.</p>
+
+<ul>
+<li>Set the <strong>Taxon set label</strong> to <code>human-chimp</code>.</li>
+<li>Locate <code>Homo_sapiens</code> in the left hand side list and click the <strong>&gt;&gt;</strong> button to add it to the <code>human-chimp</code> taxon set.</li>
+<li>Locate <code>Pan</code> in the left hand side list and click the <strong>&gt;&gt;</strong> button to add it to the <code>human-chimp</code> taxon set.</li>
+</ul>
 </blockquote>
 
-<p>Name the taxa set by filling in the taxon set label entry. Call it human-chimp (it will contain the taxa for Homo sapiens and Pan). In next list below you will see the available taxa. Select and add the Homo sapiens and Pan taxa to the set (see <a href="#fig:taxa">Figure 5</a>). After you click <code>OK</code> and the newly defined taxa set will be added to the prior list.</p>
+<p>The taxon set should now look like <a href="#fig:taxa">Figure 8</a>.</p>
 
 <blockquote>
-<p>Set the <code>Taxon set label</code> to <code>human-chimp</code>.</p>
-
-<p>Locate <code>Homo_sapiens</code> taxon in the left hand side list and click the <code>&gt;&gt;</code> button to add it to the taxa set for <code>human-chimp</code>.</p>
-
-<p>Locate <code>Pan</code> taxon in the left hand side list and click the <code>&gt;&gt;</code> button to add it to the taxa set for <code>human-chimp</code>.</p>
-
-<p>Click the <code>OK</code> button to add the newly defined taxa set to the prior list.</p>
+<p>Click the <strong>OK</strong> button to add the newly defined taxon set to the prior list.</p>
 </blockquote>
 
 <figure>
     <a id="fig:taxa"></a>
-    <img src="figures/taxa.png">
-    <figcaption>Figure 5: Calibration node taxa set definition.</figcaption>
+    <img style="width:80%;" src="figures/taxa.png">
+    <figcaption>Figure 8: Calibration node taxon set.</figcaption>
 </figure>
 
-<p>The new node we have added is a calibrated node to be used in conjunction with the Calibrated Yule prior. In order for that to work we need to enforce monophyly, so select the checkbox marked <code>Monophyletic</code>. This will constrain the tree topology so that the human-chimp grouping is kept monophyletic during the course of the MCMC analysis.</p>
+<p><br></p>
+
+<p>The new node we have added is a calibrated node on the human-chimpanzee split to be used in conjunction with the Calibrated Yule prior. In order for that to work we need to enforce monophyly. This will constrain the tree topology so that the human-chimp grouping is kept monophyletic during the course of the MCMC analysis.</p>
 
 <blockquote>
-<p>Check the <code>monophyletic</code> checkbox next to the <code>human-chimp.prior</code>.</p>
+<p>Check the <strong>monophyletic</strong> checkbox next to <strong>human-chimp.prior</strong>.</p>
 </blockquote>
 
-<p>We now need to specify a prior distribution on the calibration node based on our prior fossil knowledge in order to calibrate our tree. Select the <code>Normal</code> distribution for the newly added <code>human-chimp.prior</code>. Expand the prior options and  specify a normal distribution centered at 6 million years with a standard deviation of 0.5 million years. This will give a central 95% range of about 5-7 million years. This roughly corresponds to the current consensus estimate of the date of the most recent common ancestor of humans and chimpanzees.</p>
+<p>We now need to specify a prior distribution on the calibration node based on our prior fossil knowledge in order to calibrate our tree. We will use a Normal distribution with mean 6 MYA and a standard deviation of 0.5 million years. This will give a central 95% range of about 5-7 million years, which roughly corresponds to the current consensus estimate of the date of the most recent common ancestor of humans and chimpanzees.</p>
 
 <blockquote>
-<p>Select the <code>Normal</code> distribution from the drop down menu to the right of the newly added <code>human-chimp.prior</code>.</p>
+<p>Select <strong>Normal</strong> from the drop-down menu to the right of the newly added <strong>human-chimp.prior</strong>.</p>
 
-<p>Expand the distribution options using the arrow button on the left.</p>
-
-<p>Set the <code>Mean</code> of the distribution to 6.</p>
-
-<p>Set the <code>Sigma</code> of the distribution to 0.5.</p>
+<ul>
+<li>Expand the distribution options using the arrow button on the left.</li>
+<li>Set the <strong>Mean</strong> of the distribution to <strong>6</strong>.</li>
+<li>Set the <strong>Sigma</strong> of the distribution to <strong>0.5</strong>.</li>
+</ul>
 </blockquote>
 
-<p>The final setup of the calibration node should look as shown in <a href="#fig:calibration">Figure 6</a>.</p>
+<p>The final setup of the calibration node should look as shown in <a href="#fig:calibration">Figure 9</a>.</p>
 
 <figure>
     <a id="fig:calibration"></a>
     <img src="figures/calibration.png">
-    <figcaption>Figure 6: Calibration node prior setup.</figcaption>
+    <figcaption>Figure 9: Calibration node prior setup.</figcaption>
 </figure>
 
 <h3>Setting the MCMC options</h3>
 
-<p>Finally, the <code>MCMC</code> tab allows to control the length of the MCMC run and frequency of stored samples. It also allows one to change the output file names.</p>
+<p>Finally, the <strong>MCMC</strong> tab allows to control the length of the MCMC chain and the frequency of stored samples. It also allows one to change the output file names.</p>
 
 <blockquote>
-<p>Go to the <code>MCMC</code> tab.</p>
+<p>Go to the <strong>MCMC</strong> tab.</p>
 </blockquote>
 
-<p>The <code>Chain Length</code> parameter specifies the number of steps the MCMC chain will make before finishing. This number depends on the size of the dataset, the complexity of the model and the precision of the answer required. The default value of 10&#39;000&#39;000 is arbitrary and should be adjusted accordingly. For this small dataset we initially set the chain length to 1&#39;000&#39;000 such that this analysis will take only a few minutes on most modern computers (rather than hours). For now we leave the <code>Store Every</code> and <code>Pre Burnin</code> fields at their default values.</p>
+<p>The <strong>Chain Length</strong> parameter specifies the number of steps the MCMC chain will make before finishing (i.e. the number of accepted proposals). This number depends on the size of the dataset, the complexity of the model and the precision of the answer required. The default value of 10&#39;000&#39;000 is arbitrary and should be adjusted accordingly. For this small dataset we initially set the chain length to 1&#39;000&#39;000 such that this analysis will take only a few minutes on most modern computers (rather than hours). We leave the <strong>Store Every</strong> and <strong>Pre Burnin</strong> fields at their default values.</p>
 
 <blockquote>
-<p>Set the <code>Chain Length</code> to 1&#39;000&#39;000.</p>
+<p>Set the <strong>Chain Length</strong> to 1&#39;000&#39;000.</p>
 </blockquote>
 
-<p>Below these general settings you will find the logging settings. Each particular logging option can be viewed in detail by clicking the arrow to the left of it. You can control the names of the log files and how often should the values be stored in each of the files.</p>
+<p>Below these general settings you will find the logging settings. Each particular option can be viewed in detail by clicking the arrow to the left of it. You can control the names of the log files and how often values will be stored in each of the files.</p>
 
-<p>Start by expanding the <code>tracelog</code> options. This is the log file you will use later to analyse and summarise the results of the run. The <code>Log Every</code> parameter for the log file should be set relative to the total length of the chain. Sampling too often will result in very large files with little extra benefit in terms of the accuracy of the analysis. Sampling too rarely will mean that the log file will not record sufficient information about the distributions of the parameters. We normally want to aim to store no more than 10&#39;000 samples so this should be set to no less than chain length/10&#39;000. For this analysis we will make BEAST2 write to log file every 200 samples.</p>
+<p>Start by expanding the <strong>tracelog</strong> options. This is the log file you will use later to analyse and summarise the results of the run. The <strong>Log Every</strong> parameter for the log file should be set relative to the total length of the chain. Sampling too often will result in very large files with little extra benefit in terms of the accuracy of the analysis. Sampling too sparsely will mean that the log file will not record sufficient information about the distributions of the parameters. We normally want to aim to store no more than 10&#39;000 samples so this should be set to no less than chain length/10&#39;000. For this analysis we will make BEAST2 write to the log file every 200 samples.</p>
 
 <blockquote>
-<p>Expand the <code>tracelog</code> options.</p>
+<p>Expand the <strong>tracelog</strong> options.</p>
 
-<p>Set the <code>Log Every</code> parameter to 200.</p>
+<ul>
+<li>Set the <strong>Log Every</strong> parameter to <strong>200</strong>.</li>
+<li>Leave the filename as is</li>
+</ul>
 </blockquote>
 
-<p>Then, expand the <code>screenlog</code> options. The screen output is simply for monitoring the program&#39;s progress. Since it is not so important, especially if you run your analysis on a remote computer or a computer cluster, the <code>Log Every</code> can be set to any value. Although if set too small, the sheer quantity of information being displayed on the screen will actually slow the program down. For this analysis we will make BEAST2 log to screen every 1&#39;000 samples, which is the default setting.</p>
+<p>Next, expand the <strong>screenlog</strong> options. The screen output is simply for monitoring the program&#39;s progress. Since it is not so important, especially if you run your analysis on a remote computer or a computer cluster, the <strong>Log Every</strong> can be set to any value. However, if it is set too small, the sheer quantity of information being displayed on the screen will actually slow the program down. For this analysis we will make BEAST2 log to screen every 1&#39;000 samples, which is the default setting.</p>
 
 <blockquote>
-<p>Expand the <code>screenlog</code> options.</p>
+<p>Expand the <strong>screenlog</strong> options.</p>
 
-<p>Leave the <code>Log Every</code> parameter at the default value of 1&#39;000.</p>
+<ul>
+<li>Leave the <strong>Log Every</strong> parameter at the default value of 1&#39;000.</li>
+</ul>
 </blockquote>
 
-<p>Finally, we can also change the tree logging frequency by expanding the <code>treelog.t:tree</code>. Set the sampling frequency to 1&#39;000 and rename the tree log file to <code>primate-mtDNA.trees</code>.</p>
+<p>Finally, we can also change the tree logging frequency by expanding <strong>treelog.t:tree</strong>. For big trees with many taxa each individual tree will already be quite large, thus if you log lots of trees the tree files can easily become extremely large. You will be amazed at how quickly BEAST can fill up even the biggest of drives if the tree logging frequency is too high! For this reason it is often a good idea to set the tree logging frequency lower than the trace log (especially for analyses with many taxa). However, be careful, as the post-processing steps of some models (such as the Bayesian skyline plot) require the trace and tree logging frequencies to be identical!</p>
 
 <blockquote>
-<p>Expand the <code>treelog.t:tree</code> options.</p>
+<p>Expand the <strong>treelog.t:tree</strong> options.</p>
 
-<p>Set the <code>File Name</code> to <code>primate-mtDNA.trees</code>.</p>
-
-<p>Leave the <code>Log Every</code> parameter at the default value of 1&#39;000.</p>
+<ul>
+<li>Set the <strong>File Name</strong> to <code>primate-mtDNA.trees</code>.</li>
+<li>Leave the <strong>Log Every</strong> parameter at the default value of 1&#39;000.</li>
+</ul>
 </blockquote>
 
-<p>The final setup should look as in <a href="#fig:logs">Figure 7</a>.</p>
+<p>The final setup should look as in <a href="#fig:logs">Figure 10</a>.</p>
 
 <figure>
     <a id="fig:logs"></a>
     <img src="figures/logs.png">
-    <figcaption>Figure 7: Logging options.</figcaption>
+    <figcaption>Figure 10: Logging options.</figcaption>
 </figure>
 
 <h3>Generating the XML file</h3>
 
-<p>We are now ready to create the BEAST2 XML file. To do this, select <code>File &gt; Save</code>, and save the file with an appropriate name (we usually end the filename with <code>.xml</code>, i.e. <code>Primates.xml</code>). This is the final configuration file BEAST2 can use to execute the analysis.</p>
+<p>We are now ready to create the BEAST2 XML file. This is the final configuration file BEAST2 can use to execute the analysis.</p>
 
 <blockquote>
-<p>Save the XML file under the name <code>Primates.xml</code> using <code>File &gt; Save</code>.</p>
+<p>Save the XML file under the name <code>Primates.xml</code> using <strong>File &gt; Save</strong>.</p>
 </blockquote>
+
+<p><br></p>
 
 <hr>
 
 <h2>Running the analysis</h2>
 
-<p>Now run BEAST2 and provide your newly created XML file as input. You can also change the <code>Random number seed</code> for the run. This number is the starting point of a pseudo-random number chain BEAST2 will use to generate the samples. As computers are unable to generate truly random numbers, we have to resort to generating determinate sequences of numbers that only look random, but will be identical when the starting seed is the same.</p>
+<p>Now run BEAST2 and provide your newly created XML file as input. You can also change the <strong>random number seed</strong> for the run. This number is the starting point of a pseudo-random number chain BEAST2 will use to generate the samples. As computers are unable to generate truly random numbers, we have to resort to generating determinate sequences of numbers that only look random, but will be identical when the starting seed is the same. If your MCMC run converges to the true posterior then you will be able to draw the same conclusions regardless of which random seed is provided. However, if you want to exactly reproduce the results of a run you need to start it with the same random number seed.</p>
 
 <blockquote>
 <p>Run the BEAST2 program.</p>
 
-<p>Select <code>Primates.xml</code> as the <code>Beast XML File</code>.</p>
+<ul>
+<li>Select <code>Primates.xml</code> as the <strong>Beast XML File</strong>.</li>
+<li>Set the <strong>Random number seed</strong> to <strong>777</strong> (or pick your favourite number).</li>
+<li>Check the <strong>Use BEAGLE library if available</strong> checkbox. If you have previously installed BEAGLE this will make the analysis run faster.</li>
+</ul>
 </blockquote>
 
-<p>For this run we will set the <code>Random number seed</code> to 777 (or any other number you like). The BEAST2 window should look as shown in <a href="#fig:beast">Figure 8</a>. </p>
+<figure>
+    <a id="fig:beast"></a>
+    <img style="width:80%;" src="figures/beast.png">
+    <figcaption>Figure 11: BEAST2 setup for the analysis.</figcaption>
+</figure>
 
-<blockquote>
-<p>Set the <code>Random number seed</code> to 777 (or pick your favourite number).</p>
-</blockquote>
+<p><br></p>
 
-<p>Now you can run the analysis by pressing the <code>Run</code> button at the bottom of the window. BEAST2 will run until the specified number of steps in the chain is reached. While it is running, it will print the screenlog values to a console and store the tracelog and tree log values to files located in the same folder as the configuration XML file. The screen output will look approximately as shown in <a href="#fig:beast_out">Figure 9</a>.</p>
+<p>The BEAST2 window should look as shown in <a href="#fig:beast">Figure 11</a>. </p>
 
 <blockquote>
 <p>Run BEAST2 by clicking the <code>Run</code> button.</p>
 </blockquote>
 
-<p>The window will remain open when BEAST2 will finished. When you try to close it, you may see BEAST2 asking the question: &quot;Do you wish to save?&quot;. Note that your log and trees files are always saved, no matter what answer you choose for this question. Thus, the question is only restricted to saving or not of the BEAST2 <code>screenlog</code> output. In order to save this output, click <code>Yes</code> and select the location on your computer, and the filename under which you wish to save this output. However, for now, it is safe to click <code>No</code> and not save the <code>screenlog</code> output.</p>
-
-<figure>
-    <a id="fig:beast"></a>
-    <img src="figures/beast.png">
-    <figcaption>Figure 8: BEAST2 setup for the analysis.</figcaption>
-</figure>
+<p>BEAST2 will run until the specified number of steps in the chain is reached. While it is running, it will print the screenlog values to a console and store the tracelog and tree log values to files located in the same folder as the configuration XML file. The screen output will look approximately as shown in <a href="#fig:beast_out">Figure 12</a>.</p>
 
 <figure>
     <a id="fig:beast_out"></a>
-    <img src="figures/beast_out.png">
-    <figcaption>Figure 9: BEAST2 output for the analysis.</figcaption>
+    <img style="width:80%;" src="figures/beast_out.png">
+    <figcaption>Figure 12: BEAST2 screen output for the analysis.</figcaption>
 </figure>
+
+<p><br></p>
+
+<p>The window will remain open when BEAST2 will finished. When you try to close it, you may see BEAST2 asking the question: &quot;Do you wish to save?&quot;. Note that your log and trees files are always saved, no matter what answer you choose for this question. Thus, the question is only restricted to saving or not of the BEAST2 screenlog output.</p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> While the analysis is running see if you can identify which parts of the setup in BEAUti are concerned with the data, the model and the MCMC algorithm. </p>
+
+<p>Open the XML file in your favourite text editor. Can you recognize any of the values you set in BEAUti? Can you identify the data, model specification and MCMC settings in the XML file? </p>
+
+<p>Can you find the likelihood, priors and hyperpriors in the XML file?</p>
+</blockquote>
 
 <hr>
 
-<h3>Analysing parameter estimates</h3>
+<h2>Analysing the results</h2>
 
-<p>Once BEAST2 has finished running, open Tracer to get an overview of BEAST2 output. When the main window has opened, choose <code>File &gt; Import Trace File...</code> and select the file called <code>primate-mtDNA.log</code> that BEAST2 has created, or simply drag the file from the file manager window into Tracer. The Tracer window should look as shown in <a href="#fig:tracer_bad">Figure 10</a>.</p>
-
-<blockquote>
-<p>Open Tracer.</p>
-
-<p>Use <code>File &gt; Import Trace File...</code> to load the <code>primate-mtDNA.log</code> file that BEAST2 has created.</p>
-</blockquote>
-
-<p>Tracer provides a few useful summary statistics on the results of the analysis. On the left side in the top window it provides a list of log files loaded into the program at the moment. The window below shows the list of statistics logged in each file. For each statistic it gives a list of summary values such as the mean, standard error, median, and others it can compute from the data. The summary values are displayed in the top right window and the distribution of the statistic is shown in the graphics in the bottom right window. </p>
-
-<p>The log file contains traces for the posterior (this is the natural logarithm of the product of the tree likelihood and the prior density), prior, the likelihood, the tree likelihood and the continuous parameters. Selecting a trace on the left brings up the summary statistics for this trace on the right hand side. When first opened, the <code>posterior</code> trace is selected and various statistics of this trace are shown under the <code>Estimates</code> tab.</p>
-
-<p>For each loaded log file we can specify a <code>Burn-In</code>, which is shown in the file list table (top-left) in Tracer. The burn-in is intended to give the Markov Chain time to reach its equilibrium distribution, particularly if it has started from a bad starting point. A bad starting point may lead to over-sampling regions of the posterior that actually have very low probability under the equilibrium distribution, before the chain settles into the equilibrium distribution. Burn-in allows us to simply discard the first N samples of a chain and not use them to compute the summary statistics. Determining the right number of samples to throw out is more of an art form than a technique (as we cannot predict when the chain will reach equilibrium), so we normally simply settle for specifying first 10% of the whole chain length as the burn-in.</p>
-
-<p>Select the <code>TreeHeight</code> statistic in the left hand list to look at the tree height estimated jointly for all of the partitions in the alignment. Tracer will plot a (marginal posterior) histogram for the selected statistic and also give you summary statistics such as the mean and median. The 95% HPD stands for <em>highest posterior density interval</em> and represents the most compact interval on the selected statistic that contains 95% of the posterior probability. It can be loosely thought of as a Bayesian analogue to a confidence interval. The <code>TreeHeight</code> statistic gives the marginal posterior distribution of the age of the root of the entire tree.</p>
+<p>Once BEAST2 has finished running, open Tracer to get an overview of BEAST2 output. When the main window has opened, choose <code>File &gt; Import Trace File...</code> and select the file called <code>primate-mtDNA.log</code> that BEAST2 has created, or simply drag the file from the file manager window into Tracer. </p>
 
 <blockquote>
-<p>Select the <code>TreeHeight</code> statistic in the bottom left hand list in Tracer and view the different summary statistics on the right.</p>
+<p>Open <strong>Tracer</strong>. Drag and drop the <code>primate-mtDNA.log</code> file that BEAST2 created into the open Tracer window.</p>
+
+<p>Alternatively, use <strong>File &gt; Import Trace File...</strong> (or press the <strong>+</strong> button below the <strong>Trace Files</strong> panel)
+then locate and click on <code>primate-mtDNA.log</code>.</p>
 </blockquote>
 
-<p>You can also compare estimates of different parameters in Tracer. Once a trace file is loaded into the program you can, for example, compare estimates of the different mutation rates corresponding to different positions in the alignment. Select all four mutation rate traces and then select the <code>Marginal Prob Distribution</code> tab on the right. You will be able to see all four distributions in one plot, similar to what is shown in <a href="#fig:tracer_comparison">Figure 11</a>.</p>
-
-<blockquote>
-<p>Select all four mutation rates by clicking the first mutation rate (<code>mutationRate.noncoding</code>), then holding <code>Shift</code> and clicking the last mutation rate (<code>mutationRate.3rdpos</code>).</p>
-
-<p>Select the <code>Marginal Prob Distribution</code> tab on the right to view the four distributions together.</p>
-</blockquote>
+<p>The Tracer window should look as shown in <a href="#fig:tracer_bad">Figure 13</a>.</p>
 
 <figure>
     <a id="fig:tracer_bad"></a>
     <img src="figures/tracer_bad.png">
-    <figcaption>Figure 10: Tracer showing a summary of the BEAST2 run of primate data with MCMC chain length of 1'000'000.</figcaption>
+    <figcaption>Figure 13: Tracer showing a summary of the BEAST2 run of primate data with MCMC chain length of 1'000'000.</figcaption>
 </figure>
+
+<p><br></p>
+
+<p>Tracer provides a few useful summary statistics on the results of the analysis. On the left side in the top window it provides a list of log files loaded into the program at the moment. The window below shows the list of statistics logged in each file. For each statistic it gives a list of summary values such as the mean, standard error, median, and others it can compute from the data. The summary values are displayed in the top right window and a histogrom showing the distribution of the statistic is in the bottom right window. </p>
+
+<p>The log file contains traces for the posterior (this is the natural logarithm of the product of the tree likelihood and the prior density), prior, the likelihood, tree likelihoods and other continuous parameters. Selecting a trace on the left brings up the summary statistics for this trace on the right hand side. When first opened, the <strong>posterior</strong> trace is selected and various statistics of this trace are shown under the <strong>Estimates</strong> tab.</p>
+
+<p>For each loaded log file we can specify a <strong>Burn-In</strong>, which is shown in the file list table (top left) in Tracer. The burn-in is intended to give the Markov Chain time to reach its equilibrium distribution, particularly if it has started from a bad starting point. A bad starting point may lead to over-sampling regions of the posterior that actually have very low probability under the equilibrium distribution, before the chain settles into the equilibrium distribution. Burn-in allows us to simply discard the first <em>N</em> samples of a chain and not use them to compute the summary statistics. Determining the number of samples to discard is not a trivial problem and depends on the size of the dataset, the complexity of the model and the length of the chain. A good rule of thumb is to always throw out at least the first 10% of the whole chain length as the burn-in (however, in some cases it may be necessary to discard as much as 50% of the MCMC chain).</p>
+
+<p>Select the <strong>TreeHeight</strong> statistic in the left hand list to look at the tree height estimated jointly for all partitions in the alignment. Tracer will plots (marginal posterior) histogram for the selected statistic and also give you summary statistics such as the mean and median. The 95% HPD stands for <em>highest posterior density interval</em> and represents the most compact interval on the selected statistic that contains 95% of the posterior density. It can be loosely thought of as a Bayesian analogue to a confidence interval. The <strong>TreeHeight</strong> statistic gives the marginal posterior distribution of the age of the root of the entire tree (that is, the tMRCA).</p>
+
+<blockquote>
+<p>Select <strong>TreeHeight</strong> in the bottom left hand list in Tracer and view the different summary statistics on the right.</p>
+</blockquote>
+
+<p>You can also compare estimates of different parameters in Tracer. Once a trace file is loaded into the program you can, for example, compare estimates of the different mutation rates corresponding to the different partitions in the alignment. </p>
+
+<blockquote>
+<p>Select all four mutation rates by clicking the first mutation rate (<strong>mutationRate.noncoding</strong>), then holding <strong>Shift</strong> and clicking the last mutation rate (<strong>mutationRate.3rdpos</strong>).</p>
+
+<p>Select the <strong>Marginal Density</strong> tab on the right to view the four distributions together.</p>
+
+<p>Select different options in the <strong>Display</strong> drop-down menu to display the posterior distributions in different ways.</p>
+</blockquote>
+
+<p>You will be able to see all four distributions in one plot, similar to what is shown in <a href="#fig:tracer_comparison">Figure 14</a>.</p>
 
 <figure>
     <a id="fig:tracer_comparison"></a>
-    <img src="figures/tracer_comparison.png">
-    <figcaption>Figure 11: Tracer showing the four marginal probability distributions of the mutation rates in each partition of the alignment.</figcaption>
+    <img src="figures/Tracer_comparison_KDE.png">
+    <img src="figures/Tracer_comparison_violin.png">
+    <img src="figures/Tracer_comparison_box.png">
+    <figcaption>Figure 14: Tracer showing the four marginal probability distributions of the mutation rates in each partition of the alignment. The figure at the top shows the marginal distributions plotted with a Kernel Density Estimation (KDE) in the middle as violin plots and at the bottom as box and whisker plots.</figcaption>
 </figure>
+
+<p><br></p>
+
+<blockquote>
+<p><strong>Topic for discussion:</strong> What can you deduce from the marginal densities of the 4 mutation rates? Does this make biological sense?</p>
+
+<p>Why do you think the mutation rate of non-coding DNA is similar to the rates of 1st and 2nd codon positions?</p>
+</blockquote>
 
 <h3>Analysing the posterior estimate quality</h3>
 
 <p>Two very important summary statistics that we should pay attention to are the Auto-Correlation Time (ACT) and the Effective Sample Size (ESS). ACT is the average number of states in the MCMC chain that two samples have to be separated by for them to be uncorrelated, i.e. for them to be independent samples from the posterior. The ACT is estimated from the samples in the trace (excluding the burn-in). The ESS is the number of independent samples that the trace is equivalent to. This is calculated as the chain length (excluding the burn-in) divided by the ACT.</p>
 
-<p>The ESS is in general regarded as a quality-measure of the resulting sample sequence. It is unclear how to determine exactly how large should the ESS be for the analysis to be trustworthy so an empirical number was defined. In general, an ESS of 200 will be considered enough to make the analysis useful. As you can see in <a href="#fig:tracer_bad">Figure 10</a>, ESS values below 100 are coloured in red, which means that we should not trust the value of the statistics, and ESS values between 100 and 200 are coloured in yellow.</p>
+<p>The ESS is in general regarded as a quality-measure of the resulting sample sequence. It is unclear how to determine exactly how large should the ESS be for the analysis to be trustworthy. In general, an ESS of 200 is considered high enough to make the analysis useful. However, this is an arbitrary number and you should always use your own judgment to decide if the analysis has converged or not. As you can see in <a href="#fig:tracer_bad">Figure 13</a>, ESS values below 100 are coloured in red, which means that we should not trust the value of the statistics, and ESS values between 100 and 200 are coloured in yellow.</p>
 
-<p>If a lot of statistics have red or yellow coloured ESS value, we did not explore the posterior space sufficiently. This is most likely a result of the chain not running long enough. Try running the same analysis, but first load the XML configuration file into BEAUti again by pressing <code>File &gt; Load</code> and select the <code>Primates.xml</code> file.  Within BEAUti, change the MCMC chain length parameter to 2&#39;500&#39;000. Change the trace and tree log file names in order for not over-writing the results of the previous analysis. You may add something like <code>_long</code> behind the name of the file, to obtain <code>primate-mtDNA_long.log</code> for the log file and <code>primate-mtDNA_long.trees</code> for trees file. Run BEAST2 again with the updated configuration and the seed of 777. This will take a bit more time. <a href="#fig:tracer_better">Figure 12</a> shows the estimates from a longer run. The ESS of 200 is still not reached for the <code>TreeHeight</code> parameter (and few other parameter), but it did turn higher than the ESS obtained with the shorter chain. This means that if we allow the chain to run even longer we will most likely reach good ESS values for this parameter as well.</p>
+<p>If a lot of statistics have red or yellow coloured ESS value, we have not sufficiently explored the posterior space. This is most likely a result of the chain not running long enough. Try running the same analysis as before, but with a longer chain. </p>
 
-<p>Remember that MCMC is a stochastic algorithm, so if you set a different seed the actual numbers will not be exactly the same as those depicted in the figure.</p>
+<blockquote>
+<p>First load the XML configuration file into BEAUti again by pressing <strong>File &gt; Load</strong> and select the <code>Primates.xml</code> file.  Within BEAUti, change the MCMC chain length parameter to <strong>10&#39;000&#39;000</strong> and change the <strong>tracelog</strong> frequency to <strong>1&#39;000</strong>. </p>
+
+<p>Change the trace and tree log file names in order to not overwrite the results of the previous analysis. You may add something like <code>_long</code> behind the name of the file, to obtain <code>primate-mtDNA_long.log</code> for the log file and <code>primate-mtDNA_long.trees</code> for trees file. </p>
+
+<p>Run BEAST2 again with the updated configuration file and the same seed of <strong>777</strong>. </p>
+</blockquote>
+
+<p>This will take a bit more time. <a href="#fig:tracer_better">Figure 15</a> shows the estimates from a longer run. In this case all parameters have ESS values larger than 200. Remember that MCMC is a stochastic algorithm, so if you set a different seed the actual numbers will not be exactly the same as those depicted in the figure.</p>
 
 <figure>
     <a id="fig:tracer_better"></a>
-    <img src="figures/tracer_better.png">
-    <figcaption>Figure 12: Tracer showing a summary of the BEAST2 run with MCMC chain length of 2'500'000.</figcaption>
+    <img src="figures/tracer_good.png">
+    <figcaption>Figure 15: Tracer showing a summary of the BEAST2 run with MCMC chain length of 10'000'000.</figcaption>
 </figure>
 
-<hr>
+<p><br></p>
 
-<h2>Analysing tree estimates</h2>
+<p>Tracer also allows us to look for correlations between parameters under the <strong>Joint Marginal</strong> tab, as shown in <a href="#fig:tracer_joint">Figure 16</a>. When two parameters are highly correlated this can lead to poor convergence of the MCMC chain (more on this in later tutorials). </p>
 
-<p>Besides producing a sample of parameter estimates, BEAST2 also produces a posterior sample of phylogenetic time-trees. These need to be summarized too before any conclusions about the quality of the posterior estimate can be made.</p>
+<figure>
+    <a id="fig:tracer_joint"></a>
+    <img src="figures/tracer_joint.png">
+    <figcaption>Figure 16: Correlation between the tree height and clock rate estimates.</figcaption>
+</figure>
 
-<h3>Obtaining an estimate of the phylogenetic tree</h3>
+<p><br></p>
 
-<p>One way to summarise the trees is by using the program TreeAnnotator. This will take the set of trees and find the best supported one. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges. It will also calculate the posterior clade probability for each node. Such a tree is called the maximum clade credibility tree.</p>
-
-<p>Run the TreeAnnotator program and set the <code>Burnin percentage</code> to 1%, which will make the program ignore 1% of the trees sampled.</p>
-
-<blockquote>
-<p>Run TreeAnnotator.</p>
-
-<p>Set the <code>Burnin percentage</code> to 1.</p>
-</blockquote>
-
-<p>The next option, the <code>Posterior probability limit</code>, specifies a limit such that if a node is found at less than this frequency in the sample of trees (i.e. has a posterior probability less than this limit), it will not be annotated. For example, setting it to 0.5 means that only nodes seen in the majority (more than 50%) of trees will be annotated. The default value is 0, which we will leave as is, and which means that TreeAnnotator will annotate all nodes.</p>
+<p>We can also look at correlations between more than two parameters.</p>
 
 <blockquote>
-<p>Leave the <code>Posterior probability limit</code> at the default value of 0.</p>
+<p>Select all 4 mutation rates again</p>
+
+<ul>
+<li>Navigate to the <strong>Joint Marginal</strong> tab</li>
+<li>Check <strong>Show points</strong></li>
+</ul>
 </blockquote>
 
-<p>For the <code>Target tree type</code> option you can either choose a specific tree from a file or ask TreeAnnotator to find a tree in your sample. The default option which we will leave, <code>Maximum clade credibility tree</code>, finds the tree with the highest product of the posterior probability of all its nodes.</p>
+<p>The panel should like <a href="#fig:tracer_covariance">Figure 17</a>. The ellipses represent the covariance between pairs of parameters and make it easy to identify which pairs are correlated or anti-correlated. Is there a strong correlation or anti-correlation between some of our mutation rate parameters?</p>
+
+<figure>
+    <a id="fig:tracer_covariance"></a>
+    <img src="figures/tracer_covariance.png">
+    <figcaption>Figure 17: Correlations between the mutation rate parameters.</figcaption>
+</figure>
+
+<p><br></p>
 
 <blockquote>
-<p>Leave the <code>Target tree type</code> at the default value of <code>Maximum clade credibility tree</code>.</p>
+<p><strong>Topic for discussion:</strong> We have not explored the <strong>Trace</strong> tab in Tracer at all!</p>
+
+<p>The <strong>Trace</strong> tab is primarily a diagnostic tool for checking convergence to the posterior, assessing the length of the burn-in and whether or not the chain is mixing well. There is a good argument to be made for this being the <em>most important</em> tab in the Tracer program and that it is the first tab users should look at. </p>
+
+<p>Have a look at the individual parameter traces in the <strong>Trace</strong> tab, in both the short and long log files. Can you figure out why ESS values for some parameters are higher than others? </p>
+
+<p>Do you think a burn-in of 10% is sufficient for this analysis?</p>
 </blockquote>
 
-<p>Next, select <code>Mean heights</code> for the <code>Node heights</code>. This sets the heights (ages) of each node in the tree to the mean height across the entire sample of trees for that clade.</p>
+<h3>Analysing tree estimates</h3>
+
+<p>Besides producing a sample of parameter estimates, BEAST2 also produces a posterior sample of phylogenetic time-trees. These need to be summarised too before any conclusions about the quality of the posterior estimate can be made.</p>
+
+<p>One way to summarise the trees is by using the program TreeAnnotator. This will take the set of trees and find the best supported tree. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges. It will also calculate the posterior clade probability for each node. Such a tree is called the <em>maximum clade credibility</em> tree.</p>
 
 <blockquote>
-<p>Select <code>Mean heights</code> in the <code>Node heights</code> dropdown menu.</p>
+<p>Open <strong>TreeAnnotator</strong>.</p>
+
+<p>Set the <strong>Burnin percentage</strong> to <strong>10%</strong> to discard the first 10% of trees in the log file.</p>
 </blockquote>
 
-<p>Then set the <code>Input Tree File</code> to the file <code>.trees</code> file BEAST2 created as the result of the run and set the <code>Output File</code> to something like <code>Primates.MCC.tree</code>. The setup should look as shown in <a href="#fig:treeannot">Figure 13</a>. You can now run the program.</p>
+<p>The next option, the <strong>Posterior probability limit</strong>, specifies a limit such that if a node is found at less than this frequency in the sample of trees (i.e. has a posterior probability less than this limit), it will not be annotated. For example, setting it to 0.5 means that only nodes seen in the majority (more than 50%) of trees will be annotated. The default value is 0, which we will leave as is, and which means that TreeAnnotator will annotate all nodes.</p>
 
 <blockquote>
-<p>Set the <code>Input Tree File</code> to the <code>primate-mtDNA.trees</code> file.</p>
-
-<p>Set the <code>Output File</code> to <code>Primates.MCC.tree</code>.</p>
-
-<p>Run the MCC tree generation by clocking the <code>Run</code> button.</p>
+<p>Leave the <strong>Posterior probability limit</strong> at the default value of <strong>0</strong>.</p>
 </blockquote>
+
+<p>For the <strong>Target tree type</strong> option you can either choose a specific tree from a file or ask TreeAnnotator to find a tree in your sample. The default option which we will leave, <strong>Maximum clade credibility tree</strong>, finds the tree with the highest product of the posterior probability of all its nodes.</p>
+
+<blockquote>
+<p>Leave the <strong>Target tree type</strong> at the default value of <strong>Maximum clade credibility tree</strong>.</p>
+</blockquote>
+
+<p>Next, select <strong>Mean heights</strong> for the <strong>Node heights</strong>. This sets the heights (ages) of each node in the tree to the mean height across the entire sample of trees for that clade.</p>
+
+<blockquote>
+<p>Select <strong>Mean heights</strong> in the <strong>Node heights</strong> drop-down menu.</p>
+</blockquote>
+
+<p>Finally, we have to select the input tree log file and set an output file. </p>
+
+<blockquote>
+<p>Click <strong>Choose File</strong> next to <strong>Input Tree File</strong> and choose <code>primate-mtDNA.trees</code>.</p>
+
+<p>Set the <strong>Output File</strong> to <code>Primates.MCC.tree</code>.</p>
+</blockquote>
+
+<p>The setup should look as shown in <a href="#fig:treeannot">Figure 18</a>. You can now run the program.</p>
 
 <figure>
     <a id="fig:treeannot"></a>
-    <img style="width:50%;" src="figures/treeannot.png">
-    <figcaption>Figure 13: TreeAnnotator setup</figcaption>
+    <img style="width:80%;" src="figures/treeannot.png">
+    <figcaption>Figure 18: TreeAnnotator setup</figcaption>
 </figure>
+
+<p><br></p>
 
 <h3>Visualising the tree estimate</h3>
 
-<p>Finally, we can visualize the tree with one of the available pieces of software, such as FigTree and DensiTree.</p>
-
-<p>First let us run FigTree and open the <code>Primates.MCC.tree</code> file by using <code>File &gt; Open</code>. You can now try selecting some of the options in the control panel on the left. Try checking the <code>Node Bars</code> checkbox to get node age error bars. You will also need to expand the <code>Node Bars</code> options and select the <code>height_95%_HPD</code> in the <code>Display</code> dropdown.</p>
+<p>Finally, we can visualize the tree with one of the available pieces of software, such as FigTree.</p>
 
 <blockquote>
-<p>Run FigTree.</p>
+<p>Open <strong>FigTree</strong>. Use <strong>File &gt; Open</strong> then locate and click on <code>Primates.MCC.tree</code>.</p>
 
-<p>Open the <code>Primates.MCC.tree</code> file using <code>File &gt; Open</code>.</p>
-
-<p>Check the <code>Node Bars</code> checkbox.</p>
-
-<p>Expand the <code>Node Bars</code> options and select the <code>height_95%_HPD</code> in the <code>Display</code> dropdown.</p>
-</blockquote>
-
-<p>You can also turn on <code>Node Labels</code> and select <code>posterior</code> in the <code>Display</code> dropdown to get it to display the posterior probability for each node. You should end up with something similar to <a href="#fig:figtree">Figure 14</a>.</p>
-
-<blockquote>
-<p>Check the <code>Node Labels</code> checkbox.</p>
-
-<p>Expand the <code>Node Labels</code> options and select the <code>posterior</code> in the <code>Display</code> dropdown.</p>
+<ul>
+<li>Expand <strong>Trees</strong> options, check <strong>Order nodes</strong> and select <strong>decreasing</strong> from the drop-down menu.</li>
+<li>Expand the <strong>Tip Labels</strong> options and increase the <strong>Font Size</strong> until it is readable. </li>
+<li>Check the <strong>Node Bars</strong> checkbox, expand the options and select <code>height_95%_HPD</code> from the <strong>Display</strong> drop-down menu.</li>
+<li>Check the <strong>Node Labels</strong> checkbox, expand the options and select <code>posterior</code> from the <strong>Display</strong> drop-down menu.</li>
+<li>Increase the <strong>Font Size</strong> until it is readable.</li>
+<li>Uncheck the <strong>Scale Bar</strong> checkbox.</li>
+<li>Check the <strong>Scale Axis</strong> checkbox, expand the options, check <strong>Reverse axis</strong> and increase the <strong>Font Size</strong>.</li>
+</ul>
 </blockquote>
 
 <figure>
     <a id="fig:figtree"></a>
     <img src="figures/figtree.png">
-    <figcaption>Figure 14: FigTree visualisation of the estimated tree.</figcaption>
+    <figcaption>Figure 19: FigTree visualisation of the estimated tree.</figcaption>
 </figure>
 
-<p>Another program we can use is called DensiTree. DensiTree does not need a summary tree (so we do not need to run TreeAnnotator prior to using DensiTree) to be able to visualise the estimates. Run DensiTree and using <code>File &gt; Load</code> load the <code>.trees</code> file. You should now see many lines corresponding to all the individual trees samples by your MCMC chain. You can also see clearly a pattern coming out. To see the pattern more clearly, expand the <code>Show</code> options and check the <code>Consensus Trees</code> to see the consensus tree of the sample.</p>
+<p><br></p>
+
+<p>Your tree should now look something like <a href="#fig:figtree">Figure 19</a>. We first ordered the tree nodes. Because there are many ways to draw the same tree ordering nodes makes it easier for us to compare different trees to each other. The scale bars we added represent the 95% HPD interval for the age of each node in the tree, as estimated by the BEAST2 analysis. The node labels we added gives the posterior probability for a node in the posterior set of trees (that is, the trees logged in the tree log file, after discarding the burn-in). We can also use FigTree to display other statistics, such as the branch lengths, the 95% HPD interval of a node etc. The exact statistics available will depend on the model used.</p>
 
 <blockquote>
-<p>Run DensiTree.</p>
+<p><strong>Topics for discussion:</strong> The posterior probabilities tell us which clades are highly supported and the scale bars tell us how confident we are about their divergence times. </p>
 
-<p>Open the <code>primate-mtDNA.trees</code> file using <code>File &gt; Load</code>.</p>
-
-<p>Expand the <code>Show</code> options and check the <code>Consensus Trees</code> checkbox.</p>
+<ul>
+<li>Are all clades well-supported? How about their ages?</li>
+<li>Look at the 95% HPD interval for the age of the apes (<em>Hylobates, Pongo, Gorilla, Pan</em> and <em>Homo sapiens</em>). Does the estimated age agree with your prior knowledge?</li>
+<li>What about the divergence time between old-world and new-world monkeys? (<em>Saimiri sciureus</em> is the only new-world monkey in this dataset).</li>
+</ul>
 </blockquote>
 
-<p>In order to see the support for the topology you see, select the <code>Central</code> view mode. Now expand the <code>Clades</code> menu, check the <code>Show clades</code> checkbox and the <code>text</code> checkbox for the <code>Support</code>. The tree should look as shown in <a href="#fig:densitree">Figure 15</a>.</p>
+<h3>Visualising tree posteriors (optional)</h3>
+
+<p>The MCC tree is one way of summarising the posterior distribution of trees as a single tree, annotated with extra information on some nodes to represent the uncertainty in the tree estimates. Just as summarising the posterior distributions of a continuous parameter as a median and confidence interval throws away a lot of information (such as the shape of the distribution) a lot of information is lost when summarising a set of trees as an MCC tree. However, it is significantly more difficult to visualise the set of posterior trees.</p>
+
+<p>One possibility is to use the program <strong>DensiTree</strong>. DensiTree does not need a summary tree (so we do not need to run TreeAnnotator prior to using DensiTree) to be able to visualise the estimates. </p>
 
 <blockquote>
-<p>Select the <code>Central</code> view mode in the top right menu.</p>
+<p>Open <strong>DensiTree</strong>. Use <strong>File &gt; Load</strong> then locate and click on <code>primate-mtDNA.trees</code>.</p>
 
-<p>Expand the <code>Clades</code> menu.</p>
-
-<p>Check the <code>Show clades</code> checkbox and the <code>text</code> checkbox for the <code>Support</code>.</p>
+<p>Expand the <strong>Show</strong> options and check the <strong>Consensus Trees</strong> checkbox.</p>
 </blockquote>
 
-<p>Now, select the <code>Help &gt; View clades</code> in DensiTree menu. You should see a window that shows the different clades and their probabilities. In this particular run there is little uncertainty in the tree estimate with respect to clade grouping, as almost each clade has 100% support.</p>
+<p>You should now see many lines corresponding to all the individual trees samples by your MCMC chain. You can also clearly see a pattern across all of the posterior trees. </p>
 
 <blockquote>
-<p>Select <code>Help &gt; View clades</code> and view the different clades and their probabilities.</p>
+<p>In order to see the support for the topology, select the <strong>Central</strong> view mode. </p>
+
+<p>Now expand the <strong>Clades</strong> menu, check the <strong>Show clades</strong> checkbox and the <strong>text</strong> checkbox for the <strong>Support</strong>. </p>
 </blockquote>
+
+<p>The tree should look as shown in <a href="#fig:densitree">Figure 20</a>.</p>
 
 <figure>
     <a id="fig:densitree"></a>
     <img src="figures/densitree.png">
-    <figcaption>Figure 15: DensiTree visualisation of the tree sample.</figcaption>
+    <figcaption>Figure 20: DensiTree visualisation of the tree sample.</figcaption>
 </figure>
 
-<figure>
-    <a id="fig:densitree_clades"></a>
-    <img src="figures/densitree_clades.png">
-    <figcaption>Figure 16: DensiTree clade probability.</figcaption>
-</figure>
+<p><br></p>
+
+<p>You can also view all of the different clades and their posterior probabilities by selecting <strong>Help &gt; View clades</strong>. In this particular run there is little uncertainty in the tree estimate with respect to clade grouping, as almost every clade has 100% support.</p>
+
+<blockquote>
+<p><strong>Topics for discussion:</strong> The Yule model for speciation has one parameter (<strong>birthRateY.t:tree</strong>), representing the speciation rate. This model assumes that there is no extinction and thus that all taxa are sampled.</p>
+
+<ul>
+<li>What are the units for <strong>birthRateY.t:tree</strong>? From your analysis, can you figure out the average time it takes for a speciation event to occur? (Have a look at the tracelog).</li>
+<li>Is the Yule model an appropriate model to use here?</li>
+<li>In the dataset there is a much larger sampling proportion for the great apes (4/8 extant species) than for lemurs, tarsiers and new-world monkeys (one species each). Do you think unequal sampling proportions are an issue?</li>
+</ul>
+</blockquote>
 
 <hr>
 
@@ -898,7 +1092,7 @@
 <ul>
 <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a></li>
 <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+<li>BEAST 1 website and documentation: <a href="http://beast.community">http://beast.bio.ed.ac.uk</a></li>
 <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
 </ul>
 
