@@ -1,0 +1,302 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+
+%%% added package
+\usepackage{tikz}
+%%%
+
+
+
+% Add your bibtex library here
+\addbibresource{refs.bib}
+
+
+%%%%%%%%%%%%%%%%%%%%
+% Do NOT edit this %
+%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\renewcommand{\headrulewidth}{0.5pt}
+\headsep = 20pt
+\lhead{ }
+\rhead{\textsc {BEAST v2 Tutorial}}
+\thispagestyle{plain}
+
+
+%%%%%%%%%%%%%%%%%%
+% Tutorial title %
+%%%%%%%%%%%%%%%%%%
+\begin{center}
+
+	% Enter the name of your tutorial here
+	\textbf{\LARGE Substitution model selection in BEAST2}\\\vspace{2mm}
+
+	% Enter a short description of your tutorial here
+	\textbf{\textcolor{mycol}{\Large A tutorial using bModelTest}}\\
+
+	\vspace{4mm}
+
+	% Enter the names of all the authors here
+	{\Large {\em David A. Rasmussen, Carsten Magnus and Remco Bouckaert}}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%
+% Tutorial body %
+%%%%%%%%%%%%%%%%%
+
+
+\bigskip
+\section{Background}
+
+Before running any phylogenetic analysis in BEAST, we need to decide on a model of molecular evolution that describes how our sequence data evolved. In particular, we need to decide on a substitution model that describes the relative rates at which different types of substitutions occur. For nucleotide data, the substitution model is typically represented as a 4x4 symmetric rate matrix $Q$ with the general form:
+\begin{equation}
+	Q =
+	\begin{pmatrix}
+		- & r_{ac} & r_{ag} & r_{at} \\
+		r_{ac} & - & r_{cg} & r_{ct} \\
+		r_{ag} & r_{cg} & - & r_{gt} \\
+		r_{at} & r_{ct} & r_{gt} & - \\
+	\end{pmatrix}
+	\label{rateMatrixQ}
+\end{equation}
+The different named substitution models (e.g. JC69, HKY, TN93 and GTR) group these rates into different categories. For example, the JC69 model groups all rates together into a single rate category whereas the GTR model assigns each rate to a different category. We are therefore faced with the difficult choice of deciding \textit{a priori} which one of these substitution models is most appropriate for our data.
+
+\begin{framed}
+\textbf{Topic for discussion:} In terms of phylogenetic inference, what would be the consequence of picking a substitution model that is overparameterized (too complex) for a given data set? What would be the consequence of picking a model that is underparameterized? 
+\end{framed}
+
+In addition to the substitution model, we also need to decide whether to include rate heterogeneity across sites. We also might want to include a proportion of invariant sites. On top of all this, we need to decide whether to estimate nucleotide base frequencies or fix them at their empirical frequencies. All of these choices leads to a bewildering number of different models to choose from. For this reason, researchers have often based their model choice on common conventions rather than on which model is most appropriate for their data.   
+
+Fortunately, nowadays we can be more sophisticated in our modeling choices and let the data inform us about which model is most appropriate using Bayesian model selection. In this tutorial, we will use BEAST's model selection tool bModelTest \citep{bouckaert2015bmodeltest} to select which substitution model is most appropriate for the primate mitochondrial data set we already saw in the introductory tutorial. bModelTest uses reversible jump MCMC (rjMCMC), which allows the Markov chain to jump between states representing different possible substitution models much like we jump between different parameter states in standard Bayesian MCMC inference. This allows us to explore the space of different models while simultaneously estimating model parameters and the phylogeny. Best of all, the proportion of time the Markov chain spends in a particular model state can be interpreted as the posterior support for that model, which tells us how much the data and our prior beliefs support the model over other competing models.
+
+
+\clearpage
+\newpage
+\section{Programs used in this Exercise}\label{programsSec}
+
+%\vspace{-4mm}
+\begin{itemize}
+\item BEAUTi 2.4 %\vspace{-3mm}
+\item BEAST 2.4 %\vspace{-3mm}
+\item Tracer v. 1.6 %\vspace{-3mm}
+\item bModelTest v. 0.3.2 (installed during this tutorial)
+\end{itemize}
+
+
+%\newpage
+\section{Practical: Selecting a substitution model}
+
+\bigskip
+\subsection{Installing the bModelTest Package}
+
+We first have to install the bModelTest version 0.3.2 package.
+
+\begin{framed}
+Open BEAUti and navigate to \mi{File\textrightarrow Manage Packages}. Select bModelTest and then click \mi{Install/Upgrade} [Figure \ref{fig:install}]. Then {\textcolor{red}{\underline{\bf restart BEAUti}}} to load the package.
+%\begin{center}
+%\href{google.com}{URL} 
+%\end{center}
+\end{framed} 
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.7]{figures/install_bModelTest}}
+\caption{\small Installing bModelTest in the Manage Packages window in BEAUti}
+\label{fig:install}
+\end{figure}
+
+\bigskip
+\subsection{The Data}
+
+We will continue analyzing the primate mitochondrial data set from the introductory tutorial.
+
+\begin{framed}
+Open BEAUti and navigate to \mi{File\textrightarrow Load}. Select the file \textbf{primate-mtDNA.nex}. %If you do not already have this nexus file, it is available here: \href{datasource}{TO ADD}
+%\begin{center}
+%\href{google.com}{URL} 
+%\end{center}
+\end{framed}
+
+\bigskip
+\subsection{Setting up the analysis in BEAUti}
+
+In this tutorial, we will simplify things by having all four partitions in the alignment evolve under the same Site, Clock and Tree models.  
+
+\begin{framed}
+In the \mi{Partitions} panel select all four partitions and then click \mi{Link Site Models}, \mi{Link Clock Models} and \mi{Link Trees}. You should rename each model something more informative than noncoding, such as \textbf{site}, \textbf{clock} and \textbf{tree}. 
+\end{framed}
+
+The Partition window should now look like Figure \ref{fig:partitions}.
+
+\begin{figure}[!h]
+\centering
+\fbox{\includegraphics[scale=0.7]{figures/partitions}}
+\caption{\small Linking the Site Model across partitions in BEAUti.}
+\label{fig:partitions}
+\end{figure}
+
+Now we want to set up our Site Model to run the model selection analysis.
+
+\begin{framed}
+Click the \mi{Site Model} tab in BEAUti and then select the drop down box at the top which says \textbf{Gamma Site Model} and change it to \textbf{BEAST ModelTest} [Figure \ref{fig:siteModel}]. Select estimate in the box next to the Mutation Rate.
+\end{framed}
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.7]{figures/siteModel}}
+\caption{\small Setting up the BEAST ModelTest.}
+\label{fig:siteModel}
+\end{figure}
+
+In the lower drop down box we will keep \textbf{transitionTransversionSplit} selected. This tells bModelTest to only consider substitution models that differentiate between transitions (A $\rightarrow$ G and C $\rightarrow$ T) and transversions (all other substations). Considering all the different ways we can group the rates in the substitution matrix \eqref{rateMatrixQ}, there are a total of 203 reversible models with symmetric matrices \citep{bouckaert2015bmodeltest}. However, if we only consider models that do not group transitions together with transversions, there are only 31 models. Selecting \textbf{transitionTransversionSplit} therefore dramatically reduces the number of models that we need to explore.
+
+In the \mi{Clock Model} and \mi{Prior} tabs, we do not need to change any of the default settings for this tutorial.
+
+\begin{framed}
+Click the \mi{MCMC} tab in BEAUti. Change the chain length to 10,000,000. Change the tracelog and treelog file names to \textbf{primate-mtDNA-bMT} and then click \mi{File\textrightarrow Save As} and save as \textbf{primate-mtDNA-bMT.xml}.
+\end{framed}
+
+\bigskip
+\subsection{Run the analysis in BEAST}
+
+\begin{framed}
+Open BEAST and choose \textbf{primate-mtDNA-bMT.xml} as the BEAST XML File [Figure \ref{fig:beastRun}]. Then click run.
+\end{framed}
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.4]{figures/beastRun}}
+\caption{\small Running the analysis in BEAST.}
+\label{fig:beastRun}
+\end{figure}
+
+\bigskip
+\subsection{Analyzing the output in Tracer}
+
+\begin{framed}
+Open the \textbf{primate-mtDNA-bMT.log} file in Tracer. There should be a long list of entries in the window on the left hand side [Figure \ref{fig:modelTrace}].
+\end{framed}
+
+If we select \textbf{BMT\_ModelIndicator} from the list of entries and then \textbf{(I)nt} for the Data type below, we can see how the Markov chain explored the space of different models by jumping between substitution models. This is best seen if we click on the \mi{Trace} tab [Figure \ref{fig:modelTrace}]. Here, the sampled integer values refer to the indexes of the different substitution models. To see which index corresponds to which model, refer to [Figure \ref{fig:modelIndexes}].
+
+Now click on the \mi{Estimates} tab above. This frequency histogram shows us how much time the Markov chain spent in each model state relative to other model states, and therefore reflects the posterior support for each model. We can see that the chain spent the most time in model number 1 [Figure \ref{fig:modelPosterior}], which by consulting [Figure \ref{fig:modelIndexes}] we see corresponds to the HKY model. 
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.7]{figures/modelTrace}}
+\caption{\small Visualizing how the Markov chain explored different models in Tracer.}
+\label{fig:modelTrace}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.7]{figures/modelIndexes}}
+\caption{\small A list of substitution models, their associated model number (index) and how the substitution rates are grouped.}
+\label{fig:modelIndexes}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.7]{figures/modelPosterior}}
+\caption{\small Visualizing the posterior support for different substitution models in Tracer.}
+\label{fig:modelPosterior}
+\end{figure}
+
+We can also use the output of our analysis to see if a model with (gamma) rate heterogeneity and/or a proportion of invariant sites is supported. If we select \textbf{hasGammaRates} in the window on the left and then click \mi{Estimates} we see the proportion of time the chain spent in a model state with rate heterogeneity on (1) versus off (0), and thus the posterior support for a model with rate heterogeneity. Here, the chain seems to remain in a state with rate heterogeneity on, indicating that we should probably include rate heterogeneity [Figure \ref{fig:hasGammaRates}].  We can also select \textbf{hasInvariableSites} to see if a model with invariant sites is supported. Here we see that the model spends more time in a model state with invariant sites off (0) than on (1), indicating that including invariant sites might not be so important [Figure \ref{fig:hasInvariableSites}]. Note that we can also look at the traces for \textbf{BMT\_gammaShape} and \textbf{BMT\_ProportionInvariant} to see what values of these two parameters the chain visited.
+
+There are a few other things we can look at in Tracer as well:
+\begin{itemize}
+\item \textbf{rateAC,...,rateGT} are the individual substitution rates the chain visited. \\ 
+\item \textbf{BMT\_Rates.1 to 6} are also the substitution rates, but indexed by how they are grouped into the six different possible rate categories [see Figure \ref{fig:modelIndexes}]. 
+\item \textbf{ActiveGammaShape/PropInvariable} are the gamma shape parameter and the proportion of variables sites when active, that is, when \textbf{hasGammaRates} and \textbf{hasInvariableSites} are selected. To get the estimate of the mean of the shape parameter, divide the mean ActiveGammaShape by the mean of hasGammaRates.\\
+\item \textbf{hasEqualFreqs} indicates if the chain is in a state with equal nucleotide base frequencies. 
+\end{itemize}
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.6]{figures/hasGammaRates}}
+\caption{\small The posterior support for including gamma rate heterogeneity.}
+\label{fig:hasGammaRates}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.6]{figures/hasInvariableSites}}
+\caption{\small The posterior support for including a proportion of invariant sites.}
+\label{fig:hasInvariableSites}
+\end{figure}
+
+
+\bigskip
+\subsection{Analyzing the output using BModelAnalyzer}
+
+Another really nice feature of bModelTest is that we can graphically analyze the output using the \textbf{BModelAnalyser App}.
+
+\begin{framed}
+In BEAUti, select \mi{File\textrightarrow Launch Apps} and then launch the \textbf{BModelAnalyser App}.  A dialogue window should pop up [Figure \ref{fig:analyzerDialogue}]. Enter \textbf{primate-mtDNA-bMT.log} as the file to analyze. You can leave the other entries at their default settings but make sure \textbf{transitionTransversionSplit} is selected for the Model Set and the box next to \textbf{Use Browser For Visualization} is checked. Then click \mi{OK}.
+\end{framed}
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.6]{figures/analyzerDialogue}}
+\caption{\small Running the BModelAnalyser App.}
+\label{fig:analyzerDialogue}
+\end{figure}
+
+After BModelAnalyser runs, a new window should appear in your default web browser that represents the model selection results graphically [Figure \ref{fig:modelGraph}]. This graph depicts the nested relationship of the different substitution models: an arrow pointing from one model to another indicates that the model at the tail is nested within the model at the head of the arrow. As we can see, JC69 is nested within all other models and all other models are nested within GTR.
+
+\begin{figure}[!htbp]
+\centering
+\fbox{\includegraphics[scale=0.8]{figures/modelGraph}}
+\caption{\small A graphical representation of the model selection results produced by BModelAnalyzer.}
+\label{fig:modelGraph}
+\end{figure}
+
+The area of the circle surrounding each model is proportional to the the posterior support for that model. The colors represent whether the model is contained within the 95\% credible set (blue) or not (red). For the primate data set, the HKY model clearly has the highest posterior support [Figure \ref{fig:modelGraph}]. However, other models such as TN93 and two unnamed models, $121323$ and $121123$, also have fairly high posterior support. The six digit model code describes how the different substitution rates are grouped in the order of $r_{ac}$, $r_{ag}$, $r_{at}$, $r_{cg}$, $r_{ct}$ and $r_{gt}$. For instance, $121323$ is a slight variant of the HKY model with an additional group for the rates $r_{ct}$ and $r_{gt}$. The six digit codes for all models are shown in Figure \ref{fig:modelIndexes}.
+
+\begin{framed}
+\textbf{Topic for discussion:} We have used bModelTest to explore a large set of substitution models. But how do we know that any of the substitution models actually fit the observed sequence data well?
+\end{framed}
+
+
+%%%%%
+\bigskip
+\section{Useful Links}
+
+\begin{itemize}
+\item The original bModelTest tutorial \href{https://github.com/BEAST2-Dev/bModelTest/tree/master/doc/tutorial}{https://github.com/BEAST2-Dev/bModelTest/tree/master/doc/tutorial} \\ \vspace{-7mm}
+%\item \href{http://www.beast2.org/book.html}{\textit{Bayesian Evolutionary Analysis with BEAST 2}}  \citep{BEAST2book2014}\\ \vspace{-7mm}
+%\item BEAST 2 website and documentation: \href{http://www.beast2.org/}{http://www.beast2.org/} \\ \vspace{-7mm}
+%\item BEAST 1 website and documentation: \href{http://beast.bio.ed.ac.uk}{http://beast.bio.ed.ac.uk} \\ \vspace{-7mm}
+%\item Join the BEAST user discussion: \href{http://groups.google.com/group/beast-users}{http://groups.google.com/group/beast-users} \\ \vspace{-7mm}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Tutorial disclaimer %
+%%%%%%%%%%%%%%%%%%%%%%%
+% Please do not change the license
+% Add the author names and relevant links
+% Add any other aknowledgments here
+\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[scale=0.8]{figures/ccby.pdf}} This tutorial was written by David A. Rasmussen, Carsten Magnus and Remco Bouckaert for \href{https://taming-the-beast.github.io}{Taming the BEAST} and is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. 
+
+
+%%%%%%%%%%%%%%%%%%%%
+% Do NOT edit this %
+%%%%%%%%%%%%%%%%%%%%
+Version dated: \today
+
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+%  REFERENCES  %
+%%%%%%%%%%%%%%%%
+
+\printbibliography[heading=relevref]
+
+
+\end{document}
