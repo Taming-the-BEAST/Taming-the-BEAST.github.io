@@ -36,17 +36,17 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/08c33861c93612fe2713893383a5f10d9dc5f31a'
+						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/55ead1ef9991b54c348acd931e0b64c27e1ac3c3'
 					&gt;
 						14 Jun 2018
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/tgvaughan'
+						'https://github.com/magnuscar'
 					&gt;
-						tgvaughan
+						magnuscar
 					&lt;/a&gt;
-					: Removed out-of-date latex and fixed typo.
+					: Merge branch 'master' of https://github.com/Taming-the-BEAST/Substitution-model-averaging
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -54,7 +54,7 @@
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 14 Jun 2018 09:22:27 +0000</pubDate>
+				<pubDate>Thu, 14 Jun 2018 14:45:47 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
@@ -548,49 +548,6 @@ Actually fixed references
 			</item>
 				
 			<item>
-				<title>Calibrated Species Trees</title>
-				<description>
-					Estimating species divergence times using StarBEAST2
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Huw A. Ogilvie
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf'
-					&gt;
-						2 Feb 2017
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/genomescale'
-					&gt;
-						genomescale
-					&lt;/a&gt;
-					: Merge pull request #1 from Taming-the-BEAST/master
-
-Add input data
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.4
-					
-				</description>
-				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/calibrated-species-trees/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/calibrated-species-trees/</guid>
-			</item>
-				
-			<item>
 				<title>Species Trees with Relaxed Molecular Clocks</title>
 				<description>
 					Estimating per-species substitution rates using StarBEAST2
@@ -607,19 +564,17 @@ Add input data
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/genomescale/species-tree-clocks/commit/3dfde03173344dcd1dd623520e37091716f567a1'
+						'https://github.com/genomescale/species-tree-clocks/commit/a212897a7949e42964f6d08b43557bfdc16be54a'
 					&gt;
 						2 Feb 2017
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/genomescale'
+						'https://github.com/laduplessis'
 					&gt;
-						genomescale
+						laduplessis
 					&lt;/a&gt;
-					: Merge pull request #1 from Taming-the-BEAST/master
-
-Add data files and make bibtex compatible
+					: Add input data
 					&lt;br&gt;&lt;br&gt;
 					Level: Basic
 					
@@ -627,10 +582,51 @@ Add data files and make bibtex compatible
 						Requires: BEAST v2.4.4
 					
 				</description>
-				<pubDate>Thu, 02 Feb 2017 23:19:09 +0000</pubDate>
+				<pubDate>Thu, 02 Feb 2017 22:40:23 +0000</pubDate>
 				<category>Basic</category>
 				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
+			</item>
+				
+			<item>
+				<title>Calibrated Species Trees</title>
+				<description>
+					Estimating species divergence times using StarBEAST2
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/genomescale/calibrated-species-trees/commit/da5a3fb8f2c3b4e4cd5a23fceb961d6003d6ec31'
+					&gt;
+						2 Feb 2017
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Add input data
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.4
+					
+				</description>
+				<pubDate>Thu, 02 Feb 2017 22:40:00 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/calibrated-species-trees/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/calibrated-species-trees/</guid>
 			</item>
 				
 			<item>
