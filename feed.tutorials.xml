@@ -36,9 +36,9 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/55ead1ef9991b54c348acd931e0b64c27e1ac3c3'
+						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/f6f7be6d25599dee0f7b6b87ceb34af2df86dfe4'
 					&gt;
-						14 Jun 2018
+						17 Jun 2018
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -46,7 +46,7 @@
 					&gt;
 						magnuscar
 					&lt;/a&gt;
-					: Merge branch 'master' of https://github.com/Taming-the-BEAST/Substitution-model-averaging
+					: typo in diagonal matrix fixed
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -54,7 +54,7 @@
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 14 Jun 2018 14:45:47 +0000</pubDate>
+				<pubDate>Sun, 17 Jun 2018 10:20:09 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
@@ -579,7 +579,7 @@ Actually fixed references
 					Level: Basic
 					
 						&lt;br&gt;
-						Requires: BEAST v2.4.4
+						Requires: BEAST v2.5
 					
 				</description>
 				<pubDate>Thu, 02 Feb 2017 22:40:23 +0000</pubDate>

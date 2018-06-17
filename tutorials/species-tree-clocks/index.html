@@ -368,10 +368,475 @@
 			<p>
 			<h1>Background</h1>
 
-<p>This tutorial introduces StarBEAST2, an update to *BEAST which is more than
-10x faster and implements species tree relaxed clocks. These new clock models
-enable researchers to estimate substitution rates for individual species,
-and to infer where shifts in rates of molecular evolution have occured.</p>
+<p>In this tutorial we demonstrate the use of StarBEAST2, a fully Bayesian method
+of species tree estimation and a replacement for BEAST
+ <a href="#Heled01032010">(Heled &amp; Drummond, 2010)</a>. StarBEAST2 is many times faster than BEAST,
+and also supports applying a relaxed clock to the species tree. This enables
+estimating the substitution rates of extant and ancestral species under a
+multispecies coalescent model.</p>
+
+<p>You will need to download and install the following software:</p>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v.</p>
+
+<h3>FigTree</h3>
+
+<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v.</p>
+
+<hr>
+
+<h1>Practical: Setting up the StarBeast2 analysis</h1>
+
+<p>This tutorial will guide you through the analysis of seven loci sampled from 26
+individuals representing eight species of pocket gophers, a data set which was
+originally gathered and analysed by
+ <a href="#belfiore2008multilocus">(Belfiore, Liu, &amp; Moritz, 2008)</a>. The objective of this tutorial is to estimate the
+species tree that is most probable given the multi-individual multi-locus
+sequence data. The species tree has eight taxa, whereas each gene tree has 26
+taxa. StarBEAST2 will co-estimate seven gene trees embedded in a shared species
+tree  <a href="#Heled01032010">(Heled &amp; Drummond, 2010)</a>.</p>
+
+<p>The first step will be to convert a NEXUS file with a DATA or CHARACTERS block
+into a BEAST XML input file. This is done using the program BEAUti (Bayesian
+Evolutionary Analysis Utility). This is a user-friendly program for setting the
+evolutionary model and options for the MCMC analysis. The second step is to
+actually run BEAST using the input file that contains the data, model and
+settings. The final step is to explore the output of BEAST in order to diagnose
+problems and to summarize the results.</p>
+
+<h2>Setting up an analysis in BEAUti</h2>
+
+<p>Run BEAUti by double clicking on its icon, or by launching the BEAUTi executable
+file from the command line in Linux.</p>
+
+<h3>Set up BEAUti for StarBEAST2</h3>
+
+<p>StarBEAST2 can be easily installed from within BEAUTi. First choose the
+<strong>File/Manage Packages</strong> menu item, which will then display the list of
+packages available for installation. Select
+the StarBEAST2 package and then install it by clicking the
+<strong>Install/Upgrade</strong> button. <code>You must restart BEAUTi after installing any new
+packages for new features to become available.</code></p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-install.png" alt="">
+<figcaption>Figure 1: Install StarBEAST2 from within BEAUTi.</figcaption>
+</figure>
+
+<p>StarBEAST2 includes a series of templates for multispecies coalescent analyses.
+These include the <strong>StarBeast2</strong> template for strict clock or gene tree
+relaxed clock analyses, and various <strong>SpeciesTree\ldots</strong> templates for species tree
+relaxed clock analyses. Currently three types of relaxed clocks are supported by
+StarBEAST2; the uncorrelated lognormal clock (UCLN), the uncorrelated
+exponential clock (UCED), and the random local clock (RLC) which we will use for
+this tutorial.  The first thing to do is selecting that template by choosing the
+<strong>File/Template/SpeciesTreeRLC</strong> menu item.
+When changing a template, BEAUti deletes all previously imported data and starts
+with a new empty template. So, if you already loaded some data, a warning
+message pops up indicating that this data will be lost if you switch templates.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/figures/beauti-rlc.png" alt="">
+<figcaption>Figure 2: Select a species tree template in BEAUti.</figcaption>
+</figure>
+
+<h3>Allow clock rates to vary</h3>
+
+<p>By default BEAUTi fixes the clock rate of the first partition to 1, so that
+the rates of other loci are estimated relative to the first locus. This is
+generally inappropriate for StarBEAST2 analyses, so it is <code>very
+important</code> to disable this behaviour by deselecting the <strong>Mode/Automatic
+set clock rate</strong> menu item.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-disable.png" alt="">
+<figcaption>Figure 3: Disable automatic setting of clock rates.</figcaption>
+</figure>
+
+<h3>Loading the NEXUS files</h3>
+
+<p>StarBEAST2 supports multiple individuals per-species and multiple loci (we use
+the term locus to refer to a genomic sequence, and gene when referring to the
+evolutionary tree for a given locus). The data for each locus is stored as one
+alignment in its own NEXUS file. Taxa names in each alignment have to be unique,
+but duplicates across alignments are fine.</p>
+
+<p>To load a NEXUS format alignment, click the button with the plus symbol ($+$) in
+the lower left corner of the main <strong>Partitions</strong> tab. For this tutorial,
+navigate to the <strong>examples/nexus</strong> subfolder inside the <strong>beast</strong>
+application folder, and select all of the first seven NEXUS files. They should
+be numbered 26, 29, 47, 53, 59, 64, and 72.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-import.png" alt="">
+<figcaption>Figure 4: Selecting NEXUS alignment files to import.</figcaption>
+</figure>
+
+<p>Once loaded, the imported alignments are displayed in the \textbf{Partitions}
+panel. You can double click any alignment (partition) to show its detail. For
+multi-locus analyses, BEAST can link or unlink substitutions models across the
+loci by clicking buttons on the top of the panel. The default of StarBEAST2 is
+to unlink all models: substitution, clock, and trees. Note
+that you should only unlink the tree model across data partitions that are
+actually genetically unlinked. For example, in most organisms all the
+mitochondrial genes are effectively linked due to a lack of recombination and
+they should be set up to use the same tree model in any multispecies coalescent
+analysis.</p>
+
+<h3>Assigning the correct species to each sequence</h3>
+
+<p>Each taxon in a StarBEAST2 analysis is associated with a species or similar OTU.
+Typically the species name is already embedded inside the taxon label. The
+species name should be easy to extract; place it either at the beginning or the
+end, separated by a <em>special</em> character which does not appear in names. For
+example, <em>aria_334259, coast_343436</em> (using an underscore) or
+<em>10x017b.wrussia, 2x305b.eastis</em> (using a dot).</p>
+
+<p>We need to tell BEAUti somehow which lineages in the alignments go with taxa in
+the species tree. Select the Taxon Set panel, and a list of taxa from the
+alignments is shown together with a default guess by BEAUti. In this case, the
+guess is not very good, so we want to change this. You can manually change each
+of the entries in the table, or press the guess button and a dialog is shown
+where you can choose from several ways to try to detect the taxon from the name
+of the lineages, or have a mapping stored in a file. In this case, splitting the
+name on the underscore character <em>_</em> and selecting the second group will give
+us the mapping that we need.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-guess.png" alt="">
+<figcaption>Figure 5: Assigning species to sequences in BEAUti using the guess dialog.</figcaption>
+</figure>
+
+<p>Alternatively, the mapping can be read from a trait file. A proper trait file is
+tab delimited. The first row is always <em>traits</em> followed by the keyword
+<em>species</em> in the second column and separated by tab. The rest of the rows
+map each individual taxon name to a species name: the taxon name in the first
+column and species name in the second column separated by tab.</p>
+
+<h3>Adjusting the ploidy of each gene</h3>
+
+<p>Ploidy should be based on the mode of inheritance for each gene. By convention,
+nuclear genes in diploids are given a ploidy of 2.0. Because mitochondrial and Y
+chromosome genes are haploid even in otherwise diploid organisms, and also
+inherited only through the mother or the father respectively, their effective
+population size $N_e$ is only one quarter that of nuclear genes. Therefore if
+nuclear gene ploidy is set to 2.0, mitochondrial or Y chromosome gene ploidy
+should be set to 0.5. In this analysis all genes are from nuclear loci and their
+ploidy should be left at the default value of 2.0.</p>
+
+<h3>Selecting the method of population size integration</h3>
+
+<p>StarBEAST2, like BEAST before it, can estimate the effective population
+sizes for extant and ancestral species. However by default StarBEAST2
+analytically integrates over population sizes which is faster than making
+explicit estimates. If you do need to estimate population sizes, change the
+population model to <strong>Constant Populations</strong>. For this tutorial, keep the
+default model which is <strong>Analytical Population Size Integration</strong>.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-pop-model.png" alt="">
+<figcaption>Figure 6: The choice of population models used by StarBEAST2.</figcaption>
+</figure>
+
+<h3>Setting the substitution model</h3>
+
+<p>The next thing to do is to click on the <strong>Site Model</strong> tab at the top of
+the main window. This will reveal the evolutionary model settings for BEAST.
+Exactly which options appear depend on whether the data are nucleotides, or
+amino acids, or binary data, or general data. The settings that will appear
+after loading the data set will be the default values so we need to make some
+changes.</p>
+
+<p>Many of the models may be familiar to you. For this analysis, we will select
+each substitution model listed on the left side in turn to make the following
+change: select <em>HKY</em> for substitution model (<strong>Subst Model</strong>). Make sure to repeat this step for every partition listed
+on the left side.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-hky.png" alt="">
+<figcaption>Figure 7: Setting up substitution and site models for the gopher alignments.</figcaption>
+</figure>
+
+<h3>Setting the clock model</h3>
+
+<p>Click on the <strong>Clock Model</strong> tab at the top of the main window. In this
+panel you can configure the mean clock rate for each locus. If you followed the
+earlier instructions to disable automatic setting of clock rates, the
+mean clock rate <em>Clock.rate</em> of all partitions should have the
+<strong>estimate</strong> box ticked.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-clock.png" alt="">
+<figcaption>Figure 8: The default when automatic clock rate setting is disabled.</figcaption>
+</figure>
+
+<p>The default prior for mean clock rates in StarBEAST2 is a lognormal distribution
+with a mean (in real space) of 1. Trees estimated using this prior will have a
+time axis in units of substitutions. This will not be appropriate when using
+fossil (or other external) calibrations. You might instead use a 1/X prior,
+which is uninformative and will allow the calibration(s) to guide the clock
+rates.</p>
+
+<h3>Priors</h3>
+
+<p>The <strong>Priors</strong> panel allows priors to be specified for each parameter in
+the model. Click the top-leftmost arrow to expand the options available for the
+default <em>Yule Model</em>, and set the speciation rate (called for some silly
+historical reason <em>Birth Diff Rate</em>) to 180.0. Uncheck the
+<strong>estimate</strong> box to make this a fixed parameter. <code>For real
+analyses you should almost certainly estimate this value, but a fixed value will
+help us complete the tutorial in a reasonable time frame.</code></p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-yule.png" alt="">
+<figcaption>Figure 9: Fixing the speciation rate.</figcaption>
+</figure>
+
+<p>It would be biologically implausible for closely related species to have very large
+differences in substitution rates, so we should constrain the per-species branch
+rates to a reasonable range of values. Click the button next to
+<em>branchRates.Species</em> to define this range. Change <em>Lower</em> to 0.1 and
+<em>Upper</em> to 10.0, which means that the fastest branch rate can not be more than
+$100\times$ that of the slowest branch rate.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-branch-rates.png" alt="">
+<figcaption>Figure 10: Setting reasonable limits on species branch rates.</figcaption>
+</figure>
+
+<h3>Setting the MCMC options</h3>
+
+<p>The next tab, <strong>MCMC</strong>, provides more general settings to control the
+length of the MCMC and the file names.</p>
+
+<p>First up is the <strong>Chain Length</strong>. This the number of steps BEAST will
+complete before stopping an MCMC chain. The appropriate length of the chain
+depends on the size of the data set, the complexity of the model and on the
+accuracy of the answer required. The default value of 10,000,000 is entirely
+arbitrary and should be adjusted according to the size of your data set. For
+this tutorial keep the default chain length, which should finish within 10
+to 20 minutes on a modern computer.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/beauti-mcmc.png" alt="">
+<figcaption>Figure 11: Setting up the MCMC paremeters.</figcaption>
+</figure>
+
+<p>The other options specify how the parameter values in the Markov chain should be
+displayed on the screen and recorded in the log file. The <strong>screenlog</strong> output is
+simply for monitoring the programs progress so can be set to any value (although
+if set too small, the sheer quantity of information being displayed on the
+screen will actually slow the program down). For the <strong>tracelog</strong> and <strong>treelog</strong> files, the value should
+be set relative to the total length of the chain. Sampling too often will result
+in very large files with little extra benefit in terms of the precision of the
+analysis. Sample too infrequently and the log file will not contain much
+information about the distributions of the parameters. You probably want to aim
+to store no more than $10000$ samples so this should be set to no less than
+$\text{chain length}\div10000$. For this exercise, leave the default <strong>Store
+Every</strong> and <strong>Log Every</strong> settings in place.</p>
+
+<p>If you are using Windows then we suggest you add the suffix <em>.txt</em> to the
+tracelog, speciesTreeLog, and other treelog file names (e.g.
+<em>starbeast.log.txt</em> and <em>species.trees.txt</em>) so that Windows recognizes them as text files.</p>
+
+<h3>Generating the BEAST XML file</h3>
+
+<p>We are now ready to create the BEAST XML file. To do this, either select the
+<strong>File/Save</strong> or <strong>File/Save~As</strong> menu options. Save the file with an
+appropriate name (we usually end the filename with <em>.xml</em>, e.g.
+<em>pocket-gophers-rlc.xml</em>). We are now ready to run the file through BEAST.</p>
+
+<h3>Running BEAST</h3>
+
+<p>Now run BEAST and when it asks for an input file, provide your newly created XML
+file as input by clicking <strong>Choose~File...</strong>, and then click <strong>Run</strong>.
+In Linux BEAST will immediately launch a file opening dialog box, which is to
+select the BEAST XML to run. BEAST will then run until it has finished reporting
+information to the screen. The actual results files are saved to the disk in the
+same location as your input file. </p>
+
+<h3>Analyzing the results</h3>
+
+<p>Run the program called <strong>Tracer</strong> to analyze the output of BEAST. When the
+main window has opened, choose <strong>Import Trace File...</strong> from the
+<strong>File</strong> menu and select the file that BEAST has created called
+<em>starbeast.log</em>. On the left hand side is a list of the different quantities
+that BEAST has logged. There are traces for the the various probabilities and
+likelihoods as well as estimates of various discrete and continuous parameters.
+The first and most important trace --- the <em>posterior</em> --- is the log of the
+product of gene tree phylogenetic likelihoods, the coalescent probability of
+gene trees within the species tree, and all prior probabilities.
+Selecting a trace on the left brings up analyses for this trace on the right
+hand side depending on tab that is selected. Select the statistic named
+<em>sum(indicators.Species)</em> --- this is the total number of substitution rate
+changes along the species tree. You should now see a window like below.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/tracer-posterior.png" alt="">
+<figcaption>Figure 12: Tracer with the gopher data.</figcaption>
+</figure>
+
+<p>Remember that MCMC is a stochastic algorithm so the actual numbers will not be
+exactly the same. Tracer will plot a (marginalized) posterior distribution for
+the selected parameter and also give you statistics such as the mean and median.
+The <em>95\% HPD interval</em> stands for <em>highest posterior density
+interval</em>, and represents the most compact interval on the selected parameter
+that contains 95% of the posterior probability. It is also known as a
+<em>credibility interval</em>, and can be thought of as a Bayesian analog to a
+confidence interval. The HPD for the sum of rate changes suggests that either 0,
+1 or 2 rate changes have occured.</p>
+
+<h3>A note on prior distributions</h3>
+
+<p>For any Bayesian analysis, it is very important to compare your findings with
+the prior distribution. The default prior distribution for the number of
+substitution rate shifts for a random local clock is a Poisson distribution
+with the $\lambda$ parameter fixed at $\ln(2) \approx 0.69$. The prior
+probability of zero rate changes for the default distribution is equal to
+50\%. Tracer reported that around 1250 samples had zero rate shifts,
+out of $9000000 \div 5000 = 1800$ post-burnin posterior samples. This means that after
+adding data, our belief in a strict clock increased from 50\% to about 70\%,
+a very modest change. The data in this tutorial suggests that a strict clock
+applies to pocket gophers, but falls far short of any standard of proof.</p>
+
+<h3>Obtaining an estimate of the phylogenetic tree</h3>
+
+<p>BEAST also produces a sample of plausible trees. These can be summarized using
+the program <strong>TreeAnnotator</strong>. This will take the set of trees and identify
+a single tree that best represents the posterior distribution. It will then
+annotate this selected tree topology with the mean ages of all the nodes as well
+as the 95\% HPD interval of divergence times for each clade in the selected
+tree. It will also calculate the posterior clade probability for each node. Run
+the <strong>TreeAnnotator</strong> program and set it up to look like in the figure below.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/treeannotator.png" alt="">
+<figcaption>Figure 13: Using TreeAnnotator to summarise the tree set.</figcaption>
+</figure>
+
+<p>The <strong>Burnin percentage</strong> is the proportion of trees to remove from the
+start of the sample; for this tutorial, set a 10% burnin.</p>
+
+<p>The <strong>Posterior probability limit</strong> option specifies a limit such that if a
+node is found at less than this frequency in the sample of trees (i.e., has a
+posterior probability less than this limit), it will not be annotated.</p>
+
+<p>For <strong>Target tree type</strong> you can either choose a specific tree from a file
+or ask TreeAnnotator to find a tree in your sample. The default option,
+<strong>Maximum clade credibility tree</strong>, finds the tree with the highest product
+of the posterior probability of all its nodes.</p>
+
+<p>Keep <em>Common Ancestor heights</em> for <strong>Node heights</strong>. This sets the
+heights (ages) of each node in the tree to the mean height of the most recent
+common ancestor across the entire set of trees in the posterior.</p>
+
+<p>For the input file, select the trees file that BEAST created (by default this
+will be called <em>species.trees</em>) and select a file for the output (here we
+have called it <em>pocket-gophers.tree</em>). Now press <strong>Run</strong> and wait for the
+program to finish.</p>
+
+<h3>Viewing the species tree(s)</h3>
+
+<p>Finally, we can look at the tree in another program called <strong>FigTree</strong>. Run
+this program, and open the <em>pocket-gophers.tree</em> file by using the Open command
+in the File menu. The tree should appear. You can now try selecting some of the
+options in the control panel on the left. Try selecting <strong>Node Bars</strong> to
+get node age error bars. Turn on <strong>Node Labels</strong> and select
+<em>posterior</em> to get it to display the posterior probability for each node,
+and also turn on <strong>Branch Labels</strong> and select <em>rate_95%_HPD</em> to display
+the 95% HPD of the relative substitution rate for each species tree branch.
+You should end up with something like in the Figure below.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/figtree.png" alt="">
+<figcaption>Figure 11: Figtree representation of the species tree.</figcaption>
+</figure>
+
+<p>Notice that the HPD interval for per-species substitution rates all include
+1.0, concordant with our previous observation that there may be no changes
+to the overall substitution rate along this species tree.</p>
+
+<p>As a more Bayesian alternative to FigTree, you can load the entire species tree
+set into DensiTree. Open the <em>species.trees</em> file in DensiTree and set up the
+cloudogram as follows:</p>
+
+<ul>
+<li>Select the <strong>Central</strong> geometry from the set of options in the top-right of the main screen.</li>
+<li>Under <strong>Show</strong>, check the <em>Root Canal</em> tree to guide the eye.</li>
+<li>Under <strong>Clades</strong>, check <em>Show Clades</em>, display the means and 95\% HPDs using <em>draw</em>, and display the posterior support
+using <em>text</em>.</li>
+<li>Now, too many clades are shown, and most are not of interest. Check
+<em>Selected only</em>, then open the clade toolbar using the <strong>Window/View
+clade toolbar</strong> menu item. Select each clade (i.e.
+items with more than one species) with majority posterior support (i.e.
+with over 50% support) by using the
+shift key.</li>
+</ul>
+
+<p>The image should look something like in the figure below. Notice that
+there is about 16% support for <em>heterodus</em> to be an outgroup, and about
+82% for heterodus to be in a clade with <em>bottea</em>, <em>umbinus</em> and
+<em>townsendii</em>. Can you explain where the remaining 2% went?</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:50%;" src="figures/densitree.png" alt="">
+<figcaption>Figure 14: DensiTree representation of the species tree.</figcaption>
+</figure>
+
+<hr>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Heled01032010">Heled, J., &amp; Drummond, A. J. (2010). Bayesian Inference of Species Trees from Multilocus Data. <i>Molecular Biology and Evolution</i>, <i>27</i>(3), 570–580. https://doi.org/10.1093/molbev/msp274</span></li>
+<li>(missing reference)</li>
+<li><span id="belfiore2008multilocus">Belfiore, N. M., Liu, L., &amp; Moritz, C. (2008). Multilocus phylogenetics of a rapid radiation in the genus Thomomys (Rodentia: Geomyidae). <i>Systematic Biology</i>, <i>57</i>(2), 294.</span></li></ol>
 
 		</div>
 	</div>			
