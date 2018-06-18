@@ -309,10 +309,40 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/ec5ebe3cd74dfaa3d187d8f57a4a96a956fcd712">
-					16 Jan 2018 - <span class="text-gray">Merge pull request #3 from tgvaughan/master
-
-Incorporated Michael Matschiner's suggestions/fixes.</span>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/1a9f71e8227161f3e35b3b6dcae1119a7b29a0c8">
+					18 Jun 2018 - <span class="text-gray">citation and version update</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/d95f0e76635e0c6b96a5a2c192f557fa3535eee7">
+					14 Jun 2018 - <span class="text-gray">correct merger artifacts</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/3a42c3bf56f1908c23d00dc0e5aadb2420b1335d">
+					14 Jun 2018 - <span class="text-gray">correct merger artifacts</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/474026d945216679e9965bc00b9da913b0c3527e">
+					14 Jun 2018 - <span class="text-gray">merger</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/9a4c9abd867afe9ee237c159ecd7284ebc7686d7">
+					14 Jun 2018 - <span class="text-gray">colored update</span>
 					</a> 
 				</li>
 			
@@ -329,7 +359,7 @@ Incorporated Michael Matschiner's suggestions/fixes.</span>
 
 <p>Phylogeographic methods can help reveal the movement of genes between populations of organisms. This has been widely used to quantify pathogen movement between different host populations, the migration history of humans, and the geographic spread of languages or the gene flow between species using the location or state of samples alongside sequence data. Phylogenies therefore offer insights into migration processes not available from classic epidemiological or occurrence data alone. </p>
 
-<p>The structured coalescent allows to coherently model the migration and coalescent process, but struggles with complex datasets due to the need to infer ancestral migration histories. Thus, approximations to the structured coalescent, which integrate over all ancestral migration histories, have been developed. This tutorial gives an introduction into how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for <strong>M</strong>arginal <strong>A</strong>pproximation of the <strong>S</strong>tructured <strong>CO</strong>alescen <strong>T</strong> and implements a structured coalescent approximation <a href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This approximation doesn&#39;t require migration histories to be sampled using MCMC and therefore allows to analyse phylogenies with more than three or four states.</p>
+<p>The structured coalescent allows to coherently model the migration and coalescent process, but struggles with complex datasets due to the need to infer ancestral migration histories. Thus, approximations to the structured coalescent, which integrate over all ancestral migration histories, have been developed. This tutorial gives an introduction into how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for <strong>M</strong>arginal <strong>A</strong>pproximation of the <strong>S</strong>tructured <strong>CO</strong>alescen <strong>T</strong>  <a href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a> and implements a structured coalescent approximation <a href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This approximation doesn&#39;t require migration histories to be sampled using MCMC and therefore allows to analyse phylogenies with more than three or four states.</p>
 
 <hr>
 
@@ -363,7 +393,7 @@ Incorporated Michael Matschiner's suggestions/fixes.</span>
 
 <h1>Practical: Parameter and State inference using the approximate structured coalescent</h1>
 
-<p>In this tutorial we will estimate migration rates, effective population sizes and locations of internal nodes using the marginal approximation of the structured coalescent implemented in BEAST2, MASCOT.</p>
+<p>In this tutorial we will estimate migration rates, effective population sizes and locations of internal nodes using the marginal approximation of the structured coalescent implemented in BEAST2, MASCOT <a href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>.</p>
 
 <p>The aim is to:</p>
 
@@ -548,6 +578,8 @@ To color branches, you can go to <em>Appearance &gt;&gt; Colour by</em> and sele
 
 <h1>Useful Links</h1>
 
+<p>If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here <a href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper <a href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>. </p>
+
 <ul>
 <li>MASCOT source code: <a href="https://github.com/nicfel/Mascot">https://github.com/nicfel/Mascot</a></li>
 <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
@@ -559,7 +591,8 @@ To color branches, you can go to <em>Appearance &gt;&gt; Colour by</em> and sele
 
 <h1>Relevant References</h1>
 
-<ol class="bibliography"><li><span id="Mueller2017">Müller, N. F., Rasmussen, D. A., &amp; Stadler, T. (2017). The Structured Coalescent and its Approximations. <i>Molecular Biology and Evolution</i>, msx186.</span></li>
+<ol class="bibliography"><li><span id="mueller2017mascot">Müller, N. F., Rasmussen, D., &amp; Stadler, T. (2018). MASCOT: Parameter and state inference under the marginal structured coalescent approximation. <i>Bioinformatics</i>, bty406. https://doi.org/10.1093/bioinformatics/bty406</span></li>
+<li><span id="Mueller2017">Müller, N. F., Rasmussen, D. A., &amp; Stadler, T. (2017). The Structured Coalescent and its Approximations. <i>Molecular Biology and Evolution</i>, msx186.</span></li>
 <li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
 
 		</div>
