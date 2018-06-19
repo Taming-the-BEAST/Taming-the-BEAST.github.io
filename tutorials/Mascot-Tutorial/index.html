@@ -254,8 +254,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/mcc.trees" target="_blank" download rel="nofollow">
-						mcc.trees
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.mcc.trees" target="_blank" download rel="nofollow">
+						H3N2.mcc.trees
 					</a>
 				</li>
 			
@@ -309,6 +309,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/e1fa209a4464709cedb22d21673740934d8b694b">
+					19 Jun 2018 - <span class="text-gray">changed clock rate prior</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/83de382357b47d466921c21094bac14266538fbf">
+					19 Jun 2018 - <span class="text-gray">added link to Peter Beerlis backwards migration explanation</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/1a9f71e8227161f3e35b3b6dcae1119a7b29a0c8">
 					18 Jun 2018 - <span class="text-gray">citation and version update</span>
 					</a> 
@@ -327,22 +343,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/3a42c3bf56f1908c23d00dc0e5aadb2420b1335d">
 					14 Jun 2018 - <span class="text-gray">correct merger artifacts</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/474026d945216679e9965bc00b9da913b0c3527e">
-					14 Jun 2018 - <span class="text-gray">merger</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/9a4c9abd867afe9ee237c159ecd7284ebc7686d7">
-					14 Jun 2018 - <span class="text-gray">colored update</span>
 					</a> 
 				</li>
 			
@@ -383,7 +383,7 @@
 
 <h3>Tracer</h3>
 
-<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.0.</p>
 
 <h3>FigTree</h3>
 
@@ -480,18 +480,16 @@ button, the window should look like the one shown in the figure below:</p>
 
 <p>Now, we need to set the priors for the various parameters of the model. We do this by switching to the &quot;Priors&quot; tab.</p>
 
-<p>First, consider the effective population size parameter.  Since we have only a few samples per location, meaning little information about the different effective population sizes, we will need an informative prior. In this case we will use a log normal prior with parameters M=0 and S=1.  (These are respectively the mean and variance of the corresponding normal distribution in log space.)  To use this prior, choose &quot;Log Normal&quot; from the dropdown menu to the right of the Ne.t:H3N2 parameter label, then click the arrow to the left of the same label and fill in the parameter values appropriately (i.e. M=0 and S=1.). Ensure that the &quot;mean in real space&quot; checkbox remains unchecked.</p>
+<p>First, consider the effective population size parameter.  Since we have only a few samples per location, meaning little information about the different effective population sizes, we will need an informative prior. In this case we will use a log normal prior with parameters M=0 and S=1.  (These are respectively the mean and variance of the corresponding normal distribution in log space.)  To use this prior, choose &quot;Log Normal&quot; from the dropdown menu to the right of the Ne.t:H3N2 parameter label, then click the arrow to the left of the same label and fill in the parameter values appropriately (i.e. M=0 and S=1). Ensure that the &quot;mean in real space&quot; checkbox remains unchecked.</p>
 
-<p>The existing exponential distribution as a prior on the migration rate puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and very <em>very</em> small values is generally a good choice. Be aware however that the exponential distirbution is quite an informative prior: one should be careful that to choose a mean so that feasible rates
-are at least within the 95% HPD interval of the prior.  (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.)</p>
+<p>The existing exponential distribution as a prior on the migration rate puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and very <em>very</em> small values is generally a good choice. Be aware however that the exponential distirbution is quite an informative prior: one should be careful that to choose a mean so that feasible rates are at least within the 95% HPD interval of the prior.  (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.)</p>
 
-<p>Finally, set the prior for the clock rate. Since we only have a narrow sampling time window of less than two years and only 24 sequences, there isn&#39;t much information in the data about the clock rate. We have however a good idea about it for Influenza A/H3N2 Hemagglutinin. We can therefore set the prior to be normally distributed around 0.005 substitution per site per year with a variance of 0.0001. (At this point we could also just fix the rate)</p>
-
+<p>Finally, set the prior for the clock rate. We have a good idea about the clock rate of Influenza A/H3N2 Hemagglutinin. From previous work by other people, we know that the clock rate will be around 0.005 substitution per site per year. To include that prior knowledger, we can set the prior on the clock rate to a log normal distribution with mean in <strong>real space</strong>. To specify the mean in real space, make sure that the box <em>Mean In Real Space</em> is checked. If we set the S value to 0.25, we say that we expect the clock rate to be with 95% certainty between 0.00321 and 0.00731. 
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/Priors.png" alt="">
     <figcaption>Figure 6: Set up of the prior distributions.</figcaption>
-</figure>
+</figure></p>
 
 <h3>Specify the MCMC chain length (MCMC)</h3>
 
@@ -511,7 +509,7 @@ as</em>.</p>
 
 <h3>Run the Analysis using BEAST2</h3>
 
-<p>Run the <code>*.xml</code> using BEAST2 or use finished runs from the <em>precooked-runs</em> folder. The analysis should take about 6 to 7 minutes. </p>
+<p>Run the <code>*.xml</code> using BEAST2 or use finished runs from the <em>precooked-runs</em> folder. The analysis should take about 6 to 7 minutes. If you want to learn some more about what the migration rates we actually estimate, have a look at this blog post of Peter Beerli <a href="http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html">http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html</a>.</p>
 
 <h3>Analyse the log file using Tracer</h3>
 
@@ -539,7 +537,9 @@ as</em>.</p>
     <figcaption>Figure 10: Differences between Mean and Meadian estimates.</figcaption>
 </figure>
 
-<p>We can then look at the inferred migration rates. The migration rates have the label b_migration.*, meaning that they are backwards in time migration rates. The highest rates are from New York to Hong Kong. Because they are backwards in time migration rates, this means that lineages from New York are inferred to be likely from Hong Kong if we&#39;re going backwards in time. In the inferred phylogenies, we should therefore make the observation that lineages ancestral to samples from New York are inferred to be from Hong Kong backwards.</p>
+<p>We can then look at the inferred migration rates. The migration rates have the label b_migration.*, meaning that they are backwards in time migration rates. The highest rates are from New York to Hong Kong. Because they are backwards in time migration rates, this means that lineages from New York are inferred to be likely from Hong Kong if we&#39;re going backwards in time. In the inferred phylogenies, we should therefore make the observation that lineages ancestral to samples from New York are inferred to be from Hong Kong backwards. </p>
+
+<p>A more in depth explanation of what backwards migration really are can be found here <a href="http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html">http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html</a></p>
 
 <figure>
     <a id="fig:example1"></a>
@@ -564,15 +564,19 @@ as</em>.</p>
 <p>After opening the MCC tree in FigTree, we can visualize several things.
 To color branches, you can go to <em>Appearance &gt;&gt; Colour by</em> and select <em>max</em>. This is the location that was inferred to be most often the most likely location of the node.</p>
 
-<p>To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to <em>Node Labels &gt;&gt; Display</em> an then choose Hong_Kong, New_York or New_Zealand. These are the actual inferred probabilities of the nodes being in any location. </p>
-
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:100%;" src="figures/ColorsTree.png" alt="">
-    <figcaption>Figure 13: Inferred node locations.</figcaption>
+<a id="fig:example1"></a>
+<img style="width:100%;" src="figures/ColorsTree.png" alt="">
+<figcaption>Figure 13: Inferred node locations.</figcaption>
 </figure>
 
-<p>We can now determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations. It should here be mentioned that the inference of nodes being in a particular location makes some simplifying assumptions, such as that there are no other locations (i.e. apart from the sampled locations) where lineages could have been.</p>
+<p>We can now determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations. </p>
+
+<p>To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to <em>Node Labels &gt;&gt; Display</em> an then choose Hong_Kong, New_York or New_Zealand. These are the actual inferred probabilities of the nodes being in any location. </p>
+
+<p>It should however be mentioned that the inference of nodes being in a particular location makes some simplifying assumptions, such as that there are no other locations (i.e. apart from the sampled locations) where lineages could have been.</p>
+
+<p>Another important thing to know is that currently, we assume rates to be constant. This means that we assume that the population size of the different locations does not change over time. We also make the same assumption about the migration rates throught time. </p>
 
 <hr>
 

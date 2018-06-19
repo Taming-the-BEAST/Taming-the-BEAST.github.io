@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>MASCOT v1.0.0 Tutorial</title>
+				<description>
+					Parameter and State inference using the approximate structured coalescent
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel/Mascot-Tutorial/commit/e1fa209a4464709cedb22d21673740934d8b694b'
+					&gt;
+						19 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: changed clock rate prior
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5
+					
+				</description>
+				<pubDate>Tue, 19 Jun 2018 07:57:29 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Troubleshooting</title>
 				<description>
 					Post-processing and improving performance
@@ -50,47 +91,6 @@
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Troubleshooting/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting/</guid>
-			</item>
-				
-			<item>
-				<title>MASCOT v1.0.0 Tutorial</title>
-				<description>
-					Parameter and State inference using the approximate structured coalescent
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/nicfel/Mascot-Tutorial/commit/1a9f71e8227161f3e35b3b6dcae1119a7b29a0c8'
-					&gt;
-						18 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: citation and version update
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5
-					
-				</description>
-				<pubDate>Mon, 18 Jun 2018 09:30:33 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
 			</item>
 				
 			<item>
