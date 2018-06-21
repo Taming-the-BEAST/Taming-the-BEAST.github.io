@@ -331,6 +331,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/cd47b290f9960ba3993985f115996f6d2855cf2e">
+					21 Jun 2018 - <span class="text-gray">Removed comment about adding dimensions to R0 prior that was getting printed in the website live version.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/cbf48f8b315b45706b0cdb738e1e4ba6c2c0da36">
 					13 Jun 2018 - <span class="text-gray">Updated xml file for beast2.5 and bdmm0.3.1. Also removed refereference to transparency of branches (does not exist anymore in icytree) in main.tex</span>
 					</a> 
@@ -357,14 +365,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/47fb921e0947f990c02f95714d646e5a8bed4832">
 					30 Aug 2017 - <span class="text-gray">Update README.md</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/41bf87229b22a98c6ad97bb1d22c69df63f0c924">
-					23 Aug 2017 - <span class="text-gray">Update main.tex</span>
 					</a> 
 				</li>
 			
@@ -705,8 +705,7 @@ The first important parameter is R<sub>0</sub>.
 In epidemiology, the basic reproduction number, R<sub>0</sub>, of an infection is the number of secondary cases one case generates on average over the course of its infectious period, in an otherwise uninfected population.
 Even though we do not have any information on R<sub>0</sub> in the particular outbreak, infections rarely have R<sub>0</sub> &gt; 10, so we can set an upper limit on the sampled values.
 To do so, in the line denoted <code>R0.t:h3n2_2deme</code> click the button captioned <code>initial = [2.0, 2.0] [0.0, Infinity]</code> to get a pop up settings window (see <a href="#fig:R0-prior">Figure 12</a>), where you can set the upper value.
-Other than that, the current prior sets ther median value of the distribution to e<sup>0</sup> = 1, which will fit the endemic case of influenza.
-&lt;!--Should we also have multiple dimensions for R0 here?--&gt;</p>
+Other than that, the current prior sets ther median value of the distribution to e<sup>0</sup> = 1, which will fit the endemic case of influenza.</p>
 
 <figure>
     <a id="fig:R0-prior"></a>

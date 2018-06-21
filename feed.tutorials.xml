@@ -12,6 +12,182 @@
 		</image>
 				
 			<item>
+				<title>StarBEAST2 v14 tutorial</title>
+				<description>
+					Estimating species trees using StarBEAST2
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/genomescale/starbeast2-tutorial/commit/d88d4c588e76f5662f169eaeca13eb7d749d6928'
+					&gt;
+						21 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Small change so the website will compile
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Thu, 21 Jun 2018 18:23:40 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/starbeast2-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/starbeast2-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Species Trees with Relaxed Molecular Clocks</title>
+				<description>
+					Estimating per-species substitution rates using StarBEAST2
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/genomescale/species-tree-clocks/commit/0dac8eede4f7fd4c170464d1ca63e8027632da1f'
+					&gt;
+						21 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: refined latex to md conversion
+					&lt;br&gt;&lt;br&gt;
+					Level: Basic
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5
+					
+				</description>
+				<pubDate>Thu, 21 Jun 2018 07:30:17 +0000</pubDate>
+				<category>Basic</category>
+				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
+			</item>
+				
+			<item>
+				<title>Structured birth death model</title>
+				<description>
+					Population structure using the multi-type birth-death model
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Denise Kühnert
+							
+					
+						
+								
+									and  Jūlija Pečerska
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/cd47b290f9960ba3993985f115996f6d2855cf2e'
+					&gt;
+						20 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: Removed comment about adding dimensions to R0 prior that was getting printed in the website live version.
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Wed, 20 Jun 2018 22:01:53 +0000</pubDate>
+				<category>Professional</category>
+				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
+			</item>
+				
+			<item>
+				<title>Substitution model averaging</title>
+				<description>
+					A tutorial using bModelTest
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+					
+						
+								, Carsten Magnus
+						
+					
+						
+								
+									and Remco Bouckaert
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/d8c514bc6aec7e6426c8190fab00c43f24f84c0b'
+					&gt;
+						19 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/magnuscar'
+					&gt;
+						magnuscar
+					&lt;/a&gt;
+					: figures updated
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Tue, 19 Jun 2018 13:00:16 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
+			</item>
+				
+			<item>
 				<title>MASCOT v1.0.0 Tutorial</title>
 				<description>
 					Parameter and State inference using the approximate structured coalescent
@@ -94,96 +270,6 @@
 			</item>
 				
 			<item>
-				<title>Substitution model averaging</title>
-				<description>
-					A tutorial using bModelTest
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-					
-						
-								, Carsten Magnus
-						
-					
-						
-								
-									and Remco Bouckaert
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/f6f7be6d25599dee0f7b6b87ceb34af2df86dfe4'
-					&gt;
-						17 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/magnuscar'
-					&gt;
-						magnuscar
-					&lt;/a&gt;
-					: typo in diagonal matrix fixed
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Sun, 17 Jun 2018 10:20:09 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
-			</item>
-				
-			<item>
-				<title>Species Trees with Relaxed Molecular Clocks</title>
-				<description>
-					Estimating per-species substitution rates using StarBEAST2
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Huw A. Ogilvie
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/genomescale/species-tree-clocks/commit/4710cff20fc3dc3bef967c458ef98d0c7e8ac913'
-					&gt;
-						15 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: start markdown verison
-					&lt;br&gt;&lt;br&gt;
-					Level: Basic
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5
-					
-				</description>
-				<pubDate>Fri, 15 Jun 2018 08:50:20 +0000</pubDate>
-				<category>Basic</category>
-				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
-			</item>
-				
-			<item>
 				<title>Introduction to BEAST2</title>
 				<description>
 					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
@@ -230,51 +316,6 @@
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
-			</item>
-				
-			<item>
-				<title>Structured birth death model</title>
-				<description>
-					Population structure using the multi-type birth-death model
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Denise Kühnert
-							
-					
-						
-								
-									and  Jūlija Pečerska
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/cbf48f8b315b45706b0cdb738e1e4ba6c2c0da36'
-					&gt;
-						13 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: Updated xml file for beast2.5 and bdmm0.3.1. Also removed refereference to transparency of branches (does not exist anymore in icytree) in main.tex
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Wed, 13 Jun 2018 11:40:45 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>

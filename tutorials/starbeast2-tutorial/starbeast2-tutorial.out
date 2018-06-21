@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Preliminaries}{}% 2
+\BOOKMARK [1][-]{section.3}{Reconstructing the species tree of Canis}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Importing alignments}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Linking models}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Specifying species names}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Gene Ploidy and Population Model}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Site Model}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Clock Model}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.7}{Priors and MCMC}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.8}{Running BEAST}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.9}{Checking the log file}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.10}{Checking the species trees}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.11}{Generating a summary tree}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Estimating per-species clock rates}{}% 15
+\BOOKMARK [1][-]{section.5}{Total evidence tip-dating}{}% 16
+\BOOKMARK [1][-]{section.6}{Wrapping up}{}% 17

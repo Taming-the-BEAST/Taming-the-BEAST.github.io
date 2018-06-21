@@ -302,6 +302,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/d8c514bc6aec7e6426c8190fab00c43f24f84c0b">
+					19 Jun 2018 - <span class="text-gray">figures updated</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/bc2bc6c9aee251c49ef501fb6857b9c5c96ca749">
+					19 Jun 2018 - <span class="text-gray">removed one unclear question and replaced mutation rates by substitution rates</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/f6f7be6d25599dee0f7b6b87ceb34af2df86dfe4">
 					17 Jun 2018 - <span class="text-gray">typo in diagonal matrix fixed</span>
 					</a> 
@@ -320,22 +336,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/2994e488690f77ae73fe2164258709bc8d38fa07">
 					14 Jun 2018 - <span class="text-gray">some wording changed to be more precise, figures updated</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/08c33861c93612fe2713893383a5f10d9dc5f31a">
-					14 Jun 2018 - <span class="text-gray">Removed out-of-date latex and fixed typo.</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/a6f56d186608f52963624583300ec40ff5417cb3">
-					14 Jun 2018 - <span class="text-gray"> install figure updated, some changes at subst rate matrix</span>
 					</a> 
 				</li>
 			
@@ -504,7 +504,7 @@ A useful consequence is that as we are exploring the space of different substitu
 
 <p>While BEAST is running consider the following discussion points.</p>
 
-<p>We did not check <strong>estimate</strong> in the box next to the Mutation Rate in the <strong>Site Model</strong> tab. Doing so makes no difference, since BEAUti constrains the mean mutation rate of all partitions to be equal to 1 (by default). Since we linked the substitution model across all partitions we effectively have only one partition, thus the mutation rate is fixed to 1. </p>
+<p>We did not check <strong>estimate</strong> in the box next to the Mutation Rate in the <strong>Site Model</strong> tab. Doing so makes no difference, since BEAUti constrains the mean substitution rate of all partitions to be equal to 1 (by default). Since we linked the substitution model across all partitions we effectively have only one partition, thus the substitution rate is fixed to 1. </p>
 
 <p>Note that BEAUti (by default) does not allow us to estimate the clock rate in the <strong>Clock Model</strong> tab. In this analysis we only have contemporaneously sampled sequences and we did not set a calibration node as in the introductory tutorial. Thus, we have no temporal information and the clock rate is not uniquely identifiable. To make the model identifiable BEAUti arbitrarily fixes the clock rate to 1.</p>
 
@@ -512,9 +512,8 @@ A useful consequence is that as we are exploring the space of different substitu
 <p><strong>Topics for discussion:</strong> </p>
 
 <ul>
-<li><p>We cannot estimate the substitution rate, so branches in the tree will not be measured in calendar time. What will be the units for branch lengths in the estimated tree?</p></li>
-<li><p>Suppose we used individual substitution models for each partition. What does the estimated mutation rate for each partition represent? Would the rate of each partition be identifiable?</p></li>
-<li><p>What would happen if we removed the constraint to have a mean mutation rate of 1? What if we also added a calibration point?</p></li>
+<li><p>Suppose we used individual substitution models for each partition. What does the estimated substitution rate for each partition represent? Would the rate of each partition be identifiable?</p></li>
+<li><p>What would happen if we removed the constraint to have a mean substitution rate of 1? What if we also added a calibration point?</p></li>
 </ul>
 </blockquote>
 

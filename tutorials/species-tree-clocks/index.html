@@ -344,6 +344,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/0dac8eede4f7fd4c170464d1ca63e8027632da1f">
+					21 Jun 2018 - <span class="text-gray">refined latex to md conversion</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/4710cff20fc3dc3bef967c458ef98d0c7e8ac913">
 					15 Jun 2018 - <span class="text-gray">start markdown verison</span>
 					</a> 
@@ -372,14 +380,6 @@ Add data files and make bibtex compatible</span>
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/4f0d0ee032e276dba51b5dc0a5149f7b911c6e9c">
 					02 Feb 2017 - <span class="text-gray">Make bibtex file compatible with Jekyll website</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/814a19d20b4b4fac8e569cdbc56d73c5bc41aa1e">
-					02 Feb 2017 - <span class="text-gray">Added data, removed obsolete bit about pop sizes</span>
 					</a> 
 				</li>
 			
@@ -512,7 +512,7 @@ evolutionary tree for a given locus). The data for each locus is stored as one
 alignment in its own NEXUS file. Taxa names in each alignment have to be unique,
 but duplicates across alignments are fine.</p>
 
-<p>To load a NEXUS format alignment, click the button with the plus symbol ($+$) in
+<p>To load a NEXUS format alignment, click the button with the plus symbol (+) in
 the lower left corner of the main <strong>Partitions</strong> tab. For this tutorial,
 navigate to the <strong>examples/nexus</strong> subfolder inside the <strong>beast</strong>
 application folder, and select all of the first seven NEXUS files. They should
@@ -572,7 +572,7 @@ column and species name in the second column separated by tab.</p>
 nuclear genes in diploids are given a ploidy of 2.0. Because mitochondrial and Y
 chromosome genes are haploid even in otherwise diploid organisms, and also
 inherited only through the mother or the father respectively, their effective
-population size $N_e$ is only one quarter that of nuclear genes. Therefore if
+population size N<sup>e</sup> is only one quarter that of nuclear genes. Therefore if
 nuclear gene ploidy is set to 2.0, mitochondrial or Y chromosome gene ploidy
 should be set to 0.5. In this analysis all genes are from nuclear loci and their
 ploidy should be left at the default value of 2.0.</p>
@@ -654,7 +654,7 @@ differences in substitution rates, so we should constrain the per-species branch
 rates to a reasonable range of values. Click the button next to
 <em>branchRates.Species</em> to define this range. Change <em>Lower</em> to 0.1 and
 <em>Upper</em> to 10.0, which means that the fastest branch rate can not be more than
-$100\times$ that of the slowest branch rate.</p>
+100 times that of the slowest branch rate.</p>
 
 <figure>
 <a id="fig:example1"></a>
@@ -690,8 +690,8 @@ be set relative to the total length of the chain. Sampling too often will result
 in very large files with little extra benefit in terms of the precision of the
 analysis. Sample too infrequently and the log file will not contain much
 information about the distributions of the parameters. You probably want to aim
-to store no more than $10000$ samples so this should be set to no less than
-$\text{chain length}\div10000$. For this exercise, leave the default <strong>Store
+to store no more than 10000 samples so this should be set to no less than
+(chain length)/10000. For this exercise, leave the default <strong>Store
 Every</strong> and <strong>Log Every</strong> settings in place.</p>
 
 <p>If you are using Windows then we suggest you add the suffix <em>.txt</em> to the
@@ -751,11 +751,11 @@ confidence interval. The HPD for the sum of rate changes suggests that either 0,
 <p>For any Bayesian analysis, it is very important to compare your findings with
 the prior distribution. The default prior distribution for the number of
 substitution rate shifts for a random local clock is a Poisson distribution
-with the $\lambda$ parameter fixed at $\ln(2) \approx 0.69$. The prior
+with the \lambda parameter fixed at ln(2), which is approximately 0.69. The prior
 probability of zero rate changes for the default distribution is equal to
-50\%. Tracer reported that around 1250 samples had zero rate shifts,
-out of $9000000 \div 5000 = 1800$ post-burnin posterior samples. This means that after
-adding data, our belief in a strict clock increased from 50\% to about 70\%,
+50%. Tracer reported that around 1250 samples had zero rate shifts
+(out of 9000000/5000 = 1800) post-burnin posterior samples. This means that after
+adding data, our belief in a strict clock increased from 50% to about 70%,
 a very modest change. The data in this tutorial suggests that a strict clock
 applies to pocket gophers, but falls far short of any standard of proof.</p>
 
@@ -765,7 +765,7 @@ applies to pocket gophers, but falls far short of any standard of proof.</p>
 the program <strong>TreeAnnotator</strong>. This will take the set of trees and identify
 a single tree that best represents the posterior distribution. It will then
 annotate this selected tree topology with the mean ages of all the nodes as well
-as the 95\% HPD interval of divergence times for each clade in the selected
+as the 95% HPD interval of divergence times for each clade in the selected
 tree. It will also calculate the posterior clade probability for each node. Run
 the <strong>TreeAnnotator</strong> program and set it up to look like in the figure below.</p>
 

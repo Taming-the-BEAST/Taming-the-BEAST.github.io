@@ -1,0 +1,1114 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{Bouckaert2010}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BRR1}
+    \strng{fullhash}{BRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1093/bioinformatics/btq110
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/content_public/journal/bioinformatics/26/10/10.1093/b
+    \verb ioinformatics/btq110/2/btq110.pdf
+    \endverb
+    \field{number}{10}
+    \field{pages}{1372\bibrangedash 1373}
+    \field{title}{DensiTree: making sense of sets of phylogenetic trees}
+    \verb{url}
+    \verb + http://dx.doi.org/10.1093/bioinformatics/btq110
+    \endverb
+    \field{volume}{26}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Gavryushkina2014}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GA}{%
+         family={Gavryushkina},
+         familyi={G\bibinitperiod},
+         given={Alexandra},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Welch},
+         familyi={W\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Tanja},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GA+1}
+    \strng{fullhash}{GAWDSTDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{12}
+    \field{pages}{e1003919}
+    \field{title}{Bayesian inference of sampled ancestor trees for epidemiology
+  and fossil calibration}
+    \field{volume}{10}
+    \field{journaltitle}{PLoS Computational Biology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Hasegawa1985}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HM}{%
+         family={Hasegawa},
+         familyi={H\bibinitperiod},
+         given={Masami},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kishino},
+         familyi={K\bibinitperiod},
+         given={Hirohisa},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YT}{%
+         family={Yano},
+         familyi={Y\bibinitperiod},
+         given={Takaaki},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HM+1}
+    \strng{fullhash}{HMKHYT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1985}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    A new statistical method for estimating divergence dates of species from
+  DNA sequence data by a molecular clock approach is developed. This method
+  takes into account effectively the information contained in a set of DNA
+  sequence data. The molecular clock of mitochondrial DNA (mtDNA) was
+  calibrated by setting the date of divergence between primates and ungulates
+  at the Cretaceous-Tertiary boundary (65 million years ago), when the
+  extinction of dinosaurs occurred. A generalized leastsquares method was
+  applied in fitting a model to mtDNA sequence data, and the clock gave dates
+  of 92.3{\textpm}11.7, 13.3{\textpm}1.5, 10.9{\textpm}1.2, 3.7{\textpm}0.6,
+  and 2.7{\textpm}0.6 million years ago (where the second of each pair of
+  numbers is the standard deviation) for the separation of mouse, gibbon,
+  orangutan, gorilla, and chimpanzee, respectively, from the line leading to
+  humans. Although there is some uncertainty in the clock, this dating may pose
+  a problem for the widely believed hypothesis that the bipedal
+  creatureAustralopithecus afarensis, which lived some 3.7 million years ago at
+  Laetoli in Tanzania and at Hadar in Ethiopia, was ancestral to man and
+  evolved after the human-ape splitting. Another likelier possibility is that
+  mtDNA was transferred through hybridization between a proto-human and a
+  protochimpanzee after the former had developed bipedalism.%
+    }
+    \verb{doi}
+    \verb 10.1007/BF02101694
+    \endverb
+    \field{issn}{1432-1432}
+    \field{number}{2}
+    \field{pages}{160\bibrangedash 174}
+    \field{title}{Dating of the human-ape splitting by a molecular clock of
+  mitochondrial {DNA}}
+    \verb{url}
+    \verb https://doi.org/10.1007/BF02101694
+    \endverb
+    \field{volume}{22}
+    \field{journaltitle}{Journal of Molecular Evolution}
+    \field{year}{1985}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Heled2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJBRR1}
+    \strng{fullhash}{HJBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Bayesian phylogenetic analysis generates a set of trees which are often
+  condensed into a single tree representing the whole set. Many methods exist
+  for selecting a representative topology for a set of unrooted trees, few
+  exist for assigning branch lengths to a fixed topology, and even fewer for
+  simultaneously setting the topology and branch lengths. However, there is
+  very little research into locating a good representative for a set of rooted
+  time trees like the ones obtained from a BEAST analysis.%
+    }
+    \verb{doi}
+    \verb 10.1186/1471-2148-13-221
+    \endverb
+    \field{issn}{1471-2148}
+    \field{number}{1}
+    \field{pages}{221}
+    \field{title}{Looking for trees in the forest: summary tree from posterior
+  samples}
+    \verb{url}
+    \verb https://doi.org/10.1186/1471-2148-13-221
+    \endverb
+    \field{volume}{13}
+    \field{journaltitle}{BMC Evolutionary Biology}
+    \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Hugall2007}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HAF}{%
+         family={Hugall},
+         familyi={H\bibinitperiod},
+         given={Andrew\bibnamedelima F.},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={Foster},
+         familyi={F\bibinitperiod},
+         given={Ralph},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LMSY}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Michael S.\bibnamedelima Y.},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  Y\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hedin},
+         familyi={H\bibinitperiod},
+         given={Marshal},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HAF+1}
+    \strng{fullhash}{HAFFRLMSYHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1080/10635150701477825
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/content_public/journal/sysbio/56/4/10.1080_1063515070
+    \verb 1477825/3/56-4-543.pdf
+    \endverb
+    \field{number}{4}
+    \field{pages}{543\bibrangedash 563}
+    \field{title}{Calibration Choice, Rate Smoothing, and the Pattern of
+  Tetrapod Diversification According to the Long Nuclear Gene {RAG-1}}
+    \verb{url}
+    \verb + http://dx.doi.org/10.1080/10635150701477825
+    \endverb
+    \field{volume}{56}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2007}
+  \endentry
+
+  \entry{LindbladToh2005}{article}{}
+    \true{moreauthor}
+    \name{author}{10}{}{%
+      {{hash=LTK}{%
+         family={Lindblad-Toh},
+         familyi={L\bibinitperiod-T\bibinitperiod},
+         given={Kerstin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=WCM}{%
+         family={Wade},
+         familyi={W\bibinitperiod},
+         given={Claire\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MTS}{%
+         family={Mikkelsen},
+         familyi={M\bibinitperiod},
+         given={Tarjei\bibnamedelima S},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=KEK}{%
+         family={Karlsson},
+         familyi={K\bibinitperiod},
+         given={Elinor\bibnamedelima K},
+         giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=JDB}{%
+         family={Jaffe},
+         familyi={J\bibinitperiod},
+         given={David\bibnamedelima B},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kamal},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Clamp},
+         familyi={C\bibinitperiod},
+         given={Michele},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CJL}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Jean\bibnamedelima L},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=KEJ}{%
+         family={Kulbokas},
+         familyi={K\bibinitperiod},
+         given={Edward\bibnamedelima J},
+         giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=ZMC}{%
+         family={Zody},
+         familyi={Z\bibinitperiod},
+         given={Michael\bibnamedelima C},
+         giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{LTK+1}
+    \strng{fullhash}{LTKWCMMTSKEKJDBKMCMCJLKEJZMC+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{7069}
+    \field{pages}{803\bibrangedash 819}
+    \field{title}{Genome sequence, comparative analysis and haplotype structure
+  of the domestic dog}
+    \field{volume}{438}
+    \field{journaltitle}{Nature}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Ogilvie2016}{article}{}
+    \name{author}{4}{}{%
+      {{hash=OHA}{%
+         family={Ogilvie},
+         familyi={O\bibinitperiod},
+         given={Huw\bibnamedelima A.},
+         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OHA+1}
+    \strng{fullhash}{OHAHJXDDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.1093/sysbio/syv118
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/content_public/journal/sysbio/65/3/10.1093_sysbio_syv
+    \verb 118/2/syv118.pdf
+    \endverb
+    \field{number}{3}
+    \field{pages}{381\bibrangedash 396}
+    \field{title}{Computational Performance and Statistical Accuracy of
+  {*BEAST} and Comparisons with Other Methods}
+    \verb{url}
+    \verb + http://dx.doi.org/10.1093/sysbio/syv118
+    \endverb
+    \field{volume}{65}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Ogilvie2017}{article}{}
+    \name{author}{3}{}{%
+      {{hash=OHA}{%
+         family={Ogilvie},
+         familyi={O\bibinitperiod},
+         given={Huw\bibnamedelima A.},
+         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OHA+1}
+    \strng{fullhash}{OHABRRDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.1093/molbev/msx126
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/content_public/journal/mbe/34/8/10.1093_molbev_msx126
+    \verb /2/msx126.pdf
+    \endverb
+    \field{number}{8}
+    \field{pages}{2101\bibrangedash 2114}
+    \field{title}{StarBEAST2 Brings Faster Species Tree Inference and Accurate
+  Estimates of Substitution Rates}
+    \verb{url}
+    \verb + http://dx.doi.org/10.1093/molbev/msx126
+    \endverb
+    \field{volume}{34}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2017}
+  \endentry
+
+  \entry{PradoMartinez2013}{article}{}
+    \name{author}{75}{}{%
+      {{hash=PMJ}{%
+         family={Prado-Martinez},
+         familyi={P\bibinitperiod-M\bibinitperiod},
+         given={Javier},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SPH}{%
+         family={Sudmant},
+         familyi={S\bibinitperiod},
+         given={Peter\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=KJM}{%
+         family={Kidd},
+         familyi={K\bibinitperiod},
+         given={Jeffrey\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Heng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=KJL}{%
+         family={Kelley},
+         familyi={K\bibinitperiod},
+         given={Joanna\bibnamedelima L.},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=LGB}{%
+         family={Lorente-Galdos},
+         familyi={L\bibinitperiod-G\bibinitperiod},
+         given={Belen},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=VKR}{%
+         family={Veeramah},
+         familyi={V\bibinitperiod},
+         given={Krishna\bibnamedelima R.},
+         giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=WAE}{%
+         family={Woerner},
+         familyi={W\bibinitperiod},
+         given={August\bibnamedelima E.},
+         giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=OTD}{%
+         family={O'Connor},
+         familyi={O\bibinitperiod},
+         given={Timothy\bibnamedelima D.},
+         giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Santpere},
+         familyi={S\bibinitperiod},
+         given={Gabriel},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Cagan},
+         familyi={C\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TC}{%
+         family={Theunert},
+         familyi={T\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Casals},
+         familyi={C\bibinitperiod},
+         given={Ferran},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Laayouni},
+         familyi={L\bibinitperiod},
+         given={Hafid},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Munch},
+         familyi={M\bibinitperiod},
+         given={Kasper},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Hobolth},
+         familyi={H\bibinitperiod},
+         given={Asger},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HAE}{%
+         family={Halager},
+         familyi={H\bibinitperiod},
+         given={Anders\bibnamedelima E.},
+         giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Malig},
+         familyi={M\bibinitperiod},
+         given={Maika},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HRJ}{%
+         family={Hernandez-Rodriguez},
+         familyi={H\bibinitperiod-R\bibinitperiod},
+         given={Jessica},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HHI}{%
+         family={Hernando-Herraez},
+         familyi={H\bibinitperiod-H\bibinitperiod},
+         given={Irene},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=PK}{%
+         family={Pr\"ufer},
+         familyi={P\bibinitperiod},
+         given={Kay},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JL}{%
+         family={Johnstone},
+         familyi={J\bibinitperiod},
+         given={Laurel},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lachmann},
+         familyi={L\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AC}{%
+         family={Alkan},
+         familyi={A\bibinitperiod},
+         given={Can},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TD}{%
+         family={Twigg},
+         familyi={T\bibinitperiod},
+         given={Dorina},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=PN}{%
+         family={Petit},
+         familyi={P\bibinitperiod},
+         given={Natalia},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Baker},
+         familyi={B\bibinitperiod},
+         given={Carl},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HF}{%
+         family={Hormozdiari},
+         familyi={H\bibinitperiod},
+         given={Fereydoun},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=FCM}{%
+         family={Fernandez-Callejo},
+         familyi={F\bibinitperiod-C\bibinitperiod},
+         given={Marcos},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Dabad},
+         familyi={D\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WML}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={Michael\bibnamedelima L.},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Stevison},
+         familyi={S\bibinitperiod},
+         given={Laurie},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Camprub\'i},
+         familyi={C\bibinitperiod},
+         given={Cristina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CT}{%
+         family={Carvalho},
+         familyi={C\bibinitperiod},
+         given={Tiago},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RHA}{%
+         family={Ruiz-Herrera},
+         familyi={R\bibinitperiod-H\bibinitperiod},
+         given={Aurora},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=VL}{%
+         family={Vives},
+         familyi={V\bibinitperiod},
+         given={Laura},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mele},
+         familyi={M\bibinitperiod},
+         given={Marta},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AT}{%
+         family={Abello},
+         familyi={A\bibinitperiod},
+         given={Teresa},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KI}{%
+         family={Kondova},
+         familyi={K\bibinitperiod},
+         given={Ivanela},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=BRE}{%
+         family={Bontrop},
+         familyi={B\bibinitperiod},
+         given={Ronald\bibnamedelima E.},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Pusey},
+         familyi={P\bibinitperiod},
+         given={Anne},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Lankester},
+         familyi={L\bibinitperiod},
+         given={Felix},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=KJA}{%
+         family={Kiyang},
+         familyi={K\bibinitperiod},
+         given={John\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BRA}{%
+         family={Bergl},
+         familyi={B\bibinitperiod},
+         given={Richard\bibnamedelima A.},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=LE}{%
+         family={Lonsdorf},
+         familyi={L\bibinitperiod},
+         given={Elizabeth},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Myers},
+         familyi={M\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Ventura},
+         familyi={V\bibinitperiod},
+         given={Mario},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Gagneux},
+         familyi={G\bibinitperiod},
+         given={Pascal},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Comas},
+         familyi={C\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Siegismund},
+         familyi={S\bibinitperiod},
+         given={Hans},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Blanc},
+         familyi={B\bibinitperiod},
+         given={Julie},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ACL}{%
+         family={Agueda-Calpena},
+         familyi={A\bibinitperiod-C\bibinitperiod},
+         given={Lidia},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gut},
+         familyi={G\bibinitperiod},
+         given={Marta},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FL}{%
+         family={Fulton},
+         familyi={F\bibinitperiod},
+         given={Lucinda},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=TSA}{%
+         family={Tishkoff},
+         familyi={T\bibinitperiod},
+         given={Sarah\bibnamedelima A.},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MJC}{%
+         family={Mullikin},
+         familyi={M\bibinitperiod},
+         given={James\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=WRK}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={Richard\bibnamedelima K.},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=GIG}{%
+         family={Gut},
+         familyi={G\bibinitperiod},
+         given={Ivo\bibnamedelima G.},
+         giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=GMK}{%
+         family={Gonder},
+         familyi={G\bibinitperiod},
+         given={Mary\bibnamedelima Katherine},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=ROA}{%
+         family={Ryder},
+         familyi={R\bibinitperiod},
+         given={Oliver\bibnamedelima A.},
+         giveni={O\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HBH}{%
+         family={Hahn},
+         familyi={H\bibinitperiod},
+         given={Beatrice\bibnamedelima H.},
+         giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=NA}{%
+         family={Navarro},
+         familyi={N\bibinitperiod},
+         given={Arcadi},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AJM}{%
+         family={Akey},
+         familyi={A\bibinitperiod},
+         given={Joshua\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Bertranpetit},
+         familyi={B\bibinitperiod},
+         given={Jaume},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Reich},
+         familyi={R\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Mailund},
+         familyi={M\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SMH}{%
+         family={Schierup},
+         familyi={S\bibinitperiod},
+         given={Mikkel\bibnamedelima H.},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hvilsom},
+         familyi={H\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=AAM}{%
+         family={Andr\'es},
+         familyi={A\bibinitperiod},
+         given={Aida\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=WJD}{%
+         family={Wall},
+         familyi={W\bibinitperiod},
+         given={Jeffrey\bibnamedelima D.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BCD}{%
+         family={Bustamante},
+         familyi={B\bibinitperiod},
+         given={Carlos\bibnamedelima D.},
+         giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=HMF}{%
+         family={Hammer},
+         familyi={H\bibinitperiod},
+         given={Michael\bibnamedelima F.},
+         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=EEE}{%
+         family={Eichler},
+         familyi={E\bibinitperiod},
+         given={Evan\bibnamedelima E.},
+         giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=MBT}{%
+         family={Marques-Bonet},
+         familyi={M\bibinitperiod-B\bibinitperiod},
+         given={Tomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Author(s) SN -}%
+    }
+    \strng{namehash}{PMJ+1}
+  \strng{fullhash}{PMJSPHKJMLHKJLLGBVKRWAEOTDSGCATCCFLHMKHAHAEMMHRJHHIPKPMJLLMACTDPNBCHFFCMDMWMLSLCCCTRHAVLMMATKIBREPALFKJABRALEMSVMGPCDSHBJACLGMFLTSAMJCWRKGIGGMKROAHBHNAAJMBJRDMTSMHHCAAMWJDBCDHMFEEEMBT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{471\bibrangedash 475}
+    \field{title}{Great ape genetic diversity and population history}
+    \verb{url}
+    \verb http://dx.doi.org/10.1038/nature12228
+    \endverb
+    \field{volume}{499}
+    \field{journaltitle}{Nature}
+    \field{year}{2013}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Scornavacca2017}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SC}{%
+         family={Scornavacca},
+         familyi={S\bibinitperiod},
+         given={Celine},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GN}{%
+         family={Galtier},
+         familyi={G\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SCGN1}
+    \strng{fullhash}{SCGN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1093/sysbio/syw082
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/content_public/journal/sysbio/66/1/10.1093_sysbio_syw
+    \verb 082/8/syw082.pdf
+    \endverb
+    \field{number}{1}
+    \field{pages}{112\bibrangedash 120}
+    \field{title}{Incomplete Lineage Sorting in Mammalian Phylogenomics}
+    \verb{url}
+    \verb + http://dx.doi.org/10.1093/sysbio/syw082
+    \endverb
+    \field{volume}{66}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Slater2015}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SGJ}{%
+         family={Slater},
+         familyi={S\bibinitperiod},
+         given={Graham\bibnamedelima J.},
+         giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SGJ1}
+    \strng{fullhash}{SGJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    A long-standing hypothesis in adaptive radiation theory is that ecological
+  opportunity constrains rates of phenotypic evolution, generating a burst of
+  morphological disparity early in clade history. Empirical support for the
+  early burst model is rare in comparative data, however. One possible reason
+  for this lack of support is that most phylogenetic tests have focused on
+  extant clades, neglecting information from fossil taxa. Here, I test for the
+  expected signature of adaptive radiation using the outstanding 40-My fossil
+  record of North American canids. Models implying time- and
+  diversity-dependent rates of morphological evolution are strongly rejected
+  for two ecologically important traits, body size and grinding area of the
+  molar teeth. Instead, Ornstein--Uhlenbeck processes implying repeated, and
+  sometimes rapid, attraction to distinct dietary adaptive peaks receive
+  substantial support. Diversity-dependent rates of morphological evolution
+  seem uncommon in clades, such as canids, that exhibit a pattern of replicated
+  adaptive radiation. Instead, these clades might best be thought of as
+  deterministic radiations in constrained Simpsonian subzones of a major
+  adaptive zone. Support for adaptive peak models may be diagnostic of subzonal
+  radiations. It remains to be seen whether early burst or ecological
+  opportunity models can explain broader adaptive radiations, such as the
+  evolution of higher taxa.%
+    }
+    \verb{doi}
+    \verb 10.1073/pnas.1403666111
+    \endverb
+    \verb{eprint}
+    \verb http://www.pnas.org/content/112/16/4897.full.pdf
+    \endverb
+    \field{number}{16}
+    \field{pages}{4897\bibrangedash 4902}
+    \field{title}{Iterative adaptive radiations of fossil canids show no
+  evidence for diversity-dependent trait evolution}
+    \verb{url}
+    \verb http://www.pnas.org/content/112/16/4897.abstract
+    \endverb
+    \field{volume}{112}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Yang1994}{article}{}
+    \name{author}{1}{}{%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Ziheng},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YZ1}
+    \strng{fullhash}{YZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1994}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{abstract}{%
+    Two approximate methods are proposed for maximum likelihood phylogenetic
+  estimation, which allow variable rates of substitution across nucleotide
+  sites. Three data sets with quite different characteristics were analyzed to
+  examine empirically the performance of these methods. The first, called the
+  ``discrete gamma model,'' uses several categories of rates to approximate the
+  gamma distribution, with equal probability for each category. The mean of
+  each category is used to represent all the rates falling in the category. The
+  performance of this method is found to be quite good, and four such
+  categories appear to be sufficient to produce both an optimum, or
+  near-optimum fit by the model to the data, and also an acceptable
+  approximation to the continuous distribution. The second method, called
+  ``fixed-rates model,'' classifies sites into several classes according to
+  their rates predicted assuming the star tree. Sites in different classes are
+  then assumed to be evolving at these fixed rates when other tree topologies
+  are evaluated. Analyses of the data sets suggest that this method can produce
+  reasonable results, but it seems to share some properties of a least-squares
+  pairwise comparison; for example, interior branch lengths in nonbest trees
+  are often found to be zero. The computational requirements of the two methods
+  are comparable to that of Felsenstein's (1981, J Mol Evol 17:368--376) model,
+  which assumes a single rate for all the sites.%
+    }
+    \verb{doi}
+    \verb 10.1007/BF00160154
+    \endverb
+    \field{issn}{1432-1432}
+    \field{number}{3}
+    \field{pages}{306\bibrangedash 314}
+    \field{title}{Maximum likelihood phylogenetic estimation from {DNA}
+  sequences with variable rates over sites: Approximate methods}
+    \verb{url}
+    \verb https://doi.org/10.1007/BF00160154
+    \endverb
+    \field{volume}{39}
+    \field{journaltitle}{Journal of Molecular Evolution}
+    \field{year}{1994}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Zrzavy2004}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ZJ}{%
+         family={Zrzav\'y},
+         familyi={Z\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=vV}{%
+         family={\v{R}i\v{c}\'ankov\'a},
+         familyi={v\bibinitperiod},
+         given={V\vera},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Blackwell Science Ltd}%
+    }
+    \strng{namehash}{ZJvV1}
+    \strng{fullhash}{ZJvV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{doi}
+    \verb 10.1111/j.0300-3256.2004.00152.x
+    \endverb
+    \field{issn}{1463-6409}
+    \field{number}{4}
+    \field{pages}{311\bibrangedash 333}
+    \field{title}{Phylogeny of Recent {Canidae} ({Mammalia}, {Carnivora}):
+  relative reliability and utility of morphological and molecular datasets}
+    \verb{url}
+    \verb http://dx.doi.org/10.1111/j.0300-3256.2004.00152.x
+    \endverb
+    \field{volume}{33}
+    \field{journaltitle}{Zoologica Scripta}
+    \field{year}{2004}
+  \endentry
+\endsortlist
+\endinput
