@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>Bacter Tutorial</title>
+				<description>
+					Inferring ARGs from bacterial sequence data.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Tim Vaughan
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/ac12bf7ade609ef59c60a426035ae5021aceaf39'
+					&gt;
+						21 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Removed tex file, updated tutorial text.
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Thu, 21 Jun 2018 21:09:40 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>StarBEAST2 v14 tutorial</title>
 				<description>
 					Estimating species trees using StarBEAST2
@@ -541,47 +582,6 @@
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
-			</item>
-				
-			<item>
-				<title>Bacter Tutorial</title>
-				<description>
-					Inferring ARGs from bacterial sequence data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tim Vaughan
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/7a237f49117040ebb4689790a20c2eac63a6c7cd'
-					&gt;
-						10 Feb 2017
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Fixed bug.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.4
-					
-				</description>
-				<pubDate>Fri, 10 Feb 2017 03:15:16 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
 			</item>
 				
 			<item>
