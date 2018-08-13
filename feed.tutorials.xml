@@ -28,9 +28,9 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/mmatschiner/CladeAge-Tutorial/commit/0bd97759de5d6d39759f6419e6fc1e51b24f4cf6'
+						'https://github.com/mmatschiner/CladeAge-Tutorial/commit/c5a0c22fb9882fc0fd815a83b6822992271e58f5'
 					&gt;
-						12 Aug 2018
+						13 Aug 2018
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -38,7 +38,9 @@
 					&gt;
 						mmatschiner
 					&lt;/a&gt;
-					: Text polishing
+					: Merge pull request #1 from tgvaughan/patch-1
+
+Remove template latex tutorial from repo.
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -46,7 +48,7 @@
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Sun, 12 Aug 2018 13:37:11 +0000</pubDate>
+				<pubDate>Mon, 13 Aug 2018 09:43:38 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
