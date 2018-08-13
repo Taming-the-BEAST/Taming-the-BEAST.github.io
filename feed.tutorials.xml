@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>CladeAge Tutorial</title>
+				<description>
+					Fossil-based divergence-time estimation with CladeAge
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Michael Matschiner
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/mmatschiner/CladeAge-Tutorial/commit/0bd97759de5d6d39759f6419e6fc1e51b24f4cf6'
+					&gt;
+						12 Aug 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/mmatschiner'
+					&gt;
+						mmatschiner
+					&lt;/a&gt;
+					: Text polishing
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Sun, 12 Aug 2018 13:37:11 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Bacter Tutorial</title>
 				<description>
 					Inferring ARGs from bacterial sequence data.
