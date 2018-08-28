@@ -12,6 +12,51 @@
 		</image>
 				
 			<item>
+				<title>Structured birth death model</title>
+				<description>
+					Population structure using the multi-type birth-death model
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Denise Kühnert
+							
+					
+						
+								
+									and  Jūlija Pečerska
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/958eec120da623d2280b5bb6dc3dfe919869281c'
+					&gt;
+						27 Aug 2018
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/denisekuehnert'
+					&gt;
+						denisekuehnert
+					&lt;/a&gt;
+					: minor edits bdmm tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Mon, 27 Aug 2018 15:54:31 +0000</pubDate>
+				<category>Professional</category>
+				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
+			</item>
+				
+			<item>
 				<title>CladeAge Tutorial</title>
 				<description>
 					Fossil-based divergence-time estimation with CladeAge
@@ -175,51 +220,6 @@ Remove template latex tutorial from repo.
 				<category>Basic</category>
 				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
-			</item>
-				
-			<item>
-				<title>Structured birth death model</title>
-				<description>
-					Population structure using the multi-type birth-death model
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Denise Kühnert
-							
-					
-						
-								
-									and  Jūlija Pečerska
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/cd47b290f9960ba3993985f115996f6d2855cf2e'
-					&gt;
-						20 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: Removed comment about adding dimensions to R0 prior that was getting printed in the website live version.
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Wed, 20 Jun 2018 22:01:53 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
