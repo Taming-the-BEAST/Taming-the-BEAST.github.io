@@ -32,9 +32,9 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/958eec120da623d2280b5bb6dc3dfe919869281c'
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/bae686846a37ec4b1c33a36608196e79d90072bb'
 					&gt;
-						27 Aug 2018
+						31 Aug 2018
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -42,7 +42,7 @@
 					&gt;
 						denisekuehnert
 					&lt;/a&gt;
-					: minor edits bdmm tutorial
+					: Update README.md
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
 					
@@ -50,7 +50,7 @@
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Mon, 27 Aug 2018 15:54:31 +0000</pubDate>
+				<pubDate>Fri, 31 Aug 2018 07:09:25 +0000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
