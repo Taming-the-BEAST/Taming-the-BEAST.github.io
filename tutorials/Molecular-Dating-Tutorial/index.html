@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Molecular dating using heterochronous data and substitution model averaging</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86786826-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a></li>
+
+					
+                                        <li>
+					
+                                        <a href="/workshops/">workshops</a></li>
+
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Molecular-Dating-Tutorial/">Molecular dating using heterochronous data and substitution model averaging</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Estimating the time of origin of the 2009 H1N1 pandemic in North America
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Sebastian Duchene
+					
+			
+				
+						,  Tim Vaughan
+				
+			
+				
+						
+							and  Veronika Boskova
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/data/NorthAm.Nov.fasta" target="_blank" rel="nofollow">
+						NorthAm.Nov.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/data/NorthAm.Nov.subsample.fasta" target="_blank" rel="nofollow">
+						NorthAm.Nov.subsample.fasta
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/xml/h1n1_ucld.xml" target="_blank" download rel="nofollow">
+						h1n1_ucld.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/xml/h1n1_ucld_prior.xml" target="_blank" download rel="nofollow">
+						h1n1_ucld_prior.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/precooked_runs/h1n1_UCLD.tre" target="_blank" download rel="nofollow">
+						h1n1_UCLD.tre
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/precooked_runs/h1n1_UCLD.log" target="_blank" download rel="nofollow">
+						h1n1_UCLD.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/precooked_runs/h1n1_UCLD_prior.trees" target="_blank" download rel="nofollow">
+						h1n1_UCLD_prior.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/precooked_runs/h1n1_UCLD_prior.log" target="_blank" download rel="nofollow">
+						h1n1_UCLD_prior.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Molecular-Dating-Tutorial/raw/master/precooked_runs/h1n1_UCLD.trees" target="_blank" download rel="nofollow">
+						h1n1_UCLD.trees
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/6c756d028be58d35c7c5c37e386a0477d0e910bf">
+					05 Nov 2018 - <span class="text-gray">Added some additional sections to tutorial.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/130a54992d9f506266f69b40184bb3040cf7e8e3">
+					05 Nov 2018 - <span class="text-gray">Tiny changes to layout.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/ed00394708a15de0a43e4d3660469c7fc9400e9e">
+					05 Nov 2018 - <span class="text-gray">Added boxes around questions.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/cc989d261708b571ad7cf3310238762021be7c17">
+					05 Nov 2018 - <span class="text-gray">Moved XML, data and precooked runs to proper dirs.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/8eff93421a9b6214c20634e661d8900140f97f59">
+					05 Nov 2018 - <span class="text-gray">Fixed links to bib file.</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>In this tutorial we will analyse 100 full genome sequences from the 2009 H1N1 flu pandemic in North America. The sequences were collected from about February to November, such that their sampling times can be used for calibration. They were analysed by Hedge and Rambaut <a href="#hedge2013real">(Hedge, Lycett, &amp; Rambaut, 2013)</a>. An important aspect of using sampling times for calibration is that the sampling time should capture a sufficient number of substitutions, i.e. the population should be measurably evolving <a href="#drummond2003measurably">(Drummond, Pybus, Rambaut, Forsberg, &amp; Rodrigo, 2003)</a>. One way to verify whether a population is measurably evolving is to compare the prior and posterior distribution of the tree height, which we will do here. We will also use a relaxed molecular clock and the bModel test add-on to average over substitution models <a href="#bouckaert2017bmodeltest">(Bouckaert &amp; Drummond, 2017)</a>. In the optional exercises we can compare the estimates from a relaxed molecular clock to those from a strict molecular clock model. In a subsequent tutorial we will use the exponential coalescent and constant birth-death model to infer epidemiological parameters.</p>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.</p>
+
+<h3>bModelTest</h3>
+
+<p>bModelTest <a href="#bouckaert2017bmodeltest">(Bouckaert &amp; Drummond, 2017)</a> is used to average over substitution models during the MCMC. For installation instructions click <a href="http://www.beast2.org/managing-packages/">here</a>.</p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.</p>
+
+<h3>IcyTree</h3>
+
+<p>IcyTree (<a href="https://icytree.org">https://icytree.org</a>) is a browser-based phylogenetic tree viewer <a href="#vaughan2017icytree">(Vaughan, 2017)</a>. It is intended for rapid visualisation of phylogenetic tree files. It can also render phylogenetic networks provided in extended Newick format. IcyTree is compatible with current versions of Mozilla Firefox and Google Chrome.</p>
+
+<hr>
+
+<h1>Setting up the BEAST2 xml</h1>
+
+<p>BEAST2 requires the data and model specified in an xml format, which can be done using the program BEAUti. Open BEAUti and drag the alignment (NorthAm.Nov.fasta) to this window <a href="#fig:f1">Figure 1</a>. Note that there are several tabs (Partitions, Tip Dates, Site Model, Clock Model, Priors, and MCMC).</p>
+
+<figure>
+    <a id="fig:f1"></a>
+    <img style="width:75%;" src="figures/f1.png" alt="">
+    <figcaption>Figure 1: BEAUti with h1n1 sequence alignment loaded.</figcaption>
+</figure>
+
+<p>Click on the Tip Dates tab and check the box Use tip dates <a href="#fig2:f2">Figure 2</a>.</p>
+
+<figure>
+    <a id="fig:f2"></a>
+    <img style="width:75%;" src="figures/f2.png" alt="">
+    <figcaption>Figure 2: Tip dates enabled in BEAUti.</figcaption>
+</figure>
+
+<p>To use the tip dates as calibrations, click on the Auto-configure button. Check the first box (use everything) and in the dropdown menu, select after last, and type in a vertical line (|) as shown in Fig 2.</p>
+
+<p>The BEAUti window should now display the dates for each of the sequences under the column date.</p>
+
+<p>Click on the <em>Site Model</em> tab. Instead of using a single substitution model, we will average over those that account for differences in the number of transitions to transversions. In the first drop-down menu select <em>BEAST Model Test</em>. There is a second drop-down menu to select the range of models that we will sample during the MCMC. Select transitionToTransversionSpit to limit our search to those that allow for differences in transitions to transversions. Click on the box Empirical to use the empirical base frequencies. These options should look like those in <a href="#fig:f3">Figure 3</a>.</p>
+
+<figure>
+    <a id="fig:f3"></a>
+    <img style="width:75%;" src="figures/f3.png" alt="">
+    <figcaption>Figure 3: Substitution model set up in BEAUti.</figcaption>
+</figure>
+
+<p>Click on the Clock Model tab. In the dropdown menu, select Relaxed Clock Lognormal <a href="#fig:f4">Figure 4</a>. The other default options are fine.</p>
+
+<figure>
+    <a id="fig:f4"></a>
+    <img style="width:75%;" src="figures/f4.png" alt="">
+    <figcaption>Figure 4: Molecular clock model set up in BEAUti.</figcaption>
+</figure>
+
+<p>Click on the <em>Priors</em> tab. Select the Coalescent Exponential Population model <a href="#fig5:f5">Figure 5</a>. Most of the remaining priors are fine for our analyses, but it is a good exercise to inspect these distributions. In particular, set a Uniform distribution for the mean of the lognormal distribution for the rate with lower and upper bounds of 0 and 1, respectively. This is based on our knowledge that flu probably does not evolve at a rate that is faster than 1 subs/site/year.</p>
+
+<figure>
+    <a id="fig:f5"></a>
+    <img style="width:75%;" src="figures/f5.png" alt="">
+    <figcaption>Figure 5: Priors tab in BEAUti with the Coalescent Exponential Population prior. </figcaption>
+</figure>
+
+<p>Click on the MCMC tab. Here, we can select different options for the MCMC. The chain length should be 20000000. Click on tracelog and treelog to specify the BEAST output, which is a set of trees and parameters values, sampled from the posterior. Ensure that the Log Every box is 2000 for the trees and log files. Name the log and tree files h1n1_UCLD.log and h1n1_UCLD.trees, respectively <a href="#fig6:f6">Figure 6</a>. We use the extension <em>_ucld</em> to refer to the uncorrelated lognormal clock model.</p>
+
+<figure>
+    <a id="fig:f6"></a>
+    <img style="width:75%;" src="figures/f6.png" alt="">
+    <figcaption>Figure 6: MCMC set up in BEAST. </figcaption>
+</figure>
+
+<p>Our BEAST input file is ready. To save it, click on File, Save, and name it h1n1_ucld.xml. Do not close BEAUti.</p>
+
+<h2>Running the analysis</h2>
+
+<p>To run BEAST, double-click on the BEAST2 icon. A window with some options will appear <a href="#fig7:f7">Figure 7</a>.</p>
+
+<figure>
+    <a id="fig:f7"></a>
+    <img style="width:75%;" src="figures/f7.png" alt="">
+    <figcaption>Figure 7: BEAST starting window. </figcaption>
+</figure>
+
+<p>Click on Choose File... and select the xml file that we created in BEAUti. Click Run. The MCMC will start running <a href="#fig8:f8">Figure 8</a>.</p>
+
+<figure>
+    <a id="fig:f8"></a>
+    <img style="width:75%;" src="figures/f8.png" alt="">
+    <figcaption>Figure 8: BEAST MCMC sampling. </figcaption>
+</figure>
+
+<p>Note that two files have been created in the folder where we saved the xml file, these are the .trees and .log files. This analysis can take up to two hours to complete, but we can inspect the log file much earlier.</p>
+
+<h2>Analyzing the results</h2>
+
+<p>After letting BEAST run for about 30 minutes open Tracer <a href="#fig9:f9">Figure 9</a>, and drag the h1n1_UCLD.log file to the right pane of the Tracer window.</p>
+
+<figure>
+    <a id="fig:f9"></a>
+    <img style="width:75%;" src="figures/f9.png" alt="">
+    <figcaption>Figure 9: Tracer window. </figcaption>
+</figure>
+
+<p>Select the <em>Trace</em> tab. This shows how the MCMC has sampled in parameter space.</p>
+
+<blockquote>
+<p><strong>Question:</strong> Inspect the trace for TreeHeight, and the clock model parameters (rate.mean and rate.variance). Does it appear that we have sufficient sampling from the stationary distribution? What do these parameters mean?</p>
+</blockquote>
+
+<p>An other diagnostic of MCMC sampling is the effective sample size, shown in Tracer as ESS. This is the estimated number of independent samples obtained. A rule of thumb is to ensure that ESS is at least 200 for all parameters.</p>
+
+<p>Select the TreeHeight and rate.mean parameters (you might need to use the command or control key to select them at the same time), then select the <em>Joint-marginal</em> tab. TreeHeight is the age of the root of the tree, while rate.mean is the mean substitution rate in the model. If these parameters were independent, we would expect them to form a cloud along the x and y axes. However, these two parameters are naturally correlated. In particular, high rates typically lead to more recent timescales for the root, while lower rates lead to older root ages <a href="#fig10:f10">Figure 10</a>.</p>
+
+<figure>
+    <a id="fig:f10"></a>
+    <img style="width:75%;" src="figures/f10.png" alt="">
+    <figcaption>Figure 10: Joint marginal plot of TreeHeight and rate.mean. </figcaption>
+</figure>
+
+<p>Check rate.coefficientOfVariation parameter <a href="#fig11:f11">Figure 11</a>. This is the standard deviation of branch rates divided by the mean rate. Typically, if this parameter is abutting zero, the data have low rate variation, such that they can follow a strict clock.</p>
+
+<blockquote>
+<p><strong>Question:</strong> Does this data set appear to follow a strict clock, or does it display substantial rate variation among lineages?</p>
+</blockquote>
+
+<figure>
+    <a id="fig:f11"></a>
+    <img style="width:75%;" src="figures/f11.png" alt="">
+    <figcaption>Figure 11: Posterior density of coefficient of rate variation. </figcaption>
+</figure>
+
+<blockquote>
+<p><strong>Question:</strong> When did these h1n1 samples last share a common ancestor? Is it consistent with our knowledge of the 2009 pandemic?</p>
+</blockquote>
+
+<p>Select the BMT_ModelIndicator trace. These are the models that were sampled using an index as shown in <a href="#f12:f12">Figure 12</a>.</p>
+
+<figure>
+    <a id="fig:f12"></a>
+    <img style="width:75%;" src="figures/t1.png" alt="">
+    <figcaption>Figure 12: Index of models in BeastModelTest (from the bModelTest tutorial by Ramussen et al.). </figcaption>
+</figure>
+
+<p><strong>Optional exercise:</strong> The BEAST2 app BModelAnalyser provides a visual inspection of substitution model averaging. To use it, open the BEAST2 folder and find the AppLauncher icon. Click it to obtain a list of BEAST2 apps (<a href="#f13:f13">Figure 13</a>).</p>
+
+<figure>
+    <a id="fig:f13"></a>
+    <img style="width:75%;" src="figures/f13.png" alt="">
+    <figcaption>Figure 13: AppLauncher for BEAST2. </figcaption>
+</figure>
+
+<p>Select BModelAnalyser and click Launch. A window will pop up with a few options. Click on browse and find the log file for the h1n1 data and set the remaining options as shown in <a href="#f14:f14">Figure 14</a>.</p>
+
+<figure>
+    <a id="fig:f14"></a>
+    <img style="width:75%;" src="figures/f14.png" alt="">
+    <figcaption>Figure 14: Options for BModelAnalyser. </figcaption>
+</figure>
+
+<p>Click OK. A browser with a figure similar to <a href="#f15:f15">Figure 15</a> should appear in your default browser.</p>
+
+<figure>
+    <a id="fig:f15"></a>
+    <img style="width:75%;" src="figures/f15.png" alt="">
+    <figcaption>Figure 15: Models visited in BeastModelTest. Those in blue circles correspond to the 95% credible set of models, with their size proportional to their posterior probability. Those in red are outside the credible set, and those with no circles have less than 0.43 posterior support. </figcaption>
+</figure>
+
+<blockquote>
+<p><strong>Question</strong>: Which model has the highest posterior probability? Does this model include among site rate heterogeneity? (hint: check the hasGammaRates and hasInvariableSites traces)</p>
+</blockquote>
+
+<p>The .trees file contains trees sampled from the posterior. We can summarise them by using TreeAnnotator, which is distributed with the BEAST package. Double-click the TreeAnnotator icon. The window in <a href="#f16:f16">Figure 16</a> will appear.</p>
+
+<figure>
+    <a id="fig:f16"></a>
+    <img style="width:75%;" src="figures/f16.png" alt="">
+    <figcaption>Figure 16: TreeAnnotator input window. </figcaption>
+</figure>
+
+<p>Type 10 for Burnin percentage and choose the same settings for Target tree type and node heights as shown in <a href="#f16:f16">Figure 16</a>. In Input Tree File click on Choose File..., and select h1n1_ucld.trees. In Output File click on Choose File... and type h1n1_ucld.tre. Note that we use the .tre extension for the output file. Click on Run.
+After the program has run, find the h1n1_ucld.tre and open it in <a href="icytree.org">icytree</a>. Click on <em>Style</em>, <em>Node-height error bars</em>, and select height_95%-HPD (<a href="#f17:f17">Figure 17</a>).</p>
+
+<figure>
+    <a id="fig:f17"></a>
+    <img style="width:75%;" src="figures/f17.png" alt="">
+    <figcaption>Figure 17: Tree visualised in icytree with 95% HPD intervals for node heights shown in grey. </figcaption>
+</figure>
+
+<h2>Optional exercise 1</h2>
+
+<p>Use the BEAUti window, which we left open, to sample from the prior distribution. This is useful to assess whether the data are informative about parameters of interest. To do this, go to the MCMC tab and tick the SampleFromPrior box. Change the names of the output log and trees files to h1n1_ucld_prior.log and h1n1_ucld_prior.trees and go to File, Save as, and save it as h1n1_UCLD_prior.xml. This analysis will run much faster because it does not need to calculate the phylogenetic likelihood. After it has run, load the log file with that from the posterior.</p>
+
+<blockquote>
+<p><strong>Question</strong>: Does it seem like our data are driving our estimates of evolutionary rates and timescales (hint: compare the prior and the posterior for the tree height, as in <a href="#f18:f18">Figure 18</a>, and for the rate.mean parameters).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:f18"></a>
+    <img style="width:75%;" src="figures/f18.png" alt="">
+    <figcaption>Figure 18: Comparing the prior and posterior for the tree height. </figcaption>
+</figure>
+
+<h2>Optional exercise 2</h2>
+
+<p>Use the BEAUti window, which we left open, to set up a strict clock. To do this go to the Clock Model tab and select Strict Clock. In the MCMC tab change the output file names to h1n1_sc.log, h1n1_sc.trees. Save it as h1n1_sc.xml and run it in BEAST. Compare the rate and node age estimates to those from the relaxed clock used here.</p>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="hedge2013real">Hedge, J., Lycett, S. J., &amp; Rambaut, A. (2013). Real-time characterization of the molecular epidemiology of an influenza pandemic. <i>Biology Letters</i>, <i>9</i>(5), 20130331.</span></li>
+<li><span id="drummond2003measurably">Drummond, A. J., Pybus, O. G., Rambaut, A., Forsberg, R., &amp; Rodrigo, A. G. (2003). Measurably evolving populations. <i>Trends in Ecology &amp; Evolution</i>, <i>18</i>(9), 481–488.</span></li>
+<li><span id="bouckaert2017bmodeltest">Bouckaert, R. R., &amp; Drummond, A. J. (2017). bModelTest: Bayesian phylogenetic site model averaging and model comparison. <i>BMC Evolutionary Biology</i>, <i>17</i>(1), 42.</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="vaughan2017icytree">Vaughan, T. G. (2017). IcyTree: rapid browser-based visualization for phylogenetic trees and networks. <i>Bioinformatics</i>, <i>33</i>(15), 2392–2394.</span></li></ol>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+
