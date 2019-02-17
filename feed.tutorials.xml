@@ -54,7 +54,7 @@
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Tue, 06 Nov 2018 04:21:00 +1300</pubDate>
+				<pubDate>Tue, 06 Nov 2018 02:21:00 +1100</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</guid>
@@ -99,7 +99,7 @@
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Fri, 31 Aug 2018 19:09:25 +1200</pubDate>
+				<pubDate>Fri, 31 Aug 2018 17:09:25 +1000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
@@ -142,7 +142,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Mon, 13 Aug 2018 21:43:38 +1200</pubDate>
+				<pubDate>Mon, 13 Aug 2018 19:43:38 +1000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
@@ -183,7 +183,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Fri, 22 Jun 2018 09:09:40 +1200</pubDate>
+				<pubDate>Fri, 22 Jun 2018 07:09:40 +1000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
@@ -224,7 +224,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Fri, 22 Jun 2018 06:23:40 +1200</pubDate>
+				<pubDate>Fri, 22 Jun 2018 04:23:40 +1000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/starbeast2-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/starbeast2-tutorial/</guid>
@@ -265,7 +265,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Thu, 21 Jun 2018 19:30:17 +1200</pubDate>
+				<pubDate>Thu, 21 Jun 2018 17:30:17 +1000</pubDate>
 				<category>Basic</category>
 				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
@@ -298,7 +298,7 @@ Remove template latex tutorial from repo.
 					&lt;a class=&#39;off&#39; href=
 						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/d8c514bc6aec7e6426c8190fab00c43f24f84c0b'
 					&gt;
-						20 Jun 2018
+						19 Jun 2018
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -314,7 +314,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Wed, 20 Jun 2018 01:00:16 +1200</pubDate>
+				<pubDate>Tue, 19 Jun 2018 23:00:16 +1000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
@@ -355,7 +355,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Tue, 19 Jun 2018 19:57:29 +1200</pubDate>
+				<pubDate>Tue, 19 Jun 2018 17:57:29 +1000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
@@ -396,7 +396,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.4.1+
 					
 				</description>
-				<pubDate>Tue, 19 Jun 2018 03:55:54 +1200</pubDate>
+				<pubDate>Tue, 19 Jun 2018 01:55:54 +1000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Troubleshooting/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting/</guid>
@@ -445,7 +445,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 14 Jun 2018 05:13:28 +1200</pubDate>
+				<pubDate>Thu, 14 Jun 2018 03:13:28 +1000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
@@ -470,7 +470,7 @@ Remove template latex tutorial from repo.
 					&lt;a class=&#39;off&#39; href=
 						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/08f971231f3b1ba7802f6abe6b7685466a2f9b48'
 					&gt;
-						12 Jun 2018
+						11 Jun 2018
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -486,7 +486,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.4.4
 					
 				</description>
-				<pubDate>Tue, 12 Jun 2018 01:10:34 +1200</pubDate>
+				<pubDate>Mon, 11 Jun 2018 23:10:34 +1000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
@@ -531,7 +531,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Tue, 25 Jul 2017 02:10:26 +1200</pubDate>
+				<pubDate>Tue, 25 Jul 2017 00:10:26 +1000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</guid>
@@ -580,7 +580,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Fri, 14 Jul 2017 02:24:56 +1200</pubDate>
+				<pubDate>Fri, 14 Jul 2017 00:24:56 +1000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
@@ -625,7 +625,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.4.2
 					
 				</description>
-				<pubDate>Thu, 13 Jul 2017 03:33:51 +1200</pubDate>
+				<pubDate>Thu, 13 Jul 2017 01:33:51 +1000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-coalescent/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-coalescent/</guid>
@@ -654,7 +654,7 @@ Remove template latex tutorial from repo.
 					&lt;a class=&#39;off&#39; href=
 						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/8ed7feee4ce4ea754428857f2ffc93f9db1a14b0'
 					&gt;
-						2 Jun 2017
+						1 Jun 2017
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -670,7 +670,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.4.2
 					
 				</description>
-				<pubDate>Fri, 02 Jun 2017 01:55:11 +1200</pubDate>
+				<pubDate>Thu, 01 Jun 2017 23:55:11 +1000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
@@ -711,7 +711,7 @@ Remove template latex tutorial from repo.
 						Requires: BEAST v2.4.x
 					
 				</description>
-				<pubDate>Thu, 09 Feb 2017 14:46:12 +1300</pubDate>
+				<pubDate>Thu, 09 Feb 2017 12:46:12 +1100</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/adequacy_tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/adequacy_tutorial/</guid>
@@ -754,7 +754,7 @@ Add input data
 						Requires: BEAST v2.4.4
 					
 				</description>
-				<pubDate>Fri, 03 Feb 2017 12:19:14 +1300</pubDate>
+				<pubDate>Fri, 03 Feb 2017 10:19:14 +1100</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/calibrated-species-trees/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/calibrated-species-trees/</guid>
@@ -811,7 +811,7 @@ Add input data
 						Requires: BEAST v2.4.x
 					
 				</description>
-				<pubDate>Fri, 03 Feb 2017 10:07:01 +1300</pubDate>
+				<pubDate>Fri, 03 Feb 2017 08:07:01 +1100</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</guid>
