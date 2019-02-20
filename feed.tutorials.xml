@@ -12,6 +12,139 @@
 		</image>
 				
 			<item>
+				<title>AIM in StarBeast2 v0.0.1 Tutorial</title>
+				<description>
+					Inferring species trees and gene flow from multiple loci
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/tgvaughan/AIM-Tutorial/commit/9f8c672e2ef2e10d8d72187b404b10c8bbb1e5e3'
+					&gt;
+						20 Feb 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Fixed citation bugs.
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Wed, 20 Feb 2019 21:15:13 +1100</pubDate>
+				<category>Professional</category>
+				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Structured birth death model</title>
+				<description>
+					Population structure using the multi-type birth-death model
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Denise Kühnert
+							
+					
+						
+								
+									and  Jūlija Pečerska
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/d28357b4babb106433c540d677aa6ffb1fd71780'
+					&gt;
+						20 Feb 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: Minor fixes.
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Wed, 20 Feb 2019 15:41:36 +1100</pubDate>
+				<category>Professional</category>
+				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
+			</item>
+				
+			<item>
+				<title>Skyline plots</title>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/c3d1fc1f54f9d935aeead8e64192e38ce99fb13b'
+					&gt;
+						18 Feb 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel'
+					&gt;
+						nicfel
+					&lt;/a&gt;
+					: Update version numbers
+
+Updated Version numbers to Beast 2.5.x
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.x
+					
+				</description>
+				<pubDate>Mon, 18 Feb 2019 07:32:10 +1100</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
 				<title>Molecular dating using heterochronous data and substitution model averaging</title>
 				<description>
 					Estimating the time of origin of the 2009 H1N1 pandemic in North America
@@ -36,7 +169,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/6c756d028be58d35c7c5c37e386a0477d0e910bf'
+						'https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/7962c1fb07bed1e415bc732ecf75c1df0e3acf54'
 					&gt;
 						6 Nov 2018
 					&lt;/a&gt;
@@ -46,7 +179,7 @@
 					&gt;
 						tgvaughan
 					&lt;/a&gt;
-					: Added some additional sections to tutorial.
+					: Fixed broken figure link.
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -54,55 +187,10 @@
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Tue, 06 Nov 2018 02:21:00 +1100</pubDate>
+				<pubDate>Tue, 06 Nov 2018 02:43:08 +1100</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Structured birth death model</title>
-				<description>
-					Population structure using the multi-type birth-death model
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Denise Kühnert
-							
-					
-						
-								
-									and  Jūlija Pečerska
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/bae686846a37ec4b1c33a36608196e79d90072bb'
-					&gt;
-						31 Aug 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/denisekuehnert'
-					&gt;
-						denisekuehnert
-					&lt;/a&gt;
-					: Update README.md
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Fri, 31 Aug 2018 17:09:25 +1000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
@@ -629,51 +717,6 @@ Remove template latex tutorial from repo.
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-coalescent/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-coalescent/</guid>
-			</item>
-				
-			<item>
-				<title>Skyline plots</title>
-				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/8ed7feee4ce4ea754428857f2ffc93f9db1a14b0'
-					&gt;
-						1 Jun 2017
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update latex tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.2
-					
-				</description>
-				<pubDate>Thu, 01 Jun 2017 23:55:11 +1000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>

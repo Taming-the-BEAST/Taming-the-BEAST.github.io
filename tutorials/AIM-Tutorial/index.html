@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>AIM in StarBeast2 v0.0.1 Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86786826-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a></li>
+
+					
+                                        <li>
+					
+                                        <a href="/workshops/">workshops</a></li>
+
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/AIM-Tutorial/">AIM in StarBeast2 v0.0.1 Tutorial</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Inferring species trees and gene flow from multiple loci
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Nicola F. Müller
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-2320.fasta" target="_blank" rel="nofollow">
+						chr3L-2320.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-18044.fasta" target="_blank" rel="nofollow">
+						chr3L-18044.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-4022.fasta" target="_blank" rel="nofollow">
+						chr3L-4022.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-11072.fasta" target="_blank" rel="nofollow">
+						chr3L-11072.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-4737.fasta" target="_blank" rel="nofollow">
+						chr3L-4737.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-17478.fasta" target="_blank" rel="nofollow">
+						chr3L-17478.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-17583.fasta" target="_blank" rel="nofollow">
+						chr3L-17583.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-10352.fasta" target="_blank" rel="nofollow">
+						chr3L-10352.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-3826.fasta" target="_blank" rel="nofollow">
+						chr3L-3826.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-8026.fasta" target="_blank" rel="nofollow">
+						chr3L-8026.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-11427.fasta" target="_blank" rel="nofollow">
+						chr3L-11427.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-2113.fasta" target="_blank" rel="nofollow">
+						chr3L-2113.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-16139.fasta" target="_blank" rel="nofollow">
+						chr3L-16139.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-19336.fasta" target="_blank" rel="nofollow">
+						chr3L-19336.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-10066.fasta" target="_blank" rel="nofollow">
+						chr3L-10066.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-6632.fasta" target="_blank" rel="nofollow">
+						chr3L-6632.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-6344.fasta" target="_blank" rel="nofollow">
+						chr3L-6344.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-6165.fasta" target="_blank" rel="nofollow">
+						chr3L-6165.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-16124.fasta" target="_blank" rel="nofollow">
+						chr3L-16124.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-18089.fasta" target="_blank" rel="nofollow">
+						chr3L-18089.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-3176.fasta" target="_blank" rel="nofollow">
+						chr3L-3176.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-8972.fasta" target="_blank" rel="nofollow">
+						chr3L-8972.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-11178.fasta" target="_blank" rel="nofollow">
+						chr3L-11178.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-13356.fasta" target="_blank" rel="nofollow">
+						chr3L-13356.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-8877.fasta" target="_blank" rel="nofollow">
+						chr3L-8877.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-13525.fasta" target="_blank" rel="nofollow">
+						chr3L-13525.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/data/chr3L-6457.fasta" target="_blank" rel="nofollow">
+						chr3L-6457.fasta
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/scripts/analyseAIMrun.R" target="_blank" download rel="nofollow">
+						analyseAIMrun.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/precooked_runs/species.trees" target="_blank" download rel="nofollow">
+						species.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/raw/master/precooked_runs/species_nogeneflow.trees" target="_blank" download rel="nofollow">
+						species_nogeneflow.trees
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/nicfel">
+    			<img class="pull-left avatar" src="https://avatars0.githubusercontent.com/u/19623728?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				nicfel
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/commit/9f8c672e2ef2e10d8d72187b404b10c8bbb1e5e3">
+					20 Feb 2019 - <span class="text-gray">Fixed citation bugs.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/commit/d38d6f8ab6858ebf666d1d9802f8c6c451e365ec">
+					20 Feb 2019 - <span class="text-gray">deleted tex</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/commit/b40e26448748ec52e33f62ca96858f16d49ae8d4">
+					19 Feb 2019 - <span class="text-gray">a bit more info on the analysis script</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/commit/597170d856e0b183358aca7211cd7c710cd906f1">
+					19 Feb 2019 - <span class="text-gray">better analysis script</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/tgvaughan/AIM-Tutorial/commit/b925ff95662a432f27c4e31ea9c572c3c8e3f932">
+					19 Feb 2019 - <span class="text-gray">adds gene tree figure</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v.</p>
+
+<h3>FigTree</h3>
+
+<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v.</p>
+
+<h3>R</h3>
+
+<p>R is needed to further analyse and plot the output of the AIM analysis</p>
+
+<hr>
+
+<h1>Practical: Joint inference of the species history and gene flow of 5 anopheles mosquitos by using AIM and coupled MCMC</h1>
+
+<p><a href="#Mueller348391">(Mueller, Ogilvie, Zhang, Drummond, &amp; Stadler, 2018)</a></p>
+
+<p>In this tutorial, we wil infer the species history of 5 different anophoeles mosquitos species by using AIM, which is short for <em>Approximate Isolation with Migration</em>. AIM is part of the StarBeast2 package. This model can be used when we want to jointly infer the species histories for multiple loci and gene flow between extant and ancestral species </p>
+
+<p>The aim is to:</p>
+
+<ul>
+<li> Learn how to jointly infer the species tree and gene flow of multiple loci from multiple species</li>
+<li> Get to know how to choose the set-up of such an analysis</li>
+<li> Learn how to process the output of an AIM analysis</li>
+</ul>
+
+<h2>About the data</h2>
+
+<p>The data was previously used to infer the species history of the anopheles gambie comples in <a href="#fontaine2015extensive">(Fontaine et al., 2015)</a>. It is comprised of 27 loci, each of a length of about 1000 bp, from the left arm of the 3rd chromosome. </p>
+
+<h2>Setting up an analysis in BEAUti</h2>
+
+<h3>Download StarBeast2 and CoupledMCMC</h3>
+
+<p>First, we have to download the packages StarBeast2 and CoupledMCMC by using the BEAUTi package manager. Go to <em>File &gt;&gt; Manage Packages</em> and download the package and CoupledMCMC StarBeast2. </p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:50%;" src="figures/StarBeastDownload.png" alt="">
+    <figcaption>Figure 1: Download the StarBeast2 and CoupledMCMC packages.</figcaption>
+</figure>
+
+<h3>Loading the template</h3>
+
+<p>Next, we have to load the BEAUTi template from <em>File</em>, select <em>Template &gt;&gt; AIM</em>.</p>
+
+<h3>Loading the different loci</h3>
+
+<p>The sequences for the different loci can be found in the <em>data</em> folder name can be either drag and dropped into BEAUti. To speed up the setup later, we can press <em>Link Site Models</em> and <em>Link Clock Models</em></p>
+
+<h3>Get species corresponding to the different individuals (Taxon sets)</h3>
+
+<p>To assign the different individuals to different species, press the <em>Guess</em> button. Next, use everything before first and press the <em>OK</em> button.</p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:70%;" src="figures/TaxonSet.png" alt="">
+    <figcaption>Figure 3: Guess the species of each sampled individual.</figcaption>
+</figure>
+
+<h3>Specify the Site Model (Site Model)</h3>
+
+<p>Since we Linked all the Site Models of the different loci together when loading the sequence data, we only have to set up the site models once. We will be using an HKY + $\Gamma_4$ model that allows for different relative rates of transversions and transitions, as well as for rate hetereogeneity across different sites. Additionally, we should make sure that the <em>estimate</em> button for the Substitution rates is klicked to allow for rate variation across different loci.  To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical. After, we can go back to the <em>Partitions</em> field and press <em>Unlink Site Models</em>. Now each loci will have the same site model, but each with different parameters.</p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:70%;" src="figures/SiteModel.png" alt="">
+    <figcaption>Figure 4: Set the site model.</figcaption>
+</figure>
+
+<h3>Set the clock model (Clock Model)</h3>
+
+<p>Since we have all sequences sampled in the present and no calibration, we have to information to estimate the clock rate. This however means that the branch lengths of our trees are in the dimension of average number substitutions and in units of time (e.g. in years). </p>
+
+<h3>Specify the priors (Priors)</h3>
+
+<p>The most important priors to specify here are the priors on the number of active routes of gene flow, the rates of gene flow and the effective population sizes. An active route of gene flow denotes a route of gene flow between two species that is non zero.  The prior on the number of active routes of gene flow is by defaults a Poisson Prior with lambda=0.693. This puts about 50% of the probability mass on 0 active routes of gene flow. This means that in absence of information about gene flow, a prior probability on having gene flow is fairly low.</p>
+
+<p>To speed up the setup of the <code>*xml</code>, we only change the prior on the migration rates. From a hypothetical previous analysis, we know that our tree has a height of about 0.02 substitutions. If we set the mean of the log Normal distribution to 5, this assumes that we expect about 1 in every 10 lineages to have one migration event over the course of the whole species tree. This is not exactly true, but is a good approximation for the order of magnitude of how many migration events we expect under this prior. </p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:70%;" src="figures/MigRatesPrior.png" alt="">
+    <figcaption>Figure 6: Setting up the prior on the migration rates.</figcaption>
+</figure>
+
+<h3>Specify the MCMC chain length (MCMC)</h3>
+
+<p>Here we can set the length of the MCMC chain and after how many iterations the parameter and trees a logged. For this dataset, 2 million iterations should be sufficient. In order to have enough samples but not create too large files, we can set the logEvery to 2500, so we have 801 samples overall. Next, we have to save the <code>*.xml</code> file under <em>File &gt;&gt; Save as</em>.</p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:70%;" src="figures/MCMC.png" alt="">
+    <figcaption>Figure 7: save the *.xml.</figcaption>
+</figure>
+
+<h3>Set up the xml to run two chains</h3>
+
+<p>In order to setup the analysis to run with coupled MCMC, we have to open the  <code>*.xml</code> and change one line in the xml.
+To do so, go to the line with:
+<code>
+&lt;run id=&quot;mcmc&quot; spec=&quot;MCMC&quot; chainLength=&quot;10000000&quot; storeEvery=&quot;5000&quot;&gt;
+</code>
+To have a run with coupled MCMC, we have to replace that one line with:
+<code>
+&lt;run id=&quot;mcmc&quot; spec=&quot;beast.coupledMCMC.CoupledMCMC&quot; logHeatedChains=&quot;true&quot; chainLength=&quot;10000000&quot; storeEvery=&quot;5000&quot; deltaTemperature=&quot;0.1&quot; chains=&quot;2&quot; resampleEvery=&quot;10000&quot;&gt;
+</code>
+* <code>logHeatedChains=&quot;true&quot;</code> also logs the log files of the heated chains if true.
+* <code>chainLength=&quot;100000000&quot;</code> defines for how many iterations the chains is run
+* <code>deltaTemperature=&quot;0.025&quot;</code> defines the temperature difference between the chain <em>n</em> and chain <em>n-1</em>.
+* <code>chains=&quot;2&quot;</code> defines the number of parallel chains that are run. The first chain is the one that explores the posterior just like a normal MCMC chain. All other chains are what&#39;s called <em>heated</em>. This means that MCMC moves of those chains have a higher probability of being accepted. While these heated chains don&#39;t explore the posterior properly, they can be used to propose new states to the one cold chain.   </p>
+
+<p>The output to the screen of a Coupled MCMC run looks slightly different then the one of a standard MCMC run.
+The column called <em>sample</em> describes at which iteration of the coupled MCMC we are. The column <em>swapsColdChain</em> denotes how many times the one cold chain (the chain that runs just like a regular MCMC chain) has been swapped with another chain. The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted. This vaues should be somewhere between <em>0.2</em> and <em>0.6</em>. A low values indicates that the heated chains are running too hot and are not efficiently exploring the posterior. A too high values indicates that the heated chains are not running hot enough and are thus exploring parameter space that are too similar to the one of the cold chain.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sample    swapsColdCain    swapProbability
+10000    0    0.0 --
+20000    1    0.5 3m15s/Msamples
+30000    1    0.3333333333333333 2m56s/Msamples
+40000    1    0.25 2m34s/Msamples
+50000    1    0.2 2m29s/Msamples
+60000    1    0.16666666666666666 2m24s/Msamples
+70000    1    0.14285714285714285 2m22s/Msamples
+80000    1    0.125 2m20s/Msamples
+90000    1    0.1111111111111111 2m15s/Msamples
+100000    1    0.1 2m12s/Msamples
+110000    1    0.09090909090909091 2m9s/Msamples
+120000    1    0.08333333333333333 2m8s/Msamples
+</code></pre></div>
+<h3>Run the Analysis using BEAST2</h3>
+
+<p>Run the <code>*.xml</code> using BEAST2 or use finished runs from the <em>precooked-runs</em> folder. The analysis should take about 10 to 20 minutes. </p>
+
+<h3>Analyse the log file using Tracer</h3>
+
+<p>First, we can open the <code>aim.log</code> file in tracer to check if the MCMC has converged. The ESS value should be above 200 for almost all values and especially for the posterior estimates. The burnin taken by Tracer is 10%, but for this analysis 1% is enough. </p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:70%;" src="figures/LogPosterior.png" alt="">
+    <figcaption>Figure 8: Check if the posterior converged.</figcaption>
+</figure>
+
+<h3>Analyse the species tree distribution in DensiTree</h3>
+
+<p>First, we can have a look at the distribution of species trees in DensiTree. To do so, open the files <code>species.trees</code> in DensiTree.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:70%;" src="figures/DensiTree_aim.png" alt="">
+<figcaption>Figure 8: Distribution of species trees inferred under AIM.</figcaption>
+</figure>
+
+<p>We can now compare the distribution of species trees inferred under AIM to the case when we don&#39;t have any gene flow. This file can be found in the pre-cooked runs folder and is called <code>species_nogeneflow.trees</code></p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:70%;" src="figures/DensiTree_nogeneflow.png" alt="">
+<figcaption>Figure 8: Distribution of species trees when not accounting for gene flow.</figcaption>
+</figure>
+
+<p>We can see that the inferred distribution of species trees differ between the two methods. The difference lies mainly in where <em>An. quadriannulatus</em> attaches. If we have a look at the inferred gene tree for chr3L-10352:</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:70%;" src="figures/chr3L-10352.png" alt="">
+<figcaption>Figure 8: Inferred gene tree of chr3L-10352.</figcaption>
+</figure>
+
+<p>In AIM the attachement of <em>An. quadriannulatus</em> is explained by gene flow. When not accounting for gene flow, this causes the topology of the species tree to be different. We will next analyse between which species there was gene flow by using an <em>R</em> script.</p>
+
+<h3>Investigate the species tree and gene flow between species</h3>
+
+<p>The analysis script for the analysis of the species tree can be found in the <em>scripts</em> folder. The R script <em>analyseAIMrun.R</em> can be used to analyse AIM runs and to plot species trees and the gene flow between species. First, we&#39;ll need to install a few R packages for the script to run. To do so, open R and then type in the follwing few lines:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">install.packages("devtools", type = "source")
+devtools::install_github("thibautjombart/OutbreakTools")
+install.packages("ggplot2", type = "source")
+install.packages("phytools", type = "source")
+install.packages("ape", type = "source")
+install.packages("ggtree", type = "source")
+</code></pre></div>
+<p>devtools is needed to install OutbreakTools. 
+OutbreakTools is needed to read in node annotated trees.
+ggplot2 and ggtree are needed to plot trees and phytools and ape are needed to analyse node heights etc.</p>
+
+<p>Next, we can try to run the script.
+Running <em>analyseAIMrun.R</em> will take the tree file specified in the line:
+<code>trees &lt;- &quot;./../precooked_runs/species.trees</code>
+as intput.</p>
+
+<p>It will then read in the node annotated trees and take a burnin as specified in the line <code>burn_in = 0.1</code>. It will then count how many different unique ranked tree topologies there are. This means that the script distinguished between trees that have the same topology but where the ordering of internal nodes is different. This has to be done in AIM since each ranked topologies as different set of co-existing species. This means that the meaning of parameters is different for each of these different topologies. </p>
+
+<p>The script will produce one figure and one log file for each of the uniquely ranked species tree topologies. The figure shows the species tree as well as between which species gene flow is supported with a Bayes Factor with more than 20. </p>
+
+<hr>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li>AIM source code: <a href="https://github.com/genomescale/starbeast2">https://github.com/genomescale/starbeast2</a></li>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
+<li><span id="Mueller348391">Mueller, N. F., Ogilvie, H., Zhang, C., Drummond, A., &amp; Stadler, T. (2018). Inference of species histories in the presence of gene flow. <i>BioRxiv</i>. https://doi.org/10.1101/348391</span></li>
+<li><span id="fontaine2015extensive">Fontaine, M. C., Pease, J. B., Steele, A., Waterhouse, R. M., Neafsey, D. E., Sharakhov, I. V., … others. (2015). Extensive introgression in a malaria vector species complex revealed by phylogenomics. <i>Science</i>, <i>347</i>(6217), 1258524.</span></li></ol>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+
