@@ -573,40 +573,40 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/bfc6fbe427eb7385a9ab93559fc7d242d35d8145">
-					21 Feb 2019 - <span class="text-gray">more info on differences to no gene flow</span>
+					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/0fbbd4c7042ccacd33700dbf7fdad09949aa16d3">
+					22 Feb 2019 - <span class="text-gray">adds output figure</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/323f43803f067c7b5dd4b5148cb486dd1d0f17ff">
-					21 Feb 2019 - <span class="text-gray">adds runs w/o gene flow</span>
+					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/6c72675e0263de28197824e5ce4d866d8a7924be">
+					22 Feb 2019 - <span class="text-gray">adds link to coupled MCMC explanation</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/ad49922e0d34cf9037cf09d7a32f360d05d9acc5">
-					21 Feb 2019 - <span class="text-gray">adds example xml</span>
+					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/4fb411d47cedf3731c63d103b90040e708cb9c08">
+					22 Feb 2019 - <span class="text-gray">more typos</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/08f5ec20e1f202825f50c6d14d8f55f325818ed7">
-					21 Feb 2019 - <span class="text-gray">adds long runs</span>
+					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/77973b0f4b2eb855d2fa13136af90eca5378571a">
+					22 Feb 2019 - <span class="text-gray">more typos</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/21c83b91cca480957ddfcd1ef9d6de0e29604185">
-					21 Feb 2019 - <span class="text-gray">added notes of caution</span>
+					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/b295b80146cabeadcdffa0b94e568d6fa95f0657">
+					22 Feb 2019 - <span class="text-gray">typo fixing</span>
 					</a> 
 				</li>
 			
@@ -701,17 +701,17 @@ To assign the different individuals to different species, press the <em>Guess</e
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/TaxonSet.png" alt="">
-    <figcaption>Figure 3: Guess the species of each sampled individual.</figcaption>
+    <figcaption>Figure 2: Guess the species of each sampled individual.</figcaption>
 </figure>
 
 <h3>Specify the Site Model (Site Model)</h3>
 
-<p>Since we Linked all the Site Models of the different loci together when loading the sequence data, we only have to set up the site models once. We will be using an HKY + $\Gamma_4$ model that allows for different relative rates of transversions and transitions, as well as for rate hetereogeneity across different sites. Additionally, we should make sure that the <em>estimate</em> button for the substitution rates is clicked to allow for rate variation across different loci. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical. After, we can go back to the <em>Partitions</em> field and press <em>Unlink Site Models</em>. Now each loci will have the same site model, but each with different parameters.</p>
+<p>Since we Linked all the Site Models of the different loci together when loading the sequence data, we only have to set up the site models once. We will be using an HKY + &Gamma; <sub>4</sub> model that allows for different relative rates of transversions and transitions, as well as for rate hetereogeneity across different sites. Additionally, we should make sure that the <em>estimate</em> button for the substitution rates is clicked to allow for rate variation across different loci. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical. After, we can go back to the <em>Partitions</em> field and press <em>Unlink Site Models</em>. Now each loci will have the same site model, but each with different parameters.</p>
 
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/SiteModel.png" alt="">
-    <figcaption>Figure 4: Set the site model.</figcaption>
+    <figcaption>Figure 3: Set the site model.</figcaption>
 </figure>
 
 <h3>Set the clock model (Clock Model)</h3>
@@ -727,7 +727,7 @@ To assign the different individuals to different species, press the <em>Guess</e
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/MigRatesPrior.png" alt="">
-    <figcaption>Figure 6: Setting up the prior on the migration rates.</figcaption>
+    <figcaption>Figure 4: Setting up the prior on the migration rates.</figcaption>
 </figure>
 
 <p>Next, we can save the <code>*.xml</code> file under <em>File &gt;&gt; Save as</em>.</p>
@@ -735,18 +735,18 @@ To assign the different individuals to different species, press the <em>Guess</e
 <h3>Set up the xml to run two chains</h3>
 
 <p>In order to setup the analysis to run with coupled MCMC, we have to open the  <code>*.xml</code> and change one line in the xml.
-To do so, go to the line with:
-<code>
-&lt;run id=&quot;mcmc&quot; spec=&quot;MCMC&quot; chainLength=&quot;10000000&quot; storeEvery=&quot;5000&quot;&gt;
-</code>
-To have a run with coupled MCMC, we have to replace the above line with:
-<code>
-&lt;run id=&quot;mcmc&quot; spec=&quot;beast.coupledMCMC.CoupledMCMC&quot; logHeatedChains=&quot;true&quot; chainLength=&quot;10000000&quot; storeEvery=&quot;5000&quot; deltaTemperature=&quot;0.1&quot; chains=&quot;2&quot; resampleEvery=&quot;10000&quot;&gt;
-</code>
-* <code>logHeatedChains=&quot;true&quot;</code> logs the log files of the heated chains if true.
-* <code>chainLength=&quot;100000000&quot;</code> defines for how many iterations the chains is run
-* <code>deltaTemperature=&quot;0.025&quot;</code> defines the temperature difference between the chain <em>n</em> and chain <em>n-1</em>.
-* <code>chains=&quot;2&quot;</code> defines the number of parallel chains that are run. The first chain is the one that explores the posterior just like a normal MCMC chain. All other chains are what&#39;s called <em>heated</em>. This means that MCMC moves of those chains have a higher probability of being accepted. While these heated chains don&#39;t explore the posterior properly, they can be used to propose new states to the one cold chain.   </p>
+To do so, go to the line with:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;run id="mcmc" spec="MCMC" chainLength="10000000" storeEvery="5000"&gt;
+</code></pre></div>
+<p>To have a run with coupled MCMC, we have to replace the above line with:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;run id="mcmc" spec="beast.coupledMCMC.CoupledMCMC" logHeatedChains="true" chainLength="10000000" storeEvery="5000" deltaTemperature="0.1" chains="2" resampleEvery="10000"&gt;
+</code></pre></div>
+<ul>
+<li><p><code>logHeatedChains=&quot;true&quot;</code> logs the log files of the heated chains if true.</p></li>
+<li><p><code>chainLength=&quot;100000000&quot;</code> defines for how many iterations the chains is run</p></li>
+<li><p><code>deltaTemperature=&quot;0.1&quot;</code> defines the temperature difference between the chain <em>n</em> and chain <em>n-1</em>.</p></li>
+<li><p><code>chains=&quot;2&quot;</code> defines the number of parallel chains that are run. The first chain is the one that explores the posterior just like a normal MCMC chain. All other chains are what&#39;s called <em>heated</em>. This means that MCMC moves of those chains have a higher probability of being accepted. While these heated chains don&#39;t explore the posterior properly, they can be used to propose new states to the one cold chain.   </p></li>
+</ul>
 
 <p>The output to the screen of a Coupled MCMC run looks slightly different then the one of a standard MCMC run.
 The column called <em>sample</em> describes at which iteration of the coupled MCMC we are. The column <em>swapsColdChain</em> denotes how many times the one cold chain (the chain that runs just like a regular MCMC chain) has been swapped with another chain. The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted. This vaues should be somewhere between <em>0.2</em> and <em>0.6</em>. A low values indicates that the heated chains are running too hot and are not efficiently exploring the posterior. A too high values indicates that the heated chains are not running hot enough and are thus exploring parameter space that are too similar to the one of the cold chain.</p>
@@ -764,6 +764,8 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 110000    1    0.09090909090909091 2m9s/Msamples
 120000    1    0.08333333333333333 2m8s/Msamples
 </code></pre></div>
+<p>The webpage <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a>, gives a good introduction on how coupled MCMC works</p>
+
 <h3>Run the Analysis using BEAST2</h3>
 
 <p>Run the <code>*.xml</code> using BEAST2 or use finished runs from the <em>precooked-runs</em> folder. The analysis should take about 10 to 20 minutes. </p>
@@ -775,7 +777,7 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/LogPosterior.png" alt="">
-    <figcaption>Figure 8: Check if the posterior converged.</figcaption>
+    <figcaption>Figure 5: Check if the posterior converged.</figcaption>
 </figure>
 
 <h3>Analyse the species tree distribution in DensiTree</h3>
@@ -785,7 +787,7 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 <figure>
 <a id="fig:example1"></a>
 <img style="width:70%;" src="figures/DensiTree_aim.png" alt="">
-<figcaption>Figure 8: Distribution of species trees inferred under AIM.</figcaption>
+<figcaption>Figure 6: Distribution of species trees inferred under AIM.</figcaption>
 </figure>
 
 <p>We can now compare the distribution of species trees inferred under AIM to the case when we don&#39;t have any gene flow. This file can be found in the pre-cooked runs folder and is called <code>species_nogeneflow.trees</code></p>
@@ -793,7 +795,7 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 <figure>
 <a id="fig:example1"></a>
 <img style="width:70%;" src="figures/DensiTree_nogeneflow.png" alt="">
-<figcaption>Figure 8: Distribution of species trees when not accounting for gene flow.</figcaption>
+<figcaption>Figure 7: Distribution of species trees when not accounting for gene flow.</figcaption>
 </figure>
 
 <p>Next, we can check which which genes most likely drive these differences. In order to do so, we can compare inferred relative rates of evolution of every loci between runs with and runs without gene flow. To do so, we can load the two files <code>aim.log</code> and <code>aim_nogeneflow.log</code> in tracer. When we compare the relative rates of mutation between most genes, they look fairly similar between with and without gene flow for most loci. Loci nr 10352 however has a very different inferred mutation rate, indicating that there is something different going on in that loci depending on wether we allow for gene flow or not.</p>
@@ -809,10 +811,10 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 <figure>
 <a id="fig:example1"></a>
 <img style="width:70%;" src="figures/chr3L-10352.png" alt="">
-<figcaption>Figure 8: Inferred gene tree of chr3L-10352.</figcaption>
+<figcaption>Figure 9: Inferred gene tree of chr3L-10352.</figcaption>
 </figure>
 
-<p>In AIM the attachement of <em>An. quadriannulatus</em> is explained by gene flow. When not accounting for gene flow, this causes the topology of the species tree to be slightly different by essentially pushing the attachment of <em>An. quadriannulatus</em> closer to <em>An. gambia</em>. We will next analyse between which species there was gene flow by using an <em>R</em> script.</p>
+<p>In AIM, the attachement of <em>An. quadriannulatus</em> is explained by gene flow. When not accounting for gene flow, this causes the topology of the species tree to be slightly different by essentially pushing the attachment of <em>An. quadriannulatus</em> closer to <em>An. gambia</em>. We will next analyse between which species there was gene flow by using an <em>R</em> script.</p>
 
 <h3>Investigate the species tree and gene flow between species</h3>
 
@@ -828,20 +830,35 @@ install.packages("ggtree", type = "source")
 OutbreakTools is needed to read in node annotated trees.
 ggplot2 and ggtree are needed to plot trees and phytools and ape are needed to analyse node heights etc.</p>
 
-<p>Running <em>analyseAIMrun.R</em> will take the tree file specified in the line:
-<code>trees &lt;- &quot;./../precooked_runs/species_long.trees</code>
-as intput. If you want to use a different <code>species.trees</code> files, this line has to be changed.</p>
+<p>Running <em>analyseAIMrun.R</em> will take the tree file specified in the line:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">trees &lt;- "./../precooked_runs/species_long.trees
+</code></pre></div>
+<p>as intput. If you want to use a different <code>species.trees</code> files, this line has to be changed. Next, we can try to run the script. If the error <code>Error in start:end : NA/NaN argument</code> appears, the last line of the  <code>*.trees</code> file we were using was probably not <code>End;</code>. The function that reads in the trees into <code>R</code> however requires this to be the case. The easiest way to avoid this error is therefore to just add <code>End;</code> to the <code>*.trees</code> file in a TextEditor. Otherwise, running <code>logCombiner</code> on the <code>*.trees</code> file will resolve the error as well. Runnign the script will then read in the node annotated trees and take a burnin as specified in the line <code>burn_in = 0.1</code>. It will then count how many different unique ranked tree topologies there are. This means that the script distinguished between trees that have the same topology but where the ordering of internal nodes is different. This has to be done in AIM since each ranked topologies as different set of co-existing species. This means that the meaning of parameters is different for each of these different topologies. </p>
 
-<p>Next, we can try to run the script.</p>
+<p>The script will produce one figure and one log file for each of the uniquely ranked species tree topologies. Uniquely ranked tree topologies distinguishes between trees with the same topology, but different order of nodes.</p>
 
-<p>If the error <code>Error in start:end : NA/NaN argument</code> appears, the last line of the  <code>*.trees</code> file we were using was probably not <code>End;</code>. The function that reads in the trees into <code>R</code> however requires this to be the case. The easiest way to avoid this error is therefore to just add <code>End;</code> to the <code>*.trees</code> file in a TextEditor. Otherwise, running <code>logCombiner</code> on the <code>*.trees</code> file will resolve the error as well. Runnign the script will then read in the node annotated trees and take a burnin as specified in the line <code>burn_in = 0.1</code>. It will then count how many different unique ranked tree topologies there are. This means that the script distinguished between trees that have the same topology but where the ordering of internal nodes is different. This has to be done in AIM since each ranked topologies as different set of co-existing species. This means that the meaning of parameters is different for each of these different topologies. </p>
+<figure>
+<a id="fig:example1"></a>
+<img style="width:70%;" src="figures/rankedTree.png" alt="">
+<figcaption>Figure 10: Tree with the same topology but different node order.</figcaption>
+</figure>
 
-<p>The script will produce one figure and one log file for each of the uniquely ranked species tree topologies. Thes figures show the species tree as well as between which species gene flow is supported with a Bayes Factor with more than 20 of each of these uniquely ranked species tree topology. </p>
+<p>The figure shows the species tree as well as between which species gene flow is supported with a Bayes Factor with more than 20. The log file reports the parameter estimates seperately for each of the different uniquely ranked species tree topologies. The files are numbered by their relative posterior support, with file nr 1 being the most probable species tree. The support for each individual ranked topolofy is given as the title of each figure. </p>
+
+<p>The figure of the most probable inferred tree should look something like the figure below.</p>
+
+<figure>
+<a id="fig:example1"></a>
+<img style="width:70%;" src="figures/species_long_1.png" alt="">
+<figcaption>Figure 11: Most probable ranked tree topology.</figcaption>
+</figure>
+
+<p>We infer gene flow to be probable from <em>An. gambia</em> to <em>An. quadriannulatus</em>.</p>
 
 <h3>Some notes of caution</h3>
 
 <ul>
-<li>Different priors, especially on how much and how strong gene flow is expected to occur, can have a large impact on the species tree that is inferred. The reason is that in a IM model, coalescent events of a gene between two species can either be explained by gene flow or by a speciation event.</li>
+<li>Different priors, especially on how much and how strong gene flow is expected to occur, can have a large impact on the species tree that is inferred. The reason is that in a IM model, coalescent events on a gene between two species can either be explained by gene flow or by a speciation event.</li>
 <li>Variation in the data that is not accounted for by the model can lead to wrong estimates of the species tree or between which species gene flow occurs.</li>
 <li>Jointly inferring the species tree, gene flow, effective population sizes, gene trees and evolutionary models can take a long time.</li>
 </ul>

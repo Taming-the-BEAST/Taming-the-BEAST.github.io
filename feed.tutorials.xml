@@ -28,9 +28,9 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/nicfel/AIM-Tutorial/commit/bfc6fbe427eb7385a9ab93559fc7d242d35d8145'
+						'https://github.com/nicfel/AIM-Tutorial/commit/0fbbd4c7042ccacd33700dbf7fdad09949aa16d3'
 					&gt;
-						21 Feb 2019
+						22 Feb 2019
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -38,7 +38,7 @@
 					&gt;
 						nicfel
 					&lt;/a&gt;
-					: more info on differences to no gene flow
+					: adds output figure
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
 					
@@ -46,7 +46,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Thu, 21 Feb 2019 14:29:20 +1100</pubDate>
+				<pubDate>Fri, 22 Feb 2019 09:35:20 +1100</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
