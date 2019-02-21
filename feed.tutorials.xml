@@ -28,7 +28,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/nicfel/AIM-Tutorial/commit/0fbbd4c7042ccacd33700dbf7fdad09949aa16d3'
+						'https://github.com/nicfel/AIM-Tutorial/commit/3a778aab522b9ed6aa1fad7d97c90fea006e41a3'
 					&gt;
 						22 Feb 2019
 					&lt;/a&gt;
@@ -38,7 +38,7 @@
 					&gt;
 						nicfel
 					&lt;/a&gt;
-					: adds output figure
+					: fixed a bunch of typos
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
 					
@@ -46,10 +46,52 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Fri, 22 Feb 2019 09:35:20 +1100</pubDate>
+				<pubDate>Fri, 22 Feb 2019 10:24:49 +1100</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>CladeAge Tutorial</title>
+				<description>
+					Fossil-based divergence-time estimation with CladeAge
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Michael Matschiner
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/mmatschiner/CladeAge-Tutorial/commit/64dee2c3e902340cec82edfbfc6c77cf794e4335'
+					&gt;
+						22 Feb 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/mmatschiner'
+					&gt;
+						mmatschiner
+					&lt;/a&gt;
+					: Merge branch 'master' of https://github.com/mmatschiner/CladeAge-Tutorial
+Added local update describing species-tree specification with BEAUti.
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Fri, 22 Feb 2019 09:43:45 +1100</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -232,49 +274,6 @@ Updated Version numbers to Beast 2.5.x
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>CladeAge Tutorial</title>
-				<description>
-					Fossil-based divergence-time estimation with CladeAge
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Michael Matschiner
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/mmatschiner/CladeAge-Tutorial/commit/c5a0c22fb9882fc0fd815a83b6822992271e58f5'
-					&gt;
-						13 Aug 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/mmatschiner'
-					&gt;
-						mmatschiner
-					&lt;/a&gt;
-					: Merge pull request #1 from tgvaughan/patch-1
-
-Remove template latex tutorial from repo.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Mon, 13 Aug 2018 19:43:38 +1000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
 			</item>
 				
 			<item>

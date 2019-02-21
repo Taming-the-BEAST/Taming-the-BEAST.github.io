@@ -573,6 +573,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/3a778aab522b9ed6aa1fad7d97c90fea006e41a3">
+					22 Feb 2019 - <span class="text-gray">fixed a bunch of typos</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/301067a9a136ee5fa5e172a46a1b5d86c2d2ad6e">
+					22 Feb 2019 - <span class="text-gray">fixes typo</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/0fbbd4c7042ccacd33700dbf7fdad09949aa16d3">
 					22 Feb 2019 - <span class="text-gray">adds output figure</span>
 					</a> 
@@ -591,22 +607,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/4fb411d47cedf3731c63d103b90040e708cb9c08">
 					22 Feb 2019 - <span class="text-gray">more typos</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/77973b0f4b2eb855d2fa13136af90eca5378571a">
-					22 Feb 2019 - <span class="text-gray">more typos</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/b295b80146cabeadcdffa0b94e568d6fa95f0657">
-					22 Feb 2019 - <span class="text-gray">typo fixing</span>
 					</a> 
 				</li>
 			
@@ -659,7 +659,7 @@
 
 <p><a href="#Mueller348391">(Mueller, Ogilvie, Zhang, Drummond, &amp; Stadler, 2018)</a></p>
 
-<p>In this tutorial, we wil infer the species history of 5 different anophoeles mosquitos species by using AIM, which is short for <em>Approximate Isolation with Migration</em>. AIM is part of the StarBeast2 package. This model can be used when we want to jointly infer the species histories for multiple loci and gene flow between extant and ancestral species </p>
+<p>In this tutorial, we wil infer the species history of 5 different anopheles mosquitos species by using AIM, which is short for <em>Approximate Isolation with Migration</em>. AIM is part of the StarBeast2 package. This model can be used when we want to jointly infer the species histories for multiple loci and gene flow between extant and ancestral species.</p>
 
 <p>The aim is to:</p>
 
@@ -671,7 +671,7 @@
 
 <h2>About the data</h2>
 
-<p>The data was previously used to infer the species history of the anopheles gambie comples in <a href="#fontaine2015extensive">(Fontaine et al., 2015)</a>. It is comprised of 27 loci, each of a length of about 1000 bp, from the left arm of the 3rd chromosome. </p>
+<p>The data was previously used to infer the species history of the anopheles gambie complex in <a href="#fontaine2015extensive">(Fontaine et al., 2015)</a>. It is comprised of 27 loci, each of a length of about 1000 bp, from the left arm of the 3rd chromosome. </p>
 
 <h2>Setting up an analysis in BEAUti</h2>
 
@@ -691,7 +691,7 @@
 
 <h3>Loading the different loci</h3>
 
-<p>The sequences for the different loci can be found in the <em>data</em> folder name can be either drag and dropped into BEAUti or imported by <em>Import Alignment</em>.  It will ask you what type the data is. If we say nucleotide, it will ask us for each loci individually. Since all loci are nucleotide data, we can choose <em>all are nucleotide</em>. To speed up the setup later, we can press <em>Link Site Models</em> and <em>Link Clock Models</em></p>
+<p>The sequences for the different loci can be found in the <em>data</em> folder name can be either drag and dropped into BEAUti or imported by <em>Import Alignment</em>.  It will ask us what type the data is. If we say nucleotide, it will ask us for each loci individually. Since all loci are nucleotide data, we can choose <em>all are nucleotide</em>. To speed up the setup later, we can press <em>Link Site Models</em> and <em>Link Clock Models</em></p>
 
 <h3>Get species corresponding to the different individuals (Taxon sets)</h3>
 
@@ -706,7 +706,7 @@ To assign the different individuals to different species, press the <em>Guess</e
 
 <h3>Specify the Site Model (Site Model)</h3>
 
-<p>Since we Linked all the Site Models of the different loci together when loading the sequence data, we only have to set up the site models once. We will be using an HKY + &Gamma; <sub>4</sub> model that allows for different relative rates of transversions and transitions, as well as for rate hetereogeneity across different sites. Additionally, we should make sure that the <em>estimate</em> button for the substitution rates is clicked to allow for rate variation across different loci. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical. After, we can go back to the <em>Partitions</em> field and press <em>Unlink Site Models</em>. Now each loci will have the same site model, but each with different parameters.</p>
+<p>Since we Linked all the site models of the different loci together when loading the sequence data, we only have to set up the site models once. We will be using an HKY + &Gamma; <sub>4</sub> model that allows for different relative rates of transversions and transitions, as well as for rate hetereogeneity across different sites. Additionally, we should make sure that the <em>estimate</em> button for the substitution rates is clicked to allow for rate variation across different loci. To reduce the number of parameters we have to estimate, we can set frequencies to empirical. After, we can go back to the <em>Partitions</em> field and press <em>Unlink Site Models</em>. Now each loci will have the same site model, but each with different parameters.</p>
 
 <figure>
     <a id="fig:example1"></a>
@@ -716,7 +716,7 @@ To assign the different individuals to different species, press the <em>Guess</e
 
 <h3>Set the clock model (Clock Model)</h3>
 
-<p>Since we have all sequences sampled in the present and no calibration, we have to information to estimate the clock rate. This however means that the branch lengths of our trees are in the dimension of average number substitutions and in units of time (e.g. in years). </p>
+<p>Since we have all sequences sampled at the present and no calibration, we do not have any information of time to estimate the clock rate. This means that none of our estimates will be in units of time (e.g. in years), but instead will be in number of substitutions. </p>
 
 <h3>Specify the priors (Priors)</h3>
 
@@ -749,7 +749,7 @@ To do so, go to the line with:</p>
 </ul>
 
 <p>The output to the screen of a Coupled MCMC run looks slightly different then the one of a standard MCMC run.
-The column called <em>sample</em> describes at which iteration of the coupled MCMC we are. The column <em>swapsColdChain</em> denotes how many times the one cold chain (the chain that runs just like a regular MCMC chain) has been swapped with another chain. The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted. This vaues should be somewhere between <em>0.2</em> and <em>0.6</em>. A low values indicates that the heated chains are running too hot and are not efficiently exploring the posterior. A too high values indicates that the heated chains are not running hot enough and are thus exploring parameter space that are too similar to the one of the cold chain.</p>
+The column called <em>sample</em> describes at which iteration of the coupled MCMC we are. The column <em>swapsColdChain</em> denotes how many times the one cold chain (the chain that runs just like a regular MCMC chain) has been swapped with another chain. The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted. This vaue should be somewhere between <em>0.2</em> and <em>0.6</em>. A low values indicates that the heated chains are running too hot and are not efficiently exploring the posterior. A too high values indicates that the heated chains are not running hot enough and are thus exploring parameter space that are too similar to the one of the cold chain.</p>
 <div class="highlight"><pre><code class="language-" data-lang="">sample    swapsColdCain    swapProbability
 10000    0    0.0 --
 20000    1    0.5 3m15s/Msamples
@@ -764,7 +764,7 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 110000    1    0.09090909090909091 2m9s/Msamples
 120000    1    0.08333333333333333 2m8s/Msamples
 </code></pre></div>
-<p>The webpage <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a>, gives a good introduction on how coupled MCMC works</p>
+<p>The webpage <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a>, gives a good introduction on how coupled MCMC works.</p>
 
 <h3>Run the Analysis using BEAST2</h3>
 
@@ -798,7 +798,7 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 <figcaption>Figure 7: Distribution of species trees when not accounting for gene flow.</figcaption>
 </figure>
 
-<p>Next, we can check which which genes most likely drive these differences. In order to do so, we can compare inferred relative rates of evolution of every loci between runs with and runs without gene flow. To do so, we can load the two files <code>aim.log</code> and <code>aim_nogeneflow.log</code> in tracer. When we compare the relative rates of mutation between most genes, they look fairly similar between with and without gene flow for most loci. Loci nr 10352 however has a very different inferred mutation rate, indicating that there is something different going on in that loci depending on wether we allow for gene flow or not.</p>
+<p>Next, we can check which which genes most likely drive these differences. In order to do so, we can compare inferred relative rates of evolution for every loci between runs with and runs without gene flow. To do so, we can load the two files <code>aim.log</code> and <code>aim_nogeneflow.log</code> in tracer. When we compare the relative rates of mutation between most loci, they look fairly similar between with and without gene flow. Locus nr 10352 however has a very different inferred mutation rate, indicating that there is something different going on in that loci depending on wether we allow for gene flow or not.</p>
 
 <figure>
 <a id="fig:example1"></a>
@@ -806,7 +806,7 @@ The column called <em>sample</em> describes at which iteration of the coupled MC
 <figcaption>Figure 8: Differences in inferred relative rates of evolution for loci nr 10352.</figcaption>
 </figure>
 
-<p>Next, we can open the inferred tree of loci 10352 when accounting for gene flow in DensiTree</p>
+<p>Next, we can open the inferred tree of locus 10352 when accounting for gene flow in DensiTree</p>
 
 <figure>
 <a id="fig:example1"></a>
@@ -826,14 +826,14 @@ install.packages("phytools", type = "source")
 install.packages("ape", type = "source")
 install.packages("ggtree", type = "source")
 </code></pre></div>
-<p>devtools is needed to install OutbreakTools. 
-OutbreakTools is needed to read in node annotated trees.
-ggplot2 and ggtree are needed to plot trees and phytools and ape are needed to analyse node heights etc.</p>
+<p><code>devtools</code> is needed to install <code>OutbreakTools</code>. 
+<code>OutbreakTools</code> is needed to read in node annotated trees.
+<code>ggplot2</code> and <code>ggtree</code> are needed to plot trees and <code>phytools</code> and <code>ape</code> are needed to analyse node heights etc.</p>
 
 <p>Running <em>analyseAIMrun.R</em> will take the tree file specified in the line:</p>
 <div class="highlight"><pre><code class="language-" data-lang="">trees &lt;- "./../precooked_runs/species_long.trees
 </code></pre></div>
-<p>as intput. If you want to use a different <code>species.trees</code> files, this line has to be changed. Next, we can try to run the script. If the error <code>Error in start:end : NA/NaN argument</code> appears, the last line of the  <code>*.trees</code> file we were using was probably not <code>End;</code>. The function that reads in the trees into <code>R</code> however requires this to be the case. The easiest way to avoid this error is therefore to just add <code>End;</code> to the <code>*.trees</code> file in a TextEditor. Otherwise, running <code>logCombiner</code> on the <code>*.trees</code> file will resolve the error as well. Runnign the script will then read in the node annotated trees and take a burnin as specified in the line <code>burn_in = 0.1</code>. It will then count how many different unique ranked tree topologies there are. This means that the script distinguished between trees that have the same topology but where the ordering of internal nodes is different. This has to be done in AIM since each ranked topologies as different set of co-existing species. This means that the meaning of parameters is different for each of these different topologies. </p>
+<p>as intput. If you want to use a different <code>species.trees</code> files, this line has to be changed. Next, we can try to run the script. If the error <code>Error in start:end : NA/NaN argument</code> appears, the last line of the  <code>*.trees</code> file we were using was probably not <code>End;</code>. The function that reads in the trees into <code>R</code> however requires this to be the case. The easiest way to avoid this error is therefore to just add <code>End;</code> to the <code>*.trees</code> file in a TextEditor. Otherwise, running <code>logCombiner</code> on the <code>*.trees</code> file will resolve the error as well. Running the script will then read in the node annotated trees and take a burnin as specified in the line <code>burn_in = 0.1</code>. It will then count how many different unique ranked tree topologies there are. This means that the script distinguished between trees that have the same topology but where the ordering of internal nodes is different. This has to be done in AIM, since each ranked topologies has a different set of co-existing species. This means that the meaning of parameters is different for each of these different topologies. </p>
 
 <p>The script will produce one figure and one log file for each of the uniquely ranked species tree topologies. Uniquely ranked tree topologies distinguishes between trees with the same topology, but different order of nodes.</p>
 
@@ -843,7 +843,8 @@ ggplot2 and ggtree are needed to plot trees and phytools and ape are needed to a
 <figcaption>Figure 10: Tree with the same topology but different node order.</figcaption>
 </figure>
 
-<p>The figure shows the species tree as well as between which species gene flow is supported with a Bayes Factor with more than 20. The log file reports the parameter estimates seperately for each of the different uniquely ranked species tree topologies. The files are numbered by their relative posterior support, with file nr 1 being the most probable species tree. The support for each individual ranked topolofy is given as the title of each figure. </p>
+<p>The figure shows the species tree as well as between which species gene flow is supported. Only if gene flow is supported with Bayes Factor with more than 20, it is plotted. 
+The log file reports the parameter estimates seperately for each of the different uniquely ranked species tree topologies. The files are numbered by their relative posterior support, with file nr 1 being the most probable species tree. The support for each individual ranked topolofy is given as the title of each figure. </p>
 
 <p>The figure of the most probable inferred tree should look something like the figure below.</p>
 
@@ -853,7 +854,7 @@ ggplot2 and ggtree are needed to plot trees and phytools and ape are needed to a
 <figcaption>Figure 11: Most probable ranked tree topology.</figcaption>
 </figure>
 
-<p>We infer gene flow to be probable from <em>An. gambia</em> to <em>An. quadriannulatus</em>.</p>
+<p>Meaning that we infer gene flow to be probable from <em>An. gambia</em> to <em>An. quadriannulatus</em>.</p>
 
 <h3>Some notes of caution</h3>
 
