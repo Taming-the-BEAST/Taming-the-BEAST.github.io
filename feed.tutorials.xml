@@ -12,7 +12,7 @@
 		</image>
 				
 			<item>
-				<title>AIM in StarBeast2 v0.0.1 Tutorial</title>
+				<title>AIM in StarBeast2 v0.15.2 Tutorial</title>
 				<description>
 					Inferring species trees and gene flow from multiple loci
 					&lt;br&gt;
@@ -28,17 +28,17 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/tgvaughan/AIM-Tutorial/commit/9f8c672e2ef2e10d8d72187b404b10c8bbb1e5e3'
+						'https://github.com/nicfel/AIM-Tutorial/commit/bfc6fbe427eb7385a9ab93559fc7d242d35d8145'
 					&gt;
-						20 Feb 2019
+						21 Feb 2019
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/tgvaughan'
+						'https://github.com/nicfel'
 					&gt;
-						tgvaughan
+						nicfel
 					&lt;/a&gt;
-					: Fixed citation bugs.
+					: more info on differences to no gene flow
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
 					
@@ -46,10 +46,51 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Wed, 20 Feb 2019 21:15:13 +1100</pubDate>
+				<pubDate>Thu, 21 Feb 2019 14:29:20 +1100</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>MASCOT v1.0.0 Tutorial</title>
+				<description>
+					Parameter and State inference using the approximate structured coalescent
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel/Mascot-Tutorial/commit/ecb3c9d5f2f2b1436b88ca80780939dd3a7710d4'
+					&gt;
+						21 Feb 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel'
+					&gt;
+						nicfel
+					&lt;/a&gt;
+					: updates version
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5
+					
+				</description>
+				<pubDate>Thu, 21 Feb 2019 09:05:54 +1100</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -406,47 +447,6 @@ Remove template latex tutorial from repo.
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
-			</item>
-				
-			<item>
-				<title>MASCOT v1.0.0 Tutorial</title>
-				<description>
-					Parameter and State inference using the approximate structured coalescent
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/nicfel/Mascot-Tutorial/commit/e1fa209a4464709cedb22d21673740934d8b694b'
-					&gt;
-						19 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: changed clock rate prior
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5
-					
-				</description>
-				<pubDate>Tue, 19 Jun 2018 17:57:29 +1000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
 			</item>
 				
 			<item>

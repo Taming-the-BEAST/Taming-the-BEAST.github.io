@@ -33,7 +33,7 @@ i = 1
 
 # Make the filenames for all possible migration rates
 print("to fix the error: 'Error in start:end : NA/NaN argument' appears, add an 'End;' to the end of the tree file")
-trees <- "./../precooked_runs/species_out.trees"
+trees <- "./../precooked_runs/species_long.trees"
 
 # get all the tree topologies in the posterior, if the file isn't ended by END;, this wll cause an error
 est_species_tree_with_nodes <- read.annotated.nexus(trees)
