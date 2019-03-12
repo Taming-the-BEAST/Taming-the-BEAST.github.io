@@ -166,12 +166,6 @@
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="/tutorials/Prior-selection/Prior-selection.pdf">Prior-selection.pdf</a>	
-				</li>
-			
 			<div class="smallspacer"></div>
 			<li>
 				<i class="fa fa-github fa-fw"></i>
@@ -402,6 +396,16 @@
     			</div>
  				</a>
  			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
  			
 		</div>
 		<div class="bigspacer"></div>
@@ -410,6 +414,14 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/7f2be81d71a1645f9b5ea5833408eac191bcb130">
+					12 Mar 2019 - <span class="text-gray">Updated tutorial for BDSKY 1.4.5.</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -443,14 +455,6 @@
 					</a> 
 				</li>
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/bfbe478e90ed3f09849aed7d88e8d8b5a0181c07">
-					12 Jul 2017 - <span class="text-gray">Update programs used section</span>
-					</a> 
-				</li>
-			
 			</ul>
 		</div>		
 		<div class="spacer"></div>	
@@ -474,7 +478,7 @@
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
 
-<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.7 <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -490,11 +494,11 @@
 
 <h3>Tracer</h3>
 
-<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.0.</p>
 
 <h3>FigTree</h3>
 
-<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.2.</p>
+<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.4.</p>
 
 <hr>
 
@@ -532,7 +536,7 @@
 
 <h3>Installing BEAST2 Plug-Ins</h3>
 
-<p>Since we will be using the birth-death skyline model (<strong>BDSKY</strong>) <a href="#Stadler2013">(Stadler, Kühnert, Bonhoeffer, &amp; Drummond, 2013)</a>, we need to make sure it is available in BEAUti. It is not one of the default models but rather an add-on (also called a plug-in or package). You only need to install a BEAST2 package once. Thus, if you close BEAUti, you do not have to load <strong>BDSKY</strong> the next time you open the program. However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST2. For this tutorial we need to ensure that we have at least BDSKY v1.3.3 installed.</p>
+<p>Since we will be using the birth-death skyline model (<strong>BDSKY</strong>) <a href="#Stadler2013">(Stadler, Kühnert, Bonhoeffer, &amp; Drummond, 2013)</a>, we need to make sure it is available in BEAUti. It is not one of the default models but rather an add-on (also called a plug-in or package). You only need to install a BEAST2 package once. Thus, if you close BEAUti, you do not have to load <strong>BDSKY</strong> the next time you open the program. However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST2. For this tutorial we need to ensure that we have at least BDSKY v1.4.5 installed.</p>
 
 <blockquote>
 <p>Open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
@@ -590,7 +594,11 @@
 <p>In the <strong>Tip Dates</strong> panel, click the <strong>Use tip dates</strong> option. </p>
 </blockquote>
 
-<p>We want all the tree information to be specified for units of time in &quot;years&quot;, thus we leave the <strong>Dates specified as</strong> option set to default &quot;year&quot;. Also we want the time to flow forward in time in the tree, therefore, we keep to default option of tip dates being specified as &quot;Since some time in the past&quot; (<a href="#timeUnitsAndFlow">Figure 4</a>).</p>
+<p>The sequence labels (headers in the FASTA file) contain sampling times specified as dates in the format year/month/day.  In order for BEAST to use this information we must specify the form of this date string and tell BEAST where to find the data.  To do this, first set <strong>Dates specified</strong> to the &quot;as dates with format&quot; option. Then click the arrows next to the box immediately to the right of this option and select &quot;yyyy/M/dd&quot; (<a href="#timeUnitsAndFlow">Figure 4</a>).  This tells BEAUti that the dates are specified with a full length (4-digit) year, then the month number, then a 2-digit day, all separated by &#39;/&#39; characters.</p>
+
+<blockquote>
+<p>Set <strong>Dates specified</strong> to the option &quot;as dates with format&quot;, then select &quot;yyyy/M/dd&quot; from the list of possible date formats.</p>
+</blockquote>
 
 <figure>
     <a id="timeUnitsAndFlow"></a>
@@ -600,7 +608,7 @@
 
 <p><br></p>
 
-<p>You could specify the tip dates by hand, by clicking for each row (i.e. for each sequence) into the <strong>Date</strong> column and typing the date information in for each sequence in turn. However, this is a laborious and error-prone procedure and can take a long time to finish. Fortunately, we can use BEAUti, to read off the dates from the sequence names for us. Each sequence is named such that the expression after the last underscore character (&quot;_&quot;) contains the sampling date information. BEAUti can search for this expression to extract the sequence date.</p>
+<p>You could specify the tip dates by hand, by clicking for each row (i.e. for each sequence) into the <strong>Date (raw value)</strong> column and typing the date information in for each sequence in turn. However, this is a laborious and error-prone procedure and can take a long time to finish. Fortunately, we can use BEAUti, to read off the dates from the sequence names for us. Each sequence is named such that the expression after the last underscore character (&quot;_&quot;) contains the sampling date information. BEAUti can search for this expression to extract the sequence date.</p>
 
 <blockquote>
 <p>Press the <strong>Auto-configure</strong> button. A window will appear where you can specify how BEAUti can find the date of sampling of each sequence. (<a href="#guessDates">Figure 5</a>)</p>
@@ -1048,7 +1056,7 @@ Are they different from the priors we set and if so, how?</p>
 <blockquote>
 <p>Open BEAUti, load the homochronous data and use the same settings as for the <code>Homochronous.xml</code> file.</p>
 
-<p>Create a new taxon set for root node by clicking the <strong>+ Add Prior</strong> button at the bottom of the parameter list in the <strong>Priors</strong> window. Select <strong>MRCA prior</strong> in the dropdown menu and press <strong>OK</strong>. This will reveal the <strong>Taxon set editor</strong>.</p>
+<p>Create a new taxon set for root node by clicking the <strong>+ Add Prior</strong> button at the bottom of the parameter list in the <strong>Priors</strong> window. Select <strong>MRCA prior</strong> in the dropdown menu (if one appears) and press <strong>OK</strong>. This will reveal the <strong>Taxon set editor</strong>.</p>
 
 <p>Change the <strong>Taxon set</strong> label to <strong>allseq</strong>.</p>
 
@@ -1081,12 +1089,14 @@ Are they different from the priors we set and if so, how?</p>
 
 <p><br></p>
 
-<p>We also need to change the names of the output files so that we do not overwrite the results of the previous analyses.</p>
+<p>We also need to change the names of the output files so that we do not overwrite the results of the previous analyses. Here we will do this by setting the
+trace log file name to <code>$(filebase).log</code> and the tree log file name to <code>$(filebase).$(tree).log</code>.  This is often a sensible thing to do as <code>$(filebase)</code> is
+replaced with the name of the XML file, so will always produce different log file names as long as the XML is different.</p>
 
 <blockquote>
-<p>In the <strong>MCMC</strong> window, click on the arrow next to the <strong>tracelog</strong> and change the <strong>File Name</strong> to <code>InfluenzaAH3N2_HAgene_2009_California_homochronous_tMRCA.log</code>.</p>
+<p>In the <strong>MCMC</strong> window, click on the arrow next to the <strong>tracelog</strong> and change the <strong>File Name</strong> to <code>$(filebase).log</code>.</p>
 
-<p>Then, click on the arrow next to the <strong>treelog</strong> and add <code>_tMRCA</code> between <code>$(tree)</code> and <code>.trees</code> in the <strong>File Name</strong> field.</p>
+<p>Then, click on the arrow next to the <strong>treelog</strong> and change the <strong>File Name</strong> to <code>$(filebase).$(tree).log</code>.</p>
 </blockquote>
 
 <p>Save the XML file as <code>Homochronous_tMRCA.xml</code> and run the analysis and compare to the original analysis of the homochronous data. </p>
