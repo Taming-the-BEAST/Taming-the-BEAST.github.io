@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [1][-]{section.2}{Programs used in this tutorial}{}% 2
+\BOOKMARK [2][-]{subsubsection.2.0.1}{BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.0.2}{BEAUti2 - Bayesian Evolutionary Analysis Utility}{subsubsection.2.0.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.0.3}{Tracer}{subsubsection.2.0.1}% 5
+\BOOKMARK [1][-]{section.3}{Practical: Selecting a clock model}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Setting up the Strict clock analysis}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Setting up the relaxed clock analysis}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{Installing the NS Package}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Setting up the nested sampling analyses}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Nested sampling FAQ}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{The analysis prints out multiple ML estimates with their SDs. Which one to choose?}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{How do I know the sub-chain length is large enough?}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.3}{How many particles do I need?}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.4}{Is NS faster than path sampling/stepping stone \(PS/SS\)?}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.5}{The output is written on screen, which I forgot to save. Can I estimate them directly from the log files?}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.6}{Why are some NS runs longer than others?}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.7}{Why are the ESSs so low when I open a log file in Tracer?}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Useful Links}{}% 19

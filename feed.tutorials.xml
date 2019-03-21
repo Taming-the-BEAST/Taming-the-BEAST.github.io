@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>Model selection</title>
+				<description>
+					Model selection with nested sampling
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Remco Bouckaert
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/rbouckaert/NS-tutorial/commit/ba3b6ac1067f3f3772a3e541e5dc95bf5cd4253e'
+					&gt;
+						20 Mar 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/rbouckaert'
+					&gt;
+						rbouckaert
+					&lt;/a&gt;
+					: polishing
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Wed, 20 Mar 2019 21:38:53 +0100</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Prior selection</title>
 				<description>
 					Prior selection and clock calibration using Influenza A data.

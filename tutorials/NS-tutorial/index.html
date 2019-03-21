@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Model selection</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86786826-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a></li>
+
+					
+                                        <li>
+					
+                                        <a href="/workshops/">workshops</a></li>
+
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/NS-tutorial/">Model selection</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Model selection with nested sampling
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Remco Bouckaert
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/NS-tutorial/NS-tutorial.pdf">NS-tutorial.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/rbouckaert/NS-tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/rbouckaert/NS-tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/data/HBV.nex" target="_blank" rel="nofollow">
+						HBV.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/xml/HBVStrict.xml" target="_blank" download rel="nofollow">
+						HBVStrict.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/xml/HBVUCLN.xml" target="_blank" download rel="nofollow">
+						HBVUCLN.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/xml/HBVStrict-NS.xml" target="_blank" download rel="nofollow">
+						HBVStrict-NS.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/xml/HBVUCLN-NS.xml" target="_blank" download rel="nofollow">
+						HBVUCLN-NS.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/precooked_runs/HBVStrict-NS32.log" target="_blank" download rel="nofollow">
+						HBVStrict-NS32.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/precooked_runs/HBVUCLN.log" target="_blank" download rel="nofollow">
+						HBVUCLN.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/precooked_runs/HBVUCLN-NS32.log" target="_blank" download rel="nofollow">
+						HBVUCLN-NS32.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/raw/master/precooked_runs/HBVStrict.log" target="_blank" download rel="nofollow">
+						HBVStrict.log
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/rbouckaert">
+    			<img class="pull-left avatar" src="https://avatars2.githubusercontent.com/u/3612959?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				rbouckaert
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/commit/ba3b6ac1067f3f3772a3e541e5dc95bf5cd4253e">
+					20 Mar 2019 - <span class="text-gray">polishing</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/commit/03410a6088a45bb028f32267a960e7970e2245f3">
+					20 Mar 2019 - <span class="text-gray">Merge pull request #1 from laduplessis/master
+
+Edit formatting, references and add LaTeX tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/commit/f91ed03ff0f7821e4d31900bd973bbba28e5f0cd">
+					20 Mar 2019 - <span class="text-gray">Play with formatting (figures, bullet points, blockquotes, code blocks)</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/commit/60893e6e7fb8666ff48921dd19c2c55e67872061">
+					20 Mar 2019 - <span class="text-gray">Add references to bib file and add main.tex</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/rbouckaert/NS-tutorial/commit/014eb0680c5450b72af0353772bc7910ecdd0313">
+					20 Mar 2019 - <span class="text-gray">Uncomment bibliography</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>BEAST provides a bewildering number of models. Bayesians have two techniques to deal with this problem: model averaging and model selection. With <strong>model averaging</strong>, the MCMC algorithms jumps between the different models, and models more appropriate for the data will be sampled more often than unsuitable models (see for example the <a href="https://taming-the-beast.org/tutorials/Substitution-model-averaging/">substitution model averaging tutorial</a>). <strong>Model selection</strong> on the other hand just picks one model and uses only that model during the MCMC run. This tutorial gives some guidelines on how to select the model that is most appropriate for your analysis. </p>
+
+<p>Bayesian model selection is based on estimating the marginal likelihood: the term forming the denominator in Bayes formula. This is generally a computationally intensive task and  there are several ways to estimate them. Here, we concentrate on nested sampling as a way to estimate the marginal likelihood as well as the uncertainty in that estimate.</p>
+
+<p>Say, we have two models, M1 and M2, and estimates of the (log) marginal likelihood, ML1 and ML2, then we can calculate the Bayes factor, which is the fraction BF=ML1/ML2 (or in log space, the difference log(BF) = log(ML1)-log(ML2)). If BF is larger than 1, model M1 is favoured, and otherwise M2 is favoured. How much it is favoured can be found in the following table <a href="#kass1995bayes">(Kass &amp; Raftery, 1995)</a>:</p>
+
+<figure>
+    <a name="fig:bfs"></a>
+    <img style="width:80.0%;" src="figures/BFs.png" alt="">
+    <figcaption>Figure 1: Bayes factor support.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Note that sometimes a factor 2 is used for multiplying BFs, so when comparing BFs from different publications, be aware which definition was used.</p>
+
+<p><strong>Nested sampling</strong> is an algorithm that works as follows:</p>
+
+<ul>
+<li>randomly sample <code>N</code> points from the prior</li>
+<li>while not coverged
+
+<ul>
+<li>pick the point with the lowest likelihood L<sub>min</sub>, and save to log file</li>
+<li>replace the point with a new point randomly sampled from the prior using an MCMC chain of <code>subChainLength</code> samples <strong>under the condition that the likelihood is at least L<sub>min</sub></strong></li>
+</ul></li>
+</ul>
+
+<p>So, the main parameters of the algorithm are the number of particles <code>N</code> and the <code>subChainLength</code>. <code>N</code> can be determined by starting with <code>N=1</code> and from the information of that run a target standard deviation can be determined, which gives us a formula to determine <code>N</code> (as we will see later in the tutorial). The <code>subChainLength</code> determines how independent the replacement point is from the point that was saved, and is the only parameter that needs to be determined by trial and error -- see <a href="#nested-sampling-faq">FAQ</a> for details.</p>
+
+<hr>
+
+<h1>Programs used in this tutorial</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>, <a href="#bouckaert2018beast">(Bouckaert et al., 2018)</a>. This tutorial uses the BEAST2 version 2.5.2.</p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>Tracer</h3>
+
+<p><a href="http://tree.bio.ed.ac.uk/software/tracer">Tracer</a> is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.0.</p>
+
+<hr>
+
+<h1>Practical: Selecting a clock model</h1>
+
+<p>We will analyse a set of hepatitis B virus (HBV) sequences sampled through time and concentrate on selecting a clock model. 
+The most popular clock models are the strict clock model and uncorrelated relaxed clock with log normal distributed rates (UCLN) model.</p>
+
+<h2>Setting up the Strict clock analysis</h2>
+
+<p>First thing to do is set up the two analyses in BEAUti, and run them in order to make sure there are differences in the analyses. The alignment can be downloaded here: <a href="https://raw.githubusercontent.com/rbouckaert/NS-tutorial/master/data/HBV.nex">https://raw.githubusercontent.com/rbouckaert/NS-tutorial/master/data/HBV.nex</a>. We will set up a model with tip dates, HKY substitution model, Coalescent prior with constant population, and a fixed clock rate. </p>
+
+<blockquote>
+<p><strong>In BEAUti:</strong></p>
+
+<ul>
+<li>Start a new analysis using the Standard template.</li>
+<li>Import <a href="https://raw.githubusercontent.com/rbouckaert/NS-tutorial/master/data/HBV.nex">HBV.nex</a> using menu <code>File &gt; Import alignment</code>.</li>
+<li>In the tip-dates panel, select <code>tip dates</code>, click <code>Auto configure</code> and select the <code>split on character</code> option, taking group 2 (see <a href="#fig:auto-config">Fig 2</a>).</li>
+<li>In the site model panel, select <code>HKY</code> as substitution model and leave the rest as is.</li>
+<li>In the clock model panel, set the clock rate to 2e-5. Though usually, we want to estimate the rate, to speed things up for the tutorial, we fix the clock rate at that number as follows:
+
+<ul>
+<li>Uncheck menu <code>Mode &gt; Automatic set clock rate</code>. Now the estimate entry should not be grayed out any more.</li>
+<li>Uncheck the <code>estimate</code> box next to the clock rate entry.</li>
+</ul></li>
+<li>In the priors panel, select <code>Coalescent Constant Population</code> as tree prior.</li>
+<li>Also in the priors panel, change to <code>popSize</code> prior to <code>Gamma</code> with alpha = 0.01, beta = 100 (<a href="#fig:priors">Fig 3</a>).</li>
+<li>In the MCMC panel, change the <code>Chain Length</code> to 1 million.</li>
+<li>You can rename the file for trace log and tree file to include &quot;Strict&quot; to distinguish them for the relaxed clock ones.</li>
+<li>Save the file as <code>HBVStrict.xml</code>. <strong>Do not close BEAUti just yet!</strong></li>
+<li>Run the analysis with BEAST.</li>
+</ul>
+
+<p><strong>Do you have a clock rate prior in the priors panel?</strong> If so, the clock rate is estimated, and you should revisit the part where the clock is set up!</p>
+</blockquote>
+
+<figure>
+    <a name="fig:auto-config"></a>
+    <img style="width:80.0%;" src="figures/BEAUti-configure-tip-dates.png" alt="">
+    <figcaption>Figure 2: Configuring tip dates in BEAUti</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a name="fig:priors"></a>
+    <img style="width:80.0%;" src="figures/BEAUti-priors.png" alt="">
+    <figcaption>Figure 3: Priors panel for strict clock analysis in BEAUti</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Setting up the relaxed clock analysis</h2>
+
+<blockquote>
+<p>While you are waiting for BEAST to finish, it is time to set up the relaxed clock analysis. This is now straightforward if BEAUti is still open (if BEAUti was closed, open BEAUti, and load the file <code>HBVStrict.xml</code> through the menu <code>File &gt; Load</code>):</p>
+
+<ul>
+<li>In the clock model panel, change <code>Strict clock</code> to <code>Relaxed Clock Log Normal</code>.</li>
+<li>Set the clock rate to 2e-5, and uncheck the <code>estimate</code> box.</li>
+<li>In the MCMC panel, replace <code>Strict</code> in the file names for trace and tree log to <code>UCLN</code>.</li>
+<li>Save file as <code>HBVUCLN.xml</code> <strong>Do not click the <code>File &gt; Save</code> menu, but <code>File &gt; Save as</code>, otherwise the strict clock XML file will be overwritten</strong></li>
+<li>Run the analysis in BEAST</li>
+</ul>
+</blockquote>
+
+<p>Once the analyses have run, open the log file in Tracer and compare estimates and see whether the analyses substantially differ. You can also compare the trees in DensiTree.</p>
+
+<blockquote>
+<p>Are there any statistics that are very different?
+Do tree heights differ substantially? 
+Which analysis is preferable and why? 
+&lt;!-- depends on the question you want to answer: if tree height is of interest, strict clock is preferred, since it reduces the uncertainty. If kappa is of interest, things are not that different --&gt;</p>
+</blockquote>
+
+<p>If there are no substantial differences between the analysis for the question you are interested in, you do not have to commit to one model or another, and you can claim that the results are robust under different models. However, if there are significant differences, you may want to do a formal test to see which model is preferred over other models. In a Bayesian context, in practice this comes down to estimating the marginal likelihood, and calculating Bayes factors: the ratios of marginal likelihoods. Nested sampling <a href="#russel2018model">(Russel, Brewer, Klaere, &amp; Bouckaert, 2018)</a> is one way to estimate marginal likelihoods. </p>
+
+<h2>Installing the NS Package</h2>
+
+<p>To use nested sampling, first have to install the NS (version 1.0.3 or above) package.</p>
+
+<blockquote>
+<p>Open BEAUti and navigate to <strong>File &gt; Manage Packages</strong>. Select NS and then click <strong>Install/Upgrade</strong> (<a href="#fig:install">Fig 4</a>). Then <strong><em>restart BEAUti</em></strong> to load the package.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:install"></a>
+    <img style="width:80.0%;" src="figures/install_NS.png" alt="">
+    <figcaption>Figure 4: Installing NS in the Manage Packages window in BEAUti</figcaption>
+</figure>
+
+<p><br></p>
+
+<h2>Setting up the nested sampling analyses</h2>
+
+<blockquote>
+<ul>
+<li>copy the file <code>HBVStrict.xml</code> to <code>HBVStric-NS.xml</code> and </li>
+<li>copy <code>HBVUCLN.xml</code> to <code>HBVUCLN-NS.xml</code></li>
+<li>start a text editor and in both copied files, change</li>
+</ul>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;run</span> <span class="na">id=</span><span class="s">"mcmc"</span> <span class="na">spec=</span><span class="s">"MCMC"</span> <span class="na">chainLength=</span><span class="s">"1000000"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>to</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;run</span> <span class="na">id=</span><span class="s">"mcmc"</span> <span class="na">spec=</span><span class="s">"beast.gss.NS"</span> <span class="na">chainLength=</span><span class="s">"20000"</span> <span class="na">particleCount=</span><span class="s">"1"</span> <span class="na">subChainLength=</span><span class="s">"5000"</span><span class="nt">&gt;</span>
+</code></pre></div>
+<ul>
+<li>Here the <code>particleCount</code> represents the number of active points used in nested sampling: the more points used, the more accurate the estimate, but the longer the analysis takes. The <code>subChainLength</code> is the number of MCMC samples taken to get a new point that is independent (enough) from the point that is saved. Longer lengths mean longer runs, but also more independent samples. In practice, running with different <code>subChainLength</code> is necessary to find out which length is most suitable (see <a href="#nested-sampling-faq">FAQ</a>).</li>
+<li>change the file names for the trace and tree log to include <code>NS</code> (searching for <code>fileName=</code> will get you there fastest).</li>
+<li>save the files, and run with BEAST.</li>
+</ul>
+</blockquote>
+
+<p>The end of the BEAST run for nested sampling with the strict clock should look something like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Total calculation time: 34.146 seconds
+End likelihood: -202.93224422946253
+Producing posterior samples
+
+Marginal likelihood: -12438.35758179847 sqrt(H/N)=(11.084732655710818)=?=SD=(11.008249475863373) Information: 122.87129804858182
+Max ESS: 6.706301939836118
+
+
+Processing 248 trees from file.
+Log file written to HBVStrict-NS.posterior.trees
+Done!
+
+Marginal likelihood: -12437.767705819117 sqrt(H/N)=(11.05930077842042)=?=SD=(11.71074051847201) Information: 122.3081337075705
+Max ESS: 6.490414156277384
+
+
+Log file written to HBVStrict-NS.posterior.log
+Done!
+</code></pre></div>
+<p>and for the relaxed clock:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Total calculation time: 38.541 seconds
+End likelihood: -200.7794173971489
+Producing posterior samples
+
+Marginal likelihood: -12428.557546706481 sqrt(H/N)=(11.22272275528845)=?=SD=(11.252847709777592) Information: 125.94950604206919
+Max ESS: 5.874085822198268
+
+
+Processing 257 trees from file.
+Log file written to HBVUCLN-NS.posterior.trees
+Done!
+
+Marginal likelihood: -12428.480923049345 sqrt(H/N)=(11.220392192278625)=?=SD=(11.491864352217954) Information: 125.89720094854714
+Max ESS: 5.940996269769591
+
+
+Log file written to HBVUCLN-NS.posterior.log
+Done!
+</code></pre></div>
+<p>As you can see, nested sampling produces estimates of the marginal likelihood as well as standard deviation estimates. At first sight, the relaxed clock has a log marginal likelihood estimate of about -12428, while the strict clock is much worse at about -12438.  However, the standard deviation of both runs is about 11, so that makes these estimates indistinguishable. Since this is a stochastic process, the exact numbers for your run will differ, but should not be that far appart (less than 2 SDs, or about 22 log points in 95% of the time).</p>
+
+<p>To get more accurate estimates, the number of particles can be increased. The expected SD is sqrt(H/N) where N is the number of particles and H the information. The information H is conveniently estimated in the nested sampling run as well.
+To aim for an SD of say 2, we need to run again with N particles such that 2=sqrt(125/N), which means 4=125/N, so N=125/4 and N=32 will do. Note that the computation time of nested sampling is linear in the number of particles, so it will take about 32 times longer to run if we change the particleCount from 1 to 32 in the XML.</p>
+
+<p>A pre-cooked run with 32 particles can be found here: <a href="https://github.com/rbouckaert/NS-tutorial/tree/master/precooked_runs">https://github.com/rbouckaert/NS-tutorial/tree/master/precooked_runs</a>. Download the files <a href="https://raw.githubusercontent.com/rbouckaert/NS-tutorial/master/precooked_runs/HBVStrict-NS32.log">HBV-Strict-NS32.log</a> and <a href="https://raw.githubusercontent.com/rbouckaert/NS-tutorial/master/precooked_runs/HBVUCLN-NS32.log">HBVUCLN-NS32.log</a> and run the <code>NSLogAnalyser</code> application to analyse the results. To start the <code>NSLogAnalyser</code> from the command line, use
+<code>
+applauncher NSLogAnalyser -noposterior -N 32 -log /path/to/HBVStrict-NS32.log
+applauncher NSLogAnalyser -noposterior -N 32 -log /path/to/HBVUCLN-NS32.log
+</code>
+or from BEAUti, click menu <code>File/Launch apps</code>, select <code>NSLogAnalyser</code> and fill in the form in the GUI. The output for the strict clock analysis should be something like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Loading HBVStrict-NS32.log, burnin 0%, skipping 0 log lines
+
+|---------|---------|---------|---------|---------|---------|---------|---------|
+******************************
+
+Marginal likelihood: -12426.207750474812 sqrt(H/N)=(1.8913059067381148)=?=SD=(1.8374367294317693) Information: 114.46521705159945
+Max ESS: 400.41214209052896
+
+Calculating statistics
+
+|---------|---------|---------|---------|---------|---------|---------|---------|
+********************************************************************************
+
+#Particles = 32
+item               mean     stddev   
+posterior          -12512.7 2.988107
+likelihood         -12311.7 2.91633 
+prior              -201.009 1.580207
+treeLikelihood     -12311.7 2.91633 
+TreeHeight         3443.955 134.1921
+kappa              2.679169 0.151243
+popSize            2337.454 290.0407
+CoalescentConstant -163.191 3.090671
+freqParameter.1    0.240033 0.005884
+freqParameter.2    0.267856 0.006814
+freqParameter.3    0.217084 0.006638
+freqParameter.4    0.275027 0.006716
+Done!
+</code></pre></div>
+<p>So, that gives us a ML estimate of -12426.2 with SD of 1.89, slightly better than the 2 we aimed for, but the information is also a bit lower than we assumed (114 vs 128). Furthermore, there are posterior estimates of all the entries in the trace log. Nested sampling does not only estimate MLs and SDs, but can also provide a sample from the posterior, which can be useful for cases where MCMC has trouble with convergence. But let&#39;s not digress too much and get back to model selection.</p>
+
+<p>For the relaxed clock analysis, we get something like:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Marginal likelihood: -12417.389793288146 sqrt(H/N)=(1.9543337689486355)=?=SD=(1.9614418034828585) Information: 122.2214553744953
+</code></pre></div>
+<p>so an ML of -12417.4 with SD of 1.95. Therefor the log BF is -12417.4 - -12426.2 = 8.8, which is more than twice the sum of the SDs, so can be considered reliable evidence in favour of the relaxed clock model. Note that judging from the table at the start of the tutorial, this amounts to overwhelming support for the relaxed clock.</p>
+
+<!--
+## Setting up the geographic model with strict and relaxed clock
+
+* Install the GEO_SPHERE package.
+* Go to the data partitions tab, and click the '+' button at the bottom of the screen.
+A dialog pops up where you can select what you want to add. Choose `Add Spherical Geography` and click `OK`.
+* A new window pops up where you can choose the tree where you want to add geography.
+Also, you can change the trait name to `geo`;
+* When you click OK, a dialog is shown where you can enter latitude and longitude for each taxon. In this tutorial, this information is encoded in the taxon name, so we can guess it from the name. 
+    * Click `Guess latitude`, and a dialog is shown. Choose `split on character` and take group 3 for the latitude. When you click OK, the latitude field of the table is populated.
+    * Click `Guess longitude`, and again a dialog is shown. Choose `split on character` and take group 4 for the longitude.
+    When you click OK, the table is completely populated. 
+* Now, the longitudes and latitudes are properly populated. Click close, and a second data partition is created.
+* The clock model now looks like this:
+* For the geography, we select a strict clock for the first analysis (save as `HBVgeoStrict.xml`) and a relaxed clock with log-normal distribution for the second analysis) save as `HBVgeoUCLN.xml`). 
+* As before, copy the files to a name including NS and in a text editor change
+```xml
+<run id="mcmc" spec="MCMC" chainLength="1000000">
+```
+to
+```xml
+<run id="mcmc" spec="beast.gss.NS" chainLength="20000" particleCount="1" subChainLength="5000">
+```
+* Save both files, and run with BEAST.
+-->
+
+<h1>Nested sampling FAQ</h1>
+
+<p><a name="nested-sampling-faq">  </a></p>
+
+<h2>The analysis prints out multiple ML estimates with their SDs. Which one to choose?</h2>
+
+<p>The difference between the estimates is the way they are estimated from the nested sampling run. Since these are estimates that require random sampling, they differ from one estimate to another. When the standard deviation is small, the estimates will be very close, but when the standard deviations is quite large, the ML estimates can substantially differ. Regardless, any of the reported estimates are valid estimates, but make sure to report them with their standard deviation.</p>
+
+<h2>How do I know the sub-chain length is large enough?</h2>
+
+<p>NS works in theory if and only if the points generated at each iteration are independent. If you already did an MCMC run and know the effective sample size (ESS) for each parameter, to be sure every parameter in every sample is independent you can take the length of the MCMC run divided by the smallest ESS as sub-chain length. This tend to result in quite large sub-chain lengths.</p>
+
+<p>In practice, we can get away much smaller sub-chain lengths, which you can verify by running multiple NS analysis with increasing sub-chain lengths. If the ML and SD estimates do not substantially differ, you know the shorter sub-chain length was sufficient.</p>
+
+<h2>How many particles do I need?</h2>
+
+<p>To start, use only a few particles. This should give you a sense of the information <code>H</code>, which is one of the estimates provided by the NS analysis. If you want to compare two hypotheses, you want the difference between <code>ML1</code> and <code>ML2</code> to be at least <code>2*sqrt(SD1*SD1+SD2*SD2)</code> in order to make sure the difference is not due to randomisation.</p>
+
+<p>If the difference is larger, you do not need more particles.</p>
+
+<p>If the difference is smaller, you can guess how much the SD estimates must shrink to get a difference that is sufficiently large. Since the <code>SD=sqrt(H/N)</code>, we have that <code>N=H/(SD*SD)</code> and <code>H</code> comes from the NS run with a few particles. Run the analysis again, with the increased number of particles, and see if the difference becomes large enough.</p>
+
+<p>If the difference is less than 2, the hypotheses may not be distinguishable -- in terms of Bayes factors, are barely worth mentioning.</p>
+
+<h2>Is NS faster than path sampling/stepping stone (PS/SS)?</h2>
+
+<p>This depends on many things, but in general, depends on how accurate the estimates should be. For NS, we get an estimate of the SD, which is not available for PS/SS. If the hypotheses have very large differences in MLs, NS requires very few (maybe just 1) particle, and will be very fast. If differences are smaller, more particles may be required, and the run-time of NS is linear in the number of particles.</p>
+
+<p>The parallel implementation makes it possible to run many particles in parallel, giving a many-particle estimate in the same time as a single particle estimate (PS/SS can be parallelised by steps as well).</p>
+
+<h2>The output is written on screen, which I forgot to save. Can I estimate them directly from the log files?</h2>
+
+<p>The NS package has a <code>NSLogAnalyser</code> application that you can run via the menu <code>File/Launch apps</code> in BEAUti -- a window pops up where you select the <code>NSLogAnalyser</code>, and a dialog shows you various options to fill in. You can also run it from the command line on OS X or Linux using</p>
+
+<p><code>/path/to/beast/bin/applauncher NSLogAnalyser -N 1 -log  xyz.log</code></p>
+
+<p>where the argument after <code>N</code> is the <code>particleCount</code> you specified in the XML, and <code>xyz.log</code> the trace log produced by the NS run.</p>
+
+<h2>Why are some NS runs longer than others?</h2>
+
+<p>Nested sampling stops automatically when the accuracy in the ML estimate cannot be improved upon. Because it is a stochastic process, some analyses get there faster than others, resulting in different run times.</p>
+
+<h2>Why are the ESSs so low when I open a log file in Tracer?</h2>
+
+<p>An NS analysis produces two trace log files: one for the nested sampling run (say <code>myFile.log</code>) and one with the posterior sample (<code>myFile.posterior.log</code>).</p>
+
+<p>The ESSs in Tracer of log files with the posterior samples are meaningless, because the log file is ordered using the nested sampling run. If you look at the trace of the Likelihood, it should show a continuous increasing function. It is not quite clear how to estimate ESSs of a nested sampling run yet, though the number of entries in the posterior log is equal to the maximum theoretical ESS, which is almost surely an overestimate.</p>
+
+<hr>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+<li>Nested sampling website and documentation: <a href="https://github.com/BEAST2-Dev/nested-sampling">https://github.com/BEAST2-Dev/nested-sampling</a></li>
+<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="kass1995bayes">Kass, R. E., &amp; Raftery, A. E. (1995). Bayes factors. <i>Journal of the American Statistical Association</i>, <i>90</i>(430), 773–795.</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="bouckaert2018beast">Bouckaert, R., Vaughan, T. G., Barido-Sottani, J., Duchene, S., Fourment, M., Gavryushkina, A., … others. (2018). BEAST 2.5: An Advanced Software Platform for Bayesian Evolutionary Analysis. <i>BioRxiv</i>, 474296.</span></li>
+<li><span id="russel2018model">Russel, P. M., Brewer, B. J., Klaere, S., &amp; Bouckaert, R. R. (2018). Model selection and parameter inference in phylogenetics using Nested Sampling. <i>Systematic Biology</i>, <i>68</i>(2), 219–233.</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+
