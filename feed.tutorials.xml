@@ -28,7 +28,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/47f8a36a2da9b45921044cfd4ea64806849e906d'
+						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/f91378358131d45090f1f1aa9b6816ef23c7da61'
 					&gt;
 						25 Mar 2019
 					&lt;/a&gt;
@@ -38,7 +38,7 @@
 					&gt;
 						nicfel
 					&lt;/a&gt;
-					: adds missing pictures
+					: fixes error in citations
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -46,7 +46,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Mon, 25 Mar 2019 15:42:13 +0100</pubDate>
+				<pubDate>Mon, 25 Mar 2019 15:55:46 +0100</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>

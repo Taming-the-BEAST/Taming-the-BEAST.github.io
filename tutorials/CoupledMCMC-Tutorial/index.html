@@ -308,6 +308,16 @@
     			</div>
  				</a>
  			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
  			
 		</div>
 		<div class="bigspacer"></div>
@@ -316,6 +326,14 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/f91378358131d45090f1f1aa9b6816ef23c7da61">
+					25 Mar 2019 - <span class="text-gray">fixes error in citations</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -348,14 +366,6 @@ Fixed broken bibtex file references.</span>
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/3620c8d8fac3abe24f0074dcbcbb66ad68618c04">
 					25 Mar 2019 - <span class="text-gray">small typos</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/5023cfb438fe037b663e1faa68683c6d54f1b536">
-					25 Mar 2019 - <span class="text-gray">adds link</span>
 					</a> 
 				</li>
 			
@@ -404,8 +414,6 @@ After how many iterations the states of two random chains are proposed to be swa
 <hr>
 
 <h1>Practical: Setting up an analysis with coupled MCMC</h1>
-
-<p><a href="#Mueller348391">(Mueller, Ogilvie, Zhang, Drummond, &amp; Stadler, 2018)</a></p>
 
 <p>In this tutorial, we will describe the two different ways to setup a BEAST2 analysis to run with coupled MCMC.
 To do so, we will setup a Bayesian Skyline plot analysis by following analogue to the tutorial on <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>.</p>
@@ -469,7 +477,7 @@ All other analyses have to be setup by editing one line in the <code>*xml</code>
 
 <p><br></p>
 
-<p>As we use sequences that were sampled at the same point in time, we need to fix the clock rate (for more information on this please refer to the tutorial on molecular clocks). We will use an estimate inferred in <a href="#Pybus2001">(Pybus et al., 2001)</a> to fix the clock rate. In this case all the samples were contemporaneous (at the same time) and the clock rate works as a mapping of the estimated tree branch lengths into calendar time.</p>
+<p>As we use sequences that were sampled at the same point in time, we need to fix the clock rate (for more information on this please refer to the tutorial on molecular clocks). We will use an estimate inferred in (missing reference) to fix the clock rate. In this case all the samples were contemporaneous (at the same time) and the clock rate works as a mapping of the estimated tree branch lengths into calendar time.</p>
 
 <p>We will keep the strict clock model and will set <code>Clock.rate</code> to 0.00079.</p>
 
@@ -511,7 +519,7 @@ We here propose to exchange states between the 2 chains every 1000 iterations, w
 Hotter chains on the other hand are more easily able to cross unlikely intermediate states and can therefore help chains to move out of local optimas.
 Here, we use a value of 0.05.
 This value should be different depending on the dataset, the analysis and the number of chains.
-Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 (missing reference).</p>
+Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 <a href="#altekar2004parallel">(Altekar, Dwarkadas, Huelsenbeck, &amp; Ronquist, 2004)</a>.</p>
 
 <figure>
     <a id="fig:dimensions"></a>
@@ -625,12 +633,11 @@ Next, open the log files of all chains which had a higher iteration and remove t
 <h1>Relevant References</h1>
 
 <ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
-<li><span id="Mueller348391">Mueller, N. F., Ogilvie, H., Zhang, C., Drummond, A., &amp; Stadler, T. (2018). Inference of species histories in the presence of gene flow. <i>BioRxiv</i>. https://doi.org/10.1101/348391</span></li>
-<li>(missing reference)</li>
-<li>(missing reference)</li>
-<li>(missing reference)</li>
-<li>(missing reference)</li>
-<li>(missing reference)</li></ol>
+<li><span id="Ray2000">Ray, S. Ê. C., Arthur, R. Ê. R., Carella, A., Bukh, J., &amp; Thomas, D. Ê. L. (2000). Genetic Epidemiology of Hepatitis C Virus throughout Egypt. <i>The Journal of Infectious Diseases</i>, <i>182</i>(3), 698–707. https://doi.org/10.1086/315786</span></li>
+<li><span id="Pybus2003">Pybus, O. G., Drummond, A. J., Nakano, T., Robertson, B. H., &amp; Rambaut, A. (2003). The Epidemiology and Iatrogenic Transmission of Hepatitis C Virus in Egypt: A Bayesian Coalescent Approach. <i>Molecular Biology and Evolution</i>, <i>20</i>(3), 381–387. https://doi.org/10.1093/molbev/msg043</span></li>
+<li><span id="Heled2008">Heled, J., &amp; Drummond, A. J. (2008). Bayesian inference of population size history from multiple loci. <i>BMC Evolutionary Biology</i>, <i>8</i>(1), 289. https://doi.org/10.1186/1471-2148-8-289</span></li>
+<li><span id="Minin2008">Minin, V. N., Bloomquist, E. W., &amp; Suchard, M. A. (2008). Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics. <i>Molecular Biology and Evolution</i>, <i>25</i>(7), 1459–71. https://doi.org/10.1093/molbev/msn090</span></li>
+<li><span id="altekar2004parallel">Altekar, G., Dwarkadas, S., Huelsenbeck, J. P., &amp; Ronquist, F. (2004). Parallel metropolis coupled Markov chain Monte Carlo for Bayesian phylogenetic inference. <i>Bioinformatics</i>, <i>20</i>(3), 407–415.</span></li></ol>
 
 
 			<hr>
