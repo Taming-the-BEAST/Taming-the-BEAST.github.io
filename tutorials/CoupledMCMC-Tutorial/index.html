@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Bayesian Skyline with coupled MCMC Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- Google Analytics -->	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86786826-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a></li>
+
+					
+                                        <li>
+					
+                                        <a href="/workshops/">workshops</a></li>
+
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/CoupledMCMC-Tutorial/">Bayesian Skyline with coupled MCMC Tutorial</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Setting up Bayesian Skyline with coupled MCMC
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Nicola F. Müller
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/data/hcv.nexus" target="_blank" rel="nofollow">
+						hcv.nexus
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv_coupled.xml" target="_blank" download rel="nofollow">
+						hcv_coupled.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv_mcmc.xml" target="_blank" download rel="nofollow">
+						hcv_mcmc.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/scripts/analyseAIMrun.R" target="_blank" download rel="nofollow">
+						analyseAIMrun.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/chain1hcv.log" target="_blank" download rel="nofollow">
+						chain1hcv.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/hcv.log" target="_blank" download rel="nofollow">
+						hcv.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/chain1hcv.trees" target="_blank" download rel="nofollow">
+						chain1hcv.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/hcv.trees" target="_blank" download rel="nofollow">
+						hcv.trees
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/nicfel">
+    			<img class="pull-left avatar" src="https://avatars0.githubusercontent.com/u/19623728?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				nicfel
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/47f8a36a2da9b45921044cfd4ea64806849e906d">
+					25 Mar 2019 - <span class="text-gray">adds missing pictures</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/1f45863097fbe4d4180cef369febe5743c1d0426">
+					25 Mar 2019 - <span class="text-gray">Merge pull request #1 from tgvaughan/patch-1
+
+Fixed broken bibtex file references.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/a70635a29cef357775360f47b922a6a0a7c16d57">
+					25 Mar 2019 - <span class="text-gray">Fixed broken bibtex file references.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/3620c8d8fac3abe24f0074dcbcbb66ad68618c04">
+					25 Mar 2019 - <span class="text-gray">small typos</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/5023cfb438fe037b663e1faa68683c6d54f1b536">
+					25 Mar 2019 - <span class="text-gray">adds link</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>Coupled MCMC (also called parallel tempering or MC<sup>3)</sup> is a Bayesian approach that uses heated chains in order to traverse unfavourable intermediate states more easily and in order to parallelise analyses.
+Coupled MCMC works by having 1 cold chain which works exactly the same as a standard MCMC chain and one or more heated chains.
+The chains are heated in temperature increments defined in this implementations as <em>deltaTemperature</em>.
+These heated chains have increase acceptance probabilities, making it more easily for them to explore parts of the state space that are less likely.
+In turn however, these heated chains to not explore the posterior probability space such that the frequency at which they visit a state is proportional to their probability.
+The can however be used to propose new states.
+In order to do so, coupled MCMC proposes to exchange the states of two random chains after each chain is run for some amount of iterations in what amounts to a MCMC move.
+After how many iterations the states of two random chains are proposed to be swapped is in this implementation called <em>resampleEvery</em>.</p>
+
+<p>The webpage <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a>, gives a good introduction into how coupled MCMC works.</p>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
+
+<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<hr>
+
+<h1>Practical: Setting up an analysis with coupled MCMC</h1>
+
+<p><a href="#Mueller348391">(Mueller, Ogilvie, Zhang, Drummond, &amp; Stadler, 2018)</a></p>
+
+<p>In this tutorial, we will describe the two different ways to setup a BEAST2 analysis to run with coupled MCMC.
+To do so, we will setup a Bayesian Skyline plot analysis by following analogue to the tutorial on <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>.</p>
+
+<p>Setting up an analysis in BEAUTi is currently only possible for analyses that only use the standard template, i.e. such for which setting up an analysis does not require to load a template.
+All other analyses have to be setup by editing one line in the <code>*xml</code> file.</p>
+
+<h2>The Data</h2>
+
+<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt <a href="#Ray2000">(Ray, Arthur, Carella, Bukh, &amp; Thomas, 2000)</a>. This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
+
+<p>With an estimated 15-25%, Egypt has the highest Hepatits C prevalence in the world. In the mid 20<sup>th</sup> century, the prevalence of Hepatitis C increased drastically (see <a href="#fig:prevalence">Figure 1</a> for estimates). We will try to infer this increase from sequence data.</p>
+
+<figure>
+    <a id="fig:prevalence"></a>
+    <img style="width:50%;" src="figures/Estimated_number_hcv.png" alt="">
+    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt <a href="#Pybus2003">(Pybus, Drummond, Nakano, Robertson, &amp; Rambaut, 2003)</a>.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>Download CoupledMCMC</h3>
+
+<p>First, we have to download the CoupledMCMC package by using the BEAUTi package manager. Go to <code>File &gt;&gt; Manage Packages</code> and download the package and CoupledMCMC StarBeast2.</p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:50%;" src="figures/Package.png" alt="">
+    <figcaption>Figure 1: Download the CoupledMCMC package</figcaption>
+</figure>
+
+<h2>For analyses that don&#39;t require to load a template</h2>
+
+<p>If for your analysis, no loading of a template is required, we can setup the analysis in BEAUTi:</p>
+
+<h3>Loading the template</h3>
+
+<p>Next, we have to load the BEAUTi template from <code>File</code>, select <code>Template &gt;&gt; CoupledMCMC</code>.</p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:70%;" src="figures/Template.png" alt="">
+    <figcaption>Figure 2: Load the Coupled MCMC template to setup an analysis.</figcaption>
+</figure>
+
+<p>This template is exactly the same as the standard BEAUTi template, but uses coupled MCMC instead of regular MCMC.</p>
+
+<h3>Setting up the analysis with Bayesian Coalescent Skyline (similar to <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>)</h3>
+
+<p>To import the aligned sequences into BEAUti, use <code>File &gt; Import Alignment</code> to select the <code>*.nexus</code> file.</p>
+
+<p>BEAUti will recognize the sequences from the <code>*.nexus</code> file as nucleotide data. It will do so for sequence files with the character set of <strong>A | C | G | T | N</strong>, where <strong>N</strong> indicates an unknown nucleotide. As soon as other non-gap characters are included (e.g. using <strong>R</strong> or <strong>Y</strong> to indicate purines and pyramidines) BEAUti will not recognize the data as nucleotides anymore, unless the type of data is specified in the <code>*.nexus</code> file.</p>
+
+<p>After we have loaded the sequences into BEAUti, we have to specify the evolutionary model. We will be using the very general GTR model (<a href="#fig:model">Figure 3</a>), which estimates transition probabilities between individual nucleotides separately, meaning that transition probabilities between e.g. <strong>A</strong> and <strong>T</strong> will be inferred separately to the ones between <strong>A</strong> and <strong>C</strong>. Additionally, we should allow for rate heterogeneity among sites. We can do this by changing the Gamma Category Count to 4 (normally between 4 and 6).</p>
+
+<figure>
+    <a id="fig:model"></a>
+    <img src="figures/choose_gtr.png" alt="">
+    <figcaption>Figure 3: Set GTR as a site model. Also use a Gamma Category Count of 4.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>As we use sequences that were sampled at the same point in time, we need to fix the clock rate (for more information on this please refer to the tutorial on molecular clocks). We will use an estimate inferred in <a href="#Pybus2001">(Pybus et al., 2001)</a> to fix the clock rate. In this case all the samples were contemporaneous (at the same time) and the clock rate works as a mapping of the estimated tree branch lengths into calendar time.</p>
+
+<p>We will keep the strict clock model and will set <code>Clock.rate</code> to 0.00079.</p>
+
+<p>Next, we need to go the the <code>Priors</code> tab and set the Bayesian Coalescent Skyline as a tree prior (<a href="#fig:coalescent">Figure 4</a>).</p>
+
+<figure>
+    <a id="fig:coalescent"></a>
+    <img src="figures/choose_coalescentSkyline.png" alt="">
+    <figcaption>Figure 4: Choose the Coalescent Bayesian Skyline as a population prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The Bayesian Coalescent Skyline works by dividing the time between the present and the root of the tree into intervals, thus the number of these intervals has to be defined. Each interval will have a different effective population size.
+The Bayesian Coalescent Skyline will estimate the number of coalescent events within each interval (which is captured in the Group Size parameter) as well as the effective population size for that interval. The number of intervals is equal to the dimension specified. If we have <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span>  intervals, the effective population size is allowed to change <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span> times. To specify the number of dimensions, we need to first go to the initialization panel. This is by default not visible <code>View &gt; Show Initialization Panel</code>.</p>
+
+<p>For this analysis we will set the number of dimensions to 4 (the default value is 5). Keep in mind that one has to change the dimension of <code>bPopSizes</code> as well as <code>bGroupSizes</code>. The dimension of both parameters has to be the same (<a href="#fig:dimensions">Figure 5</a>).</p>
+
+<figure>
+    <a id="fig:dimensions"></a>
+    <img src="figures/set_dimension.png" alt="">
+    <figcaption>Figure 5: Set the dimension of the two parameters, bPopSizes and bGroupSizes, to 4.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline <a href="#Heled2008">(Heled &amp; Drummond, 2008)</a>) or do not require dimensions to be specified (Skyride <a href="#Minin2008">(Minin, Bloomquist, &amp; Suchard, 2008)</a>).</p>
+
+<p>We can leave the rest of the priors as they are and go to the <code>Coupled MCMC panel</code>.
+In contrast to regular MCMC, we have to define a few more things.
+First, we have to define the number of chains.
+This number should be equal to the number of threads you can run, resp. the number of CPU cores.
+The <code>resampleEvery</code>, defines after how many iterations, two chains should be proposed to exchange states.
+If this is too low, the chains will communicate a lot and the exchanging of states itself can consume more time then the actual MCMC.
+If it&#39;s too high, the states of chains are exchanged and the ESS per time isn&#39;t as high as it could be.
+We here propose to exchange states between the 2 chains every 1000 iterations, which will allow for at most 10 000 swaps of states.</p>
+
+<p>The next parameter we have to set is the <code>deltaTemperature</code>, the higher this value, the hotter chains become and the more time they spend in unlikely parts of the posterior probability space.
+Hotter chains on the other hand are more easily able to cross unlikely intermediate states and can therefore help chains to move out of local optimas.
+Here, we use a value of 0.05.
+This value should be different depending on the dataset, the analysis and the number of chains.
+Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 (missing reference).</p>
+
+<figure>
+    <a id="fig:dimensions"></a>
+    <img src="figures/CoupledMCMCpanel.png" alt="">
+    <figcaption>Figure 6: Setting up the parameters fo the coupled MCMC.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>Running the xml</h3>
+
+<p>Next, we can run the xml.
+The output to the screen of a Coupled MCMC run looks slightly different then the one of a standard MCMC run.
+The column called <em>sample</em> describes at which iteration of the coupled MCMC we are. The column <em>swapsColdChain</em> denotes how many times the one cold chain (the chain that runs just like a regular MCMC chain) has been swapped with another chain. The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted. This vaue should be somewhere between <em>0.2</em> and <em>0.6</em>. A low values indicates that the heated chains are running too hot and are not efficiently exploring the posterior. A too high values indicates that the heated chains are not running hot enough and are thus exploring parameter space that are too similar to the one of the cold chain.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sample    swapsColdCain    swapProbability
+10000    0    0.0 --
+20000    1    0.5 3m15s/Msamples
+30000    1    0.3333333333333333 2m56s/Msamples
+40000    1    0.25 2m34s/Msamples
+50000    1    0.2 2m29s/Msamples
+60000    1    0.16666666666666666 2m24s/Msamples
+70000    1    0.14285714285714285 2m22s/Msamples
+80000    1    0.125 2m20s/Msamples
+90000    1    0.1111111111111111 2m15s/Msamples
+100000    1    0.1 2m12s/Msamples
+110000    1    0.09090909090909091 2m9s/Msamples
+120000    1    0.08333333333333333 2m8s/Msamples
+</code></pre></div>
+<h3>Exploring the results of Bayesian Coalescent Skyline analysis</h3>
+
+<p>For the reconstruction of the population dynamics, we need two files: the <code>hcv.log</code> file and the <code>hcv.trees</code> file.
+The log files contain the information about the group size and the population size.
+The group size specifies how many intervals are combined to have the same effective population size.
+The two files are logging the states of the one cold chain.
+There are however two more files <code>chain1hcv.log</code> and <code>chain1hcv.trees</code>.
+These two files, log the states of the 1st heated chain and are not needed for the post-processing.
+If we look at the inferred distributions between the two files <code>hcv.log</code> and <code>chain1hcv.log</code>, we see that these don&#39;t match up and that <code>chain1hcv.log</code> explores less optimal states with higher frequency.</p>
+
+<figure>
+    <a id="fig:dimensions"></a>
+    <img src="figures/HeatedChains.png" alt="">
+    <figcaption>Figure 7: The heated chain does no correctly explore the posterior probability space.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>After the runs have finished, load the finished <code>hcv.log</code> file into Tracer. Alternatively you can use the <code>hcv.log</code> files and the <code>hcv.trees</code> files you downloaded with the data. To run the analysis, open the finished <code>hcv.log</code> file into Tracer, then go to <code>Analysis &gt; Bayesian Skyline Reconstruction</code>. From there open the finished <code>hcv.trees</code> file. To get the correct years in the analysis we should specify the <code>Age of the youngest tip</code>. In our case it is 1993, the year where all the samples were taken. If the samples were taken through time, the age of the youngest tip is the time when the most recent sample was taken. If you now press the <code>Ok</code> button, the reconstruction of the past population dynamics will be performed (<a href="#fig:trees">Figure 8</a>).</p>
+
+<figure>
+    <a id="fig:trees"></a>
+    <img style="width:50%;" src="figures/open_trees.png" alt="">
+    <figcaption>Figure 8: Reconstructing the Bayesian Skyline plot in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>The output will have the years on the x-axis and the effective population size on the y-axis. By default, the y-axis is on a log-scale. If everything worked as it is supposed to work you will see a sharp increase in the effective population size in the mid 20<sup>th</sup> century, similar to what is seen on <a href="#fig:skyline">Figure 9</a>.</p>
+
+<figure>
+    <a id="fig:skyline"></a>
+    <img style="width:50%;" src="figures/skyline_analysis.png" alt="">
+    <figcaption>Figure 9: Bayesian Coalescent Skyline analysis output. The black line is the median estimate of the estimated effective population size (can be changed to the mean estimate). The two blue lines are the upper an the lower estimates of 95% interval. The x-axis is the time in years.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>There are two ways to save the analysis, it can either be saved as a <code>*.pdf</code> or as a tab delimited file. To save it as a tab delimited file, you can go to <code>File &gt; Export Data</code>. The exported file will have five rows, the time, the mean, median lower 95% interval and the upper 95% interval of the estimates, which you can use to plot the data with other software (R, Matlab, etc).</p>
+
+<h2>Setting up the same analysis without using BEAUTi</h2>
+
+<p>In order to setup the analysis to run with coupled MCMC without using BEAUTi, we can create and xml that is supposed to run with regular MCMC.
+After this is done and the <code>*.xml</code> file (here <code>hcv_mcmc.xml</code>), has been saved, open the <code>*.xml</code> file in a Text Editor (e.g. TextEdit in MAC or notepad, but not word! in Windows).</p>
+
+<p>Next, go to the line that contains the code <code>id=&quot;mcmc&quot;</code>. In <code>hcv_mcmc.xml</code>, this is going to be the following line</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;run id="mcmc" spec="MCMC" chainLength="10000000"&gt;
+</code></pre></div>
+<p>Next, replace that line with
+<code>
+&lt;run id=&quot;mcmc&quot; spec=&quot;beast.coupledMCMC.CoupledMCMC&quot; chainLength=&quot;10000000&quot; deltaTemperature=&quot;0.05&quot; chains=&quot;2&quot; resampleEvery=&quot;10000&quot;&gt;
+</code></p>
+
+<ul>
+<li><p><code>chainLength=&quot;100000000&quot;</code> defines for how many iterations the chains is run</p></li>
+<li><p><code>deltaTemperature=&quot;0.05&quot;</code> defines the temperature difference between the chain <em>n</em> and chain <em>n-1</em>.</p></li>
+<li><p><code>chains=&quot;2&quot;</code> defines the number of parallel chains that are run. The first chain is the one that explores the posterior just like a normal MCMC chain. All other chains are what&#39;s called <em>heated</em>. This means that MCMC moves of those chains have a higher probability of being accepted. While these heated chains don&#39;t explore the posterior properly, they can be used to propose new states to the one cold chain.   </p></li>
+</ul>
+
+<p>Next, save the xml file again and run it with BEAST. In order to post-process the output, just use the log files that do <em>not</em> start with <code>chain...</code> since these are the log files for the heated chains.</p>
+
+<h3>A note on resuming coupled MCMC runs</h3>
+
+<p>Coupled MCMC runs can be resumed just like any other BEAST.
+It is however possible that the different log files of the different chains are at different iterations, which will return an error if you try to resume this run.
+If this error happens, load the log files of the cold chain and all hot chains (the chains that start with <code>chain...</code>) and look at the lowest value of the iteration.
+Next, open the log files of all chains which had a higher iteration and remove the last lines until the last line has the same sample number as the lowest iteration of any chain.</p>
+
+<hr>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li>Blog post explaining coupled MCMC <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a></li>
+<li>Coupled MCMC source code: <a href="https://github.com/nicfel/CoupledMCMC">https://github.com/nicfel/CoupledMCMC</a></li>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
+<li><span id="Mueller348391">Mueller, N. F., Ogilvie, H., Zhang, C., Drummond, A., &amp; Stadler, T. (2018). Inference of species histories in the presence of gene flow. <i>BioRxiv</i>. https://doi.org/10.1101/348391</span></li>
+<li>(missing reference)</li>
+<li>(missing reference)</li>
+<li>(missing reference)</li>
+<li>(missing reference)</li>
+<li>(missing reference)</li></ol>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

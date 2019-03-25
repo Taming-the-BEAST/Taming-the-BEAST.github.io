@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>Bayesian Skyline with coupled MCMC Tutorial</title>
+				<description>
+					Setting up Bayesian Skyline with coupled MCMC
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/47f8a36a2da9b45921044cfd4ea64806849e906d'
+					&gt;
+						25 Mar 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/nicfel'
+					&gt;
+						nicfel
+					&lt;/a&gt;
+					: adds missing pictures
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Mon, 25 Mar 2019 15:42:13 +0100</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Model selection</title>
 				<description>
 					Model selection with nested sampling
@@ -186,7 +227,7 @@
 					Level: Professional
 					
 						&lt;br&gt;
-						Requires: BEAST v2.5.0
+						Requires: BEAST v2.5.2
 					
 				</description>
 				<pubDate>Tue, 12 Mar 2019 09:44:28 +0100</pubDate>
@@ -279,7 +320,7 @@ Added local update describing species-tree specification with BEAUti.
 			</item>
 				
 			<item>
-				<title>MASCOT v1.0.0 Tutorial</title>
+				<title>MASCOT v1.2.2 Tutorial</title>
 				<description>
 					Parameter and State inference using the approximate structured coalescent
 					&lt;br&gt;
