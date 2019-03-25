@@ -28,9 +28,9 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/rbouckaert/NS-tutorial/commit/ba3b6ac1067f3f3772a3e541e5dc95bf5cd4253e'
+						'https://github.com/rbouckaert/NS-tutorial/commit/fe86ed9962d589af316e897bdf6d8b3122a4dd00'
 					&gt;
-						20 Mar 2019
+						24 Mar 2019
 					&lt;/a&gt;
 					by
 					&lt;a class=&#39;off&#39; href=
@@ -38,7 +38,7 @@
 					&gt;
 						rbouckaert
 					&lt;/a&gt;
-					: polishing
+					: update tutorial to use MCMC2NS utility
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -46,10 +46,59 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Wed, 20 Mar 2019 21:38:53 +0100</pubDate>
+				<pubDate>Sun, 24 Mar 2019 23:45:59 +0100</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Time stamped data</title>
+				<description>
+					Time-stamped data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Alexei Drummond
+							
+					
+						
+								,  Remco Bouckaert
+						
+					
+						
+								
+									and  Walter Xie
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/rbouckaert/MEP-tutorial/commit/113ad2a23e2cffa56ceb87f0c40bb1d804b21503'
+					&gt;
+						24 Mar 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/rbouckaert'
+					&gt;
+						rbouckaert
+					&lt;/a&gt;
+					: fix link to figure
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Sun, 24 Mar 2019 21:36:51 +0100</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
 			</item>
 				
 			<item>

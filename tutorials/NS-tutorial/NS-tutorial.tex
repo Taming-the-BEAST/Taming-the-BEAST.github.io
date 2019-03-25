@@ -25,18 +25,19 @@
 \begin{center}
 
 	% Enter the name of your tutorial here
-	\textbf{\LARGE Tutorial using BEAST v2.5.2}\\\vspace{2mm}
+	\textbf{\textcolor{mycol}{\LARGE Model selection with nested sampling}}\\\vspace{2mm}
 
 	% Enter a short description of your tutorial here
-	\textbf{\textcolor{mycol}{\Large Model selection}}\\
+	\textbf{\Large Tutorial using BEAST v2.5.2}\\
 
 	\vspace{4mm}
 
 	% Enter the names of all the authors here
 	{\Large {\em Remco Bouckaert}}
+\vspace{-2mm}
 \end{center}
 
-Model selection with nested sampling
+
 
 %%%%%%%%%%%%%%%%%
 % Tutorial body %
@@ -55,12 +56,14 @@ just picks one model and uses only that model during the MCMC run. This
 tutorial gives some guidelines on how to select the model that is most
 appropriate for your analysis.
 
+\vspace{-2mm}
 Bayesian model selection is based on estimating the marginal likelihood:
 the term forming the denominator in Bayes formula. This is generally a
 computationally intensive task and there are several ways to estimate
 them. Here, we concentrate on nested sampling as a way to estimate the
 marginal likelihood as well as the uncertainty in that estimate.
 
+\vspace{-2mm}
 Say, we have two models, M1 and M2, and estimates of the (log) marginal
 likelihood, ML1 and ML2, then we can calculate the Bayes factor, which
 is the fraction BF=ML1/ML2 (or in log space, the difference log(BF) =
@@ -68,15 +71,15 @@ log(ML1)-log(ML2)). If BF is larger than 1, model M1 is favoured, and
 otherwise M2 is favoured. How much it is favoured can be found in the
 following table \citep{kass1995bayes}:
 
-\begin{figure}[b]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.800000\textwidth]{figures/BFs.png}
     \caption{Bayes factor support.}
 \end{figure}
 
 Note that sometimes a factor 2 is used for multiplying BFs, so when
-comparing BFs from different publications, be aware which definition
-that was used.
+comparing BFs from different publications, be aware which definition was
+used.
 
 \textbf{Nested sampling} is an algorithm that works as follows:
 
@@ -85,16 +88,16 @@ that was used.
 \item
   randomly sample \lstinline!N! points from the prior
 \item
-  while not coverged
+  while not converged	
 
   \begin{itemize}
   
   \item
-    pick the point with the lowest likelihood Lmin, and save to log file
+    pick the point with the lowest likelihood $L_{min}$, and save to log file
   \item
     replace the point with a new point randomly sampled from the prior
     using an MCMC chain of \lstinline!subChainLength! samples
-    \textbf{under the condition that the likelihood is at least Lmin}
+    \textbf{under the condition that the likelihood is at least $L_{min}$}
   \end{itemize}
 \end{itemize}
 
@@ -559,7 +562,9 @@ up where you select the \lstinline!NSLogAnalyser!, and a dialog shows
 you various options to fill in. You can also run it from the command
 line on OS X or Linux using
 
-\lstinline!/path/to/beast/bin/applauncher NSLogAnalyser -N 1 -log  xyz.log!
+\begin{lstlisting}
+/path/to/beast/bin/applauncher NSLogAnalyser -N 1 -log  xyz.log
+\end{lstlisting}
 
 where the argument after \lstinline!N! is the \lstinline!particleCount!
 you specified in the XML, and \lstinline!xyz.log! the trace log produced
@@ -603,7 +608,7 @@ surely an overestimate.
   \url{https://github.com/BEAST2-Dev/nested-sampling}
 \item
   Join the BEAST user discussion:
-  \url{http://groups.google.com/group/beast-users} \clearpage
+  \url{http://groups.google.com/group/beast-users}
 \end{itemize}
 
 
@@ -624,7 +629,7 @@ Version dated: \today
 
 
 
-\newpage
+%\newpage
 
 %%%%%%%%%%%%%%%%
 %  REFERENCES  %
