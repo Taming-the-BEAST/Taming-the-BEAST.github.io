@@ -32,7 +32,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&#39;off&#39; href=
-						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/53483faf904233451d133d98cbde396145c70a0e'
+						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/e152979d6cfab701e7f9fedd8256050cc33ac1a9'
 					&gt;
 						23 Apr 2019
 					&lt;/a&gt;
@@ -42,7 +42,9 @@
 					&gt;
 						KonstantinHoffmann
 					&lt;/a&gt;
-					: Information about the data set
+					: Merge pull request #2 from tgvaughan/master
+
+Removed state files from precooked_runs.
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -50,7 +52,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Tue, 23 Apr 2019 12:25:49 +0200</pubDate>
+				<pubDate>Tue, 23 Apr 2019 15:36:15 +0200</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
