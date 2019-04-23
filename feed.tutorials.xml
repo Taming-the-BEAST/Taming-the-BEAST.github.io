@@ -12,6 +12,102 @@
 		</image>
 				
 			<item>
+				<title>Language Phylogenies</title>
+				<description>
+					Using babel to analyse linguistic data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Simon J. Greenhill
+							
+					
+						
+								
+									and  Konstantin Hoffmann
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/53483faf904233451d133d98cbde396145c70a0e'
+					&gt;
+						23 Apr 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/KonstantinHoffmann'
+					&gt;
+						KonstantinHoffmann
+					&lt;/a&gt;
+					: Information about the data set
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Tue, 23 Apr 2019 12:25:49 +0200</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
+			</item>
+				
+			<item>
+				<title>Time stamped data</title>
+				<description>
+					Time-stamped data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Alexei Drummond
+							
+					
+						
+								,  Remco Bouckaert
+						
+					
+						
+								
+									and  Walter Xie
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/rbouckaert/MEP-tutorial/commit/3e9854515227274443834cdf351f9fa292510cda'
+					&gt;
+						26 Mar 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&#39;off&#39; href=
+						'https://github.com/rbouckaert'
+					&gt;
+						rbouckaert
+					&lt;/a&gt;
+					: Merge pull request #1 from tgvaughan/patch-1
+
+Renamed output directory.
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Tue, 26 Mar 2019 10:35:35 +0100</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Bayesian Skyline with coupled MCMC Tutorial</title>
 				<description>
 					Setting up Bayesian Skyline with coupled MCMC
@@ -91,55 +187,6 @@
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Time stamped data</title>
-				<description>
-					Time-stamped data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Alexei Drummond
-							
-					
-						
-								,  Remco Bouckaert
-						
-					
-						
-								
-									and  Walter Xie
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/rbouckaert/MEP-tutorial/commit/113ad2a23e2cffa56ceb87f0c40bb1d804b21503'
-					&gt;
-						24 Mar 2019
-					&lt;/a&gt;
-					by
-					&lt;a class=&#39;off&#39; href=
-						'https://github.com/rbouckaert'
-					&gt;
-						rbouckaert
-					&lt;/a&gt;
-					: fix link to figure
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Sun, 24 Mar 2019 21:36:51 +0100</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
 			</item>
 				
 			<item>
