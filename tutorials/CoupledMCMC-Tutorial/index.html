@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -397,7 +397,7 @@ After how many iterations the states of two random chains are proposed to be swa
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -423,14 +423,14 @@ All other analyses have to be setup by editing one line in the <code>*xml</code>
 
 <h2>The Data</h2>
 
-<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt <a href="#Ray2000">(Ray, Arthur, Carella, Bukh, &amp; Thomas, 2000)</a>. This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
+<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt <a class="citation" href="#Ray2000">(Ray, Arthur, Carella, Bukh, &amp; Thomas, 2000)</a>. This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
 
 <p>With an estimated 15-25%, Egypt has the highest Hepatits C prevalence in the world. In the mid 20<sup>th</sup> century, the prevalence of Hepatitis C increased drastically (see <a href="#fig:prevalence">Figure 1</a> for estimates). We will try to infer this increase from sequence data.</p>
 
 <figure>
     <a id="fig:prevalence"></a>
     <img style="width:50%;" src="figures/Estimated_number_hcv.png" alt="">
-    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt <a href="#Pybus2003">(Pybus, Drummond, Nakano, Robertson, &amp; Rambaut, 2003)</a>.</figcaption>
+    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt <a class="citation" href="#Pybus2003">(Pybus, Drummond, Nakano, Robertson, &amp; Rambaut, 2003)</a>.</figcaption>
 </figure>
 
 <p><br></p>
@@ -504,7 +504,7 @@ The Bayesian Coalescent Skyline will estimate the number of coalescent events wi
 
 <p><br></p>
 
-<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline <a href="#Heled2008">(Heled &amp; Drummond, 2008)</a>) or do not require dimensions to be specified (Skyride <a href="#Minin2008">(Minin, Bloomquist, &amp; Suchard, 2008)</a>).</p>
+<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline <a class="citation" href="#Heled2008">(Heled &amp; Drummond, 2008)</a>) or do not require dimensions to be specified (Skyride <a class="citation" href="#Minin2008">(Minin, Bloomquist, &amp; Suchard, 2008)</a>).</p>
 
 <p>We can leave the rest of the priors as they are and go to the <code>Coupled MCMC panel</code>.
 In contrast to regular MCMC, we have to define a few more things.
@@ -519,7 +519,7 @@ We here propose to exchange states between the 2 chains every 1000 iterations, w
 Hotter chains on the other hand are more easily able to cross unlikely intermediate states and can therefore help chains to move out of local optimas.
 Here, we use a value of 0.05.
 This value should be different depending on the dataset, the analysis and the number of chains.
-Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 <a href="#altekar2004parallel">(Altekar, Dwarkadas, Huelsenbeck, &amp; Ronquist, 2004)</a>.</p>
+Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 <a class="citation" href="#altekar2004parallel">(Altekar, Dwarkadas, Huelsenbeck, &amp; Ronquist, 2004)</a>.</p>
 
 <figure>
     <a id="fig:dimensions"></a>
@@ -623,7 +623,7 @@ Next, open the log files of all chains which had a higher iteration and remove t
 <ul>
 <li>Blog post explaining coupled MCMC <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a></li>
 <li>Coupled MCMC source code: <a href="https://github.com/nicfel/CoupledMCMC">https://github.com/nicfel/CoupledMCMC</a></li>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
 <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
 <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
@@ -636,7 +636,7 @@ Next, open the log files of all chains which had a higher iteration and remove t
 <li><span id="Ray2000">Ray, S. Ê. C., Arthur, R. Ê. R., Carella, A., Bukh, J., &amp; Thomas, D. Ê. L. (2000). Genetic Epidemiology of Hepatitis C Virus throughout Egypt. <i>The Journal of Infectious Diseases</i>, <i>182</i>(3), 698–707. https://doi.org/10.1086/315786</span></li>
 <li><span id="Pybus2003">Pybus, O. G., Drummond, A. J., Nakano, T., Robertson, B. H., &amp; Rambaut, A. (2003). The Epidemiology and Iatrogenic Transmission of Hepatitis C Virus in Egypt: A Bayesian Coalescent Approach. <i>Molecular Biology and Evolution</i>, <i>20</i>(3), 381–387. https://doi.org/10.1093/molbev/msg043</span></li>
 <li><span id="Heled2008">Heled, J., &amp; Drummond, A. J. (2008). Bayesian inference of population size history from multiple loci. <i>BMC Evolutionary Biology</i>, <i>8</i>(1), 289. https://doi.org/10.1186/1471-2148-8-289</span></li>
-<li><span id="Minin2008">Minin, V. N., Bloomquist, E. W., &amp; Suchard, M. A. (2008). Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics. <i>Molecular Biology and Evolution</i>, <i>25</i>(7), 1459–71. https://doi.org/10.1093/molbev/msn090</span></li>
+<li><span id="Minin2008">Minin, V. N., Bloomquist, E. W., &amp; Suchard, M. A. (2008). Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics. <i>Molecular Biology and Evolution</i>, <i>25</i>(7), 1459–1471. https://doi.org/10.1093/molbev/msn090</span></li>
 <li><span id="altekar2004parallel">Altekar, G., Dwarkadas, S., Huelsenbeck, J. P., &amp; Ronquist, F. (2004). Parallel metropolis coupled Markov chain Monte Carlo for Bayesian phylogenetic inference. <i>Bioinformatics</i>, <i>20</i>(3), 407–415.</span></li></ol>
 
 

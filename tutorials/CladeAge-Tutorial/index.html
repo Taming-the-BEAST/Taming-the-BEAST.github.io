@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -373,7 +373,7 @@ Hi @mmatschiner, the documentation was unclear on this point (I'm fixing it now)
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.0.</p>
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.0.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -408,17 +408,17 @@ Hi @mmatschiner, the documentation was unclear on this point (I'm fixing it now)
 
 <h2>The data</h2>
 
-<p>The analyses in this tutorial will be based on the dataset of Near et al. <a href="#Near2013">(2013)</a>, comprising alignments for ten nuclear genes. In their study, Near et al. <a href="#Near2013">(2013)</a> used this dataset to estimate divergence times of spiny-rayed fishes (=Acanthomorphata), and to identify shifts in diversification rates among different groups of these fishes. While the dataset of Near et al. <a href="#Near2013">(2013)</a> did not focus on cichlid diversification, it included nine cichlid species among the 608 species sampled for the extensive phylogeny. Thus, we can here use part of this dataset of Near et al. <a href="#Near2013">(2013)</a> to estimate early divergences among cichlid fishes. To facilitate the analyses in this tutorial, we will reduce the dataset of Near et al. <a href="#Near2013">(2013)</a> to sequences of 24 selected species. These species represent divergent cichlid lineages as well as the most ancestral groups of spiny-rayed fishes so that the fossil record of these lineages can be employed for calibration.</p>
+<p>The analyses in this tutorial will be based on the dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a>, comprising alignments for ten nuclear genes. In their study, Near et al. <a class="citation" href="#Near2013">(2013)</a> used this dataset to estimate divergence times of spiny-rayed fishes (=Acanthomorphata), and to identify shifts in diversification rates among different groups of these fishes. While the dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> did not focus on cichlid diversification, it included nine cichlid species among the 608 species sampled for the extensive phylogeny. Thus, we can here use part of this dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> to estimate early divergences among cichlid fishes. To facilitate the analyses in this tutorial, we will reduce the dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> to sequences of 24 selected species. These species represent divergent cichlid lineages as well as the most ancestral groups of spiny-rayed fishes so that the fossil record of these lineages can be employed for calibration.</p>
 
 <h2>The CladeAge model</h2>
 
-<p>The approach of CladeAge is similar to the more traditional node-dating approach in the sense that prior densities are defined for the ages of different clades, and the minimum ages of these prior densities are provided by the oldest fossils of these clades. However, important differences exist between the CladeAge approach and node dating: First, the shape of age-prior densities is informed by a model of diversification and fossil sampling in the CladeAge approach, whereas in node dating, parametric distributions (e.g. lognormal or gamma) with more or less arbitrarily chosen parameters are usually applied. Second, because of the quantitative model used in the CladeAge approach, the clades used for calibration should also not be chosen at will. Instead, strictly all clades included in the phylogeny that (i) have a fossil record, (ii) are morphologically recognizable, and (iii) have their sister lineage also included in the phylogeny should be constrained according to the age of their oldest fossil. A consequence of this is that clades are constrained even when their known sister lineage has an older fossil record, and that the same fossil may be used to constrain not just one clade, but multiple nested clades, if the more inclusive clades do not have an even older fossil record. More details about these criteria can be found in our paper on CladeAge <a href="#Matschiner2017">(Matschiner et al., 2017)</a>, and further information on using CladeAge is given in our <a href="http://evoinformatics.eu/cladeage.pdf">Rough Guide to CladeAge</a>.</p>
+<p>The approach of CladeAge is similar to the more traditional node-dating approach in the sense that prior densities are defined for the ages of different clades, and the minimum ages of these prior densities are provided by the oldest fossils of these clades. However, important differences exist between the CladeAge approach and node dating: First, the shape of age-prior densities is informed by a model of diversification and fossil sampling in the CladeAge approach, whereas in node dating, parametric distributions (e.g. lognormal or gamma) with more or less arbitrarily chosen parameters are usually applied. Second, because of the quantitative model used in the CladeAge approach, the clades used for calibration should also not be chosen at will. Instead, strictly all clades included in the phylogeny that (i) have a fossil record, (ii) are morphologically recognizable, and (iii) have their sister lineage also included in the phylogeny should be constrained according to the age of their oldest fossil. A consequence of this is that clades are constrained even when their known sister lineage has an older fossil record, and that the same fossil may be used to constrain not just one clade, but multiple nested clades, if the more inclusive clades do not have an even older fossil record. More details about these criteria can be found in our paper on CladeAge <a class="citation" href="#Matschiner2017">(Matschiner et al., 2017)</a>, and further information on using CladeAge is given in our <a href="http://evoinformatics.eu/cladeage.pdf">Rough Guide to CladeAge</a>.</p>
 
 <h2>Divergence-time estimation with CladeAge</h2>
 
 <h3>Preparing the molecular dataset</h3>
 
-<p>As a first step, download the molecular dataset of Near et al. <a href="#Near2013">(2013)</a> from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the <code>wget</code> utility.</p>
+<p>As a first step, download the molecular dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the <code>wget</code> utility.</p>
 
 <blockquote>
 <p>Execute the following command:</p>
@@ -427,7 +427,7 @@ Hi @mmatschiner, the documentation was unclear on this point (I'm fixing it now)
 </code></pre></div>
 <p>Alternatively, you could use your browser to open the Dryad repository <a href="https://datadryad.org/resource/doi:10.5061/dryad.d3mb4">https://datadryad.org/resource/doi:10.5061/dryad.d3mb4</a> and download the file <code>Near_et_al.nex</code>.</p>
 
-<p>This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we&#39;ll extract the sequences of 24 species that represent major groups of spiny-rayed fishes <a href="#Betancur2017">(Betancur-R et al., 2017)</a> as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.</p>
+<p>This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we&#39;ll extract the sequences of 24 species that represent major groups of spiny-rayed fishes <a class="citation" href="#Betancur2017">(Betancur-R et al., 2017)</a> as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.</p>
 
 <p><center></p>
 
@@ -629,7 +629,7 @@ tail -n 35 Near_et_al.nex | sed 's/paup/assumptions/g' &gt;&gt; Near_et_al_red.n
 <p>Move on to the &quot;Site Model&quot; tab to select the site model for all partitions.</p>
 </blockquote>
 
-<p>Instead of selecting a model such as HKY or GTR, I highly recommend the use of the model-averaging approach implemented in the bModelTest package <a href="#Bouckaert2017">(Bouckaert &amp; Drummond, 2017)</a>. If you did not already install this package, you can do so with the BEAST2 Package Manager from BEAUti as described above for the installation of the CladeAge package (don&#39;t forget to close and reopen BEAUti after installation to see changes to the interface). More information on model averaging with the bModelTest package is provided in the <a href="https://taming-the-beast.org/tutorials/Substitution-model-averaging/">Substitution Model Averaging</a> tutorial. While recommended, model averaging with bModelTest is not required for this CladeAge tutorial, and you could also pick a model such as HKY or GTR instead. The description given here, however, assumes that the bModelTest package has been installed.</p>
+<p>Instead of selecting a model such as HKY or GTR, I highly recommend the use of the model-averaging approach implemented in the bModelTest package <a class="citation" href="#Bouckaert2017">(Bouckaert &amp; Drummond, 2017)</a>. If you did not already install this package, you can do so with the BEAST2 Package Manager from BEAUti as described above for the installation of the CladeAge package (don&#39;t forget to close and reopen BEAUti after installation to see changes to the interface). More information on model averaging with the bModelTest package is provided in the <a href="https://taming-the-beast.org/tutorials/Substitution-model-averaging/">Substitution Model Averaging</a> tutorial. While recommended, model averaging with bModelTest is not required for this CladeAge tutorial, and you could also pick a model such as HKY or GTR instead. The description given here, however, assumes that the bModelTest package has been installed.</p>
 
 <blockquote>
 <p>Select &quot;BEAST Model Test&quot; from the drop-down menu at the top of the window, as shown below.</p>
@@ -723,7 +723,7 @@ Then, set the tick to the right of &quot;Mutation Rate&quot; to specify that thi
     <figcaption>Figure 12: Selecting a first taxon set for calibration.</figcaption>
 </figure>
 
-<p>We will now have to specify a rather long list of constraints to make the best possible use of the information provided by the fossil record and to obtain divergence time estimates that are as reliable as possible given our dataset. We&#39;ll start simple by specifying that the origin of African cichlid tribe Heterochromini, represented in our dataset by <em>Heterochromis multidens</em>, must have occurred at least 15.97-33.9 million years ago (Ma), since this is the age of the oldest fossil of Heterochromi, which was reported from the Baid Formation of Saudi Arabia by Lippitsch and Micklich <a href="#Lippitsch1998">(1998)</a>.</p>
+<p>We will now have to specify a rather long list of constraints to make the best possible use of the information provided by the fossil record and to obtain divergence time estimates that are as reliable as possible given our dataset. We&#39;ll start simple by specifying that the origin of African cichlid tribe Heterochromini, represented in our dataset by <em>Heterochromis multidens</em>, must have occurred at least 15.97-33.9 million years ago (Ma), since this is the age of the oldest fossil of Heterochromi, which was reported from the Baid Formation of Saudi Arabia by Lippitsch and Micklich <a class="citation" href="#Lippitsch1998">(1998)</a>.</p>
 
 <blockquote>
 <p>Specify &quot;Heterochromini&quot; in the field next to &quot;Taxon set label&quot;, and select only &quot;Heterochromis_multidensA&quot; as the ingroup of this taxon set.</p>
@@ -743,7 +743,7 @@ Then, set the tick to the right of &quot;Mutation Rate&quot; to specify that thi
     <figcaption>Figure 14: Specifying parameters for CladeAge calibrations.</figcaption>
 </figure>
 
-<p>While it might sometimes be preferable to estimate the net diversification (speciation minus extinction) and turnover (extinction divided by speciation) rates as part of the analysis, this is not implemented in the CladeAge model yet. Instead, the values for the two parameters have to be specified <em>a priori</em>, together with the &quot;sampling rate&quot;, the rate at which fossils that are eventually sampled by scientists were once deposited in the fossil record. Fortunately, estimates for these three rates can be found in the literature, and the confidence intervals for these estimates can be accounted for by the CladeAge model. Here, as in Matschiner et al. <a href="#Matschiner2017">(2017)</a>, we adopt teleost-specific estimates for net diversification and turnover from Santini et al. <a href="#Santini2009">(2009)</a>, and a sampling-rate estimate for bony fishes from Foote and Miller <a href="#Foote2007">(2007)</a>. These estimates are 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. </p>
+<p>While it might sometimes be preferable to estimate the net diversification (speciation minus extinction) and turnover (extinction divided by speciation) rates as part of the analysis, this is not implemented in the CladeAge model yet. Instead, the values for the two parameters have to be specified <em>a priori</em>, together with the &quot;sampling rate&quot;, the rate at which fossils that are eventually sampled by scientists were once deposited in the fossil record. Fortunately, estimates for these three rates can be found in the literature, and the confidence intervals for these estimates can be accounted for by the CladeAge model. Here, as in Matschiner et al. <a class="citation" href="#Matschiner2017">(2017)</a>, we adopt teleost-specific estimates for net diversification and turnover from Santini et al. <a class="citation" href="#Santini2009">(2009)</a>, and a sampling-rate estimate for bony fishes from Foote and Miller <a class="citation" href="#Foote2007">(2007)</a>. These estimates are 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. </p>
 
 <blockquote>
 <p>Specify 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. Don&#39;t change the selection of &quot;empirical CladeAge&quot; in the drop-down menu to the left.</p>
@@ -792,7 +792,7 @@ Then, set the tick to the right of &quot;Mutation Rate&quot; to specify that thi
 <blockquote>
 <p>Click the triangle to the left of &quot;Heterochromini&quot; again to close the section with details on this fossil constraint.</p>
 
-<p>Add further fossil constraints for each of the clades listed below (see the Supplementary Material of Matschiner et al. <a href="#Matschiner2017">(2017)</a> if interested in details and references):</p>
+<p>Add further fossil constraints for each of the clades listed below (see the Supplementary Material of Matschiner et al. <a class="citation" href="#Matschiner2017">(2017)</a> if interested in details and references):</p>
 </blockquote>
 
 <ul>
@@ -1030,7 +1030,7 @@ Then, set the tick to the right of &quot;Mutation Rate&quot; to specify that thi
 
 <h3>Summarizing the posterior tree distribution</h3>
 
-<p>While analysis with Tracer has been sufficient to inspect the run stationarity and parameter estimates, we might still want to inspect and visualize the inferred tree itself. One useful method to visualize the posterior tree distribution is <a href="https://www.cs.auckland.ac.nz/%7Eremco/DensiTree/">Densitree</a> <a href="#BouckaertHeled2014">(Bouckaert &amp; Heled, 2014)</a>; this software is distributed together with BEAST2. Alternatively, a single summary tree can be generated with TreeAnnotator as described below.</p>
+<p>While analysis with Tracer has been sufficient to inspect the run stationarity and parameter estimates, we might still want to inspect and visualize the inferred tree itself. One useful method to visualize the posterior tree distribution is <a href="https://www.cs.auckland.ac.nz/%7Eremco/DensiTree/">Densitree</a> <a class="citation" href="#BouckaertHeled2014">(Bouckaert &amp; Heled, 2014)</a>; this software is distributed together with BEAST2. Alternatively, a single summary tree can be generated with TreeAnnotator as described below.</p>
 
 <blockquote>
 <p>Open TreeAnnotator. Set the burn-in percentage to 10% (recall that this was determined to be appropriate based on the MCMC trace for the posterior). As the target tree type, choose &quot;Maximum clade credibility tree&quot; from the drop-down menu, and select &quot;Mean heights&quot; as node heights. Select the <code>Near_et_al_red.trees</code> file written by BEAST2 as input tree file, and name the output file <code>Near_et_al_red.tre</code>.</p>
@@ -1075,7 +1075,7 @@ Then, set the tick to the right of &quot;Mutation Rate&quot; to specify that thi
 <p><a name="q2"></a></p>
 
 <ul>
-<li><strong>Question 2:</strong> The estimated speciation rate is far lower than the values that we assumed when we specified prior densities for clade ages with CladeAge. Recall that we had used the estimates for the net diversification rate from Santini et al. <a href="#Santini2009">(2009)</a>, which were 0.041-0.081 (per millon year). Thus, the estimated speciation of around 0.0009 is almost an order of magnitude lower than the values that we had assumed for the net diversification rate. This is remarkable because the speciation rate should always be higher than the net diversification rate, given that the latter is defined as the difference between the speciation and extinction rates. The explanation for this difference is that BEAST2 estimated the speciation rate under the assumption that the species that we included in the phylogeny are in fact all the extant species that descended from the root of the phylogeny. This means that BEAST2 assumed that no spiny-rayed fish species besides those 24 included in the phylogeny exist. On the other hand the estimates for the net diversification rate obtained by Santini et al. <a href="#Santini2009">(2009)</a> accounted for the fact that only a subset of the living species were included in their phylogeny. Thus, the speciation-rate estimate resulting from our analysis is most certainly a severe underestimate. This bias, however, should not lead to strong bias in the timeline inferred in the analysis with CladeAge, because it did not influence the prior densities placed on clade ages.</li>
+<li><strong>Question 2:</strong> The estimated speciation rate is far lower than the values that we assumed when we specified prior densities for clade ages with CladeAge. Recall that we had used the estimates for the net diversification rate from Santini et al. <a class="citation" href="#Santini2009">(2009)</a>, which were 0.041-0.081 (per millon year). Thus, the estimated speciation of around 0.0009 is almost an order of magnitude lower than the values that we had assumed for the net diversification rate. This is remarkable because the speciation rate should always be higher than the net diversification rate, given that the latter is defined as the difference between the speciation and extinction rates. The explanation for this difference is that BEAST2 estimated the speciation rate under the assumption that the species that we included in the phylogeny are in fact all the extant species that descended from the root of the phylogeny. This means that BEAST2 assumed that no spiny-rayed fish species besides those 24 included in the phylogeny exist. On the other hand the estimates for the net diversification rate obtained by Santini et al. <a class="citation" href="#Santini2009">(2009)</a> accounted for the fact that only a subset of the living species were included in their phylogeny. Thus, the speciation-rate estimate resulting from our analysis is most certainly a severe underestimate. This bias, however, should not lead to strong bias in the timeline inferred in the analysis with CladeAge, because it did not influence the prior densities placed on clade ages.</li>
 </ul>
 
 <hr>
@@ -1084,7 +1084,7 @@ Then, set the tick to the right of &quot;Mutation Rate&quot; to specify that thi
 
 <ul>
 <li><a href="http://evoinformatics.eu/cladeage.pdf">Rough Guide to CladeAge</a></li>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
 <li>Ask questions at the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
 </ul>
 

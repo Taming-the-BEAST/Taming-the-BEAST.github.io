@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -417,7 +417,7 @@ Updated Version numbers to Beast 2.5.x</span>
 			<p>
 			<h1>Background</h1>
 
-<p>Population dynamics influence the shape of the tree and consequently, the shape of the tree contains some information about past population dynamics. The so-called Skyline methods allow to extract this information from phylogenetic trees in a non-parametric manner. It is non-parametric since there is no underlying system of differential equations governing the inference of these dynamics. In this tutorial we will look at two different methods to infer these dynamics from sequence data. The first one is the Bayesian Coalescent Skyline plot <a href="#Drummond2005">(Drummond, Rambaut, Shapiro, &amp; Pybus, 2005)</a>, which is based on the coalescent model, and the second one is the Birth-Death skyline <a href="#Stadler2013">(Stadler, Kuhnert, Bonhoeffer, &amp; Drummond, 2013)</a> plot based on the birth-death model. The conceptual difference between coalescent and birth-death approaches lies in the direction of the flow of time. In the coalescent, the time is modeled to go backwards, from present to past, while in the birth-death approach it is modeled to go forwards. Two other fundamental differences are the parameters that are inferred and the way sampling is treated. </p>
+<p>Population dynamics influence the shape of the tree and consequently, the shape of the tree contains some information about past population dynamics. The so-called Skyline methods allow to extract this information from phylogenetic trees in a non-parametric manner. It is non-parametric since there is no underlying system of differential equations governing the inference of these dynamics. In this tutorial we will look at two different methods to infer these dynamics from sequence data. The first one is the Bayesian Coalescent Skyline plot <a class="citation" href="#Drummond2005">(Drummond, Rambaut, Shapiro, &amp; Pybus, 2005)</a>, which is based on the coalescent model, and the second one is the Birth-Death skyline <a class="citation" href="#Stadler2013">(Stadler, Kuhnert, Bonhoeffer, &amp; Drummond, 2013)</a> plot based on the birth-death model. The conceptual difference between coalescent and birth-death approaches lies in the direction of the flow of time. In the coalescent, the time is modeled to go backwards, from present to past, while in the birth-death approach it is modeled to go forwards. Two other fundamental differences are the parameters that are inferred and the way sampling is treated. </p>
 
 <hr>
 
@@ -425,7 +425,7 @@ Updated Version numbers to Beast 2.5.x</span>
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.x.</p>
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.x.</p>
 
 <h3>BEAUti - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -455,14 +455,14 @@ Updated Version numbers to Beast 2.5.x</span>
 
 <h2>The Data</h2>
 
-<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt <a href="#Ray2000">(Ray, Arthur, Carella, Bukh, &amp; Thomas, 2000)</a>. This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
+<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt <a class="citation" href="#Ray2000">(Ray, Arthur, Carella, Bukh, &amp; Thomas, 2000)</a>. This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
 
 <p>With an estimated 15-25%, Egypt has the highest Hepatits C prevalence in the world. In the mid 20<sup>th</sup> century, the prevalence of Hepatitis C increased drastically (see <a href="#fig:prevalence">Figure 1</a> for estimates). We will try to infer this increase from sequence data. </p>
 
 <figure>
     <a id="fig:prevalence"></a>
     <img style="width:50%;" src="figures/Estimated_number_hcv.png" alt="">
-    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt <a href="#Pybus2003">(Pybus, Drummond, Nakano, Robertson, &amp; Rambaut, 2003)</a>.</figcaption>
+    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt <a class="citation" href="#Pybus2003">(Pybus, Drummond, Nakano, Robertson, &amp; Rambaut, 2003)</a>.</figcaption>
 </figure>
 
 <p><br></p>
@@ -501,7 +501,7 @@ Updated Version numbers to Beast 2.5.x</span>
 
 <p><br></p>
 
-<p>As we use sequences that were sampled at the same point in time, we need to fix the clock rate (for more information on this please refer to the tutorial on molecular clocks). We will use an estimate inferred in <a href="#Pybus2001">(Pybus et al., 2001)</a> to fix the clock rate. In this case all the samples were contemporaneous (at the same time) and the clock rate works as a mapping of the estimated tree branch lengths into calendar time.</p>
+<p>As we use sequences that were sampled at the same point in time, we need to fix the clock rate (for more information on this please refer to the tutorial on molecular clocks). We will use an estimate inferred in <a class="citation" href="#Pybus2001">(Pybus et al., 2001)</a> to fix the clock rate. In this case all the samples were contemporaneous (at the same time) and the clock rate works as a mapping of the estimated tree branch lengths into calendar time.</p>
 
 <p>We will keep the strict clock model and will set <code>Clock.rate</code> to 0.00079.</p>
 
@@ -528,7 +528,7 @@ The Bayesian Coalescent Skyline will estimate the number of coalescent events wi
 
 <p><br></p>
 
-<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline <a href="#Heled2008">(Heled &amp; Drummond, 2008)</a>) or do not require dimensions to be specified (Skyride <a href="#Minin2008">(Minin, Bloomquist, &amp; Suchard, 2008)</a>).</p>
+<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline <a class="citation" href="#Heled2008">(Heled &amp; Drummond, 2008)</a>) or do not require dimensions to be specified (Skyride <a class="citation" href="#Minin2008">(Minin, Bloomquist, &amp; Suchard, 2008)</a>).</p>
 
 <p>We can leave the priors as they are and save the settings to <code>*.xml</code>.</p>
 
@@ -823,14 +823,14 @@ If the bdskytools package cannot be installed from GitHub the relevant scripts a
 
 <h2>Some considerations for using skyline plots</h2>
 
-<p>Both the coalescent and the birth-death skylines assume that the population is well-mixed. That is, they assume that there is no significant population structure and that the sequences are a random sample from the population. However, if there is population structure, for instance sequences were sampled from two different villages and there is much more contact within than between villages, then the results will be biased <a href="#Heller2013">(Heller, Chikhi, &amp; Siegismund, 2013)</a>. Instead a structured model should be used to account for these biases.</p>
+<p>Both the coalescent and the birth-death skylines assume that the population is well-mixed. That is, they assume that there is no significant population structure and that the sequences are a random sample from the population. However, if there is population structure, for instance sequences were sampled from two different villages and there is much more contact within than between villages, then the results will be biased <a class="citation" href="#Heller2013">(Heller, Chikhi, &amp; Siegismund, 2013)</a>. Instead a structured model should be used to account for these biases.</p>
 
 <hr>
 
 <h1>Useful Links</h1>
 
 <ul>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
 <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
 <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
 <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
@@ -840,14 +840,14 @@ If the bdskytools package cannot be installed from GitHub the relevant scripts a
 
 <h1>Relevant References</h1>
 
-<ol class="bibliography"><li><span id="Drummond2005">Drummond, A. J., Rambaut, A., Shapiro, B., &amp; Pybus, O. G. (2005). Bayesian coalescent inference of past population dynamics from molecular sequences. <i>Molecular Biology and Evolution</i>, <i>22</i>(5), 1185–92. https://doi.org/10.1093/molbev/msi103</span></li>
+<ol class="bibliography"><li><span id="Drummond2005">Drummond, A. J., Rambaut, A., Shapiro, B., &amp; Pybus, O. G. (2005). Bayesian coalescent inference of past population dynamics from molecular sequences. <i>Molecular Biology and Evolution</i>, <i>22</i>(5), 1185–1192. https://doi.org/10.1093/molbev/msi103</span></li>
 <li><span id="Stadler2013">Stadler, T., Kuhnert, D., Bonhoeffer, S., &amp; Drummond, A. J. (2013). Birth-death skyline plot reveals temporal changes of epidemic spread in HIV and hepatitis C virus (HCV). <i>Proceedings of the National Academy of Sciences</i>, <i>110</i>(1), 228–233. https://doi.org/10.1073/pnas.1207965110</span></li>
 <li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
 <li><span id="Ray2000">Ray, S. Ê. C., Arthur, R. Ê. R., Carella, A., Bukh, J., &amp; Thomas, D. Ê. L. (2000). Genetic Epidemiology of Hepatitis C Virus throughout Egypt. <i>The Journal of Infectious Diseases</i>, <i>182</i>(3), 698–707. https://doi.org/10.1086/315786</span></li>
 <li><span id="Pybus2003">Pybus, O. G., Drummond, A. J., Nakano, T., Robertson, B. H., &amp; Rambaut, A. (2003). The Epidemiology and Iatrogenic Transmission of Hepatitis C Virus in Egypt: A Bayesian Coalescent Approach. <i>Molecular Biology and Evolution</i>, <i>20</i>(3), 381–387. https://doi.org/10.1093/molbev/msg043</span></li>
-<li><span id="Pybus2001">Pybus, O. G., Charleston, M. A., Gupta, S., Rambaut, A., Holmes, E. C., Harvey, P. H., … Felsenstein, J. (2001). The epidemic behavior of the hepatitis C virus. <i>Science (New York, N.Y.)</i>, <i>292</i>(5525), 2323–5. https://doi.org/10.1126/science.1058321</span></li>
+<li><span id="Pybus2001">Pybus, O. G., Charleston, M. A., Gupta, S., Rambaut, A., Holmes, E. C., Harvey, P. H., … Felsenstein, J. (2001). The epidemic behavior of the hepatitis C virus. <i>Science (New York, N.Y.)</i>, <i>292</i>(5525), 2323–2325. https://doi.org/10.1126/science.1058321</span></li>
 <li><span id="Heled2008">Heled, J., &amp; Drummond, A. J. (2008). Bayesian inference of population size history from multiple loci. <i>BMC Evolutionary Biology</i>, <i>8</i>(1), 289. https://doi.org/10.1186/1471-2148-8-289</span></li>
-<li><span id="Minin2008">Minin, V. N., Bloomquist, E. W., &amp; Suchard, M. A. (2008). Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics. <i>Molecular Biology and Evolution</i>, <i>25</i>(7), 1459–71. https://doi.org/10.1093/molbev/msn090</span></li>
+<li><span id="Minin2008">Minin, V. N., Bloomquist, E. W., &amp; Suchard, M. A. (2008). Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics. <i>Molecular Biology and Evolution</i>, <i>25</i>(7), 1459–1471. https://doi.org/10.1093/molbev/msn090</span></li>
 <li><span id="Heller2013">Heller, R., Chikhi, L., &amp; Siegismund, H. R. (2013). The confounding effect of population structure on Bayesian skyline plot inferences of demographic history. <i>PloS One</i>, <i>8</i>(5), e62992. https://doi.org/10.1371/journal.pone.0062992</span></li>
 <li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
 

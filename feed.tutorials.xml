@@ -3,12 +3,12 @@
 	<channel>
 		<title>Taming the BEAST - Tutorials</title>
 		<description>BEAST2 tutorials for the community, by the community! - Recently modified tutorials</description>
-		<link>https://taming-the-beast.org//tutorials</link>
-		<atom:link href="https://taming-the-beast.org/feed.tutorials.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000/tutorials</link>
+		<atom:link href="http://localhost:4000feed.tutorials.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>https://taming-the-beast.org//images/logo_bw.svg</url>
+			<url>http://localhost:4000/images/logo_bw.svg</url>
 			<title>Taming the BEAST</title>
-			<link>https://taming-the-beast.org//tutorials</link>
+			<link>http://localhost:4000/tutorials</link>
 		</image>
 				
 			<item>
@@ -31,13 +31,13 @@
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/e152979d6cfab701e7f9fedd8256050cc33ac1a9'
 					&gt;
 						23 Apr 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/KonstantinHoffmann'
 					&gt;
 						KonstantinHoffmann
@@ -54,8 +54,8 @@ Removed state files from precooked_runs.
 				</description>
 				<pubDate>Tue, 23 Apr 2019 15:36:15 +0200</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
+				<link>http://localhost:4000/tutorials/LanguagePhylogenies/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/LanguagePhylogenies/</guid>
 			</item>
 				
 			<item>
@@ -82,13 +82,13 @@ Removed state files from precooked_runs.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/rbouckaert/MEP-tutorial/commit/3e9854515227274443834cdf351f9fa292510cda'
 					&gt;
 						26 Mar 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/rbouckaert'
 					&gt;
 						rbouckaert
@@ -105,8 +105,8 @@ Renamed output directory.
 				</description>
 				<pubDate>Tue, 26 Mar 2019 10:35:35 +0100</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/MEP-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/MEP-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -125,13 +125,13 @@ Renamed output directory.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/f91378358131d45090f1f1aa9b6816ef23c7da61'
 					&gt;
 						25 Mar 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/nicfel'
 					&gt;
 						nicfel
@@ -146,8 +146,8 @@ Renamed output directory.
 				</description>
 				<pubDate>Mon, 25 Mar 2019 15:55:46 +0100</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -166,13 +166,13 @@ Renamed output directory.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/rbouckaert/NS-tutorial/commit/fe86ed9962d589af316e897bdf6d8b3122a4dd00'
 					&gt;
 						24 Mar 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/rbouckaert'
 					&gt;
 						rbouckaert
@@ -187,8 +187,8 @@ Renamed output directory.
 				</description>
 				<pubDate>Sun, 24 Mar 2019 23:45:59 +0100</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/NS-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/NS-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -215,13 +215,13 @@ Renamed output directory.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Prior-selection/commit/7f2be81d71a1645f9b5ea5833408eac191bcb130'
 					&gt;
 						12 Mar 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/tgvaughan'
 					&gt;
 						tgvaughan
@@ -236,8 +236,8 @@ Renamed output directory.
 				</description>
 				<pubDate>Tue, 12 Mar 2019 11:51:27 +0100</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
+				<link>http://localhost:4000/tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
@@ -260,13 +260,13 @@ Renamed output directory.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/7eb210510c6daf4cdecbe3d1416f98fc1b9a4bcc'
 					&gt;
 						12 Mar 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/tgvaughan'
 					&gt;
 						tgvaughan
@@ -281,8 +281,8 @@ Renamed output directory.
 				</description>
 				<pubDate>Tue, 12 Mar 2019 09:44:28 +0100</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
+				<link>http://localhost:4000/tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
@@ -301,13 +301,13 @@ Renamed output directory.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/nicfel/AIM-Tutorial/commit/3a778aab522b9ed6aa1fad7d97c90fea006e41a3'
 					&gt;
 						22 Feb 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/nicfel'
 					&gt;
 						nicfel
@@ -322,8 +322,8 @@ Renamed output directory.
 				</description>
 				<pubDate>Fri, 22 Feb 2019 00:24:49 +0100</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/AIM-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/AIM-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -342,13 +342,13 @@ Renamed output directory.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/mmatschiner/CladeAge-Tutorial/commit/64dee2c3e902340cec82edfbfc6c77cf794e4335'
 					&gt;
 						21 Feb 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/mmatschiner'
 					&gt;
 						mmatschiner
@@ -364,8 +364,8 @@ Added local update describing species-tree specification with BEAUti.
 				</description>
 				<pubDate>Thu, 21 Feb 2019 23:43:45 +0100</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/CladeAge-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/CladeAge-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -384,13 +384,13 @@ Added local update describing species-tree specification with BEAUti.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/nicfel/Mascot-Tutorial/commit/ecb3c9d5f2f2b1436b88ca80780939dd3a7710d4'
 					&gt;
 						20 Feb 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/nicfel'
 					&gt;
 						nicfel
@@ -405,8 +405,8 @@ Added local update describing species-tree specification with BEAUti.
 				</description>
 				<pubDate>Wed, 20 Feb 2019 23:05:54 +0100</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Mascot-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -429,13 +429,13 @@ Added local update describing species-tree specification with BEAUti.
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/c3d1fc1f54f9d935aeead8e64192e38ce99fb13b'
 					&gt;
 						17 Feb 2019
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/nicfel'
 					&gt;
 						nicfel
@@ -452,8 +452,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Sun, 17 Feb 2019 21:32:10 +0100</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
+				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
@@ -480,13 +480,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/7962c1fb07bed1e415bc732ecf75c1df0e3acf54'
 					&gt;
 						5 Nov 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/tgvaughan'
 					&gt;
 						tgvaughan
@@ -501,8 +501,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Mon, 05 Nov 2018 16:43:08 +0100</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/Molecular-Dating-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Molecular-Dating-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -521,13 +521,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/ac12bf7ade609ef59c60a426035ae5021aceaf39'
 					&gt;
 						21 Jun 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/tgvaughan'
 					&gt;
 						tgvaughan
@@ -542,8 +542,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Thu, 21 Jun 2018 23:09:40 +0200</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/Bacter-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Bacter-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -562,13 +562,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/genomescale/starbeast2-tutorial/commit/d88d4c588e76f5662f169eaeca13eb7d749d6928'
 					&gt;
 						21 Jun 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/laduplessis'
 					&gt;
 						laduplessis
@@ -583,8 +583,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Thu, 21 Jun 2018 20:23:40 +0200</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/starbeast2-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/starbeast2-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -603,13 +603,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/genomescale/species-tree-clocks/commit/0dac8eede4f7fd4c170464d1ca63e8027632da1f'
 					&gt;
 						21 Jun 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						''
 					&gt;
 						Unknown
@@ -624,8 +624,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Thu, 21 Jun 2018 09:30:17 +0200</pubDate>
 				<category>Basic</category>
-				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
+				<link>http://localhost:4000/tutorials/species-tree-clocks/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/species-tree-clocks/</guid>
 			</item>
 				
 			<item>
@@ -652,13 +652,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/d8c514bc6aec7e6426c8190fab00c43f24f84c0b'
 					&gt;
 						19 Jun 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						''
 					&gt;
 						Unknown
@@ -673,8 +673,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Tue, 19 Jun 2018 15:00:16 +0200</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
+				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
 			</item>
 				
 			<item>
@@ -693,13 +693,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Troubleshooting/commit/55382af70e60908458a10c9c52d78e9687b40fb9'
 					&gt;
 						18 Jun 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/junniest'
 					&gt;
 						junniest
@@ -714,8 +714,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Mon, 18 Jun 2018 17:55:54 +0200</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Troubleshooting/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting/</guid>
+				<link>http://localhost:4000/tutorials/Troubleshooting/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting/</guid>
 			</item>
 				
 			<item>
@@ -742,13 +742,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/1ccc6fc468d3ff943036b82715fcac3ad5464bf8'
 					&gt;
 						13 Jun 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/laduplessis'
 					&gt;
 						laduplessis
@@ -763,8 +763,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Wed, 13 Jun 2018 19:13:28 +0200</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
+				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
@@ -783,13 +783,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/08f971231f3b1ba7802f6abe6b7685466a2f9b48'
 					&gt;
 						11 Jun 2018
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/rachelwarnock'
 					&gt;
 						rachelwarnock
@@ -804,8 +804,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Mon, 11 Jun 2018 15:10:34 +0200</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -828,13 +828,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/SCOTTI-Tutorial/commit/12254bfaf2ca38f8db7d8673b8eab744031b77d1'
 					&gt;
 						24 Jul 2017
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/laduplessis'
 					&gt;
 						laduplessis
@@ -849,8 +849,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Mon, 24 Jul 2017 16:10:26 +0200</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/SCOTTI-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/SCOTTI-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -873,13 +873,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/Structured-coalescent/commit/a99e9fd4f3b0e2351a5130fd136a3e8e5d56e40d'
 					&gt;
 						12 Jul 2017
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/laduplessis'
 					&gt;
 						laduplessis
@@ -894,8 +894,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Wed, 12 Jul 2017 17:33:51 +0200</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-coalescent/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-coalescent/</guid>
+				<link>http://localhost:4000/tutorials/Structured-coalescent/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-coalescent/</guid>
 			</item>
 				
 			<item>
@@ -914,13 +914,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/duchene/adequacy_tutorial/commit/d91fb88ec94359166fe5fc3aafd5a9229ee73fd2'
 					&gt;
 						9 Feb 2017
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						''
 					&gt;
 						Unknown
@@ -935,8 +935,8 @@ Updated Version numbers to Beast 2.5.x
 				</description>
 				<pubDate>Thu, 09 Feb 2017 02:46:12 +0100</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/adequacy_tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/adequacy_tutorial/</guid>
+				<link>http://localhost:4000/tutorials/adequacy_tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/adequacy_tutorial/</guid>
 			</item>
 				
 			<item>
@@ -955,13 +955,13 @@ Updated Version numbers to Beast 2.5.x
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf'
 					&gt;
 						3 Feb 2017
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						''
 					&gt;
 						Unknown
@@ -978,8 +978,8 @@ Add input data
 				</description>
 				<pubDate>Fri, 03 Feb 2017 00:19:14 +0100</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/calibrated-species-trees/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/calibrated-species-trees/</guid>
+				<link>http://localhost:4000/tutorials/calibrated-species-trees/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/calibrated-species-trees/</guid>
 			</item>
 				
 			<item>
@@ -1014,13 +1014,13 @@ Add input data
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/Taming-the-BEAST/StarBeast-Tutorial/commit/128840d025a64b8d5e562098c6f91e270dc63c0c'
 					&gt;
 						2 Feb 2017
 					&lt;/a&gt;
 					by
-					&lt;a class=&#39;off&#39; href=
+					&lt;a class='off' href=
 						'https://github.com/laduplessis'
 					&gt;
 						laduplessis
@@ -1035,8 +1035,8 @@ Add input data
 				</description>
 				<pubDate>Thu, 02 Feb 2017 22:07:01 +0100</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/StarBeast-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/StarBeast-Tutorial/</guid>
 			</item>
 		
 	</channel>

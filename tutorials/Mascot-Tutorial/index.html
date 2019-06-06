@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -359,7 +359,7 @@
 
 <p>Phylogeographic methods can help reveal the movement of genes between populations of organisms. This has been widely used to quantify pathogen movement between different host populations, the migration history of humans, and the geographic spread of languages or the gene flow between species using the location or state of samples alongside sequence data. Phylogenies therefore offer insights into migration processes not available from classic epidemiological or occurrence data alone. </p>
 
-<p>The structured coalescent allows to coherently model the migration and coalescent process, but struggles with complex datasets due to the need to infer ancestral migration histories. Thus, approximations to the structured coalescent, which integrate over all ancestral migration histories, have been developed. This tutorial gives an introduction into how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for <strong>M</strong>arginal <strong>A</strong>pproximation of the <strong>S</strong>tructured <strong>CO</strong>alescen <strong>T</strong>  <a href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a> and implements a structured coalescent approximation <a href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This approximation doesn&#39;t require migration histories to be sampled using MCMC and therefore allows to analyse phylogenies with more than three or four states.</p>
+<p>The structured coalescent allows to coherently model the migration and coalescent process, but struggles with complex datasets due to the need to infer ancestral migration histories. Thus, approximations to the structured coalescent, which integrate over all ancestral migration histories, have been developed. This tutorial gives an introduction into how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for <strong>M</strong>arginal <strong>A</strong>pproximation of the <strong>S</strong>tructured <strong>CO</strong>alescen <strong>T</strong>  <a class="citation" href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a> and implements a structured coalescent approximation <a class="citation" href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This approximation doesn&#39;t require migration histories to be sampled using MCMC and therefore allows to analyse phylogenies with more than three or four states.</p>
 
 <hr>
 
@@ -367,7 +367,7 @@
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -393,7 +393,7 @@
 
 <h1>Practical: Parameter and State inference using the approximate structured coalescent</h1>
 
-<p>In this tutorial we will estimate migration rates, effective population sizes and locations of internal nodes using the marginal approximation of the structured coalescent implemented in BEAST2, MASCOT <a href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>.</p>
+<p>In this tutorial we will estimate migration rates, effective population sizes and locations of internal nodes using the marginal approximation of the structured coalescent implemented in BEAST2, MASCOT <a class="citation" href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>.</p>
 
 <p>The aim is to:</p>
 
@@ -582,11 +582,11 @@ To color branches, you can go to <em>Appearance &gt;&gt; Colour by</em> and sele
 
 <h1>Useful Links</h1>
 
-<p>If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here <a href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper <a href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>. </p>
+<p>If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here <a class="citation" href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper <a class="citation" href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>. </p>
 
 <ul>
 <li>MASCOT source code: <a href="https://github.com/nicfel/Mascot">https://github.com/nicfel/Mascot</a></li>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
 <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
 <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
 </ul>

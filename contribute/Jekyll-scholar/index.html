@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -148,11 +148,11 @@
 
 </code></pre></div>
 <p>To print the references in your tutorial, assuming your tutorial is called <code>My-Awesome-Tutorial</code> and your references are saved in a file called <code>master_refs.bib</code>, add the line, </p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">bibliography</span><span class="w"> </span><span class="err">--cited</span><span class="w"> </span><span class="err">--file</span><span class="w"> </span><span class="err">My-Awesome-Tutorial/master_refs.bib</span><span class="w">  </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+<div class="highlight"><pre><code class="language-" data-lang="">{% bibliography --cited --file My-Awesome-Tutorial/master_refs.bib  %}
+</code></pre></div>
 <p>to <code>README.md</code> at the location you want to print the bibliography. This will print all cited references. To cite a reference simply add,</p>
-<div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">cite</span><span class="w"> </span><span class="err">AwesomeBook</span><span class="w"> </span><span class="err">--file</span><span class="w"> </span><span class="err">My-Awesome-Tutorial/master_refs.bib</span><span class="w">  </span><span class="err">%</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+<div class="highlight"><pre><code class="language-" data-lang="">{% cite AwesomeBook --file My-Awesome-Tutorial/master_refs.bib  %}
+</code></pre></div>
 <p>This will add a citation to a reference saved as &quot;AwesomeBook&quot; in the file <code>master_refs.bib</code>. Note that you have to always enter the name of the bibtex file and enter the path <em>relative</em> to the parent directory of your GitHub repository.</p>
 
 <h2>Common issues with Jekyll-scholar</h2>

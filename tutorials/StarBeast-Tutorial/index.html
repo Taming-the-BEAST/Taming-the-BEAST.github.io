@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -486,12 +486,12 @@
 			<p>
 			<h1>Introduction</h1>
 
-<p>In this tutorial we describe a full Bayesian framework for species tree estimation. The statistical methodology described in this tutorial is known by the acronym *BEAST (pronounced &quot;star beast&quot;) <a href="#Heled:2010fk">(Heled &amp; Drummond, 2010)</a>.</p>
+<p>In this tutorial we describe a full Bayesian framework for species tree estimation. The statistical methodology described in this tutorial is known by the acronym *BEAST (pronounced &quot;star beast&quot;) <a class="citation" href="#Heled:2010fk">(Heled &amp; Drummond, 2010)</a>.</p>
 
 <p>You will need the following software at your disposal:</p>
 
 <ul>
-<li> <strong>BEAST</strong> - this package contains the BEAST program, BEAUti, TreeAnnotator and other utility programs. This tutorial is written for BEAST v2.4.x, which has support for multiple partitions. It is available for download from <a href="http://beast2.org">http://beast2.org</a> <a href="#beast">(Bouckaert et al., 2014)</a>.</li>
+<li> <strong>BEAST</strong> - this package contains the BEAST program, BEAUti, TreeAnnotator and other utility programs. This tutorial is written for BEAST v2.4.x, which has support for multiple partitions. It is available for download from <a href="http://beast2.org">http://beast2.org</a> <a class="citation" href="#beast">(Bouckaert et al., 2014)</a>.</li>
 <li> <strong>Tracer</strong> - this program is used to explore the output of BEAST (and other Bayesian MCMC programs). It summarizes graphically and quantitively the distributions of continuous parameters and provides diagnostic information for the particular MCMC chain. At the time of writing, the current version is v1.6. It is available for download from <a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>.</li>
 <li> <strong>FigTree</strong> - this is an application for displaying and printing molecular phylogenies, in particular those obtained using BEAST. At the time of writing, the current version is v1.4.2. It is available for download from <a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>.</li>
 </ul>
@@ -500,7 +500,7 @@
 
 <h1>*BEAST analysis</h1>
 
-<p>This tutorial will guide you through the analysis of three loci sampled from 26 individuals representing nine species of pocket gophers. This is a subset of previously published data <a href="#belfiore2008multilocus">(Belfiore, Liu, &amp; Moritz, 2008)</a>. The objective of this tutorial is to estimate the species tree that is most probable given the multi-individual multi-locus sequence data. The species tree has nine taxa, whereas each gene tree has 26 taxa. *BEAST 2 will co-estimate three gene trees embedded in a shared species tree (see <a href="#Heled:2010fk">(Heled &amp; Drummond, 2010)</a> for details).</p>
+<p>This tutorial will guide you through the analysis of three loci sampled from 26 individuals representing nine species of pocket gophers. This is a subset of previously published data <a class="citation" href="#belfiore2008multilocus">(Belfiore, Liu, &amp; Moritz, 2008)</a>. The objective of this tutorial is to estimate the species tree that is most probable given the multi-individual multi-locus sequence data. The species tree has nine taxa, whereas each gene tree has 26 taxa. *BEAST 2 will co-estimate three gene trees embedded in a shared species tree (see <a class="citation" href="#Heled:2010fk">(Heled &amp; Drummond, 2010)</a> for details).</p>
 
 <p>The first step in the analysis will be to convert a NEXUS file with a <code>DATA</code> or <code>CHARACTERS</code> block into a BEAST XML input file. This is done using the program <strong>BEAUti</strong> (Bayesian Evolutionary Analysis Utility). This is a user-friendly program for setting the evolutionary model and options for the MCMC analysis. The second step will be to actually run BEAST using the XML input file that contains the data, model and MCMC chain settings. The final step will be to explore the output of BEAST in order to diagnose problems and to summarize the results.</p>
 
@@ -951,7 +951,7 @@ This is true for the areas of the tree with little posterior support for the cla
 
 <h1>Relevant References</h1>
 
-<ol class="bibliography"><li><span id="Heled:2010fk">Heled, J., &amp; Drummond, A. J. (2010). Bayesian inference of species trees from multilocus data. <i>Mol Biol Evol</i>, <i>27</i>(3), 570–80. https://doi.org/10.1093/molbev/msp274</span></li>
+<ol class="bibliography"><li><span id="Heled:2010fk">Heled, J., &amp; Drummond, A. J. (2010). Bayesian inference of species trees from multilocus data. <i>Mol Biol Evol</i>, <i>27</i>(3), 570–580. https://doi.org/10.1093/molbev/msp274</span></li>
 <li><span id="beast">Bouckaert, R. R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Comput Biol</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
 <li><span id="belfiore2008multilocus">Belfiore, N. M., Liu, L., &amp; Moritz, C. (2008). Multilocus phylogenetics of a rapid radiation in the genus Thomomys (Rodentia: Geomyidae). <i>Systematic Biology</i>, <i>57</i>(2), 294.</span></li></ol>
 

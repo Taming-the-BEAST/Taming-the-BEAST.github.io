@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -375,17 +375,17 @@
 			<p>
 			<h1>Background</h1>
 
-<p>In this tutorial we will analyse 100 full genome sequences from the 2009 H1N1 flu pandemic in North America. The sequences were collected from about February to November, such that their sampling times can be used for calibration. They were analysed by Hedge and Rambaut <a href="#hedge2013real">(Hedge, Lycett, &amp; Rambaut, 2013)</a>. An important aspect of using sampling times for calibration is that the sampling time should capture a sufficient number of substitutions, i.e. the population should be measurably evolving <a href="#drummond2003measurably">(Drummond, Pybus, Rambaut, Forsberg, &amp; Rodrigo, 2003)</a>. One way to verify whether a population is measurably evolving is to compare the prior and posterior distribution of the tree height, which we will do here. We will also use a relaxed molecular clock and the bModel test add-on to average over substitution models <a href="#bouckaert2017bmodeltest">(Bouckaert &amp; Drummond, 2017)</a>. In the optional exercises we can compare the estimates from a relaxed molecular clock to those from a strict molecular clock model. In a subsequent tutorial we will use the exponential coalescent and constant birth-death model to infer epidemiological parameters.</p>
+<p>In this tutorial we will analyse 100 full genome sequences from the 2009 H1N1 flu pandemic in North America. The sequences were collected from about February to November, such that their sampling times can be used for calibration. They were analysed by Hedge and Rambaut <a class="citation" href="#hedge2013real">(Hedge, Lycett, &amp; Rambaut, 2013)</a>. An important aspect of using sampling times for calibration is that the sampling time should capture a sufficient number of substitutions, i.e. the population should be measurably evolving <a class="citation" href="#drummond2003measurably">(Drummond, Pybus, Rambaut, Forsberg, &amp; Rodrigo, 2003)</a>. One way to verify whether a population is measurably evolving is to compare the prior and posterior distribution of the tree height, which we will do here. We will also use a relaxed molecular clock and the bModel test add-on to average over substitution models <a class="citation" href="#bouckaert2017bmodeltest">(Bouckaert &amp; Drummond, 2017)</a>. In the optional exercises we can compare the estimates from a relaxed molecular clock to those from a strict molecular clock model. In a subsequent tutorial we will use the exponential coalescent and constant birth-death model to infer epidemiological parameters.</p>
 
 <h1>Programs used in this Exercise</h1>
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.</p>
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.</p>
 
 <h3>bModelTest</h3>
 
-<p>bModelTest <a href="#bouckaert2017bmodeltest">(Bouckaert &amp; Drummond, 2017)</a> is used to average over substitution models during the MCMC. For installation instructions click <a href="http://www.beast2.org/managing-packages/">here</a>.</p>
+<p>bModelTest <a class="citation" href="#bouckaert2017bmodeltest">(Bouckaert &amp; Drummond, 2017)</a> is used to average over substitution models during the MCMC. For installation instructions click <a href="http://www.beast2.org/managing-packages/">here</a>.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -405,7 +405,7 @@
 
 <h3>IcyTree</h3>
 
-<p>IcyTree (<a href="https://icytree.org">https://icytree.org</a>) is a browser-based phylogenetic tree viewer <a href="#vaughan2017icytree">(Vaughan, 2017)</a>. It is intended for rapid visualisation of phylogenetic tree files. It can also render phylogenetic networks provided in extended Newick format. IcyTree is compatible with current versions of Mozilla Firefox and Google Chrome.</p>
+<p>IcyTree (<a href="https://icytree.org">https://icytree.org</a>) is a browser-based phylogenetic tree viewer <a class="citation" href="#vaughan2017icytree">(Vaughan, 2017)</a>. It is intended for rapid visualisation of phylogenetic tree files. It can also render phylogenetic networks provided in extended Newick format. IcyTree is compatible with current versions of Mozilla Firefox and Google Chrome.</p>
 
 <hr>
 

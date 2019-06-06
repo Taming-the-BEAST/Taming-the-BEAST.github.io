@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -380,9 +380,9 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <h1>Background</h1>
 
-<p>Bayesian phylogenies are widely used in comparative linguistics. They provide not only information about the relationship of different languages, but also test hypotheses concerning the ages of language families <a href="#Bouckaert2012">(Bouckaert et al., 2012)</a>. The data set can contain grammatical features such as &quot;has productive plural marking on nouns&quot; or statistics of what cognates exist. The languages are then encoded as a binary string representing the presence or absence of these features. This forms the &quot;sequence alignment matrix&quot; on which the phylogeny is built.</p>
+<p>Bayesian phylogenies are widely used in comparative linguistics. They provide not only information about the relationship of different languages, but also test hypotheses concerning the ages of language families <a class="citation" href="#Bouckaert2012">(Bouckaert et al., 2012)</a>. The data set can contain grammatical features such as &quot;has productive plural marking on nouns&quot; or statistics of what cognates exist. The languages are then encoded as a binary string representing the presence or absence of these features. This forms the &quot;sequence alignment matrix&quot; on which the phylogeny is built.</p>
 
-<p>In this tutorial we will analyse a minor selection of Central Pacific languages and focus on the steps that are required in a linguistic analysis. These linguistic data come from 20 languages spoken in Polynesia in the Pacific including Hawaiian, Fijian, Tahitian, Tongan, Samoan, Rapanui (spoken on Easter Island) and Maori (spoken in New Zealand). This group of languages form the &quot;Central Pacific” clade of the great Austronesian language family which originated in Taiwan around 5000 years ago, and spread though-out the Pacific from Madagascar to Easter Island (<a href="#Gray2009">(Gray, Drummond, &amp; Greenhill, 2009)</a>). </p>
+<p>In this tutorial we will analyse a minor selection of Central Pacific languages and focus on the steps that are required in a linguistic analysis. These linguistic data come from 20 languages spoken in Polynesia in the Pacific including Hawaiian, Fijian, Tahitian, Tongan, Samoan, Rapanui (spoken on Easter Island) and Maori (spoken in New Zealand). This group of languages form the &quot;Central Pacific” clade of the great Austronesian language family which originated in Taiwan around 5000 years ago, and spread though-out the Pacific from Madagascar to Easter Island (<a class="citation" href="#Gray2009">(Gray, Drummond, &amp; Greenhill, 2009)</a>). </p>
 
 <p>This dataset contains binary data demarcating the presence or absence of ‘cognates’, which are homologous word forms inherited from the common ancestor of these languages (“Proto-Central Pacific”). The raw linguistic data are available on the <a href="https://abvd.shh.mpg.de/austronesian/">Austronesian Basic Vocabulary Database website</a>, and more information about the relationships of these languages and the research behind this classification  can be found at Glottolog, with links to the primary research here: <a href="https://glottolog.org/resource/languoid/id/cent2060">https://glottolog.org/resource/languoid/id/cent2060</a>.</p>
 
@@ -428,7 +428,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <h2>The data set</h2>
 
-<p>Before we start we need to make sure that our data is suitable for an analysis with <code>babel</code>. We assume that the alignments consist of <strong>0, 1</strong> and <strong>?</strong> representing the presence, absence or uncertainty of a feature (i.e. cognate or grammatical feature). Babel also assumes that your data has <strong>ascertainment correction</strong> columns. Researchers tend not to collect data that does not vary. This is a form of sampling bias that is often called ascertainment bias <a href="#Chang2015">(Chang, Cathcart, Hall, &amp; Garrett, 2015)</a>. In order to account for that <strong>every first column of every partition of the alignment has to be an ascertainment column</strong>. There all languages have the entry <strong>0</strong> except the ones, where the data is missing, they have a <strong>?</strong>.</p>
+<p>Before we start we need to make sure that our data is suitable for an analysis with <code>babel</code>. We assume that the alignments consist of <strong>0, 1</strong> and <strong>?</strong> representing the presence, absence or uncertainty of a feature (i.e. cognate or grammatical feature). Babel also assumes that your data has <strong>ascertainment correction</strong> columns. Researchers tend not to collect data that does not vary. This is a form of sampling bias that is often called ascertainment bias <a class="citation" href="#Chang2015">(Chang, Cathcart, Hall, &amp; Garrett, 2015)</a>. In order to account for that <strong>every first column of every partition of the alignment has to be an ascertainment column</strong>. There all languages have the entry <strong>0</strong> except the ones, where the data is missing, they have a <strong>?</strong>.</p>
 
 <p>The data used in this tutorial is an alignment matrix, where each entry represents the presence or absence of a certain cognate in this specific language. If you open the file <code>cpacific.nex</code> in a text editor, you can see that there is the alignment matrix and below a text block indicating, which columns belong the which meaning class. Every first entry of each meaning class is an ascertainment column.</p>
 
@@ -506,7 +506,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <p>It comes with three parameters, the <strong>birth rate</strong> $\lambda$, the <strong>death rate $\mu$</strong> and the <strong>sampling proportion $\rho$</strong>. In terms of language evolution a birth event happens, if there is a diversification of two languages and a death event is a language going extinct. The sampling proportion is the relative amount of languages in our analysis compared to the total amount of languages existing in the clade.</p>
 
-<p>We need to have a strict prior for at least one of these parameters in order to robustly estimate the others. It makes sense to chose the sampling proportion as we know of almost every language spoken in the world. Glottolog <a href="#Glottolog">(Hammarström, Forkel, &amp; Haspelmath, 2018)</a> lists 45 Central Pacific languages and we have 20 of them in our data set, so we would expect a sampling proportion of ca. 44%. A good candidate for rho is the Beta distribution: It allows values between 0 and 1 and has most of its weight centered around its mean $\frac{a}{a+b}$ , where we chose for $a$ the amount of sampled languages and for $b$ the amount of unsampled languages. </p>
+<p>We need to have a strict prior for at least one of these parameters in order to robustly estimate the others. It makes sense to chose the sampling proportion as we know of almost every language spoken in the world. Glottolog <a class="citation" href="#Glottolog">(Hammarström, Forkel, &amp; Haspelmath, 2018)</a> lists 45 Central Pacific languages and we have 20 of them in our data set, so we would expect a sampling proportion of ca. 44%. A good candidate for rho is the Beta distribution: It allows values between 0 and 1 and has most of its weight centered around its mean $\frac{a}{a+b}$ , where we chose for $a$ the amount of sampled languages and for $b$ the amount of unsampled languages. </p>
 
 <figure>
     <img style="width:100%;" src="figures/BetaPrior.png" alt="">
@@ -523,7 +523,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 <p>Then click on the black triangle left of <code>birthRateBDS.t:tree</code> and select <code>Exponential</code> from the drop down menu. Set the <code>Mean</code> value to <strong>0.01</strong>. Repeat this step for <code>deathRateBDS.t:tree</code>.</p>
 </blockquote>
 
-<p>Next we want to add some calibration priors. According to <a href="#Wilmshurst2010">(Wilmshurst, Hunt, Lipo, &amp; Anderson, 2010)</a>, the settlement of New Zealand can be securely dated to between 1230-1282 A.D. We have two dialects of New Zealand Maori in these data: Maori and SouthIslandMaori. Let’s operationalize this calibration like this: If we assume that the present is a nice round number like the year 2000 (this makes interpretation easier), then we convert this to before present:</p>
+<p>Next we want to add some calibration priors. According to <a class="citation" href="#Wilmshurst2010">(Wilmshurst, Hunt, Lipo, &amp; Anderson, 2010)</a>, the settlement of New Zealand can be securely dated to between 1230-1282 A.D. We have two dialects of New Zealand Maori in these data: Maori and SouthIslandMaori. Let’s operationalize this calibration like this: If we assume that the present is a nice round number like the year 2000 (this makes interpretation easier), then we convert this to before present:</p>
 <div class="highlight"><pre><code class="language-" data-lang="">2000 - 1230 = 770 years ago 
 2000 - 1282 = 718 years ago
 </code></pre></div>
@@ -534,8 +534,8 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 </blockquote>
 
 <p>Another good calibration is East Polynesian: It’s a well-attested linguistic group, and we have good archaeological evidence for when the initial settlement of East Polynesia began. However the ages are a bit controversial between “short” and “long” chronologies e.g.:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">1025 - 1121 AD =  975 -  879 years ago &lt;a href="#Wilmshurst2010"&gt;(Wilmshurst, Hunt, Lipo, &amp;amp; Anderson, 2010)&lt;/a&gt;
- 800 - 1000 AD = 1200 - 1000 years ago &lt;a href="#spriggs2010"&gt;(Spriggs, 2010)&lt;/a&gt;
+<div class="highlight"><pre><code class="language-" data-lang="">1025 - 1121 AD =  975 -  879 years ago &lt;a class="citation" href="#Wilmshurst2010"&gt;(Wilmshurst, Hunt, Lipo, &amp;amp; Anderson, 2010)&lt;/a&gt;
+ 800 - 1000 AD = 1200 - 1000 years ago &lt;a class="citation" href="#spriggs2010"&gt;(Spriggs, 2010)&lt;/a&gt;
 </code></pre></div>
 <p>The average of these estimates is about 1000 years ago, and they are spread on both sides by about 150-
 200 years. This makes a great candidate for a Normal distribution with mean 1000 and variance 100.</p>

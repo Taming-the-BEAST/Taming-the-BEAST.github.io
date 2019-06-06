@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -428,14 +428,14 @@ Fixed filename typo</span>
 
 <p>When applying phylodynamic models to pathogen genetic sequences collected during an outbreak, we usually make the assumption that the inferred genealogy approximates the true transmission tree. In most cases the structure of the true transmission tree will be similar to the inferred genealogy and inferences about epidemiological parameters (e.g. the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>) are valid. However, due to complicating factors, such as within-host diversity and evolution, non-sampled patients and transmission bottlenecks, it is difficult to reconstruct transmission chains or draw conclusions about the transmission dynamics between infected patients. In particular, there may be discrepancies between the epidemiological and phylogenetic relatedness of hosts and infection times are often biased.</p>
 
-<p>SCOTTI (Structured COalescent Transmission Tree Inference) <a href="#deMaio2016">(De Maio, Wu, &amp; Wilson, 2016)</a> is a BEAST2 package that was developed to provide more accurate reconstructions of transmission trees.
+<p>SCOTTI (Structured COalescent Transmission Tree Inference) <a class="citation" href="#deMaio2016">(De Maio, Wu, &amp; Wilson, 2016)</a> is a BEAST2 package that was developed to provide more accurate reconstructions of transmission trees.
 The underlying model is a structured coalescent model, where each host is modeled as a population and migrations between populations represent new infections. 
 New sequencing technologies and protocols are making it easier to sample the within-host diversity of an outbreak and SCOTTI can take advantage of multiple sequences from each host to better resolve transmission events.
 Furthermore, SCOTTI can model non-sampled hosts by dynamically increasing or decreasing the number of populations (hosts). (In other structured models available in BEAST2 the number of populations remain constant and each population needs to be represented by at least one sampled sequence).
 In addition to genetic sequences, SCOTTI also uses epidemiological data about host exposure times, only allowing hosts to transmit the disease during periods when they are infectious.
 Thus, SCOTTI is able to model within-host diversity as well as non-sampled hosts and multiply infected hosts. However, it is currently not able to model transmission bottlenecks.</p>
 
-<p>To make the inference tractable SCOTTI uses the same techniques as BASTA <a href="#deMaio2015">(De Maio, Wu, O’Reilly, &amp; Wilson, 2015)</a>, which is a computationally efficient approximation to the structured coalescent. 
+<p>To make the inference tractable SCOTTI uses the same techniques as BASTA <a class="citation" href="#deMaio2015">(De Maio, Wu, O’Reilly, &amp; Wilson, 2015)</a>, which is a computationally efficient approximation to the structured coalescent. 
 In addition, a number of simplifying assumptions are made. 
 It is assumed that all hosts have the same infection rate and that it stays constant over the course of infection. It is also assumed that infection is equally likely between every pair of hosts.
 Finally, it is assumed that all hosts have the same effective population size, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">N_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>. Thus, all hosts have the same within-host genetic diversity and thus all hosts have equal and constant within-host dynamics.</p>
@@ -446,7 +446,7 @@ Finally, it is assumed that all hosts have the same effective population size, <
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.7 <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.7 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -487,12 +487,12 @@ Because of the high genetic variability of FMDV an appreciable amount of genetic
 
 <h2>The Data</h2>
 
-<p>We analyse an outbreak of Foot and Mouth Disease Virus (FMDV) that occurred in the South of England. The outbreak contained two distinct clusters, in August and September of 2007, respectively. The dataset contains 11 viral sequences from 10 farms. Four sequences were sampled during the first cluster and a further 7 during the second cluster. In addition, we also have the earliest and latest possible dates during which each farm was infected with the disease, informed by the culling time and first appearance of symptoms (<a href="#fig:outbreak">Figure 1</a>). The data were first analysed in <a href="#Cottam2008PlosPath">(Cottam et al., 2008)</a> and later reanalysed using SCOTTI in <a href="#deMaio2016">(De Maio, Wu, &amp; Wilson, 2016)</a>. </p>
+<p>We analyse an outbreak of Foot and Mouth Disease Virus (FMDV) that occurred in the South of England. The outbreak contained two distinct clusters, in August and September of 2007, respectively. The dataset contains 11 viral sequences from 10 farms. Four sequences were sampled during the first cluster and a further 7 during the second cluster. In addition, we also have the earliest and latest possible dates during which each farm was infected with the disease, informed by the culling time and first appearance of symptoms (<a href="#fig:outbreak">Figure 1</a>). The data were first analysed in <a class="citation" href="#Cottam2008PlosPath">(Cottam et al., 2008)</a> and later reanalysed using SCOTTI in <a class="citation" href="#deMaio2016">(De Maio, Wu, &amp; Wilson, 2016)</a>. </p>
 
 <figure>
   <a id="fig:outbreak"></a>
   <img style="width:80.0%;" src="figures/Outbreak.png" alt="">
-  <figcaption>Figure 1: Exposure times of infected farms and sampling dates of the viral sequences (Figure taken from <a href="#Cottam2008PlosPath">(Cottam et al., 2008)</a>). The orange shading estimates the time when animals showing symptoms of FMDV were present on a farm. Light blue shading indicates estimates for the incubation time of each farm. The dark blue shading is the infection date estimates in <a href="#Cottam2008PlosPath">(Cottam et al., 2008)</a>. The haplotype network of the sequenced strains is superimposed on the exposure times. The red dots indicate the dates of the sampled sequences.
+  <figcaption>Figure 1: Exposure times of infected farms and sampling dates of the viral sequences (Figure taken from <a class="citation" href="#Cottam2008PlosPath">(Cottam et al., 2008)</a>). The orange shading estimates the time when animals showing symptoms of FMDV were present on a farm. Light blue shading indicates estimates for the incubation time of each farm. The dark blue shading is the infection date estimates in <a class="citation" href="#Cottam2008PlosPath">(Cottam et al., 2008)</a>. The haplotype network of the sequenced strains is superimposed on the exposure times. The red dots indicate the dates of the sampled sequences.
 </figcaption>
 </figure>
 
@@ -539,35 +539,35 @@ Once you are familiar with the structure of BEAST2 XML files and you know the di
 
 <p>This will display help for the different input arguments of the script:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">
-usage: SCOTTI_generate_xml.py <span class="o">[</span>-h] <span class="o">[</span>--fasta FASTA] <span class="o">[</span>--output OUTPUT]
-                              <span class="o">[</span>--overwrite] <span class="o">[</span>--dates DATES] <span class="o">[</span>--hosts HOSTS]
-                              <span class="o">[</span>--hostTimes HOSTTIMES] <span class="o">[</span>--maxHosts MAXHOSTS]
-                              <span class="o">[</span>--unlimLife] <span class="o">[</span>--penalizeMigration]
-                              <span class="o">[</span>--numIter NUMITER]
-                              <span class="o">[</span>--mutationModel MUTATIONMODEL]
-                              <span class="o">[</span>--fixedAs FIXEDAS] <span class="o">[</span>--fixedCs FIXEDCS]
-                              <span class="o">[</span>--fixedGs FIXEDGS] <span class="o">[</span>--fixedTs FIXEDTS]
-                              <span class="o">[</span>--tracelog TRACELOG] <span class="o">[</span>--screenlog SCREENLOG]
-                              <span class="o">[</span>--treelog TREELOG]
+usage: SCOTTI_generate_xml.py <span class="o">[</span><span class="nt">-h</span><span class="o">]</span> <span class="o">[</span><span class="nt">--fasta</span> FASTA] <span class="o">[</span><span class="nt">--output</span> OUTPUT]
+                              <span class="o">[</span><span class="nt">--overwrite</span><span class="o">]</span> <span class="o">[</span><span class="nt">--dates</span> DATES] <span class="o">[</span><span class="nt">--hosts</span> HOSTS]
+                              <span class="o">[</span><span class="nt">--hostTimes</span> HOSTTIMES] <span class="o">[</span><span class="nt">--maxHosts</span> MAXHOSTS]
+                              <span class="o">[</span><span class="nt">--unlimLife</span><span class="o">]</span> <span class="o">[</span><span class="nt">--penalizeMigration</span><span class="o">]</span>
+                              <span class="o">[</span><span class="nt">--numIter</span> NUMITER]
+                              <span class="o">[</span><span class="nt">--mutationModel</span> MUTATIONMODEL]
+                              <span class="o">[</span><span class="nt">--fixedAs</span> FIXEDAS] <span class="o">[</span><span class="nt">--fixedCs</span> FIXEDCS]
+                              <span class="o">[</span><span class="nt">--fixedGs</span> FIXEDGS] <span class="o">[</span><span class="nt">--fixedTs</span> FIXEDTS]
+                              <span class="o">[</span><span class="nt">--tracelog</span> TRACELOG] <span class="o">[</span><span class="nt">--screenlog</span> SCREENLOG]
+                              <span class="o">[</span><span class="nt">--treelog</span> TREELOG]
 
 optional arguments:
-  -h, --help            show this <span class="nb">help </span>message and <span class="nb">exit</span>
-  --fasta FASTA, -f FASTA
+  <span class="nt">-h</span>, <span class="nt">--help</span>            show this <span class="nb">help </span>message and <span class="nb">exit</span>
+  <span class="nt">--fasta</span> FASTA, <span class="nt">-f</span> FASTA
                         Input fasta alignment. If not specified, looks <span class="k">in </span>th
                         working directory <span class="k">for </span>SCOTTI_aligment.fas
-  --output OUTPUT, -o OUTPUT
+  <span class="nt">--output</span> OUTPUT, <span class="nt">-o</span> OUTPUT
                         output file that will contain the newly created SCOTTI
                         xml to be run with BEAST2.
-  --overwrite, -ov      Overwrite output files.
-  --dates DATES, -d DATES
+  <span class="nt">--overwrite</span>, <span class="nt">-ov</span>      Overwrite output files.
+  <span class="nt">--dates</span> DATES, <span class="nt">-d</span> DATES
                         Input csv file with sampling dates associated to each
-                        sample name <span class="o">(</span>same name as fasta file<span class="o">)</span>. If not
+                        sample name <span class="o">(</span>same name as fasta file<span class="o">)</span><span class="nb">.</span> If not
                         specified, looks <span class="k">for </span>SCOTTI_dates.csv
-  --hosts HOSTS, -ho HOSTS
+  <span class="nt">--hosts</span> HOSTS, <span class="nt">-ho</span> HOSTS
                         Input csv file with sampling hosts associated to each
-                        sample name <span class="o">(</span>same name as fasta file<span class="o">)</span>. If not
+                        sample name <span class="o">(</span>same name as fasta file<span class="o">)</span><span class="nb">.</span> If not
                         specified, looks <span class="k">for </span>SCOTTI_hosts.csv
-  --hostTimes HOSTTIMES, -ht HOSTTIMES
+  <span class="nt">--hostTimes</span> HOSTTIMES, <span class="nt">-ht</span> HOSTTIMES
                         Input csv file with the earliest <span class="nb">times </span><span class="k">in </span>which hosts
                         are infectable, and latest <span class="nb">time </span>when hosts are
                         infective. Use same host names as those used <span class="k">for </span>the
@@ -578,7 +578,7 @@ optional arguments:
   ...
   ...
 
-  --treelog TREELOG, -tl TREELOG
+  <span class="nt">--treelog</span> TREELOG, <span class="nt">-tl</span> TREELOG
                         Logging frequency <span class="k">in </span>the tree file.
                         <span class="nv">Default</span><span class="o">=</span>numIter/1000.
 
@@ -834,7 +834,7 @@ However, it is difficult to interpret this parameter as the number of farms that
 
 <ul>
 <li>SCOTTI website with documentation: <a href="https://bitbucket.org/nicofmay/scotti/">https://bitbucket.org/nicofmay/scotti/</a></li>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
 <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
 <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
 </ul>

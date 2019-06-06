@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Customized Bootstrap + Font Awesome + Solarized -->
@@ -478,7 +478,7 @@
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
 
-<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -504,7 +504,7 @@
 
 <h1>Practical: H3N2 flu dynamics - Heterochronous data</h1>
 
-<p>In this tutorial, we will estimate the rate of evolution from a set of virus sequences that have been isolated either at one point in time (homochronous) or at different points in time (heterochronous or time-stamped data). We use the hemagglutinin (HA) gene of the H3N2 strain spreading across America alongside the pandemic H1N1 virus in 2009 <a href="#cdc2009">(CDC, 2009/2010)</a>. </p>
+<p>In this tutorial, we will estimate the rate of evolution from a set of virus sequences that have been isolated either at one point in time (homochronous) or at different points in time (heterochronous or time-stamped data). We use the hemagglutinin (HA) gene of the H3N2 strain spreading across America alongside the pandemic H1N1 virus in 2009 <a class="citation" href="#cdc2009">(CDC, 2009/2010)</a>. </p>
 
 <p>The aim of this tutorial is to obtain estimates for the: </p>
 
@@ -536,7 +536,7 @@
 
 <h3>Installing BEAST2 Plug-Ins</h3>
 
-<p>Since we will be using the birth-death skyline model (<strong>BDSKY</strong>) <a href="#Stadler2013">(Stadler, Kühnert, Bonhoeffer, &amp; Drummond, 2013)</a>, we need to make sure it is available in BEAUti. It is not one of the default models but rather an add-on (also called a plug-in or package). You only need to install a BEAST2 package once. Thus, if you close BEAUti, you do not have to load <strong>BDSKY</strong> the next time you open the program. However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST2. For this tutorial we need to ensure that we have at least BDSKY v1.4.5 installed.</p>
+<p>Since we will be using the birth-death skyline model (<strong>BDSKY</strong>) <a class="citation" href="#Stadler2013">(Stadler, Kühnert, Bonhoeffer, &amp; Drummond, 2013)</a>, we need to make sure it is available in BEAUti. It is not one of the default models but rather an add-on (also called a plug-in or package). You only need to install a BEAST2 package once. Thus, if you close BEAUti, you do not have to load <strong>BDSKY</strong> the next time you open the program. However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST2. For this tutorial we need to ensure that we have at least BDSKY v1.4.5 installed.</p>
 
 <blockquote>
 <p>Open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
@@ -673,7 +673,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 <p>Navigate to the <strong>Clock Model</strong> panel.</p>
 </blockquote>
 
-<p>Four different clock models are available in BEAST2, allowing us to specify lineage-specific substitution rate variation. The default model in BEAUti is the <em>Strict Clock</em>. The other three models relax the assumption of a constant substitution rate. The <em>Relaxed Clock Log Normal</em> allows for the substitution rates associated with each branch to be independently drawn from a single, discretized log normal distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Under the <em>Relaxed Clock Exponential</em> model, the rates associated with each branch are drawn from an exponential distribution <a href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Both of these models are uncorrelated relaxed clock models. The log normal distribution has the advantage that one can estimate its variance, which reflects the extent to which the molecular clock needs to be relaxed. In both models, BEAUti sets by default the <strong>Number Of Discrete Rates</strong> to -1. This means that the number of bins that the distribution is divided into is equal to the number of branches. The last available model is the <em>Random Local Clock</em> which averages over all possible local clock models <a href="#drummond10">(Drummond &amp; Suchard, 2010)</a>. </p>
+<p>Four different clock models are available in BEAST2, allowing us to specify lineage-specific substitution rate variation. The default model in BEAUti is the <em>Strict Clock</em>. The other three models relax the assumption of a constant substitution rate. The <em>Relaxed Clock Log Normal</em> allows for the substitution rates associated with each branch to be independently drawn from a single, discretized log normal distribution <a class="citation" href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Under the <em>Relaxed Clock Exponential</em> model, the rates associated with each branch are drawn from an exponential distribution <a class="citation" href="#drummond06">(Drummond, Ho, Phillips, &amp; Rambaut, 2006)</a>. Both of these models are uncorrelated relaxed clock models. The log normal distribution has the advantage that one can estimate its variance, which reflects the extent to which the molecular clock needs to be relaxed. In both models, BEAUti sets by default the <strong>Number Of Discrete Rates</strong> to -1. This means that the number of bins that the distribution is divided into is equal to the number of branches. The last available model is the <em>Random Local Clock</em> which averages over all possible local clock models <a class="citation" href="#drummond10">(Drummond &amp; Suchard, 2010)</a>. </p>
 
 <blockquote>
 <p><strong>Topic for discussion:</strong> Which clock model may be the most appropriate for our dataset and why?</p>
@@ -749,7 +749,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 
 <p>By default, the clock rate in BEAST2 has a uniform prior between 0 and infinity. This is not only extremely unspecific, but also an improper prior (it does not integrate to 1). In general, a log-normal distribution works well for rates, since it does not allow negative values. Furthermore, it places most weight close to 0, while also allowing for larger values, making it an appropriate prior for the clock rate, which we expect to be quite low in general, but may be higher in exceptional cases. You could set your best guess as a prior by, for example, choosing a log-normal distribution centered around your best guess for the substitution rate.</p>
 
-<p>Now consider the following information: Influenza virus is an RNA virus <a href="#kawaoka2006">(Kawaoka, 2006)</a> and RNA viruses in general, have a mutation rate of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 10<sup>-3</sup> substitutions per site per year <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. </p>
+<p>Now consider the following information: Influenza virus is an RNA virus <a class="citation" href="#kawaoka2006">(Kawaoka, 2006)</a> and RNA viruses in general, have a mutation rate of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span> 10<sup>-3</sup> substitutions per site per year <a class="citation" href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. </p>
 
 <blockquote>
 <p><strong>Topic for discussion:</strong> Did you change your best guess, for the substitution rate appropriate for RNA viruses? What would it be? How would you specify the prior?</p>
@@ -929,7 +929,7 @@ Are they different from the priors we set and if so, how?</p>
 
 <p><br></p>
 
-<p>Looking at the clock rate estimates (<a href="#tracerclockRate">Figure 21</a>) we see that they are about 2 to 3 times faster than the usual substitution rate for human influenza A <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. This is not a cause for concern and is actually a well-documented phenomenon. When viral samples are collected over a short time period the clock rate is often overestimated. The exact cause of the bias is not known, but it is suspected that incomplete purifying selection plays a role. What is important to keep in mind is that this is does not mean that the virus is mutating or evolving faster than usual. When samples are collected over a longer time period the estimated clock rate slows down and eventually reaches the long-term substitution rate.</p>
+<p>Looking at the clock rate estimates (<a href="#tracerclockRate">Figure 21</a>) we see that they are about 2 to 3 times faster than the usual substitution rate for human influenza A <a class="citation" href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. This is not a cause for concern and is actually a well-documented phenomenon. When viral samples are collected over a short time period the clock rate is often overestimated. The exact cause of the bias is not known, but it is suspected that incomplete purifying selection plays a role. What is important to keep in mind is that this is does not mean that the virus is mutating or evolving faster than usual. When samples are collected over a longer time period the estimated clock rate slows down and eventually reaches the long-term substitution rate.</p>
 
 <figure>
     <a id="tracerclockRate"></a>
@@ -985,7 +985,7 @@ Are they different from the priors we set and if so, how?</p>
 <p>If not, how can you see that and where do you think might the problem be? Can we address this problem in our analysis? </p>
 </blockquote>
 
-<p>Notice the values of the substitution rate estimates. From literature, one can read that influenza&#39;s HA gene has a substitution rate of about 10<sup>-3</sup> substitutions per site per year <a href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. Our estimate of the clock rate is of the same order as this value, but has a very large confidence interval. Notice also, that the confidence interval of the tree height is very large [0.1305,2.7393].</p>
+<p>Notice the values of the substitution rate estimates. From literature, one can read that influenza&#39;s HA gene has a substitution rate of about 10<sup>-3</sup> substitutions per site per year <a class="citation" href="#jenkins2002">(Jenkins, Rambaut, Pybus, &amp; Holmes, 2002)</a>. Our estimate of the clock rate is of the same order as this value, but has a very large confidence interval. Notice also, that the confidence interval of the tree height is very large [0.1305,2.7393].</p>
 
 <p>Another way to see that the homochronous sampling does not allow for the estimation of the clock rate is to observe a very strong negative correlation of the clock rate with the tree height.</p>
 
@@ -1146,7 +1146,7 @@ replaced with the name of the XML file, so will always produce different log fil
 <h1>Useful Links</h1>
 
 <ul>
-<li> <a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a>  <a href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li> <a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a>  <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
 <li> BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
 <li> BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
 <li> Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
@@ -1157,7 +1157,7 @@ replaced with the name of the XML file, so will always produce different log fil
 <h1>Relevant References</h1>
 
 <ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: A Software Platform for Bayesian Evolutionary Analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537.</span></li>
-<li><span id="cdc2009">CDC. (2009/20102009/2010). The 2009 H1N1 Pandemic: Summary Highlights, April 2009–April 2010. Centers for Disease Control and Prevention. Retrieved from http://http://www.cdc.gov/h1n1flu/cdcresponse.htm</span></li>
+<li><span id="cdc2009">CDC. (2009/2010). The 2009 H1N1 Pandemic: Summary Highlights, April 2009–April 2010. Centers for Disease Control and Prevention. Retrieved from http://http://www.cdc.gov/h1n1flu/cdcresponse.htm</span></li>
 <li><span id="Stadler2013">Stadler, T., Kühnert, D., Bonhoeffer, S., &amp; Drummond, A. J. (2013). Birth–death skyline plot reveals temporal changes of epidemic spread
     in HIV and hepatitis C virus (HCV). <i>Proceedings of the National Academy of Sciences</i>, <i>110</i>(1), 228–233.</span></li>
 <li><span id="drummond06">Drummond, A. J., Ho, S. Y., Phillips, M. J., &amp; Rambaut, A. (2006). Relaxed phylogenetics and dating with confidence. <i>PLoS Biology</i>, <i>4</i>, e88.</span></li>
