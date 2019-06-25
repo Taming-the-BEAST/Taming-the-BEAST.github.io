@@ -9652,3 +9652,21 @@ figcaption {
     opacity: 0;
   }
 }
+/* Workshop programme styling */
+table td.food {
+  background-color: #cfc;
+}
+table td.lecture {
+  background-color: white;
+}
+table td.invited-lecture {
+  background-color: #fcc;
+}
+table td.tutorial {
+  background-color: #ccf;
+}
+table td.padding {
+  background-color: white;
+  vertical-align: middle;
+  text-align: center;
+}
