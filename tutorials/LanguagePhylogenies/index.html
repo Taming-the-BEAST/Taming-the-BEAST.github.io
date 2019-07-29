@@ -127,7 +127,7 @@
 		<p>
 		<div class="head">
 			
-				Using babel to analyse linguistic data
+				Using Babel to analyse linguistic data
 			
 		</div>
 		
@@ -324,46 +324,40 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/e152979d6cfab701e7f9fedd8256050cc33ac1a9">
-					23 Apr 2019 - <span class="text-gray">Merge pull request #2 from tgvaughan/master
-
-Removed state files from precooked_runs.</span>
+					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/04c6a4a164e03bd24886625f33191e334ed9207e">
+					29 Jul 2019 - <span class="text-gray">Densitree paragraph</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/cc15b60e2fc538a813e6713a4fe11572f452f218">
-					23 Apr 2019 - <span class="text-gray">Merge pull request #1 from tgvaughan/patch-1
-
-Cleaned up several web links.</span>
+					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/ec27569bf09d89754a68e0c916656dc02b141838">
+					15 Jul 2019 - <span class="text-gray">some more clarifications</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/601acc52352e116a054d725f5165ed6d88c3d5f9">
-					23 Apr 2019 - <span class="text-gray">Removed state files from precooked_runs.</span>
+					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/6cc5e810f897559e2a578c23b95f6f5b1d4ca7e7">
+					11 Jul 2019 - <span class="text-gray">Add DensiTree</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/4f86677cb21dbd2cfb29dda143013681a8baeae9">
-					23 Apr 2019 - <span class="text-gray">Cleaned up several web links.
-
-You don't need to use [http://url](http://url) to create a link to a url in markdown, http://url on its own is enough.</span>
+					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/3f307e62e5465c0d96a95cfd9c092b07dc458c63">
+					11 Jul 2019 - <span class="text-gray">some small clarifications</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/53483faf904233451d133d98cbde396145c70a0e">
-					23 Apr 2019 - <span class="text-gray">Information about the data set</span>
+					<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/dead0c4d0a7150d924381ee4747aff59c6690b0f">
+					04 Jul 2019 - <span class="text-gray">Add link to NS tutorial</span>
 					</a> 
 				</li>
 			
@@ -376,13 +370,13 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Language Phylogenies: Using babel to analyse linguistic data</h1>
+			<h1>Language Phylogenies: Using Babel to analyse linguistic data</h1>
 
 <h1>Background</h1>
 
 <p>Bayesian phylogenies are widely used in comparative linguistics. They provide not only information about the relationship of different languages, but also test hypotheses concerning the ages of language families <a class="citation" href="#Bouckaert2012">(Bouckaert et al., 2012)</a>. The data set can contain grammatical features such as &quot;has productive plural marking on nouns&quot; or statistics of what cognates exist. The languages are then encoded as a binary string representing the presence or absence of these features. This forms the &quot;sequence alignment matrix&quot; on which the phylogeny is built.</p>
 
-<p>In this tutorial we will analyse a minor selection of Central Pacific languages and focus on the steps that are required in a linguistic analysis. These linguistic data come from 20 languages spoken in Polynesia in the Pacific including Hawaiian, Fijian, Tahitian, Tongan, Samoan, Rapanui (spoken on Easter Island) and Maori (spoken in New Zealand). This group of languages form the &quot;Central Pacific” clade of the great Austronesian language family which originated in Taiwan around 5000 years ago, and spread though-out the Pacific from Madagascar to Easter Island (<a class="citation" href="#Gray2009">(Gray, Drummond, &amp; Greenhill, 2009)</a>). </p>
+<p>In this tutorial we will analyse a minor selection of Central Pacific languages and focus on the steps that are required in a linguistic analysis. These linguistic data come from 20 languages spoken in Polynesia in the Pacific including Hawaiian, Fijian, Tahitian, Tongan, Samoan, Rapanui (spoken on Easter Island) and Maori (spoken in New Zealand). This group of languages form the &quot;Central Pacific” clade of the great Austronesian language family which originated in Taiwan around 5000 years ago, and spread though-out the Pacific from Madagascar to Easter Island <a class="citation" href="#Gray2009">(Gray, Drummond, &amp; Greenhill, 2009)</a>. </p>
 
 <p>This dataset contains binary data demarcating the presence or absence of ‘cognates’, which are homologous word forms inherited from the common ancestor of these languages (“Proto-Central Pacific”). The raw linguistic data are available on the <a href="https://abvd.shh.mpg.de/austronesian/">Austronesian Basic Vocabulary Database website</a>, and more information about the relationships of these languages and the research behind this classification  can be found at Glottolog, with links to the primary research here: <a href="https://glottolog.org/resource/languoid/id/cent2060">https://glottolog.org/resource/languoid/id/cent2060</a>.</p>
 
@@ -404,9 +398,21 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <p>Tracer (<a href="http://beast.community/tracer">http://beast.community/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.1.</p>
 
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
 <h3>IcyTree</h3>
 
 <p>IcyTree (<a href="https://icytree.org">https://icytree.org</a>) is a browser-based phylogenetic tree viewer. It is intended for rapid visualisation of phylogenetic tree files. It can also render phylogenetic networks provided in extended Newick format. IcyTree is compatible with current versions of Mozilla Firefox and Google Chrome.</p>
+
+<h3>DensiTree</h3>
+
+<p>Bayesian analysis using BEAST2 provides an estimate of the uncertainty in tree space. This distribution is represented by a set of trees, which can be rather large and difficult to interpret. DensiTree is a program for qualitative analysis of sets of trees. DensiTree allows to quickly get an impression of properties of the tree set such as well-supported clades, distribution of tree heights and areas of topological uncertainty.</p>
+
+<p>DensiTree is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
 <hr>
 
@@ -414,10 +420,10 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <h2>Installing necessary packages</h2>
 
-<p>First we need to install the <code>babel</code> (v. 0.2.1 or above) package for linguistic analyses. Further we will use a Birth-Death model which requires the package <code>BDSKY</code> (v. 1.4.5 or above). The latter one can be easily done via the package manager of BEAUti. For <code>babel</code> we first need to add extra repositories to the package manager.</p>
+<p>First we need to install the <code>Babel</code> (v. 0.2.1 or above) package for linguistic analyses. Further we will use a Birth-Death model which requires the package <code>BDSKY</code> (v. 1.4.5 or above). The latter one can be easily done via the package manager of BEAUti. For <code>Babel</code> we first need to add extra repositories to the package manager.</p>
 
 <blockquote>
-<p>Open BEAUti.  Go to <code>File</code> and <code>Manage Packages</code>, click on <code>Package repositories</code>. In the new opened window click on <code>Add URL</code>, set the URL to <strong><a href="https://raw.githubusercontent.com/CompEvol/CBAN/master/packages-extra.xml">https://raw.githubusercontent.com/CompEvol/CBAN/master/packages-extra.xml</a></strong>, click <code>Ok</code> and close the repository manager via <code>Done</code>. Finally select <code>babel</code> from the list and press <code>Install/Upgrade</code>. Also install <code>BDSKY</code> and optionally (if you want to use a sampled ancestor model) <code>SA</code> and <strong>restart BEAUti</strong>.</p>
+<p>Open BEAUti.  Go to <code>File</code> and <code>Manage Packages</code>, click on <code>Package repositories</code>. In the new opened window click on <code>Add URL</code>, set the URL to <strong><a href="https://raw.githubusercontent.com/CompEvol/CBAN/master/packages-extra.xml">https://raw.githubusercontent.com/CompEvol/CBAN/master/packages-extra.xml</a></strong>, click <code>Ok</code> and close the repository manager via <code>Done</code>. Finally select <code>Babel</code> from the list and press <code>Install/Upgrade</code>. Also install <code>BDSKY</code> and optionally (if you want to use a sampled ancestor model) <code>SA</code> and <strong>restart BEAUti</strong>.</p>
 </blockquote>
 
 <figure>
@@ -428,7 +434,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <h2>The data set</h2>
 
-<p>Before we start we need to make sure that our data is suitable for an analysis with <code>babel</code>. We assume that the alignments consist of <strong>0, 1</strong> and <strong>?</strong> representing the presence, absence or uncertainty of a feature (i.e. cognate or grammatical feature). Babel also assumes that your data has <strong>ascertainment correction</strong> columns. Researchers tend not to collect data that does not vary. This is a form of sampling bias that is often called ascertainment bias <a class="citation" href="#Chang2015">(Chang, Cathcart, Hall, &amp; Garrett, 2015)</a>. In order to account for that <strong>every first column of every partition of the alignment has to be an ascertainment column</strong>. There all languages have the entry <strong>0</strong> except the ones, where the data is missing, they have a <strong>?</strong>.</p>
+<p>Before we start we need to make sure that our data is suitable for an analysis with <code>Babel</code>. We assume that the alignments consist of <strong>0, 1</strong> and <strong>?</strong> representing the presence, absence or uncertainty of a feature (i.e. cognate or grammatical feature). Babel also assumes that your data has <strong>ascertainment correction</strong> columns. Researchers tend not to collect data that does not vary. This is a form of sampling bias that is often called ascertainment bias <a class="citation" href="#Chang2015">(Chang, Cathcart, Hall, &amp; Garrett, 2015)</a>. In order to account for that <strong>every first column of every partition of the alignment has to be an ascertainment column</strong>. There all languages have the entry <strong>0</strong> except the ones, where the data is missing, they have a <strong>?</strong>.</p>
 
 <p>The data used in this tutorial is an alignment matrix, where each entry represents the presence or absence of a certain cognate in this specific language. If you open the file <code>cpacific.nex</code> in a text editor, you can see that there is the alignment matrix and below a text block indicating, which columns belong the which meaning class. Every first entry of each meaning class is an ascertainment column.</p>
 
@@ -450,7 +456,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <p>A template in BEAUti sets the interface and allows us to select and modify all the interesting parameters. Depending on the model varying combinations of parameters are necessary. Because BEAUti can not account for all possible models, there are so called templates that preset the interface accordingly.</p>
 
-<p><code>babel</code> comes with some BEAUti-templates that are made specifically for linguistic analyses. These ones are named after the substitution model used in the template. In this tutorial we go with the broadly used Binary Covarion model.</p>
+<p><code>Babel</code> comes with some BEAUti-templates that are made specifically for linguistic analyses. These ones are named after the substitution model used in the template. In this tutorial we go with the broadly used Binary Covarion model.</p>
 
 <blockquote>
 <p>In BEAUti go to <code>File &gt; Template</code> and choose <code>Binary Covarion</code>.</p>
@@ -496,7 +502,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <h3>The priors</h3>
 
-<p>In this tab we include all our prior knowledge about the evolutionary process to the model. First we need to select a tree prior. There are a lot of possibilities, from a simple Yule model to a complex Birth-Death Skyline model. We would like to try a Birth-Death model with contemporaneous sampling as all our language data is from present date.</p>
+<p>In this tab we include all our prior knowledge about the evolutionary process to the model. First we need to select a tree prior. There are a lot of possibilities, from a simple Yule model to a complex Birth-Death Skyline model. Which one to choose heavily depends on the data. We want to include the knowledge that we may not have sampled all languages and some languages may have gone extinct. Also we don&#39;t have any old languages included. A Birth-Death model with contemporaneous sampling incorporates all these things.</p>
 
 <blockquote>
 <p>Click on the tab <code>Priors</code> and select <code>Birth Death Skyline Contemporary BDSParam</code> from the drop down menu.</p>
@@ -504,16 +510,16 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <p>Note that there are two contemporary BDSKY-models <code>Birth Death Skyline Contemporary</code> and <code>Birth Death Skyline Contemporary BDSParam</code> . The difference between these two is that the latter uses the parameters <strong>birth rate</strong> and <strong>death rate</strong> and creates trees starting with their root, while the former uses <strong>reproductive number</strong> (which is birth rate over death rate) and <strong>become uninfectious rate</strong> and starts with the origin of a tree. For our case it makes more sense to use the birth-death-parametrization. </p>
 
-<p>It comes with three parameters, the <strong>birth rate</strong> $\lambda$, the <strong>death rate $\mu$</strong> and the <strong>sampling proportion $\rho$</strong>. In terms of language evolution a birth event happens, if there is a diversification of two languages and a death event is a language going extinct. The sampling proportion is the relative amount of languages in our analysis compared to the total amount of languages existing in the clade.</p>
+<p>It comes with three parameters, the <strong>birth rate</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">λ</span></span></span></span>, the <strong>death rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">μ</span></span></span></span></strong> and the <strong>sampling proportion <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span></strong>. In terms of language evolution a birth event happens, if there is a diversification of two languages and a death event is a language going extinct. The sampling proportion is the relative amount of languages in our analysis compared to the total amount of languages existing in the clade.</p>
 
-<p>We need to have a strict prior for at least one of these parameters in order to robustly estimate the others. It makes sense to chose the sampling proportion as we know of almost every language spoken in the world. Glottolog <a class="citation" href="#Glottolog">(Hammarström, Forkel, &amp; Haspelmath, 2018)</a> lists 45 Central Pacific languages and we have 20 of them in our data set, so we would expect a sampling proportion of ca. 44%. A good candidate for rho is the Beta distribution: It allows values between 0 and 1 and has most of its weight centered around its mean $\frac{a}{a+b}$ , where we chose for $a$ the amount of sampled languages and for $b$ the amount of unsampled languages. </p>
+<p>These three parameters are correlated to each other, so we need to have a strong prior for at least one of these parameters in order to robustly estimate the others. It makes sense to chose the sampling proportion as we know of almost every language spoken in the world. Glottolog <a class="citation" href="#Glottolog">(Hammarström, Forkel, &amp; Haspelmath, 2018)</a> lists 45 Central Pacific languages and we have 20 of them in our data set, so we would expect a sampling proportion of ca. 44%. A good candidate for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span> is the Beta distribution: It allows values between 0 and 1 and has most of its weight centered around its mean <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{a}{a+b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.695392em;"></span><span class="strut bottom" style="height:1.0987230000000001em;vertical-align:-0.403331em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">a</span><span class="mbin">+</span><span class="mord mathit">b</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathit">a</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>, where we chose for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> the amount of sampled languages and for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span> the amount of unsampled languages. </p>
 
 <figure>
     <img style="width:100%;" src="figures/BetaPrior.png" alt="">
     <figcaption>The Beta distribution is great to specify the sampling proportion</figcaption>
 </figure>
 
-<p>The skyline model allows the rates to change over time, which is governed by their dimension. If we would like to have only one overall rate, we need to set the dimension of the birth rate and death rate to 1. For now we stick with constant rates, but later we might want to check if a proper Skyline model with multiple rates performs better.</p>
+<p>In the skyline model rates are constant over time, but may change to different values at specific times. This is governed by the dimension of the birth- or death rate parameter. A dimension of 3 means that there are three different values and thus two rate change events (that are by default evenly distributed along the tree). If we would like to have only one overall rate, we need to set the dimension of the birth rate and death rate to 1. For now we stick with constant rates, but later we might want to check if a proper Skyline model with multiple rates performs better.</p>
 
 <p>We don&#39;t know how quickly languages die out or emerge, but we know for sure that it doesn&#39;t happen every day. A death rate of 0.01 means for example that a language is about 100 years around before it goes extinct. Some language last much longer, some others shorter. A good prior candidate for that would be the exponential distribution. It favors low values close to zero, but also allows higher values if it is necessary. We also can set the initial values of these parameters much lower in order to decrease the burn-in time.</p>
 
@@ -523,7 +529,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 <p>Then click on the black triangle left of <code>birthRateBDS.t:tree</code> and select <code>Exponential</code> from the drop down menu. Set the <code>Mean</code> value to <strong>0.01</strong>. Repeat this step for <code>deathRateBDS.t:tree</code>.</p>
 </blockquote>
 
-<p>Next we want to add some calibration priors. According to <a class="citation" href="#Wilmshurst2010">(Wilmshurst, Hunt, Lipo, &amp; Anderson, 2010)</a>, the settlement of New Zealand can be securely dated to between 1230-1282 A.D. We have two dialects of New Zealand Maori in these data: Maori and SouthIslandMaori. Let’s operationalize this calibration like this: If we assume that the present is a nice round number like the year 2000 (this makes interpretation easier), then we convert this to before present:</p>
+<p>Next we want to add some priors for time calibration. According to <a class="citation" href="#Wilmshurst2010">(Wilmshurst, Hunt, Lipo, &amp; Anderson, 2010)</a>, the settlement of New Zealand can be securely dated to between 1230-1282 A.D. We have two dialects of New Zealand Maori in these data: Maori and SouthIslandMaori. Let’s operationalize this calibration like this: If we assume that the present is a nice round number like the year 2000 (this makes interpretation easier), then we convert this to before present:</p>
 <div class="highlight"><pre><code class="language-" data-lang="">2000 - 1230 = 770 years ago 
 2000 - 1282 = 718 years ago
 </code></pre></div>
@@ -559,7 +565,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <h3>The MCMC tab</h3>
 
-<p>Here we can specify the length of the run as well as the filenames of the output tree files and the log files. For the purpose of this tutorial, we choose a short chain length of 1 million. Usually the chain length should be large enough to yield a high ESS for every parameter (see next section). Finally we want to save our settings and generate a BEAST2-xml file. It is highly recommended to generate another xml-file with the check box <code>Sample From Prior</code> ticked. It is used to verify if the data has enough signal to estimate the parameters or if the posterior results are mainly dominated by the prior choice.</p>
+<p>Here we can specify the length of the run as well as the filenames of the output tree file (where the posterior sample of trees is stored) and the log file (where the posterior sample of parameters is stored). For the purpose of this tutorial, we choose a short chain length of 1 million. Usually the chain length should be large enough to yield a high ESS for every parameter (see next section). Finally we want to save our settings and generate a BEAST2-xml file. It is highly recommended to generate another xml-file with the check box <code>Sample From Prior</code> ticked. It is used to verify if the data has enough signal to estimate the parameters or if the posterior results are mainly dominated by the prior choice.</p>
 
 <blockquote>
 <p>Click on the <code>MCMC</code>-tab. Set the chain length to <strong>1000000</strong> and set the filenames of the log files (tracelog and treelog, screenlog can be left empty) by expanding their respective menu. Select <code>File &gt; Save As</code> and enter a filename (e.g. <strong>cpacific.xml</strong>) and click <code>Ok</code>. Tick the check box next to <code>Sample from Prior</code>, change the file names of the trace log files and tree log files (e.g. <strong>cpacific_prior.log</strong> and <strong>cpacific_prior.trees</strong>) and save again with a different filename (e.g. <strong>cpacific_prior.xml</strong>).</p>
@@ -604,7 +610,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <p>The <strong>mutation rates</strong> of the different word categories are quite striking. We can clearly see slow (bird), medium (and) and fast (belly) mutation rates. You can select all three at once to see them together.</p>
 
-<p>Below are the parameters of the Binary Covarion model followed by the ones of the tree prior. You can select both the trace file of the proper run and the prior only run at once, select e.g. the birth rate parameter and click on <code>Marginal Density</code> to see how the data influenced the prior assumptions. In our case the posterior <strong>birth</strong> and <strong>death rates</strong> are overlapping with their prior beliefs, but narrowing down the confidence interval towards much lower rates. The <strong>sampling proportion</strong> matches its prior, which is no surprise as we are conditioning on that.</p>
+<p>Below are the parameters of the Binary Covarion model followed by the ones of the Birth-death model. We would like to compare the prior with the posterior. In the top left corner you can select both trace files at once (by holding down <code>ctrl</code> while clicking). Select e.g. the birth rate parameter and click on <code>Marginal Density</code> to see how the data influenced the prior assumptions. In our case the posterior <strong>birth</strong> and <strong>death rates</strong> are overlapping with their prior beliefs, but narrowing down the confidence interval towards much lower rates. The <strong>sampling proportion</strong> matches its prior, which is no surprise as we are conditioning on that.</p>
 
 <p>Last but not least the <strong>MRCA times</strong> of East Polynesia and New Zealand: New Zealand matches its prior -- again the prior was chosen to be very strict and we are sure about this knowledge -- while the time of the East Polynesian clade is a bit older than the prior. Remember that there were two different reports about its clade age. This analysis well supports the &quot;long&quot; chronology.</p>
 
@@ -648,13 +654,28 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 
 <p>Interestingly most of the diversification events happened in the past 1500 years and two approximately 3500 years ago according to this analysis. This might be a clue that a model assuming different birth rates might yield better results.</p>
 
+<h3>Compare tree topologies with <code>DensiTree</code></h3>
+
+<p>The first branching event after the root has a fairly low support in our MCC-tree. This means that the topology is just the most likely one, but not neccessarily the correct one as other might also have a decent support. To visualize these other topologies <code>DensiTree</code> is a nice tool. A detailed description on how to use <code>DensiTree</code> is in the tutorial <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a>. </p>
+
+<blockquote>
+<p>Open DensiTree, click on <code>File &gt; Load</code> and select your log file (<code>cpacific.trees</code>). Click on the <code>Burn in</code>-tab on the right panel and set the burn in (in our case) to $50$.</p>
+</blockquote>
+
+<figure>
+    <img style="width:100%;" src="figures/densitree.png" alt="">
+    <figcaption>Densitree shows all different topologies at once</figcaption>
+</figure>
+
+<p>In many trees Fijian clades together with Rotuman, which leads to the low support of Fijian being outside the other languages in the summary tree. However it does not have a big impact on the timing of the diversification events. </p>
+
 <h1>Further steps</h1>
 
 <p>This tutorial is over, but the analysis should not stop here. There are a lot of things to try out and compare: A relaxed clock, other priors on birth and death rate to see how dependent the result are on the priors, varying rates over time, different substitution models and a lot more. </p>
 
 <h2>Nested Sampling</h2>
 
-<p>Nested sampling is a great way to compare different models. It gives a marginal likelihood estimate together with a standard deviation. Those can be used to test the support of a model. More about this and a guide on how to set it up in BEAST2 can be found on its github-page <a href="https://github.com/BEAST2-Dev/nested-sampling">https://github.com/BEAST2-Dev/nested-sampling</a>. </p>
+<p>Nested sampling is a great way to compare different models. It gives a marginal likelihood estimate together with a standard deviation. Those can be used to test the support of a model. More about this and a guide on how to set it up in BEAST2 can be found on its github-page <a href="https://github.com/BEAST2-Dev/nested-sampling">https://github.com/BEAST2-Dev/nested-sampling</a> and there is a tutorial on the Taming the BEAST site.</p>
 
 <h1>Useful Links</h1>
 
@@ -663,7 +684,7 @@ You don't need to use [http://url](http://url) to create a link to a url in mark
 <li>Babel package for linguistic analyses in BEAST2: <a href="https://github.com/rbouckaert/Babel">https://github.com/rbouckaert/Babel</a></li>
 <li>BDSKY package for BEAST2: <a href="https://github.com/BEAST2-Dev/bdsky">https://github.com/BEAST2-Dev/bdsky</a></li>
 <li>SA package for ancient languages: <a href="https://github.com/CompEvol/sampled-ancestors">https://github.com/CompEvol/sampled-ancestors</a></li>
-<li>Nested Sampling: <a href="https://github.com/BEAST2-Dev/nested-sampling">https://github.com/BEAST2-Dev/nested-sampling</a></li>
+<li>Nested Sampling: <a href="https://github.com/BEAST2-Dev/nested-sampling">https://github.com/BEAST2-Dev/nested-sampling</a> <a href="https://taming-the-beast.org/tutorials/NS-tutorial/">tutorial</a></li>
 </ul>
 
 <h1>References</h1>

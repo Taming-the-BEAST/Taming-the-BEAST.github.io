@@ -3,7 +3,7 @@ library("phyloch")
 library("strap")
 library("coda")
 
-t <- read.beast("bearsDivtime_FBD.summary.tre")
+t <- read.beast("bearsTree.summary.tre")
 t$root.time <- t$height[1]
 
 log_data1 <- read.table("bearsDivtime_FBD.1.log",header=T)

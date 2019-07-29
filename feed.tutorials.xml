@@ -14,7 +14,7 @@
 			<item>
 				<title>Language Phylogenies</title>
 				<description>
-					Using babel to analyse linguistic data
+					Using Babel to analyse linguistic data
 					&lt;br&gt;
 					By 
 					
@@ -32,9 +32,9 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/e152979d6cfab701e7f9fedd8256050cc33ac1a9'
+						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/04c6a4a164e03bd24886625f33191e334ed9207e'
 					&gt;
-						23 Apr 2019
+						29 Jul 2019
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
@@ -42,9 +42,7 @@
 					&gt;
 						KonstantinHoffmann
 					&lt;/a&gt;
-					: Merge pull request #2 from tgvaughan/master
-
-Removed state files from precooked_runs.
+					: Densitree paragraph
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -52,10 +50,94 @@ Removed state files from precooked_runs.
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Tue, 23 Apr 2019 15:36:15 +0200</pubDate>
+				<pubDate>Mon, 29 Jul 2019 10:20:13 +0200</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/LanguagePhylogenies/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/LanguagePhylogenies/</guid>
+			</item>
+				
+			<item>
+				<title>Bayesian Skyline with coupled MCMC Tutorial</title>
+				<description>
+					Setting up Bayesian Skyline with coupled MCMC
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/70309dd640c2a135a31b9f1c5490b46fc283abcf'
+					&gt;
+						26 Jul 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/nicfel'
+					&gt;
+						nicfel
+					&lt;/a&gt;
+					: dummy commit
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Fri, 26 Jul 2019 15:35:31 +0200</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Divergence Time Estimation using BEAST v2.x</title>
+				<description>
+					Dating Species Divergences with the Fossilized Birth-Death Process
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Tracy A. Heath
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/227c734549d69ca0e1be0097a6b1f8f32247c923'
+					&gt;
+						17 Jul 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/rachelwarnock'
+					&gt;
+						rachelwarnock
+					&lt;/a&gt;
+					: Merge pull request #2 from bjoelle/master
+
+Updated tutorial for TtB Canada
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Wed, 17 Jul 2019 16:48:07 +0200</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -107,47 +189,6 @@ Renamed output directory.
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/MEP-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/MEP-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Bayesian Skyline with coupled MCMC Tutorial</title>
-				<description>
-					Setting up Bayesian Skyline with coupled MCMC
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/f91378358131d45090f1f1aa9b6816ef23c7da61'
-					&gt;
-						25 Mar 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/nicfel'
-					&gt;
-						nicfel
-					&lt;/a&gt;
-					: fixes error in citations
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Mon, 25 Mar 2019 15:55:46 +0100</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -765,47 +806,6 @@ Updated Version numbers to Beast 2.5.x
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
-			</item>
-				
-			<item>
-				<title>Divergence Time Estimation using BEAST v2.x</title>
-				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tracy A. Heath
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/08f971231f3b1ba7802f6abe6b7685466a2f9b48'
-					&gt;
-						11 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/rachelwarnock'
-					&gt;
-						rachelwarnock
-					&lt;/a&gt;
-					: increasing thinning value to avoid memory issues with FullToExtantConverter
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.4
-					
-				</description>
-				<pubDate>Mon, 11 Jun 2018 15:10:34 +0200</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>

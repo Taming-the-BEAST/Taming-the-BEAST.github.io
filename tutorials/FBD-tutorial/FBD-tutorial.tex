@@ -44,6 +44,8 @@ Central among the questions explored in biology are those that seek to understan
 
 This tutorial will provide a general overview of divergence time estimation and fossil calibration using a stochastic branching process and relaxed-clock model in a Bayesian framework. The exercise will guide you through the steps necessary for estimating phylogenetic relationships and dating species divergences using the program BEAST v2.$*$.
 
+For help with this tutorial or other questions about the FBD process in BEAST v2.$*$, please contact the BEAST2 users group \url{http://groups.google.com/group/beast-users}.
+
 \bigskip
 \section{Background}
 
@@ -304,9 +306,10 @@ Add-ons include \href{http://www.beast2.org/wiki/index.php/SNAPP}{SNAPP} (phylog
 It is important to note, however, that the set of analyses and models available in the BEAST 2 package do not completely overlap with the set of analyses with BEAST 1 (though this should not be the case in the near future).
 I strongly encourage you to learn more about BEAST and the BEAST v2 software by reading the book provided online by the developers: \href{http://www.beast2.org/book.html}{\textit{Bayesian Evolutionary Analysis with BEAST 2}}  \citep{BEAST2book2014}.
 
-\descriptionhead{BEAUti -- Bayesian Evolutionary Analysis Utility}
+BEAST and BEAST2 use input files written in XML. The eXtensible Markup Language (XML) is a general-purpose markup language, which allows for the combination of text and additional information. The use of the XML makes analysis specification very flexible and readable by both the program and people. The XML file specifies sequences, node calibrations, models, priors, output file names, etc. BEAUti is a useful tool for creating an XML file for many BEAST analyses. However, typically, dataset-specific issues can arise and some understanding of the BEAST-specific XML format is essential for troubleshooting. Additionally, there are a number of interesting models and analyses available in BEAST that cannot be specified using the BEAUti utility program. Refer to the BEAST web page (\href{http://beast.bio.ed.ac.uk/XML_format}{http://beast.bio.ed.ac.uk/XML\_format}) for detailed information about the BEAST XML format. 
 
-BEAUti is a utility program with a graphical user interface for creating BEAST and *BEAST input files which must be written in the eXtensible Markup Language (XML). This application provides a clear way to specify priors, partition data, calibrate internal nodes, etc.
+\dhead{BEAUti -- Bayesian Evolutionary Analysis Utility}
+BEAUti is a utility program with a graphical user interface for creating BEAST and *BEAST input files which must be written in the XML. This application provides a clear way to specify priors, partition data, calibrate internal nodes, etc.
 
 \dhead{LogCombiner} 
 When multiple (identical) analyses are run using BEAST (or MrBayes), LogCombiner can be used to combine the parameter log files or tree files into a single file that can then be summarized using Tracer (log files) or TreeAnnotator (tree files). However, it is important to ensure that all analyses reached convergence and sampled the same stationary distribution before combining the parameter files.
@@ -320,38 +323,6 @@ Tracer is used for assessing and summarizing the posterior estimates of the vari
 \dhead{FigTree} 
 FigTree is an excellent program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities) in a visually appealing way (\href{http://tree.bio.ed.ac.uk/software/figtree}{\small http://tree.bio.ed.ac.uk/software/figtree}). 
 
-
-\bigskip
-\section{The eXtensible Markup Language}
-
-The eXtensible Markup Language (XML) is a general-purpose markup language, which allows for the combination of text and additional information. In BEAST, the use of the XML makes analysis specification very flexible and readable by both the program and people. The XML file specifies sequences, node calibrations, models, priors, output file names, etc. BEAUti is a useful tool for creating an XML file for many BEAST analyses. However, typically, dataset-specific issues can arise and some understanding of the BEAST-specific XML format is essential for troubleshooting. Additionally, there are a number of interesting models and analyses available in BEAST that cannot be specified using the BEAUti utility program. Refer to the BEAST web page (\href{http://beast.bio.ed.ac.uk/XML_format}{http://beast.bio.ed.ac.uk/XML\_format}) for detailed information about the BEAST XML format. Box 1 shows an example of BEAST XML syntax for specifying a birth-death prior on node times. 
-
-%{\tt \scriptsize{\begin{framed} \begin{tabbing}
-%\textless !-- A prior on the distribution node heights defined given \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ --\textgreater\\
-%\textless !-- a Birth-Death speciation process (Gernhard 2008). \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ --\textgreater\\
-%\textless bir\=thDeathModel id="birthDeath" units="substitutions"\textgreater\\
-%\> \textless bir\=thMinusDeathRate\textgreater\\
-%\> \> \textless parameter id="birthDeath.meanGrowthRate" value="1.0" lower="0.0" upper="Infinity"/\textgreater\\
-%\> \textless /birthMinusDeathRate\textgreater\\
-%\> \textless relativeDeathRate\textgreater\\
-%\> \> \textless parameter id="birthDeath.relativeDeathRate" value="0.5" lower="0.0" upper="Infinity"/\textgreater\\
-%\> \textless /relativeDeathRate\textgreater\\
-%\textless /birthDeathModel\textgreater
-%\end{tabbing}\end{framed}}}
-
-\begin{center}
-{\tt \scriptsize{\begin{minipage}{6.5in}
-\begin{lstlisting}[language=XML]
-<!- An exponential prior distribution on the gamma shape parameter of the irbp gene   ->
-<prior id="GammaShapePrior.s:irbp" name="distribution" x="@gammaShape.s:irbp">
-    <Exponential id="Exponential.01" name="distr">
-        <parameter id="RealParameter.01" lower="0.0" name="mean" upper="0.0">1.0</parameter>
-    </Exponential>
-</prior>
-\end{lstlisting}
-\end{minipage}}}\\\vspace{4mm}
-Box 1: BEAST 2 XML specification of an exponential prior density on the shape of a gamma distribution.\\
-\end{center}
 
 \newpage
 \section{Practical: Divergence Time Estimation}
@@ -411,11 +382,11 @@ The NEXUS files contain the names of 14 fossil species, that we will include in 
 Further, we must provide an occurrence time for each taxon sampled from the fossil record.
 For the fossil species, this information is obtained from the literature or fossil databases like the \href{http://fossilworks.org/}{Fossilworks PaleoDB} or the \href{http://fossilcalibrations.org/}{Fossil Calibration Database}, or from your own paleontological expertise. 
 The 14 fossil species used in this analysis are listed in Table \ref{bearFossilTable} along with the age range for the specimen and relevant citation.
-For this exercise, we will fix the ages to a value within the age range provided in Table \ref{bearFossilTable}. 
-In BEAST2, it is possible to use MCMC to sample the occurrence time for a fossil conditional on a prior distribution. 
-However, the options to do this are not currently available in BEAUti, and will not be covered by this tutorial.
-The age of each taxon is encoded in the taxon name following the last `\cl{\_}' character. 
-For example, the fossil panda \textit{Kretzoiarctos beatrix} has an age of approximately 11.7 Mya, thus, the taxon name in the alignment files is: \cl{Kretzoiarctos\_beatrix\_11.7}.
+%For this exercise, we will fix the ages to a value within the age range provided in Table \ref{bearFossilTable}. 
+
+In BEAST2, it is possible to use MCMC to sample the occurrence time for a fossil conditional on a prior distribution. \citet{baridosottani2019} found that sampling the fossil ages led to better estimates of divergence times than fixing them, thus in this tutorial we will sample the fossil ages.
+However, we still need an initial value for the age of each fossil, and we also need to fix the extant species to the present. For this purpose we will use the values that are encoded in the taxon name following the last `\cl{\_}' character. 
+For example, the fossil panda \textit{Kretzoiarctos beatrix} has an age between  11.2 Mya and 11.8 Mya, so we will set its initial age to 11.7 Mya. Thus the taxon name in the alignment files is: \cl{Kretzoiarctos\_beatrix\_11.7}.
 Similarly, since the polar bear, \textit{Ursus maritimus}, represents an extant species, its occurrence time is 0.0 Mya, which makes its taxon name: \cl{Ursus\_maritimus\_0}.
 By including the tip ages in the taxon names, we can easily import these values into BEAUti while setting up the XML file. 
 This is simply easier than entering them in by hand (which is also possible).
@@ -1022,6 +993,81 @@ Back in the \mi{Priors} window, check the box labeled \mi{monophyletic} for node
 
 At this point, there should be five, monophyletic taxon sets listed in the \mi{Priors} window. 
 
+\bigskip
+\subsubsection{Sampling the fossil ages}
+
+In order to sample the age of fossil specimens, we need to specify a prior distribution for these ages. The age ranges for our fossil samples are shown in Table \ref{bearFossilTable2}. Since we have no prior knowledge on where the true age of the specimen lies in the range, we will use a uniform distribution as prior for each fossil. 
+
+\begin{table}[tbh!]
+\centering
+\caption{Fossil species used for calibrating divergence times under the FBD model. Modified from Table S.3 in the supplemental appendix of \citet{heath2013fossilized}.}\label{bearFossilTable2}
+{\small
+\begin{tabular}{@{\extracolsep{\fill}}l  c c c r}
+\hline
+\multicolumn{1}{@{}l}{\textbf{Fossil species}}  & &\multicolumn{1}{c}{\textbf{Age range (My)}}  & &\multicolumn{1}{r}{\textbf{Citation}} \\ 
+\hline
+\hspace{2mm} \textit{Parictis montanus} & & 33.9--37.2 & & \cite{clark1972,krause2008}\\
+\hspace{2mm} \textit{Zaragocyon daamsi} & & 20--22.8  & & \cite{ginsburg1995,abella12}\\
+\hspace{2mm} \textit{Ballusia elmensis} & & 13.7--16 & & \cite{ginsburg1998,abella12}\\
+\hspace{2mm} \textit{Ursavus primaevus} & & 13.65--15.97 & & \cite{andrews1977,abella12}\\
+\hspace{2mm} \textit{Ursavus brevihinus} & & 15.97--16.9  & & \cite{heizmann1980,abella12}\\
+\hspace{2mm} \textit{Indarctos vireti} & & 7.75--8.7  & & \cite{montoya2001,abella12}\\
+\hspace{2mm} \textit{Indarctos arctoides} & & 8.7--9.7 & & \cite{geraads2005,abella12}\\
+\hspace{2mm} \textit{Indarctos punjabiensis} & & 4.9--9.7 & & \cite{baryshnikov2002,abella12}\\
+\hspace{2mm} \textit{Ailurarctos lufengensis} & & 5.8--8.2 & & \cite{jin2007,abella12}\\
+\hspace{2mm} \textit{Agriarctos spp.} & & 4.9--7.75 && \cite{abella2011,abella12}\\
+\hspace{2mm} \textit{Kretzoiarctos beatrix} & & 11.2--11.8 & & \cite{abella2011,abella12}\\
+\hspace{2mm} \textit{Arctodus simus} & & 0.012--2.588 & & \cite{churcher1993,krause2008}\\
+\hspace{2mm} \textit{Ursus abstrusus} & & 1.8--5.3 & & \cite{bjork1970,krause2008}\\
+\hspace{2mm} \textit{Ursus spelaeus} & & 0.027--0.25 & & \cite{loreille2001,krause2008}\\
+\hline
+\end{tabular}}
+\end{table}
+
+To add a prior on the age of a tip, we first need to define a taxon set containing only this tip. 
+
+\begin{framed}
+Create a new taxon set for tip \textit{Agriarctos spp.} by clicking the \fbox{\textbf{+}} and selecting \mi{MRCA prior} in the pop-up option box.
+
+Label the taxon set \cl{Agriarctos\_spp}.
+
+Move the taxon \cl{Agriarctos\_spp\_5.0} to the right-hand side column, click \mi{OK} [Figure \ref{screentaxsettip}].
+\end{framed}
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[width=5in]{figures/ts_tip.png}}
+\caption{\small The \mi{Taxon set editor} used to create the clade containing the \textit{Agriarctos spp.} fossil.}
+\label{screentaxsettip}
+\end{figure}
+
+We then need to specify the prior distribution for that tip.
+
+\begin{framed}
+Back in the \mi{Priors} window, reveal the options for the prior on the age of \mi{Agriarctos\_spp} by clicking on the $\blacktriangleright$.
+
+Change the prior distribution to \mi{Uniform}, with a \mi{Lower} value equal to \cl{4.9} and an \mi{Upper} value equal to \cl{7.75}.
+
+Check the box labeled \mi{Tipsonly}. [Figure \ref{priorTipAge}]
+\end{framed}
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[width=6.5in]{figures/prior_tip.png}}
+\caption{\small The \mi{Priors} window showing the prior set on the age of the \textit{Agriarctos spp.} fossil.}
+\label{priorTipAge}
+\end{figure}
+
+This procedure needs to be repeated for each of the 14 fossils in our dataset [Figure \ref{priorsAllTips}]. 
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[width=6.5in]{figures/priors_all_tips.png}}
+\caption{\small The \mi{Priors} window showing the prior set on the ages of all fossils.}
+\label{priorsAllTips}
+\end{figure}
+
+Unfortunately, sampling fossil ages cannot be set up purely in BEAUti at the moment. The last step of the procedure will be performed after we save the XML files.
 
 \bigskip
 \subsubsection{Other BEAUti Options}
@@ -1095,10 +1141,15 @@ Save these changes by going to \mi{File\textrightarrow Save As} and name the fil
 
 BEAUti is a great tool for generating a properly-formatted XML file for many types of BEAST analyses. However, you may encounter errors that require modifying elements in your input file and if you wish to make small to moderate changes to your analysis, altering the input file is far less tedious than generating a new one using BEAUti. Furthermore, BEAST is a rich program and all of the types of analyses, models, and parameters available in the core cannot be specified using BEAUti. Thus, some understanding of the BEAST XML format is essential.
 
-\begin{framed}Open the \cl{bearsDivtime\_FBD.xml} file generated by BEAUti in your text editor and glance over the contents. BEAUti provides many comments describing each of the elements in the file. 
+For instance, as mentioned in the section \cl{Sampling the fossil ages}, sampling the fossil ages cannot be specified entirely through BEAUti. By default, BEAUti will create \mi{TipDatesRandomWalker} operators, which are not compatible with trees containing sampled ancestors. These operators need to be changed to \mi{SampledNodeDateRandomWalker} operators, which are compatible with SA.
+
+\begin{framed}
+Open the \cl{bearsDivtime\_FBD.xml} and  \cl{bearsDivtime\_FBD.prior.xml} files generated by BEAUti in your text editor and glance over the contents. BEAUti provides many comments describing each of the elements in the file. 
+
+Change all instances of \mi{TipDatesRandomWalker} to \mi{SampledNodeDateRandomWalker} in both files.
 \end{framed}
 
-As you look over the contents of this file, you will notice that the components are specified in an order similar to the steps you took in BEAUti. The XML syntax is very verbose. This feature makes it fairly easy to understand the different elements of the BEAST input file. If you wished to alter your analysis or realized that you misspecified a prior parameter, changing the XML file is far simpler than going through all of the steps in BEAUti again. For example, if you wanted to change the mean of the exponential prior distribution on the mean clock rate (\cl{ucldMean.c}), this can be done easily by altering this value in the XML file (Box 4), though leave this at \cl{10.0} for this exercise. 
+As you look over the contents of these files, you will notice that the components are specified in an order similar to the steps you took in BEAUti. The XML syntax is very verbose. This feature makes it fairly easy to understand the different elements of the BEAST input file. If you wished to alter your analysis or realized that you misspecified a prior parameter, changing the XML file is far simpler than going through all of the steps in BEAUti again. For example, if you wanted to change the mean of the exponential prior distribution on the mean clock rate (\cl{ucldMean.c}), this can be done easily by altering this value in the XML file (Box 4), though leave this at \cl{10.0} for this exercise. 
 \begin{center}
 {\tt \scriptsize{\begin{minipage}{6.5in}
 \begin{lstlisting}[language=XML]
@@ -1111,6 +1162,7 @@ As you look over the contents of this file, you will notice that the components 
 \end{minipage}}}\\\vspace{4mm}
 Box 1: BEAST 2 XML syntax for specifying an exponential prior distribution on the mean clock rate. Changing the expected value of this prior is simply done by altering the XML file.\\
 \end{center}
+
 
 Although running multiple, independent analyses is an important part of any Bayesian analysis, BEAST does not do this by default. However, setting this up is trivial once you have a complete XML file in hand and only requires that you make a copy of the input file and alter the names of the output files in the XML (it's also best to change the initial states for all of your parameters, including the starting tree).
 \begin{framed}
@@ -1228,16 +1280,16 @@ Continue examining the options in Tracer. This program is very, \textit{very} us
 
 After reviewing the trace files from the two independent runs in Tracer and verifying that both runs converged on the posterior distributions and reached stationarity, we can combine the sampled trees into a single tree file and summarize the results.
 \begin{framed}
-Open the program LogCombiner and set the \mi{File type} to \mi{Tree Files}. Next, import the two tree files in the \cl{output} directory (\cl{bearsDivtime\_FBD.1.trees} and \cl{bearsDivtime\_FBD.2.trees}) using the \fbox{\textbf{+}} button. 
+Open the program LogCombiner and set the \mi{File type} to \mi{Tree Files}. Next, import the two tree files in the \cl{output} directory (\cl{bearsTree.1.trees} and \cl{bearsTree.2.trees}) using the \fbox{\textbf{+}} button. 
 
 Set a burn-in percentage of 20 for each file, thus discarding the first 20\% of the samples in each tree file. 
 
 Both of these files have 50,000 trees, so it is helpful to thin the tree samples and summarize fewer states (to avoid hitting the maximum memory allotted for this program). Turn on \mi{Resample states at lower frequency} and set this value to 10000.
 
-Click on the \mi{Choose file ...} button to create an output file and run the program. Name the file: \cl{bearsDivtime.combined.trees}.
+Click on the \mi{Choose file ...} button to create an output file and run the program. Name the file: \cl{bearsTree.combined.trees}.
 \end{framed}
 
-Once LogCombiner has terminated, you will have a file containing 40,000 trees which can be summarized using TreeAnnotator. 
+Once LogCombiner has terminated, you will have a file containing 8,000 trees which can be summarized using TreeAnnotator. 
 TreeAnnotator takes a collection of trees and summarizes them by identifying the topology with the best support, calculating clade posterior probabilities, and calculating 95\% credible intervals for node-specific parameters. All of the node statistics are annotated on the tree topology for each node in the Newick string. 
 
 \begin{framed}
@@ -1251,7 +1303,7 @@ The \mi{Posterior probability limit} option applies to summaries on a target tre
 \begin{framed}
 Choose \mi{Median heights} or \mi{Mean heights} for \mi{Node heights} which will set the node heights of the output tree to equal the median or mean height for each node in the sample of trees.
 
-Choose \cl{bearsDivtime.combined.trees} as your \mi{Input Tree File}. Then name the \mi{Output File:} \cl{bearsDivtime\_FBD.summary.tre} and click \mi{Run}. 
+Choose \cl{bearsTree.combined.trees} as your \mi{Input Tree File}. Then name the \mi{Output File:} \cl{bearsTree.summary.tre} and click \mi{Run}. 
 \end{framed}
 
 \bigskip
@@ -1259,12 +1311,12 @@ Choose \cl{bearsDivtime.combined.trees} as your \mi{Input Tree File}. Then name 
 
 The tree file produced by TreeAnnotator contains the maximum clade credibility tree and is annotated with summaries of the various parameters.
 \begin{framed}
-Open \cl{bearsDivtime\_FBD.summary.tre} in your text editor. The tree is written in NEXUS format. Look at the tree string and notice the annotation. Each node in the tree is labeled with comments using the \cl{[\&parameter\_name=\textless value\textgreater ]} format.
+Open \cl{bearsTree.summary.tre} in your text editor. The tree is written in NEXUS format. Look at the tree string and notice the annotation. Each node in the tree is labeled with comments using the \cl{[\&parameter\_name=\textless value\textgreater ]} format.
 \end{framed}
 
 The summary tree and it's annotations can be visualized in the program FigTree.
 \begin{framed}
-Execute FigTree and open the file \cl{bearsDivtime\_FBD.summary.tre}.
+Execute FigTree and open the file \cl{bearsTree.summary.tre}.
 
 Explore the options for viewing different summary statistics on the tree.
 \end{framed}
@@ -1277,8 +1329,8 @@ The web-based tree viewer \href{http://icytree.org/}{IcyTree} \citep{Vaughan2017
 
 \begin{figure}[h!]
 \centering
-\fbox{\includegraphics[width=\textwidth]{figures/bearsDivtime_icytree.pdf}}
-\caption{\small A sampled-ancestor tree exported from \href{http://tgvaughan.github.io/icytree/icytree.html}{IcyTree}. The sampled-ancestor nodes are revealed by selecting the \mi{Mark singletons} and \mi{Internal node text} set to \mi{Label}. The tree was exported to a SVG file and minor manipulations were conducted in a vector graphics editing program (Inkscape or Adobe Illustrator).}
+\fbox{\includegraphics[width=\textwidth]{figures/bearsTree_icytree.pdf}}
+\caption{\small A sampled-ancestor tree exported from \href{http://tgvaughan.github.io/icytree/icytree.html}{IcyTree}. The sampled-ancestor nodes are revealed by selecting the \mi{Mark singletons} option and setting \mi{Internal node text} to \mi{Label}. The option \mi{Angle node label text} was selected to avoid overlapping labels. The tree was exported to a SVG file and minor manipulations were conducted in a vector graphics editing program (Inkscape or Adobe Illustrator).}
 \label{icyTree}
 \end{figure}
 
@@ -1291,16 +1343,16 @@ However, if we provided morphological character data for these fossils, then man
 Since the fossil taxa were used in this analysis to only inform the fossilized birth-death model, we can prune off all of the fossil lineages and plot the tree with the geological time scale.
 BEAUti has a few accessory applications that are for post-processing files from certain types of analyses. 
 The first one we will use is called \mi{FullToExtantTreeConverter}.
-This program can be used to prune the fossil lineages off of the MCMC sample of trees (in file \cl{bearsDivtime\_FBD.combined.trees}), then use TreeAnnotator to summarize the extant-only trees. 
+This program can be used to prune the fossil lineages off of the MCMC sample of trees (in file \cl{bearsTree.combined.trees}), then use TreeAnnotator to summarize the extant-only trees. 
 
 \begin{framed}
 Open BEAUti and launch the accessory apps in the file menu: \mi{File\textrightarrow Launch Apps}.
 
 This will open a window with a few applications, launch \mi{FullToExtantTreeConverter}.
 
-In the file specification window for \mi{Trees} provide the file called \cl{bearsDivtime\_FBD.combined.trees}.
+In the file specification window for \mi{Trees} provide the file called \cl{bearsTree.combined.trees}.
 
-And give the \mi{Output} file the name \cl{bearsDivtime\_FBD.extant.trees}. %[Figure \ref{fullConverterScreen}]
+And give the \mi{Output} file the name \cl{bearsTree.extant.trees}. %[Figure \ref{fullConverterScreen}]
 
 %\end{framed}
 %
@@ -1312,9 +1364,9 @@ And give the \mi{Output} file the name \cl{bearsDivtime\_FBD.extant.trees}. %[Fi
 %\end{figure}
 %
 %\begin{framed}
-Run TreeAnnotator on the file called \cl{bearsDivtime\_FBD.extant.trees}, selecting the same options as you did for the file with complete trees (see Section \ref{treeannotatorSec}). 
+Run TreeAnnotator on the file called \cl{bearsTree.extant.trees}, selecting the same options as you did for the file with complete trees (see Section \ref{treeannotatorSec}). 
 
-Name the summary tree file \cl{bearsDivtime\_FBD.extant\_summary.tre}
+Name the summary tree file \cl{bearsTree.extant\_summary.tre}
 \end{framed}
 
 When the fossil lineages are removed, much of the information about the history of this group is lost (Figure \ref{figgeoscaleext}). 
@@ -1330,7 +1382,7 @@ The internal nodes of the tree are indicated with circles, where circles mark no
 \bigskip
 \subsubsection{Analysis of Sampled Ancestors}
 
-Another tool that is available in the BEAUti accessory applications, is \mi{SampledAncestorTreeAnalyser}. If you run this app from the \mi{Launch apps} menu in BEAUti on the file with all the MCMC samples of the complete tree (\cl{bearsDivtime\_FBD.combined.trees}), you will get a report that summarizes the clades/nodes in the sampled ancestor tree. 
+Another tool that is available in the BEAUti accessory applications, is \mi{SampledAncestorTreeAnalyser}. If you run this app from the \mi{Launch apps} menu in BEAUti on the file with all the MCMC samples of the complete tree (\cl{bearsTree.combined.trees}), you will get a report that summarizes the clades/nodes in the sampled ancestor tree. 
 In particular, it gives a quantitative representation of ``ancestral-ness'' in the posterior sample of trees. 
 This is represented by listing how often a particular node is ancestral to other nodes.
 The summary is generated and automatically opens in your web browser.
@@ -1372,11 +1424,11 @@ To install \cl{phytools} in \cl{R}, execute the following command:
 \dhead{phyloch} 
 The trees sampled by the MCMC in BEAST contain valuable information about the sampled divergence times and branch rates. 
 Additionally, the summary trees produced by the BEAST accessory program TreeAnnotator have information about the 95\% credible intervals for the ages and rates. The package \cl{phyloch} provides functions for reading in data files written by BEAST and its accessory programs \citep{heibl2008phyloch}. 
-This package, however, is not available for download from CRAN. Instead, it is hosted on the developer's \href{http://www.christophheibl.de/Rpackages.html}{website}. 
-To install the \cl{phyloch} package in \cl{R}, first load the \cl{devtools} package and install \cl{phyloch} directly from the URL:
+This package, however, is not available for download from CRAN. Instead, it is hosted on the developer's \href{http://www.christophheibl.de/Rpackages.html}{website} and on \href{https://github.com/fmichonneau/phyloch/}{Github}. 
+To install the \cl{phyloch} package in \cl{R}, use the \cl{remotes} package to install \cl{phyloch} directly from the repository:
 \begin{lstlisting}[language=R]
-> library("devtools")
-> install_url("http://www.christophheibl.de/phyloch_1.5-5.tgz")
+> install.packages("remotes")
+> remotes::install_github("fmichonneau/phyloch")
 \end{lstlisting}
 
 
@@ -1392,7 +1444,7 @@ Begin by opening an \cl{R} instance and load the \cl{strap} package.
 
 Now we can read in the tree using the \cl{ape} function \cl{read.nexus()} (note that you might have to type in the whole file path to your tree).
 \begin{lstlisting}[language=R]
-> tree <- read.nexus("bearsDivtime.summary.tre")
+> tree <- read.nexus("bearsTree.summary.tre")
 \end{lstlisting}
 
 In order to use the \cl{geoscalePhylo()} function of \cl{strap}, we have to set a value for the variable \cl{tree\$root.time}, which is the age of the root. We can compute this from the tree using the \cl{dist.nodes()} function from \cl{ape}:
@@ -1421,6 +1473,119 @@ This tree is shown in Figure \ref{figgeoscale} and the \cl{R} syntax for produci
 \end{figure}
 
 %%%%%
+
+\bigskip
+\section{More with XML -- changing the FBD parameterization}
+
+The FBD process can only be set up in BEAUti using the diversification rate, turnover and sampling proportion as parameters. However, it may be more convenient to use the birth, death and sampling rates as parameters, in particular for epidemiological datasets. This section will show how to edit the XML file generated with BEAUti to use this alternate parameterization.
+
+The first step is to locate the part of the XML which defines the parameters of the FBD process, shown in Box 1. These parameters define the diversification rate, turnover and sampling proportion, which we will change respectively to birth rate, death rate and sampling rate.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<parameter id="diversificationRateFBD.t:bearsTree" lower="0.0" name="stateNode">1.0</parameter>
+<parameter id="turnoverFBD.t:bearsTree" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+ <parameter id="samplingProportionFBD.t:bearsTree" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 1: BEAST 2 XML specification of the FBD parameters (old).\\
+\end{center}
+
+Note that changing the names of the actual parameters (e.g "diversificationRateFBD.t:bearsTree" to "birthRateFBD.t:bearsTree") is not required, however keeping them risks making the file confusing. Thus in this example we will change them. The names need to be changed wherever they appear throughout the file.
+The second thing to change in this section are the upper bounds on the parameters. Both the turnover and sampling proportion are limited to $\leq 1$, but this restriction does not apply to the death rate and sampling rate and needs to be removed.
+The new text in this part of the XML should look like Box 2.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<parameter id="birthRateFBD.t:bearsTree" lower="0.0" name="stateNode">1.0</parameter>
+<parameter id="deathRateFBD.t:bearsTree" lower="0.0" name="stateNode">0.5</parameter>
+ <parameter id="samplingRateFBD.t:bearsTree" lower="0.0" name="stateNode">0.5</parameter>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 2: BEAST 2 XML specification of the FBD parameters. (new)\\
+\end{center}
+
+The second step is to locate the part of the XML which defines the FBD process itself, shown in Box 3. 
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<distribution id="FBD.t:bearsTree" spec="beast.evolution.speciation.SABirthDeathModel" conditionOnRhoSampling="true" diversificationRate="@birthRateFBD.t:bearsTree" origin="@originFBD.t:bearsTree" samplingProportion="@samplingRateFBD.t:bearsTree" tree="@Tree.t:bearsTree" turnover="@deathRateFBD.t:bearsTree">
+		<parameter id="rFBD.t:bearsTree" lower="0.0" name="removalProbability" upper="1.0">0.0</parameter>
+		<parameter id="rhoFBD.t:bearsTree" estimate="false" lower="0.0" name="rho" upper="1.0">1.0</parameter>
+</distribution>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 3: BEAST 2 XML specification of the FBD process (old).\\
+\end{center}
+
+The names of the parameters have already been changed in the previous step, so the only thing left to change is how they are used by the FBD process. The new text should look like Box 4.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<distribution id="FBD.t:bearsTree" spec="beast.evolution.speciation.SABirthDeathModel" conditionOnRhoSampling="true" birthRate="@birthRateFBD.t:bearsTree" origin="@originFBD.t:bearsTree" samplingRate="@samplingRateFBD.t:bearsTree" tree="@Tree.t:bearsTree" deathRate="@deathRateFBD.t:bearsTree">
+		<parameter id="rFBD.t:bearsTree" lower="0.0" name="removalProbability" upper="1.0">0.0</parameter>
+		<parameter id="rhoFBD.t:bearsTree" estimate="false" lower="0.0" name="rho" upper="1.0">1.0</parameter>
+</distribution>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 4: BEAST 2 XML specification of the FBD process (new).\\
+\end{center}
+
+Finally, the last step is to check (and possibly change) the priors associated with the parameters, shown in Box 5.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<prior id="diversificationRatePriorFBD.t:bearsTree" name="distribution" x="@birthRateFBD.t:bearsTree">
+	<Exponential id="Exponential.0" name="distr">
+		<parameter id="RealParameter.0" estimate="false" name="mean">1.0</parameter>
+	</Exponential>
+</prior>
+<prior id="turnoverPriorFBD.t:bearsTree" name="distribution" x="@deathRateFBD.t:bearsTree">
+	<Uniform id="Uniform.0" name="distr"/>
+</prior>
+<prior id="samplingProportionPriorFBD.t:bearsTree" name="distribution" x="@samplingRateFBD.t:bearsTree">
+	<Beta id="Beta.0" name="distr">
+		<parameter id="RealParameter.016" estimate="false" name="alpha">2.0</parameter>
+		<parameter id="RealParameter.017" estimate="false" name="beta">2.0</parameter>
+	</Beta>
+</prior>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 5: BEAST 2 XML specification of the priors for the FBD parameters (old).\\
+\end{center}
+
+Similarly to the parameter names, the names of the prior distributions do not need to be modified, but we will change them to stay consistent with the rest of the configuration. We can leave the birth rate prior as it is, however the uniform and beta distributions are not good priors for the death rate and the sampling rate, so we will change them to exponential distributions. The new prior distributions will look like Box 6.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<prior id="birthRatePriorFBD.t:bearsTree" name="distribution" x="@birthRateFBD.t:bearsTree">
+	<Exponential id="Exponential.0" name="distr">
+		<parameter id="RealParameter.0" estimate="false" name="mean">1.0</parameter>
+	</Exponential>
+</prior>
+<prior id="deathRatePriorFBD.t:bearsTree" name="distribution" x="@deathRateFBD.t:bearsTree">
+	<Exponential id="deathExp" name="distr">
+		<parameter id="deathExpMean" estimate="false" name="mean">1.0</parameter>
+	</Exponential>
+</prior>
+<prior id="samplingRatePriorFBD.t:bearsTree" name="distribution" x="@samplingRateFBD.t:bearsTree">
+	<Exponential id="samplExp" name="distr">
+		<parameter id="samplExpMean" estimate="false" name="mean">0.5</parameter>
+	</Exponential>
+</prior>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 6: BEAST 2 XML specification of the priors for the FBD parameters (new).\\
+\end{center}
+
+Note that we have changed the priors to Exponential(1.0) for the death rate and Exponential(0.5) for the sampling rate.
+
 \bigskip
 \section{Useful Links}
 

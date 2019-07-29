@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
+This is BibTeX, Version 0.99d (TeX Live 2019)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Skyline-plots.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Skyline-plots-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.3
+Biblatex version: 3.11
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 11 entries,
-            6256 wiz_defined-function locations,
-            1397 strings with 22693 characters,
-and the built_in function-call counts, 158553 in all, are:
-= -- 13584
-> -- 1925
+            6304 wiz_defined-function locations,
+            1407 strings with 22902 characters,
+and the built_in function-call counts, 189749 in all, are:
+= -- 16836
+> -- 1931
 < -- 458
-+ -- 5400
-- -- 885
-* -- 12490
-:= -- 19547
++ -- 5844
+- -- 887
+* -- 14929
+:= -- 24590
 add.period$ -- 0
 call.type$ -- 11
 change.case$ -- 326
-chr.to.int$ -- 38
+chr.to.int$ -- 42
 cite$ -- 20
-duplicate$ -- 17064
-empty$ -- 12924
+duplicate$ -- 18864
+empty$ -- 15725
 format.name$ -- 1599
-if$ -- 30143
+if$ -- 36189
 int.to.chr$ -- 0
 int.to.str$ -- 29
 missing$ -- 0
-newline$ -- 1009
+newline$ -- 1019
 num.names$ -- 646
-pop$ -- 4428
+pop$ -- 4861
 preamble$ -- 1
 purify$ -- 548
 quote$ -- 0
-skip$ -- 2619
+skip$ -- 2581
 stack$ -- 0
-substring$ -- 25388
-swap$ -- 3275
-text.length$ -- 358
+substring$ -- 33383
+swap$ -- 3335
+text.length$ -- 360
 text.prefix$ -- 14
 top$ -- 1
 type$ -- 362
 warning$ -- 0
-while$ -- 2462
+while$ -- 3349
 width$ -- 0
-write$ -- 999
+write$ -- 1009
