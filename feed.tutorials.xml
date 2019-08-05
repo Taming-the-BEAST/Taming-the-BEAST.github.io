@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>Estimating Reassortment Networks with CoalRe</title>
+				<description>
+					Estimating Reassortment Networks with CoalRe
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/nicfel/Reassortment-Tutorial/commit/29ebe00d8c1651396f5e512b2cbfd0a4f87565a1'
+					&gt;
+						5 Aug 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Fixed bibliography database link.
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Mon, 05 Aug 2019 15:21:06 +0200</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/Reassortment-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Reassortment-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Language Phylogenies</title>
 				<description>
 					Using Babel to analyse linguistic data
