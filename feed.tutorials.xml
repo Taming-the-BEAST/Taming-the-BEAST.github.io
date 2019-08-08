@@ -12,6 +12,149 @@
 		</image>
 				
 			<item>
+				<title>Prior selection</title>
+				<description>
+					Prior selection and clock calibration using Influenza A data.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+					
+						
+								, Venelin Mitov
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/c08455ef1d0ba15153fed779a065b1424e4142f4'
+					&gt;
+						8 Aug 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Update BEAST2 reference and add info on downloading data
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Thu, 08 Aug 2019 14:57:01 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
+			</item>
+				
+			<item>
+				<title>Skyline plots</title>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/b055e1c9c84887d239f95813280a62f4b4b4e19e'
+					&gt;
+						8 Aug 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Fix BDSKY Serial parameterisation
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.x
+					
+				</description>
+				<pubDate>Thu, 08 Aug 2019 14:48:29 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
+				<title>Introduction to BEAST2</title>
+				<description>
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Jūlija Pečerska
+							
+					
+						
+								, Veronika Bošková
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/4c4f9e4c295da481fe8788c5464165f640953aab'
+					&gt;
+						8 Aug 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Too many parentheses
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Thu, 08 Aug 2019 14:39:39 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
+			</item>
+				
+			<item>
 				<title>Estimating Reassortment Networks with CoalRe</title>
 				<description>
 					Estimating Reassortment Networks with CoalRe
@@ -46,7 +189,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Mon, 05 Aug 2019 15:21:06 +0200</pubDate>
+				<pubDate>Mon, 05 Aug 2019 13:21:06 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Reassortment-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Reassortment-Tutorial/</guid>
@@ -91,7 +234,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Mon, 29 Jul 2019 10:20:13 +0200</pubDate>
+				<pubDate>Mon, 29 Jul 2019 08:20:13 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/LanguagePhylogenies/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/LanguagePhylogenies/</guid>
@@ -132,7 +275,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Fri, 26 Jul 2019 15:35:31 +0200</pubDate>
+				<pubDate>Fri, 26 Jul 2019 13:35:31 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
@@ -175,7 +318,7 @@ Updated tutorial for TtB Canada
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Wed, 17 Jul 2019 16:48:07 +0200</pubDate>
+				<pubDate>Wed, 17 Jul 2019 14:48:07 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/FBD-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/FBD-tutorial/</guid>
@@ -226,7 +369,7 @@ Renamed output directory.
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Tue, 26 Mar 2019 10:35:35 +0100</pubDate>
+				<pubDate>Tue, 26 Mar 2019 09:35:35 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/MEP-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/MEP-tutorial/</guid>
@@ -267,59 +410,10 @@ Renamed output directory.
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Sun, 24 Mar 2019 23:45:59 +0100</pubDate>
+				<pubDate>Sun, 24 Mar 2019 22:45:59 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/NS-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/NS-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Prior selection</title>
-				<description>
-					Prior selection and clock calibration using Influenza A data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-					
-						
-								, Venelin Mitov
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/7f2be81d71a1645f9b5ea5833408eac191bcb130'
-					&gt;
-						12 Mar 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Updated tutorial for BDSKY 1.4.5.
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Tue, 12 Mar 2019 11:51:27 +0100</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
@@ -361,7 +455,7 @@ Renamed output directory.
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Tue, 12 Mar 2019 09:44:28 +0100</pubDate>
+				<pubDate>Tue, 12 Mar 2019 08:44:28 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://localhost:4000/tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-birth-death-model/</guid>
@@ -386,7 +480,7 @@ Renamed output directory.
 					&lt;a class='off' href=
 						'https://github.com/nicfel/AIM-Tutorial/commit/3a778aab522b9ed6aa1fad7d97c90fea006e41a3'
 					&gt;
-						22 Feb 2019
+						21 Feb 2019
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
@@ -402,7 +496,7 @@ Renamed output directory.
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Fri, 22 Feb 2019 00:24:49 +0100</pubDate>
+				<pubDate>Thu, 21 Feb 2019 23:24:49 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://localhost:4000/tutorials/AIM-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/AIM-Tutorial/</guid>
@@ -444,7 +538,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 21 Feb 2019 23:43:45 +0100</pubDate>
+				<pubDate>Thu, 21 Feb 2019 22:43:45 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/CladeAge-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/CladeAge-Tutorial/</guid>
@@ -485,57 +579,10 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Wed, 20 Feb 2019 23:05:54 +0100</pubDate>
+				<pubDate>Wed, 20 Feb 2019 22:05:54 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Mascot-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Mascot-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Skyline plots</title>
-				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/c3d1fc1f54f9d935aeead8e64192e38ce99fb13b'
-					&gt;
-						17 Feb 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/nicfel'
-					&gt;
-						nicfel
-					&lt;/a&gt;
-					: Update version numbers
-
-Updated Version numbers to Beast 2.5.x
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.x
-					
-				</description>
-				<pubDate>Sun, 17 Feb 2019 21:32:10 +0100</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
@@ -581,7 +628,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Mon, 05 Nov 2018 16:43:08 +0100</pubDate>
+				<pubDate>Mon, 05 Nov 2018 15:43:08 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Molecular-Dating-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Molecular-Dating-Tutorial/</guid>
@@ -622,7 +669,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 21 Jun 2018 23:09:40 +0200</pubDate>
+				<pubDate>Thu, 21 Jun 2018 21:09:40 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Bacter-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Bacter-Tutorial/</guid>
@@ -663,7 +710,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 21 Jun 2018 20:23:40 +0200</pubDate>
+				<pubDate>Thu, 21 Jun 2018 18:23:40 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
@@ -704,7 +751,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Thu, 21 Jun 2018 09:30:17 +0200</pubDate>
+				<pubDate>Thu, 21 Jun 2018 07:30:17 +0000</pubDate>
 				<category>Basic</category>
 				<link>http://localhost:4000/tutorials/species-tree-clocks/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/species-tree-clocks/</guid>
@@ -753,7 +800,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Tue, 19 Jun 2018 15:00:16 +0200</pubDate>
+				<pubDate>Tue, 19 Jun 2018 13:00:16 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
@@ -794,59 +841,10 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.4.1+
 					
 				</description>
-				<pubDate>Mon, 18 Jun 2018 17:55:54 +0200</pubDate>
+				<pubDate>Mon, 18 Jun 2018 15:55:54 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Troubleshooting/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting/</guid>
-			</item>
-				
-			<item>
-				<title>Introduction to BEAST2</title>
-				<description>
-					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Jūlija Pečerska
-							
-					
-						
-								, Veronika Bošková
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/1ccc6fc468d3ff943036b82715fcac3ad5464bf8'
-					&gt;
-						13 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update LaTeX tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Wed, 13 Jun 2018 19:13:28 +0200</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
@@ -888,7 +886,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Mon, 24 Jul 2017 16:10:26 +0200</pubDate>
+				<pubDate>Mon, 24 Jul 2017 14:10:26 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://localhost:4000/tutorials/SCOTTI-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/SCOTTI-Tutorial/</guid>
@@ -933,7 +931,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.4.2
 					
 				</description>
-				<pubDate>Wed, 12 Jul 2017 17:33:51 +0200</pubDate>
+				<pubDate>Wed, 12 Jul 2017 15:33:51 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://localhost:4000/tutorials/Structured-coalescent/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-coalescent/</guid>
@@ -974,7 +972,7 @@ Updated Version numbers to Beast 2.5.x
 						Requires: BEAST v2.4.x
 					
 				</description>
-				<pubDate>Thu, 09 Feb 2017 02:46:12 +0100</pubDate>
+				<pubDate>Thu, 09 Feb 2017 01:46:12 +0000</pubDate>
 				<category>Professional</category>
 				<link>http://localhost:4000/tutorials/adequacy_tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/adequacy_tutorial/</guid>
@@ -999,7 +997,7 @@ Updated Version numbers to Beast 2.5.x
 					&lt;a class='off' href=
 						'https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf'
 					&gt;
-						3 Feb 2017
+						2 Feb 2017
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
@@ -1017,7 +1015,7 @@ Add input data
 						Requires: BEAST v2.4.4
 					
 				</description>
-				<pubDate>Fri, 03 Feb 2017 00:19:14 +0100</pubDate>
+				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/calibrated-species-trees/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/calibrated-species-trees/</guid>
@@ -1074,7 +1072,7 @@ Add input data
 						Requires: BEAST v2.4.x
 					
 				</description>
-				<pubDate>Thu, 02 Feb 2017 22:07:01 +0100</pubDate>
+				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/StarBeast-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/StarBeast-Tutorial/</guid>
