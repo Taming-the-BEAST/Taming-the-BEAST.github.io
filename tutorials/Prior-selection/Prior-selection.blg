@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: Skyline-plots.aux
+The top-level auxiliary file: Prior-selection.aux
 The style file: biblatex.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -16,49 +16,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: Skyline-plots-blx.bib
+Database file #1: Prior-selection-blx.bib
 Database file #2: master-refs.bib
 Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 14 entries,
+You've used 10 entries,
             6256 wiz_defined-function locations,
-            1415 strings with 23712 characters,
-and the built_in function-call counts, 202237 in all, are:
-= -- 17357
-> -- 2410
-< -- 529
-+ -- 6816
-- -- 1108
-* -- 16098
-:= -- 25054
+            1233 strings with 10674 characters,
+and the built_in function-call counts, 89902 in all, are:
+= -- 7277
+> -- 1250
+< -- 321
++ -- 2607
+- -- 485
+* -- 7005
+:= -- 10402
 add.period$ -- 0
-call.type$ -- 14
-change.case$ -- 359
-chr.to.int$ -- 38
-cite$ -- 26
-duplicate$ -- 21545
-empty$ -- 16590
-format.name$ -- 2052
-if$ -- 38452
+call.type$ -- 10
+change.case$ -- 196
+chr.to.int$ -- 30
+cite$ -- 18
+duplicate$ -- 9194
+empty$ -- 7857
+format.name$ -- 920
+if$ -- 17795
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 23
 missing$ -- 0
-newline$ -- 1240
-num.names$ -- 775
-pop$ -- 5741
+newline$ -- 493
+num.names$ -- 480
+pop$ -- 3513
 preamble$ -- 1
-purify$ -- 642
+purify$ -- 302
 quote$ -- 0
-skip$ -- 3194
+skip$ -- 1880
 stack$ -- 0
-substring$ -- 32840
-swap$ -- 4042
-text.length$ -- 456
-text.prefix$ -- 17
+substring$ -- 13642
+swap$ -- 1866
+text.length$ -- 281
+text.prefix$ -- 9
 top$ -- 1
-type$ -- 464
+type$ -- 328
 warning$ -- 0
-while$ -- 3112
+while$ -- 1232
 width$ -- 0
-write$ -- 1227
+write$ -- 484

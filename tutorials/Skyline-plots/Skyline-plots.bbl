@@ -129,6 +129,174 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{Bouckaert2019}{article}{}
+    \name{author}{25}{}{%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=VTG}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Timothy\bibnamedelima G.},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=BSJ}{%
+         family={Barido-Sottani},
+         familyi={B\bibinitperiod-S\bibinitperiod},
+         given={Joëlle},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Duchêne},
+         familyi={D\bibinitperiod},
+         given={Sebastián},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fourment},
+         familyi={F\bibinitperiod},
+         given={Mathieu},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gavryushkina},
+         familyi={G\bibinitperiod},
+         given={Alexandra},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=JG}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={Graham},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kühnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MND}{%
+         family={Maio},
+         familyi={M\bibinitperiod},
+         given={Nicola\bibnamedelima De},
+         giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Matschiner},
+         familyi={M\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MFK}{%
+         family={Mendes},
+         familyi={M\bibinitperiod},
+         given={Fábio\bibnamedelima K.},
+         giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MNF}{%
+         family={Müller},
+         familyi={M\bibinitperiod},
+         given={Nicola\bibnamedelima F.},
+         giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=OHA}{%
+         family={Ogilvie},
+         familyi={O\bibinitperiod},
+         given={Huw\bibnamedelima A.},
+         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=PLd}{%
+         family={Plessis},
+         familyi={P\bibinitperiod},
+         given={Louis\bibnamedelima du},
+         giveni={L\bibinitperiod\bibinitdelim d\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Popinga},
+         familyi={P\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Rasmussen},
+         familyi={R\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Siveroni},
+         familyi={S\bibinitperiod},
+         given={Igor},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZC}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Chi},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Tanja},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR+1}
+  \strng{fullhash}{BRVTGBSJDSFMGAHJJGKDMNDMMMFKMNFOHAPLdPARARDSISMAWCHXDZCSTDAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{4}
+    \field{title}{BEAST 2.5: An advanced software platform for Bayesian
+  evolutionary analysis}
+    \field{volume}{15}
+    \field{journaltitle}{PLOS Computational Biology}
+    \field{year}{2019}
+  \endentry
+
   \entry{Drummond2005}{article}{}
     \name{author}{4}{}{%
       {{hash=DAJ}{%
@@ -984,6 +1152,42 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{Pybus2000}{article}{}
+    \name{author}{3}{}{%
+      {{hash=POG}{%
+         family={Pybus},
+         familyi={P\bibinitperiod},
+         given={Oliver\bibnamedelima G.},
+         giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HPH}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={Paul\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{POG+3}
+    \strng{fullhash}{POGRAHPH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2000}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{3}
+    \field{title}{An {Integrated} {Framework} for the {Inference} of {Viral}
+  {Population} {History} {From} {Reconstructed} {Genealogies}}
+    \field{volume}{155}
+    \field{journaltitle}{Genetics}
+    \field{year}{2000}
+  \endentry
+
   \entry{Ray2000}{article}{}
     \name{author}{5}{}{%
       {{hash=RS}{%
@@ -1046,6 +1250,36 @@
     \field{journaltitle}{The Journal of Infectious Diseases}
     \field{year}{2000}
     \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Rosenberg2002}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RNA}{%
+         family={Rosenberg},
+         familyi={R\bibinitperiod},
+         given={Noah\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Nordborg},
+         familyi={N\bibinitperiod},
+         given={Magnus},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RNANM1}
+    \strng{fullhash}{RNANM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{5}
+    \field{title}{Genealogical trees, coalescent theory and the analysis of
+  genetic polymorphisms}
+    \field{volume}{3}
+    \field{journaltitle}{Nature Reviews Genetics}
+    \field{year}{2002}
   \endentry
 
   \entry{Stadler2013}{article}{}

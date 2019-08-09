@@ -36,7 +36,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/c08455ef1d0ba15153fed779a065b1424e4142f4'
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/db283986de119589ed4f877d1abd95380c1d3d2a'
 					&gt;
 						8 Aug 2019
 					&lt;/a&gt;
@@ -46,7 +46,7 @@
 					&gt;
 						laduplessis
 					&lt;/a&gt;
-					: Update BEAST2 reference and add info on downloading data
+					: Add LaTeX tutorial again (why not, there's no extra cost...)
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -54,55 +54,10 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Thu, 08 Aug 2019 14:57:01 +0000</pubDate>
+				<pubDate>Thu, 08 Aug 2019 16:00:04 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
-				<title>Skyline plots</title>
-				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/b055e1c9c84887d239f95813280a62f4b4b4e19e'
-					&gt;
-						8 Aug 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Fix BDSKY Serial parameterisation
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.x
-					
-				</description>
-				<pubDate>Thu, 08 Aug 2019 14:48:29 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
@@ -130,7 +85,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/4c4f9e4c295da481fe8788c5464165f640953aab'
+						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/816c32c66ee2ff7e18f0cf6bb93f4a657a9cc72e'
 					&gt;
 						8 Aug 2019
 					&lt;/a&gt;
@@ -140,7 +95,7 @@
 					&gt;
 						laduplessis
 					&lt;/a&gt;
-					: Too many parentheses
+					: Update LaTeX tutorial
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -148,10 +103,55 @@
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 08 Aug 2019 14:39:39 +0000</pubDate>
+				<pubDate>Thu, 08 Aug 2019 15:54:23 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
+			</item>
+				
+			<item>
+				<title>Skyline plots</title>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/0b2ca761e474f8fa6c599b4146975b43ad4cb041'
+					&gt;
+						8 Aug 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Update LaTeX tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.x
+					
+				</description>
+				<pubDate>Thu, 08 Aug 2019 15:50:47 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
