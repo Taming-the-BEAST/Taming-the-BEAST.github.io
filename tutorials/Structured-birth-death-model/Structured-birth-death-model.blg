@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
+This is BibTeX, Version 0.99d (TeX Live 2019)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Structured-birth-death-model.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Structured-birth-death-model-blx.bib
 Database file #2: refs.bib
-Biblatex version: 3.3
+Biblatex version: 3.11
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 5 entries,
-            6256 wiz_defined-function locations,
-            1317 strings with 16355 characters,
-and the built_in function-call counts, 38076 in all, are:
-= -- 2965
-> -- 571
+            6304 wiz_defined-function locations,
+            1327 strings with 16564 characters,
+and the built_in function-call counts, 44273 in all, are:
+= -- 3606
+> -- 577
 < -- 154
-+ -- 1054
-- -- 242
-* -- 2966
-:= -- 4321
++ -- 1138
+- -- 244
+* -- 3472
+:= -- 5313
 add.period$ -- 0
 call.type$ -- 5
 change.case$ -- 95
-chr.to.int$ -- 31
+chr.to.int$ -- 35
 cite$ -- 8
-duplicate$ -- 3829
-empty$ -- 3381
+duplicate$ -- 4165
+empty$ -- 3937
 format.name$ -- 375
-if$ -- 7607
+if$ -- 8809
 int.to.chr$ -- 0
 int.to.str$ -- 10
 missing$ -- 0
-newline$ -- 255
+newline$ -- 259
 num.names$ -- 221
-pop$ -- 1528
+pop$ -- 1607
 preamble$ -- 1
 purify$ -- 136
 quote$ -- 0
-skip$ -- 871
+skip$ -- 857
 stack$ -- 0
-substring$ -- 5505
-swap$ -- 876
-text.length$ -- 131
+substring$ -- 7107
+swap$ -- 900
+text.length$ -- 133
 text.prefix$ -- 4
 top$ -- 1
 type$ -- 158
 warning$ -- 0
-while$ -- 524
+while$ -- 691
 width$ -- 0
-write$ -- 251
+write$ -- 255
