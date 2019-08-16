@@ -399,17 +399,17 @@ Edit formatting, references and add LaTeX tutorial</span>
 
 <p><br></p>
 
-<p>Note that sometimes a factor 2 is used for multiplying BFs, so when comparing BFs from different publications, be aware which definition was used.</p>
+<p>Note that sometimes a factor 2 is used for multiplying BFs, so when comparing BFs from different publications, be aware which definition that was used.</p>
 
 <p><strong>Nested sampling</strong> is an algorithm that works as follows:</p>
 
 <ul>
 <li>randomly sample <code>N</code> points from the prior</li>
-<li>while not converged
+<li>while not coverged
 
 <ul>
-<li>pick the point with the lowest likelihood L<sub>min</sub>, and save to log file</li>
-<li>replace the point with a new point randomly sampled from the prior using an MCMC chain of <code>subChainLength</code> samples <strong>under the condition that the likelihood is at least L<sub>min</sub></strong></li>
+<li>pick the point with the lowest likelihood Lmin, and save to log file</li>
+<li>replace the point with a new point randomly sampled from the prior using an MCMC chain of <code>subChainLength</code> samples <strong>under the condition that the likelihood is at least Lmin</strong></li>
 </ul></li>
 </ul>
 
@@ -512,7 +512,7 @@ Which analysis is preferable and why?
 
 <h2>Installing the NS Package</h2>
 
-<p>To use nested sampling, first have to install the NS (version 1.0.4 or above) package.</p>
+<p>To use nested sampling, first have to install the NS (version 1.0.3 or above) package.</p>
 
 <blockquote>
 <p>Open BEAUti and navigate to <strong>File &gt; Manage Packages</strong>. Select NS and then click <strong>Install/Upgrade</strong> (<a href="#fig:install">Fig 4</a>). Then <strong><em>restart BEAUti</em></strong> to load the package.</p>
@@ -527,29 +527,6 @@ Which analysis is preferable and why?
 <p><br></p>
 
 <h2>Setting up the nested sampling analyses</h2>
-
-<p>You can convert an MCMC analysis to an NS analysis using the <code>MCMC2NS</code> tool that comes with the NS package. </p>
-
-<blockquote>
-<ul>
-<li>launch the applauncher via the <code>File &gt; Launch apps</code> menu in BEAUti</li>
-<li>in the dialog that pops up, select the <code>MCMC to NS converter</code> app, and click <code>Launch</code></li>
-<li>select the XML file with strict clock analysis, set <code>HBVStrict-NS.xml</code> as output file in the same directory.</li>
-<li>change settings as in the figure below</li>
-<li>click <code>OK</code>, and the file with the nested sampling analysis will be created</li>
-<li>repeat the process for the relaxed clock analysis</li>
-</ul>
-</blockquote>
-
-<figure>
-    <a name="fig:priors"></a>
-    <img style="width:80.0%;" src="figures/MCMC2NS.png" alt="">
-    <figcaption>Figure 4: converting an MCMC analysis to an NS analysis using the applauncher</figcaption>
-</figure>
-
-<p><br></p>
-
-<p>Alternatively, you can do this in a text editor as follows:</p>
 
 <blockquote>
 <ul>
@@ -715,8 +692,9 @@ to
 <h2>The output is written on screen, which I forgot to save. Can I estimate them directly from the log files?</h2>
 
 <p>The NS package has a <code>NSLogAnalyser</code> application that you can run via the menu <code>File/Launch apps</code> in BEAUti -- a window pops up where you select the <code>NSLogAnalyser</code>, and a dialog shows you various options to fill in. You can also run it from the command line on OS X or Linux using</p>
-<div class="highlight"><pre><code class="language-" data-lang="">/path/to/beast/bin/applauncher NSLogAnalyser -N 1 -log  xyz.log
-</code></pre></div>
+
+<p><code>/path/to/beast/bin/applauncher NSLogAnalyser -N 1 -log  xyz.log</code></p>
+
 <p>where the argument after <code>N</code> is the <code>particleCount</code> you specified in the XML, and <code>xyz.log</code> the trace log produced by the NS run.</p>
 
 <h2>Why are some NS runs longer than others?</h2>
@@ -739,6 +717,8 @@ to
 <li>Nested sampling website and documentation: <a href="https://github.com/BEAST2-Dev/nested-sampling">https://github.com/BEAST2-Dev/nested-sampling</a></li>
 <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
 </ul>
+
+<hr>
 
 <h1>Relevant References</h1>
 

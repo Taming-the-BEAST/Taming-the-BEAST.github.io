@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Structured-coalescent.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Structured-coalescent-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.11
+Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 7 entries,
-            6304 wiz_defined-function locations,
-            1356 strings with 20620 characters,
-and the built_in function-call counts, 116889 in all, are:
-= -- 10500
-> -- 1107
+            6256 wiz_defined-function locations,
+            1346 strings with 20411 characters,
+and the built_in function-call counts, 96265 in all, are:
+= -- 8332
+> -- 1101
 < -- 248
-+ -- 3290
-- -- 503
-* -- 9536
-:= -- 15003
++ -- 3040
+- -- 501
+* -- 7821
+:= -- 11820
 add.period$ -- 0
 call.type$ -- 7
 change.case$ -- 168
-chr.to.int$ -- 39
+chr.to.int$ -- 35
 cite$ -- 12
-duplicate$ -- 10611
-empty$ -- 10017
+duplicate$ -- 9603
+empty$ -- 8102
 format.name$ -- 901
-if$ -- 22620
+if$ -- 18536
 int.to.chr$ -- 0
 int.to.str$ -- 16
 missing$ -- 0
-newline$ -- 586
+newline$ -- 580
 num.names$ -- 357
-pop$ -- 2865
+pop$ -- 2622
 preamble$ -- 1
 purify$ -- 291
 quote$ -- 0
-skip$ -- 1466
+skip$ -- 1488
 stack$ -- 0
-substring$ -- 21918
-swap$ -- 1900
-text.length$ -- 214
+substring$ -- 16399
+swap$ -- 1864
+text.length$ -- 212
 text.prefix$ -- 6
 top$ -- 1
 type$ -- 226
 warning$ -- 0
-while$ -- 1900
+while$ -- 1401
 width$ -- 0
-write$ -- 580
+write$ -- 574

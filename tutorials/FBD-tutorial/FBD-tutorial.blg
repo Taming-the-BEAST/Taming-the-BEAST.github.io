@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: FBD-tutorial.aux
 The style file: biblatex.bst
@@ -19,47 +19,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated field_info (elt_size=4) to 15008 items from 5000.
 Database file #1: FBD-tutorial-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.11
+Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 72 entries,
-            6304 wiz_defined-function locations,
-            1696 strings with 22180 characters,
-and the built_in function-call counts, 488849 in all, are:
-= -- 35954
-> -- 7613
+            6256 wiz_defined-function locations,
+            1686 strings with 21971 characters,
+and the built_in function-call counts, 430153 in all, are:
+= -- 29876
+> -- 7607
 < -- 2033
-+ -- 11306
-- -- 2751
-* -- 38148
-:= -- 52992
++ -- 10498
+- -- 2749
+* -- 33184
+:= -- 43667
 add.period$ -- 0
 call.type$ -- 72
 change.case$ -- 1124
-chr.to.int$ -- 34
+chr.to.int$ -- 30
 cite$ -- 142
-duplicate$ -- 50218
-empty$ -- 45827
+duplicate$ -- 46718
+empty$ -- 40625
 format.name$ -- 5041
-if$ -- 99378
+if$ -- 88227
 int.to.chr$ -- 0
 int.to.str$ -- 185
 missing$ -- 0
-newline$ -- 2575
+newline$ -- 2504
 num.names$ -- 3366
-pop$ -- 25591
+pop$ -- 24855
 preamble$ -- 1
 purify$ -- 1543
 quote$ -- 0
-skip$ -- 12001
+skip$ -- 12283
 stack$ -- 0
-substring$ -- 65136
-swap$ -- 11959
-text.length$ -- 1856
+substring$ -- 50119
+swap$ -- 11533
+text.length$ -- 1854
 text.prefix$ -- 84
 top$ -- 1
 type$ -- 2436
 warning$ -- 0
-while$ -- 6978
+while$ -- 5363
 width$ -- 0
-write$ -- 2504
+write$ -- 2433
