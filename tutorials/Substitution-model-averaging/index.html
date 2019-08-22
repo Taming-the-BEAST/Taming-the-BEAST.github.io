@@ -238,8 +238,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/precooked_runs/primate-mtDNA-bMT.trees" target="_blank" download rel="nofollow">
-						primate-mtDNA-bMT.trees
+					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/precooked_runs/primate-mtDNA-bMT.log" target="_blank" download rel="nofollow">
+						primate-mtDNA-bMT.log
 					</a>
 				</li>
 			
@@ -247,8 +247,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/precooked_runs/primate-mtDNA-bMT.log" target="_blank" download rel="nofollow">
-						primate-mtDNA-bMT.log
+					<a class="off" href="https://github.com/taming-the-beast/Substitution-model-averaging/raw/master/precooked_runs/primate-mtDNA-bMT.trees" target="_blank" download rel="nofollow">
+						primate-mtDNA-bMT.trees
 					</a>
 				</li>
 			
@@ -267,16 +267,6 @@
     			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
     				laduplessis
-    			</div>
- 				</a>
- 			</div>			
- 				
-			<div class="smallspacer"></div>				
-			<div>
-				<a class="off" href="https://github.com/rbouckaert">
-    			<img class="pull-left avatar" src="https://avatars2.githubusercontent.com/u/3612959?v=4&s=50">
-    			<div class="handlebox" style="padding-left:5px;">
-    				rbouckaert
     			</div>
  				</a>
  			</div>			
@@ -302,22 +292,6 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/cbe288aca13d2500a3c6d0149a7332cdecf864d7">
-					12 Aug 2019 - <span class="text-gray">update README</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/102959ab33ff517617d6432381d81d75d338fb77">
-					12 Aug 2019 - <span class="text-gray">update Substitution Model Averaging tutorial -- update bModelTest to v1.2.1</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/d8c514bc6aec7e6426c8190fab00c43f24f84c0b">
 					19 Jun 2018 - <span class="text-gray">figures updated</span>
 					</a> 
@@ -336,6 +310,22 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/f6f7be6d25599dee0f7b6b87ceb34af2df86dfe4">
 					17 Jun 2018 - <span class="text-gray">typo in diagonal matrix fixed</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/55ead1ef9991b54c348acd931e0b64c27e1ac3c3">
+					14 Jun 2018 - <span class="text-gray">Merge branch 'master' of https://github.com/Taming-the-BEAST/Substitution-model-averaging</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/2994e488690f77ae73fe2164258709bc8d38fa07">
+					14 Jun 2018 - <span class="text-gray">some wording changed to be more precise, figures updated</span>
 					</a> 
 				</li>
 			
@@ -406,7 +396,7 @@ A useful consequence is that as we are exploring the space of different substitu
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.6.x <a class="citation" href="#Bouckaert2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.0 <a class="citation" href="#Bouckaert2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -422,11 +412,11 @@ A useful consequence is that as we are exploring the space of different substitu
 
 <h1>Practical: Selecting a substitution model</h1>
 
-<p>In this tutorial we will go through an analysis using bModelTest in BEAST v2.6.x and look into how to interpret the results. This tutorial assumes that you have already done some of the other tutorials and that you are familiar with the basics of using BEAUti, BEAST and Tracer.</p>
+<p>In this tutorial we will go through an analysis using bModelTest in BEAST v2.5.0 and look into how to interpret the results. This tutorial assumes that you have already done some of the other tutorials and that you are familiar with the basics of using BEAUti, BEAST and Tracer.</p>
 
 <h2>Installing the bModelTest Package</h2>
 
-<p>We first have to install the bModelTest (version 1.2.1 or above) package.</p>
+<p>We first have to install the bModelTest (version 1.1.0 or above) package.</p>
 
 <blockquote>
 <p>Open BEAUti and navigate to <strong>File &gt; Manage Packages</strong>. Select bModelTest and then click <strong>Install/Upgrade</strong> (<a href="#fig:install">Figure 1</a>). Then <strong><em>restart BEAUti</em></strong> to load the package.</p>
@@ -560,8 +550,8 @@ A useful consequence is that as we are exploring the space of different substitu
 <p>There are a few other things we can look at in Tracer as well:</p>
 
 <ul>
-<li> <strong>rateAC, ... ,rateGT</strong> are the substitution rates between pairs of nucleotides in the substitution matrix. Note that these rates are averaged over all the models, weighted by the time the Markov chain spent in each model state.
-&lt;!---  <strong>BMT_Rates.1 to 6</strong> are the independent substitution rates used to build up the rate matrix. They are indexed by how they are grouped into the six different possible rate categories (see <a href="#fig:modelIndexes">Figure 6</a>). Note that not all the models averaged over use all 6 independent rate parameters.--&gt;</li>
+<li> <strong>rateAC, ... ,rateGT</strong> are the substitution rates between pairs of nucleotides in the substitution matrix. Note that these rates are averaged over all the models, weighted by the time the Markov chain spent in each model state.</li>
+<li> <strong>BMT_Rates.1 to 6</strong> are the independent substitution rates used to build up the rate matrix. They are indexed by how they are grouped into the six different possible rate categories (see <a href="#fig:modelIndexes">Figure 6</a>). Note that not all the models averaged over use all 6 independent rate parameters.</li>
 <li> <strong>ActiveGammaShape/PropInvariable</strong> are the gamma shape parameter and the proportion of variables sites when active, that is, when <strong>hasGammaRates</strong> and <strong>hasInvariableSites</strong> are selected. To get the estimate of the mean of the shape parameter, divide the mean <strong>ActiveGammaShape</strong> by the mean of <strong>hasGammaRates</strong>.</li>
 <li> <strong>hasEqualFreqs</strong> indicates if the chain is in a state with equal nucleotide base frequencies. </li>
 </ul>
@@ -582,13 +572,13 @@ A useful consequence is that as we are exploring the space of different substitu
 
 <p><br></p>
 
-<!-- > **Topic for discussion:** Why does **BMT_Rates.6** mix poorly?
->
-> **Hint:** Look at the table of substitution models and the distribution and trace of **BMT_ModelIndicator** in Tracer. 
->
-> **Bonus hint:** Look at the trace for **BMT_Rates.6** and plot the joint-marginal between **BMT_Rates.1** and **BMT_Rates.2**.
->
- -->
+<blockquote>
+<p><strong>Topic for discussion:</strong> Why does <strong>BMT_Rates.6</strong> mix poorly? </p>
+
+<p><strong>Hint:</strong> Look at the table of substitution models and the distribution and trace of <strong>BMT_ModelIndicator</strong> in Tracer. </p>
+
+<p><strong>Bonus hint:</strong> Look at the trace for <strong>BMT_Rates.6</strong> and plot the joint-marginal between <strong>BMT_Rates.1</strong> and <strong>BMT_Rates.2</strong>.</p>
+</blockquote>
 
 <p>Select pairs of the <strong>rateAC, ... ,rateGT</strong> parameters (using <strong>shift+click</strong>) and click on the <strong>Joint-Marginal</strong> tab to investigate parameter correlations (<a href="#fig:rateCorrelations">Figure 10</a>). Try looking at <strong>rateAT</strong> vs. <strong>rateCG</strong> and <strong>rateCG</strong> vs <strong>rateGT</strong>). </p>
 
@@ -603,10 +593,7 @@ A useful consequence is that as we are exploring the space of different substitu
 <blockquote>
 <p><strong>Topic for discussion:</strong> It appears that some pairs of the rate parameters are highly correlated for some samples and uncorrelated for the rest. What is happening here? Should we be worried about these parameter correlations? </p>
 
-<!--
-Do you also see correlations between the **BMT_Rates.1 to 6** parameters?
-
--->
+<p>Do you also see correlations between the <strong>BMT_Rates.1 to 6</strong> parameters?</p>
 </blockquote>
 
 <h2>Analyzing the output using BModelAnalyzer</h2>

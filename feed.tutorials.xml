@@ -12,55 +12,6 @@
 		</image>
 				
 			<item>
-				<title>Substitution model averaging</title>
-				<description>
-					A tutorial using bModelTest
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-					
-						
-								, Carsten Magnus
-						
-					
-						
-								
-									and Remco Bouckaert
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/cbe288aca13d2500a3c6d0149a7332cdecf864d7'
-					&gt;
-						12 Aug 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/rbouckaert'
-					&gt;
-						rbouckaert
-					&lt;/a&gt;
-					: update README
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.x
-					
-				</description>
-				<pubDate>Mon, 12 Aug 2019 23:20:18 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
-			</item>
-				
-			<item>
 				<title>Prior selection</title>
 				<description>
 					Prior selection and clock calibration using Influenza A data.
@@ -804,6 +755,55 @@ Added local update describing species-tree specification with BEAUti.
 				<category>Basic</category>
 				<link>http://localhost:4000/tutorials/species-tree-clocks/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/species-tree-clocks/</guid>
+			</item>
+				
+			<item>
+				<title>Substitution model averaging</title>
+				<description>
+					A tutorial using bModelTest
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+					
+						
+								, Carsten Magnus
+						
+					
+						
+								
+									and Remco Bouckaert
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/d8c514bc6aec7e6426c8190fab00c43f24f84c0b'
+					&gt;
+						19 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: figures updated
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Tue, 19 Jun 2018 13:00:16 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
 			</item>
 				
 			<item>
