@@ -12,6 +12,51 @@
 		</image>
 				
 			<item>
+				<title>Skyline plots</title>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/cf34a88c16d0992f01164b40e660ed84d896a815'
+					&gt;
+						27 Aug 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Fix mistake with quantiles
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.x
+					
+				</description>
+				<pubDate>Tue, 27 Aug 2019 14:34:41 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
 				<title>Substitution model averaging</title>
 				<description>
 					A tutorial using bModelTest
@@ -156,51 +201,6 @@
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
-			</item>
-				
-			<item>
-				<title>Skyline plots</title>
-				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/0b2ca761e474f8fa6c599b4146975b43ad4cb041'
-					&gt;
-						8 Aug 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update LaTeX tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.x
-					
-				</description>
-				<pubDate>Thu, 08 Aug 2019 15:50:47 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>

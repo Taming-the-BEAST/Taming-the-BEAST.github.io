@@ -430,6 +430,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/cf34a88c16d0992f01164b40e660ed84d896a815">
+					27 Aug 2019 - <span class="text-gray">Fix mistake with quantiles</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/0b2ca761e474f8fa6c599b4146975b43ad4cb041">
 					08 Aug 2019 - <span class="text-gray">Update LaTeX tutorial</span>
 					</a> 
@@ -456,14 +464,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/4702c89f3f02809dac072085ec9c415072c4244f">
 					08 Aug 2019 - <span class="text-gray">Proofreading</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/122730974b776c3754992dde249bc513f4aefa7c">
-					08 Aug 2019 - <span class="text-gray">Fix text</span>
 					</a> 
 				</li>
 			
@@ -856,7 +856,7 @@ There are descendants of the coalescent skyline in BEAST that either estimate th
 
 <p><br></p>
 
-<p>For the becoming uninfectious rate we will again use a log normal prior. The inverse of the becoming uninfectious rate is the average infectious period. In some patients an HCV infection only lasts a few weeks, while in others it is a chronic infection lasting for many years. Setting <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">M=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">.</mi><mn>2</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">S=1.25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span></span></span></span> results in the same prior we used for the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>.  In terms of the becoming uninfectious rate, this translates to the 95% quantiles for the infectious period falling between 0.128 years (46.67 days) and 11.59 years, with a median of 1 year. We will see later that there is a strong signal in the data for a longer becoming uninfectious period. </p>
+<p>For the becoming uninfectious rate we will again use a log normal prior. The inverse of the becoming uninfectious rate is the average infectious period. In some patients an HCV infection only lasts a few weeks, while in others it is a chronic infection lasting for many years. Setting <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">M=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">.</mi><mn>2</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">S=1.25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mord mathrm">5</span></span></span></span> results in the same prior we used for the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.00773em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">e</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>.  In terms of the becoming uninfectious rate, this translates to the 95% quantiles for the infectious period falling between 0.0862 years (31.5 days) and 11.59 years, with a median of 1 year. We will see later that there is a strong signal in the data for a longer becoming uninfectious period. </p>
 
 <blockquote>
 <p>Set the same prior for <strong>becomeUninfectiousRate</strong> as for <strong>reproductiveNumber</strong> (Log Normal, with M=0.0, S=1.25) (<a href="#fig:bURprior">Figure 18</a>)</p>
