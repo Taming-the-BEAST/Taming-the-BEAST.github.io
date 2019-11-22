@@ -245,8 +245,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.mcc.trees" target="_blank" download rel="nofollow">
-						H3N2.mcc.trees
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.trees" target="_blank" download rel="nofollow">
+						H3N2.trees
 					</a>
 				</li>
 			
@@ -254,8 +254,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.trees" target="_blank" download rel="nofollow">
-						H3N2.trees
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.mcc.trees" target="_blank" download rel="nofollow">
+						H3N2.mcc.trees
 					</a>
 				</li>
 			
@@ -280,16 +280,6 @@
  				
 			<div class="smallspacer"></div>				
 			<div>
-				<a class="off" href="https://github.com/tgvaughan">
-    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
-    			<div class="handlebox" style="padding-left:5px;">
-    				tgvaughan
-    			</div>
- 				</a>
- 			</div>			
- 				
-			<div class="smallspacer"></div>				
-			<div>
 				<a class="off" href="https://github.com/nicfel">
     			<img class="pull-left avatar" src="https://avatars0.githubusercontent.com/u/19623728?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
@@ -305,6 +295,14 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/390e9876fa01dbf85427a5f6f6673cb98e659d50">
+					11 Oct 2019 - <span class="text-gray">adds error section</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -338,14 +336,6 @@
 					</a> 
 				</li>
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/d95f0e76635e0c6b96a5a2c192f557fa3535eee7">
-					14 Jun 2018 - <span class="text-gray">correct merger artifacts</span>
-					</a> 
-				</li>
-			
 			</ul>
 		</div>		
 		<div class="spacer"></div>	
@@ -357,7 +347,7 @@
 			<p>
 			<h1>Background</h1>
 
-<p>Phylogeographic methods can help reveal the movement of genes between populations of organisms. This has been widely used to quantify pathogen movement between different host populations, the migration history of humans, and the geographic spread of languages or the gene flow between species using the location or state of samples alongside sequence data. Phylogenies therefore offer insights into migration processes not available from classic epidemiological or occurrence data alone. </p>
+<p>Phylogeographic methods can help reveal the movement of genes between populations of organisms. This has been widely used to quantify pathogen movement between different host populations, the migration history of humans, and the geographic spread of languages or the gene flow between species using the location or state of samples alongside sequence data. Phylogenies therefore offer insights into migration processes not available from classic epidemiological or occurrence data alone.</p>
 
 <p>The structured coalescent allows to coherently model the migration and coalescent process, but struggles with complex datasets due to the need to infer ancestral migration histories. Thus, approximations to the structured coalescent, which integrate over all ancestral migration histories, have been developed. This tutorial gives an introduction into how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for <strong>M</strong>arginal <strong>A</strong>pproximation of the <strong>S</strong>tructured <strong>CO</strong>alescen <strong>T</strong>  <a class="citation" href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a> and implements a structured coalescent approximation <a class="citation" href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This approximation doesn&#39;t require migration histories to be sampled using MCMC and therefore allows to analyse phylogenies with more than three or four states.</p>
 
@@ -367,7 +357,7 @@
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -407,7 +397,7 @@
 
 <h3>Download MASCOT</h3>
 
-<p>First, we have to download the package MASCOT using the BEAUTi package manager. Go to <em>File &gt;&gt; Manage Packages</em> and download the package MASCOT. </p>
+<p>First, we have to download the package MASCOT using the BEAUTi package manager. Go to <em>File &gt;&gt; Manage Packages</em> and download the package MASCOT.</p>
 
 <figure>
     <a id="fig:example1"></a>
@@ -423,13 +413,13 @@
 
 <h3>Loading the Influenza A/H3N2 Sequences (Partitions)</h3>
 
-<p>The sequence alignment is in the file <a href="http://github.com/nicfel/Mascot-Tutorial/raw/master/data/H3N2.nexus">H3N2.nexus</a>. Right-click on this link and save it to a folder on your computer. Once downloaded, this file can either be drag-and-dropped into BEAUti or added by using BEAUti&#39;s menu system via <em>File &gt;&gt; Import Alignment</em>. Once the sequences are added, we need to specify the sampling dates and locations. </p>
+<p>The sequence alignment is in the file <a href="http://github.com/nicfel/Mascot-Tutorial/raw/master/data/H3N2.nexus">H3N2.nexus</a>. Right-click on this link and save it to a folder on your computer. Once downloaded, this file can either be drag-and-dropped into BEAUti or added by using BEAUti&#39;s menu system via <em>File &gt;&gt; Import Alignment</em>. Once the sequences are added, we need to specify the sampling dates and locations.</p>
 
 <h3>Get the sampling times (Tip Dates)</h3>
 
 <p>Open the &quot;Tip Dates&quot; panel and then select the &quot;Use tip dates&quot; checkbox.</p>
 
-<p>The sampling times are encoded in the sequence names.  We can tell BEAUti to use these by clicking the <em>Auto-configure</em> button. The sampling times appear following the third vertical bar &quot;|&quot; in the sequence name. To extract these times, select &quot;split on character&quot;, enter &quot;|&quot; (without the quotes) in the text box immediately to the right, and then select &quot;3&quot; from the drob-down box to the right, as shown in the figure below. </p>
+<p>The sampling times are encoded in the sequence names.  We can tell BEAUti to use these by clicking the <em>Auto-configure</em> button. The sampling times appear following the third vertical bar &quot;|&quot; in the sequence name. To extract these times, select &quot;split on character&quot;, enter &quot;|&quot; (without the quotes) in the text box immediately to the right, and then select &quot;3&quot; from the drob-down box to the right, as shown in the figure below.</p>
 
 <figure>
     <a id="fig:example1"></a>
@@ -484,7 +474,7 @@ button, the window should look like the one shown in the figure below:</p>
 
 <p>The existing exponential distribution as a prior on the migration rate puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and very <em>very</em> small values is generally a good choice. Be aware however that the exponential distirbution is quite an informative prior: one should be careful that to choose a mean so that feasible rates are at least within the 95% HPD interval of the prior.  (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.)</p>
 
-<p>Finally, set the prior for the clock rate. We have a good idea about the clock rate of Influenza A/H3N2 Hemagglutinin. From previous work by other people, we know that the clock rate will be around 0.005 substitution per site per year. To include that prior knowledger, we can set the prior on the clock rate to a log normal distribution with mean in <strong>real space</strong>. To specify the mean in real space, make sure that the box <em>Mean In Real Space</em> is checked. If we set the S value to 0.25, we say that we expect the clock rate to be with 95% certainty between 0.00321 and 0.00731. 
+<p>Finally, set the prior for the clock rate. We have a good idea about the clock rate of Influenza A/H3N2 Hemagglutinin. From previous work by other people, we know that the clock rate will be around 0.005 substitution per site per year. To include that prior knowledger, we can set the prior on the clock rate to a log normal distribution with mean in <strong>real space</strong>. To specify the mean in real space, make sure that the box <em>Mean In Real Space</em> is checked. If we set the S value to 0.25, we say that we expect the clock rate to be with 95% certainty between 0.00321 and 0.00731.
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/Priors.png" alt="">
@@ -529,7 +519,7 @@ as</em>.</p>
     <figcaption>Figure 9: Compare the different inferred effective population sizes.</figcaption>
 </figure>
 
-<p>In this example, we have relatively little information about the effective population sizes of each location. This can lead to estimates that are greatly informed by the prior. Additionally, there can be great differences between median and mean estimates. The median estimates are generally more reliable since they are less influence by extreme values. </p>
+<p>In this example, we have relatively little information about the effective population sizes of each location. This can lead to estimates that are greatly informed by the prior. Additionally, there can be great differences between median and mean estimates. The median estimates are generally more reliable since they are less influence by extreme values.</p>
 
 <figure>
     <a id="fig:example1"></a>
@@ -537,7 +527,7 @@ as</em>.</p>
     <figcaption>Figure 10: Differences between Mean and Meadian estimates.</figcaption>
 </figure>
 
-<p>We can then look at the inferred migration rates. The migration rates have the label b_migration.*, meaning that they are backwards in time migration rates. The highest rates are from New York to Hong Kong. Because they are backwards in time migration rates, this means that lineages from New York are inferred to be likely from Hong Kong if we&#39;re going backwards in time. In the inferred phylogenies, we should therefore make the observation that lineages ancestral to samples from New York are inferred to be from Hong Kong backwards. </p>
+<p>We can then look at the inferred migration rates. The migration rates have the label b_migration.*, meaning that they are backwards in time migration rates. The highest rates are from New York to Hong Kong. Because they are backwards in time migration rates, this means that lineages from New York are inferred to be likely from Hong Kong if we&#39;re going backwards in time. In the inferred phylogenies, we should therefore make the observation that lineages ancestral to samples from New York are inferred to be from Hong Kong backwards.</p>
 
 <p>A more in depth explanation of what backwards migration really are can be found here <a href="http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html">http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html</a></p>
 
@@ -570,25 +560,40 @@ To color branches, you can go to <em>Appearance &gt;&gt; Colour by</em> and sele
 <figcaption>Figure 13: Inferred node locations.</figcaption>
 </figure>
 
-<p>We can now determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations. </p>
+<p>We can now determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations.</p>
 
-<p>To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to <em>Node Labels &gt;&gt; Display</em> an then choose Hong_Kong, New_York or New_Zealand. These are the actual inferred probabilities of the nodes being in any location. </p>
+<p>To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to <em>Node Labels &gt;&gt; Display</em> an then choose Hong_Kong, New_York or New_Zealand. These are the actual inferred probabilities of the nodes being in any location.</p>
 
 <p>It should however be mentioned that the inference of nodes being in a particular location makes some simplifying assumptions, such as that there are no other locations (i.e. apart from the sampled locations) where lineages could have been.</p>
 
-<p>Another important thing to know is that currently, we assume rates to be constant. This means that we assume that the population size of the different locations does not change over time. We also make the same assumption about the migration rates throught time. </p>
+<p>Another important thing to know is that currently, we assume rates to be constant. This means that we assume that the population size of the different locations does not change over time. We also make the same assumption about the migration rates through time.</p>
+
+<h3>Errors that can occur (Work in progress)</h3>
+
+<p>One of the errors message that can occur regularly is the following:
+<code>too many iterations, return negative infinity</code>
+This occurs when the integration step size of the ODE&#39;s to compute the probability of observing a phylogenetic tree in MASCOT is becoming too small.
+This generally occurs if at least one migration rate is really large or at least one effective population size is really small (i.e. the coalescent rate is really high).
+This causes integration steps to be extremely small, which in turn would require a lot of time to compute the probability of a phylogenetic tree under MASCOT.
+Instead of doing that, this state is rejected by assigning its log probability the value negative infinity.</p>
+
+<p>This error can have different origins and a likely incomplete list is the following:
+1. The priors on migration rates put too much weight on really high rates. To fix this, reconsider your priors on the migration rates. Particularly, check if the prior on the migration rates make sense in comparison to the height of the tree. If, for example, the tree has a height of 1000 years, but the prior on the migration rate is exponential with mean 1, then the prior assumption is that between any two states, we expected approximately 1000 migration events.
+2. The prior on the effective population sizes is too low, meaning that the prior on the coalescent rates (1 over the effective population size) is too high. This can for example occur when the prior on the effective population size was chosen to be 1/X. To fix, reconsider your prior on the effective population size.
+3. There is substantial changes of the effective population sizes and/or migration rates over time that are not modeled. In that case, changes in the effective population sizes or migration rates have to be explained by population structure, which can again lead to some effective population sizes being very low and some migration rates being very high. In that case, there is unfortunately not much that can be done, since MASCOT is not an appropriate model for the dataset.
+4. There is strong subpopulation structure within the different subpopulations used. In that case, reconsider if the individual sub-populations used are reasonable.</p>
 
 <hr>
 
 <h1>Useful Links</h1>
 
-<p>If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here <a class="citation" href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper <a class="citation" href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>. </p>
+<p>If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here <a class="citation" href="#Mueller2017">(Müller, Rasmussen, &amp; Stadler, 2017)</a>. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper <a class="citation" href="#mueller2017mascot">(Müller, Rasmussen, &amp; Stadler, 2018)</a>.</p>
 
 <ul>
 <li>MASCOT source code: <a href="https://github.com/nicfel/Mascot">https://github.com/nicfel/Mascot</a></li>
 <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
 <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
 
 <hr>

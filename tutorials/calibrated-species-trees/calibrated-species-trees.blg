@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
+This is BibTeX, Version 0.99d (TeX Live 2019)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: calibrated-species-trees.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: calibrated-species-trees-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.3
+Biblatex version: 3.11
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 3 entries,
-            6256 wiz_defined-function locations,
-            1302 strings with 14269 characters,
-and the built_in function-call counts, 12767 in all, are:
-= -- 806
-> -- 255
+            6304 wiz_defined-function locations,
+            1312 strings with 14478 characters,
+and the built_in function-call counts, 14285 in all, are:
+= -- 956
+> -- 261
 < -- 52
-+ -- 295
-- -- 111
-* -- 1000
-:= -- 1413
++ -- 319
+- -- 113
+* -- 1121
+:= -- 1674
 add.period$ -- 0
 call.type$ -- 3
 change.case$ -- 22
-chr.to.int$ -- 30
+chr.to.int$ -- 34
 cite$ -- 4
-duplicate$ -- 1253
-empty$ -- 1221
+duplicate$ -- 1341
+empty$ -- 1348
 format.name$ -- 136
-if$ -- 2627
+if$ -- 2913
 int.to.chr$ -- 0
 int.to.str$ -- 4
 missing$ -- 0
-newline$ -- 110
+newline$ -- 112
 num.names$ -- 82
-pop$ -- 714
+pop$ -- 735
 preamble$ -- 1
 purify$ -- 33
 quote$ -- 0
-skip$ -- 379
+skip$ -- 373
 stack$ -- 0
-substring$ -- 1400
-swap$ -- 360
-text.length$ -- 68
+substring$ -- 1769
+swap$ -- 372
+text.length$ -- 70
 text.prefix$ -- 2
 top$ -- 1
 type$ -- 90
 warning$ -- 0
-while$ -- 187
+while$ -- 234
 width$ -- 0
-write$ -- 108
+write$ -- 110
