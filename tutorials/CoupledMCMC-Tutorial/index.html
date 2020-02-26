@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8"/>
-	<title>Bayesian Skyline with coupled MCMC Tutorial</title>
+	<title>Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
@@ -119,7 +119,7 @@
 				
 				
 				
-				<li><a class="off" href="/tutorials/CoupledMCMC-Tutorial/">Bayesian Skyline with coupled MCMC Tutorial</a></li>
+				<li><a class="off" href="/tutorials/CoupledMCMC-Tutorial/">Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial</a></li>
 				
 			
 			</ol>
@@ -127,7 +127,7 @@
 		<p>
 		<div class="head">
 			
-				Setting up Bayesian Skyline with coupled MCMC
+				Adaptive parallel Tempering
 			
 		</div>
 		
@@ -209,8 +209,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-code fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv_coupled.xml" target="_blank" download rel="nofollow">
-						hcv_coupled.xml
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv_mcmc.xml" target="_blank" download rel="nofollow">
+						hcv_mcmc.xml
 					</a>
 				</li>
 			
@@ -218,8 +218,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-code fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv_mcmc.xml" target="_blank" download rel="nofollow">
-						hcv_mcmc.xml
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv.xml" target="_blank" download rel="nofollow">
+						hcv.xml
 					</a>
 				</li>
 			
@@ -258,26 +258,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/chain1hcv.log" target="_blank" download rel="nofollow">
-						chain1hcv.log
-					</a>
-				</li>
-			
-				
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/hcv.log" target="_blank" download rel="nofollow">
 						hcv.log
-					</a>
-				</li>
-			
-				
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/chain1hcv.trees" target="_blank" download rel="nofollow">
-						chain1hcv.trees
 					</a>
 				</li>
 			
@@ -308,6 +290,16 @@
     			</div>
  				</a>
  			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
  			
 		</div>
 		<div class="bigspacer"></div>
@@ -316,6 +308,22 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/63a0145c1ada7717aa2117b0b1da91bb0248dac3">
+					06 Dec 2019 - <span class="text-gray">adds app description</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/50d20f9ae1776bb7ad0c1b6a29e402ab4ded3d37">
+					06 Dec 2019 - <span class="text-gray">changes tutorial to adaptive parallel tempering</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -341,24 +349,6 @@
 					</a> 
 				</li>
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/1f45863097fbe4d4180cef369febe5743c1d0426">
-					25 Mar 2019 - <span class="text-gray">Merge pull request #1 from tgvaughan/patch-1
-
-Fixed broken bibtex file references.</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/a70635a29cef357775360f47b922a6a0a7c16d57">
-					25 Mar 2019 - <span class="text-gray">Fixed broken bibtex file references.</span>
-					</a> 
-				</li>
-			
 			</ul>
 		</div>		
 		<div class="spacer"></div>	
@@ -370,16 +360,19 @@ Fixed broken bibtex file references.</span>
 			<p>
 			<h1>Background</h1>
 
-<p>Coupled MCMC (also called parallel tempering or MC<sup>3)</sup> is a Bayesian approach that uses heated chains in order to traverse unfavourable intermediate states more easily and in order to parallelise analyses.
-Coupled MCMC works by having 1 cold chain which works exactly the same as a standard MCMC chain and one or more heated chains.
+<p>Parallel tempering is a Bayesian approach that uses heated chains in order to traverse unfavourable intermediate states more easily and in order to parallelise analyses.
+Parallel tempering works by having one cold chain which works exactly the same as a standard MCMC chain and one or more heated chains.
 The chains are heated in temperature increments defined in this implementations as <em>deltaTemperature</em>.
 These heated chains have increase acceptance probabilities, making it more easily for them to explore parts of the state space that are less likely.
 In turn however, these heated chains to not explore the posterior probability space such that the frequency at which they visit a state is proportional to their probability.
 The can however be used to propose new states.
-In order to do so, coupled MCMC proposes to exchange the states of two random chains after each chain is run for some amount of iterations in what amounts to a MCMC move.
-After how many iterations the states of two random chains are proposed to be swapped is in this implementation called <em>resampleEvery</em>.</p>
+In order to do so, parallel tempering proposes to exchange the states of two random chains after each chain is run for some amount of iterations in what amounts to a MCMC move.
+After how many iterations the states of two random chains are proposed to be swapped is in this implementation called <em>resampleEvery</em>.
+The webpage <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a>, gives a good introduction into how parallel tempering.</p>
 
-<p>The webpage <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a>, gives a good introduction into how coupled MCMC works.</p>
+<p>Typically, using such an approach requires to find optimal temperatures for heated chains that allow using the additional computational resources efficiently.
+The parallel tempering approach implemented in CoupledMCMC circumvents this by automatically tuning this temperature difference during a run to achieve an acceptance probability of swaps of 0.234.
+This means that the only additional parameter that has to be specified by the user is the number of chains used, which is typically determined by the number of CPU&#39;s available.</p>
 
 <hr>
 
@@ -387,7 +380,7 @@ After how many iterations the states of two random chains are proposed to be swa
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.6.0 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -403,24 +396,25 @@ After how many iterations the states of two random chains are proposed to be swa
 
 <hr>
 
-<h1>Practical: Setting up an analysis with coupled MCMC</h1>
+<h1>Practical: Setting up an analysis with CoupledMCMC</h1>
 
-<p>In this tutorial, we will describe the two different ways to setup a BEAST2 analysis to run with coupled MCMC.
+<p>In this tutorial, we will describe the two different ways to setup a BEAST2 analysis to run with CoupledMCMC
 To do so, we will setup a Bayesian Skyline plot analysis by following analogue to the tutorial on <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>.</p>
 
-<p>Setting up an analysis in BEAUTi is currently only possible for analyses that only use the standard template, i.e. such for which setting up an analysis does not require to load a template.
-All other analyses have to be setup by editing one line in the <code>*xml</code> file.</p>
+<p>Setting up an analysis in BEAUTi is currently only possible for analyses that only use the standard template, i.e. such for which setting up an analysis does not require to load a template.</p>
+
+<p>All other analyses can use a conversion tool to convert an MCMC xml into a parallel tempering xml.</p>
 
 <h2>The Data</h2>
 
-<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt <a class="citation" href="#Ray2000">(Ray, Arthur, Carella, Bukh, &amp; Thomas, 2000)</a>. This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
+<p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt (missing reference). This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
 
 <p>With an estimated 15-25%, Egypt has the highest Hepatits C prevalence in the world. In the mid 20<sup>th</sup> century, the prevalence of Hepatitis C increased drastically (see <a href="#fig:prevalence">Figure 1</a> for estimates). We will try to infer this increase from sequence data.</p>
 
 <figure>
     <a id="fig:prevalence"></a>
     <img style="width:50%;" src="figures/Estimated_number_hcv.png" alt="">
-    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt <a class="citation" href="#Pybus2003">(Pybus, Drummond, Nakano, Robertson, &amp; Rambaut, 2003)</a>.</figcaption>
+    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt (missing reference).</figcaption>
 </figure>
 
 <p><br></p>
@@ -446,10 +440,10 @@ All other analyses have to be setup by editing one line in the <code>*xml</code>
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/Template.png" alt="">
-    <figcaption>Figure 2: Load the Coupled MCMC template to setup an analysis.</figcaption>
+    <figcaption>Figure 2: Load the CoupledMCMC template to setup an analysis.</figcaption>
 </figure>
 
-<p>This template is exactly the same as the standard BEAUTi template, but uses coupled MCMC instead of regular MCMC.</p>
+<p>This template is exactly the same as the standard BEAUTi template, but uses parallel tempering instead of regular MCMC.</p>
 
 <h3>Setting up the analysis with Bayesian Coalescent Skyline (similar to <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>)</h3>
 
@@ -494,22 +488,24 @@ The Bayesian Coalescent Skyline will estimate the number of coalescent events wi
 
 <p><br></p>
 
-<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline <a class="citation" href="#Heled2008">(Heled &amp; Drummond, 2008)</a>) or do not require dimensions to be specified (Skyride <a class="citation" href="#Minin2008">(Minin, Bloomquist, &amp; Suchard, 2008)</a>).</p>
+<p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline (missing reference)) or do not require dimensions to be specified (Skyride (missing reference)).</p>
 
-<p>We can leave the rest of the priors as they are and go to the <code>Coupled MCMC panel</code>.
+<p>We can leave the rest of the priors as they are and go to the <code>Parallel tempering</code> panel.
 In contrast to regular MCMC, we have to define a few more things.
 First, we have to define the number of chains.
 This number should be equal to the number of threads you can run, resp. the number of CPU cores.
-The <code>resampleEvery</code>, defines after how many iterations, two chains should be proposed to exchange states.
+The <code>Resample Every</code>, defines after how many iterations, two chains should be proposed to exchange states.
 If this is too low, the chains will communicate a lot and the exchanging of states itself can consume more time then the actual MCMC.
 If it&#39;s too high, the states of chains are exchanged and the ESS per time isn&#39;t as high as it could be.
-We here propose to exchange states between the 2 chains every 1000 iterations, which will allow for at most 10 000 swaps of states.</p>
+We here exchange states between the 2 chains every 1000 iterations, which will allow for at most 10 000 swaps of states during the whole analysis.</p>
 
-<p>The next parameter we have to set is the <code>deltaTemperature</code>, the higher this value, the hotter chains become and the more time they spend in unlikely parts of the posterior probability space.
-Hotter chains on the other hand are more easily able to cross unlikely intermediate states and can therefore help chains to move out of local optimas.
-Here, we use a value of 0.05.
-This value should be different depending on the dataset, the analysis and the number of chains.
-Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 <a class="citation" href="#altekar2004parallel">(Altekar, Dwarkadas, Huelsenbeck, &amp; Ronquist, 2004)</a>.</p>
+<p>The next parameter we have to set is the <code>Delta Temperature</code>.
+Hotter chains are more easily able to cross unlikely intermediate states and can therefore help chains to move out of local optimas.
+<code>Delta Temperature</code> here is only the initial value of the temperature difference between the two chains and will be tuned lated on automatically.
+<code>Target</code> defines the target acceptance probability.
+The temperature difference will be adapted during the analysis to match this acceptance probability over the course of the analysis.</p>
+
+<p>Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 (missing reference).</p>
 
 <figure>
     <a id="fig:dimensions"></a>
@@ -523,35 +519,42 @@ Overall, it should be chosen such that the acceptance probability of an exchange
 
 <p>Next, we can run the xml.
 The output to the screen of a Coupled MCMC run looks slightly different then the one of a standard MCMC run.
-The column called <em>sample</em> describes at which iteration of the coupled MCMC we are. The column <em>swapsColdChain</em> denotes how many times the one cold chain (the chain that runs just like a regular MCMC chain) has been swapped with another chain. The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted. This vaue should be somewhere between <em>0.2</em> and <em>0.6</em>. A low values indicates that the heated chains are running too hot and are not efficiently exploring the posterior. A too high values indicates that the heated chains are not running hot enough and are thus exploring parameter space that are too similar to the one of the cold chain.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">sample    swapsColdCain    swapProbability
-10000    0    0.0 --
-20000    1    0.5 3m15s/Msamples
-30000    1    0.3333333333333333 2m56s/Msamples
-40000    1    0.25 2m34s/Msamples
-50000    1    0.2 2m29s/Msamples
-60000    1    0.16666666666666666 2m24s/Msamples
-70000    1    0.14285714285714285 2m22s/Msamples
-80000    1    0.125 2m20s/Msamples
-90000    1    0.1111111111111111 2m15s/Msamples
-100000    1    0.1 2m12s/Msamples
-110000    1    0.09090909090909091 2m9s/Msamples
-120000    1    0.08333333333333333 2m8s/Msamples
+The column called <em>sample</em> describes at which iteration of the coupled MCMC we are.
+The column <em>swapsColdChain</em> denotes how many times the one cold chain (the chain that runs just like a regular MCMC chain) has been swapped with another chain.
+The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted.
+By default, a value of 0.234 is targeted.
+The column <em>deltaTemperature</em> denotes the current temperature difference between chains.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sample  swapsColdCain   swapProbability deltaTemperature
+    0   0   0.0 0.1
+    1000    0   0.0 0.1 --
+    2000    0   0.0 0.1 --
+    3000    0   0.0 0.1 --
+    4000    0   0.0 0.1 --
+    5000    1   0.2 0.1 --
+    6000    1   0.16666666666666666 0.1 --
+    7000    1   0.2857142857142857  0.1 --
+    8000    1   0.25    0.1 --
+    9000    1   0.2222222222222222  0.1 --
+    10000   1   0.2 0.1 --
+    11000   1   0.18181818181818182 0.1 2m29s/Msamples
+    12000   1   0.16666666666666666 0.1 2m35s/Msamples
+    13000   1   0.15384615384615385 0.1 2m39s/Msamples
+    14000   1   0.14285714285714285 0.1 2m37s/Msamples
+    15000   1   0.13333333333333333 0.1 2m41s/Msamples
+    16000   1   0.125   0.1 2m42s/Msamples
+    17000   1   0.11764705882352941 0.1 2m46s/Msamples
 </code></pre></div>
 <h3>Exploring the results of Bayesian Coalescent Skyline analysis</h3>
 
 <p>For the reconstruction of the population dynamics, we need two files: the <code>hcv.log</code> file and the <code>hcv.trees</code> file.
+These outputs can be handled exactly the same as the ones of a regular MCMC analysis.
 The log files contain the information about the group size and the population size.
-The group size specifies how many intervals are combined to have the same effective population size.
-The two files are logging the states of the one cold chain.
-There are however two more files <code>chain1hcv.log</code> and <code>chain1hcv.trees</code>.
-These two files, log the states of the 1st heated chain and are not needed for the post-processing.
-If we look at the inferred distributions between the two files <code>hcv.log</code> and <code>chain1hcv.log</code>, we see that these don&#39;t match up and that <code>chain1hcv.log</code> explores less optimal states with higher frequency.</p>
+The group size specifies how many intervals are combined to have the same effective population size.</p>
 
 <figure>
     <a id="fig:dimensions"></a>
-    <img src="figures/HeatedChains.png" alt="">
-    <figcaption>Figure 7: The heated chain does no correctly explore the posterior probability space.</figcaption>
+    <img src="figures/Tracer.png" alt="">
+    <figcaption>Figure 7: opening the log file in tracer.</figcaption>
 </figure>
 
 <p><br></p>
@@ -578,33 +581,34 @@ If we look at the inferred distributions between the two files <code>hcv.log</co
 
 <p>There are two ways to save the analysis, it can either be saved as a <code>*.pdf</code> or as a tab delimited file. To save it as a tab delimited file, you can go to <code>File &gt; Export Data</code>. The exported file will have five rows, the time, the mean, median lower 95% interval and the upper 95% interval of the estimates, which you can use to plot the data with other software (R, Matlab, etc).</p>
 
-<h2>Setting up the same analysis without using BEAUTi</h2>
+<h3>Assessing convergence</h3>
 
-<p>In order to setup the analysis to run with coupled MCMC without using BEAUTi, we can create and xml that is supposed to run with regular MCMC.
-After this is done and the <code>*.xml</code> file (here <code>hcv_mcmc.xml</code>), has been saved, open the <code>*.xml</code> file in a Text Editor (e.g. TextEdit in MAC or notepad, but not word! in Windows).</p>
+<p>Since parallel tempering runs multiple chains, it is possible for all these chains to be stuck in local optima.
+Parallel tempering will then cycle through these chains that are all stuck in local optima.
+This can create vert high ESS values of analyses that did not converge.
+It is therefore highly advisable to run several replicates (e.g. 3) of the same analysis to see if they all give the same result.
+Additionally, ESS might not be the best measure of converge of a parallel tempering analysis and something like the potential scale reduction factor might be more suited to assess convergence.</p>
 
-<p>Next, go to the line that contains the code <code>id=&quot;mcmc&quot;</code>. In <code>hcv_mcmc.xml</code>, this is going to be the following line</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;run id="mcmc" spec="MCMC" chainLength="10000000"&gt;
-</code></pre></div>
-<p>Next, replace that line with
-<code>
-&lt;run id=&quot;mcmc&quot; spec=&quot;beast.coupledMCMC.CoupledMCMC&quot; chainLength=&quot;10000000&quot; deltaTemperature=&quot;0.05&quot; chains=&quot;2&quot; resampleEvery=&quot;10000&quot;&gt;
-</code></p>
+<p>(Running replicates is not only advisable for parallel tempering analysis, but for MCMC as well).</p>
 
-<ul>
-<li><p><code>chainLength=&quot;100000000&quot;</code> defines for how many iterations the chains is run</p></li>
-<li><p><code>deltaTemperature=&quot;0.05&quot;</code> defines the temperature difference between the chain <em>n</em> and chain <em>n-1</em>.</p></li>
-<li><p><code>chains=&quot;2&quot;</code> defines the number of parallel chains that are run. The first chain is the one that explores the posterior just like a normal MCMC chain. All other chains are what&#39;s called <em>heated</em>. This means that MCMC moves of those chains have a higher probability of being accepted. While these heated chains don&#39;t explore the posterior properly, they can be used to propose new states to the one cold chain.   </p></li>
-</ul>
+<h2>Setting up the same analysis for packages that require loading their own template</h2>
 
-<p>Next, save the xml file again and run it with BEAST. In order to post-process the output, just use the log files that do <em>not</em> start with <code>chain...</code> since these are the log files for the heated chains.</p>
+<p>In order to setup a parallel tempering analysis for packages that require loading their own packages, we can use a BEAUti app.
+To do so, open BEAUti and go to <code>File</code>, select <code>Launch Apps</code>.
+There, click on MCMC to Coupled MCMC converter and click <code>Launch</code>.</p>
 
-<h3>A note on resuming coupled MCMC runs</h3>
+<p>First, load the MCMC xml and define an output file for the parallel tempering xml.
+Then, the analysis can be setup, such as for example the number of chains can be defined.
+When everything is setup, just press launch and the parallel tempering xml will be created.
+This xml can then be run using parallel tempering.</p>
 
-<p>Coupled MCMC runs can be resumed just like any other BEAST.
-It is however possible that the different log files of the different chains are at different iterations, which will return an error if you try to resume this run.
-If this error happens, load the log files of the cold chain and all hot chains (the chains that start with <code>chain...</code>) and look at the lowest value of the iteration.
-Next, open the log files of all chains which had a higher iteration and remove the last lines until the last line has the same sample number as the lowest iteration of any chain.</p>
+<figure>
+    <a id="fig:skyline"></a>
+    <img style="width:50%;" src="figures/App.png" alt="">
+    <figcaption>Figure 10: Launching the MCMC to Coupled MCMC app.</figcaption>
+</figure>
+
+<p><br></p>
 
 <hr>
 
@@ -622,12 +626,7 @@ Next, open the log files of all chains which had a higher iteration and remove t
 
 <h1>Relevant References</h1>
 
-<ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
-<li><span id="Ray2000">Ray, S. Ê. C., Arthur, R. Ê. R., Carella, A., Bukh, J., &amp; Thomas, D. Ê. L. (2000). Genetic Epidemiology of Hepatitis C Virus throughout Egypt. <i>The Journal of Infectious Diseases</i>, <i>182</i>(3), 698–707. https://doi.org/10.1086/315786</span></li>
-<li><span id="Pybus2003">Pybus, O. G., Drummond, A. J., Nakano, T., Robertson, B. H., &amp; Rambaut, A. (2003). The Epidemiology and Iatrogenic Transmission of Hepatitis C Virus in Egypt: A Bayesian Coalescent Approach. <i>Molecular Biology and Evolution</i>, <i>20</i>(3), 381–387. https://doi.org/10.1093/molbev/msg043</span></li>
-<li><span id="Heled2008">Heled, J., &amp; Drummond, A. J. (2008). Bayesian inference of population size history from multiple loci. <i>BMC Evolutionary Biology</i>, <i>8</i>(1), 289. https://doi.org/10.1186/1471-2148-8-289</span></li>
-<li><span id="Minin2008">Minin, V. N., Bloomquist, E. W., &amp; Suchard, M. A. (2008). Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics. <i>Molecular Biology and Evolution</i>, <i>25</i>(7), 1459–1471. https://doi.org/10.1093/molbev/msn090</span></li>
-<li><span id="altekar2004parallel">Altekar, G., Dwarkadas, S., Huelsenbeck, J. P., &amp; Ronquist, F. (2004). Parallel metropolis coupled Markov chain Monte Carlo for Bayesian phylogenetic inference. <i>Bioinformatics</i>, <i>20</i>(3), 407–415.</span></li></ol>
+<ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
 
 
 			<hr>

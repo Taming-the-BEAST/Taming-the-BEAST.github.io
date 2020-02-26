@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial</title>
+				<description>
+					Adaptive parallel Tempering
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/63a0145c1ada7717aa2117b0b1da91bb0248dac3'
+					&gt;
+						6 Dec 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/nicfel'
+					&gt;
+						nicfel
+					&lt;/a&gt;
+					: adds app description
+					&lt;br&gt;&lt;br&gt;
+					Level: Easy
+					
+						&lt;br&gt;
+						Requires: BEAST v2.6.0
+					
+				</description>
+				<pubDate>Fri, 06 Dec 2019 02:03:14 +0100</pubDate>
+				<category>Easy</category>
+				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>MASCOT v1.2.2 Tutorial</title>
 				<description>
 					Parameter and State inference using the approximate structured coalescent
@@ -267,9 +308,9 @@
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						''
+						'https://github.com/tgvaughan'
 					&gt;
-						Unknown
+						tgvaughan
 					&lt;/a&gt;
 					: Fixed bibliography database link.
 					&lt;br&gt;&lt;br&gt;
@@ -328,47 +369,6 @@
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/LanguagePhylogenies/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/LanguagePhylogenies/</guid>
-			</item>
-				
-			<item>
-				<title>Bayesian Skyline with coupled MCMC Tutorial</title>
-				<description>
-					Setting up Bayesian Skyline with coupled MCMC
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/70309dd640c2a135a31b9f1c5490b46fc283abcf'
-					&gt;
-						26 Jul 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/nicfel'
-					&gt;
-						nicfel
-					&lt;/a&gt;
-					: dummy commit
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Fri, 26 Jul 2019 15:35:31 +0200</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -533,9 +533,9 @@ Renamed output directory.
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						''
+						'https://github.com/tgvaughan'
 					&gt;
-						Unknown
+						tgvaughan
 					&lt;/a&gt;
 					: Updated figure and BEAST version.
 					&lt;br&gt;&lt;br&gt;
@@ -665,9 +665,9 @@ Added local update describing species-tree specification with BEAUti.
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						''
+						'https://github.com/tgvaughan'
 					&gt;
-						Unknown
+						tgvaughan
 					&lt;/a&gt;
 					: Fixed broken figure link.
 					&lt;br&gt;&lt;br&gt;
@@ -706,9 +706,9 @@ Added local update describing species-tree specification with BEAUti.
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						''
+						'https://github.com/tgvaughan'
 					&gt;
-						Unknown
+						tgvaughan
 					&lt;/a&gt;
 					: Removed tex file, updated tutorial text.
 					&lt;br&gt;&lt;br&gt;
