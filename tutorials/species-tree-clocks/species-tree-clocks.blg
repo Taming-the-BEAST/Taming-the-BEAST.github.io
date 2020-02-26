@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: species-tree-clocks.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: species-tree-clocks-blx.bib
+Database file #2: master-refs.bib
+Biblatex version: 3.11
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 4 entries,
+            6304 wiz_defined-function locations,
+            1315 strings with 14116 characters,
+and the built_in function-call counts, 29230 in all, are:
+= -- 2252
+> -- 440
+< -- 104
++ -- 802
+- -- 177
+* -- 2224
+:= -- 3568
+add.period$ -- 0
+call.type$ -- 4
+change.case$ -- 59
+chr.to.int$ -- 40
+cite$ -- 6
+duplicate$ -- 2958
+empty$ -- 2559
+format.name$ -- 272
+if$ -- 5765
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 0
+newline$ -- 186
+num.names$ -- 151
+pop$ -- 1192
+preamble$ -- 1
+purify$ -- 88
+quote$ -- 0
+skip$ -- 626
+stack$ -- 0
+substring$ -- 4167
+swap$ -- 660
+text.length$ -- 103
+text.prefix$ -- 3
+top$ -- 1
+type$ -- 124
+warning$ -- 0
+while$ -- 508
+width$ -- 0
+write$ -- 183
