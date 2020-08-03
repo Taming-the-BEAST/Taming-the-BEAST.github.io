@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.0 $
+% $ biblatex bbl format version 2.8 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,7 +16,7 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
+\sortlist[entry]{nty/global/}
   \entry{abella2011}{article}{}
     \name{author}{3}{}{%
       {{hash=AJ}{%
@@ -43,7 +43,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2011}
-    \field{labeldatesource}{year}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{number}{2}
@@ -112,7 +111,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{pages}{e48985}
@@ -137,7 +135,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2001}
-    \field{labeldatesource}{year}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{pages}{23\bibrangedash 34}
@@ -171,7 +168,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2005}
-    \field{labeldatesource}{year}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{number}{4}
@@ -202,7 +198,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1977}
-    \field{labeldatesource}{year}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{number}{5622}
@@ -253,7 +248,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2013}
-    \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{pages}{239\bibrangedash 243}
@@ -268,13 +262,13 @@
     \name{author}{5}{}{%
       {{hash=BSJ}{%
          family={Barido-Sottani},
-         familyi={B\bibinithyphendelim S\bibinitperiod},
+         familyi={B\bibinitperiod-S\bibinitperiod},
          given={Joëlle},
          giveni={J\bibinitperiod},
       }}%
       {{hash=AFG}{%
          family={Aguirre-Fernández},
-         familyi={A\bibinithyphendelim F\bibinitperiod},
+         familyi={A\bibinitperiod-F\bibinitperiod},
          given={Gabriel},
          giveni={G\bibinitperiod},
       }}%
@@ -302,7 +296,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2019}
-    \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \verb{doi}
@@ -333,7 +326,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2002}
-    \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{number}{2}
@@ -369,7 +361,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2014}
-    \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{title}{strap: an {R} package for plotting phylogenies against
@@ -392,7 +383,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1970}
-    \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{number}{7}
@@ -434,7 +424,7 @@
          family={Wu},
          familyi={W\bibinitperiod},
          given={Chieh-Hsi},
-         giveni={C\bibinithyphendelim H\bibinitperiod},
+         giveni={C\bibinitperiod-H\bibinitperiod},
       }}%
       {{hash=XD}{%
          family={Xie},
@@ -466,7 +456,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2014}
-    \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{number}{4}
@@ -504,7 +493,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1993}
-    \field{labeldatesource}{year}
     \field{sortinit}{C}
     \field{sortinithash}{C}
     \field{number}{5}
@@ -538,7 +526,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1972}
-    \field{labeldatesource}{year}
     \field{sortinit}{C}
     \field{sortinithash}{C}
     \field{title}{Arctoid Genetic Characters as Related to the Genus
@@ -594,7 +581,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{number}{1742}
@@ -627,7 +613,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2007}
-    \field{labeldatesource}{year}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{pages}{214}
@@ -657,7 +642,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2010}
-    \field{labeldatesource}{year}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{pages}{114}
@@ -699,7 +683,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2006}
-    \field{labeldatesource}{year}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{pages}{e88}
@@ -732,7 +715,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2014}
-    \field{labeldatesource}{year}
     \field{sortinit}{D}
     \field{sortinithash}{D}
     \field{title}{Bayesian evolutionary analysis with {BEAST} 2}
@@ -753,7 +735,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1996}
-    \field{labeldatesource}{year}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{pages}{141\bibrangedash 151}
@@ -798,7 +779,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2014}
-    \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
     \field{number}{12}
@@ -837,7 +817,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2005}
-    \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
     \field{number}{3}
@@ -863,7 +842,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2008}
-    \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
     \field{pages}{769\bibrangedash 778}
@@ -896,7 +874,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1995}
-    \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
     \field{number}{9}
@@ -932,7 +909,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1998}
-    \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
     \field{booktitle}{Annales de Pal{\'e}ontologie}
@@ -968,7 +944,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1994}
-    \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
     \field{number}{2}
@@ -993,7 +968,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{793\bibrangedash 809}
@@ -1030,7 +1004,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{939\bibrangedash 255}
@@ -1067,7 +1040,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2014}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{E2957\bibrangedash E2966}
@@ -1092,7 +1064,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2008}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{\url{http://www.christophheibl.de/Rpackages.html}}
@@ -1127,7 +1098,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1980}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{1\bibrangedash 27}
@@ -1159,7 +1129,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2010}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{570\bibrangedash 580}
@@ -1189,7 +1158,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{138\bibrangedash 149}
@@ -1220,7 +1188,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2013}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{title}{Calibrated birth-death phylogenetic time-tree priors for
@@ -1250,7 +1217,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2009}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{367\bibrangedash 380}
@@ -1287,7 +1253,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2000}
-    \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{pages}{1879\bibrangedash 1892}
@@ -1348,7 +1313,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2007}
-    \field{labeldatesource}{year}
     \field{sortinit}{J}
     \field{sortinithash}{J}
     \field{number}{26}
@@ -1373,7 +1337,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1948}
-    \field{labeldatesource}{year}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{pages}{1\bibrangedash 15}
@@ -1415,8 +1378,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1982}
-    \field{extradate}{1}
-    \field{labeldatesource}{year}
+    \field{extrayear}{1}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{booktitle}{Exchangeability in {P}robability and {S}tatistics}
@@ -1457,8 +1419,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1982}
-    \field{extradate}{2}
-    \field{labeldatesource}{year}
+    \field{extrayear}{2}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{booktitle}{Essays in {S}tatistical {S}cience: {P}apers in {H}onour
@@ -1483,8 +1444,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1982}
-    \field{extradate}{3}
-    \field{labeldatesource}{year}
+    \field{extrayear}{3}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{pages}{235\bibrangedash 248}
@@ -1520,7 +1480,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1990}
-    \field{labeldatesource}{year}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{pages}{151\bibrangedash 160}
@@ -1557,7 +1516,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2001}
-    \field{labeldatesource}{year}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{pages}{352\bibrangedash 361}
@@ -1593,13 +1551,13 @@
          family={Malaspinas},
          familyi={M\bibinitperiod},
          given={Anna-Sapfo},
-         giveni={A\bibinithyphendelim S\bibinitperiod},
+         giveni={A\bibinitperiod-S\bibinitperiod},
       }}%
       {{hash=KSO}{%
          family={Kolokotronis},
          familyi={K\bibinitperiod},
          given={Sergios-Orestis},
-         giveni={S\bibinithyphendelim O\bibinitperiod},
+         giveni={S\bibinitperiod-O\bibinitperiod},
       }}%
       {{hash=SM}{%
          family={Stiller},
@@ -1640,7 +1598,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2008}
-    \field{labeldatesource}{year}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{number}{1}
@@ -1687,7 +1644,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2013}
-    \field{labeldatesource}{year}
     \field{sortinit}{L}
     \field{sortinithash}{L}
     \field{pages}{789\bibrangedash 804}
@@ -1729,7 +1685,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2009}
-    \field{labeldatesource}{year}
     \field{sortinit}{L}
     \field{sortinithash}{L}
     \field{pages}{e1000520}
@@ -1771,7 +1726,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2007}
-    \field{labeldatesource}{year}
     \field{sortinit}{L}
     \field{sortinithash}{L}
     \field{pages}{2669\bibrangedash 2680}
@@ -1813,7 +1767,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2006}
-    \field{labeldatesource}{year}
     \field{sortinit}{L}
     \field{sortinithash}{L}
     \field{pages}{216\bibrangedash 233}
@@ -1845,7 +1798,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{L}
     \field{sortinithash}{L}
     \field{pages}{751\bibrangedash 761}
@@ -1872,7 +1824,7 @@
       }}%
       {{hash=PMM}{%
          family={Patou-Mathis},
-         familyi={P\bibinithyphendelim M\bibinitperiod},
+         familyi={P\bibinitperiod-M\bibinitperiod},
          given={Maryl{\`e}ne},
          giveni={M\bibinitperiod},
       }}%
@@ -1903,7 +1855,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2001}
-    \field{labeldatesource}{year}
     \field{sortinit}{L}
     \field{sortinithash}{L}
     \field{number}{3}
@@ -1941,7 +1892,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2001}
-    \field{labeldatesource}{year}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{pages}{123\bibrangedash 151}
@@ -1978,7 +1928,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1994}
-    \field{labeldatesource}{year}
     \field{sortinit}{N}
     \field{sortinithash}{N}
     \field{pages}{305\bibrangedash 311}
@@ -2002,7 +1951,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2004}
-    \field{labeldatesource}{year}
     \field{sortinit}{P}
     \field{sortinithash}{P}
     \field{pages}{2120\bibrangedash 2148}
@@ -2026,7 +1974,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2011}
-    \field{labeldatesource}{year}
     \field{sortinit}{P}
     \field{sortinithash}{P}
     \field{pages}{466\bibrangedash 481}
@@ -2057,7 +2004,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1998}
-    \field{labeldatesource}{year}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{pages}{442\bibrangedash 448}
@@ -2087,7 +2033,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2007}
-    \field{labeldatesource}{year}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{pages}{453\bibrangedash 466}
@@ -2117,7 +2062,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1996}
-    \field{labeldatesource}{year}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{pages}{304\bibrangedash 311}
@@ -2145,7 +2089,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{number}{2}
@@ -2201,7 +2144,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{R}
     \field{sortinithash}{R}
     \field{pages}{973\bibrangedash 999}
@@ -2226,7 +2168,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2009}
-    \field{labeldatesource}{year}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{pages}{58\bibrangedash 66}
@@ -2251,7 +2192,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2010}
-    \field{labeldatesource}{year}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{pages}{396\bibrangedash 404}
@@ -2278,7 +2218,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1975}
-    \field{labeldatesource}{year}
     \field{sortinit}{T}
     \field{sortinithash}{T}
     \field{title}{Human {E}volutionary {T}rees}
@@ -2308,7 +2247,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2002}
-    \field{labeldatesource}{year}
     \field{sortinit}{T}
     \field{sortinithash}{T}
     \field{pages}{689\bibrangedash 702}
@@ -2345,7 +2283,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1998}
-    \field{labeldatesource}{year}
     \field{sortinit}{T}
     \field{sortinithash}{T}
     \field{pages}{1647\bibrangedash 1657}
@@ -2370,7 +2307,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2017}
-    \field{labeldatesource}{year}
     \field{sortinit}{V}
     \field{sortinithash}{V}
     \verb{doi}
@@ -2411,7 +2347,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
-    \field{labeldatesource}{year}
     \field{sortinit}{W}
     \field{sortinithash}{W}
     \field{pages}{156\bibrangedash 159}
@@ -2460,7 +2395,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2015}
-    \field{labeldatesource}{year}
     \field{sortinit}{W}
     \field{sortinithash}{W}
     \field{number}{1798}
@@ -2493,7 +2427,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2006}
-    \field{labeldatesource}{year}
     \field{sortinit}{Y}
     \field{sortinithash}{Y}
     \field{pages}{212\bibrangedash 226}
@@ -2524,7 +2457,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1997}
-    \field{labeldatesource}{year}
     \field{sortinit}{Y}
     \field{sortinithash}{Y}
     \field{pages}{717\bibrangedash 724}
@@ -2555,7 +2487,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2003}
-    \field{labeldatesource}{year}
     \field{sortinit}{Y}
     \field{sortinithash}{Y}
     \field{pages}{705\bibrangedash 716}
@@ -2581,7 +2512,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1924}
-    \field{labeldatesource}{year}
     \field{sortinit}{Y}
     \field{sortinithash}{Y}
     \field{pages}{21\bibrangedash 87}
@@ -2630,7 +2560,6 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{1962}
-    \field{labeldatesource}{year}
     \field{sortinit}{Z}
     \field{sortinithash}{Z}
     \field{booktitle}{Horizons in Biochemistry}
@@ -2638,5 +2567,5 @@
     \field{title}{Molecular disease, evolution, and genetic heterogeneity}
     \field{year}{1962}
   \endentry
-\enddatalist
+\endsortlist
 \endinput

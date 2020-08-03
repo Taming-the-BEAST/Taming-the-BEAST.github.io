@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019)
+This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: adequacy_tutorial.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: adequacy_tutorial-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.11
+Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 4 entries,
-            6304 wiz_defined-function locations,
-            1218 strings with 10759 characters,
-and the built_in function-call counts, 19612 in all, are:
-= -- 1337
-> -- 316
+            6256 wiz_defined-function locations,
+            1208 strings with 10550 characters,
+and the built_in function-call counts, 17348 in all, are:
+= -- 1107
+> -- 310
 < -- 70
-+ -- 373
-- -- 131
-* -- 1564
-:= -- 2163
++ -- 345
+- -- 129
+* -- 1364
+:= -- 1806
 add.period$ -- 0
 call.type$ -- 4
 change.case$ -- 33
-chr.to.int$ -- 34
+chr.to.int$ -- 30
 cite$ -- 6
-duplicate$ -- 1789
-empty$ -- 1952
+duplicate$ -- 1681
+empty$ -- 1750
 format.name$ -- 174
-if$ -- 4047
+if$ -- 3608
 int.to.chr$ -- 0
 int.to.str$ -- 6
 missing$ -- 0
-newline$ -- 143
+newline$ -- 140
 num.names$ -- 123
-pop$ -- 1051
+pop$ -- 1027
 preamble$ -- 1
 purify$ -- 45
 quote$ -- 0
-skip$ -- 511
+skip$ -- 521
 stack$ -- 0
-substring$ -- 2583
-swap$ -- 520
-text.length$ -- 88
+substring$ -- 1990
+swap$ -- 502
+text.length$ -- 86
 text.prefix$ -- 3
 top$ -- 1
 type$ -- 124
 warning$ -- 0
-while$ -- 280
+while$ -- 225
 width$ -- 0
-write$ -- 140
+write$ -- 137

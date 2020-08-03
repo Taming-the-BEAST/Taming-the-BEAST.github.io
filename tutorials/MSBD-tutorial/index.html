@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>The MSBD package</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
+
+	
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+		
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script src="/js/transition.js"></script>
+	<script src="/js/collapse.js"></script>
+
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
+		<div class="container">	
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+									
+				<a class="navbar-brand" href="/">Taming the BEAST</a>
+				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-element">
+				<ul class="nav navbar-nav navbar-right">					
+					
+					<li>
+					
+					<a href="/news/">news</a></li>
+
+					
+                                        <li>
+					
+                                        <a href="/workshops/">workshops</a></li>
+
+					
+					<li>
+					
+					<a href="/tutorials/">tutorials</a></li>	    	  
+
+					
+					<li>
+					
+					<a href="/contribute/">contribute</a></li>
+					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>	
+</div>
+
+<!--div class="headerspacer"></div-->
+
+	
+	<div class="container">	
+		
+	<script src="/js/sidebar.js"></script>
+
+
+
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/MSBD-tutorial/">The MSBD package</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Inferring lineage-dependent birth and death rates
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Joëlle Barido-Sottani
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="/tutorials/MSBD-tutorial/MSBD-tutorial.pdf">MSBD-tutorial.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-github fa-fw"></i>
+				<a class="off" href="https://github.com/bjoelle/MSBD-tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="fa fa-certificate fa-fw"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="fa fa-bar-chart fa-fw"></i>
+				<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/data/hummingbirds.MCC.tre" target="_blank" rel="nofollow">
+						hummingbirds.MCC.tre
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-align-justify fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/data/hummingbirds.nex" target="_blank" rel="nofollow">
+						hummingbirds.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-code fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/xml/hummingbirds.xml" target="_blank" download rel="nofollow">
+						hummingbirds.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-cogs fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/scripts/plot_MCC.R" target="_blank" download rel="nofollow">
+						plot_MCC.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/precooked_runs/hummingbirds.hummingbirds.rates.log.gz" target="_blank" download rel="nofollow">
+						hummingbirds.hummingbirds.r...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/precooked_runs/hummingbirds.hummingbirds.rates.trees.gz" target="_blank" download rel="nofollow">
+						hummingbirds.hummingbirds.r...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/precooked_runs/hummingbirds.hummingbirds.states.log.gz" target="_blank" download rel="nofollow">
+						hummingbirds.hummingbirds.s...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/raw/master/precooked_runs/hummingbirds.log.gz" target="_blank" download rel="nofollow">
+						hummingbirds.log.gz
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars3.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/bjoelle">
+    			<img class="pull-left avatar" src="https://avatars0.githubusercontent.com/u/14575423?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				bjoelle
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars1.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/commit/d3512156c1c991e4d9ff5a7fd7697752d01a1af0">
+					03 Aug 2020 - <span class="text-gray">Merge pull request #1 from laduplessis/master
+
+Update tutorial for TTB website</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/commit/a5a8051d1530b10cad65567161e877b855ee959e">
+					03 Aug 2020 - <span class="text-gray">Add latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/commit/c440b0f2d47bc449e56e092174861dc332f2337f">
+					03 Aug 2020 - <span class="text-gray">Edit style</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/commit/ddce37b88aef020aefc1a23d66b22ed30d7c9a0e">
+					02 Aug 2020 - <span class="text-gray">Fix liquid and bibtex errors. Still need to fix Katex errors, not parsing n^* correctly</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/commit/438c718b0a9160ec4202a2ce14bd05310e02b6e9">
+					09 Apr 2020 - <span class="text-gray">wording edits</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1>Background</h1>
+
+<p>This tutorial will show how to configure and run a model with lineage-dependent birth and death rates, using the BEAST2 package MSBD.</p>
+
+<p>The MSBD package relies on a multi-type birth death model which is composed of a number of evolutionary regimes, also called types or states, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mo>∗</mo></msub></mrow><annotation encoding="application/x-tex">n_*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>.</p>
+
+<p>Each type is associated with a birth rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">λ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and a death rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">μ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>. A lineage in type <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span> will change to any another type <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span> with a uniform rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>γ</mi></mrow><mrow><msub><mi>n</mi><mo>∗</mo></msub><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">m_{i,j} = \frac{\gamma}{n_* - 1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.7475em;"></span><span class="strut bottom" style="height:1.1975em;vertical-align:-0.44999999999999996em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">m</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">i</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:0.15em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle cramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.05556em;">γ</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05556em;">γ</span></span></span></span> is the total type change rate.
+The MSBD package is able to infer <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mo>∗</mo></msub></mrow><annotation encoding="application/x-tex">n_*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05556em;">γ</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">λ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">μ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> for all types, as well as the locations of types and type changes on the tree.</p>
+
+<p>More details on the model and an evaluation of its performance in various conditions can be found in the original publication <a class="citation" href="#MSBD2020">(Barido-Sottani, Vaughan, &amp; Stadler, 2020)</a>.</p>
+
+<p>You may notice similarities between MSBD and the model used in another BEAST2 package, BDMM. The main difference is that MSBD is able to infer the number of types as well as the types at the tips of the tree, whereas BDMM requires you to fix them. Thus MSBD is more appropriate if the character driving the differences in rates is unobserved or unknown. On the other hand, BDMM integrates more complex dynamics than the current implementation of MSBD: in particular, it includes asymmetrical transition rates as well as mixed birth events (where the two lineages produced by a birth event are of different types), which are not currently available in MSBD.</p>
+
+<hr>
+
+<h1>Programs used in this Exercise</h1>
+
+<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses BEAST2 version 2.6.0.</p>
+
+<h3>BEAUti -- Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti is a utility program with a graphical user interface for creating BEAST2 input files, which are written in XML. The eXtensible Markup Language (XML) is a general-purpose markup language, which allows for the combination of text and additional information. The use of the XML makes analysis specification very flexible and readable by both the program and people. The XML file specifies all the components of the analysis, including sequences, node calibrations, models, priors, output file names.</p>
+
+<h3>TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis. </p>
+
+<h3>Tracer</h3>
+
+<p>Tracer is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95% credible intervals (which approximate the 95% highest posterior density intervals) and effective sample sizes (ESS) of parameters. Contrary to the other software in this section, Tracer is not distributed with BEAST2 and needs to be downloaded separately <a href="http://beast.community/tracer">here</a>.</p>
+
+<hr>
+
+<h1>Practical: Lineage-specific Birth and Death Rate Inference</h1>
+
+<h2>Dataset: Hummingbird Phylogeny</h2>
+
+<p>The dataset used in this tutorial is a time-calibrated phylogeny of 284 species of hummingbirds, which was estimated by <a class="citation" href="#McGuire2014">(McGuire et al., 2014)</a>. This phylogeny was built from an alignment of 436 sequences representing six genes (four nuclear and two mitochondrial).</p>
+
+<p>In this tutorial, we focus on estimating the MSBD model and its parameters, and so we are going to fix this phylogeny in our analysis. However, it is also possible to co-estimate both the phylogeny and the MSBD model from an alignment in BEAST2.</p>
+
+<h2>Setting up the XML file</h2>
+
+<p>This section will demonstrate how to create an XML configuration file using BEAUti, which will then be used to run the analysis in BEAST2.</p>
+
+<h3>Package installation</h3>
+
+<p>The first step is to install the MSBD package, which will allow us to set up and run an analysis with lineage-specific birth and death rates.</p>
+
+<blockquote>
+<p>Open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="packageManage1"></a>
+    <img style="width:75.0%;" src="figures/package_manager.png" alt="">
+    <figcaption>Figure 1: Finding the BEAST2 Package Manager.</figcaption>
+</figure>
+
+<p><br></p>
+
+<blockquote>
+<p>Install the <strong>MSBD</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button. (<a href="#packageManage2">Figure 2</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="packageManage2"></a>
+    <img style="width:65.0%;" src="figures/packageMSBD.png" alt="">
+    <figcaption>Figure 2: The BEAST2 Package Manager.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>BEAUti needs to be restarted for the newly installed package to be loaded properly.</p>
+
+<blockquote>
+<p>Close the <strong>BEAST2 Package Manager</strong> and <strong><em>restart</em></strong> BEAUti to fully load the <strong>MSBD</strong> package.</p>
+</blockquote>
+
+<h3>Setting the templates</h3>
+
+<p>BEAUti uses templates to define specific model configurations. The MSBD template needs to be selected to set up an analysis using the MSBD model.</p>
+
+<blockquote>
+<p>Select the <strong>MSBD template</strong> by navigating to <strong>File &gt; Template</strong>. (<a href="#template">Figure 3</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="template"></a>
+    <img style="width:75.0%;" src="figures/template.png" alt="">
+    <figcaption>Figure 3: Selecting the MSBD template.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>Importing the alignment</h3>
+
+<p>This analysis will be run with a fixed tree topology, however BEAUti requires an alignment to be loaded in order to set the other components of the model. As a result, we will load a dummy alignment, which is just the sequence &quot;A&quot; for all taxa.</p>
+
+<blockquote>
+<p>In the <strong>Partitions</strong> panel, import the alignment by navigating to <strong>File &gt; Import Alignment</strong> in the menu (<a href="#importAlignment">Figure 4</a>) and then finding the <code>hummingbirds.nex</code> file on your computer <strong>or</strong> simply drag and drop the file into the <strong>BEAUti</strong> window.</p>
+</blockquote>
+
+<figure>
+    <a id="importAlignment"></a>
+    <img style="width:75.0%;" src="figures/alignment.png" alt="">
+    <figcaption>Figure 4: Importing the alignment into BEAUti.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>Importing the tree</h3>
+
+<p>As mentioned earlier, we want to run this analysis with a fixed tree topology. By default BEAUti generates a random starting tree compatible with the alignment, so we need to change this to our fixed tree.</p>
+
+<blockquote>
+<p>In the <strong>Tree</strong> panel, set the dropdown to <strong>Tree From Newick</strong>.
+Copy-paste the Newick tree found in the <code>hummingbirds.MCC.tre</code> file into the <strong>Newick</strong> field.
+Uncheck the <strong>Estimate Topology</strong> checkbox.</p>
+</blockquote>
+
+<p>The final tree configuration is shown in <a href="#importTree">Figure 5</a>.</p>
+
+<figure>
+    <a id="importTree"></a>
+    <img style="width:75.0%;" src="figures/tree.png" alt="">
+    <figcaption>Figure 5: Importing the tree into BEAUti.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>The parameter priors</h3>
+
+<p>The next step is to look at the parameter priors, in the <strong>Priors</strong> panel. The default priors on the birth rates (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">λ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>), death rates (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">μ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>) and total number of types (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mo>∗</mo></msub></mrow><annotation encoding="application/x-tex">n_*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>) are reasonable for this dataset so we will not change them.</p>
+
+<p>The expected average number of type changes across the entire tree is given by <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>=</mo><mi>γ</mi><mo>×</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">n = \gamma \times L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.05556em;">γ</span><span class="mbin">×</span><span class="mord mathit">L</span></span></span></span>, where L is the total length of the tree. The length of the fixed tree used in this analysis is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo><mn>1</mn><mn>4</mn><mn>8</mn><mn>2</mn></mrow><annotation encoding="application/x-tex">\approx 1482</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span><span class="mord mathrm">1</span><span class="mord mathrm">4</span><span class="mord mathrm">8</span><span class="mord mathrm">2</span></span></span></span>, so the default prior on <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05556em;">γ</span></span></span></span> would lead to a high expected number of type changes. From the previous analysis performed in BAMM, we expect only a few type changes across this phylogeny, so we will set the prior on <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05556em;">γ</span></span></span></span> to a lower range, using a <strong>LogNormal(-4.0, 1.0)</strong> distribution.</p>
+
+<blockquote>
+<p>Click on the arrow next to <strong>gamma</strong> and change the value for <strong>M</strong> (mean) of the default log normal distribution to <strong>-4</strong> (<a href="#gammaPrior">Figure 6</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="gammaPrior"></a>
+    <img style="width:75.0%;" src="figures/gammaprior.png" alt="">
+    <figcaption>Figure 6: Setting the prior on the type change rate.</figcaption>
+</figure>
+
+<p><br></p>
+
+<h3>The tree prior</h3>
+
+<p>Next, we will specify the tree prior, i.e. the MSBD model. By default most of the parameters of the model are estimated, so it is not necessary to change their starting values. However, the extant sampling proportion (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span></span></span></span>) and extinct sampling probability (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">σ</span></span></span></span>) are fixed. There are no extinct samples in this dataset, and we have sampled 86% of the extant hummingbirds species so we will set <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sigma = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">σ</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>8</mn><mn>6</mn></mrow><annotation encoding="application/x-tex">\rho = 0.86</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ρ</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">8</span><span class="mord mathrm">6</span></span></span></span>.</p>
+
+<blockquote>
+<p>Click on the arrow next to <strong>Tree</strong> and change the value for <strong>rho</strong> (extant sampling proportion) of the MSBD model to <strong>0.86</strong> (<a href="#treePrior">Figure 7</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="treePrior"></a>
+    <img style="width:75.0%;" src="figures/treeprior.png" alt="">
+    <figcaption>Figure 7: Setting the MSBD tree prior.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Note that many other options are available in this section, such as fixing the number of states or the value of some parameters (<strong>estimate</strong> checkboxes), setting the birth rate or the death rate to be shared between states (<strong>identical across states</strong> checkboxes), or setting the model to only use sampling-through-time (<strong>To The Present</strong> checkbox) .</p>
+
+<h3>MCMC options</h3>
+
+<p>The next step is to set the options for running the chain, in the <strong>MCMC</strong> panel. We can see that several loggers are set by default:</p>
+
+<ul>
+<li>the regular trace log, which in our case only records the posterior, likelihood and prior, as we are not using a substitution or clock model.</li>
+<li>the screenlog, which shows the advancement of the chain to the screen.</li>
+<li>the tree log, which will log the trees in Nexus format, with the birth and death rate on each edge as metadata.</li>
+<li>the state change model log, which logs the parameters associated with the model, i.e. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05556em;">γ</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mo>∗</mo></msub></mrow><annotation encoding="application/x-tex">n_*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>, the number of sampled states and the birth and death rates for each state (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">λ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">μ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>).</li>
+<li>the tip rates log, which logs the birth and death rates at each tip (optionally, at each node if the <strong>nodeLog</strong> option is activated).</li>
+</ul>
+
+<p>These last three logs are specific to MSBD. The only thing we will change here is the number of states recorded in the model. By default, only the sampled states are recorded, however this results in a log that is not in table format and so cannot be easily loaded into Tracer. Fixing the number of recorded states solves this problem.</p>
+
+<blockquote>
+<p>In the <strong>MCMC</strong> panel, click on the arrow next to <strong>stdStateslog</strong> and click on the  <strong>Edit</strong> button to the right of the <strong>StateChangeModelLogger</strong> (<a href="#logs">Figure 8</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="logs"></a>
+    <img style="width:75.0%;" src="figures/logs.png" alt="">
+    <figcaption>Figure 8: Opening the state change model log.</figcaption>
+</figure>
+
+<p><br></p>
+
+<blockquote>
+<p>In the new panel, set the value of <strong>maxStates</strong> to 10 (<a href="#logpanel">Figure 9</a>).
+ Close the panel by clicking on <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="logpanel"></a>
+    <img style="width:65.0%;" src="figures/logstates.png" alt="">
+    <figcaption>Figure 9: Setting the state change model log.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>Once all the options have been set, the final step is to save the XML.</p>
+
+<blockquote>
+<p>Save the XML file as <code>hummingbirds.xml</code> by navigating to <strong>File &gt; Save</strong>.</p>
+</blockquote>
+
+<h2>Running the analysis in BEAST2</h2>
+
+<blockquote>
+<p>Start <strong>BEAST2</strong> and choose the file <code>hummingbirds.xml</code>. </p>
+
+<p>If you have <strong>BEAGLE</strong> installed tick the box to <strong>Use BEAGLE library if available</strong>, which will make the run faster.</p>
+
+<p>Hit <strong>Run</strong> to start the analysis.</p>
+</blockquote>
+
+<p>The run should take about 15-20 minutes.</p>
+
+<h2>Analyzing the output</h2>
+
+<h3>Output files</h3>
+
+<p>Our run has generated 4 different files:</p>
+
+<ul>
+<li><code>hummingbirds.log</code> which is the general trace log.</li>
+<li><code>hummingbirds.hummingbirds.states.log</code> which recorded the parameters associated with the state model.</li>
+<li><code>hummingbirds.hummingbirds.rates.log</code> which recorded the rates on tips of the tree.</li>
+<li><code>hummingbirds.hummingbirds.rates.trees</code> which recorded the sampled trees in Nexus format.</li>
+</ul>
+
+<h3>Analyzing the log files</h3>
+
+<p>We will use the software Tracer to analyze the log files. The general trace log is not very interesting in our case, as we used a fixed tree. Next, we will look at the MSBD model log, contained in the file <code>hummingbirds.hummingbirds.states.log</code>.
+<a href="#gamma">Figure 10</a> shows the estimated posterior distribution for the type change rate, which in this analysis has a median estimate of 5.35E-3, with a 95% HPD of [4.04E-4 ; 0.014].</p>
+
+<figure>
+    <a id="gamma"></a>
+    <img src="figures/tracer_gamma.png" alt="">
+    <figcaption>Figure 10: Estimated posterior distribution of the type change rate, as shown in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>One important thing to note is that the estimates of <code>lambda</code> and <code>mu</code> in this log should not be directly used. This is due to the fact that the types in our model are not tied to tips, so they may not represent the same evolutionary regimes in all samples. For instance, in the presence of two regimes, there may be samples where type 0 corresponds to the regime with higher birth, while in other samples this regime is represented by type 1. We can see this in <a href="#lbda">Figure 11</a>, where the estimate for <code>lambda_0</code> shows a discrepancy around 6.5E7 samples, which corresponds to <code>lambda_0</code> and <code>lambda_1</code> exchanging values. This also means that ESS values for these parameters may be low even if the chain has converged.</p>
+
+<figure>
+    <a id="lbda"></a>
+    <img src="figures/tracer_lambda.png" alt="">
+    <figcaption>Figure 11: Trace of the birth rate for type 0, as shown in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>In order to look at the actual birth and death rates estimates, we can look at the tip rates log, stored in the file <code>hummingbirds.hummingbirds.rates.log</code>. <a href="#tip_uni">Figure 12</a> and <a href="#tip_bi">Figure 13</a> show examples of the estimated posterior distributions of the birth rate for two different tips. </p>
+
+<figure>
+    <a id="tip_uni"></a>
+    <img src="figures/tracer_tip_unim.png" alt="">
+    <figcaption>Figure 12: Estimated posterior distribution of the birth rate at tip Topaza.pella, as shown in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="tip_bi"></a>
+    <img src="figures/tracer_tip_bim.png" alt="">
+    <figcaption>Figure 13: Estimated posterior distribution of the birth rate at tip Amazilia.leucogaster, as shown in Tracer.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We can see that these two tips present two very different configurations. The first tip shows a unimodal posterior distribution, which indicates that it is confidently assigned to one particular evolutionary regime. On the other hand, the second tip presents a bimodal distribution, indicating that there are two distinct evolutionary regimes, with two distinct birth rates, which it can be assigned to. 
+This is important to note because the usual metrics used to summarize posterior distributions, i.e. the median and 95% HPD interval, work well in the first case but can give a misleading representation of the posterior in the second case. In this case the median estimate for the birth rate of <em>Amazilia.leucogaster</em> is 0.40, which corresponds approximately to the second mode of the distribution, however neither the median nor the 95% HPD interval show the existence of a second possible regime, with birth rate <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span>0.22.</p>
+
+<h3>Analyzing the trees</h3>
+
+<p>Another way to visualize the results is to look at the rates as plotted on the tree. We can use TreeAnnotator to build an MCC tree from the tree log in the file <code>hummingbirds.hummingbirds.rates.trees</code>. Since we also logged the birth and death rates for each edge in the tree log, these parameters will also be summarized along with the tree.</p>
+
+<blockquote>
+<p>Start <strong>TreeAnnotator</strong> and set the input tree to the tree log file.</p>
+
+<p>Set the burn-in percentage to 10%.</p>
+
+<p>Give a name to the output file, for instance <code>hummingbirds.MCC.tre</code>.</p>
+
+<p>Finally, click <strong>Run</strong> to start the summary.</p>
+</blockquote>
+
+<p>The MCC tree can be loaded into any tree visualization software, such as FigTree or IcyTree. We are going to use the R script provided in this tutorial <code>plot_MCC.R</code>. This script takes as input the MCC tree file and an output file to store the plot, and it will plot the MCC tree with edges coloured by the median estimates of the birth and death rates.
+Run the following commands in an R console to create the plots:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="n">source</span><span class="p">(</span><span class="s2">"plot_MCC.R"</span><span class="p">)</span><span class="w">
+</span><span class="n">MCC_colour_plot</span><span class="p">(</span><span class="s2">"hummingbirds.MCC.tre"</span><span class="p">,</span><span class="w"> </span><span class="n">plotfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hummingbirds_MCC.pdf"</span><span class="p">)</span><span class="w">
+</span></code></pre></div>
+<p><a href="#mcc_birth">Figure 14</a> and <a href="#mcc_death">Figure 15</a> show the resulting plots for the birth rate and the death rate, respectively.</p>
+
+<figure>
+    <a id="mcc_birth"></a>
+    <img src="figures/mcc_birth.png" alt="">
+    <figcaption>Figure 14: MCC tree with edges coloured by the median birth rate.</figcaption>
+</figure>
+
+<p><br></p>
+
+<figure>
+    <a id="mcc_death"></a>
+    <img src="figures/mcc_death.png" alt="">
+    <figcaption>Figure 15: MCC tree with edges coloured by the median death rate.</figcaption>
+</figure>
+
+<p><br></p>
+
+<p>We can see that while most of the tree shares one evolutionary regime (in red), some clades are inferred to have evolved under a second regime (in green), with higher birth and death rates. 
+From this figure it is not possible to tell whether the clades coloured in yellow-orange represent a third intermediate regime, or whether there is uncertainty as to which of the two regimes they belong to.</p>
+
+<p>Going back to the rates log file and using the full posterior distribution rather than just the median, we see that the intermediate colour is likely due to uncertainty rather than a third regime.</p>
+
+<h1>Useful Links</h1>
+
+<ul>
+<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+<li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+</ul>
+
+<hr>
+
+<h1>Relevant References</h1>
+
+<ol class="bibliography"><li><span id="MSBD2020">Barido-Sottani, J., Vaughan, T. G., &amp; Stadler, T. (2020). A Multi-Type Birth-Death model for Bayesian inference of lineage-specific birth and death rates. <i>Systematic Biology</i>. https://doi.org/10.1093/sysbio/syaa016</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="McGuire2014">McGuire, J. A., Witt, C. C., Remsen, J. V., Corl, A., Rabosky, D. L., Altshuler, D. L., &amp; Dudley, R. (2014). Molecular Phylogenetics and the Diversification of Hummingbirds. <i>Current Biology</i>, <i>24</i>(8), 910–916. https://doi.org/10.1016/j.cub.2014.03.016</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+<hr>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+	<div class="container">
+		<div class="col-md-6 reduced-gutter">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/about/">about</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
+					</li>	
+					<li class="footernav">
+						<i class="fa"></i> <a class="foot" href="/license/">license</a>
+					</li>	
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+		
+		<div class="col-md-5 text-right">
+			<div class="bigspacer"></div>		
+				<ul class="list-inline">					
+					<li class="footernav">
+						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+					</li>								
+				</ul>
+			<div class="spacer"></div>			
+		</div>
+
+		<div class="col-md-1 reduced-gutter">
+			<div class="spacer"></div>						
+				<div class="title text-gray">
+					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
+				</div>
+			<div class="spacer"></div>			
+		</div>
+	</div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

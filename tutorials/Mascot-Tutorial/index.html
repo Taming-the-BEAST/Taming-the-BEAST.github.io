@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8"/>
-	<title>MASCOT v1.2.2 Tutorial</title>
+	<title>MASCOT v2.1.2 Tutorial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
@@ -106,7 +106,7 @@
 				
 				
 				
-				<li><a class="off" href="/tutorials/Mascot-Tutorial/">MASCOT v1.2.2 Tutorial</a></li>
+				<li><a class="off" href="/tutorials/Mascot-Tutorial/">MASCOT v2.1.2 Tutorial</a></li>
 				
 			
 			</ol>
@@ -223,6 +223,15 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-file-text-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.H3N2.trees" target="_blank" download rel="nofollow">
+						H3N2.H3N2.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-file-text-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.log" target="_blank" download rel="nofollow">
 						H3N2.log
 					</a>
@@ -234,15 +243,6 @@
 					<i class="fa fa-file-text-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.trees" target="_blank" download rel="nofollow">
 						H3N2.trees
-					</a>
-				</li>
-			
-				
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/raw/master/precooked_runs/H3N2.mcc.trees" target="_blank" download rel="nofollow">
-						H3N2.mcc.trees
 					</a>
 				</li>
 			
@@ -296,6 +296,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/0ce434732f406a8791509e2b0dbde015830b7a6d">
+					24 Jul 2020 - <span class="text-gray">adds new xmls/runs</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/43f9c5a75e2c7b6a826512eb8fc9109ff5500c02">
+					22 Jul 2020 - <span class="text-gray">updates tutorial to version 2</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/390e9876fa01dbf85427a5f6f6673cb98e659d50">
 					11 Oct 2019 - <span class="text-gray">adds error section</span>
 					</a> 
@@ -314,22 +330,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/e1fa209a4464709cedb22d21673740934d8b694b">
 					19 Jun 2018 - <span class="text-gray">changed clock rate prior</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/83de382357b47d466921c21094bac14266538fbf">
-					19 Jun 2018 - <span class="text-gray">added link to Peter Beerlis backwards migration explanation</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/nicfel/Mascot-Tutorial/commit/1a9f71e8227161f3e35b3b6dcae1119a7b29a0c8">
-					18 Jun 2018 - <span class="text-gray">citation and version update</span>
 					</a> 
 				</li>
 			
@@ -354,7 +354,7 @@
 
 <h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.6.x <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
 <h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -404,19 +404,18 @@
 
 <p>MASCOT will only be available in BEAUti once you close and restart the program.</p>
 
-<h3>Loading the template</h3>
-
-<p>Next, we have to load the BEAUTi template from <em>File</em>, select <em>Template &gt;&gt; Mascot</em>.</p>
-
 <h3>Loading the Influenza A/H3N2 Sequences (Partitions)</h3>
 
-<p>The sequence alignment is in the file <a href="http://github.com/nicfel/Mascot-Tutorial/raw/master/data/H3N2.nexus">H3N2.nexus</a>. Right-click on this link and save it to a folder on your computer. Once downloaded, this file can either be drag-and-dropped into BEAUti or added by using BEAUti&#39;s menu system via <em>File &gt;&gt; Import Alignment</em>. Once the sequences are added, we need to specify the sampling dates and locations.</p>
+<p>The sequence alignment is in the file <a href="http://github.com/nicfel/Mascot-Tutorial/raw/master/data/H3N2.nexus">H3N2.nexus</a>.
+Right-click on this link and save it to a folder on your computer.
+Once downloaded, this file can either be drag-and-dropped into BEAUti or added by using BEAUti&#39;s menu system via <em>File &gt;&gt; Import Alignment</em>.
+Once the sequences are added, we need to specify the sampling dates and locations.</p>
 
 <h3>Get the sampling times (Tip Dates)</h3>
 
 <p>Open the &quot;Tip Dates&quot; panel and then select the &quot;Use tip dates&quot; checkbox.</p>
 
-<p>The sampling times are encoded in the sequence names.  We can tell BEAUti to use these by clicking the <em>Auto-configure</em> button. The sampling times appear following the third vertical bar &quot;|&quot; in the sequence name. To extract these times, select &quot;split on character&quot;, enter &quot;|&quot; (without the quotes) in the text box immediately to the right, and then select &quot;3&quot; from the drob-down box to the right, as shown in the figure below.</p>
+<p>The sampling times are encoded in the sequence names.  We can tell BEAUti to use these by clicking the <em>Auto-configure</em> button. The sampling times appear following the third vertical bar &quot;|&quot; in the sequence name. To extract these times, select &quot;split on character&quot;, enter &quot;|&quot; (without the quotes) in the text box immediately to the right, and then select &quot;3&quot; from the drop-down box to the right, as shown in the figure below.</p>
 
 <figure>
     <a id="fig:example1"></a>
@@ -426,26 +425,13 @@
 
 <p>Clicking &quot;Ok&quot; should now populate the table with the sample times extracted from the sequence names: the column <strong>Date</strong> should now have values between 2000 and 2002 and the column <strong>Height</strong> should have values from 0 to 2. The heights denote the time difference from a sequence to the most recently sampled sequence. If everything is specified correctly, the sequence with Height 0.0 should have Date 2001.9. Next, the sampling locations need to be specified.</p>
 
-<h3>Get the sampling locations (Tip Locations)</h3>
-
-<p>As for the sampling times, sampling locations can be extracted from
-the sequence names.  Select the &quot;Tip Locations&quot; panel.  Initially the
-column <strong>Location</strong> should be NOT_SET for every sequence.  After
-clicking the <em>Guess</em> button, you can split the sequence on the
-vertical bar &quot;|&quot; again by selecting &quot;split on character&quot; and entering
-&quot;|&quot; in the box. However, the locations are in the fourth group, so
-this time choose &quot;4&quot; from the drop-down menu. After clicking the <em>OK</em>
-button, the window should look like the one shown in the figure below:</p>
-
-<figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/TipLocations.png" alt="">
-    <figcaption>Figure 3: Configuring sample locations.</figcaption>
-</figure>
-
 <h3>Specify the Site Model (Site Model)</h3>
 
-<p>Next, we have to specify the site model. To do this, choose the &quot;Site Model&quot; tab. For Influenza Hemagluttanin sequences as we have here, HKY is the most commonly used model of nucleotide evolution. This model allows for differences in transversion and transition rates, meaning that changes between bases that are chemically more closely related (transitions) are allowed to have a different rate to changes between bases that chemically more distinct (transversions). Additionally, we should allow for different rate categories for different sires in the alignment. This can be done by setting the <em>Gamma Category Count</em> to 4, which is just a value that has typically been used. Make sure that estimate is checked next to the shape parameter. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical.</p>
+<p>Next, we have to specify the site model.
+To do this, choose the &quot;Site Model&quot; tab.
+For Influenza Hemagluttanin sequences as we have here, HKY is the most commonly used model of nucleotide evolution. This model allows for differences in transversion and transition rates, meaning that changes between bases that are chemically more closely related (transitions) are allowed to have a different rate to changes between bases that chemically more distinct (transversions).
+Additionally, we should allow for different rate categories for different sires in the alignment.
+This can be done by setting the <em>Gamma Category Count</em> to 4, which is just a value that has typically been used. Make sure that estimate is checked next to the shape parameter. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical.</p>
 
 <figure>
     <a id="fig:example1"></a>
@@ -465,11 +451,26 @@ button, the window should look like the one shown in the figure below:</p>
 
 <h3>Specify the priors (Priors)</h3>
 
+<p>We first have to choose the tree prior, which in this case is MASCOT.
+To do so, search the drop down menu next to <code>Tree.t:H3N2</code> and choose MASCOT.
+By default, the rate dynamics for this setting is <code>Constant</code>, which means that effective population sizes and migration rates are assumed to be constant through time.
+We next have to define the sampling location of the individual tips.</p>
+
+<p>Initially the column <strong>Location</strong> should be NOT_SET for every sequence.<br>
+After clicking the <em>Guess</em> button, you can split the sequence on the vertical bar &quot;|&quot; again by selecting &quot;split on character&quot; and entering &quot;|&quot; in the box. However, the locations are in the fourth group, so this time choose &quot;4&quot; from the drop-down menu.
+After clicking the <em>OK</em> button, the window should look like the one shown in the figure below:</p>
+
+<figure>
+    <a id="fig:example1"></a>
+    <img style="width:70%;" src="figures/TipLocations.png" alt="">
+    <figcaption>Figure 3: Configuring sample locations.</figcaption>
+</figure>
+
 <p>Now, we need to set the priors for the various parameters of the model. We do this by switching to the &quot;Priors&quot; tab.</p>
 
-<p>First, consider the effective population size parameter.  Since we have only a few samples per location, meaning little information about the different effective population sizes, we will need an informative prior. In this case we will use a log normal prior with parameters M=0 and S=1.  (These are respectively the mean and variance of the corresponding normal distribution in log space.)  To use this prior, choose &quot;Log Normal&quot; from the dropdown menu to the right of the Ne.t:H3N2 parameter label, then click the arrow to the left of the same label and fill in the parameter values appropriately (i.e. M=0 and S=1). Ensure that the &quot;mean in real space&quot; checkbox remains unchecked.</p>
+<p>First, consider the effective population size parameter.  Since we have only a few samples per location, meaning little information about the different effective population sizes, we will need an informative prior. In this case we will use a log normal prior with parameters M=0 and S=1.  (These are respectively the mean and variance of the corresponding normal distribution in log space.) To use this prior, choose &quot;Log Normal&quot; from the dropdown menu to the right of the Ne.t:H3N2 parameter label, then click the arrow to the left of the same label and fill in the parameter values appropriately (i.e. M=0 and S=1). Ensure that the &quot;mean in real space&quot; checkbox remains unchecked.</p>
 
-<p>The existing exponential distribution as a prior on the migration rate puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and very <em>very</em> small values is generally a good choice. Be aware however that the exponential distirbution is quite an informative prior: one should be careful that to choose a mean so that feasible rates are at least within the 95% HPD interval of the prior.  (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.)</p>
+<p>The existing exponential distribution as a prior on the migration rate puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and very <em>very</em> small values is generally a good choice. Be aware however that the exponential distribution is quite an informative prior: one should be careful that to choose a mean so that feasible rates are at least within the 95% HPD interval of the prior.  (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.)</p>
 
 <p>Finally, set the prior for the clock rate. We have a good idea about the clock rate of Influenza A/H3N2 Hemagglutinin. From previous work by other people, we know that the clock rate will be around 0.005 substitution per site per year. To include that prior knowledger, we can set the prior on the clock rate to a log normal distribution with mean in <strong>real space</strong>. To specify the mean in real space, make sure that the box <em>Mean In Real Space</em> is checked. If we set the S value to 0.25, we say that we expect the clock rate to be with 95% certainty between 0.00321 and 0.00731.
 <figure>
@@ -491,7 +492,7 @@ as</em>.</p>
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/MCMC.png" alt="">
-    <figcaption>Figure 7: save the *.xml.</figcaption>
+    <figcaption>Figure 7: save the \*.xml.</figcaption>
 </figure>
 
 <h3>Run the Analysis using BEAST2</h3>
@@ -521,7 +522,7 @@ as</em>.</p>
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/MeanMedian.png" alt="">
-    <figcaption>Figure 10: Differences between Mean and Meadian estimates.</figcaption>
+    <figcaption>Figure 10: Differences between mean and median estimates.</figcaption>
 </figure>
 
 <p>We can then look at the inferred migration rates. The migration rates have the label b_migration.*, meaning that they are backwards in time migration rates. The highest rates are from New York to Hong Kong. Because they are backwards in time migration rates, this means that lineages from New York are inferred to be likely from Hong Kong if we&#39;re going backwards in time. In the inferred phylogenies, we should therefore make the observation that lineages ancestral to samples from New York are inferred to be from Hong Kong backwards.</p>
@@ -531,7 +532,7 @@ as</em>.</p>
 <figure>
     <a id="fig:example1"></a>
     <img style="width:70%;" src="figures/LogMigration.png" alt="">
-    <figcaption>Figure 11: Compare the inferrred migration rates.</figcaption>
+    <figcaption>Figure 11: Compare the inferred migration rates.</figcaption>
 </figure>
 
 <h3>Make the MCC tree using TreeAnnotator</h3>

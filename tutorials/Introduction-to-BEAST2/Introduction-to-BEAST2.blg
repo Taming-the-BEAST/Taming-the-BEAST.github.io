@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019)
+This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Introduction-to-BEAST2.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Introduction-to-BEAST2-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.11
+Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 4 entries,
-            6304 wiz_defined-function locations,
-            1315 strings with 13187 characters,
-and the built_in function-call counts, 64551 in all, are:
-= -- 5825
-> -- 641
+            6256 wiz_defined-function locations,
+            1305 strings with 12978 characters,
+and the built_in function-call counts, 53590 in all, are:
+= -- 4682
+> -- 635
 < -- 129
-+ -- 1923
-- -- 288
-* -- 5115
-:= -- 8558
++ -- 1775
+- -- 286
+* -- 4242
+:= -- 6808
 add.period$ -- 0
 call.type$ -- 4
 change.case$ -- 85
-chr.to.int$ -- 35
+chr.to.int$ -- 31
 cite$ -- 6
-duplicate$ -- 5989
-empty$ -- 5378
+duplicate$ -- 5401
+empty$ -- 4383
 format.name$ -- 518
-if$ -- 12393
+if$ -- 10248
 int.to.chr$ -- 0
 int.to.str$ -- 9
 missing$ -- 0
-newline$ -- 311
+newline$ -- 308
 num.names$ -- 183
-pop$ -- 1560
+pop$ -- 1416
 preamble$ -- 1
 purify$ -- 158
 quote$ -- 0
-skip$ -- 814
+skip$ -- 824
 stack$ -- 0
-substring$ -- 11989
-swap$ -- 962
-text.length$ -- 125
+substring$ -- 9137
+swap$ -- 944
+text.length$ -- 123
 text.prefix$ -- 3
 top$ -- 1
 type$ -- 124
 warning$ -- 0
-while$ -- 1116
+while$ -- 821
 width$ -- 0
-write$ -- 308
+write$ -- 305

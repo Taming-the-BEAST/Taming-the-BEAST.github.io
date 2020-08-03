@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019)
+This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: SCOTTI-Tutorial.aux
 The style file: biblatex.bst
@@ -18,47 +18,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: SCOTTI-Tutorial-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.11
+Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 5 entries,
-            6304 wiz_defined-function locations,
-            1328 strings with 11989 characters,
-and the built_in function-call counts, 60094 in all, are:
-= -- 5240
-> -- 643
+            6256 wiz_defined-function locations,
+            1318 strings with 11780 characters,
+and the built_in function-call counts, 49078 in all, are:
+= -- 4076
+> -- 637
 < -- 139
-+ -- 1491
-- -- 262
-* -- 5007
-:= -- 7504
++ -- 1379
+- -- 260
+* -- 4034
+:= -- 5877
 add.period$ -- 0
 call.type$ -- 5
 change.case$ -- 70
-chr.to.int$ -- 52
+chr.to.int$ -- 48
 cite$ -- 8
-duplicate$ -- 5043
-empty$ -- 5380
+duplicate$ -- 4595
+empty$ -- 4329
 format.name$ -- 454
-if$ -- 11893
+if$ -- 9673
 int.to.chr$ -- 0
 int.to.str$ -- 10
 missing$ -- 0
-newline$ -- 276
+newline$ -- 272
 num.names$ -- 196
-pop$ -- 1723
+pop$ -- 1616
 preamble$ -- 1
 purify$ -- 125
 quote$ -- 0
-skip$ -- 826
+skip$ -- 840
 stack$ -- 0
-substring$ -- 11296
-swap$ -- 975
-text.length$ -- 145
+substring$ -- 8237
+swap$ -- 951
+text.length$ -- 143
 text.prefix$ -- 4
 top$ -- 1
 type$ -- 158
 warning$ -- 0
-while$ -- 895
+while$ -- 672
 width$ -- 0
-write$ -- 272
+write$ -- 268

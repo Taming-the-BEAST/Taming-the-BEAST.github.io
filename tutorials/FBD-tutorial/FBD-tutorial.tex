@@ -1587,6 +1587,114 @@ Box 6: BEAST 2 XML specification of the priors for the FBD parameters (new).\\
 Note that we have changed the priors to Exponential(1.0) for the death rate and Exponential(0.5) for the sampling rate.
 
 \bigskip
+\section{More with XML -- fully extinct clades}
+
+We have seen in this tutorial how to co-estimate the age of the fossils with the rest of the MCMC. This can also be done for fully extinct clades, i.e. clades with no extant samples, however it is more tricky. The reason for that is that BEAST2 will always consider the youngest sample to be at age 0. This is not an issue if fossil ages are fixed, as you just need to record the age of the youngest sample as offset. It becomes a problem when we want to estimate fossil ages, as the offset may change from sample to sample, and the youngest fossil may not even be the same throughout the chain.
+
+To fix this issue, the SA package contains a "TreeWOffset" object, which allows a tree to be recorded along with its offset. This object is not accessible through the BEAUti interface, so using it requires editing the XML file.
+
+The first step is to locate the part of the XML where the FBD process is defined, shown in Box 7.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<distribution id="FBD.t:bearsTree" spec="beast.evolution.speciation.SABirthDeathModel" conditionOnRhoSampling="true" diversificationRate="@birthRateFBD.t:bearsTree" origin="@originFBD.t:bearsTree" samplingProportion="@samplingRateFBD.t:bearsTree" tree="@Tree.t:bearsTree" turnover="@deathRateFBD.t:bearsTree">
+		<parameter id="rFBD.t:bearsTree" lower="0.0" name="removalProbability" upper="1.0">0.0</parameter>
+		<parameter id="rhoFBD.t:bearsTree" estimate="false" lower="0.0" name="rho" upper="1.0">1.0</parameter>
+</distribution>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 7: BEAST 2 XML specification of the FBD process (old).\\
+\end{center}
+
+We need to add our treeWOffset object to the distribution, and connect it to the bears tree object. The "offset" parameter should be set to the starting age of the youngest fossil. Since this is an example and the bears dataset contains extant species, we will set the offset to $0$. The new FBD process specification is shown in Box 8. Note that we have not removed the "tree="@Tree.t:bearsTree" parameter from the FBD process, as this input is required.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<distribution id="FBD.t:bearsTree" spec="beast.evolution.speciation.SABirthDeathModel" conditionOnRhoSampling="true" diversificationRate="@birthRateFBD.t:bearsTree" origin="@originFBD.t:bearsTree" samplingProportion="@samplingRateFBD.t:bearsTree" tree="@Tree.t:bearsTree" turnover="@deathRateFBD.t:bearsTree">
+		<parameter id="rFBD.t:bearsTree" lower="0.0" name="removalProbability" upper="1.0">0.0</parameter>
+		<parameter id="rhoFBD.t:bearsTree" estimate="false" lower="0.0" name="rho" upper="1.0">1.0</parameter>
+		<treeWOffset id="treeWOffset:bearsTree" spec="beast.evolution.tree.TreeWOffset" tree="@Tree.t:bearsTree" offset="0.0"/>
+</distribution>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 8: BEAST 2 XML specification of the FBD process (new).\\
+\end{center}
+
+The next step is to update the "SampledNodeDateRandomWalker" operators to use our tree with offset as input. An example is shown in Boxes 9 and 10.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<operator id="tipDatesSampler.Arctodus_simus" spec="SampledNodeDateRandomWalker" taxonset="@Arctodus_simus" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 9: BEAST 2 XML specification of a SampledNodeDateRandomWalker operator (old).\\
+\end{center}
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<operator id="tipDatesSampler.Arctodus_simus" spec="SampledNodeDateRandomWalker" taxonset="@Arctodus_simus" tree="@Tree.t:bearsTree" treeWOffset="@treeWOffset:bearsTree" weight="1.0" windowSize="1.0"/>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 10: BEAST 2 XML specification of a SampledNodeDateRandomWalker operator (new).\\
+\end{center}
+
+Finally, we will add a logger to the trace log, shown in Box 11, in order to record the value of the offset at each sample of the chain.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<logger id="tracelog" fileName="bearsDivtime_FBD.1.log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="treeLikelihood.bears_irbp_fossils"/>
+        <log idref="treeLikelihood.bears_cytb_fossils"/>
+        <log id="TreeHeight.t:bearsTree" spec="beast.evolution.tree.TreeHeightLogger" tree="@Tree.t:bearsTree"/>
+        <log idref="mutationRate.s:bears_cytb_fossils"/>
+        			[...]
+        <log idref="Zaragocyon_daamsi.prior"/>
+        <log idref="freqParameter.s:bears_irbp_fossils"/>
+        <log idref="freqParameter.s:bears_cytb_fossils"/>
+</logger>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 11: BEAST 2 XML specification of the trace log (old).\\
+\end{center}
+
+The new trace log is shown in Box 12.
+
+\begin{center}
+{\tt \scriptsize{\begin{minipage}{6.5in}
+\begin{lstlisting}[language=XML]
+<logger id="tracelog" fileName="bearsDivtime_FBD.1.log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="treeLikelihood.bears_irbp_fossils"/>
+        <log idref="treeLikelihood.bears_cytb_fossils"/>
+        <log id="TreeHeight.t:bearsTree" spec="beast.evolution.tree.TreeHeightLogger" tree="@Tree.t:bearsTree"/>
+        <log idref="mutationRate.s:bears_cytb_fossils"/>
+        			[...]
+        <log idref="Zaragocyon_daamsi.prior"/>
+        <log idref="freqParameter.s:bears_irbp_fossils"/>
+        <log idref="freqParameter.s:bears_cytb_fossils"/>
+        <log id="offset" spec="beast.evolution.tree.OffsetLogger" treeWOffset="@treeWOffset:bearsTree"/>
+</logger>
+\end{lstlisting}
+\end{minipage}}}\\\vspace{4mm}
+Box 12: BEAST 2 XML specification of the trace log (new).\\
+\end{center}
+
+One last thing to note is that trees obtained using this procedure can not be summarized directly in TreeAnnotator, as they do not all have the same offset. One way to work around this problem is to add a "dummy" extant tip to each tree, thus placing all the other tips at the correct age. The trees with that additional tip can then be summarized normally using TreeAnnotator. Finally, the dummy tip can be removed to obtain the correct MCC tree.
+
+We provide an \cl{R} script named \cl{treesWoffset.R} to help with this process. This script requires the \cl{treeio} package to be installed. The function \cl{transform.woffset.root} takes as input the .trees and .log files produced by a BEAST analysis (parameters \cl{treesfile} and \cl{logfile}, respectively), adds a dummy tip to all trees, and saves the resulting trees to the file given by \cl{outfile}.
+The function \cl{convert.MCC.tree} can then be used to remove the dummy tip from the summary tree (contained in the file given by \cl{treefile}) and save the final tree to the file given by \cl{outfile}.
+
+\bigskip
 \section{Useful Links}
 
 \begin{itemize}
