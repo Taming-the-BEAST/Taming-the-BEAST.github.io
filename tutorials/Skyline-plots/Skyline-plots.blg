@@ -1,9 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Skyline-plots.aux
 The style file: biblatex.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -16,49 +16,50 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Skyline-plots-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.3
+Biblatex version: 3.13
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 14 entries,
-            6256 wiz_defined-function locations,
-            1415 strings with 23712 characters,
-and the built_in function-call counts, 202237 in all, are:
-= -- 17357
-> -- 2410
-< -- 529
-+ -- 6816
-- -- 1108
-* -- 16098
-:= -- 25054
+            6365 wiz_defined-function locations,
+            1433 strings with 24068 characters,
+and the built_in function-call counts, 246696 in all, are:
+= -- 21568
+> -- 2767
+< -- 641
++ -- 7503
+- -- 1340
+* -- 20079
+:= -- 31812
 add.period$ -- 0
 call.type$ -- 14
 change.case$ -- 359
-chr.to.int$ -- 38
+chr.to.int$ -- 52
 cite$ -- 26
-duplicate$ -- 21545
-empty$ -- 16590
-format.name$ -- 2052
-if$ -- 38452
+duplicate$ -- 23936
+empty$ -- 20218
+format.name$ -- 2164
+if$ -- 47620
 int.to.chr$ -- 0
 int.to.str$ -- 37
 missing$ -- 0
-newline$ -- 1240
+newline$ -- 1253
 num.names$ -- 775
-pop$ -- 5741
+pop$ -- 6264
 preamble$ -- 1
 purify$ -- 642
 quote$ -- 0
-skip$ -- 3194
+skip$ -- 3625
 stack$ -- 0
-substring$ -- 32840
-swap$ -- 4042
-text.length$ -- 456
+substring$ -- 43233
+swap$ -- 4219
+text.length$ -- 574
 text.prefix$ -- 17
 top$ -- 1
 type$ -- 464
 warning$ -- 0
-while$ -- 3112
+while$ -- 4252
 width$ -- 0
-write$ -- 1227
+write$ -- 1240

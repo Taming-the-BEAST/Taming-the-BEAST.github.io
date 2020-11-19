@@ -149,12 +149,6 @@
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
-					<a class="off" href="/tutorials/Structured-birth-death-model/Structured-birth-death-model.pdf">Structured-birth-death-model.pdf</a>	
-				</li>
-			
 			<div class="smallspacer"></div>
 			<li>
 				<i class="fa fa-github fa-fw"></i>
@@ -328,6 +322,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/5a37c5a2288fb7f443d7a325cc45501d684b7f40">
+					19 Nov 2020 - <span class="text-gray">Removed obsolete LaTeX version.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/2425e49927343b6a2bd934d3a985d660b97c5711">
+					19 Nov 2020 - <span class="text-gray">Fixed mistake in time direction of count logger.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/7eb210510c6daf4cdecbe3d1416f98fc1b9a4bcc">
 					12 Mar 2019 - <span class="text-gray">Updated figure and BEAST version.</span>
 					</a> 
@@ -346,22 +356,6 @@
 					<i class="fa fa-check-square-o fa-fw"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/df2182dd1b7a560643bbaf2f4339cf518bad6280">
 					20 Feb 2019 - <span class="text-gray">Fixed tick box issue in fig 15.</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/bae686846a37ec4b1c33a36608196e79d90072bb">
-					31 Aug 2018 - <span class="text-gray">Update README.md</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/958eec120da623d2280b5bb6dc3dfe919869281c">
-					27 Aug 2018 - <span class="text-gray">minor edits bdmm tutorial</span>
 					</a> 
 				</li>
 			
@@ -801,7 +795,7 @@ Note that the screen captures below were taken using Tracer 1.6 and may therefor
 <li><p><code>R0.t:h3n2_2deme1</code> and <code>R0.t:h3n2_2deme2</code>: These give the effective reproduction numbers for deme 1 (Hong Kong) and 2 (New Zealand), respectively.</p></li>
 <li><p><code>becomeUninfectiousRate.t:h3n2_deme21</code> and <code>becomeUninfectiousRate.t:h3n2_deme22</code>: These are the rates of recovery for someone with flu in either of the locations.</p></li>
 <li><p><code>rateMatrix.t:h3n2_2deme1</code> and <code>rateMatrix.t:h3n2_2deme2</code>: These give the (per lineage per year) migration rates from deme 1 to 2 and vice versa.</p></li>
-<li><p><code>Tree.t:h3n2_2deme.count_HongKong_to_NewZealand</code>: these give the number of ancestral migrations from Hong Kong to New Zealand on the inferred tree, going from past to present.</p></li>
+<li><p><code>Tree.t:h3n2_2deme.count_HongKong_to_NewZealand</code>: these give the number of ancestral migrations from Hong Kong to New Zealand on the inferred tree, <strong>backwards in time</strong>.</p></li>
 </ul>
 
 <p>The tabs at the top-right of the window can be used to display one or more selected traces in various ways.
