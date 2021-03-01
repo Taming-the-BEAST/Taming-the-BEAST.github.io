@@ -3,13 +3,30 @@
 	<channel>
 		<title>Taming the BEAST - News</title>
 		<description>BEAST2 tutorials for the community, by the community!</description>
-		<link>https://taming-the-beast.org/</link>
-		<atom:link href="https://taming-the-beast.org/feed.news.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000feed.news.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>https://taming-the-beast.org//images/logo_bw.svg</url>
+			<url>http://localhost:4000/images/logo_bw.svg</url>
 			<title>Taming the BEAST</title>
-			<link>https://taming-the-beast.org//tutorials</link>
+			<link>http://localhost:4000/tutorials</link>
 		</image>
+		
+			<item>
+				<title>Taming the BEAST Online!</title>
+				<description>&lt;p&gt;We are very excited to announce the latest Taming the BEAST workshop!&lt;/p&gt;
+
+&lt;p&gt;This workshop will take place &lt;strong&gt;online&lt;/strong&gt; from &lt;strong&gt;June 07 through to to June 11, 2021&lt;/strong&gt; and is being organized by members of Tanja Stadler&amp;#39;s Computational Evolution Group, &lt;a href=&quot;https://www.bsse.ethz.ch/cevo&quot;&gt;cEvo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For further information, including registration fees and information on how to apply, visit the &lt;a href=&quot;https://bsse.ethz.ch/cevo/taming-the-beast/overview-2021.html&quot;&gt;cEvo Taming the BEAST Online homepage&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/images/workshops/Taming-the-BEAST-Online-Flyer.jpg&quot; alt=&quot;Flyer&quot;&gt;
+&lt;/figure&gt;
+</description>
+				<pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
+				<link>http://localhost:4000/news/Taming-the-BEAST-Online/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-Online/</guid>
+			</item>
 		
 			<item>
 				<title>TTB 2020 Cancelled</title>
@@ -19,8 +36,8 @@ interest in the workshop, and will announce plans for the next
 workshop in 2021 as they become available.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 30 Jun 2020 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-2020-cancelled/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-2020-cancelled/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-2020-cancelled/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-2020-cancelled/</guid>
 			</item>
 		
 			<item>
@@ -31,8 +48,8 @@ everyone for the widespread interest in this workshop, and will
 announce a revised schedule for the workshop as soon as possible.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 13 Mar 2020 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-2020-postponed/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-2020-postponed/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-2020-postponed/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-2020-postponed/</guid>
 			</item>
 		
 			<item>
@@ -42,8 +59,8 @@ announce a revised schedule for the workshop as soon as possible.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Reminder:&lt;/strong&gt; Registration closes on March 1, so if you haven&amp;#39;t registered already you&amp;#39;ll need to get in quickly!  Registration is via &lt;a href=&quot;https://bsse.ethz.ch/cevo/taming-the-beast/overview-2020/registration.html&quot;&gt;this web page&lt;/a&gt;.  (Registration does not require payment, you will only be invoiced when your application is approved.)&lt;/p&gt;
 </description>
 				<pubDate>Wed, 26 Feb 2020 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-2020-programme/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-2020-programme/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-2020-programme/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-2020-programme/</guid>
 			</item>
 		
 			<item>
@@ -65,8 +82,8 @@ Computational Evolution Group, &lt;a href=&quot;https://www.bsse.ethz.ch/cevo&qu
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 02 Dec 2019 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-2020-reg-open/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-2020-reg-open/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-2020-reg-open/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-2020-reg-open/</guid>
 			</item>
 		
 			<item>
@@ -85,8 +102,8 @@ Computational Evolution Group, &lt;a href=&quot;https://www.bsse.ethz.ch/cevo&qu
 &lt;p&gt;Check back often for updates!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 22 Nov 2019 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-2020/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-2020/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-2020/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-2020/</guid>
 			</item>
 		
 			<item>
@@ -105,8 +122,8 @@ Computational Evolution Group, &lt;a href=&quot;https://www.bsse.ethz.ch/cevo&qu
 links displayed on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Squamish/&quot;&gt;workshop programme&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 22 Aug 2019 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/Squamish-wrap-up-Eh/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Squamish-wrap-up-Eh/</guid>
+				<link>http://localhost:4000/news/Squamish-wrap-up-Eh/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Squamish-wrap-up-Eh/</guid>
 			</item>
 		
 			<item>
@@ -115,8 +132,8 @@ links displayed on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Squamish/&qu
 now available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Squamish/&quot;&gt;TTB Eh! workshop page&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 10 Jul 2019 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/TTB-Canada-Programme/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/TTB-Canada-Programme/</guid>
+				<link>http://localhost:4000/news/TTB-Canada-Programme/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/TTB-Canada-Programme/</guid>
 			</item>
 		
 			<item>
@@ -128,8 +145,8 @@ from the &lt;a href=&quot;/workshops&quot;&gt;workshops page&lt;/a&gt;.&lt;/p&gt
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Wed, 20 Mar 2019 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/TTB-Canada-Website/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/TTB-Canada-Website/</guid>
+				<link>http://localhost:4000/news/TTB-Canada-Website/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/TTB-Canada-Website/</guid>
 			</item>
 		
 			<item>
@@ -149,8 +166,8 @@ such an enjoyable and productive event!&lt;/p&gt;
 links displayed on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Down-Under/&quot;&gt;workshop programme&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 23 Feb 2019 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-wrap-up/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-wrap-up/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-Down-Under-wrap-up/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-Down-Under-wrap-up/</guid>
 			</item>
 		
 			<item>
@@ -171,8 +188,8 @@ Centre. &lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Sun, 17 Feb 2019 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/TTB-Canada/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/TTB-Canada/</guid>
+				<link>http://localhost:4000/news/TTB-Canada/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/TTB-Canada/</guid>
 			</item>
 		
 			<item>
@@ -181,8 +198,8 @@ Centre. &lt;/p&gt;
 available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Down-Under/&quot;&gt;TTB Down Under workshop page&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 15 Feb 2019 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/TTBDU_Programme_Final/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/TTBDU_Programme_Final/</guid>
+				<link>http://localhost:4000/news/TTBDU_Programme_Final/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/TTBDU_Programme_Final/</guid>
 			</item>
 		
 			<item>
@@ -191,8 +208,8 @@ available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Down-Under/&quot;&
 available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Down-Under/&quot;&gt;TTB Down Under workshop page&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-programme/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-programme/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-Down-Under-programme/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-Down-Under-programme/</guid>
 			</item>
 		
 			<item>
@@ -218,8 +235,8 @@ or refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 06 Sep 2018 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-Down-Under/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-Down-Under/</guid>
 			</item>
 		
 			<item>
@@ -237,8 +254,8 @@ Switzerland.  An enormous thank you goes to all of the speakers and
 participants for making this such an enjoyable and productive event!&lt;/p&gt;
 </description>
 				<pubDate>Sun, 24 Jun 2018 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/Oberaegeri-wrap-up/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Oberaegeri-wrap-up/</guid>
+				<link>http://localhost:4000/news/Oberaegeri-wrap-up/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Oberaegeri-wrap-up/</guid>
 			</item>
 		
 			<item>
@@ -247,8 +264,8 @@ participants for making this such an enjoyable and productive event!&lt;/p&gt;
 available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-2018/&quot;&gt;Oberägeri workshop page&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 08 May 2018 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/Oberaegeri-programme/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Oberaegeri-programme/</guid>
+				<link>http://localhost:4000/news/Oberaegeri-programme/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Oberaegeri-programme/</guid>
 			</item>
 		
 			<item>
@@ -273,8 +290,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 08 Feb 2018 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-returns-to-Switzerland!/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-returns-to-Switzerland!/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-returns-to-Switzerland!/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-returns-to-Switzerland!/</guid>
 			</item>
 		
 			<item>
@@ -305,8 +322,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;Finally, it is now also possible to read the news feed and see tutorial updates by subscribing to the RSS feeds.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Aug 2017 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/London-wrap-up/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/London-wrap-up/</guid>
+				<link>http://localhost:4000/news/London-wrap-up/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/London-wrap-up/</guid>
 			</item>
 		
 			<item>
@@ -320,8 +337,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Wed, 12 Jul 2017 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-in-Systematic-Biology!/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-in-Systematic-Biology!/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-in-Systematic-Biology!/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-in-Systematic-Biology!/</guid>
 			</item>
 		
 			<item>
@@ -331,8 +348,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;Just a reminder that &lt;a href=&quot;http://www.lshtm.ac.uk/newsevents/events/2017/07/taming-the-beast-2017&quot;&gt;registration&lt;/a&gt; is still open until 26 June and that the workshop costs only £245!&lt;/p&gt;
 </description>
 				<pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/London-programme/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/London-programme/</guid>
+				<link>http://localhost:4000/news/London-programme/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/London-programme/</guid>
 			</item>
 		
 			<item>
@@ -354,8 +371,8 @@ refer to the flyer below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Mon, 03 Apr 2017 00:00:00 +0200</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-comes-to-London!/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-comes-to-London!/</guid>
+				<link>http://localhost:4000/news/Taming-the-BEAST-comes-to-London!/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-comes-to-London!/</guid>
 			</item>
 		
 			<item>
@@ -387,8 +404,8 @@ Finally, all of the lecture slides from the workshop have been uploaded and are 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
 				<pubDate>Tue, 28 Feb 2017 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Waiheke-and-what-comes-next/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Waiheke-and-what-comes-next/</guid>
+				<link>http://localhost:4000/news/Waiheke-and-what-comes-next/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Waiheke-and-what-comes-next/</guid>
 			</item>
 		
 			<item>
@@ -411,8 +428,8 @@ The workshop program can be found &lt;a href=&quot;/workshops/Taming-the-BEAST-i
 &lt;p&gt;I would also like to congratulate Tanja Stadler and her &lt;a href=&quot;https://www.bsse.ethz.ch/cevo&quot;&gt;group&lt;/a&gt; for successfully writing a grant to host another Taming the BEAST workshop and to support 3 more workshops in the future! Keep checking the &lt;a href=&quot;/workshops/&quot;&gt;workshops&lt;/a&gt; page for updates on future workshops!&lt;/p&gt;
 </description>
 				<pubDate>Sun, 05 Feb 2017 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Welcome-to-Waiheke!/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Welcome-to-Waiheke!/</guid>
+				<link>http://localhost:4000/news/Welcome-to-Waiheke!/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Welcome-to-Waiheke!/</guid>
 			</item>
 		
 			<item>
@@ -420,8 +437,8 @@ The workshop program can be found &lt;a href=&quot;/workshops/Taming-the-BEAST-i
 				<description>&lt;p&gt;All of the lecture slides from the workshop held in Engelberg are now available for download. The slides are kept in a GitHub repository, and there is a link to the repository on the &lt;a href=&quot;/workshops/&quot;&gt;workshops&lt;/a&gt; page. Thanks to everyone for making their slides available! Please do not forget to attribute the authors if you use the slides anywhere!&lt;/p&gt;
 </description>
 				<pubDate>Mon, 19 Dec 2016 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Engelberg-lecture-slides/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Engelberg-lecture-slides/</guid>
+				<link>http://localhost:4000/news/Engelberg-lecture-slides/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Engelberg-lecture-slides/</guid>
 			</item>
 		
 			<item>
@@ -460,8 +477,8 @@ For instance, someone who has developed a new BEAST 2 package can add a tutorial
 The resources on the website are not only useful for individuals who want to learn how to use BEAST2, but also as a teaching aid, for workshops or even regular university courses. &lt;/p&gt;
 </description>
 				<pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Welcome-BEAST-tamers!/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Welcome-BEAST-tamers!/</guid>
+				<link>http://localhost:4000/news/Welcome-BEAST-tamers!/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Welcome-BEAST-tamers!/</guid>
 			</item>
 		
 	</channel>
