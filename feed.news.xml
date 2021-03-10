@@ -12,6 +12,24 @@
 		</image>
 		
 			<item>
+				<title>Fee exemptions for TTB Online</title>
+				<description>&lt;p&gt;Our mission has always been to provide BEAST 2 educational resources
+to as many people as possible.  We are therefore happy to announce
+that we will be able to wave the 150 CHF registration fee for Taming
+the BEAST Online for a strictly limited number of applicants, on an as-needed
+basis.&lt;/p&gt;
+
+&lt;p&gt;Instructions for applying for a fee exemption are available on
+the Taming the BEAST Online
+&lt;a href=&quot;https://bsse.ethz.ch/cevo/taming-the-beast/overview-2021/registration.html&quot;&gt;
+registration page&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 10 Mar 2021 00:00:00 +0100</pubDate>
+				<link>http://localhost:4000/news/TTB-Online-Fee-Exemptions/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/TTB-Online-Fee-Exemptions/</guid>
+			</item>
+		
+			<item>
 				<title>Taming the BEAST Online!</title>
 				<description>&lt;p&gt;We are very excited to announce the latest Taming the BEAST workshop!&lt;/p&gt;
 
@@ -439,46 +457,6 @@ The workshop program can be found &lt;a href=&quot;/workshops/Taming-the-BEAST-i
 				<pubDate>Mon, 19 Dec 2016 00:00:00 +0100</pubDate>
 				<link>http://localhost:4000/news/Engelberg-lecture-slides/</link>
 				<guid isPermaLink="true">http://localhost:4000/news/Engelberg-lecture-slides/</guid>
-			</item>
-		
-			<item>
-				<title>Welcome BEAST tamers!</title>
-				<description>&lt;p&gt;In June this year we organised the first Taming the BEAST workshop, surrounded by the Swiss Alps, in Engelberg, Switzerland. 
-The idea of holding a BEAST 2 workshop has been brewing for a while, motivated by the need for a Bayesian phylogenetics workshop that is focused on BEAST 2 and facilitates exchanges between developers and (both current and future) BEAST 2 users.
-During the workshop we realised that the materials we created and assembled for the workshop represent a very useful resource and that we could reach many more users by making them available to the community. &lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;/images/workshops/Taming-the-BEAST-Engelberg.JPG&quot; alt=&quot;&quot;&gt;
-    &lt;figcaption&gt;The 2016 workshop organisers and participants.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Originally we intended to simply release the tutorials and lecture slides in a single GitHub repository. However, after some discussions, we decided to build a Taming the BEAST website. The website provides a user-friendly front-end that collects tutorials, lecture slides and more in one location. 
-To start, we have collected all of the &lt;a href=&quot;/tutorials&quot;&gt;tutorials&lt;/a&gt; from this year&amp;#39;s workshop on the website (a couple are still missing, but they will be uploaded soon). Behind the scenes each tutorial lives in its own GitHub repository, where it&amp;#39;s bundled along with all of the supporting data files and scripts needed to run the tutorial. We&amp;#39;ve also bundled example XML and output files with each tutorial. Although everything is available on a GitHub repository, there are also links to all of the files on the website. &lt;/p&gt;
-
-&lt;p&gt;All tutorials are available as PDF files from the website. We have started converting some of the tutorials to Markdown, which can be more easily displayed in a web browser. So far, three tutorials have been converted: &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/Introduction-to-BEAST2/&quot;&gt;Introduction to BEAST2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/Skyline-plots/&quot;&gt;Skyline plots&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/Structured-birth-death-model/&quot;&gt;Structured birth-death model&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We hope that with time we will be able to convert all tutorials to Markdown.
-Don&amp;#39;t worry if you want to print or download tutorials - PDFs of tutorials will always be available! (At present there is no PDF tutorial for the &lt;a href=&quot;/tutorials/Structured-birth-death-model/&quot;&gt;Structured birth-death model&lt;/a&gt;, but this will be uploaded shortly).&lt;/p&gt;
-
-&lt;p&gt;Since tutorials are stored on GitHub, it is easy for anyone in the community to contribute to Taming the BEAST. 
-Because each tutorial is stored in its own repository the website is robust to changes in any single repository.
-We hope that the community will play an active role in curating the tutorials, either by updating or correcting existing tutorials, or by contributing new tutorials. 
-For instance, someone who has developed a new BEAST 2 package can add a tutorial for the package to Taming the BEAST, where it will be accessible in a central location, along with other BEAST 2 tutorials, making it easier for BEAST 2 users to become familiar with the package.&lt;/p&gt;
-
-&lt;p&gt;We hope that the website will serve as a central repository that collects BEAST 2 teaching resources in one central location. 
-The resources on the website are not only useful for individuals who want to learn how to use BEAST2, but also as a teaching aid, for workshops or even regular university courses. &lt;/p&gt;
-</description>
-				<pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate>
-				<link>http://localhost:4000/news/Welcome-BEAST-tamers!/</link>
-				<guid isPermaLink="true">http://localhost:4000/news/Welcome-BEAST-tamers!/</guid>
 			</item>
 		
 	</channel>
