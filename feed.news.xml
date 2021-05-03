@@ -12,6 +12,16 @@
 		</image>
 		
 			<item>
+				<title>TTB Online programme</title>
+				<description>&lt;p&gt;The preliminary programme for Taming the BEAST Online is now
+available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Online/&quot;&gt;TTB Online workshop page&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 03 May 2021 00:00:00 +0200</pubDate>
+				<link>http://localhost:4000/news/Online-programme/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Online-programme/</guid>
+			</item>
+		
+			<item>
 				<title>Fee exemptions for TTB Online</title>
 				<description>&lt;p&gt;Our mission has always been to provide BEAST 2 educational resources
 to as many people as possible.  We are therefore happy to announce
@@ -448,15 +458,6 @@ The workshop program can be found &lt;a href=&quot;/workshops/Taming-the-BEAST-i
 				<pubDate>Sun, 05 Feb 2017 00:00:00 +0100</pubDate>
 				<link>http://localhost:4000/news/Welcome-to-Waiheke!/</link>
 				<guid isPermaLink="true">http://localhost:4000/news/Welcome-to-Waiheke!/</guid>
-			</item>
-		
-			<item>
-				<title>Engelberg lecture slides</title>
-				<description>&lt;p&gt;All of the lecture slides from the workshop held in Engelberg are now available for download. The slides are kept in a GitHub repository, and there is a link to the repository on the &lt;a href=&quot;/workshops/&quot;&gt;workshops&lt;/a&gt; page. Thanks to everyone for making their slides available! Please do not forget to attribute the authors if you use the slides anywhere!&lt;/p&gt;
-</description>
-				<pubDate>Mon, 19 Dec 2016 00:00:00 +0100</pubDate>
-				<link>http://localhost:4000/news/Engelberg-lecture-slides/</link>
-				<guid isPermaLink="true">http://localhost:4000/news/Engelberg-lecture-slides/</guid>
 			</item>
 		
 	</channel>
