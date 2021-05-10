@@ -12,6 +12,59 @@
 		</image>
 				
 			<item>
+				<title>Time stamped data</title>
+				<description>
+					Time-stamped data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Remco Bouckaert
+							
+					
+						
+								,  Walter Xie
+						
+					
+						
+								,  Fábio K. Mendes
+						
+					
+						
+								
+									and  and Alexei Drummond
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/walterxie/MEP-tutorial/commit/0dc38ad402d6e3077781399b3ef30af605d5ff0f'
+					&gt;
+						10 May 2021
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/walterxie'
+					&gt;
+						walterxie
+					&lt;/a&gt;
+					: add Fabio
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.6.4
+					
+				</description>
+				<pubDate>Mon, 10 May 2021 03:26:41 +0200</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Structured birth death model</title>
 				<description>
 					Population structure using the multi-type birth-death model
@@ -544,57 +597,6 @@ Added section on sampling fossil ages with fully extinct clades
 			</item>
 				
 			<item>
-				<title>Time stamped data</title>
-				<description>
-					Time-stamped data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Alexei Drummond
-							
-					
-						
-								,  Remco Bouckaert
-						
-					
-						
-								
-									and  Walter Xie
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/rbouckaert/MEP-tutorial/commit/3e9854515227274443834cdf351f9fa292510cda'
-					&gt;
-						26 Mar 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/rbouckaert'
-					&gt;
-						rbouckaert
-					&lt;/a&gt;
-					: Merge pull request #1 from tgvaughan/patch-1
-
-Renamed output directory.
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Tue, 26 Mar 2019 10:35:35 +0100</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
-			</item>
-				
-			<item>
 				<title>Model selection</title>
 				<description>
 					Model selection with nested sampling
@@ -872,9 +874,9 @@ Added local update describing species-tree specification with BEAUti.
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						'https://github.com/junniest'
+						''
 					&gt;
-						junniest
+						Unknown
 					&lt;/a&gt;
 					: Minor fixes for the tutorial
 					&lt;br&gt;&lt;br&gt;
