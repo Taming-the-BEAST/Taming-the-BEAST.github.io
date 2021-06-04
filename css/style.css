@@ -9656,6 +9656,9 @@ figcaption {
 table td.food {
   background-color: #cfc;
 }
+table td.social {
+  background-color: white;
+}
 table td.lecture {
   background-color: #ffc;
 }
