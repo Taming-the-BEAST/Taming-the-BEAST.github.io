@@ -12,6 +12,26 @@
 		</image>
 		
 			<item>
+				<title>Taming the BEAST Online 2021 wrap up</title>
+				<description>&lt;figure&gt;
+    &lt;img src=&quot;/images/workshops/Taming-the-BEAST-Online.png&quot; alt=&quot;&quot;&gt;
+    &lt;figcaption&gt;Teachers and participants of Taming the BEAST 2021 Online.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;The first fully-online Taming the BEAST workshop was held last week!
+An enormous &lt;b&gt;thank you&lt;/b&gt; to each and every one of the speakers,
+tutors and participants for your efforts in overcomming the special
+challenges of the online format.  This was a very unique, enjoyable
+and productive event!&lt;/p&gt;
+</description>
+				<pubDate>Wed, 16 Jun 2021 00:00:00 +0200</pubDate>
+				<link>https://taming-the-beast.org//news/Online-wrap-up/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Online-wrap-up/</guid>
+			</item>
+		
+			<item>
 				<title>TTB Online programme</title>
 				<description>&lt;p&gt;The preliminary programme for Taming the BEAST Online is now
 available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Online/&quot;&gt;TTB Online workshop page&lt;/a&gt;.&lt;/p&gt;
@@ -434,30 +454,6 @@ Finally, all of the lecture slides from the workshop have been uploaded and are 
 				<pubDate>Tue, 28 Feb 2017 00:00:00 +0100</pubDate>
 				<link>https://taming-the-beast.org//news/Waiheke-and-what-comes-next/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//news/Waiheke-and-what-comes-next/</guid>
-			</item>
-		
-			<item>
-				<title>Welcome to Waiheke!</title>
-				<description>&lt;p&gt;The next Taming the BEAST workshop is officially about to start, on the beautiful Waiheke island, in the Hauruki Gulf of New Zealand! This time the workshop was organised by Alexei Drummond&amp;#39;s &lt;a href=&quot;https://www.compevol.auckland.ac.nz/en.html&quot;&gt;group&lt;/a&gt; at the University of Auckland. 
-The workshop program can be found &lt;a href=&quot;/workshops/Taming-the-BEAST-in-the-South-Pacific/&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
-
-&lt;p&gt;To prepare for the workshop we also uploaded 5 (five!) new tutorials and updated several of the older tutorials. The new tutorials are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/FBD-tutorial/&quot;&gt;Divergence Time Estimation using BEAST v2.x&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/Bacter-Tutorial/&quot;&gt;Bacter Tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/species-tree-clocks/&quot;&gt;Species Trees with Relaxed Molecular Clocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/calibrated-species-trees/&quot;&gt;Calibrated Species Trees&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/tutorials/adequacy_tutorial/&quot;&gt;Model adequacy using BEAST2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thanks to Tim Vaughan, Walter Xie, Remco Bouckaert, Huw Ogilvie, David Duchêne and Simon Ho for their help preparing and checking tutorials! &lt;/p&gt;
-
-&lt;p&gt;I would also like to congratulate Tanja Stadler and her &lt;a href=&quot;https://www.bsse.ethz.ch/cevo&quot;&gt;group&lt;/a&gt; for successfully writing a grant to host another Taming the BEAST workshop and to support 3 more workshops in the future! Keep checking the &lt;a href=&quot;/workshops/&quot;&gt;workshops&lt;/a&gt; page for updates on future workshops!&lt;/p&gt;
-</description>
-				<pubDate>Sun, 05 Feb 2017 00:00:00 +0100</pubDate>
-				<link>https://taming-the-beast.org//news/Welcome-to-Waiheke!/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Welcome-to-Waiheke!/</guid>
 			</item>
 		
 	</channel>
