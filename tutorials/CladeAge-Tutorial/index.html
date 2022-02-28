@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,18 +118,18 @@
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -175,7 +146,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/raw/master/data/Near_et_al_ids.txt" target="_blank" rel="nofollow">
 						Near_et_al_ids.txt
 					</a>
@@ -184,7 +155,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/raw/master/data/Near_et_al_red.nex" target="_blank" rel="nofollow">
 						Near_et_al_red.nex
 					</a>
@@ -204,7 +175,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/raw/master/xml/Near_et_al_red.xml" target="_blank" download rel="nofollow">
 						Near_et_al_red.xml
 					</a>
@@ -225,7 +196,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/raw/master/precooked_runs/Near_et_al_red.trees" target="_blank" download rel="nofollow">
 						Near_et_al_red.trees
 					</a>
@@ -234,7 +205,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/raw/master/precooked_runs/Near_et_al_red.tre" target="_blank" download rel="nofollow">
 						Near_et_al_red.tre
 					</a>
@@ -243,7 +214,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/raw/master/precooked_runs/Near_et_al_red.log" target="_blank" download rel="nofollow">
 						Near_et_al_red.log
 					</a>
@@ -298,7 +269,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/commit/64dee2c3e902340cec82edfbfc6c77cf794e4335">
 					21 Feb 2019 - <span class="text-gray">Merge branch 'master' of https://github.com/mmatschiner/CladeAge-Tutorial
 Added local update describing species-tree specification with BEAUti.</span>
@@ -307,7 +278,7 @@ Added local update describing species-tree specification with BEAUti.</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/commit/5c88ebee38840bceb558499941b7e70056a11ddb">
 					21 Feb 2019 - <span class="text-gray">Adding text for starting-tree specification with BEAUti</span>
 					</a> 
@@ -315,7 +286,7 @@ Added local update describing species-tree specification with BEAUti.</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/commit/c5a0c22fb9882fc0fd815a83b6822992271e58f5">
 					13 Aug 2018 - <span class="text-gray">Merge pull request #1 from tgvaughan/patch-1
 
@@ -325,7 +296,7 @@ Remove template latex tutorial from repo.</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/commit/885aca238c7cef997d82b0b7c6df09c7cc99474c">
 					13 Aug 2018 - <span class="text-gray">Remove template latex tutorial from repo.
 
@@ -335,7 +306,7 @@ Hi @mmatschiner, the documentation was unclear on this point (I'm fixing it now)
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/commit/0bd97759de5d6d39759f6419e6fc1e51b24f4cf6">
 					12 Aug 2018 - <span class="text-gray">Text polishing</span>
 					</a> 
@@ -350,745 +321,655 @@ Hi @mmatschiner, the documentation was unclear on this point (I'm fixing it now)
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
 <p>In Bayesian divergence-time estimation, phylogenies are commonly time calibrated through the specification of calibration densities on nodes that represent clades with known fossil occurrences. Unfortunately, the optimal shape of these calibration densities is usually unknown and they are therefore often chosen arbitrarily, which directly impacts the reliability of the resulting age estimates. CladeAge overcomes this limitation by calculating optimal calibration densities for clades with fossil records, based on estimates for diversification rates and the sampling rate for fossils. CladeAge thus shares similarities with the Fossilized Birth-Death (FBD) process; however, while the FBD model assumes that the fossil record is either completely or randomly sampled, the CladeAge model assumes that only information about the oldest fossil of each clade is available and can provide unbiased age estimates in such cases. CladeAge allows uncertainty in the diversification- and sampling-rate estimates, but unlike with the FBD model, these parameters must be known <em>a priori</em> and can not be estimated as part of the analysis.</p>
 
-<hr>
+<hr />
 
-<h1>Programs Used in This Tutorial</h1>
+<h1 id="programs-used-in-this-tutorial">Programs Used in This Tutorial</h1>
 
-<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
 <p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST2 version 2.5.0.</p>
 
-<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
 <p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>Tracer</h3>
+<h3 id="tracer">Tracer</h3>
 
 <p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
 
-<h3>TreeAnnotator</h3>
+<h3 id="treeannotator">TreeAnnotator</h3>
 
 <p>TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum-clade-credibility tree. It can also be used to summarize and visualize the posterior estimates of other tree parameters (e.g. node height). TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>FigTree</h3>
+<h3 id="figtree">FigTree</h3>
 
 <p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.2.</p>
 
-<hr>
+<hr />
 
-<h1>Tutorial: Fossil-Based Divergence-Time Estimation With CladeAge</h1>
+<h1 id="tutorial-fossil-based-divergence-time-estimation-with-cladeage">Tutorial: Fossil-Based Divergence-Time Estimation With CladeAge</h1>
 
 <p>In this tutorial, we are going to use a multi-marker sequence dataset in combination with fossil information to estimate the divergence times of cichlid fishes with the CladeAge model.</p>
 
 <p>The aim of this tutorial is to:</p>
 
 <ul>
-<li>Learn which fossil information is required to apply the CladeAge model.</li>
-<li>Learn how to estimate divergence times with CladeAge.</li>
+  <li>Learn which fossil information is required to apply the CladeAge model.</li>
+  <li>Learn how to estimate divergence times with CladeAge.</li>
 </ul>
 
-<h2>The data</h2>
+<h2 id="the-data">The data</h2>
 
-<p>The analyses in this tutorial will be based on the dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a>, comprising alignments for ten nuclear genes. In their study, Near et al. <a class="citation" href="#Near2013">(2013)</a> used this dataset to estimate divergence times of spiny-rayed fishes (=Acanthomorphata), and to identify shifts in diversification rates among different groups of these fishes. While the dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> did not focus on cichlid diversification, it included nine cichlid species among the 608 species sampled for the extensive phylogeny. Thus, we can here use part of this dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> to estimate early divergences among cichlid fishes. To facilitate the analyses in this tutorial, we will reduce the dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> to sequences of 24 selected species. These species represent divergent cichlid lineages as well as the most ancestral groups of spiny-rayed fishes so that the fossil record of these lineages can be employed for calibration.</p>
+<p>The analyses in this tutorial will be based on the dataset of Near et al. <a class="citation" href="#Near2013">(“Phylogeny and Tempo of Diversification in the Superradiation of Spiny-Rayed Fishes,” 2013)</a>, comprising alignments for ten nuclear genes. In their study, Near et al. <a class="citation" href="#Near2013">(“Phylogeny and Tempo of Diversification in the Superradiation of Spiny-Rayed Fishes,” 2013)</a> used this dataset to estimate divergence times of spiny-rayed fishes (=Acanthomorphata), and to identify shifts in diversification rates among different groups of these fishes. While the dataset of Near et al. <a class="citation" href="#Near2013">(“Phylogeny and Tempo of Diversification in the Superradiation of Spiny-Rayed Fishes,” 2013)</a> did not focus on cichlid diversification, it included nine cichlid species among the 608 species sampled for the extensive phylogeny. Thus, we can here use part of this dataset of Near et al. <a class="citation" href="#Near2013">(“Phylogeny and Tempo of Diversification in the Superradiation of Spiny-Rayed Fishes,” 2013)</a> to estimate early divergences among cichlid fishes. To facilitate the analyses in this tutorial, we will reduce the dataset of Near et al. <a class="citation" href="#Near2013">(“Phylogeny and Tempo of Diversification in the Superradiation of Spiny-Rayed Fishes,” 2013)</a> to sequences of 24 selected species. These species represent divergent cichlid lineages as well as the most ancestral groups of spiny-rayed fishes so that the fossil record of these lineages can be employed for calibration.</p>
 
-<h2>The CladeAge model</h2>
+<h2 id="the-cladeage-model">The CladeAge model</h2>
 
 <p>The approach of CladeAge is similar to the more traditional node-dating approach in the sense that prior densities are defined for the ages of different clades, and the minimum ages of these prior densities are provided by the oldest fossils of these clades. However, important differences exist between the CladeAge approach and node dating: First, the shape of age-prior densities is informed by a model of diversification and fossil sampling in the CladeAge approach, whereas in node dating, parametric distributions (e.g. lognormal or gamma) with more or less arbitrarily chosen parameters are usually applied. Second, because of the quantitative model used in the CladeAge approach, the clades used for calibration should also not be chosen at will. Instead, strictly all clades included in the phylogeny that (i) have a fossil record, (ii) are morphologically recognizable, and (iii) have their sister lineage also included in the phylogeny should be constrained according to the age of their oldest fossil. A consequence of this is that clades are constrained even when their known sister lineage has an older fossil record, and that the same fossil may be used to constrain not just one clade, but multiple nested clades, if the more inclusive clades do not have an even older fossil record. More details about these criteria can be found in our paper on CladeAge <a class="citation" href="#Matschiner2017">(Matschiner et al., 2017)</a>, and further information on using CladeAge is given in our <a href="http://evoinformatics.eu/cladeage.pdf">Rough Guide to CladeAge</a>.</p>
 
-<h2>Divergence-time estimation with CladeAge</h2>
+<h2 id="divergence-time-estimation-with-cladeage">Divergence-time estimation with CladeAge</h2>
 
-<h3>Preparing the molecular dataset</h3>
+<h3 id="preparing-the-molecular-dataset">Preparing the molecular dataset</h3>
 
-<p>As a first step, download the molecular dataset of Near et al. <a class="citation" href="#Near2013">(2013)</a> from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the <code>wget</code> utility.</p>
-
-<blockquote>
-<p>Execute the following command:</p>
-</blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">wget https://datadryad.org/bitstream/handle/10255/dryad.50839/Near_et_al.nex
-</code></pre></div>
-<p>Alternatively, you could use your browser to open the Dryad repository <a href="https://datadryad.org/resource/doi:10.5061/dryad.d3mb4">https://datadryad.org/resource/doi:10.5061/dryad.d3mb4</a> and download the file <code>Near_et_al.nex</code>.</p>
-
-<p>This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we&#39;ll extract the sequences of 24 species that represent major groups of spiny-rayed fishes <a class="citation" href="#Betancur2017">(Betancur-R et al., 2017)</a> as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.</p>
-
-<p><center></p>
-
-<table><thead>
-<tr>
-<th>ID</th>
-<th>Species</th>
-<th>Group</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Oreochromis_niloticus</td>
-<td><em>Oreochromis niloticus</em></td>
-<td>African cichlids</td>
-</tr>
-<tr>
-<td>Heterochromis_multidensA</td>
-<td><em>Heterochromis multidens</em></td>
-<td>African cichlids</td>
-</tr>
-<tr>
-<td>Cichla_temensisA</td>
-<td><em>Cichla temensis</em></td>
-<td>Neotropical cichlids</td>
-</tr>
-<tr>
-<td>Heros_appendictulatusA</td>
-<td><em>Heros appendictulatus</em></td>
-<td>Neotropical cichlids</td>
-</tr>
-<tr>
-<td>Etroplus_maculatusA</td>
-<td><em>Etroplus maculatus</em></td>
-<td>Indian cichlids</td>
-</tr>
-<tr>
-<td>Oryzias_latipes</td>
-<td><em>Oryzias latipes</em></td>
-<td>Atherinomorphae</td>
-</tr>
-<tr>
-<td>Trachinotus_carolinusA</td>
-<td><em>Trachinotus carolinus</em></td>
-<td>Carangaria</td>
-</tr>
-<tr>
-<td>Channa_striataA</td>
-<td><em>Channa striata</em></td>
-<td>Anabantiformes</td>
-</tr>
-<tr>
-<td>Monopterus_albusA</td>
-<td><em>Monopterus albus</em></td>
-<td>Synbranchiformes</td>
-</tr>
-<tr>
-<td>Gasterosteus_acuC</td>
-<td><em>Gasterosteus aculeatus</em></td>
-<td>Eupercaria</td>
-</tr>
-<tr>
-<td>Astrapogon_stellatusA</td>
-<td><em>Astrapogon tellatus</em></td>
-<td>Gobiaria</td>
-</tr>
-<tr>
-<td>Aulostomus_chinensisA</td>
-<td><em>Aulostomus chinensis</em></td>
-<td>Syngnatharia</td>
-</tr>
-<tr>
-<td>Thunnus_albacaresA</td>
-<td><em>Thunnus albacares</em></td>
-<td>Pelagaria</td>
-</tr>
-<tr>
-<td>Porichthys_notatusA</td>
-<td><em>Porichthys notatus</em></td>
-<td>Batrachoidiaria</td>
-</tr>
-<tr>
-<td>Diplacanthopoma_brunneaA</td>
-<td><em>Diplacanthopoma brunnea</em></td>
-<td>Ophidiaria</td>
-</tr>
-<tr>
-<td>Sargocentron_cornutumA</td>
-<td><em>Sargocentron cornutum</em></td>
-<td>Holocentrimorphaceae</td>
-</tr>
-<tr>
-<td>Rondeletia_loricataA</td>
-<td><em>Rondeletia loricata</em></td>
-<td>Beryciformes</td>
-</tr>
-<tr>
-<td>Monocentris_japonicaA</td>
-<td><em>Monocentris japonica</em></td>
-<td>Trachichthyiformes</td>
-</tr>
-<tr>
-<td>Polymixia_japonicaA</td>
-<td><em>Polymixia japonica</em></td>
-<td>Polymixiipterygii</td>
-</tr>
-<tr>
-<td>Regalecus_Glesne</td>
-<td><em>Regalecus glesne</em></td>
-<td>Lampripterygii</td>
-</tr>
-<tr>
-<td>Percopsis_omiscomaycusA</td>
-<td><em>Percopsis omiscomaycus</em></td>
-<td>Percopsaria</td>
-</tr>
-<tr>
-<td>Zenopsis_conchiferaB</td>
-<td><em>Zenopsis conchifera</em></td>
-<td>Zeiariae</td>
-</tr>
-<tr>
-<td>Stylephorus_chordatusB</td>
-<td><em>Stylephorus chordatus</em></td>
-<td>Stylephoriformes</td>
-</tr>
-<tr>
-<td>Gadus_morhua</td>
-<td><em>Gadus morhua</em></td>
-<td>Gadiformes</td>
-</tr>
-</tbody></table>
-
-<p></center></p>
-
-<p>A list of the 24 species IDs in plain text format is also in file <code>Near_et_al_ids.txt</code>. On the command line, we can use that file to extract the sequences of these species from the full alignment, and write them to a new file in Nexus format named <code>Near_et_al_red.nex</code>.</p>
+<p>As a first step, download the molecular dataset of Near et al. <a class="citation" href="#Near2013">(“Phylogeny and Tempo of Diversification in the Superradiation of Spiny-Rayed Fishes,” 2013)</a> from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the <code class="language-plaintext highlighter-rouge">wget</code> utility.</p>
 
 <blockquote>
-<p>Execute the following commands on the command line, after placing file <code>Near_et_al_ids.txt</code> in the same directory as <code>Near_et_al.nex</code>:</p>
+  <p>Execute the following command:</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">head -n 7 Near_et_al.nex | sed 's/ntax=608/ntax=24/g'&gt; Near_et_al_red.nex
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://datadryad.org/bitstream/handle/10255/dryad.50839/Near_et_al.nex
+</code></pre></div></div>
+
+<p>Alternatively, you could use your browser to open the Dryad repository <a href="https://datadryad.org/resource/doi:10.5061/dryad.d3mb4">https://datadryad.org/resource/doi:10.5061/dryad.d3mb4</a> and download the file <code class="language-plaintext highlighter-rouge">Near_et_al.nex</code>.</p>
+
+<p>This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we’ll extract the sequences of 24 species that represent major groups of spiny-rayed fishes <a class="citation" href="#Betancur2017">(Betancur-R et al., 2017)</a> as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.</p>
+
+<center>
+
+| ID                       | Species                   | Group                |
+|--------------------------|---------------------------|----------------------|
+| Oreochromis_niloticus    | _Oreochromis niloticus_   | African cichlids     |
+| Heterochromis_multidensA | _Heterochromis multidens_ | African cichlids     |
+| Cichla_temensisA         | _Cichla temensis_         | Neotropical cichlids |
+| Heros_appendictulatusA   | _Heros appendictulatus_   | Neotropical cichlids |
+| Etroplus_maculatusA      | _Etroplus maculatus_      | Indian cichlids      |
+| Oryzias_latipes          | _Oryzias latipes_         | Atherinomorphae      |
+| Trachinotus_carolinusA   | _Trachinotus carolinus_   | Carangaria           |
+| Channa_striataA          | _Channa striata_          | Anabantiformes       |
+| Monopterus_albusA        | _Monopterus albus_        | Synbranchiformes     |
+| Gasterosteus_acuC        | _Gasterosteus aculeatus_  | Eupercaria           |
+| Astrapogon_stellatusA    | _Astrapogon tellatus_     | Gobiaria             |
+| Aulostomus_chinensisA    | _Aulostomus chinensis_    | Syngnatharia         |
+| Thunnus_albacaresA       | _Thunnus albacares_       | Pelagaria            |
+| Porichthys_notatusA      | _Porichthys notatus_      | Batrachoidiaria      |
+| Diplacanthopoma_brunneaA | _Diplacanthopoma brunnea_ | Ophidiaria           |
+| Sargocentron_cornutumA   | _Sargocentron cornutum_   | Holocentrimorphaceae |
+| Rondeletia_loricataA     | _Rondeletia loricata_     | Beryciformes         |
+| Monocentris_japonicaA    | _Monocentris japonica_    | Trachichthyiformes   |
+| Polymixia_japonicaA      | _Polymixia japonica_      | Polymixiipterygii    |
+| Regalecus_Glesne         | _Regalecus glesne_        | Lampripterygii       |
+| Percopsis_omiscomaycusA  | _Percopsis omiscomaycus_  | Percopsaria          |
+| Zenopsis_conchiferaB     | _Zenopsis conchifera_     | Zeiariae             |
+| Stylephorus_chordatusB   | _Stylephorus chordatus_   | Stylephoriformes     |
+| Gadus_morhua             | _Gadus morhua_            | Gadiformes           |
+
+</center>
+
+<p>A list of the 24 species IDs in plain text format is also in file <code class="language-plaintext highlighter-rouge">Near_et_al_ids.txt</code>. On the command line, we can use that file to extract the sequences of these species from the full alignment, and write them to a new file in Nexus format named <code class="language-plaintext highlighter-rouge">Near_et_al_red.nex</code>.</p>
+
+<blockquote>
+  <p>Execute the following commands on the command line, after placing file <code class="language-plaintext highlighter-rouge">Near_et_al_ids.txt</code> in the same directory as <code class="language-plaintext highlighter-rouge">Near_et_al.nex</code>:</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head -n 7 Near_et_al.nex | sed 's/ntax=608/ntax=24/g'&gt; Near_et_al_red.nex
 grep -f Near_et_al_ids.txt -e "\[" Near_et_al.nex | sed -e $'s/\[/\\\n\[/g' &gt;&gt; Near_et_al_red.nex
 tail -n 35 Near_et_al.nex | sed 's/paup/assumptions/g' &gt;&gt; Near_et_al_red.nex
-</code></pre></div>
-<p>If you should not be able to execute these commands on the command line, you could instead download the reduced alignment file <code>Near_et_al_red.nex</code> using the link in the left-hand menu under &quot;Data&quot;.</p>
+</code></pre></div></div>
 
-<h3>Installing the CladeAge package</h3>
+<p>If you should not be able to execute these commands on the command line, you could instead download the reduced alignment file <code class="language-plaintext highlighter-rouge">Near_et_al_red.nex</code> using the link in the left-hand menu under “Data”.</p>
 
-<p>To use fossil constraints as calibrations points according to the CladeAge model, we&#39;ll first have to install the CladeAge add-on package for BEAST2.</p>
+<h3 id="installing-the-cladeage-package">Installing the CladeAge package</h3>
+
+<p>To use fossil constraints as calibrations points according to the CladeAge model, we’ll first have to install the CladeAge add-on package for BEAST2.</p>
 
 <blockquote>
-<p>To do so, open BEAUti, and click on &quot;Manage Packages&quot; in the &quot;File&quot; menu.</p>
+  <p>To do so, open BEAUti, and click on “Manage Packages” in the “File” menu.</p>
 </blockquote>
 
-<p>This will open a window for the BEAST2 Package Manager. In this window, select &quot;CA&quot; and click &quot;Install/Upgrade&quot; as shown in the screenshot below.</p>
+<p>This will open a window for the BEAST2 Package Manager. In this window, select “CA” and click “Install/Upgrade” as shown in the screenshot below.</p>
 
 <figure>
-    <a id="fig:beauti1"></a>
-    <img style="width:88%;" src="figures/beauti1.png" alt="BEAUti">
-    <figcaption>Figure 1: Installing the CladeAge package.</figcaption>
+	<a id="fig:beauti1"></a>
+	<img style="width:88%;" src="figures/beauti1.png" alt="BEAUti" />
+	<figcaption>Figure 1: Installing the CladeAge package.</figcaption>
 </figure>
 
 <blockquote>
-<p>Close and reopen BEAUti.</p>
+  <p>Close and reopen BEAUti.</p>
 </blockquote>
 
-<p>You should then see that an additional tab has been added named &quot;Clade Ages&quot;, as in the screenshot below.</p>
+<p>You should then see that an additional tab has been added named “Clade Ages”, as in the screenshot below.</p>
 
 <figure>
-    <a id="fig:beauti2"></a>
-    <img style="width:88%;" src="figures/beauti2.png" alt="BEAUti">
-    <figcaption>Figure 2: The BEAUti interface after installing the CladeAge package.</figcaption>
+	<a id="fig:beauti2"></a>
+	<img style="width:88%;" src="figures/beauti2.png" alt="BEAUti" />
+	<figcaption>Figure 2: The BEAUti interface after installing the CladeAge package.</figcaption>
 </figure>
 
-<h3>Generating the analysis file with BEAUti</h3>
+<h3 id="generating-the-analysis-file-with-beauti">Generating the analysis file with BEAUti</h3>
 
 <blockquote>
-<p>Click on &quot;Import Alignment&quot; in BEAUti&#39;s &quot;File&quot; menu, and select the alignment file <code>Near_et_al_red.nex</code>.</p>
+  <p>Click on “Import Alignment” in BEAUti’s “File” menu, and select the alignment file <code class="language-plaintext highlighter-rouge">Near_et_al_red.nex</code>.</p>
 </blockquote>
 
 <p>BEAUti should recognize 30 different partitions, one for each codon position of each of the ten markers. The BEAUti window should then look as shown in the screenshot below.</p>
 
 <figure>
-    <a id="fig:beauti3"></a>
-    <img style="width:88%;" src="figures/beauti3.png" alt="BEAUti">
-    <figcaption>Figure 3: The BEAUti interface after importing the alignment file.</figcaption>
+	<a id="fig:beauti3"></a>
+	<img style="width:88%;" src="figures/beauti3.png" alt="BEAUti" />
+	<figcaption>Figure 3: The BEAUti interface after importing the alignment file.</figcaption>
 </figure>
 
 <blockquote>
-<p>Select all partitions, and click &quot;Link Trees&quot; as well as &quot;Link Clock Models&quot;, as shown below.</p>
+  <p>Select all partitions, and click “Link Trees” as well as “Link Clock Models”, as shown below.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti4"></a>
-    <img style="width:88%;" src="figures/beauti4.png" alt="BEAUti">
-    <figcaption>Figure 4: Linking trees and clock models.</figcaption>
+	<a id="fig:beauti4"></a>
+	<img style="width:88%;" src="figures/beauti4.png" alt="BEAUti" />
+	<figcaption>Figure 4: Linking trees and clock models.</figcaption>
 </figure>
 
 <blockquote>
-<p>Move on to the &quot;Site Model&quot; tab to select the site model for all partitions.</p>
+  <p>Move on to the “Site Model” tab to select the site model for all partitions.</p>
 </blockquote>
 
-<p>Instead of selecting a model such as HKY or GTR, I highly recommend the use of the model-averaging approach implemented in the bModelTest package <a class="citation" href="#Bouckaert2017">(Bouckaert &amp; Drummond, 2017)</a>. If you did not already install this package, you can do so with the BEAST2 Package Manager from BEAUti as described above for the installation of the CladeAge package (don&#39;t forget to close and reopen BEAUti after installation to see changes to the interface). More information on model averaging with the bModelTest package is provided in the <a href="https://taming-the-beast.org/tutorials/Substitution-model-averaging/">Substitution Model Averaging</a> tutorial. While recommended, model averaging with bModelTest is not required for this CladeAge tutorial, and you could also pick a model such as HKY or GTR instead. The description given here, however, assumes that the bModelTest package has been installed.</p>
+<p>Instead of selecting a model such as HKY or GTR, I highly recommend the use of the model-averaging approach implemented in the bModelTest package <a class="citation" href="#Bouckaert2017">(Bouckaert &amp; Drummond, 2017)</a>. If you did not already install this package, you can do so with the BEAST2 Package Manager from BEAUti as described above for the installation of the CladeAge package (don’t forget to close and reopen BEAUti after installation to see changes to the interface). More information on model averaging with the bModelTest package is provided in the <a href="https://taming-the-beast.org/tutorials/Substitution-model-averaging/">Substitution Model Averaging</a> tutorial. While recommended, model averaging with bModelTest is not required for this CladeAge tutorial, and you could also pick a model such as HKY or GTR instead. The description given here, however, assumes that the bModelTest package has been installed.</p>
 
 <blockquote>
-<p>Select &quot;BEAST Model Test&quot; from the drop-down menu at the top of the window, as shown below.</p>
+  <p>Select “BEAST Model Test” from the drop-down menu at the top of the window, as shown below.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti5"></a>
-    <img style="width:88%;" src="figures/beauti5.png" alt="BEAUti">
-    <figcaption>Figure 5: Selecting model averaging with the bModelTest model.</figcaption>
+	<a id="fig:beauti5"></a>
+	<img style="width:88%;" src="figures/beauti5.png" alt="BEAUti" />
+	<figcaption>Figure 5: Selecting model averaging with the bModelTest model.</figcaption>
 </figure>
 
 <blockquote>
-<p>Select &quot;namedExtended&quot; from the drop-down menu that at first had &quot;transitionTransversionSplit&quot; selected.
-Leave the checkbox next to &quot;Empirical&quot; unticked to allow estimation of nucleotide frequencies.
-Then, set the tick to the right of &quot;Mutation Rate&quot; to specify that this rate should be estimated.</p>
+  <p>Select “namedExtended” from the drop-down menu that at first had “transitionTransversionSplit” selected.
+Leave the checkbox next to “Empirical” unticked to allow estimation of nucleotide frequencies.
+Then, set the tick to the right of “Mutation Rate” to specify that this rate should be estimated.</p>
 </blockquote>
 
 <p>The window should then look as in the next screenshot.</p>
 
 <figure>
-    <a id="fig:beauti6"></a>
-    <img style="width:88%;" src="figures/beauti6.png" alt="BEAUti">
-    <figcaption>Figure 6: Selecting settings for model averaging with the bModelTest model.</figcaption>
+	<a id="fig:beauti6"></a>
+	<img style="width:88%;" src="figures/beauti6.png" alt="BEAUti" />
+	<figcaption>Figure 6: Selecting settings for model averaging with the bModelTest model.</figcaption>
 </figure>
 
 <blockquote>
-<p>Select all partitions in the list at the left of the window, and click &quot;OK&quot; to clone the site model from the first partition to all other partitions.</p>
+  <p>Select all partitions in the list at the left of the window, and click “OK” to clone the site model from the first partition to all other partitions.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti7"></a>
-    <img style="width:88%;" src="figures/beauti7.png" alt="BEAUti">
-    <figcaption>Figure 7: Cloning the site model.</figcaption>
+	<a id="fig:beauti7"></a>
+	<img style="width:88%;" src="figures/beauti7.png" alt="BEAUti" />
+	<figcaption>Figure 7: Cloning the site model.</figcaption>
 </figure>
 
 <blockquote>
-<p>Continue to the &quot;Clock Model&quot; tab, and select the &quot;Relaxed Clock Log Normal&quot; clock model from the drop-down menu.</p>
+  <p>Continue to the “Clock Model” tab, and select the “Relaxed Clock Log Normal” clock model from the drop-down menu.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti8"></a>
-    <img style="width:88%;" src="figures/beauti8.png" alt="BEAUti">
-    <figcaption>Figure 8: Selecting the clock model.</figcaption>
+	<a id="fig:beauti8"></a>
+	<img style="width:88%;" src="figures/beauti8.png" alt="BEAUti" />
+	<figcaption>Figure 8: Selecting the clock model.</figcaption>
 </figure>
 
-<p>Because we are going to calibrate the molecular clock with fossil constraints, we should allow the clock rate to be estimated. By default, however, the checkbox that we would need to tick, next to &quot;estimate&quot; at the bottom right, is disabled.</p>
+<p>Because we are going to calibrate the molecular clock with fossil constraints, we should allow the clock rate to be estimated. By default, however, the checkbox that we would need to tick, next to “estimate” at the bottom right, is disabled.</p>
 
 <blockquote>
-<p>To enable this checkbox, click on &quot;Automatic set clock rate&quot; in BEAUti&#39;s &quot;Mode&quot; menu.</p>
+  <p>To enable this checkbox, click on “Automatic set clock rate” in BEAUti’s “Mode” menu.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti9"></a>
-    <img style="width:88%;" src="figures/beauti9.png" alt="BEAUti">
-    <figcaption>Figure 9: Enabling the estimation of the clock rate.</figcaption>
+	<a id="fig:beauti9"></a>
+	<img style="width:88%;" src="figures/beauti9.png" alt="BEAUti" />
+	<figcaption>Figure 9: Enabling the estimation of the clock rate.</figcaption>
 </figure>
 
 <p>The checkbox for clock-rate estimation should then be enabled.</p>
 
 <blockquote>
-<p>Set a tick in the checkbox at the bottom right to estimate the clock rate.</p>
+  <p>Set a tick in the checkbox at the bottom right to estimate the clock rate.</p>
 </blockquote>
 
-<p>The &quot;Clock Model&quot; tab should then look as shown in the screenshot below.</p>
+<p>The “Clock Model” tab should then look as shown in the screenshot below.</p>
 
 <figure>
-    <a id="fig:beauti10"></a>
-    <img style="width:88%;" src="figures/beauti10.png" alt="BEAUti">
-    <figcaption>Figure 10: Selecting estimation of the clock rate.</figcaption>
+	<a id="fig:beauti10"></a>
+	<img style="width:88%;" src="figures/beauti10.png" alt="BEAUti" />
+	<figcaption>Figure 10: Selecting estimation of the clock rate.</figcaption>
 </figure>
 
 <blockquote>
-<p>Move on to the &quot;Priors&quot; tab. Select the &quot;Birth Death Model&quot; as the tree prior, from the drop-down menu at the very top of the window.</p>
+  <p>Move on to the “Priors” tab. Select the “Birth Death Model” as the tree prior, from the drop-down menu at the very top of the window.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti11"></a>
-    <img style="width:88%;" src="figures/beauti11.png" alt="BEAUti">
-    <figcaption>Figure 11: Selecting the tree prior.</figcaption>
+	<a id="fig:beauti11"></a>
+	<img style="width:88%;" src="figures/beauti11.png" alt="BEAUti" />
+	<figcaption>Figure 11: Selecting the tree prior.</figcaption>
 </figure>
 
-<p>Instead of specifying constraints on monophyly and divergence times in the &quot;Priors&quot; tab (as is usually the case), this is done in the separate tab named &quot;Clade Ages&quot; when the CladeAge package is installed.</p>
+<p>Instead of specifying constraints on monophyly and divergence times in the “Priors” tab (as is usually the case), this is done in the separate tab named “Clade Ages” when the CladeAge package is installed.</p>
 
 <blockquote>
-<p>Open the &quot;Clade Ages&quot; tab and click on the &quot;+ Add Prior&quot; button</p>
+  <p>Open the “Clade Ages” tab and click on the “+ Add Prior” button</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti12"></a>
-    <img style="width:88%;" src="figures/beauti12.png" alt="BEAUti">
-    <figcaption>Figure 12: Selecting a first taxon set for calibration.</figcaption>
+	<a id="fig:beauti12"></a>
+	<img style="width:88%;" src="figures/beauti12.png" alt="BEAUti" />
+	<figcaption>Figure 12: Selecting a first taxon set for calibration.</figcaption>
 </figure>
 
-<p>We will now have to specify a rather long list of constraints to make the best possible use of the information provided by the fossil record and to obtain divergence time estimates that are as reliable as possible given our dataset. We&#39;ll start simple by specifying that the origin of African cichlid tribe Heterochromini, represented in our dataset by <em>Heterochromis multidens</em>, must have occurred at least 15.97-33.9 million years ago (Ma), since this is the age of the oldest fossil of Heterochromi, which was reported from the Baid Formation of Saudi Arabia by Lippitsch and Micklich <a class="citation" href="#Lippitsch1998">(1998)</a>.</p>
+<p>We will now have to specify a rather long list of constraints to make the best possible use of the information provided by the fossil record and to obtain divergence time estimates that are as reliable as possible given our dataset. We’ll start simple by specifying that the origin of African cichlid tribe Heterochromini, represented in our dataset by <em>Heterochromis multidens</em>, must have occurred at least 15.97-33.9 million years ago (Ma), since this is the age of the oldest fossil of Heterochromi, which was reported from the Baid Formation of Saudi Arabia by Lippitsch and Micklich <a class="citation" href="#Lippitsch1998">(“Cichlid Fish Biodiversity in an Oligocene Lake,” 1998)</a>.</p>
 
 <blockquote>
-<p>Specify &quot;Heterochromini&quot; in the field next to &quot;Taxon set label&quot;, and select only &quot;Heterochromis_multidensA&quot; as the ingroup of this taxon set.</p>
+  <p>Specify “Heterochromini” in the field next to “Taxon set label”, and select only “Heterochromis_multidensA” as the ingroup of this taxon set.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti13"></a>
-    <img style="width:88%;" src="figures/beauti13.png" alt="BEAUti">
-    <figcaption>Figure 13: Selecting a first taxon set for Heterochromini.</figcaption>
+	<a id="fig:beauti13"></a>
+	<img style="width:88%;" src="figures/beauti13.png" alt="BEAUti" />
+	<figcaption>Figure 13: Selecting a first taxon set for Heterochromini.</figcaption>
 </figure>
 
-<p>After you click &quot;OK&quot;, you&#39;ll see the window shown below, in which you can specify minimum and maximum values for the parameters net diversification rate, turnover rate, and sampling rate. Based on these values as well as the fossil age, the CladeAge model is going to automatically determine the optimal shape of the prior density used for each constraint.</p>
+<p>After you click “OK”, you’ll see the window shown below, in which you can specify minimum and maximum values for the parameters net diversification rate, turnover rate, and sampling rate. Based on these values as well as the fossil age, the CladeAge model is going to automatically determine the optimal shape of the prior density used for each constraint.</p>
 
 <figure>
-    <a id="fig:beauti14"></a>
-    <img style="width:88%;" src="figures/beauti14.png" alt="BEAUti">
-    <figcaption>Figure 14: Specifying parameters for CladeAge calibrations.</figcaption>
+	<a id="fig:beauti14"></a>
+	<img style="width:88%;" src="figures/beauti14.png" alt="BEAUti" />
+	<figcaption>Figure 14: Specifying parameters for CladeAge calibrations.</figcaption>
 </figure>
 
-<p>While it might sometimes be preferable to estimate the net diversification (speciation minus extinction) and turnover (extinction divided by speciation) rates as part of the analysis, this is not implemented in the CladeAge model yet. Instead, the values for the two parameters have to be specified <em>a priori</em>, together with the &quot;sampling rate&quot;, the rate at which fossils that are eventually sampled by scientists were once deposited in the fossil record. Fortunately, estimates for these three rates can be found in the literature, and the confidence intervals for these estimates can be accounted for by the CladeAge model. Here, as in Matschiner et al. <a class="citation" href="#Matschiner2017">(2017)</a>, we adopt teleost-specific estimates for net diversification and turnover from Santini et al. <a class="citation" href="#Santini2009">(2009)</a>, and a sampling-rate estimate for bony fishes from Foote and Miller <a class="citation" href="#Foote2007">(2007)</a>. These estimates are 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. </p>
+<p>While it might sometimes be preferable to estimate the net diversification (speciation minus extinction) and turnover (extinction divided by speciation) rates as part of the analysis, this is not implemented in the CladeAge model yet. Instead, the values for the two parameters have to be specified <em>a priori</em>, together with the “sampling rate”, the rate at which fossils that are eventually sampled by scientists were once deposited in the fossil record. Fortunately, estimates for these three rates can be found in the literature, and the confidence intervals for these estimates can be accounted for by the CladeAge model. Here, as in Matschiner et al. <a class="citation" href="#Matschiner2017">(“Bayesian Phylogenetic Estimation of Clade Ages Supports Trans-Atlantic Dispersal of Cichlid Fishes,” 2017)</a>, we adopt teleost-specific estimates for net diversification and turnover from Santini et al. <a class="citation" href="#Santini2009">(“Did Genome Duplication Drive the Origin of Teleosts? A Comparative Study of Diversification in Ray-Finned Fishes,” 2009)</a>, and a sampling-rate estimate for bony fishes from Foote and Miller <a class="citation" href="#Foote2007">(<i>Principles of Paleontology</i>, 2007)</a>. These estimates are 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate.</p>
 
 <blockquote>
-<p>Specify 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. Don&#39;t change the selection of &quot;empirical CladeAge&quot; in the drop-down menu to the left.</p>
+  <p>Specify 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. Don’t change the selection of “empirical CladeAge” in the drop-down menu to the left.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti15"></a>
-    <img style="width:88%;" src="figures/beauti15.png" alt="BEAUti">
-    <figcaption>Figure 15: Specifying parameters for CladeAge calibrations.</figcaption>
+	<a id="fig:beauti15"></a>
+	<img style="width:88%;" src="figures/beauti15.png" alt="BEAUti" />
+	<figcaption>Figure 15: Specifying parameters for CladeAge calibrations.</figcaption>
 </figure>
 
 <p>While these three rate estimates are going to apply to all fossil constraints, information specific to the fossil constraint still must be added.</p>
 
 <blockquote>
-<p>To add more information specific to the Heterochromini constraint, click on the triangle to the left of &quot;Heterochromini&quot;.</p>
+  <p>To add more information specific to the Heterochromini constraint, click on the triangle to the left of “Heterochromini”.</p>
 </blockquote>
 
-<p>You&#39;ll see four more fields in which you can specify minimum and maximum values for the &quot;First occurrence age&quot; (the age of the oldest fossil of the clade) and a &quot;Sampling gap&quot;. This sampling gap is supposed to represent a period of time right after the origin of the clade during which one might assume that either fossilization is unlikely (for example because the clade&#39;s population might still be too small) or that fossils would not be recognized as belonging to that clade (because it might not have evolved diagnostic characters yet). We are going to ignore the possibility of a sampling gap here.</p>
+<p>You’ll see four more fields in which you can specify minimum and maximum values for the “First occurrence age” (the age of the oldest fossil of the clade) and a “Sampling gap”. This sampling gap is supposed to represent a period of time right after the origin of the clade during which one might assume that either fossilization is unlikely (for example because the clade’s population might still be too small) or that fossils would not be recognized as belonging to that clade (because it might not have evolved diagnostic characters yet). We are going to ignore the possibility of a sampling gap here.</p>
 
 <blockquote>
-<p>Specify the known age of the oldest fossil of Heterochromini in million of years, 15.97-33.9.</p>
+  <p>Specify the known age of the oldest fossil of Heterochromini in million of years, 15.97-33.9.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti16"></a>
-    <img style="width:88%;" src="figures/beauti16.png" alt="BEAUti">
-    <figcaption>Figure 16: Specifying further parameters for the Heterochromini calibration.</figcaption>
+	<a id="fig:beauti16"></a>
+	<img style="width:88%;" src="figures/beauti16.png" alt="BEAUti" />
+	<figcaption>Figure 16: Specifying further parameters for the Heterochromini calibration.</figcaption>
 </figure>
 
 <p>It is also possible to preview the shape of the prior densities as calculated by CladeAge based on the specified parameters.</p>
 
 <blockquote>
-<p>Click on the &quot;Preview&quot; button below the CladeAge icon on the right (you may have to increase the window size to see it).</p>
+  <p>Click on the “Preview” button below the CladeAge icon on the right (you may have to increase the window size to see it).</p>
 </blockquote>
 
 <p>A plot outlining the prior densities should then appear as in the screenshot below.</p>
 
 <figure>
-    <a id="fig:beauti17"></a>
-    <img style="width:88%;" src="figures/beauti17.png" alt="BEAUti">
-    <figcaption>Figure 17: Previewing the prior density for the Heterochromini calibration.</figcaption>
+	<a id="fig:beauti17"></a>
+	<img style="width:88%;" src="figures/beauti17.png" alt="BEAUti" />
+	<figcaption>Figure 17: Previewing the prior density for the Heterochromini calibration.</figcaption>
 </figure>
 
-<p>From this plot, you can see that under the assumption that all specified model parameters are correct, there&#39;s a good probability that Heterochromini originated some time between 25 and 80 Ma. While this range is rather wide, it is based on only one fossil; we will obtain more precise estimates when we run the phylogenetic analysis with multiple fossil constraints.</p>
+<p>From this plot, you can see that under the assumption that all specified model parameters are correct, there’s a good probability that Heterochromini originated some time between 25 and 80 Ma. While this range is rather wide, it is based on only one fossil; we will obtain more precise estimates when we run the phylogenetic analysis with multiple fossil constraints.</p>
 
 <blockquote>
-<p>Click the triangle to the left of &quot;Heterochromini&quot; again to close the section with details on this fossil constraint.</p>
+  <p>Click the triangle to the left of “Heterochromini” again to close the section with details on this fossil constraint.</p>
 
-<p>Add further fossil constraints for each of the clades listed below (see the Supplementary Material of Matschiner et al. <a class="citation" href="#Matschiner2017">(2017)</a> if interested in details and references):</p>
+  <p>Add further fossil constraints for each of the clades listed below (see the Supplementary Material of Matschiner et al. <a class="citation" href="#Matschiner2017">(“Bayesian Phylogenetic Estimation of Clade Ages Supports Trans-Atlantic Dispersal of Cichlid Fishes,” 2017)</a> if interested in details and references):</p>
 </blockquote>
 
 <ul>
-<li><strong>&quot;Other African cichlid tribes&quot;</strong><br>Ingroup: <em>Oreochromis niloticus</em> (&quot;Oreochromis_niloticus&quot;)<br>Oldest fossil species: <em>Mahengechromis</em> spp.<br>First occurrence age: 45.0-46.0 Ma</li>
-<li><strong>&quot;African cichlids&quot;</strong><br>Ingroup: <em>Heterochromis multidens</em> (&quot;Heterochromis_multidensA&quot;), <em>Oreochromis niloticus</em> (&quot;Oreochromis_niloticus&quot;)<br>Oldest fossil species: <em>Mahengechromis</em> spp.<br>First occurrence age: 45.0-46.0 Ma</li>
-<li><strong>&quot;Retroculini and Cichlini&quot;</strong><br>Ingroup: <em>Cichla temensis</em> (&quot;Cichla_temensisA&quot;)<br>Oldest fossil species: <em>Palaeocichla longirostrum</em><br>First occurrence age: 5.332-23.03 Ma</li>
-<li><strong>&quot;Other Neotropical cichlid tribes&quot;</strong><br>Ingroup: <em>Heros appendictulatus</em> (&quot;Heros_appendictulatusA&quot;)<br>Oldest fossil species: <em>Plesioheros chauliodus</em><br>First occurrence age: 39.9-45.0 Ma</li>
-<li><strong>&quot;Neotropical cichlids&quot;</strong><br>Ingroup: <em>Cichla temensis</em> (&quot;Cichla_temensisA&quot;), <em>Heros appendictulatus</em> (&quot;Heros_appendictulatusA&quot;)<br>Oldest fossil species: <em>Plesioheros chauliodus</em><br>First occurrence age: 39.9-45.0 Ma</li>
-<li><strong>&quot;Afro-American cichlids&quot;</strong><br>Ingroup: <em>Cichla temensis</em> (&quot;Cichla_temensisA&quot;), <em>Heros appendictulatus</em> (&quot;Heros_appendictulatusA&quot;), <em>Heterochromis multidens</em> (&quot;Heterochromis_multidensA&quot;), <em>Oreochromis niloticus</em> (&quot;Oreochromis_niloticus&quot;)<br>Oldest fossil species: <em>Mahengechromis</em> spp.<br>First occurrence age: 45.0-46.0 Ma</li>
-<li><strong>&quot;Cichlids&quot;</strong><br><em>Cichla temensis</em> (&quot;Cichla_temensisA&quot;), <em>Etroplus maculatus</em> (&quot;Etroplus_maculatusA&quot;), <em>Heros appendictulatus</em> (&quot;Heros_appendictulatusA&quot;), <em>Heterochromis multidens</em> (&quot;Heterochromis_multidensA&quot;), <em>Oreochromis niloticus</em> (&quot;Oreochromis_niloticus&quot;)<br>Oldest fossil species: <em>Mahengechromis</em> spp.<br>First occurrence age: 45.0-46.0 Ma</li>
-<li><strong>&quot;Atherinomorphae&quot;</strong><br>Ingroup: <em>Oryzias latipes</em> (&quot;Oryzias_latipes&quot;)<br>Oldest fossil species: <em>Rhamphexocoetus volans</em><br>First occurrence age: 49.1-49.4 Ma</li>
-<li><strong>&quot;Ovalentaria&quot;</strong><br>Ingroup: <em>Cichla temensis</em> (&quot;Cichla_temensisA&quot;), <em>Etroplus maculatus</em> (&quot;Etroplus_maculatusA&quot;), <em>Heros appendictulatus</em> (&quot;Heros_appendictulatusA&quot;), <em>Heterochromis multidens</em> (&quot;Heterochromis_multidensA&quot;), <em>Oreochromis niloticus</em> (&quot;Oreochromis_niloticus&quot;), <em>Oryzias latipes</em> (&quot;Oryzias_latipes&quot;)<br>Oldest fossil species: <em>Rhamphexocoetus volans</em><br>First occurrence age: 49.1-49.4 Ma</li>
-<li><strong>&quot;Carangaria&quot;</strong><br>Ingroup: <em>Trachinotus carolinus</em> (&quot;Trachinotus_carolinusA&quot;)<br>Oldest fossil species: <em>Trachicaranx tersus</em><br>First occurrence age: 55.8-57.23 Ma</li>
-<li><strong>&quot;Anabantiformes&quot;</strong><br>Ingroup: <em>Channa striata</em> (&quot;Channa_striataA&quot;)<br>Oldest fossil species: <em>Osphronemus goramy</em><br>First occurrence age: 45.5-50.7 Ma</li>
-<li><strong>&quot;Anabantaria&quot;</strong><br>Ingroup: <em>Channa striata</em> (&quot;Channa_striataA&quot;), <em>Monopterus albus</em> (&quot;Monopterus_albusA&quot;)<br>Oldest fossil species: <em>Osphronemus goramy</em><br>First occurrence age: 45.5-50.7 Ma</li>
-<li><strong>&quot;Eupercaria&quot;</strong><br>Ingroup: <em>Gasterosteus aculeatus</em> (&quot;Gasterosteus_acuC&quot;)<br>Oldest fossil species: <em>Cretatriacanthus guidottii</em><br>First occurrence age: 83.5-99.6 Ma</li>
-<li><strong>&quot;Gobiaria&quot;</strong><br>Ingroup: <em>Astrapogon tellatus</em> (&quot;Astrapogon_stellatusA&quot;)<br>Oldest fossil species: <em>&quot;Gobius&quot; gracilis</em><br>First occurrence age: 30.7-33.9 Ma</li>
-<li><strong>&quot;Syngnatharia&quot;</strong><br>Ingroup: <em>Aulostomus chinensis</em> (&quot;Aulostomus_chinensisA&quot;)<br>Oldest fossil species: <em>Prosolenostomus lessinii</em><br>First occurrence age: 49.1-49.4 Ma</li>
-<li><strong>&quot;Pelagaria&quot;</strong><br>Ingroup: <em>Thunnus albacares</em> (&quot;Thunnus_albacaresA&quot;)<br>Oldest fossil species: <em>Eutrichiurides opiensis</em><br>First occurrence age: 56.6-66.043 Ma</li>
-<li><strong>&quot;Batrachoidiaria&quot;</strong><br>Ingroup: <em>Porichthys notatus</em> (&quot;Porichthys_notatusA&quot;)<br>Oldest fossil species: <em>Louckaichthys novosadi</em><br>First occurrence age: 27.82-33.9 Ma</li>
-<li><strong>&quot;Ophidiaria&quot;</strong><br>Ingroup: <em>Diplacanthopoma brunnea</em> (&quot;Diplacanthopoma_brunneaA&quot;)<br>Oldest fossil species: <em>Eolamprogrammus senectus</em><br>First occurrence age: 55.8-57.23 Ma</li>
-<li><strong>&quot;Percomorphaceae&quot;</strong><br>Ingroup: <em>Astrapogon tellatus</em> (&quot;Astrapogon_stellatusA&quot;), <em>Aulostomus chinensis</em> (&quot;Aulostomus_chinensisA&quot;), <em>Channa striata</em> (&quot;Channa_striataA&quot;), <em>Cichla temensis</em> (&quot;Cichla_temensisA&quot;), <em>Diplacanthopoma brunnea</em> (&quot;Diplacanthopoma_brunneaA&quot;), <em>Etroplus maculatus</em> (&quot;Etroplus_maculatusA&quot;), <em>Gasterosteus aculeatus</em> (&quot;Gasterosteus_acuC&quot;), <em>Heros appendictulatus</em> (&quot;Heros_appendictulatusA&quot;), <em>Heterochromis multidens</em> (&quot;Heterochromis_multidensA&quot;), <em>Monopterus albus</em> (&quot;Monopterus_albusA&quot;), <em>Oreochromis niloticus</em> (&quot;Oreochromis_niloticus&quot;), <em>Oryzias latipes</em> (&quot;Oryzias_latipes&quot;), <em>Porichthys notatus</em> (&quot;Porichthys_notatusA&quot;), <em>Thunnus albacares</em> (&quot;Thunnus_albacaresA&quot;), <em>Trachinotus carolinus</em> (&quot;Trachinotus_carolinusA&quot;)<br>Oldest fossil species: <em>Cretatriacanthus guidottii</em><br>First occurrence age: 83.5-99.6 Ma</li>
-<li><strong>&quot;Holocentrimorphaceae&quot;</strong><br>Ingroup: <em>Sargocentron cornutum</em> (Sargocentron_cornutumA)<br>Oldest fossil species: <em>Caproberyx pharsus</em><br>First occurrence age: 97.8-99.1 Ma</li>
-<li><strong>&quot;Acanthopterygii&quot;</strong><br>Ingroup: <em>Astrapogon tellatus</em> (&quot;Astrapogon_stellatusA&quot;), <em>Aulostomus chinensis</em> (&quot;Aulostomus_chinensisA&quot;), <em>Channa striata</em> (&quot;Channa_striataA&quot;), <em>Cichla temensis</em> (&quot;Cichla_temensisA&quot;), <em>Diplacanthopoma brunnea</em> (&quot;Diplacanthopoma_brunneaA&quot;), <em>Etroplus maculatus</em> (&quot;Etroplus_maculatusA&quot;), <em>Gasterosteus aculeatus</em> (&quot;Gasterosteus_acuC&quot;), <em>Heros appendictulatus</em> (&quot;Heros_appendictulatusA&quot;), <em>Heterochromis multidens</em> (&quot;Heterochromis_multidensA&quot;), <em>Monocentris japonica</em> (&quot;Monocentris_japonicaA&quot;), <em>Monopterus albus</em> (&quot;Monopterus_albusA&quot;), <em>Oreochromis niloticus</em> (&quot;Oreochromis_niloticus&quot;), <em>Oryzias latipes</em> (&quot;Oryzias_latipes&quot;), <em>Porichthys notatus</em> (&quot;Porichthys_notatusA&quot;), <em>Rondeletia loricata</em> (&quot;Rondeletia_loricataA&quot;), <em>Thunnus albacares</em> (&quot;Thunnus_albacaresA&quot;), <em>Trachinotus carolinus</em> (&quot;Trachinotus_carolinusA&quot;), <em>Sargocentron cornutum</em> (Sargocentron_cornutumA)<br>Oldest fossil species: <em>Caproberyx pharsus</em><br>First occurrence age: 97.8-99.1 Ma</li>
-<li><strong>&quot;Polymixiipterygii&quot;</strong><br>Ingroup: <em>Polymixia japonica</em> (&quot;Polymixia_japonicaA&quot;)<br>Oldest fossil species: <em>Homonotichthys rotundus</em><br>First occurrence age: 93.5-96.0 Ma</li>
-<li><strong>&quot;Percopsaria&quot;</strong><br>Ingroup: <em>Percopsis omiscomaycus</em> (&quot;Percopsis_omiscomaycusA&quot;)<br>Oldest fossil species: <em>Mcconichthys longipinnis</em><br>First occurrence age: 61.1-66.043 Ma</li>
-<li><strong>&quot;Zeiariae&quot;</strong><br>Ingroup: <em>Zenopsis conchifera</em> (&quot;Zenopsis_conchiferaB&quot;)<br>Oldest fossil species: <em>Cretazeus rinaldii</em><br>First occurrence age: 69.2-76.4 Ma</li>
-<li><strong>&quot;Gadiformes&quot;</strong><br>Ingroup: <em>Gadus morhua</em> (&quot;Gadus_morhua&quot;)<br>Oldest fossil species: <em>Protacodus</em> sp.<br>First occurrence age: 59.7-62.8 Ma</li>
-<li><strong>&quot;Paracanthopterygii&quot;</strong><br>Ingroup: <em>Gadus morhua</em> (&quot;Gadus_morhua&quot;), <em>Percopsis omiscomaycus</em> (&quot;Percopsis_omiscomaycusA&quot;), <em>Stylephorus chordatus</em> (&quot;Stylephorus_chordatusB&quot;), <em>Zenopsis conchifera</em> (&quot;Zenopsis_conchiferaB&quot;)<br>Oldest fossil species: <em>Cretazeus rinaldii</em><br>First occurrence age: 69.2-76.4 Ma</li>
+  <li><strong>“Other African cichlid tribes”</strong><br />Ingroup: <em>Oreochromis niloticus</em> (“Oreochromis_niloticus”)<br />Oldest fossil species: <em>Mahengechromis</em> spp.<br />First occurrence age: 45.0-46.0 Ma</li>
+  <li><strong>“African cichlids”</strong><br />Ingroup: <em>Heterochromis multidens</em> (“Heterochromis_multidensA”), <em>Oreochromis niloticus</em> (“Oreochromis_niloticus”)<br />Oldest fossil species: <em>Mahengechromis</em> spp.<br />First occurrence age: 45.0-46.0 Ma</li>
+  <li><strong>“Retroculini and Cichlini”</strong><br />Ingroup: <em>Cichla temensis</em> (“Cichla_temensisA”)<br />Oldest fossil species: <em>Palaeocichla longirostrum</em><br />First occurrence age: 5.332-23.03 Ma</li>
+  <li><strong>“Other Neotropical cichlid tribes”</strong><br />Ingroup: <em>Heros appendictulatus</em> (“Heros_appendictulatusA”)<br />Oldest fossil species: <em>Plesioheros chauliodus</em><br />First occurrence age: 39.9-45.0 Ma</li>
+  <li><strong>“Neotropical cichlids”</strong><br />Ingroup: <em>Cichla temensis</em> (“Cichla_temensisA”), <em>Heros appendictulatus</em> (“Heros_appendictulatusA”)<br />Oldest fossil species: <em>Plesioheros chauliodus</em><br />First occurrence age: 39.9-45.0 Ma</li>
+  <li><strong>“Afro-American cichlids”</strong><br />Ingroup: <em>Cichla temensis</em> (“Cichla_temensisA”), <em>Heros appendictulatus</em> (“Heros_appendictulatusA”), <em>Heterochromis multidens</em> (“Heterochromis_multidensA”), <em>Oreochromis niloticus</em> (“Oreochromis_niloticus”)<br />Oldest fossil species: <em>Mahengechromis</em> spp.<br />First occurrence age: 45.0-46.0 Ma</li>
+  <li><strong>“Cichlids”</strong><br /><em>Cichla temensis</em> (“Cichla_temensisA”), <em>Etroplus maculatus</em> (“Etroplus_maculatusA”), <em>Heros appendictulatus</em> (“Heros_appendictulatusA”), <em>Heterochromis multidens</em> (“Heterochromis_multidensA”), <em>Oreochromis niloticus</em> (“Oreochromis_niloticus”)<br />Oldest fossil species: <em>Mahengechromis</em> spp.<br />First occurrence age: 45.0-46.0 Ma</li>
+  <li><strong>“Atherinomorphae”</strong><br />Ingroup: <em>Oryzias latipes</em> (“Oryzias_latipes”)<br />Oldest fossil species: <em>Rhamphexocoetus volans</em><br />First occurrence age: 49.1-49.4 Ma</li>
+  <li><strong>“Ovalentaria”</strong><br />Ingroup: <em>Cichla temensis</em> (“Cichla_temensisA”), <em>Etroplus maculatus</em> (“Etroplus_maculatusA”), <em>Heros appendictulatus</em> (“Heros_appendictulatusA”), <em>Heterochromis multidens</em> (“Heterochromis_multidensA”), <em>Oreochromis niloticus</em> (“Oreochromis_niloticus”), <em>Oryzias latipes</em> (“Oryzias_latipes”)<br />Oldest fossil species: <em>Rhamphexocoetus volans</em><br />First occurrence age: 49.1-49.4 Ma</li>
+  <li><strong>“Carangaria”</strong><br />Ingroup: <em>Trachinotus carolinus</em> (“Trachinotus_carolinusA”)<br />Oldest fossil species: <em>Trachicaranx tersus</em><br />First occurrence age: 55.8-57.23 Ma</li>
+  <li><strong>“Anabantiformes”</strong><br />Ingroup: <em>Channa striata</em> (“Channa_striataA”)<br />Oldest fossil species: <em>Osphronemus goramy</em><br />First occurrence age: 45.5-50.7 Ma</li>
+  <li><strong>“Anabantaria”</strong><br />Ingroup: <em>Channa striata</em> (“Channa_striataA”), <em>Monopterus albus</em> (“Monopterus_albusA”)<br />Oldest fossil species: <em>Osphronemus goramy</em><br />First occurrence age: 45.5-50.7 Ma</li>
+  <li><strong>“Eupercaria”</strong><br />Ingroup: <em>Gasterosteus aculeatus</em> (“Gasterosteus_acuC”)<br />Oldest fossil species: <em>Cretatriacanthus guidottii</em><br />First occurrence age: 83.5-99.6 Ma</li>
+  <li><strong>“Gobiaria”</strong><br />Ingroup: <em>Astrapogon tellatus</em> (“Astrapogon_stellatusA”)<br />Oldest fossil species: <em>“Gobius” gracilis</em><br />First occurrence age: 30.7-33.9 Ma</li>
+  <li><strong>“Syngnatharia”</strong><br />Ingroup: <em>Aulostomus chinensis</em> (“Aulostomus_chinensisA”)<br />Oldest fossil species: <em>Prosolenostomus lessinii</em><br />First occurrence age: 49.1-49.4 Ma</li>
+  <li><strong>“Pelagaria”</strong><br />Ingroup: <em>Thunnus albacares</em> (“Thunnus_albacaresA”)<br />Oldest fossil species: <em>Eutrichiurides opiensis</em><br />First occurrence age: 56.6-66.043 Ma</li>
+  <li><strong>“Batrachoidiaria”</strong><br />Ingroup: <em>Porichthys notatus</em> (“Porichthys_notatusA”)<br />Oldest fossil species: <em>Louckaichthys novosadi</em><br />First occurrence age: 27.82-33.9 Ma</li>
+  <li><strong>“Ophidiaria”</strong><br />Ingroup: <em>Diplacanthopoma brunnea</em> (“Diplacanthopoma_brunneaA”)<br />Oldest fossil species: <em>Eolamprogrammus senectus</em><br />First occurrence age: 55.8-57.23 Ma</li>
+  <li><strong>“Percomorphaceae”</strong><br />Ingroup: <em>Astrapogon tellatus</em> (“Astrapogon_stellatusA”), <em>Aulostomus chinensis</em> (“Aulostomus_chinensisA”), <em>Channa striata</em> (“Channa_striataA”), <em>Cichla temensis</em> (“Cichla_temensisA”), <em>Diplacanthopoma brunnea</em> (“Diplacanthopoma_brunneaA”), <em>Etroplus maculatus</em> (“Etroplus_maculatusA”), <em>Gasterosteus aculeatus</em> (“Gasterosteus_acuC”), <em>Heros appendictulatus</em> (“Heros_appendictulatusA”), <em>Heterochromis multidens</em> (“Heterochromis_multidensA”), <em>Monopterus albus</em> (“Monopterus_albusA”), <em>Oreochromis niloticus</em> (“Oreochromis_niloticus”), <em>Oryzias latipes</em> (“Oryzias_latipes”), <em>Porichthys notatus</em> (“Porichthys_notatusA”), <em>Thunnus albacares</em> (“Thunnus_albacaresA”), <em>Trachinotus carolinus</em> (“Trachinotus_carolinusA”)<br />Oldest fossil species: <em>Cretatriacanthus guidottii</em><br />First occurrence age: 83.5-99.6 Ma</li>
+  <li><strong>“Holocentrimorphaceae”</strong><br />Ingroup: <em>Sargocentron cornutum</em> (Sargocentron_cornutumA)<br />Oldest fossil species: <em>Caproberyx pharsus</em><br />First occurrence age: 97.8-99.1 Ma</li>
+  <li><strong>“Acanthopterygii”</strong><br />Ingroup: <em>Astrapogon tellatus</em> (“Astrapogon_stellatusA”), <em>Aulostomus chinensis</em> (“Aulostomus_chinensisA”), <em>Channa striata</em> (“Channa_striataA”), <em>Cichla temensis</em> (“Cichla_temensisA”), <em>Diplacanthopoma brunnea</em> (“Diplacanthopoma_brunneaA”), <em>Etroplus maculatus</em> (“Etroplus_maculatusA”), <em>Gasterosteus aculeatus</em> (“Gasterosteus_acuC”), <em>Heros appendictulatus</em> (“Heros_appendictulatusA”), <em>Heterochromis multidens</em> (“Heterochromis_multidensA”), <em>Monocentris japonica</em> (“Monocentris_japonicaA”), <em>Monopterus albus</em> (“Monopterus_albusA”), <em>Oreochromis niloticus</em> (“Oreochromis_niloticus”), <em>Oryzias latipes</em> (“Oryzias_latipes”), <em>Porichthys notatus</em> (“Porichthys_notatusA”), <em>Rondeletia loricata</em> (“Rondeletia_loricataA”), <em>Thunnus albacares</em> (“Thunnus_albacaresA”), <em>Trachinotus carolinus</em> (“Trachinotus_carolinusA”), <em>Sargocentron cornutum</em> (Sargocentron_cornutumA)<br />Oldest fossil species: <em>Caproberyx pharsus</em><br />First occurrence age: 97.8-99.1 Ma</li>
+  <li><strong>“Polymixiipterygii”</strong><br />Ingroup: <em>Polymixia japonica</em> (“Polymixia_japonicaA”)<br />Oldest fossil species: <em>Homonotichthys rotundus</em><br />First occurrence age: 93.5-96.0 Ma</li>
+  <li><strong>“Percopsaria”</strong><br />Ingroup: <em>Percopsis omiscomaycus</em> (“Percopsis_omiscomaycusA”)<br />Oldest fossil species: <em>Mcconichthys longipinnis</em><br />First occurrence age: 61.1-66.043 Ma</li>
+  <li><strong>“Zeiariae”</strong><br />Ingroup: <em>Zenopsis conchifera</em> (“Zenopsis_conchiferaB”)<br />Oldest fossil species: <em>Cretazeus rinaldii</em><br />First occurrence age: 69.2-76.4 Ma</li>
+  <li><strong>“Gadiformes”</strong><br />Ingroup: <em>Gadus morhua</em> (“Gadus_morhua”)<br />Oldest fossil species: <em>Protacodus</em> sp.<br />First occurrence age: 59.7-62.8 Ma</li>
+  <li><strong>“Paracanthopterygii”</strong><br />Ingroup: <em>Gadus morhua</em> (“Gadus_morhua”), <em>Percopsis omiscomaycus</em> (“Percopsis_omiscomaycusA”), <em>Stylephorus chordatus</em> (“Stylephorus_chordatusB”), <em>Zenopsis conchifera</em> (“Zenopsis_conchiferaB”)<br />Oldest fossil species: <em>Cretazeus rinaldii</em><br />First occurrence age: 69.2-76.4 Ma</li>
 </ul>
 
 <p>Once all these constraints are added, the BEAUti window should look as shown below.</p>
 
 <figure>
-    <a id="fig:beauti18"></a>
-    <img style="width:88%;" src="figures/beauti18.png" alt="BEAUti">
-    <figcaption>Figure 18: Adding all calibrations.</figcaption>
+	<a id="fig:beauti18"></a>
+	<img style="width:88%;" src="figures/beauti18.png" alt="BEAUti" />
+	<figcaption>Figure 18: Adding all calibrations.</figcaption>
 </figure>
 
 <blockquote>
-<p>Move on to the &quot;MCMC&quot; tab. Specify an MCMC chain length of 100 million iterations, name the log file <code>Near_et_al_red.log</code> and the tree file <code>Near_et_al_red.trees</code>, and use a log frequency of 10,000 for both of these output files.</p>
+  <p>Move on to the “MCMC” tab. Specify an MCMC chain length of 100 million iterations, name the log file <code class="language-plaintext highlighter-rouge">Near_et_al_red.log</code> and the tree file <code class="language-plaintext highlighter-rouge">Near_et_al_red.trees</code>, and use a log frequency of 10,000 for both of these output files.</p>
 </blockquote>
 
 <p>The BEAUti window should then look as in the next screenshot.</p>
 
 <figure>
-    <a id="fig:beauti19"></a>
-    <img style="width:88%;" src="figures/beauti19.png" alt="BEAUti">
-    <figcaption>Figure 19: Specifying chain length and output.</figcaption>
+	<a id="fig:beauti19"></a>
+	<img style="width:88%;" src="figures/beauti19.png" alt="BEAUti" />
+	<figcaption>Figure 19: Specifying chain length and output.</figcaption>
 </figure>
 
 <blockquote>
-<p>Save the analysis settings to a new file named <code>Near_et_al_red.xml</code> by clicking &quot;Save As&quot; in BEAUti&#39;s &quot;File&quot; menu.</p>
+  <p>Save the analysis settings to a new file named <code class="language-plaintext highlighter-rouge">Near_et_al_red.xml</code> by clicking “Save As” in BEAUti’s “File” menu.</p>
 </blockquote>
 
-<h3>Running the BEAST2 analysis</h3>
+<h3 id="running-the-beast2-analysis">Running the BEAST2 analysis</h3>
 
-<p>Open BEAST2, load file <code>Near_et_al_red.xml</code>, and try running the MCMC analysis.</p>
+<p>Open BEAST2, load file <code class="language-plaintext highlighter-rouge">Near_et_al_red.xml</code>, and try running the MCMC analysis.</p>
 
 <figure>
-    <a id="fig:beast1"></a>
-    <img style="width:62%;" src="figures/beast1.png" alt="BEAST">
-    <figcaption>Figure 20: Starting the BEAST analysis.</figcaption>
+	<a id="fig:beast1"></a>
+	<img style="width:62%;" src="figures/beast1.png" alt="BEAST" />
+	<figcaption>Figure 20: Starting the BEAST analysis.</figcaption>
 </figure>
 
 <p>Most likely, the MCMC analysis is going to crash right at the start with an error message as shown below.</p>
 
 <figure>
-    <a id="fig:beast2"></a>
-    <img style="width:62%;" src="figures/beast2.png" alt="BEAST">
-    <figcaption>Figure 21: Error message due to failure to initialize the MCMC chain.</figcaption>
+	<a id="fig:beast2"></a>
+	<img style="width:62%;" src="figures/beast2.png" alt="BEAST" />
+	<figcaption>Figure 21: Error message due to failure to initialize the MCMC chain.</figcaption>
 </figure>
 
 <p>This is a common problem when several fossil constraints are specified: According to the error message, BEAST2 could not find a proper state to initialize. This means that even after several attempts, no starting state of the MCMC chain could be found that had a non-zero probability. Most often, the issue is that the tree that BEAST2 randomly generates to start the chain is in conflict with one or more fossil constraints. The way to fix this issue is to specify a starting tree that is in agreement with the specified fossil constraints. In particular, because all fossil constraints impose hard minimum ages on the origin of the respective clades, these clades must at least be as old as the minimum age in the starting tree. In case of doubt, it is usually safer to make the starting tree too old rather than too young, since the course of the MCMC chain should, at least after the burnin, not be influenced by the starting state anymore anyway. Some helpful advice on how to specify starting trees is provided on the <a href="https://www.beast2.org/fix-starting-tree/">BEAST2</a> webpage. With trees of hundreds of taxa, generating a suitable starting tree can be a tricky task in itself, but with the small number of 24 species used here, writing a starting tree by hand is feasible.</p>
 
 <blockquote>
-<p>Copy and paste the below starting tree string into a new FigTree window.</p>
+  <p>Copy and paste the below starting tree string into a new FigTree window.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)
-</code></pre></div>
-<p>Then, set a tick next to &quot;Node Labels&quot; to display node ages. As you&#39;ll see, I just arbitrarily specified for most branches a length of 10 million years, and I made sure that particularly the more recent divergence events agree with the respective fossil constraints (e.g. by placing the divergence of <em>Oreochromis niloticus</em> and <em>Heterochromis multidens</em> at 50 Ma because the origin of the clade &quot;Other African cichlid tribes&quot;, represented by <em>Oreochromis niloticus</em> is constrained to be at least 45 million years old).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)
+</code></pre></div></div>
+
+<p>Then, set a tick next to “Node Labels” to display node ages. As you’ll see, I just arbitrarily specified for most branches a length of 10 million years, and I made sure that particularly the more recent divergence events agree with the respective fossil constraints (e.g. by placing the divergence of <em>Oreochromis niloticus</em> and <em>Heterochromis multidens</em> at 50 Ma because the origin of the clade “Other African cichlid tribes”, represented by <em>Oreochromis niloticus</em> is constrained to be at least 45 million years old).</p>
 
 <p>There are two ways to specify starting trees for BEAST2 analyses; either again using BEAUti or by editing the XML file in a text editor.</p>
 
 <blockquote>
-<p>To do this with BEAUti, click on the &quot;View&quot; menu and select &quot;Show Starting tree panel&quot;, as shown in the next screenshot.</p>
+  <p>To do this with BEAUti, click on the “View” menu and select “Show Starting tree panel”, as shown in the next screenshot.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti20"></a>
-    <img style="width:88%;" src="figures/beauti20.png" alt="BEAUti">
-    <figcaption>Figure 22: Displaying the starting tree panel.</figcaption>
+	<a id="fig:beauti20"></a>
+	<img style="width:88%;" src="figures/beauti20.png" alt="BEAUti" />
+	<figcaption>Figure 22: Displaying the starting tree panel.</figcaption>
 </figure>
 
 <p>The starting tree panel should appear, as in the screenshot below.</p>
 
 <figure>
-    <a id="fig:beauti21"></a>
-    <img style="width:88%;" src="figures/beauti21.png" alt="BEAUti">
-    <figcaption>Figure 23: The starting tree panel.</figcaption>
+	<a id="fig:beauti21"></a>
+	<img style="width:88%;" src="figures/beauti21.png" alt="BEAUti" />
+	<figcaption>Figure 23: The starting tree panel.</figcaption>
 </figure>
 
 <blockquote>
-<p>From the menu at the top of the panel, choose &quot;Newick Tree&quot;, as shown in the next screenshot.</p>
+  <p>From the menu at the top of the panel, choose “Newick Tree”, as shown in the next screenshot.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti22"></a>
-    <img style="width:88%;" src="figures/beauti22.png" alt="BEAUti">
-    <figcaption>Figure 24: Choosing starting tree input options.</figcaption>
+	<a id="fig:beauti22"></a>
+	<img style="width:88%;" src="figures/beauti22.png" alt="BEAUti" />
+	<figcaption>Figure 24: Choosing starting tree input options.</figcaption>
 </figure>
 
 <blockquote>
-<p>Then, copy the starting tree string into the input field next to &quot;Newick&quot;, as shown below.</p>
+  <p>Then, copy the starting tree string into the input field next to “Newick”, as shown below.</p>
 </blockquote>
 
 <figure>
-    <a id="fig:beauti23"></a>
-    <img style="width:88%;" src="figures/beauti23.png" alt="BEAUti">
-    <figcaption>Figure 25: Specifying a starting tree in BEAUti.</figcaption>
+	<a id="fig:beauti23"></a>
+	<img style="width:88%;" src="figures/beauti23.png" alt="BEAUti" />
+	<figcaption>Figure 25: Specifying a starting tree in BEAUti.</figcaption>
 </figure>
 
 <blockquote>
-<p>Save the XML file again with &quot;Save&quot; in the &quot;File&quot; menu, open it again in BEAST2, and try running the analysis again. This time, the MCMC should begin to run.</p>
+  <p>Save the XML file again with “Save” in the “File” menu, open it again in BEAST2, and try running the analysis again. This time, the MCMC should begin to run.</p>
 </blockquote>
 
 <p>If for some reason adding the starting tree in BEAUti should not work, this can alternatively be done in a text editor, as described below (if you did add it in BEAUti, you may skip the next three steps):</p>
 
 <blockquote>
-<p>Open file <code>Near_et_al_red.xml</code> in a text editor and find the block shown below on lines 337-341.</p>
-</blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">        &lt;init id="RandomTree.t:enc_1st" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree.t:enc_1st" taxa="@enc_1st"&gt;
-            &lt;populationModel id="ConstantPopulation0.t:enc_1st" spec="ConstantPopulation"&gt;
-                &lt;parameter id="randomPopSize.t:enc_1st" name="popSize"&gt;1.0&lt;/parameter&gt;
-            &lt;/populationModel&gt;
-        &lt;/init&gt;
-</code></pre></div>
-<blockquote>
-<p>Replace the above block with the code below, which contains the starting tree string.</p>
-</blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">        &lt;init spec="beast.util.TreeParser" id="NewickTree.t:enc_1st"
-            initial="@Tree.t:enc_1st"
-            IsLabelledNewick="true"
-            taxa="@enc_1st"
-            newick="((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)"&gt;
-        &lt;/init&gt;
-</code></pre></div>
-<blockquote>
-<p>Save the file after adding the tree string, open it again in BEAST2, and launch the analysis.</p>
+  <p>Open file <code class="language-plaintext highlighter-rouge">Near_et_al_red.xml</code> in a text editor and find the block shown below on lines 337-341.</p>
 </blockquote>
 
-<p>Depending on the speed of your computer, this analysis will take half a day or longer. You could cancel the BEAST2 analysis after some time if you don&#39;t want to wait for it to finish, and you could instead continue the rest of tutorial with the prepared results that you&#39;ll find in files <code>Near_et_al_red.log</code> and <code>Near_et_al_red.trees</code> (see links to these files in the menu to the left).</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		&lt;init id="RandomTree.t:enc_1st" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree.t:enc_1st" taxa="@enc_1st"&gt;
+			&lt;populationModel id="ConstantPopulation0.t:enc_1st" spec="ConstantPopulation"&gt;
+				&lt;parameter id="randomPopSize.t:enc_1st" name="popSize"&gt;1.0&lt;/parameter&gt;
+			&lt;/populationModel&gt;
+		&lt;/init&gt;
+</code></pre></div></div>
 
-<h3>Inspecting the analysis results</h3>
+<blockquote>
+  <p>Replace the above block with the code below, which contains the starting tree string.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		&lt;init spec="beast.util.TreeParser" id="NewickTree.t:enc_1st"
+			initial="@Tree.t:enc_1st"
+			IsLabelledNewick="true"
+			taxa="@enc_1st"
+			newick="((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)"&gt;
+		&lt;/init&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p>Save the file after adding the tree string, open it again in BEAST2, and launch the analysis.</p>
+</blockquote>
+
+<p>Depending on the speed of your computer, this analysis will take half a day or longer. You could cancel the BEAST2 analysis after some time if you don’t want to wait for it to finish, and you could instead continue the rest of tutorial with the prepared results that you’ll find in files <code class="language-plaintext highlighter-rouge">Near_et_al_red.log</code> and <code class="language-plaintext highlighter-rouge">Near_et_al_red.trees</code> (see links to these files in the menu to the left).</p>
+
+<h3 id="inspecting-the-analysis-results">Inspecting the analysis results</h3>
 
 <p>We are now going to use the program Tracer to assess stationarity of the MCMC produced by the analyses with CladeAge.</p>
 
 <blockquote>
-<p>Open the analysis log file <code>Near_et_al_red.log</code> in Tracer.</p>
+  <p>Open the analysis log file <code class="language-plaintext highlighter-rouge">Near_et_al_red.log</code> in Tracer.</p>
 </blockquote>
 
 <p>The Tracer window should then look as shown in the next screenshot.</p>
 
 <figure>
-    <a id="fig:tracer1"></a>
-    <img style="width:88%;" src="figures/tracer1.png" alt="BEAST">
-    <figcaption>Figure 22: Analyzing results with Tracer.</figcaption>
+	<a id="fig:tracer1"></a>
+	<img style="width:88%;" src="figures/tracer1.png" alt="BEAST" />
+	<figcaption>Figure 22: Analyzing results with Tracer.</figcaption>
 </figure>
 
 <blockquote>
-<p>Quickly browse through the long list of traces in the bottom left part of the window to see if any have particularly low ESS values.</p>
+  <p>Quickly browse through the long list of traces in the bottom left part of the window to see if any have particularly low ESS values.</p>
 </blockquote>
 
-<p>We&#39;ll ignore those parameters of the bModelTest model named &quot;hasEqualFreqs...&quot;. Besides these, the lowest ESS values are probably around 80, indicating that the chain is approaching stationarity, but that it should be run for more iterations for a complete and publishable analysis. Nevertheless, the degree of stationarity appears to be sufficient for our interpretation here.</p>
+<p>We’ll ignore those parameters of the bModelTest model named “hasEqualFreqs…”. Besides these, the lowest ESS values are probably around 80, indicating that the chain is approaching stationarity, but that it should be run for more iterations for a complete and publishable analysis. Nevertheless, the degree of stationarity appears to be sufficient for our interpretation here.</p>
 
 <blockquote>
-<p>With &quot;posterior&quot; selected in the list of parameters, click on &quot;Trace&quot; in the top right of the window.</p>
+  <p>With “posterior” selected in the list of parameters, click on “Trace” in the top right of the window.</p>
 </blockquote>
 
 <p>You should see that after a steep increase at the very beginning of the MCMC, the posterior has remained more or less stationary after state 1E7 (10 million).</p>
 
 <figure>
-    <a id="fig:tracer2"></a>
-    <img style="width:88%;" src="figures/tracer2.png" alt="BEAST">
-    <figcaption>Figure 23: Analyzing results with Tracer.</figcaption>
+	<a id="fig:tracer2"></a>
+	<img style="width:88%;" src="figures/tracer2.png" alt="BEAST" />
+	<figcaption>Figure 23: Analyzing results with Tracer.</figcaption>
 </figure>
 
-<p>This suggest that considering the first 10% of the chain as &quot;burn-in&quot; is appropriate for this analysis.</p>
+<p>This suggest that considering the first 10% of the chain as “burn-in” is appropriate for this analysis.</p>
 
 <blockquote>
-<p>To see a better example of a &quot;hairy caterpillar&quot; trace pattern indicating good stationarity, click on &quot;prior&quot; in the list of traces.</p>
+  <p>To see a better example of a “hairy caterpillar” trace pattern indicating good stationarity, click on “prior” in the list of traces.</p>
 </blockquote>
 
 <p>You should see a trace as shown below.</p>
 
 <figure>
-    <a id="fig:tracer3"></a>
-    <img style="width:88%;" src="figures/tracer3.png" alt="BEAST">
-    <figcaption>Figure 24: Analyzing results with Tracer.</figcaption>
+	<a id="fig:tracer3"></a>
+	<img style="width:88%;" src="figures/tracer3.png" alt="BEAST" />
+	<figcaption>Figure 24: Analyzing results with Tracer.</figcaption>
 </figure>
 
 <p>Note that in principle all traces should look similar to this pattern, with ESS values greater than 200, once the chain is fully stationary.</p>
 
 <blockquote>
-<p>Select the &quot;TreeHeight&quot; trace indicating the root age in the list on the left.</p>
+  <p>Select the “TreeHeight” trace indicating the root age in the list on the left.</p>
 </blockquote>
 
 <p><strong>Question 1:</strong> What is the mean estimate and its confidence interval for the age of the first split in the phylogeny? <a href="#q1">(see answer)</a></p>
 
 <blockquote>
-<p>Next, find the estimated divergence time between African and Neotropical cichlid fishes. To do so, scroll to the bottom of the traces list and select &quot;mrcatime(Afro-American cichlids)&quot;.</p>
+  <p>Next, find the estimated divergence time between African and Neotropical cichlid fishes. To do so, scroll to the bottom of the traces list and select “mrcatime(Afro-American cichlids)”.</p>
 </blockquote>
 
-<p>You&#39;ll see that this divergence event was estimated around 65 Ma, with a range of uncertainty between around 55 Ma and 75 Ma, as shown in the next screenshot.</p>
+<p>You’ll see that this divergence event was estimated around 65 Ma, with a range of uncertainty between around 55 Ma and 75 Ma, as shown in the next screenshot.</p>
 
 <figure>
-    <a id="fig:tracer5"></a>
-    <img style="width:88%;" src="figures/tracer5.png" alt="BEAST">
-    <figcaption>Figure 25: Analyzing results with Tracer.</figcaption>
+	<a id="fig:tracer5"></a>
+	<img style="width:88%;" src="figures/tracer5.png" alt="BEAST" />
+	<figcaption>Figure 25: Analyzing results with Tracer.</figcaption>
 </figure>
 
 <blockquote>
-<p>Finally, select the speciation-rate parameter named &quot;BDBirthRate&quot; from the traces list to see the summary statistics for this parameter.</p>
+  <p>Finally, select the speciation-rate parameter named “BDBirthRate” from the traces list to see the summary statistics for this parameter.</p>
 </blockquote>
 
 <p>These should look similar to those shown in the screenshot below.</p>
 
 <figure>
-    <a id="fig:tracer6"></a>
-    <img style="width:88%;" src="figures/tracer6.png" alt="BEAST">
-    <figcaption>Figure 26: Analyzing results with Tracer.</figcaption>
+	<a id="fig:tracer6"></a>
+	<img style="width:88%;" src="figures/tracer6.png" alt="BEAST" />
+	<figcaption>Figure 26: Analyzing results with Tracer.</figcaption>
 </figure>
 
 <p><strong>Question 2:</strong> How does this speciation-rate estimate compare to the estimate for net diversification that we used to define prior densities for CladeAge calibrations? <a href="#q2">(see answer)</a></p>
 
-<h3>Summarizing the posterior tree distribution</h3>
+<h3 id="summarizing-the-posterior-tree-distribution">Summarizing the posterior tree distribution</h3>
 
-<p>While analysis with Tracer has been sufficient to inspect the run stationarity and parameter estimates, we might still want to inspect and visualize the inferred tree itself. One useful method to visualize the posterior tree distribution is <a href="https://www.cs.auckland.ac.nz/%7Eremco/DensiTree/">Densitree</a> <a class="citation" href="#BouckaertHeled2014">(Bouckaert &amp; Heled, 2014)</a>; this software is distributed together with BEAST2. Alternatively, a single summary tree can be generated with TreeAnnotator as described below.</p>
+<p>While analysis with Tracer has been sufficient to inspect the run stationarity and parameter estimates, we might still want to inspect and visualize the inferred tree itself. One useful method to visualize the posterior tree distribution is <a href="https://www.cs.auckland.ac.nz/~remco/DensiTree/">Densitree</a> <a class="citation" href="#BouckaertHeled2014">(Bouckaert &amp; Heled, 2014)</a>; this software is distributed together with BEAST2. Alternatively, a single summary tree can be generated with TreeAnnotator as described below.</p>
 
 <blockquote>
-<p>Open TreeAnnotator. Set the burn-in percentage to 10% (recall that this was determined to be appropriate based on the MCMC trace for the posterior). As the target tree type, choose &quot;Maximum clade credibility tree&quot; from the drop-down menu, and select &quot;Mean heights&quot; as node heights. Select the <code>Near_et_al_red.trees</code> file written by BEAST2 as input tree file, and name the output file <code>Near_et_al_red.tre</code>.</p>
+  <p>Open TreeAnnotator. Set the burn-in percentage to 10% (recall that this was determined to be appropriate based on the MCMC trace for the posterior). As the target tree type, choose “Maximum clade credibility tree” from the drop-down menu, and select “Mean heights” as node heights. Select the <code class="language-plaintext highlighter-rouge">Near_et_al_red.trees</code> file written by BEAST2 as input tree file, and name the output file <code class="language-plaintext highlighter-rouge">Near_et_al_red.tre</code>.</p>
 </blockquote>
 
 <p>The TreeAnnotator window should then look as shown below.</p>
 
 <figure>
-    <a id="fig:treeannotator1"></a>
-    <img style="width:62%;" src="figures/treeannotator1.png" alt="TreeAnnotator">
-    <figcaption>Figure 27: Generating a summary tree with TreeAnnotator.</figcaption>
+	<a id="fig:treeannotator1"></a>
+	<img style="width:62%;" src="figures/treeannotator1.png" alt="TreeAnnotator" />
+	<figcaption>Figure 27: Generating a summary tree with TreeAnnotator.</figcaption>
 </figure>
 
-<p>After clicking &quot;OK&quot;, TreeAnnotator will write the maximum-clade-credibility tree to file <code>Near_et_al_red.tre</code>. This tree can then be visualized with FigTree.</p>
+<p>After clicking “OK”, TreeAnnotator will write the maximum-clade-credibility tree to file <code class="language-plaintext highlighter-rouge">Near_et_al_red.tre</code>. This tree can then be visualized with FigTree.</p>
 
 <blockquote>
-<p>Open file <code>Near_et_al_red.tre</code> in FigTree. To add a time scale, set a tick next to &quot;Scale Axis&quot; in the menu on the left, then click the triangle next to it. Remove the tick next to &quot;Show grid&quot; and set a tick next to &quot;Reverse axis&quot;. Then, set a tick next to &quot;Node bars&quot;, click the triangle to open this panel, and select &quot;height_95%_HPD&quot; from the drop-down menu to illustrate the uncertainty in divergence-time estimates.</p>
+  <p>Open file <code class="language-plaintext highlighter-rouge">Near_et_al_red.tre</code> in FigTree. To add a time scale, set a tick next to “Scale Axis” in the menu on the left, then click the triangle next to it. Remove the tick next to “Show grid” and set a tick next to “Reverse axis”. Then, set a tick next to “Node bars”, click the triangle to open this panel, and select “height_95%_HPD” from the drop-down menu to illustrate the uncertainty in divergence-time estimates.</p>
 </blockquote>
 
 <p>The tree should then be shown as in the screenshot below.</p>
 
 <figure>
-    <a id="fig:figtree1"></a>
-    <img style="width:88%;" src="figures/figtree1.png" alt="FigTree">
-    <figcaption>Figure 28: Visualizing the summary tree with FigTree.</figcaption>
+	<a id="fig:figtree1"></a>
+	<img style="width:88%;" src="figures/figtree1.png" alt="FigTree" />
+	<figcaption>Figure 28: Visualizing the summary tree with FigTree.</figcaption>
 </figure>
 
-<p><br><br><br><br><br><br><br><br></p>
+<p><br /><br /><br /><br /><br /><br /><br /><br /></p>
 
-<h2>Answers to questions</h2>
+<h2 id="answers-to-questions">Answers to questions</h2>
 
 <p><a name="q1"></a></p>
 
 <ul>
-<li><strong>Question 1:</strong> When you select &quot;TreeHeight&quot; in the list on the left and click on the tab for &quot;Estimates&quot; in the top right, you&#39;ll see the following information:<figure>
-<a id="fig:tracer4"></a>
-<img style="width:88%;" src="figures/tracer4.png" alt="BEAST">
-<figcaption>Figure A1: Analyzing results with Tracer.</figcaption>
-</figure>As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the &quot;95% HPD interval&quot;, the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.</li>
+  <li><strong>Question 1:</strong> When you select “TreeHeight” in the list on the left and click on the tab for “Estimates” in the top right, you’ll see the following information:<figure>
+  <a id="fig:tracer4"></a>
+  <img style="width:88%;" src="figures/tracer4.png" alt="BEAST" />
+</figure>    <figcaption>Figure A1: Analyzing results with Tracer.</figcaption>
+  </li>
 </ul>
+<p>&lt;/figure&gt;As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the “95% HPD interval”, the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.</p>
 
 <p><a name="q2"></a></p>
 
 <ul>
-<li><strong>Question 2:</strong> The estimated speciation rate is far lower than the values that we assumed when we specified prior densities for clade ages with CladeAge. Recall that we had used the estimates for the net diversification rate from Santini et al. <a class="citation" href="#Santini2009">(2009)</a>, which were 0.041-0.081 (per millon year). Thus, the estimated speciation of around 0.0009 is almost an order of magnitude lower than the values that we had assumed for the net diversification rate. This is remarkable because the speciation rate should always be higher than the net diversification rate, given that the latter is defined as the difference between the speciation and extinction rates. The explanation for this difference is that BEAST2 estimated the speciation rate under the assumption that the species that we included in the phylogeny are in fact all the extant species that descended from the root of the phylogeny. This means that BEAST2 assumed that no spiny-rayed fish species besides those 24 included in the phylogeny exist. On the other hand the estimates for the net diversification rate obtained by Santini et al. <a class="citation" href="#Santini2009">(2009)</a> accounted for the fact that only a subset of the living species were included in their phylogeny. Thus, the speciation-rate estimate resulting from our analysis is most certainly a severe underestimate. This bias, however, should not lead to strong bias in the timeline inferred in the analysis with CladeAge, because it did not influence the prior densities placed on clade ages.</li>
+  <li><strong>Question 2:</strong> The estimated speciation rate is far lower than the values that we assumed when we specified prior densities for clade ages with CladeAge. Recall that we had used the estimates for the net diversification rate from Santini et al. <a class="citation" href="#Santini2009">(“Did Genome Duplication Drive the Origin of Teleosts? A Comparative Study of Diversification in Ray-Finned Fishes,” 2009)</a>, which were 0.041-0.081 (per millon year). Thus, the estimated speciation of around 0.0009 is almost an order of magnitude lower than the values that we had assumed for the net diversification rate. This is remarkable because the speciation rate should always be higher than the net diversification rate, given that the latter is defined as the difference between the speciation and extinction rates. The explanation for this difference is that BEAST2 estimated the speciation rate under the assumption that the species that we included in the phylogeny are in fact all the extant species that descended from the root of the phylogeny. This means that BEAST2 assumed that no spiny-rayed fish species besides those 24 included in the phylogeny exist. On the other hand the estimates for the net diversification rate obtained by Santini et al. <a class="citation" href="#Santini2009">(“Did Genome Duplication Drive the Origin of Teleosts? A Comparative Study of Diversification in Ray-Finned Fishes,” 2009)</a> accounted for the fact that only a subset of the living species were included in their phylogeny. Thus, the speciation-rate estimate resulting from our analysis is most certainly a severe underestimate. This bias, however, should not lead to strong bias in the timeline inferred in the analysis with CladeAge, because it did not influence the prior densities placed on clade ages.</li>
 </ul>
 
-<hr>
+<hr />
 
-<h1>Useful Links</h1>
+<h1 id="useful-links">Useful Links</h1>
 
 <ul>
-<li><a href="http://evoinformatics.eu/cladeage.pdf">Rough Guide to CladeAge</a></li>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
-<li>Ask questions at the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+  <li><a href="http://evoinformatics.eu/cladeage.pdf">Rough Guide to CladeAge</a></li>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>Ask questions at the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
 
-<hr>
+<hr />
 
-<h1>Relevant References</h1>
+<h1 id="relevant-references">Relevant References</h1>
 
-<ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., … Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
-<li><span id="Near2013">Near, T. J., Dornburg, A., Eytan, R. I., Keck, B. P., Smith, W. L., Kuhn, K. L., … Wainwright, P. C. (2013). Phylogeny and tempo of diversification in the superradiation of spiny-rayed fishes. <i>Proceedings of the National Academy of Sciences USA</i>, <i>110</i>(31), 12738–12743.</span></li>
+<ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Near2013">Near, T. J., Dornburg, A., Eytan, R. I., Keck, B. P., Smith, W. L., Kuhn, K. L., Moore, J. A., Price, S. A., Burbrink, F. T., Friedman, M., &amp; Wainwright, P. C. (2013). Phylogeny and tempo of diversification in the superradiation of spiny-rayed fishes. <i>Proceedings of the National Academy of Sciences USA</i>, <i>110</i>(31), 12738–12743.</span></li>
 <li><span id="Matschiner2017">Matschiner, M., Musilová, Z., Barth, J. M. I., Starostová, Z., Salzburger, W., Steel, M., &amp; Bouckaert, R. R. (2017). Bayesian phylogenetic estimation of clade ages supports trans-Atlantic dispersal of cichlid fishes. <i>Systematic Biology</i>, <i>66</i>(1), 3–22.</span></li>
-<li><span id="Betancur2017">Betancur-R, R., Wiley, E. O., Arratia, G., Acero, A., Bailly, N., Miya, M., … Ortı́ Guillermo. (2017). Phylogenetic classification of bony fishes. <i>BMC Evolutionary Biology</i>, <i>17</i>, 162.</span></li>
+<li><span id="Betancur2017">Betancur-R, R., Wiley, E. O., Arratia, G., Acero, A., Bailly, N., Miya, M., Lecointre, G., &amp; Ortı́ Guillermo. (2017). Phylogenetic classification of bony fishes. <i>BMC Evolutionary Biology</i>, <i>17</i>, 162.</span></li>
 <li><span id="Bouckaert2017">Bouckaert, R. R., &amp; Drummond, A. J. (2017). bModelTest: Bayesian phylogenetic site model averaging and model comparison. <i>BMC Evolutionary Biology</i>, <i>17</i>, 42.</span></li>
 <li><span id="Lippitsch1998">Lippitsch, E., &amp; Micklich, N. (1998). Cichlid fish biodiversity in an Oligocene lake. <i>Ital. J. Zool.</i>, <i>65</i>(Suppl.), 185–188.</span></li>
 <li><span id="Santini2009">Santini, F., Harmon, L. J., Carnevale, G., &amp; Alfaro, M. E. (2009). Did genome duplication drive the origin of teleosts? A comparative study of diversification in ray-finned fishes. <i>BMC Evolutionary Biology</i>, <i>9</i>(1), 194.</span></li>
-<li><span id="Foote2007">Foote, M., &amp; Miller, A. I. (2007). <i>Principles of Paleontology</i> (3rd ed.). New York: W. H. Freeman.</span></li>
+<li><span id="Foote2007">Foote, M., &amp; Miller, A. I. (2007). <i>Principles of Paleontology</i> (3rd ed.). W. H. Freeman.</span></li>
 <li><span id="BouckaertHeled2014">Bouckaert, R. R., &amp; Heled, J. (2014). DensiTree 2: seeing trees through the forest. <i>BioRxiv</i>. https://doi.org/10.1101/012401</span></li>
 <li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
 
 
 			<hr>
@@ -1112,41 +993,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

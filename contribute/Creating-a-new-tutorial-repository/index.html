@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,52 +27,41 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li class="active">
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
@@ -128,49 +102,51 @@
 				<p>Every tutorial should be uploaded to a <a href="http://www.github.com">GitHub</a> repository and should be a standalone unit. That is, the GitHub repository should contain, besides the tutorial itself,</p>
 
 <ul>
-<li>All data files used in the tutorial</li>
-<li>Example BEAST2 XML files</li>
-<li>Example output files from running the XML files in BEAST2</li>
-<li>Any scripts needed for pre- or post-processing</li>
+  <li>All data files used in the tutorial</li>
+  <li>Example BEAST2 XML files</li>
+  <li>Example output files from running the XML files in BEAST2</li>
+  <li>Any scripts needed for pre- or post-processing</li>
 </ul>
 
-<p>Keep in mind that the name of the tutorial displayed on the website will be the name of the GitHub repository, with all hyphens replaced with spaces.  <strong>Please choose an explanatory name that properly identifies your tutorial!</strong> There is no need to use abbreviations to keep tutorial names short. </p>
+<p>Keep in mind that the name of the tutorial displayed on the website will be the name of the GitHub repository, with all hyphens replaced with spaces.  <strong>Please choose an explanatory name that properly identifies your tutorial!</strong> There is no need to use abbreviations to keep tutorial names short.</p>
 
 <p>We have created a <a href="https://github.com/Taming-the-BEAST/Tutorial-Template">tutorial template repository</a> to help you get started. 
 The easiest way to create a new tutorial is to simply clone the template (or any of the existing <a href="/tutorials/">tutorials</a>). This will set up the correct directory structure for the tutorial. Follow these steps:</p>
 
 <blockquote>
-<ol>
-<li>Create a <a href="https://help.github.com/articles/signing-up-for-a-new-github-account/">GitHub account</a> (if you don&#39;t already have one)</li>
-<li>Create a new repository on your GitHub account with the name of your tutorial. Let&#39;s assume for the rest of this example that your tutorial will be called <em>My-Awesome-Tutorial</em>. Do <strong>not</strong> initialize the repository with a README and do <strong>not</strong> add a <code>.gitignore</code> file</li>
-<li>Navigate to where you want to create the tutorial</li>
-<li>Type <code>git clone git@github.com:Taming-the-BEAST/Tutorial-Template.git</code> <br>(<strong>Note:</strong> This is the template tutorial, not the tutorial you just created on your GitHub account)</li>
-<li>Rename the directory to the new tutorial&#39;s name: <code>mv Tutorial-Template My-Awesome-Tutorial</code> (this step is optional, but keeps everything nice and tidy)</li>
-<li>Enter the tutorial directory: <code>cd My-Awesome-Tutorial</code></li>
-<li>Change the origin of the repository so it points to the newly created repository on your GitHub account: <code>git remote set-url origin git@github.com:&lt;your-username&gt;/My-Awesome-Tutorial.git</code></li>
-<li>Type: <code>git push -u origin master</code> </li>
-</ol>
+  <ol>
+    <li>Create a <a href="https://help.github.com/articles/signing-up-for-a-new-github-account/">GitHub account</a> (if you don’t already have one)</li>
+    <li>Create a new repository on your GitHub account with the name of your tutorial. Let’s assume for the rest of this example that your tutorial will be called <em>My-Awesome-Tutorial</em>. Do <strong>not</strong> initialize the repository with a README and do <strong>not</strong> add a <code class="language-plaintext highlighter-rouge">.gitignore</code> file</li>
+    <li>Navigate to where you want to create the tutorial</li>
+    <li>Type <code class="language-plaintext highlighter-rouge">git clone git@github.com:Taming-the-BEAST/Tutorial-Template.git</code> <br />(<strong>Note:</strong> This is the template tutorial, not the tutorial you just created on your GitHub account)</li>
+    <li>Rename the directory to the new tutorial’s name: <code class="language-plaintext highlighter-rouge">mv Tutorial-Template My-Awesome-Tutorial</code> (this step is optional, but keeps everything nice and tidy)</li>
+    <li>Enter the tutorial directory: <code class="language-plaintext highlighter-rouge">cd My-Awesome-Tutorial</code></li>
+    <li>Change the origin of the repository so it points to the newly created repository on your GitHub account: <code class="language-plaintext highlighter-rouge">git remote set-url origin git@github.com:&lt;your-username&gt;/My-Awesome-Tutorial.git</code></li>
+    <li>Type: <code class="language-plaintext highlighter-rouge">git push -u origin master</code></li>
+  </ol>
 </blockquote>
 
-<p>Alternatively, it is also possible to create a blank repository and set up the same directory structure. The default structure of a tutorial is: </p>
-<div class="highlight"><pre><code class="language-" data-lang="">    .
-    ├── data/
-    |   └── (alignment files)
-    ├── xml/
-    |   └── (BEAST2 XML files)
-    ├── precooked-runs/
-    |   └── (.log and .trees files from BEAST output)
-    ├── scripts/
-    |   └── (pre- and post-processing scripts)
-    ├── figures/
-    |   └── (screenshots and other figures used in the tutorial)
-    ├── README.md
-    ├── biblatex_macros.tex
-    ├── main.tex
-    └── preamble.tex
+<p>Alternatively, it is also possible to create a blank repository and set up the same directory structure. The default structure of a tutorial is:</p>
 
-</code></pre></div>
-<p>The three <code>.tex</code> files are optional and are used for tutorials written in LaTeX. If you do <strong>not</strong> want to include a LaTeX version of the tutorial, be sure to <strong>remove <code>main.tex</code> from the repository</strong>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	.
+	├── data/
+	|   └── (alignment files)
+	├── xml/
+	|   └── (BEAST2 XML files)
+	├── precooked-runs/
+	|   └── (.log and .trees files from BEAST output)
+	├── scripts/
+	|   └── (pre- and post-processing scripts)
+	├── figures/
+	|   └── (screenshots and other figures used in the tutorial)
+	├── README.md
+	├── biblatex_macros.tex
+	├── main.tex
+	└── preamble.tex
+
+</code></pre></div></div>
+
+<p>The three <code class="language-plaintext highlighter-rouge">.tex</code> files are optional and are used for tutorials written in LaTeX. If you do <strong>not</strong> want to include a LaTeX version of the tutorial, be sure to <strong>remove <code class="language-plaintext highlighter-rouge">main.tex</code> from the repository</strong>.</p>
 
 <p>If you want to add any further documentation or lecture slides to the tutorial, either add them to the root of the tutorial or to a directory with a descriptive name. All PDF files will be automatically detected and available to view or download from the website.</p>
 
@@ -190,41 +166,25 @@ The easiest way to create a new tutorial is to simply clone the template (or any
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

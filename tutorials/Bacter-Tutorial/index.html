@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,18 +118,18 @@
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -175,7 +146,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplT.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplT.fasta
 					</a>
@@ -184,7 +155,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplO.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplO.fasta
 					</a>
@@ -193,7 +164,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplP.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplP.fasta
 					</a>
@@ -202,7 +173,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplR.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplR.fasta
 					</a>
@@ -211,7 +182,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplS.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplS.fasta
 					</a>
@@ -220,7 +191,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplQ.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplQ.fasta
 					</a>
@@ -229,7 +200,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplF.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplF.fasta
 					</a>
@@ -238,7 +209,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplD.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplD.fasta
 					</a>
@@ -247,7 +218,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplB.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplB.fasta
 					</a>
@@ -256,7 +227,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplE.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplE.fasta
 					</a>
@@ -265,7 +236,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplC.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplC.fasta
 					</a>
@@ -274,7 +245,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/data/Ecoli_rplA.fasta" target="_blank" rel="nofollow">
 						Ecoli_rplA.fasta
 					</a>
@@ -294,7 +265,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/xml/bacter_tutorial.xml" target="_blank" download rel="nofollow">
 						bacter_tutorial.xml
 					</a>
@@ -315,7 +286,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/precooked_runs/bacter_tutorial.Ecoli_rplA.trees" target="_blank" download rel="nofollow">
 						bacter_tutorial.Ecoli_rplA....
 					</a>
@@ -324,7 +295,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Bacter-Tutorial/raw/master/precooked_runs/bacter_tutorial.log" target="_blank" download rel="nofollow">
 						bacter_tutorial.log
 					</a>
@@ -369,7 +340,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/ac12bf7ade609ef59c60a426035ae5021aceaf39">
 					21 Jun 2018 - <span class="text-gray">Removed tex file, updated tutorial text.</span>
 					</a> 
@@ -377,7 +348,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/7a237f49117040ebb4689790a20c2eac63a6c7cd">
 					10 Feb 2017 - <span class="text-gray">Fixed bug.</span>
 					</a> 
@@ -385,7 +356,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/f5dfeace5fee4159dad34640b93f3704c1795b68">
 					01 Feb 2017 - <span class="text-gray">Change figures</span>
 					</a> 
@@ -393,7 +364,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/134e28eba81ccdd3df6f8abdf2602c1e581fd855">
 					31 Jan 2017 - <span class="text-gray">Add latex tutorial</span>
 					</a> 
@@ -401,7 +372,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/8be75710fc341e6e4e5c1dd102a9f25d747ab4f5">
 					31 Jan 2017 - <span class="text-gray">Add Bacter link, remove beast2 book ref</span>
 					</a> 
@@ -416,7 +387,7 @@
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
 <p><a href="http://tgvaughan.github.io/bacter">Bacter</a> is a <a href="http://www.beast2.org/">BEAST
 2</a> package dedicated to performing inference of
@@ -430,58 +401,58 @@ under study, and the sampling procedure.</p>
 <p>This tutorial will gently walk you through the process of using Bacter to the
 ARG and associated parameters using an example multi-locus data set.</p>
 
-<h1>Installation</h1>
+<h1 id="installation">Installation</h1>
 
-<h2>Software requirements</h2>
+<h2 id="software-requirements">Software requirements</h2>
 
 <p>In order to use Bacter and visualize its analysis results the following
 software must be installed:</p>
 
 <ul>
-<li>  BEAST 2 version 2.5 or later. <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>  Tracer version 1.7 or later.  <a href="https://github.com/beast-dev/tracer/releases/latest">https://github.com/beast-dev/tracer/releases/latest</a></li>
-<li>  A recent version of <a href="http://www.mozilla.org/firefox">Mozilla Firefox</a>
+  <li>BEAST 2 version 2.5 or later. <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Tracer version 1.7 or later.  <a href="https://github.com/beast-dev/tracer/releases/latest">https://github.com/beast-dev/tracer/releases/latest</a></li>
+  <li>A recent version of <a href="http://www.mozilla.org/firefox">Mozilla Firefox</a>
 or <a href="http://www.google.com/chrome">Google Chrome</a>.</li>
 </ul>
 
-<h2>Bacter Package Installation</h2>
+<h2 id="bacter-package-installation">Bacter Package Installation</h2>
 
 <p>Bacter is easily installed via the BEAUti package manager. To do this,
-run BEAUti and select &quot;Manage Packages&quot; from the File menu:</p>
+run BEAUti and select “Manage Packages” from the File menu:</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/beauti.png">
+    <img style="width:80%;" src="figures/beauti.png" />
     <figcaption></figcaption>
 </figure>
 
-<p>Then, ensure the &quot;bacter&quot; package is highlighted before pressing the
-&quot;Install/Upgrade&quot; button:</p>
+<p>Then, ensure the “bacter” package is highlighted before pressing the
+“Install/Upgrade” button:</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/package_manager.png">
+    <img style="width:80%;" src="figures/package_manager.png" />
     <figcaption></figcaption>
 </figure>
 
-<p>That&#39;s it! Bacter is now installed. It is a good idea to restart BEAUti
+<p>That’s it! Bacter is now installed. It is a good idea to restart BEAUti
 at this point.</p>
 
-<h1>Setting up the analysis</h1>
+<h1 id="setting-up-the-analysis">Setting up the analysis</h1>
 
-<h2>Choosing the Bacter BEAUti template</h2>
+<h2 id="choosing-the-bacter-beauti-template">Choosing the Bacter BEAUti template</h2>
 
 <p>Open the BEAUti program. Before doing anything else we must switch to
 the Bacter template. To do this, open the file menu and from the
-Template submenu select &quot;Bacter&quot;.</p>
+Template submenu select “Bacter”.</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/template.png">
+    <img style="width:80%;" src="figures/template.png" />
     <figcaption></figcaption>
 </figure>
 
-<h2>Loading sequence alignments</h2>
+<h2 id="loading-sequence-alignments">Loading sequence alignments</h2>
 
 <p>In this tutorial we will be analyzing a subset of the E. coli data presented in
 <a href="http://dx.doi.org/10.1534/genetics.116.193425">Vaughan et al., Genetics, 2017</a>.  The full data set
@@ -497,48 +468,48 @@ them all simply using Ctrl+A (or Command+A on a Mac).</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/load_alignments.png">
+    <img style="width:80%;" src="figures/load_alignments.png" />
     <figcaption></figcaption>
 </figure>
 
 <p>After pressing Open, the alignments should be visible as 12 new records
 in the table. By default, each locus is assumed to have its own distinct
-site, clock and &quot;tree&quot; (really ARG here) models. Since our ARGs
+site, clock and “tree” (really ARG here) models. Since our ARGs
 potentially span multiple loci, we should definitely cause the loci to
 share a tree model. This is done by selecting both rows in the table by
 again holding down Ctrl (or Command) and clicking each in turn.
 Alternatively, you can just click on one row and then press Ctrl+A, or Command+A on a Mac.
 (This is easier than clicking each row if your data consists of many
-loci.) Once they&#39;re selected, press the &quot;Link Trees&quot; button on the
+loci.) Once they’re selected, press the “Link Trees” button on the
 right-hand side just above the table. In our case, we will use shared
-site and clock models too, so click the &quot;Link Site Models&quot; and &quot;Link
-Clock Models&quot; buttons as well.</p>
+site and clock models too, so click the “Link Site Models” and “Link
+Clock Models” buttons as well.</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/link_models.png">
+    <img style="width:80%;" src="figures/link_models.png" />
     <figcaption></figcaption>
 </figure>
 
-<h2>Defining the model</h2>
+<h2 id="defining-the-model">Defining the model</h2>
 
 <p>We will now configure the model under which the inference will be
 conducted.</p>
 
-<p>The data that we&#39;ve loaded was sampled contemporaneously. We can therefore
+<p>The data that we’ve loaded was sampled contemporaneously. We can therefore
 ignore the Tip Dates panel. When analyzing data where the samples were
-collected at very different times you&#39;ll want to include those times in the
+collected at very different times you’ll want to include those times in the
 analysis by modifying the contents of that panel.</p>
 
 <p>Open the Site Model panel and set the substitution to HKY. This
 model is far superior to the default Jukes-Cantor model as it allows distinct
 transition/transversion rates and non-equal equilibrium base frequencies.
-Leave the default initial value for kappa and the base frequencies as &quot;estimated&quot;.
+Leave the default initial value for kappa and the base frequencies as “estimated”.
 The site model panel should now look similar to the following:</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/site_model.png">
+    <img style="width:80%;" src="figures/site_model.png" />
     <figcaption></figcaption>
 </figure>
 
@@ -547,11 +518,11 @@ calibration information, we will ignore the Clock Model panel.  By doing this,
 we are implicitly deciding that time will be expressed in expected number of
 substitutions per site.</p>
 
-<p>Now switch to the Priors panel. See that &quot;Coalescent with constant population&quot;
+<p>Now switch to the Priors panel. See that “Coalescent with constant population”
 is selected as the default tree prior. Expand this tree prior by clicking on
-the arrow to the left of &quot;Tree.t&quot;.</p>
+the arrow to the left of “Tree.t”.</p>
 
-<p>Uncheck the &quot;estimate&quot; checkboxes to the right of the recombination
+<p>Uncheck the “estimate” checkboxes to the right of the recombination
 rate (Rho) and tract length (Delta) parameters and enter the values
 0.1 and 1000.0 respectively. Estimating these parameters can actually
 be quite difficult, so fixing them to known values is a good idea if
@@ -567,22 +538,22 @@ parameter, with parameters M=0 and S=2.</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/priors.png">
+    <img style="width:80%;" src="figures/priors.png" />
     <figcaption></figcaption>
 </figure>
 
 <p>Finally, switch to the MCMC panel and change the chain length to
-1000000 (i.e. 10<sup>6).</sup> This is far too short for a production run,
+1000000 (i.e. 10^6). This is far too short for a production run,
 but means that the example analysis will complete relatively quickly.
-Also, because our run is so short, we&#39;ll sample the chain of ARGs more
+Also, because our run is so short, we’ll sample the chain of ARGs more
 frequently. To do this, expand the ACGLogger.t:simulated_data_A
 section by clicking on the arrow to the left of this line, then set the
-&quot;Log Every&quot; field to 1000. The MCMC panel should now look similar to the
+“Log Every” field to 1000. The MCMC panel should now look similar to the
 following:</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/mcmc_settings.png">
+    <img style="width:80%;" src="figures/mcmc_settings.png" />
     <figcaption></figcaption>
 </figure>
 
@@ -595,54 +566,54 @@ to produce the BEAST input XML.</p>
 BEAST XML file but would like to continue immediately with the analysis,
 download and use <a href="xml/bacter_tutorial.xml">this ready-made XML file</a>;</p>
 
-<h1>Running the analysis</h1>
+<h1 id="running-the-analysis">Running the analysis</h1>
 
 <p>Run the analysis just as you would any other BEAST 2 analysis. That is,</p>
 
 <ol>
-<li> Start BEAST 2.</li>
-<li> Select the XML you produced in the previous section from the file
+  <li>Start BEAST 2.</li>
+  <li>Select the XML you produced in the previous section from the file
 selection dialog box.</li>
 </ol>
 
 <p>Once BEAST is running, you should see output periodically printed to
-standard out (if you&#39;re running BEAST from a terminal emulator) or the
-output window. The analysis we&#39;ve set up should take 15 minutes
+standard out (if you’re running BEAST from a terminal emulator) or the
+output window. The analysis we’ve set up should take 15 minutes
 to complete on a modern computer.</p>
 
 <p>If you run out of time to complete the analysis, simply download the
 pre-cooked <a href="precooked_runs/bacter_tutorial.log">log</a> and <a href="precooked_runs/bacter_tutorial.Ecoli_rplA.trees">tree</a>
 files and continue the tutorial using them.</p>
 
-<h1>Analyzing the results</h1>
+<h1 id="analyzing-the-results">Analyzing the results</h1>
 
 <p>During the analysis results are written to several files which can
 usually located in the same directory as the directory containing the
 input XML. These are:</p>
 
 <ol>
-<li> The <strong>log</strong> file, which ends in the extension .log and contains
+  <li>The <strong>log</strong> file, which ends in the extension .log and contains
 sampled parameter values,</li>
-<li> The <strong>tree</strong> file, which ends in the extension .trees and contains
+  <li>The <strong>tree</strong> file, which ends in the extension .trees and contains
 sampled ARGs.</li>
 </ol>
 
-<h2>Parameter posteriors</h2>
+<h2 id="parameter-posteriors">Parameter posteriors</h2>
 
 <p>To examine the sampled parameter marginal posteriors and, more generally, to assess
 the health of our analysis results, open Tracer and load the
-log file. (To do this, select &quot;Import trace file&quot; from the File menu or click the
-&quot;+&quot; button below and to the left of the table in the top left corner of the Tracer window.)
+log file. (To do this, select “Import trace file” from the File menu or click the
+“+” button below and to the left of the table in the top left corner of the Tracer window.)
 Shown below is the marginal posterior for the number of conversions ancestral to
 our data.</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/tracer.png">
+    <img style="width:80%;" src="figures/tracer.png" />
     <figcaption></figcaption>
 </figure>
 
-<p>Note that the ESS for many parameters may still be extremely small after 10<sup>6</sup>
+<p>Note that the ESS for many parameters may still be extremely small after 10^6
 iterations. This indicates that, as anticipated, the chain should be run for a
 lot longer before the results are considered trustworthy. We can easily
 continue/resume the chain just as for any other BEAST 2 analysis, and you may
@@ -650,7 +621,7 @@ wish to try this yourself. However, in the interests of keeping the length of
 time needed to complete this tutorial from becoming too long, we will now
 proceed to further analyse the results we already have.</p>
 
-<h2>Viewing sampled ARGs</h2>
+<h2 id="viewing-sampled-args">Viewing sampled ARGs</h2>
 
 <p>The ARGs sampled during a Bacter analysis can be viewed using the
 browser-based <a href="http://tgvaughan.github.io/icytree">IcyTree</a> phylogenetic
@@ -659,7 +630,7 @@ version of Firefox or Chrome to function correctly.</p>
 
 <p>To use the viewer, simply open the
 <a href="http://tgvaughan.github.io/icytree">IcyTree</a> web page in a browser
-window, select File-&gt;&quot;Load from file&quot;, then choose the tree file
+window, select File-&gt;“Load from file”, then choose the tree file
 using the file chooser. Alternatively, you can simply drag the tree file
 onto the IcyTree window.</p>
 
@@ -669,13 +640,13 @@ the &lt; and &gt; keys to step in increments of 10%. Navigation can also
 be performed by clicking on the buttons in the lower-left corner of the
 window with your mouse. Further information about using IcyTree can be
 found by selecting items listed under the Help menu. To generate the
-image below, edges were coloured by locus (Style-&gt;&quot;Colour edges by&quot;),
+image below, edges were coloured by locus (Style-&gt;“Colour edges by”),
 the colouring legend and the time axis were switched on
-(Style-&gt;&quot;Display legend&quot; and Style-&gt;&quot;Display axis&quot;).</p>
+(Style-&gt;“Display legend” and Style-&gt;“Display axis”).</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/icytree.png">
+    <img style="width:80%;" src="figures/icytree.png" />
     <figcaption></figcaption>
 </figure>
 
@@ -691,7 +662,7 @@ as this portion of the file represents ARGs sampled before convergence
 of the MCMC to the true posterior. Later trees should represent
 individual samples drawn from the posterior.</p>
 
-<h2>Creating a summary ARG</h2>
+<h2 id="creating-a-summary-arg">Creating a summary ARG</h2>
 
 <p>Individual ARGs sampled from the posterior are poor representations of
 the inference result at best, and at worst they may be completely
@@ -710,13 +681,13 @@ and other Bayesian phylogenetic packages use to summarize distributions over
 tree space.
 (Refer to the <a href="http://dx.doi.org/10.1534/genetics.116.193425">paper</a> for details.)</p>
 
-<p>To produce a summary ARG, open the &quot;AppLauncher&quot; program that is
-distributed with BEAST 2. (You can also select &quot;Launch Apps&quot; from the File menu
+<p>To produce a summary ARG, open the “AppLauncher” program that is
+distributed with BEAST 2. (You can also select “Launch Apps” from the File menu
 in BEAUti.)</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/appstore.png">
+    <img style="width:80%;" src="figures/appstore.png" />
     <figcaption></figcaption>
 </figure>
 
@@ -726,13 +697,13 @@ file and the name and location of the file to which the summary is
 written. In addition, you can adjust:</p>
 
 <ol>
-<li> The burn-in percentage: the percentage of the tree log file which
+  <li>The burn-in percentage: the percentage of the tree log file which
 will be ignored to account for the samples that were taken before
 the MCMC reached convergence.</li>
-<li> The position summary method: this affects the way that the internal
+  <li>The position summary method: this affects the way that the internal
 node ages of the summary tree are chosen. The default is to use the
 mean of the node ages present in the sampled ARGs.</li>
-<li> The posterior conversion support threshold: this is the percentage
+  <li>The posterior conversion support threshold: this is the percentage
 of sampled ARGs which must contain a given conversion for it to be
 included in the summary tree. (This is conceptually similar to the
 threshold for clade inclusion in a majority-rule consensus tree.)</li>
@@ -748,24 +719,24 @@ following image:</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/acgannotator.png">
+    <img style="width:80%;" src="figures/acgannotator.png" />
     <figcaption></figcaption>
 </figure>
 
-<p>Pressing the &quot;Analyze&quot; button will bring up an additional window which
+<p>Pressing the “Analyze” button will bring up an additional window which
 will report on the progress of creating the summary tree. As there are
 only a few hundred ARGs present in our log file, this process should
 only take a few seconds. Once it is complete, press the Close button.
 You can also exit the AppLauncher.</p>
 
 <p>Loading the file summary.tree in IcyTree should produce something similar to
-the following figure. (Edges have been coloured by &quot;locus&quot;, and labelled with
+the following figure. (Edges have been coloured by “locus”, and labelled with
 their posterior support. Error bars indicating the 95% HPD intervals
 for the age of each ancestral event have also been included.)</p>
 
 <figure>
     <!--a id="fig:treeannot"></a-->
-    <img style="width:80%;" src="figures/summary.png">
+    <img style="width:80%;" src="figures/summary.png" />
     <figcaption></figcaption>
 </figure>
 
@@ -782,20 +753,21 @@ of 8 events - still very small, but four times the number appearing in the summa
 The discrepancy is likely made up of conversions that produced very little or no signal
 in the data.</p>
 
-<h1>Wrapping up</h1>
+<h1 id="wrapping-up">Wrapping up</h1>
 
 <p>This completes our introductory Bacter tutorial. There are other features that are not
 covered here, such as the ability to perform inference under different parametric and
 non-parametric models of population dynamics.  Tutorials explaining these features
 will appear in the near future on the <a href="https://tgvaughan.github.io/bacter">Bacter web page</a>.</p>
 
-<h1>Useful Links</h1>
+<h1 id="useful-links">Useful Links</h1>
 
 <ul>
-<li>Bacter website and documentation: <a href="https://tgvaughan.github.io/bacter">https://tgvaughan.github.io/bacter</a></li>
-<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+  <li>Bacter website and documentation: <a href="https://tgvaughan.github.io/bacter">https://tgvaughan.github.io/bacter</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
+
 
 
 			<hr>
@@ -819,41 +791,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,18 +118,18 @@
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -175,7 +146,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/data/h1n1pdm_HA.fasta" target="_blank" rel="nofollow">
 						h1n1pdm_HA.fasta
 					</a>
@@ -184,7 +155,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/data/h1n1pdm_NA.fasta" target="_blank" rel="nofollow">
 						h1n1pdm_NA.fasta
 					</a>
@@ -204,7 +175,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/xml/H1N1pdm.xml" target="_blank" download rel="nofollow">
 						H1N1pdm.xml
 					</a>
@@ -225,7 +196,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/precooked_runs/h1n1pdm_HA.log" target="_blank" download rel="nofollow">
 						h1n1pdm_HA.log
 					</a>
@@ -234,7 +205,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/precooked_runs/H1N1pdm.network.trees" target="_blank" download rel="nofollow">
 						H1N1pdm.network.trees
 					</a>
@@ -243,7 +214,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/precooked_runs/h1n1pdm_NA_1,2.trees" target="_blank" download rel="nofollow">
 						h1n1pdm_NA_1,2.trees
 					</a>
@@ -252,7 +223,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/precooked_runs/h1n1pdm_HA_1,2.trees" target="_blank" download rel="nofollow">
 						h1n1pdm_HA_1,2.trees
 					</a>
@@ -261,7 +232,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/raw/master/precooked_runs/H1N1pdm.mcc.network.trees" target="_blank" download rel="nofollow">
 						H1N1pdm.mcc.network.trees
 					</a>
@@ -306,7 +277,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/commit/57a7cfcb5c482e853b1e18ddc5cea2d2ba79b67a">
 					16 Jul 2020 - <span class="text-gray">adds pnas cit and details</span>
 					</a> 
@@ -314,7 +285,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/commit/547a0f42788f08be03044d5fed496229350e278c">
 					16 Jul 2020 - <span class="text-gray">adds details and citation</span>
 					</a> 
@@ -322,7 +293,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/commit/29ebe00d8c1651396f5e512b2cbfd0a4f87565a1">
 					05 Aug 2019 - <span class="text-gray">Fixed bibliography database link.</span>
 					</a> 
@@ -330,7 +301,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/commit/2e42254df393e59e6298fdc24663735e00b4deb8">
 					05 Aug 2019 - <span class="text-gray">Fixed typo.</span>
 					</a> 
@@ -338,7 +309,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/commit/a61c696560c9acba1df739a28ef818d0f128914c">
 					05 Aug 2019 - <span class="text-gray">Added missing ref.</span>
 					</a> 
@@ -353,14 +324,14 @@
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
 <p>Phylogenetic trees are often used to describe the history of genetic sequences.
 There are however several processes that recombine genetic material.
 Different parts of genome can then code for different histories and the shared history of the full genome can not be represented anymore by a tree.
 Reassortment is such a process that can reshuffle segments when people are infected by multiple viruses.</p>
 
-<p>The coalescent with reassortment models a joint coalescent and reassortment process <a class="citation" href="#muller2020bayesian">(Müller, Stolz, Dudas, Stadler, &amp; Vaughan, 2020)</a>.
+<p>The coalescent with reassortment models a joint coalescent and reassortment process <a class="citation" href="#muller2020bayesian">(Müller et al., 2020)</a>.
 To do so, it models how network lineages coalesce and recombine backwards in time.</p>
 
 <p>In order to perform inference under the coalescent with reassortment, CoalRe uses MCMC sampling of the reassortment network and the embedding of segment trees within those networks.
@@ -370,33 +341,33 @@ The difference in setting up CoalRe compare to other models is that the Coalesce
 <p>After running CoalRe, the post-processing works slightly different to other models.
 Since we have to analyse a network and not just a tree, CoalRe implements a BEAST2 app that summarizes networks and works similar to treeAnnotator.</p>
 
-<hr>
+<hr />
 
-<h1>Programs used in this Exercise</h1>
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
 
-<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
 <p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.6.0 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
-<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
 <p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>IcyTree.org</h3>
+<h3 id="icytreeorg">IcyTree.org</h3>
 
 <p>IcyTree.org is a webbased tree viewer that, additional to trees, also allows to visualize networks in the extended newick format.</p>
 
-<hr>
+<hr />
 
-<h1>Practical: Setting up an coalescent with reassortment analysis</h1>
+<h1 id="practical-setting-up-an-coalescent-with-reassortment-analysis">Practical: Setting up an coalescent with reassortment analysis</h1>
 
 <p>The coalescent with reassortment is an approach that allows inferring reassortment networks and rates of segmented viruses from the genetic sequences of individual segments.</p>
 
 <p>In this tutorial, we will learn how to create an xml for a coalescent with reassortment analysis, how to then run this xml, as well as how to process and visualize the output of such an analysis.</p>
 
-<h2>The Data</h2>
+<h2 id="the-data">The Data</h2>
 
 <p>The data consists of sequences from two segments (HA and NA) of the 2009 pandemic like Influenza A/H1N1 virus.
 HA (Hemagglutinin) and NA (Neuraminidase) are the two surface protein of influenza viruses.
@@ -407,29 +378,27 @@ After, it became a seasonally circulating virus that has been circulating in the
 <p>Overall, the dataset we use in this tutorial consists of 25 HA and NA sequences of pandemic 2009 like human influenza A/H1N1 sampled between 2012 and 2017 downloaded from <a href="fludb.org">fludb.org</a>.
 The sequences are already aligned and can be found in the data folder.</p>
 
-<h2>Download CoalRe</h2>
-
+<h2 id="download-coalre">Download CoalRe</h2>
 <p>First, we have to download the CoalRe package, using the BEAUti package manager.
-To do so, open BEAUTi and then go to <code>File &gt;&gt; Manage Packages</code> and download the CoalRe package .</p>
+To do so, open BEAUTi and then go to <code class="language-plaintext highlighter-rouge">File &gt;&gt; Manage Packages</code> and download the CoalRe package .</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:50%;" src="figures/Package.png" alt="">
-    <figcaption>Figure 1: Download the CoalRe package</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:50%;" src="figures/Package.png" alt="" />
+	<figcaption>Figure 1: Download the CoalRe package</figcaption>
 </figure>
 
 <p>After the package is installed, re-start BEAUti.</p>
 
-<h2>Load in the sequences</h2>
-
+<h2 id="load-in-the-sequences">Load in the sequences</h2>
 <p>In order to load in the sequences into BEAUti, they can be dragged and dropped into the partitions window.
-Then a window will pop up, where we&#39;ll have to specify that all the sequence files just loaded in are nucleotide sequences.
+Then a window will pop up, where we’ll have to specify that all the sequence files just loaded in are nucleotide sequences.
 This is so BEAUti knows which site models to suggest.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/LoadSequences.png" alt="">
-    <figcaption>Figure 2: Drag and drop the sequence files into the partitions window.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/LoadSequences.png" alt="" />
+	<figcaption>Figure 2: Drag and drop the sequence files into the partitions window.</figcaption>
 </figure>
 
 <p>In order to account for rate variations across the different nucleotide sites, we next have to split both alignments into codon positions.
@@ -441,173 +410,164 @@ As such, the third position is more flexible and nucleotide changes are typicall
 <p>Next, repeat the same thing for the other segment.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:30%;" src="figures/SplitAlignments.png" alt="">
-    <figcaption>Figure 3: Split alignments into codon positions.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:30%;" src="figures/SplitAlignments.png" alt="" />
+	<figcaption>Figure 3: Split alignments into codon positions.</figcaption>
 </figure>
 
-<h2>Linking the site models and clock models</h2>
-
-<p>Next, we&#39;ll have to select all partitions, and then press <code>Link Site Models</code>, <code>Link Clock Models</code>.
+<h2 id="linking-the-site-models-and-clock-models">Linking the site models and clock models</h2>
+<p>Next, we’ll have to select all partitions, and then press <code class="language-plaintext highlighter-rouge">Link Site Models</code>, <code class="language-plaintext highlighter-rouge">Link Clock Models</code>.
 Linking Clock models leads every partition to have the same evolutionary rate.
 Linking the site model assigns every partition the same site model.
 Assigning every partition the same site model is only done temporarily to speed up the setting up of the xml file and the site models will be unlinked later again.</p>
 
-<h2>Setting up the sampling times</h2>
-
-<p>Next, we&#39;ll have to set up the sampling times.
-To do so, go to <code>Tip Dates</code>  and select <code>Use tip dates</code>
-Specify the dates format to be <code>yyyy-M-dd</code> and press the <code>Auto-configure</code> button.
+<h2 id="setting-up-the-sampling-times">Setting up the sampling times</h2>
+<p>Next, we’ll have to set up the sampling times.
+To do so, go to <code class="language-plaintext highlighter-rouge">Tip Dates</code>  and select <code class="language-plaintext highlighter-rouge">Use tip dates</code>
+Specify the dates format to be <code class="language-plaintext highlighter-rouge">yyyy-M-dd</code> and press the <code class="language-plaintext highlighter-rouge">Auto-configure</code> button.
 In the window that should pop up, select split on character</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:30%;" src="figures/SplitCharacter.png" alt="">
-    <figcaption>Figure 4: Split character and take the second group to get the sampling times .</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:30%;" src="figures/SplitCharacter.png" alt="" />
+	<figcaption>Figure 4: Split character and take the second group to get the sampling times .</figcaption>
 </figure>
 
-<p>In order to set the tip dates for both segments, select both partitions an press <code>OK</code> to clone the tip dates</p>
+<p>In order to set the tip dates for both segments, select both partitions an press <code class="language-plaintext highlighter-rouge">OK</code> to clone the tip dates</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/CloneTipDates.png" alt="">
-    <figcaption>Figure 5: Clone tip dates to avoid setting the tip dates for each segment individually.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/CloneTipDates.png" alt="" />
+	<figcaption>Figure 5: Clone tip dates to avoid setting the tip dates for each segment individually.</figcaption>
 </figure>
 
-<h2>Setting up the site model</h2>
-
+<h2 id="setting-up-the-site-model">Setting up the site model</h2>
 <p>As a site model, we will use an $HKY+\Gamma_4$ model.
-To do so, first set the site model from <code>JC69</code> to <code>HKY</code>, which allows transition and transversion rates to differ.
-Next, set the <code>Gamma Category Count</code> to 4 and make sure to click <code>estimate</code> for the <code>Substitution Rate</code>.
-Setting the <code>Gamma Category Count</code> to 4 uses a discretized version of a gamma distribution to model different rate categories across sites.
+To do so, first set the site model from <code class="language-plaintext highlighter-rouge">JC69</code> to <code class="language-plaintext highlighter-rouge">HKY</code>, which allows transition and transversion rates to differ.
+Next, set the <code class="language-plaintext highlighter-rouge">Gamma Category Count</code> to 4 and make sure to click <code class="language-plaintext highlighter-rouge">estimate</code> for the <code class="language-plaintext highlighter-rouge">Substitution Rate</code>.
+Setting the <code class="language-plaintext highlighter-rouge">Gamma Category Count</code> to 4 uses a discretized version of a gamma distribution to model different rate categories across sites.
 4 or 5 different categories has been shown to be a good compromise between computational efficiency and still being able to approximate the gamma distribution well enough in practice.
-Clicking <code>estimate</code> for the <code>Substitution Rate</code> allows each segment, as well as the first two and the third codon position to have a different relative rate of evolution.</p>
+Clicking <code class="language-plaintext highlighter-rouge">estimate</code> for the <code class="language-plaintext highlighter-rouge">Substitution Rate</code> allows each segment, as well as the first two and the third codon position to have a different relative rate of evolution.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/SiteModel.png" alt="">
-    <figcaption>Figure 6: Setting up the site models tp an $HKY+\Gamma_4$ model.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/SiteModel.png" alt="" />
+	<figcaption>Figure 6: Setting up the site models tp an $HKY+\Gamma_4$ model.</figcaption>
 </figure>
 
-<p>We next have to go back to the <code>Partitions</code> ta, select all Partitions and then press <code>Unlink Site Models</code>.
+<p>We next have to go back to the <code class="language-plaintext highlighter-rouge">Partitions</code> ta, select all Partitions and then press <code class="language-plaintext highlighter-rouge">Unlink Site Models</code>.
 As mentioned above, the linking of the site models was only done to speed up setting up the xml.
 After we unlinked the site models, each partition will have a site model that is setup the same way, but that has parameters that can be independently estimated.
 As mentioned above, linking the site models initially was only done to speed up setting up the xml.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/UnlinkSiteModels.png" alt="">
-    <figcaption>Figure 7: Setting up the site models.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/UnlinkSiteModels.png" alt="" />
+	<figcaption>Figure 7: Setting up the site models.</figcaption>
 </figure>
 
-<h2>Setting up the Priors</h2>
-
-<p>We can leave the clock model as is, which means that we use a <code>Strict Clock Model</code> (default) and can directly go the the <code>Priors</code> tab.
-The first and most important thing we have to do here, is to to change the <code>Yule Model</code> to <code>Coalescent With Reassortment Constant Population</code>.
-This has to be done for both (!) segment trees, meaning there overall should be two <code>Coalescent With Reassortment Constant Population</code>.
+<h2 id="setting-up-the-priors">Setting up the Priors</h2>
+<p>We can leave the clock model as is, which means that we use a <code class="language-plaintext highlighter-rouge">Strict Clock Model</code> (default) and can directly go the the <code class="language-plaintext highlighter-rouge">Priors</code> tab.
+The first and most important thing we have to do here, is to to change the <code class="language-plaintext highlighter-rouge">Yule Model</code> to <code class="language-plaintext highlighter-rouge">Coalescent With Reassortment Constant Population</code>.
+This has to be done for both (!) segment trees, meaning there overall should be two <code class="language-plaintext highlighter-rouge">Coalescent With Reassortment Constant Population</code>.
 This ensures that both segment trees are linked to a network in which they are embedded and that that network is linked to a coalescent with reassortment network prior.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/CoalescentWithReassortment.png" alt="">
-    <figcaption>Figure 8: Changing the Yule model to the coalescent with reassortment.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/CoalescentWithReassortment.png" alt="" />
+	<figcaption>Figure 8: Changing the Yule model to the coalescent with reassortment.</figcaption>
 </figure>
 
 <p>We next have to set the prior distribution on the parameters.
 The prior distribution on the effective population size can be left as is, but we have to change the prior on the reassortment rate.
 Set the prior distribution on the reassortment rate to be an exponential distribution with mean 0.25.
 This means that we assume a priori that on average there is one reassortment event per lineage occurring every 4 years.
-In previous analysis using similar datasets, this range of parameters has been shown to be what we can expect for influenza viruses <a class="citation" href="#muller2020bayesian">(Müller, Stolz, Dudas, Stadler, &amp; Vaughan, 2020)</a>.</p>
+In previous analysis using similar datasets, this range of parameters has been shown to be what we can expect for influenza viruses <a class="citation" href="#muller2020bayesian">(Müller et al., 2020)</a>.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/ReassortmentPrior.png" alt="">
-    <figcaption>Figure 9: Setting the prior distribution on the reassortment rate.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/ReassortmentPrior.png" alt="" />
+	<figcaption>Figure 9: Setting the prior distribution on the reassortment rate.</figcaption>
 </figure>
 
-<h2>Setting up the Chain Length</h2>
-
-<p>Next, we can go to the <code>MCMC</code> panel to set the chain length. For this analysis with just a few sequences, a chain length of 5 million should be enough.
-This was the last step of setting up the xml and we can now save it by going to <code>File &gt; Save as</code></p>
+<h2 id="setting-up-the-chain-length">Setting up the Chain Length</h2>
+<p>Next, we can go to the <code class="language-plaintext highlighter-rouge">MCMC</code> panel to set the chain length. For this analysis with just a few sequences, a chain length of 5 million should be enough.
+This was the last step of setting up the xml and we can now save it by going to <code class="language-plaintext highlighter-rouge">File &gt; Save as</code></p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:20%;" src="figures/SaveXml.png" alt="">
-    <figcaption>Figure 10: Save xml.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:20%;" src="figures/SaveXml.png" alt="" />
+	<figcaption>Figure 10: Save xml.</figcaption>
 </figure>
 
-<h2>Run the xml</h2>
-
-<p>Next, open <code>BEAST</code> and run the xml.
+<h2 id="run-the-xml">Run the xml</h2>
+<p>Next, open <code class="language-plaintext highlighter-rouge">BEAST</code> and run the xml.
 This should take somewhere in the order of 15 to 20 minutes.
-Alternative, the folder <code>precooked_runs</code> contains the log files of the run.</p>
+Alternative, the folder <code class="language-plaintext highlighter-rouge">precooked_runs</code> contains the log files of the run.</p>
 
-<h2>Inspect the run in Tracer</h2>
-
+<h2 id="inspect-the-run-in-tracer">Inspect the run in Tracer</h2>
 <p>Next, we have to check whether everything converged.
-To do so, we can open the program Tracer and load the <code>*.log</code> file.
+To do so, we can open the program Tracer and load the <code class="language-plaintext highlighter-rouge">*.log</code> file.
 All ESS values should optimally be above 200.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/Tracer.png" alt="">
-    <figcaption>Figure 11: Check convergence in Tracer.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/Tracer.png" alt="" />
+	<figcaption>Figure 11: Check convergence in Tracer.</figcaption>
 </figure>
 
 <p>Next, we can check what rates were inferred.
-The <code>clockRate</code> denotes the average rate of evolution across all segments.
-The <code>reassortmentRateCwR.alltrees</code> denotes the rate of reassortment (from present to past) per lineage and year.</p>
+The <code class="language-plaintext highlighter-rouge">clockRate</code> denotes the average rate of evolution across all segments.
+The <code class="language-plaintext highlighter-rouge">reassortmentRateCwR.alltrees</code> denotes the rate of reassortment (from present to past) per lineage and year.</p>
 
-<h2>Summarize the posterior distribution of networks</h2>
-
+<h2 id="summarize-the-posterior-distribution-of-networks">Summarize the posterior distribution of networks</h2>
 <p>Next, we can summarize the distribution of networks by maximizing the clade credibilities.
-To do so, open <code>BEAUti</code> and select <code>File &gt; Launch Apps</code>.
-Then, select <code>Reassortment Network Annotator</code>.</p>
+To do so, open <code class="language-plaintext highlighter-rouge">BEAUti</code> and select <code class="language-plaintext highlighter-rouge">File &gt; Launch Apps</code>.
+Then, select <code class="language-plaintext highlighter-rouge">Reassortment Network Annotator</code>.</p>
 
-<p>Next, choose the <code>networks.trees</code> file as input for the <code>Reassortment Network log file</code> and choose the file where the mcc network should be saved to and press analyse.</p>
+<p>Next, choose the <code class="language-plaintext highlighter-rouge">networks.trees</code> file as input for the <code class="language-plaintext highlighter-rouge">Reassortment Network log file</code> and choose the file where the mcc network should be saved to and press analyse.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/Summary.png" alt="">
-    <figcaption>Figure 12: Produce the maximum clade credibility network.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/Summary.png" alt="" />
+	<figcaption>Figure 12: Produce the maximum clade credibility network.</figcaption>
 </figure>
 
-<p>The option &#39;Removes segments from the summary&#39; is not relevant for datasets with only 2 segments.
+<p>The option ‘Removes segments from the summary’ is not relevant for datasets with only 2 segments.
 When there are more segments, however, it can e.g. be interesting to look at the reassortment network of pairs of segments.
 This option allows to remove segments from an analysis.
 Keep in mind though that the numbering of segments is not neccessarily the biological one, but the alphabetical one (for implementation reasons).</p>
 
-<h2>Visualize the network using icytree.org</h2>
-
+<h2 id="visualize-the-network-using-icytreeorg">Visualize the network using icytree.org</h2>
 <p>Next, open your browser and go to the webpage <a href="icytree.org">icytree.org</a><a class="citation" href="#vaughan2017icytree">(Vaughan, 2017)</a>
 The resulting mcc network file can now be drag and dropped into icytree to visualize the network.
 Icytree plots the network as a base tree that is connected by dotted branches.
 This implies that at a reassortment event, there is a difference between the two parent branches.
 This is, however, not the case in the coalescent with reassortment model, but for simplicity is plotted like this.
-The &quot;main&quot; branch here is the always the parent branch that carries more segments.
+The “main” branch here is the always the parent branch that carries more segments.
 If both branches carry the same amount of segments, the branch that is closer the next event is chosen as the main branch.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/IcyTree.png" alt="">
-    <figcaption>Figure 13: Visualize the mcc network in icytree.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/IcyTree.png" alt="" />
+	<figcaption>Figure 13: Visualize the mcc network in icytree.</figcaption>
 </figure>
 
-<p>The 95 $\%$ highest posterior density intervals for node heights can be plotted by going to <code>Style &gt; Node height error bars</code>.
-The posterior support for each node can be shown by going to <code>Style &gt; Internal node text</code>.</p>
+<p>The 95 $\%$ highest posterior density intervals for node heights can be plotted by going to <code class="language-plaintext highlighter-rouge">Style &gt; Node height error bars</code>.
+The posterior support for each node can be shown by going to <code class="language-plaintext highlighter-rouge">Style &gt; Internal node text</code>.</p>
 
-<hr>
+<hr />
 
-<h1>Useful Links</h1>
+<h1 id="useful-links">Useful Links</h1>
 
 <ul>
-<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
 
-<hr>
+<hr />
 
-<h1>Relevant References</h1>
+<h1 id="relevant-references">Relevant References</h1>
 
 <ol class="bibliography"><li><span id="muller2020bayesian">Müller, N. F., Stolz, U., Dudas, G., Stadler, T., &amp; Vaughan, T. G. (2020). Bayesian inference of reassortment networks reveals fitness benefits of reassortment in human influenza viruses. <i>Proceedings of the National Academy of Sciences</i>.</span></li>
 <li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
@@ -635,41 +595,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

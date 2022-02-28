@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,24 +118,24 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="/tutorials/species-tree-clocks/species-tree-clocks.pdf">species-tree-clocks.pdf</a>	
 				</li>
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/genomescale/species-tree-clocks" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/genomescale/species-tree-clocks/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -181,7 +152,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/data/47.nex" target="_blank" rel="nofollow">
 						47.nex
 					</a>
@@ -190,7 +161,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/data/53.nex" target="_blank" rel="nofollow">
 						53.nex
 					</a>
@@ -199,7 +170,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/data/26.nex" target="_blank" rel="nofollow">
 						26.nex
 					</a>
@@ -208,7 +179,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/data/29.nex" target="_blank" rel="nofollow">
 						29.nex
 					</a>
@@ -217,7 +188,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/data/59.nex" target="_blank" rel="nofollow">
 						59.nex
 					</a>
@@ -226,7 +197,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/data/64.nex" target="_blank" rel="nofollow">
 						64.nex
 					</a>
@@ -235,7 +206,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/data/72.nex" target="_blank" rel="nofollow">
 						72.nex
 					</a>
@@ -255,7 +226,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/xml/pocket-gophers-rlc.xml" target="_blank" download rel="nofollow">
 						pocket-gophers-rlc.xml
 					</a>
@@ -276,7 +247,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/precooked_runs/species.trees" target="_blank" download rel="nofollow">
 						species.trees
 					</a>
@@ -285,7 +256,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/raw/master/precooked_runs/starbeast.log" target="_blank" download rel="nofollow">
 						starbeast.log
 					</a>
@@ -330,7 +301,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/0dac8eede4f7fd4c170464d1ca63e8027632da1f">
 					21 Jun 2018 - <span class="text-gray">refined latex to md conversion</span>
 					</a> 
@@ -338,7 +309,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/4710cff20fc3dc3bef967c458ef98d0c7e8ac913">
 					15 Jun 2018 - <span class="text-gray">start markdown verison</span>
 					</a> 
@@ -346,7 +317,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/3dfde03173344dcd1dd623520e37091716f567a1">
 					03 Feb 2017 - <span class="text-gray">Merge pull request #1 from Taming-the-BEAST/master
 
@@ -356,7 +327,7 @@ Add data files and make bibtex compatible</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/a212897a7949e42964f6d08b43557bfdc16be54a">
 					02 Feb 2017 - <span class="text-gray">Add input data</span>
 					</a> 
@@ -364,7 +335,7 @@ Add data files and make bibtex compatible</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/species-tree-clocks/commit/4f0d0ee032e276dba51b5dc0a5149f7b911c6e9c">
 					02 Feb 2017 - <span class="text-gray">Make bibtex file compatible with Jekyll website</span>
 					</a> 
@@ -379,7 +350,7 @@ Add data files and make bibtex compatible</span>
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
 <p>In this tutorial we demonstrate the use of StarBEAST2, a fully Bayesian method
 of species tree estimation and a replacement for BEAST
@@ -390,42 +361,42 @@ multispecies coalescent model.</p>
 
 <p>You will need to download and install the following software:</p>
 
-<hr>
+<hr />
 
-<h1>Programs used in this Exercise</h1>
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
 
-<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
-<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
 <p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>TreeAnnotator</h3>
+<h3 id="treeannotator">TreeAnnotator</h3>
 
 <p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
 
 <p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>Tracer</h3>
+<h3 id="tracer">Tracer</h3>
 
 <p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v.</p>
 
-<h3>FigTree</h3>
+<h3 id="figtree">FigTree</h3>
 
 <p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v.</p>
 
-<hr>
+<hr />
 
-<h1>Practical: Setting up the StarBeast2 analysis</h1>
+<h1 id="practical-setting-up-the-starbeast2-analysis">Practical: Setting up the StarBeast2 analysis</h1>
 
 <p>This tutorial will guide you through the analysis of seven loci sampled from 26
 individuals representing eight species of pocket gophers, a data set which was
 originally gathered and analysed by
- <a class="citation" href="#belfiore2008multilocus">(Belfiore, Liu, &amp; Moritz, 2008)</a>. The objective of this tutorial is to estimate the
+ <a class="citation" href="#belfiore2008multilocus">(Belfiore et al., 2008)</a>. The objective of this tutorial is to estimate the
 species tree that is most probable given the multi-individual multi-locus
 sequence data. The species tree has eight taxa, whereas each gene tree has 26
 taxa. StarBEAST2 will co-estimate seven gene trees embedded in a shared species
@@ -439,23 +410,23 @@ actually run BEAST using the input file that contains the data, model and
 settings. The final step is to explore the output of BEAST in order to diagnose
 problems and to summarize the results.</p>
 
-<h2>Setting up an analysis in BEAUti</h2>
+<h2 id="setting-up-an-analysis-in-beauti">Setting up an analysis in BEAUti</h2>
 
 <p>Run BEAUti by double clicking on its icon, or by launching the BEAUTi executable
 file from the command line in Linux.</p>
 
-<h3>Set up BEAUti for StarBEAST2</h3>
+<h3 id="set-up-beauti-for-starbeast2">Set up BEAUti for StarBEAST2</h3>
 
 <p>StarBEAST2 can be easily installed from within BEAUTi. First choose the
 <strong>File/Manage Packages</strong> menu item, which will then display the list of
 packages available for installation. Select
 the StarBEAST2 package and then install it by clicking the
-<strong>Install/Upgrade</strong> button. <code>You must restart BEAUTi after installing any new
+<strong>Install/Upgrade</strong> button. <code class="language-plaintext highlighter-rouge">You must restart BEAUTi after installing any new
 packages for new features to become available.</code></p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-install.png" alt="">
+<img style="width:50%;" src="figures/beauti-install.png" alt="" />
 <figcaption>Figure 1: Install StarBEAST2 from within BEAUTi.</figcaption>
 </figure>
 
@@ -473,25 +444,25 @@ message pops up indicating that this data will be lost if you switch templates.<
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/figures/beauti-rlc.png" alt="">
+<img style="width:50%;" src="figures/figures/beauti-rlc.png" alt="" />
 <figcaption>Figure 2: Select a species tree template in BEAUti.</figcaption>
 </figure>
 
-<h3>Allow clock rates to vary</h3>
+<h3 id="allow-clock-rates-to-vary">Allow clock rates to vary</h3>
 
 <p>By default BEAUTi fixes the clock rate of the first partition to 1, so that
 the rates of other loci are estimated relative to the first locus. This is
-generally inappropriate for StarBEAST2 analyses, so it is <code>very
+generally inappropriate for StarBEAST2 analyses, so it is <code class="language-plaintext highlighter-rouge">very
 important</code> to disable this behaviour by deselecting the <strong>Mode/Automatic
 set clock rate</strong> menu item.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-disable.png" alt="">
+<img style="width:50%;" src="figures/beauti-disable.png" alt="" />
 <figcaption>Figure 3: Disable automatic setting of clock rates.</figcaption>
 </figure>
 
-<h3>Loading the NEXUS files</h3>
+<h3 id="loading-the-nexus-files">Loading the NEXUS files</h3>
 
 <p>StarBEAST2 supports multiple individuals per-species and multiple loci (we use
 the term locus to refer to a genomic sequence, and gene when referring to the
@@ -507,7 +478,7 @@ be numbered 26, 29, 47, 53, 59, 64, and 72.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-import.png" alt="">
+<img style="width:50%;" src="figures/beauti-import.png" alt="" />
 <figcaption>Figure 4: Selecting NEXUS alignment files to import.</figcaption>
 </figure>
 
@@ -522,7 +493,7 @@ mitochondrial genes are effectively linked due to a lack of recombination and
 they should be set up to use the same tree model in any multispecies coalescent
 analysis.</p>
 
-<h3>Assigning the correct species to each sequence</h3>
+<h3 id="assigning-the-correct-species-to-each-sequence">Assigning the correct species to each sequence</h3>
 
 <p>Each taxon in a StarBEAST2 analysis is associated with a species or similar OTU.
 Typically the species name is already embedded inside the taxon label. The
@@ -543,7 +514,7 @@ us the mapping that we need.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-guess.png" alt="">
+<img style="width:50%;" src="figures/beauti-guess.png" alt="" />
 <figcaption>Figure 5: Assigning species to sequences in BEAUti using the guess dialog.</figcaption>
 </figure>
 
@@ -553,7 +524,7 @@ tab delimited. The first row is always <em>traits</em> followed by the keyword
 map each individual taxon name to a species name: the taxon name in the first
 column and species name in the second column separated by tab.</p>
 
-<h3>Adjusting the ploidy of each gene</h3>
+<h3 id="adjusting-the-ploidy-of-each-gene">Adjusting the ploidy of each gene</h3>
 
 <p>Ploidy should be based on the mode of inheritance for each gene. By convention,
 nuclear genes in diploids are given a ploidy of 2.0. Because mitochondrial and Y
@@ -564,7 +535,7 @@ nuclear gene ploidy is set to 2.0, mitochondrial or Y chromosome gene ploidy
 should be set to 0.5. In this analysis all genes are from nuclear loci and their
 ploidy should be left at the default value of 2.0.</p>
 
-<h3>Selecting the method of population size integration</h3>
+<h3 id="selecting-the-method-of-population-size-integration">Selecting the method of population size integration</h3>
 
 <p>StarBEAST2, like BEAST before it, can estimate the effective population
 sizes for extant and ancestral species. However by default StarBEAST2
@@ -575,11 +546,11 @@ default model which is <strong>Analytical Population Size Integration</strong>.<
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-pop-model.png" alt="">
+<img style="width:50%;" src="figures/beauti-pop-model.png" alt="" />
 <figcaption>Figure 6: The choice of population models used by StarBEAST2.</figcaption>
 </figure>
 
-<h3>Setting the substitution model</h3>
+<h3 id="setting-the-substitution-model">Setting the substitution model</h3>
 
 <p>The next thing to do is to click on the <strong>Site Model</strong> tab at the top of
 the main window. This will reveal the evolutionary model settings for BEAST.
@@ -595,11 +566,11 @@ on the left side.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-hky.png" alt="">
+<img style="width:50%;" src="figures/beauti-hky.png" alt="" />
 <figcaption>Figure 7: Setting up substitution and site models for the gopher alignments.</figcaption>
 </figure>
 
-<h3>Setting the clock model</h3>
+<h3 id="setting-the-clock-model">Setting the clock model</h3>
 
 <p>Click on the <strong>Clock Model</strong> tab at the top of the main window. In this
 panel you can configure the mean clock rate for each locus. If you followed the
@@ -609,7 +580,7 @@ mean clock rate <em>Clock.rate</em> of all partitions should have the
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-clock.png" alt="">
+<img style="width:50%;" src="figures/beauti-clock.png" alt="" />
 <figcaption>Figure 8: The default when automatic clock rate setting is disabled.</figcaption>
 </figure>
 
@@ -620,19 +591,19 @@ fossil (or other external) calibrations. You might instead use a 1/X prior,
 which is uninformative and will allow the calibration(s) to guide the clock
 rates.</p>
 
-<h3>Priors</h3>
+<h3 id="priors">Priors</h3>
 
 <p>The <strong>Priors</strong> panel allows priors to be specified for each parameter in
 the model. Click the top-leftmost arrow to expand the options available for the
 default <em>Yule Model</em>, and set the speciation rate (called for some silly
 historical reason <em>Birth Diff Rate</em>) to 180.0. Uncheck the
-<strong>estimate</strong> box to make this a fixed parameter. <code>For real
+<strong>estimate</strong> box to make this a fixed parameter. <code class="language-plaintext highlighter-rouge">For real
 analyses you should almost certainly estimate this value, but a fixed value will
 help us complete the tutorial in a reasonable time frame.</code></p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-yule.png" alt="">
+<img style="width:50%;" src="figures/beauti-yule.png" alt="" />
 <figcaption>Figure 9: Fixing the speciation rate.</figcaption>
 </figure>
 
@@ -645,11 +616,11 @@ rates to a reasonable range of values. Click the button next to
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-branch-rates.png" alt="">
+<img style="width:50%;" src="figures/beauti-branch-rates.png" alt="" />
 <figcaption>Figure 10: Setting reasonable limits on species branch rates.</figcaption>
 </figure>
 
-<h3>Setting the MCMC options</h3>
+<h3 id="setting-the-mcmc-options">Setting the MCMC options</h3>
 
 <p>The next tab, <strong>MCMC</strong>, provides more general settings to control the
 length of the MCMC and the file names.</p>
@@ -664,7 +635,7 @@ to 20 minutes on a modern computer.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/beauti-mcmc.png" alt="">
+<img style="width:50%;" src="figures/beauti-mcmc.png" alt="" />
 <figcaption>Figure 11: Setting up the MCMC paremeters.</figcaption>
 </figure>
 
@@ -685,41 +656,41 @@ Every</strong> and <strong>Log Every</strong> settings in place.</p>
 tracelog, speciesTreeLog, and other treelog file names (e.g.
 <em>starbeast.log.txt</em> and <em>species.trees.txt</em>) so that Windows recognizes them as text files.</p>
 
-<h3>Generating the BEAST XML file</h3>
+<h3 id="generating-the-beast-xml-file">Generating the BEAST XML file</h3>
 
 <p>We are now ready to create the BEAST XML file. To do this, either select the
 <strong>File/Save</strong> or <strong>File/Save~As</strong> menu options. Save the file with an
 appropriate name (we usually end the filename with <em>.xml</em>, e.g.
 <em>pocket-gophers-rlc.xml</em>). We are now ready to run the file through BEAST.</p>
 
-<h3>Running BEAST</h3>
+<h3 id="running-beast">Running BEAST</h3>
 
 <p>Now run BEAST and when it asks for an input file, provide your newly created XML
-file as input by clicking <strong>Choose~File...</strong>, and then click <strong>Run</strong>.
+file as input by clicking <strong>Choose~File…</strong>, and then click <strong>Run</strong>.
 In Linux BEAST will immediately launch a file opening dialog box, which is to
 select the BEAST XML to run. BEAST will then run until it has finished reporting
 information to the screen. The actual results files are saved to the disk in the
-same location as your input file. </p>
+same location as your input file.</p>
 
-<h3>Analyzing the results</h3>
+<h3 id="analyzing-the-results">Analyzing the results</h3>
 
 <p>Run the program called <strong>Tracer</strong> to analyze the output of BEAST. When the
-main window has opened, choose <strong>Import Trace File...</strong> from the
+main window has opened, choose <strong>Import Trace File…</strong> from the
 <strong>File</strong> menu and select the file that BEAST has created called
 <em>starbeast.log</em>. On the left hand side is a list of the different quantities
 that BEAST has logged. There are traces for the the various probabilities and
 likelihoods as well as estimates of various discrete and continuous parameters.
-The first and most important trace --- the <em>posterior</em> --- is the log of the
+The first and most important trace — the <em>posterior</em> — is the log of the
 product of gene tree phylogenetic likelihoods, the coalescent probability of
 gene trees within the species tree, and all prior probabilities.
 Selecting a trace on the left brings up analyses for this trace on the right
 hand side depending on tab that is selected. Select the statistic named
-<em>sum(indicators.Species)</em> --- this is the total number of substitution rate
+<em>sum(indicators.Species)</em> — this is the total number of substitution rate
 changes along the species tree. You should now see a window like below.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/tracer-posterior.png" alt="">
+<img style="width:50%;" src="figures/tracer-posterior.png" alt="" />
 <figcaption>Figure 12: Tracer with the gopher data.</figcaption>
 </figure>
 
@@ -733,7 +704,7 @@ that contains 95% of the posterior probability. It is also known as a
 confidence interval. The HPD for the sum of rate changes suggests that either 0,
 1 or 2 rate changes have occured.</p>
 
-<h3>A note on prior distributions</h3>
+<h3 id="a-note-on-prior-distributions">A note on prior distributions</h3>
 
 <p>For any Bayesian analysis, it is very important to compare your findings with
 the prior distribution. The default prior distribution for the number of
@@ -746,7 +717,7 @@ adding data, our belief in a strict clock increased from 50% to about 70%,
 a very modest change. The data in this tutorial suggests that a strict clock
 applies to pocket gophers, but falls far short of any standard of proof.</p>
 
-<h3>Obtaining an estimate of the phylogenetic tree</h3>
+<h3 id="obtaining-an-estimate-of-the-phylogenetic-tree">Obtaining an estimate of the phylogenetic tree</h3>
 
 <p>BEAST also produces a sample of plausible trees. These can be summarized using
 the program <strong>TreeAnnotator</strong>. This will take the set of trees and identify
@@ -758,7 +729,7 @@ the <strong>TreeAnnotator</strong> program and set it up to look like in the fig
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/treeannotator.png" alt="">
+<img style="width:50%;" src="figures/treeannotator.png" alt="" />
 <figcaption>Figure 13: Using TreeAnnotator to summarise the tree set.</figcaption>
 </figure>
 
@@ -783,7 +754,7 @@ will be called <em>species.trees</em>) and select a file for the output (here we
 have called it <em>pocket-gophers.tree</em>). Now press <strong>Run</strong> and wait for the
 program to finish.</p>
 
-<h3>Viewing the species tree(s)</h3>
+<h3 id="viewing-the-species-trees">Viewing the species tree(s)</h3>
 
 <p>Finally, we can look at the tree in another program called <strong>FigTree</strong>. Run
 this program, and open the <em>pocket-gophers.tree</em> file by using the Open command
@@ -797,7 +768,7 @@ You should end up with something like in the Figure below.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/figtree.png" alt="">
+<img style="width:50%;" src="figures/figtree.png" alt="" />
 <figcaption>Figure 11: Figtree representation of the species tree.</figcaption>
 </figure>
 
@@ -810,11 +781,11 @@ set into DensiTree. Open the <em>species.trees</em> file in DensiTree and set up
 cloudogram as follows:</p>
 
 <ul>
-<li>Select the <strong>Central</strong> geometry from the set of options in the top-right of the main screen.</li>
-<li>Under <strong>Show</strong>, check the <em>Root Canal</em> tree to guide the eye.</li>
-<li>Under <strong>Clades</strong>, check <em>Show Clades</em>, display the means and 95\% HPDs using <em>draw</em>, and display the posterior support
+  <li>Select the <strong>Central</strong> geometry from the set of options in the top-right of the main screen.</li>
+  <li>Under <strong>Show</strong>, check the <em>Root Canal</em> tree to guide the eye.</li>
+  <li>Under <strong>Clades</strong>, check <em>Show Clades</em>, display the means and 95\% HPDs using <em>draw</em>, and display the posterior support
 using <em>text</em>.</li>
-<li>Now, too many clades are shown, and most are not of interest. Check
+  <li>Now, too many clades are shown, and most are not of interest. Check
 <em>Selected only</em>, then open the clade toolbar using the <strong>Window/View
 clade toolbar</strong> menu item. Select each clade (i.e.
 items with more than one species) with majority posterior support (i.e.
@@ -829,26 +800,27 @@ there is about 16% support for <em>heterodus</em> to be an outgroup, and about
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:50%;" src="figures/densitree.png" alt="">
+<img style="width:50%;" src="figures/densitree.png" alt="" />
 <figcaption>Figure 14: DensiTree representation of the species tree.</figcaption>
 </figure>
 
-<hr>
+<hr />
 
-<h1>Useful Links</h1>
+<h1 id="useful-links">Useful Links</h1>
 
 <ul>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
-<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a> </li>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
 
-<hr>
+<hr />
 
-<h1>Relevant References</h1>
+<h1 id="relevant-references">Relevant References</h1>
 
 <ol class="bibliography"><li><span id="Heled01032010">Heled, J., &amp; Drummond, A. J. (2010). Bayesian Inference of Species Trees from Multilocus Data. <i>Molecular Biology and Evolution</i>, <i>27</i>(3), 570–580. https://doi.org/10.1093/molbev/msp274</span></li>
 <li><span id="belfiore2008multilocus">Belfiore, N. M., Liu, L., &amp; Moritz, C. (2008). Multilocus phylogenetics of a rapid radiation in the genus Thomomys (Rodentia: Geomyidae). <i>Systematic Biology</i>, <i>57</i>(2), 294.</span></li></ol>
+
 
 
 			<hr>
@@ -872,41 +844,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,52 +27,41 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li class="active">
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
@@ -126,19 +100,19 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<h1>Workshop Programme</h1>
+		<h1 id="workshop-programme">Workshop Programme</h1>
 
 <table>
 <thead>
 
 <tr>
 <th></th>
-<th> Sunday <br> 2018/06/17 </th>
-<th> Monday <br> 2018/06/18</th>
-<th> Tuesday <br> 2018/06/19 </th>
-<th> Wednesday <br> 2018/06/20 </th>
-<th> Thursday <br> 2018/06/21 </th>
-<th> Friday <br> 2018/06/22 </th>
+<th> Sunday <br /> 2018/06/17 </th>
+<th> Monday <br /> 2018/06/18</th>
+<th> Tuesday <br /> 2018/06/19 </th>
+<th> Wednesday <br /> 2018/06/20 </th>
+<th> Thursday <br /> 2018/06/21 </th>
+<th> Friday <br /> 2018/06/22 </th>
 </tr>
 
 </thead>
@@ -148,12 +122,12 @@
 <tr>
 <td> 09:00</td>
 <td></td>
-<td> <b>Alexei Drummond</b> <br> Introduction to Bayesian Phylogenetics (part 1) </td>
-<td> <b>Sebastián Duchêne</b> <br> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_19_Tuesday_09h00_SitesClocksModelSelection.pdf">Clock models, site models, model comparison</a> </td>
-<td> <b>Tanja Stadler</b> <br> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_20_Wednesday_09h00-Birth-death.pdf">Birth-death models</a> </td>
-<td> <b>Alexandra Gavryushkina</b> <br> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_21_Thursday_09h00_FBD%2BSA.pdf">Modelling Fossilization</a> </td>
-<td> <b>Nicola Müller</b> <br><a href="https://nicfel.github.io/Talks/20180622-TtB/">Multi-species models</a> <br>
-     <b>Tim Vaughan</b> <br> <a href="https://tgvaughan.github.io/TTB_Lectures/ARGs">Modelling recombination</a> </td>
+<td> <b>Alexei Drummond</b> <br /> Introduction to Bayesian Phylogenetics (part 1) </td>
+<td> <b>Sebastián Duchêne</b> <br /> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_19_Tuesday_09h00_SitesClocksModelSelection.pdf">Clock models, site models, model comparison</a> </td>
+<td> <b>Tanja Stadler</b> <br /> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_20_Wednesday_09h00-Birth-death.pdf">Birth-death models</a> </td>
+<td> <b>Alexandra Gavryushkina</b> <br /> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_21_Thursday_09h00_FBD%2BSA.pdf">Modelling Fossilization</a> </td>
+<td> <b>Nicola Müller</b> <br /><a href="https://nicfel.github.io/Talks/20180622-TtB/">Multi-species models</a> <br />
+     <b>Tim Vaughan</b> <br /> <a href="https://tgvaughan.github.io/TTB_Lectures/ARGs">Modelling recombination</a> </td>
 </tr>
 
 <tr>
@@ -171,15 +145,15 @@
 <td> 11:15 </td>
 <td></td>
 <td> <b>Louis Du Plessis</b>
-    <br> First Steps in BEAST <br>
+    <br /> First Steps in BEAST <br />
     (<a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_18_Monday_11h15_IntroductionToBEAST2.pdf">lecture</a>,
     <a href="/tutorials/Introduction-to-BEAST2/">tutorial</a>) </td>
-<td> <b>Carsten Magnus</b> <br> Model Averaging and bModelTest<br>
-    (<a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_19_Tuesday_11h15_ModelAveraging.pdf">lecture,
+<td> <b>Carsten Magnus</b> <br /> Model Averaging and bModelTest<br />
+    (<a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_19_Tuesday_11h15_ModelAveraging.pdf">lecture</a>,
     <a href="/tutorials/Substitution-model-averaging/">tutorial</a>) </td>
-<td> <b>Tim Vaughan</b> <br> <a href="/tutorials/Skyline-plots/">Bayesian Skyline Plot and Birth-death Skyline Tutorial</a> </td>
-<td> <b>Jérémie Sciré</b> <br> <a href="/tutorials/Structured-birth-death-model/">Structured Birth-death Tutorial</a> </td>
-<td> <b>Tim Vaughan</b> <br> <a href="/tutorials/Bacter-Tutorial/">Bacter tutorial</a> </td>
+<td> <b>Tim Vaughan</b> <br /> <a href="/tutorials/Skyline-plots/">Bayesian Skyline Plot and Birth-death Skyline Tutorial</a> </td>
+<td> <b>Jérémie Sciré</b> <br /> <a href="/tutorials/Structured-birth-death-model/">Structured Birth-death Tutorial</a> </td>
+<td> <b>Tim Vaughan</b> <br /> <a href="/tutorials/Bacter-Tutorial/">Bacter tutorial</a> </td>
 </tr>
 
 <tr>
@@ -195,13 +169,13 @@
 <tr>
 <td> 14:00 </td>
 <td></td>
-<td> <b>Vladimir Minin</b> <br> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_18_Monday_14h00_BayesianPhylogenetics2.pdf">Introduction to Bayesian Phylogenetics (part 2)</a> </td>
-<td> <b>Nicola Müller</b> <br> <a href="https://nicfel.github.io/Talks/20180619-TtB/">The Structured Coalescent</a><br>
-    <b>Nicola Müller</b> <br> <a href="/tutorials/Mascot-Tutorial/">MASCOT Tutorial</a> </td>
+<td> <b>Vladimir Minin</b> <br /> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_18_Monday_14h00_BayesianPhylogenetics2.pdf">Introduction to Bayesian Phylogenetics (part 2)</a> </td>
+<td> <b>Nicola Müller</b> <br /> <a href="https://nicfel.github.io/Talks/20180619-TtB/">The Structured Coalescent</a><br />
+    <b>Nicola Müller</b> <br /> <a href="/tutorials/Mascot-Tutorial/">MASCOT Tutorial</a> </td>
 <td rowspan="4" style="background-color: white; border: 1px solid lightgray">
     Activities (e.g. Hiking, swimming, etc.)</td>
-<td> <b>Rachel Warnock</b> <br> <a href="/tutorials/FBD-tutorial/">FBD Model Tutorial</a> </td>
-<td> <b>Nicola Müller</b> <br><a href="/tutorials/starbeast2-tutorial/">StarBEAST2 Tutorial</a> </td>
+<td> <b>Rachel Warnock</b> <br /> <a href="/tutorials/FBD-tutorial/">FBD Model Tutorial</a> </td>
+<td> <b>Nicola Müller</b> <br /><a href="/tutorials/starbeast2-tutorial/">StarBEAST2 Tutorial</a> </td>
 </tr>
 
 <tr>
@@ -216,18 +190,18 @@
 <tr>
 <td> 16:15 </td>
 <td> </td>
-<td> <b>Veronika Boskova</b> <br> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_18_Monday_16h15_SettingPriors.pdf">Setting Priors</a> </td>
-<td> <b>Jūlija Pečerska</b> <br> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_19_Tuesday_16h15_Troubleshooting.pdf">Trouble-shooting </a></td>
-<td> <b>Tim Vaughan</b> <br> <a href="https://tgvaughan.github.io/TTB_Lectures/XML">Understanding BEAST&nbsp;2 XML </a></td>
+<td> <b>Veronika Boskova</b> <br /> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_18_Monday_16h15_SettingPriors.pdf">Setting Priors</a> </td>
+<td> <b>Jūlija Pečerska</b> <br /> <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures/raw/master/2018_06_19_Tuesday_16h15_Troubleshooting.pdf">Trouble-shooting </a></td>
+<td> <b>Tim Vaughan</b> <br /> <a href="https://tgvaughan.github.io/TTB_Lectures/XML">Understanding BEAST&nbsp;2 XML </a></td>
 <td> BEAST Clinic </td>
 </tr>
 
 <tr>
 <td> 16:45 </td>
 <td> Welcome Apero </td>
-<td> <b>Veronika Boskova</b> <br> <a href="/tutorials/Prior-selection/">Setting Priors Tutorial</a> </td>
-<td> <b>Jūlija Pečerska</b> <br> <a href="/tutorials/Troubleshooting/">Trouble-shooting Tutorial</a> </td>
-<td> <b>Tim Vaughan</b> <br> <a href="https://tgvaughan.github.io/TTB_Lectures/XML/#/22">XML Hacking Tutorial</a> </td>
+<td> <b>Veronika Boskova</b> <br /> <a href="/tutorials/Prior-selection/">Setting Priors Tutorial</a> </td>
+<td> <b>Jūlija Pečerska</b> <br /> <a href="/tutorials/Troubleshooting/">Trouble-shooting Tutorial</a> </td>
+<td> <b>Tim Vaughan</b> <br /> <a href="https://tgvaughan.github.io/TTB_Lectures/XML/#/22">XML Hacking Tutorial</a> </td>
 <td rowspan="3" style="background-color:white; border: 1px solid lightgray"> Departure </td>
 </tr>
 
@@ -253,53 +227,53 @@
 </tbody>
 </table>
 
-<h1>Lecture slides</h1>
+<h1 id="lecture-slides">Lecture slides</h1>
 
 <p>Slides to lectures are available from <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures">here</a></p>
 
-<h1>Required Software</h1>
+<h1 id="required-software">Required Software</h1>
 
-<p><strong>You are required to bring your own laptop to the workshop.</strong> Power strips are available for each participant to keep their devices charged during the workshop. The software below <strong>must</strong> be installed prior to arrival. </p>
+<p><strong>You are required to bring your own laptop to the workshop.</strong> Power strips are available for each participant to keep their devices charged during the workshop. The software below <strong>must</strong> be installed prior to arrival.</p>
 
 <ul>
-<li><strong>Java 8 or higher:</strong> This is required by BEAST 2 <a href="http://java.com/download">(download)</a>.</li>
-<li><strong>BEAST 2:</strong> BEAST 2 is a cross-platform program for Bayesian phylogenetic analysis of molecular sequences. We will be using this software to perform analyses on the data brought to the workshop. We will be using <strong>BEAST v2.5</strong> for the workshop <a href="http://beast2.org/">(download)</a>.</li>
-<li><strong>FigTree:</strong> FigTree is a graphical viewer of phylogenetic trees, specifically designed to display summarised and annotated trees produced by BEAST <a href="http://beast.community/figtree">(download)</a>.</li>
-<li><strong>Tracer:</strong> Tracer is a program for analysing the trace files generated by Bayesian MCMC runs. It can be used to check mixing, ESS, parameter correlations, etc. <a href="http://beast.community/tracer">(download)</a>.</li>
-<li><strong>BEAGLE (optional):</strong> BEAGLE is a high-performance library that can perform the core calculations in BEAST2 (and many other phylogenetics packages) much faster. BEAGLE isn&#39;t necessary for the workshop, but it will speed up your analyses <a href="https://github.com/beagle-dev/beagle-lib">(download)</a>.</li>
-<li><strong>R:</strong> R is a free software environment that provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering) and graphical techniques, and is highly extensible <a href="https://www.r-project.org/">(download)</a>.</li>
-<li><strong>RStudio (optional):</strong> RStudio provides a friendly front-end for R <a href="https://www.rstudio.com/">(download)</a>.</li>
+  <li><strong>Java 8 or higher:</strong> This is required by BEAST 2 <a href="http://java.com/download">(download)</a>.</li>
+  <li><strong>BEAST 2:</strong> BEAST 2 is a cross-platform program for Bayesian phylogenetic analysis of molecular sequences. We will be using this software to perform analyses on the data brought to the workshop. We will be using <strong>BEAST v2.5</strong> for the workshop <a href="http://beast2.org/">(download)</a>.</li>
+  <li><strong>FigTree:</strong> FigTree is a graphical viewer of phylogenetic trees, specifically designed to display summarised and annotated trees produced by BEAST <a href="http://beast.community/figtree">(download)</a>.</li>
+  <li><strong>Tracer:</strong> Tracer is a program for analysing the trace files generated by Bayesian MCMC runs. It can be used to check mixing, ESS, parameter correlations, etc. <a href="http://beast.community/tracer">(download)</a>.</li>
+  <li><strong>BEAGLE (optional):</strong> BEAGLE is a high-performance library that can perform the core calculations in BEAST2 (and many other phylogenetics packages) much faster. BEAGLE isn’t necessary for the workshop, but it will speed up your analyses <a href="https://github.com/beagle-dev/beagle-lib">(download)</a>.</li>
+  <li><strong>R:</strong> R is a free software environment that provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering) and graphical techniques, and is highly extensible <a href="https://www.r-project.org/">(download)</a>.</li>
+  <li><strong>RStudio (optional):</strong> RStudio provides a friendly front-end for R <a href="https://www.rstudio.com/">(download)</a>.</li>
 </ul>
 
-<h1>Pre-workshop recommended reading</h1>
+<h1 id="pre-workshop-recommended-reading">Pre-workshop recommended reading</h1>
 
-<h3>Statistics and mathematics primers</h3>
+<h3 id="statistics-and-mathematics-primers">Statistics and mathematics primers</h3>
 
 <p>We are aware that some of the workshop participants do not have a mathematical background and may have difficulty understanding some of the theory. The two links below can help to refresh the basic concepts, but are by no means meant to be comprehensive resources.</p>
 
 <ul>
-<li><a href="http://students.brown.edu/seeing-theory/index.html">Seeing Theory</a>: This website gives a very brief, but pretty and easy to understand introduction to many of the fundamental concepts in statistics. </li>
-<li>Ziheng Yang&#39;s <a href="http://abacus.gene.ucl.ac.uk/PPS/PrimerProbabilityStatistics.pdf">statistics primer</a>: Gives a more in-depth introduction to the topic.</li>
+  <li><a href="http://students.brown.edu/seeing-theory/index.html">Seeing Theory</a>: This website gives a very brief, but pretty and easy to understand introduction to many of the fundamental concepts in statistics.</li>
+  <li>Ziheng Yang’s <a href="http://abacus.gene.ucl.ac.uk/PPS/PrimerProbabilityStatistics.pdf">statistics primer</a>: Gives a more in-depth introduction to the topic.</li>
 </ul>
 
-<h3>Phylogenetics and phylodynamics books</h3>
+<h3 id="phylogenetics-and-phylodynamics-books">Phylogenetics and phylodynamics books</h3>
 
 <p>The books below are not all focused on BEAST or even Bayesian phylogenetics. However, each of the books contains at least one background chapter on the theory of molecular evolution, as well as more in-depth chapters on the models implemented in BEAST and BEAST 2. Most of the books also contain at least some discussion of Bayesian inference.</p>
 
 <ul>
-<li><a href="https://www.beast2.org/book/">Bayesian Evolutionary Analysis with BEAST</a>, <em>Alexei J. Drummond, Remco R. Bouckaert</em></li>
-<li><a href="http://abacus.gene.ucl.ac.uk/MESA/">Molecular Evolution: A Statistical Approach</a>, <em>Ziheng Yang</em></li>
-<li><a href="http://www.cambridge.org/catalogue/catalogue.asp?isbn=9780521877107">The Phylogenetic Handbook</a>, <em>Philippe Lemey, Marco Salemi, Anne-Mieke Vandamme</em></li>
-<li><a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0865428891.html">Molecular Evolution: A Phylogenetic Approach</a>, <em>Roderick D.M. Page, Edward C. Holmes</em></li>
-<li><a href="https://www.amazon.co.uk/Inferring-Phylogenies-Joseph-Felsenstein/dp/0878931775">Inferring Phylogenies</a>, <em>Joseph Felsenstein</em></li>
+  <li><a href="https://www.beast2.org/book/">Bayesian Evolutionary Analysis with BEAST</a>, <em>Alexei J. Drummond, Remco R. Bouckaert</em></li>
+  <li><a href="http://abacus.gene.ucl.ac.uk/MESA/">Molecular Evolution: A Statistical Approach</a>, <em>Ziheng Yang</em></li>
+  <li><a href="http://www.cambridge.org/catalogue/catalogue.asp?isbn=9780521877107">The Phylogenetic Handbook</a>, <em>Philippe Lemey, Marco Salemi, Anne-Mieke Vandamme</em></li>
+  <li><a href="http://eu.wiley.com/WileyCDA/WileyTitle/productCd-0865428891.html">Molecular Evolution: A Phylogenetic Approach</a>, <em>Roderick D.M. Page, Edward C. Holmes</em></li>
+  <li><a href="https://www.amazon.co.uk/Inferring-Phylogenies-Joseph-Felsenstein/dp/0878931775">Inferring Phylogenies</a>, <em>Joseph Felsenstein</em></li>
 </ul>
 
 <p>In addition, the following review papers might be useful:</p>
 
 <ul>
-<li><a href="https://www.nature.com/articles/nrg.2015.8">Bayesian molecular clock dating of species divergences in the genomics era</a>, <em>Mario dos Reis, Phillip Donoghue, Ziheng Yang</em></li>
-<li><a href="https://www.nature.com/articles/nrg2583">Evolutionary analysis of the dynamics of viral infectious disease</a>, <em>Oliver Pybus, Andrew Rambaut</em></li>
-<li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12390">Bayesian molecular dating: opening up the black box</a>, <em>Lindell Bromham, Sebastián Duchêne, Xia Hua, Andrew M. Ritchie, David A. Duchêne, Simon Y. W. Ho</em></li>
+  <li><a href="https://www.nature.com/articles/nrg.2015.8">Bayesian molecular clock dating of species divergences in the genomics era</a>, <em>Mario dos Reis, Phillip Donoghue, Ziheng Yang</em></li>
+  <li><a href="https://www.nature.com/articles/nrg2583">Evolutionary analysis of the dynamics of viral infectious disease</a>, <em>Oliver Pybus, Andrew Rambaut</em></li>
+  <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/brv.12390">Bayesian molecular dating: opening up the black box</a>, <em>Lindell Bromham, Sebastián Duchêne, Xia Hua, Andrew M. Ritchie, David A. Duchêne, Simon Y. W. Ho</em></li>
 </ul>
 
 	</div>
@@ -311,41 +285,25 @@
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

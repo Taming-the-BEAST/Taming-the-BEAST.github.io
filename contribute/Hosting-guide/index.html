@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,52 +27,41 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
@@ -122,14 +96,14 @@
 			
 			<div class="post">
 				<div>
-<img style='display:inline-block;width:19%' src="/images/logo_bw.svg">
-<img style='display:inline-block;width:19%' src='/images/workshops/Taming-the-BEAST-in-the-South-Pacific.jpg'>
-<img style='display:inline-block;width:19%' src='/images/workshops/Taming-the-BEAST-in-London.jpg'>
-<img style='display:inline-block;width:19%' src='/images/workshops/Taming-the-BEAST-Oberageri.png'>
-<img style='display:inline-block;width:19%' src='/images/workshops/Taming-the-BEAST-Down-Under-Logo.png'>
+<img style="display:inline-block;width:19%" src="/images/logo_bw.svg" />
+<img style="display:inline-block;width:19%" src="/images/workshops/Taming-the-BEAST-in-the-South-Pacific.jpg" />
+<img style="display:inline-block;width:19%" src="/images/workshops/Taming-the-BEAST-in-London.jpg" />
+<img style="display:inline-block;width:19%" src="/images/workshops/Taming-the-BEAST-Oberageri.png" />
+<img style="display:inline-block;width:19%" src="/images/workshops/Taming-the-BEAST-Down-Under-Logo.png" />
 </div>
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>Phylogenetics and phylodynamics are central topics in modern biology. Phylogenetic inferences reconstruct the evolutionary relationships between organisms, whereas phylodynamic inferences reveal the dynamics that lead to the observed relationships.
 These two fields have many practical applications in disciplines such as epidemiology, developmental biology, paleontology, ecology and even linguistics.
@@ -142,7 +116,7 @@ It can be used as a method of reconstructing phylogenies but is also a framework
 BEAST 2 uses Markov chain Monte Carlo (MCMC) to average over tree space, so that each tree is weighted proportional to its posterior probability.
 BEAST 2 includes a graphical user-interface for setting up standard analyses and a suit of programs for analysing the results.
 A core aspect of the BEAST 2 design philosophy is to allow researchers to extend the core program without the involvement of the BEAST 2 developers.
-New methods are implemented as standalone packages that are developed and maintained separately of BEAST 2 itself. </p>
+New methods are implemented as standalone packages that are developed and maintained separately of BEAST 2 itself.</p>
 
 <p>BEAST 2 is a complex program and it is challenging to learn BEAST without the help of an expert.
 Workshops, summer schools and lectures are a great resource, but can only reach a handful of the people interested in performing BEAST analyses.
@@ -155,10 +129,10 @@ Furthermore, it is possible for developers to upload tutorials to newly implemen
 Finally, we also encourage anyone else with useful BEAST 2 teaching materials to upload them.
 Find out how you can <a href="/contribute">contribute</a>.</p>
 
-<p>Taming the BEAST team<br>
+<p>Taming the BEAST team<br />
 Alexei Drummond, Tanja Stadler, Tim Vaughan and Louis du Plessis</p>
 
-<h2>Previous workshops</h2>
+<h2 id="previous-workshops">Previous workshops</h2>
 
 <p>Taming the BEAST has had successful workshops in various parts of the world and typically runs in Europe every year during the summer season.
 <a href="https://www.bsse.ethz.ch/cevo/">Tanja Stadler’s cEvo (computational Evolution) group at the ETH Zürich</a> organised the first workshop in 2016 in Engelberg, Switzerland.
@@ -168,18 +142,18 @@ Here we have collected together some notes on what makes a successful workshop.<
 <p>To begin with, the common denominator between each of these venues is that they’re all very stimulating or picturesque locations.
 A beautiful location engages the participants, and teaching and tutoring staff so much more.
 Whilst being beautiful, all the locations have also been accessible in terms of proximity to accommodation, transport options and amenities.
-The last practical aspect of a successful location is it must be able to comfortably accommodate and cater to at least 40 participants (in addition to teaching/tutoring staff) by way of desks, presentation and audio equipment, air conditioning and most importantly, super-fast wireless internet. </p>
+The last practical aspect of a successful location is it must be able to comfortably accommodate and cater to at least 40 participants (in addition to teaching/tutoring staff) by way of desks, presentation and audio equipment, air conditioning and most importantly, super-fast wireless internet.</p>
 
 <p>Once the venue is secured (or at least decided), the host needs to then decide on the focus for their workshop.
 In the past we’ve had general phylogenetics, multispecies coalescent, total-evidence approaches and infectious disease modelling, to name a few.
 Typically there have not been two consecutive workshops with the same focus.
-Naturally, the focal point will depend on the hosts’ background and research interests, but it is recommended to refer to <a href="/">this website</a> and to speak to a member of the Taming the BEAST team to see what the current topic of interest is. </p>
+Naturally, the focal point will depend on the hosts’ background and research interests, but it is recommended to refer to <a href="/">this website</a> and to speak to a member of the Taming the BEAST team to see what the current topic of interest is.</p>
 
 <p>With the venue and appropriate focus decided, the host will need to secure the most relevant teaching staff well ahead of time.
-With 35--40 (50 participants maximum) you will ideally want at least 10--15 members of staff on rotation (3:1 Students:Tutors) made up of teachers and teaching assistants drawn from local and international locations.
-This group of staff often includes members from Tanja Stadler’s cEvo group and members of the Centre for Computational Evolution. </p>
+With 35–40 (50 participants maximum) you will ideally want at least 10–15 members of staff on rotation (3:1 Students:Tutors) made up of teachers and teaching assistants drawn from local and international locations.
+This group of staff often includes members from Tanja Stadler’s cEvo group and members of the Centre for Computational Evolution.</p>
 
-<h2>The Workshop Programme</h2>
+<h2 id="the-workshop-programme">The Workshop Programme</h2>
 
 <p>Taming the BEAST workshops are one week long.
 This allows enough time to properly teach the desired focus as well as provide networking opportunities and deliver a truly international experience.
@@ -189,25 +163,22 @@ However, a charm of Taming the BEAST workshops is that there is also an activiti
 The dinners and activities can be organised by the hosts or participants may organise themselves.
 Previous workshop programmes can be found <a href="/workshops/">here</a>.</p>
 
-<h2>Funding</h2>
+<h2 id="funding">Funding</h2>
 
 <p>With running an international standard workshop, comes associated costs that need to be anticipated to make Taming the BEAST accessible to all learners.
 It is understood that in order to host a successful workshop, the host/s need to be comfortable and able to afford most of the below costs.</p>
 
-<h3>Venue</h3>
-
+<h3 id="venue">Venue</h3>
 <p>The venue, which is assumed to be in a stimulating and accessible location will carry most of the cost.
 Venues will have their preferred caterers and usually offer day delegate packages to cover meal breaks.
 Room and equipment may either be included in the event, but it may be an additional cost you incur.</p>
 
-<h3>Teaching staff</h3>
-
+<h3 id="teaching-staff">Teaching staff</h3>
 <p>Previously members from Tanja Stadler’s cEvo group and members of the Centre for Computational Evolution have been able to secure their own funding to allow them to travel and teach at BEAST workshops.
 But for all other teaching and tutoring staff, there is the cost of their travel and accommodation and whatever else you allow for them.
 This and the venue are the bare minimum that you must account for.</p>
 
-<h3>Activities</h3>
-
+<h3 id="activities">Activities</h3>
 <p>As previously mentioned, the programme should have time allocated for social and networking opportunities.
 Typically Taming the BEAST workshops have a cocktail style welcome event the night before the workshop starts.
 There are also one to two dinners across the week.
@@ -215,26 +186,24 @@ As a host, anything beyond one dinner, you may then either absorb the cost or yo
 Depending on the resources available, the unscheduled afternoon mid-week may provide another opportunity to have an organised activity, such as an excursion to a local attraction.
 There should be both adventurous and accessible options.</p>
 
-<h3>Fee waivers</h3>
-
+<h3 id="fee-waivers">Fee waivers</h3>
 <p>Depending on the level of funding or sponsorship a host has access to, fee waivers have provided opportunities to learners that otherwise might have missed out.
 This is an important consideration as it makes your Taming the BEAST workshop accessible to not only international participants, but also participants who may struggle financially.
 Fee waivers are a great drawcard and can be done partially or in full.
 However, they are important and tend to have positive effects.</p>
 
-<h3>Fee structures</h3>
-
+<h3 id="fee-structures">Fee structures</h3>
 <p>There have previously been two types of fee structures that hosts have chosen between.</p>
 
 <ul>
-<li>Fee Structure One: Registration and meals &lt; 300€</li>
-<li>Fee Structure Two: Registration, accommodation and meals &lt;1000€</li>
+  <li>Fee Structure One: Registration and meals &lt; 300€</li>
+  <li>Fee Structure Two: Registration, accommodation and meals &lt;1000€</li>
 </ul>
 
 <p>Hosts are encouraged to offer Fee Structure Two for logistical reasons in more remote locations with limited accommodation options and to create a more immersive learning environment.
 However, Fee Structure One may be preferred in larger cities where there is an abundance of accommodation options.</p>
 
-<h2>Registration and assessing applicants</h2>
+<h2 id="registration-and-assessing-applicants">Registration and assessing applicants</h2>
 
 <p>The registrations should be open at least six months before the commencement of the workshop and be open for a period of about one month.
 To maximise the registration time, start advertising via email to previous participants and relevant groups.
@@ -260,12 +229,12 @@ Finally, another consideration when choosing your participant pool is to ensure 
 Generally the further a participant has to travel, the greater the benefit of a fee waiver or if there are participants from a disproportionately underrepresented group and/or disadvantaged background.
 In Sydney for example, full waivers were offered to those travelling internationally and half waivers were offered to those traveling domestically, but from another state.</p>
 
-<h2>Evaluation</h2>
+<h2 id="evaluation">Evaluation</h2>
 
 <p>Previous workshops have requested participants to anonymously evaluate their experience via Google Forms, such as <a href="https://docs.google.com/forms/d/1c0BGHc9IlZBsie7mZU8EeRptxjQXBlGfw4lsFkoJP98/edit">this example from the Oberägeri workshop</a>.
 Since every workshop will vary, this evaluation should be edited to suit the particular workshop, and the results should be exported as CSV or PDF files for distribution or for the workshop host to store.</p>
 
-<h2>Workshop Preparation Timeline</h2>
+<h2 id="workshop-preparation-timeline">Workshop Preparation Timeline</h2>
 
 <table>
 <tr>
@@ -278,7 +247,7 @@ Send an email to workshops@taming-the-beast.org or to the Centre for Computation
 <tr>
 <th>9 months before</th>
 <td>
-Secure possible teachers/tutors & start to advertising arrangements.
+Secure possible teachers/tutors &amp; start to advertising arrangements.
 </td>
 <td>
 Create a local Taming the BEAST logo and fix the dates for the workshop.
@@ -301,98 +270,153 @@ Create the programme and assess applications.
 Finalise the financial side of the workshop, distribute the final programme to participants.
 </td>
 <td>
-Receive registration fees, pay deposits & assist participants.
+Receive registration fees, pay deposits &amp; assist participants.
 </td>
 </tr>
 </table>
 
-<h2>Things to keep in mind</h2>
+<h2 id="things-to-keep-in-mind">Things to keep in mind</h2>
 
-<h3>Workshop schedule:</h3>
-
+<h3 id="workshop-schedule">Workshop schedule:</h3>
 <p>To make sure that people do not lose motivation on the 1st day, at the very least make sure that everyone finishes the 1st tutorial.
-In addition, if you are offering free after-dinner sessions, if your participants are overworked on the first day, this will not be a positive exercise. </p>
+In addition, if you are offering free after-dinner sessions, if your participants are overworked on the first day, this will not be a positive exercise.</p>
 
-<h3>Daily schedule suggestions:</h3>
-
-<ul>
-<li><p>Set clear start and end times for all talks and tutorials and adhere to them with timekeepers.</p></li>
-<li><p>Invited speaker talks are usually long (2 hours). Consider this when allocating tutorial time.</p></li>
-<li><p>Allow enough time for moderated panel discussions (Q&amp;A session) with all invited speakers.</p></li>
-</ul>
-
-<h3>Academic program suggestions</h3>
+<h3 id="daily-schedule-suggestions">Daily schedule suggestions:</h3>
 
 <ul>
-<li><p>Add a primer on probability theory to bring people on the same page and set the frame either as a pre-workshop or as the first thing in the workshop. However, this is generally covered in one of the first invited speaker talks. There are also two probability primers in the recommended pre-workshop reading list.</p></li>
-<li><p>Be detailed on introductory slides during the introduction on the first evening (model, research question, etc.), so people get an idea who they should talk to.</p></li>
-<li><p>Define all technical terms (e.g. Yule model), so all participants can be part of conversation.</p></li>
-<li><p>Always try to emphasize the similarities between macroevolution and epidemiology, since students are usually only in one discipline and transferring concepts may not come naturally to them.</p></li>
-<li><p>More about post-processing of results (e.g. building figures)</p></li>
+  <li>
+    <p>Set clear start and end times for all talks and tutorials and adhere to them with timekeepers.</p>
+  </li>
+  <li>
+    <p>Invited speaker talks are usually long (2 hours). Consider this when allocating tutorial time.</p>
+  </li>
+  <li>
+    <p>Allow enough time for moderated panel discussions (Q&amp;A session) with all invited speakers.</p>
+  </li>
 </ul>
 
-<h3>Materials suggestions</h3>
-
-<p>Workshop organisers likely won’t have to specifically write new tutorials (there is by now a substantial list of tutorials online and new tutorials are better left in the hands of package developers or the BEAST2 team).It is suggested that all tutorials in the workshop programme should be carefully checked against the latest version of BEAST2 (and updated if needed). In the past, workshops have almost always coincided with the release of a new version of BEAST2 which made checks and updates necessary. </p>
-
-<h3>Tutorial suggestions</h3>
+<h3 id="academic-program-suggestions">Academic program suggestions</h3>
 
 <ul>
-<li><p>TAs should have assigned tutorials where they can navigate the room to offer assistance and answer questions when asked. All TAs should be physically available during the first tutorial to ensure that everyone finishes it and to sort out initial teething problems – connecting to wifi, accessing tutorials, starting up BEAST2 etc.</p></li>
-<li><p>The room setup should be in such a way that there is easy access to every student in the tutorial room so that all students feel they can access assistance.</p></li>
-<li><p>It is useful to do a short introductory talk before each tutorial to introduce the problem and dataset and motivate the choices for models used. It is also useful to periodically stop the tutorial to check the progress of students and address common problems. </p></li>
-<li><p>A feedback session at the end of the tutorial explaining the results is also necessary. Feedback sessions should address the how and why, not just the what – instead of simply scrolling through results in Tracer, TAs should explain how to interpret the results, motivations for why specific priors were set, what the results mean etc. Several tutorials have discussion points interspersed throughout, TAs should follow up on these points during the feedback session.</p></li>
-<li><p>When teaching and during tutorials, what AND why needs to be explicit. Reasons for choosing priors or setting parameter values should be explicit.</p></li>
-<li><p>All the tutorials on the website follow roughly the same format, but since they have different authors they are not completely standardised. The most important part to standardise is the division of content between boxes and paragraphs. Boxes contain specific instructions, paragraphs contain explanations. All results in the tutorial should be replicable by just reading the boxes and following the instructions.</p></li>
+  <li>
+    <p>Add a primer on probability theory to bring people on the same page and set the frame either as a pre-workshop or as the first thing in the workshop. However, this is generally covered in one of the first invited speaker talks. There are also two probability primers in the recommended pre-workshop reading list.</p>
+  </li>
+  <li>
+    <p>Be detailed on introductory slides during the introduction on the first evening (model, research question, etc.), so people get an idea who they should talk to.</p>
+  </li>
+  <li>
+    <p>Define all technical terms (e.g. Yule model), so all participants can be part of conversation.</p>
+  </li>
+  <li>
+    <p>Always try to emphasize the similarities between macroevolution and epidemiology, since students are usually only in one discipline and transferring concepts may not come naturally to them.</p>
+  </li>
+  <li>
+    <p>More about post-processing of results (e.g. building figures)</p>
+  </li>
 </ul>
 
-<h3>Free tutorials</h3>
+<h3 id="materials-suggestions">Materials suggestions</h3>
+
+<p>Workshop organisers likely won’t have to specifically write new tutorials (there is by now a substantial list of tutorials online and new tutorials are better left in the hands of package developers or the BEAST2 team).It is suggested that all tutorials in the workshop programme should be carefully checked against the latest version of BEAST2 (and updated if needed). In the past, workshops have almost always coincided with the release of a new version of BEAST2 which made checks and updates necessary.</p>
+
+<h3 id="tutorial-suggestions">Tutorial suggestions</h3>
 
 <ul>
-<li><p>Where possible, free tutorials should be available such that people can work on their own data. Be mindful to keep this away (in space and time) from social events including ones outside the workshop. </p></li>
-<li><p>The tutorial sessions could happen in parallel in two rooms, one room for the scheduled content tutorial and the other for a free tutorial with TAs in both rooms. This way people who are not interested in epidemiology or species evolution can pick which tutorials are most useful for them and then use the rest of the time to work on their own data before the last day. </p></li>
-<li><p>TAs should also be specifically assigned to these free tutorials. It may also be useful to convince some of the invited speakers to be available during some of the free sessions.
-Daily announcements and feedback:</p></li>
-<li><p>Collect all announcements and organizational details for the day by breakfast at the latest, so they can be announced by one person before the first talk.</p></li>
-<li><p>TAs and speakers may find it useful to have meetings in the evening to discuss the organization and possible changes for the next day.</p></li>
+  <li>
+    <p>TAs should have assigned tutorials where they can navigate the room to offer assistance and answer questions when asked. All TAs should be physically available during the first tutorial to ensure that everyone finishes it and to sort out initial teething problems – connecting to wifi, accessing tutorials, starting up BEAST2 etc.</p>
+  </li>
+  <li>
+    <p>The room setup should be in such a way that there is easy access to every student in the tutorial room so that all students feel they can access assistance.</p>
+  </li>
+  <li>
+    <p>It is useful to do a short introductory talk before each tutorial to introduce the problem and dataset and motivate the choices for models used. It is also useful to periodically stop the tutorial to check the progress of students and address common problems.</p>
+  </li>
+  <li>
+    <p>A feedback session at the end of the tutorial explaining the results is also necessary. Feedback sessions should address the how and why, not just the what – instead of simply scrolling through results in Tracer, TAs should explain how to interpret the results, motivations for why specific priors were set, what the results mean etc. Several tutorials have discussion points interspersed throughout, TAs should follow up on these points during the feedback session.</p>
+  </li>
+  <li>
+    <p>When teaching and during tutorials, what AND why needs to be explicit. Reasons for choosing priors or setting parameter values should be explicit.</p>
+  </li>
+  <li>
+    <p>All the tutorials on the website follow roughly the same format, but since they have different authors they are not completely standardised. The most important part to standardise is the division of content between boxes and paragraphs. Boxes contain specific instructions, paragraphs contain explanations. All results in the tutorial should be replicable by just reading the boxes and following the instructions.</p>
+  </li>
 </ul>
 
-<h3>Daily announcements and feedback:</h3>
+<h3 id="free-tutorials">Free tutorials</h3>
 
 <ul>
-<li><p>Collect all announcements and organizational details for the day by breakfast at the latest, so they can be announced by one person before the first talk.</p></li>
-<li><p>TAs and speakers may find it useful to have meetings in the evening to discuss the organization and possible changes for the next day.</p></li>
+  <li>
+    <p>Where possible, free tutorials should be available such that people can work on their own data. Be mindful to keep this away (in space and time) from social events including ones outside the workshop.</p>
+  </li>
+  <li>
+    <p>The tutorial sessions could happen in parallel in two rooms, one room for the scheduled content tutorial and the other for a free tutorial with TAs in both rooms. This way people who are not interested in epidemiology or species evolution can pick which tutorials are most useful for them and then use the rest of the time to work on their own data before the last day.</p>
+  </li>
+  <li>
+    <p>TAs should also be specifically assigned to these free tutorials. It may also be useful to convince some of the invited speakers to be available during some of the free sessions.
+Daily announcements and feedback:</p>
+  </li>
+  <li>
+    <p>Collect all announcements and organizational details for the day by breakfast at the latest, so they can be announced by one person before the first talk.</p>
+  </li>
+  <li>
+    <p>TAs and speakers may find it useful to have meetings in the evening to discuss the organization and possible changes for the next day.</p>
+  </li>
 </ul>
 
-<h2>Sample timetable (Taming the BEAST 2018)</h2>
+<h3 id="daily-announcements-and-feedback">Daily announcements and feedback:</h3>
+
+<ul>
+  <li>
+    <p>Collect all announcements and organizational details for the day by breakfast at the latest, so they can be announced by one person before the first talk.</p>
+  </li>
+  <li>
+    <p>TAs and speakers may find it useful to have meetings in the evening to discuss the organization and possible changes for the next day.</p>
+  </li>
+</ul>
+
+<h2 id="sample-timetable-taming-the-beast-2018">Sample timetable (Taming the BEAST 2018)</h2>
 
 <p>The number and length of time slots for lectures / tutorials should be maintained accordingly.
 However, organizers are welcome to choose and invite the set of lecturers (time slots 9:00-11:00) and teaching assistants (time slots from 11:00).
 Further, with more advanced tutorials, these can in particular replace the tutorials of Thursday and Friday with other topics (see the Taming the BEAST website for the available tutorials).
 In the example timetable below, talks from invited speakers are boxes with a blue background, standard topics and tutorials have a green background and advanced topics have a red background.</p>
 
-<p><img src="/contribute/media/example_programme.png" alt="Image of example programme"></p>
+<p><img src="/contribute/media/example_programme.png" alt="Image of example programme" /></p>
 
-<h2>Required software</h2>
+<h2 id="required-software">Required software</h2>
 
 <p><strong>Participants are required to bring their own laptop to the workshop.</strong> Power strips are available for each participant to keep their devices charged during the workshop. The software below <strong>must</strong> be installed prior to arrival:</p>
 
 <ul>
-<li><p><strong>Java 8 or higher</strong>: This is required by BEAST 2 <a href="https://java.com/download">(download)</a>.</p></li>
-<li><p><strong>BEAST 2</strong>: BEAST 2 is a cross-platform program for Bayesian phylogenetic analysis of molecular sequences. We will be using this software to perform analyses on the data brought to the workshop. We will be using BEAST v2.5 for the workshop <a href="https://beast2.org">(download)</a>.</p></li>
-<li><p><strong>FigTree</strong>: This is a graphical viewer of phylogenetic trees, specifically designed to display summarised and annotated trees produced by BEAST <a href="http://beast.community/figtree">(download)</a>.</p></li>
-<li><p><strong>Tracer</strong>: This is a program for analysing the trace files generated by Bayesian MCMC runs. It can be used to check mixing, ESS, parameter correlations, etc. <a href="http://beast.community/tracer">(download)</a>.</p></li>
-<li><p><strong>BEAGLE</strong> (optional): This is a high-performance library that can perform the core calculations in BEAST2 (and many other phylogenetics packages) much faster. BEAGLE isn&#39;t necessary for the workshop, but it will speed up your analyses <a href="https://github.com/beagle-dev/beagle-lib">(download)</a>.</p></li>
-<li><p><strong>R</strong>: This is a free software environment that provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering) and graphical techniques, and is highly extensible <a href="https://r-project.org">(download)</a>.</p></li>
-<li><p><strong>RStudio</strong> (optional): This provides a friendly front-end for R <a href="https://rstudio.com">(download)</a>.</p></li>
+  <li>
+    <p><strong>Java 8 or higher</strong>: This is required by BEAST 2 <a href="https://java.com/download">(download)</a>.</p>
+  </li>
+  <li>
+    <p><strong>BEAST 2</strong>: BEAST 2 is a cross-platform program for Bayesian phylogenetic analysis of molecular sequences. We will be using this software to perform analyses on the data brought to the workshop. We will be using BEAST v2.5 for the workshop <a href="https://beast2.org">(download)</a>.</p>
+  </li>
+  <li>
+    <p><strong>FigTree</strong>: This is a graphical viewer of phylogenetic trees, specifically designed to display summarised and annotated trees produced by BEAST <a href="http://beast.community/figtree">(download)</a>.</p>
+  </li>
+  <li>
+    <p><strong>Tracer</strong>: This is a program for analysing the trace files generated by Bayesian MCMC runs. It can be used to check mixing, ESS, parameter correlations, etc. <a href="http://beast.community/tracer">(download)</a>.</p>
+  </li>
+  <li>
+    <p><strong>BEAGLE</strong> (optional): This is a high-performance library that can perform the core calculations in BEAST2 (and many other phylogenetics packages) much faster. BEAGLE isn’t necessary for the workshop, but it will speed up your analyses <a href="https://github.com/beagle-dev/beagle-lib">(download)</a>.</p>
+  </li>
+  <li>
+    <p><strong>R</strong>: This is a free software environment that provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering) and graphical techniques, and is highly extensible <a href="https://r-project.org">(download)</a>.</p>
+  </li>
+  <li>
+    <p><strong>RStudio</strong> (optional): This provides a friendly front-end for R <a href="https://rstudio.com">(download)</a>.</p>
+  </li>
 </ul>
 
 <p><strong>Email participants about the above requirements 1 – 2 weeks before commencement of workshop</strong></p>
 
-<h2>Suggested reading</h2>
+<h2 id="suggested-reading">Suggested reading</h2>
 
 <p>The introductory chapters of the BEAST 2 book are a great way to get started for both hosts and participants alike.
-If it isn&#39;t found at your institution&#39;s library, then you can find it on <a href="https://books.google.co.nz/books?id=deHUrQEACAAJ&dq=isbn:1107019656&hl=en&sa=X&ved=0CCIQ6AEwAWoVChMI0oPOlqHfxgIVA9qmCh3GWQPP">Google books</a>.</p>
+If it isn’t found at your institution’s library, then you can find it on <a href="https://books.google.co.nz/books?id=deHUrQEACAAJ&amp;dq=isbn:1107019656&amp;hl=en&amp;sa=X&amp;ved=0CCIQ6AEwAWoVChMI0oPOlqHfxgIVA9qmCh3GWQPP">Google books</a>.</p>
 
 			</div>	
 		</div>			
@@ -410,41 +434,25 @@ If it isn&#39;t found at your institution&#39;s library, then you can find it on
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

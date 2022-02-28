@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2020)
+This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Mascot-Tutorial.aux
 The style file: biblatex.bst
@@ -19,13 +19,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Mascot-Tutorial-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.13
+Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 3 entries,
-            6365 wiz_defined-function locations,
-            1311 strings with 10756 characters,
-and the built_in function-call counts, 17935 in all, are:
+            6393 wiz_defined-function locations,
+            1319 strings with 10826 characters,
+and the built_in function-call counts, 17912 in all, are:
 = -- 1354
 > -- 351
 < -- 113
@@ -39,9 +39,9 @@ change.case$ -- 71
 chr.to.int$ -- 44
 cite$ -- 4
 duplicate$ -- 1465
-empty$ -- 1598
+empty$ -- 1600
 format.name$ -- 146
-if$ -- 3852
+if$ -- 3827
 int.to.chr$ -- 0
 int.to.str$ -- 6
 missing$ -- 0

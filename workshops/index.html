@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,52 +27,41 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li class="active">
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
@@ -179,12 +153,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                     June 07, 2021-June 11, 2021</li> 
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        Online!
 		                    
@@ -192,13 +166,17 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-Online/">Programme</a></li> 
 		                    
 		                    
+		                    <div class="smallspacer"></div>
+		                    <li><i class="bi bi-file-text"></i>
+		                    <a class="off" href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2021-Online-Lectures">Lecture slides</a></li>
+		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="/images/workshops/Taming-the-BEAST-Online-Flyer.jpg">Flyer</a></li>
 		                    
 		                </ul>
@@ -230,12 +208,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                       <span style="font-weight: bold; color: red">Cancelled</span>
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        <a class="off" target="_blank" href="http://www.google.com/maps/place/47.130264,8.63121">Oberägeri, Switzerland</a>
 		                    
@@ -243,13 +221,13 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-2020/">Programme</a></li> 
 		                    
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="/images/workshops/Taming-the-BEAST-2020-Flyer.jpg">Flyer</a></li>
 		                    
 		                </ul>
@@ -281,12 +259,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                     August 12, 2019-August 16, 2019</li> 
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        Squamish, British Columbia
 		                    
@@ -294,17 +272,17 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-Squamish/">Programme</a></li> 
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-file-text-o fa-fw"></i>
+		                    <li><i class="bi bi-file-text"></i>
 		                    <a class="off" href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Eh-Lectures">Lecture slides</a></li>
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="/images/workshops/Taming-the-BEAST-Squamish-Flyer.jpg">Flyer</a></li>
 		                    
 		                </ul>
@@ -336,12 +314,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                     February 17, 2019-February 22, 2019</li> 
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        <a class="off" target="_blank" href="http://www.google.com/maps/place/-33.8873,151.1835">Sydney, Australia</a>
 		                    
@@ -349,17 +327,17 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-Down-Under/">Programme</a></li> 
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-file-text-o fa-fw"></i>
+		                    <li><i class="bi bi-file-text"></i>
 		                    <a class="off" href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2019-Sydney-Lectures">Lecture slides</a></li>
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="/images/workshops/Taming-the-BEAST-Down-Under-Flyer.jpg">Flyer</a></li>
 		                    
 		                </ul>
@@ -391,12 +369,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                     June 17, 2018-June 22, 2018</li> 
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        <a class="off" target="_blank" href="http://www.google.com/maps/place/47.130264,8.63121">Oberägeri, Switzerland</a>
 		                    
@@ -404,17 +382,17 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-2018/">Programme</a></li> 
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-file-text-o fa-fw"></i>
+		                    <li><i class="bi bi-file-text"></i>
 		                    <a class="off" href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2018-Oberaegeri-Lectures">Lecture slides</a></li>
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="/images/workshops/Taming-the-BEAST-Oberageri-Flyer.jpg">Flyer</a></li>
 		                    
 		                </ul>
@@ -446,12 +424,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                     July 24, 2017-July 28, 2017</li> 
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        <a class="off" target="_blank" href="http://www.google.com/maps/place/51.520881,-0.130291">London, United Kingdom</a>
 		                    
@@ -459,17 +437,17 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-in-London/">Programme</a></li> 
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-file-text-o fa-fw"></i>
+		                    <li><i class="bi bi-file-text"></i>
 		                    <a class="off" href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2017-London-Lectures">Lecture slides</a></li>
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="/images/workshops/Taming-the-BEAST-in-London-Flyer.jpg">Flyer</a></li>
 		                    
 		                </ul>
@@ -501,12 +479,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                     February 05, 2017-February 10, 2017</li> 
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        <a class="off" target="_blank" href="http://www.google.com/maps/place/-36.788502,175.082424">Waiheke island, New Zealand</a>
 		                    
@@ -514,17 +492,17 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-in-the-South-Pacific/">Programme</a></li> 
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-file-text-o fa-fw"></i>
+		                    <li><i class="bi bi-file-text"></i>
 		                    <a class="off" href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2017-Waiheke-Lectures">Lecture slides</a></li>
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="/images/workshops/Taming-the-BEAST-in-the-South-Pacific-Flyer.pdf">Flyer</a></li>
 		                    
 		                </ul>
@@ -556,12 +534,12 @@
 					<div class="pad-left smallnote">
 						<ul class="list-unstyled">
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-clock-o fa-fw"></i>
+		                    <li><i class="bi bi-clock"></i>
                                     
                                     June 26, 2016-July 01, 2016</li> 
                                     
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-map-marker fa-fw"></i>
+		                    <li><i class="bi bi-pin-map"></i>
 		                    
 		                        Engelberg, Switzerland
 		                    
@@ -569,17 +547,17 @@
 
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-calendar fa-fw"></i>
+		                    <li><i class="bi bi-calendar-week"></i>
 		                    <a class="off" href="/workshops/Taming-the-BEAST-2016/">Programme</a></li> 
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-file-text-o fa-fw"></i>
+		                    <li><i class="bi bi-file-text"></i>
 		                    <a class="off" href="https://github.com/taming-the-beast/Taming-the-BEAST-2016-Engelberg-Lectures">Lecture slides</a></li>
 		                    
 		                    
 		                    <div class="smallspacer"></div>
-		                    <li><i class="fa fa-picture-o fa-fw"></i>
+		                    <li><i class="bi bi-file-image"></i>
 		                    <a class="off" target="_blank" href="https://www.ethz.ch/content/dam/ethz/special-interest/bsse/cevo/tamingthebeast/Taming_the_BEAST_flyer_small.jpg">Flyer</a></li>
 		                    
 		                </ul>
@@ -600,41 +578,25 @@
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

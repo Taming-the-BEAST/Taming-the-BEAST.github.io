@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,52 +27,41 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li class="active">
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
@@ -125,89 +99,91 @@
 		<div class="col-md-10">	
 			
 			<div class="post">
-				<h2>Step 1: Clone the repository</h2>
+				<h2 id="step-1-clone-the-repository">Step 1: Clone the repository</h2>
 
-<p>To build the website locally, first clone the repository: </p>
+<p>To build the website locally, first clone the repository:</p>
 
 <blockquote>
-<ul>
-<li>Open terminal </li>
-<li>Type: <code>git clone https://github.com/Taming-the-BEAST/blotter.git</code></li>
-</ul>
+  <ul>
+    <li>Open terminal</li>
+    <li>Type: <code class="language-plaintext highlighter-rouge">git clone https://github.com/Taming-the-BEAST/blotter.git</code></li>
+  </ul>
 </blockquote>
 
-<h2>Step 2: Install dependencies</h2>
+<h2 id="step-2-install-dependencies">Step 2: Install dependencies</h2>
 
-<p>The website is built with <a href="http://www.jekyllrb.com">Jekyll</a>, a popular static site generator. In addition, a Ruby script is used to update the site&#39;s tutorials.
+<p>The website is built with <a href="http://www.jekyllrb.com">Jekyll</a>, a popular static site generator. In addition, a Ruby script is used to update the site’s tutorials.
 We recommend using Bundler to install and run Jekyll. Bundler manages Ruby gem dependencies, reduces Jekyll build errors, and prevents environment-related bugs.</p>
 
 <p>Check if you have an up-to-date version of Ruby installed:</p>
 
 <blockquote>
-<ul>
-<li>Open terminal</li>
-<li>Type: <code>ruby --version</code></li>
-</ul>
+  <ul>
+    <li>Open terminal</li>
+    <li>Type: <code class="language-plaintext highlighter-rouge">ruby --version</code></li>
+  </ul>
 </blockquote>
 
-<p>If you don&#39;t have Ruby 2.0.0 or higher installed go <a href="https://www.ruby-lang.org/en/downloads/">here</a> to install Ruby.</p>
+<p>If you don’t have Ruby 2.0.0 or higher installed go <a href="https://www.ruby-lang.org/en/downloads/">here</a> to install Ruby.</p>
 
 <blockquote>
-<ul>
-<li>Install Bundler: <code>gem install bundler</code></li>
-</ul>
+  <ul>
+    <li>Install Bundler: <code class="language-plaintext highlighter-rouge">gem install bundler</code></li>
+  </ul>
 </blockquote>
 
-<p>Now you can install the necessary Ruby dependencies: </p>
+<p>Now you can install the necessary Ruby dependencies:</p>
 
 <blockquote>
-<ul>
-<li>Navigate to the <code>blotter</code> directory.</li>
-<li>Type: <code>bundle install</code></li>
-</ul>
+  <ul>
+    <li>Navigate to the <code class="language-plaintext highlighter-rouge">blotter</code> directory.</li>
+    <li>Type: <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+  </ul>
 </blockquote>
 
-<p>You may need admin rights to perform the last step. If you run into difficulties remove the file <code>Gemfile.lock</code> and try again.</p>
+<p>You may need admin rights to perform the last step. If you run into difficulties remove the file <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> and try again.</p>
 
-<h2>Step 3: Build the site</h2>
+<h2 id="step-3-build-the-site">Step 3: Build the site</h2>
 
 <p>You can build the website by typing:</p>
 
 <blockquote>
-<ul>
-<li><code>bundle exec jekyll build</code></li>
-</ul>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code></li>
+  </ul>
 </blockquote>
 
 <p>Alternatively, you can preview the website locally by starting a Jekyll server:</p>
 
 <blockquote>
-<ul>
-<li>Type: <code>bundle exec jekyll serve</code></li>
-<li>In your browser navigate to <code>http://localhost:4000</code></li>
-</ul>
+  <ul>
+    <li>Type: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+    <li>In your browser navigate to <code class="language-plaintext highlighter-rouge">http://localhost:4000</code></li>
+  </ul>
 </blockquote>
 
 <p>To include the tutorials in the website you have to run a Ruby script that will clone all the tutorials locally:</p>
 
 <blockquote>
-<ul>
-<li>Navigate to the <code>blotter</code> directory</li>
-<li>Type: <code>ruby _scripts/update-and-preprocess.rb</code></li>
-<li>Recompile the website</li>
-</ul>
+  <ul>
+    <li>Navigate to the <code class="language-plaintext highlighter-rouge">blotter</code> directory</li>
+    <li>Type: <code class="language-plaintext highlighter-rouge">ruby _scripts/update-and-preprocess.rb</code></li>
+    <li>Recompile the website</li>
+  </ul>
 </blockquote>
 
-<p>Note that this script uses <code>octokit</code> to request metadata from GitHub. Since unauthorized requests are rate-limited you should probably generate a personal GitHub access token and use that to authorize your requests. The token itself can be generated from your GitHub profile page, under <code>Developer settings</code>. Copy the token and add it to your environment as follows, </p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span>&lt;token&gt;
-</code></pre></div>
+<p>Note that this script uses <code class="language-plaintext highlighter-rouge">octokit</code> to request metadata from GitHub. Since unauthorized requests are rate-limited you should probably generate a personal GitHub access token and use that to authorize your requests. The token itself can be generated from your GitHub profile page, under <code class="language-plaintext highlighter-rouge">Developer settings</code>. Copy the token and add it to your environment as follows,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">GITHUB_TOKEN</span><span class="o">=</span>&lt;token&gt;
+</code></pre></div></div>
+
 <p>Since you do not want to generate a new token every time you restart your environment you will probably want to save the token in a secure location. (do <strong>NOT</strong> add the token to any of your GitHub repositories!)</p>
 
-<h2>Useful links</h2>
+<h2 id="useful-links">Useful links</h2>
 
 <ul>
-<li><a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/</a></li>
-<li><a href="https://github.com/blab/blotter:">https://github.com/blab/blotter:</a> The website this site is based on</li>
+  <li>https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/</li>
+  <li>https://github.com/blab/blotter: The website this site is based on</li>
 </ul>
 
 			</div>	
@@ -226,41 +202,25 @@ We recommend using Bundler to install and run Jekyll. Bundler manages Ruby gem d
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

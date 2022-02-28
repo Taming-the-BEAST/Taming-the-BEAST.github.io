@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2020)
+This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: MSBD-tutorial.aux
 The style file: biblatex.bst
@@ -19,13 +19,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: MSBD-tutorial-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.13
+Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 5 entries,
-            6365 wiz_defined-function locations,
-            1336 strings with 13207 characters,
-and the built_in function-call counts, 49601 in all, are:
+            6393 wiz_defined-function locations,
+            1344 strings with 13277 characters,
+and the built_in function-call counts, 49562 in all, are:
 = -- 3922
 > -- 815
 < -- 231
@@ -39,9 +39,9 @@ change.case$ -- 104
 chr.to.int$ -- 52
 cite$ -- 8
 duplicate$ -- 4396
-empty$ -- 4199
+empty$ -- 4203
 format.name$ -- 451
-if$ -- 10120
+if$ -- 10077
 int.to.chr$ -- 0
 int.to.str$ -- 11
 missing$ -- 0

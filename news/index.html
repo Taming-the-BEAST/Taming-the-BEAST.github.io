@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,122 +27,106 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link  active " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li class="active">
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
 	<div class="row">
-	<div class="col-md-12">
-		<div class="centered-pills">
-			<ul class="nav nav-pills note">
-				<li role="presentation" class="active">
-					<a class="off" href="/news/">
-						<i class="fa fa-refresh fa-fw"></i> Timeline
-					</a>
-				</li>
-				<li role="presentation">
-					<a class="off" href="/news/archive/">
-						<i class="fa fa-list-ul fa-fw"></i> Index
-					</a>
-				</li>
-				<li role="presentation">
-					<a class="off" href="/news/archive/">
-						<a class="off" type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i> Subscribe</a>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="bigspacer"></div>
-	</div>
+  <div class="col-md-12">
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="/news/">
+          <i class="bi bi-arrow-repeat"></i> Timeline </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/news/archive/">
+          <i class="bi bi-list-ul"></i> Index </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i> Subscribe </a>
+      </li>
+    </ul>
+  </div>
 </div>
+
+<div class="bigspacer"></div>
 
 <div class="post-list">
 
 
 
-	
+    
 
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/Online-wrap-up/" class="off">Taming the BEAST Online 2021 wrap up</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							16 Jun 2021
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Online-wrap-up/" class="off">Taming the BEAST Online 2021 wrap up</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  16 Jun 2021
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
 
-		<div class="bigspacer"></div>
+      <div class="bigspacer"></div>
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<figure>
-    <img src="/images/workshops/Taming-the-BEAST-Online.png" alt="">
-    <figcaption>Teachers and participants of Taming the BEAST 2021 Online.</figcaption>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <figure>
+	<img src="/images/workshops/Taming-the-BEAST-Online.png" alt="" />
+	<figcaption>Teachers and participants of Taming the BEAST 2021 Online.</figcaption>
 </figure>
-
-<p><br></p>
+<p><br /></p>
 
 <p>The first fully-online Taming the BEAST workshop was held last week!
 An enormous <b>thank you</b> to each and every one of the speakers,
@@ -165,98 +134,98 @@ tutors and participants for your efforts in overcomming the special
 challenges of the online format.  This was a very unique, enjoyable
 and productive event!</p>
 
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
 
-	</div>
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
 
 
+    </div>
 
-	
 
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/Online-programme/" class="off">TTB Online programme</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							3 May 2021
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
 
-		<div class="bigspacer"></div>
+    
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<p>The preliminary programme for Taming the BEAST Online is now
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Online-programme/" class="off">TTB Online programme</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  3 May 2021
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>The preliminary programme for Taming the BEAST Online is now
 available on the <a href="/workshops/Taming-the-BEAST-Online/">TTB Online workshop page</a>.</p>
 
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
 
-	</div>
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
 
 
+    </div>
 
-	
 
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/TTB-Online-Fee-Exemptions/" class="off">Fee exemptions for TTB Online</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							10 Mar 2021
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
 
-		<div class="bigspacer"></div>
+    
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<p>Our mission has always been to provide BEAST 2 educational resources
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/TTB-Online-Fee-Exemptions/" class="off">Fee exemptions for TTB Online</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  10 Mar 2021
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>Our mission has always been to provide BEAST 2 educational resources
 to as many people as possible.  We are therefore happy to announce
 that we will be able to wave the 150 CHF registration fee for Taming
 the BEAST Online for a strictly limited number of applicants, on an as-needed
@@ -267,340 +236,1444 @@ the Taming the BEAST Online
 <a href="https://bsse.ethz.ch/cevo/taming-the-beast/overview-2021/registration.html">
 registration page</a>.</p>
 
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
 
-	</div>
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
 
 
+    </div>
 
-	
 
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/Taming-the-BEAST-Online/" class="off">Taming the BEAST Online!</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							1 Mar 2021
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
 
-		<div class="bigspacer"></div>
+    
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<p>We are very excited to announce the latest Taming the BEAST workshop!</p>
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-Online/" class="off">Taming the BEAST Online!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  1 Mar 2021
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
 
-<p>This workshop will take place <strong>online</strong> from <strong>June 07 through to to June 11, 2021</strong> and is being organized by members of Tanja Stadler&#39;s Computational Evolution Group, <a href="https://www.bsse.ethz.ch/cevo">cEvo</a>.</p>
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>We are very excited to announce the latest Taming the BEAST workshop!</p>
+
+<p>This workshop will take place <strong>online</strong> from <strong>June 07 through to to June 11, 2021</strong> and is being organized by members of Tanja Stadler’s Computational Evolution Group, <a href="https://www.bsse.ethz.ch/cevo">cEvo</a>.</p>
 
 <p>For further information, including registration fees and information on how to apply, visit the <a href="https://bsse.ethz.ch/cevo/taming-the-beast/overview-2021.html">cEvo Taming the BEAST Online homepage</a>.</p>
 
 <figure>
-    <img src="/images/workshops/Taming-the-BEAST-Online-Flyer.jpg" alt="Flyer">
+	<img src="/images/workshops/Taming-the-BEAST-Online-Flyer.jpg" alt="Flyer" />
 </figure>
 
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
 
-	</div>
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
 
 
+    </div>
 
-	
 
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/Taming-the-BEAST-2020-cancelled/" class="off">TTB 2020 Cancelled</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							30 Jun 2020
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
 
-		<div class="bigspacer"></div>
+    
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<p>Due to the ongoing COVID-19 pandemic, we are now officially cancelling
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-2020-cancelled/" class="off">TTB 2020 Cancelled</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  30 Jun 2020
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>Due to the ongoing COVID-19 pandemic, we are now officially cancelling
 the 2020 Taming the BEAST workshop.  We again thank everyone for their
 interest in the workshop, and will announce plans for the next
 workshop in 2021 as they become available.</p>
 
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
 
-	</div>
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
 
 
+    </div>
 
-	
 
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/Taming-the-BEAST-2020-postponed/" class="off">TTB 2020 Postponed</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							13 Mar 2020
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
 
-		<div class="bigspacer"></div>
+    
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<p>Due to the CoViD-19 pandemic, it has been necessary to postpone the
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-2020-postponed/" class="off">TTB 2020 Postponed</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  13 Mar 2020
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>Due to the CoViD-19 pandemic, it has been necessary to postpone the
 Taming the BEAST 2020 workshop.  The organizers would like to thank
 everyone for the widespread interest in this workshop, and will
 announce a revised schedule for the workshop as soon as possible.</p>
 
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
 
-	</div>
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
 
 
-
-	
-
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/Taming-the-BEAST-2020-programme/" class="off">TTB 2020 Switzerland draft programme available!</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							26 Feb 2020
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
-
-		<div class="bigspacer"></div>
-
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<p>The preliminary programme for the next Taming the BEAST workshop in Oberägeri, Switzerland is now available on the <a href="/workshops/Taming-the-BEAST-2020">TTB 2020 workshop page</a>.</p>
-
-<p><strong>Reminder:</strong> Registration closes on March 1, so if you haven&#39;t registered already you&#39;ll need to get in quickly!  Registration is via <a href="https://bsse.ethz.ch/cevo/taming-the-beast/overview-2020/registration.html">this web page</a>.  (Registration does not require payment, you will only be invoiced when your application is approved.)</p>
-
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
-
-	</div>
+    </div>
 
 
 
-	
+    
 
-	<div class="blog-post">
-		<div class="row">
-			<div class="col-md-2"></div>	
-			<div class="col-md-8">
-				<div class="media">
-					<div class="media-body">
-						<div class="title media-heading">
-							<a href="/news/Taming-the-BEAST-2020-reg-open/" class="off">Registration Open for Taming the BEAST in Switzerland, 2020!</a>
-						</div>
-						<p>
-						<div class="smallhead">
-							2 Dec 2019
-							
-							by <a class="off" href="/team/tim-vaughan/">Tim</a>
-									
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-1"></div>					
-		</div>
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-2020-programme/" class="off">TTB 2020 Switzerland draft programme available!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  26 Feb 2020
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
 
-		<div class="bigspacer"></div>
+      <div class="bigspacer"></div>
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">	
-				
-				<div class="post">
-					<p>We are very happy to announce that registration for the next Taming
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>The preliminary programme for the next Taming the BEAST workshop in Oberägeri, Switzerland is now available on the <a href="/workshops/Taming-the-BEAST-2020">TTB 2020 workshop page</a>.</p>
+
+<p><strong>Reminder:</strong> Registration closes on March 1, so if you haven’t registered already you’ll need to get in quickly!  Registration is via <a href="https://bsse.ethz.ch/cevo/taming-the-beast/overview-2020/registration.html">this web page</a>.  (Registration does not require payment, you will only be invoiced when your application is approved.)</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-2020-reg-open/" class="off">Registration Open for Taming the BEAST in Switzerland, 2020!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  2 Dec 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>We are very happy to announce that registration for the next Taming
 the BEAST workshop, to be held in Oberägeri, Switzerland, is
 <a href="https://bsse.ethz.ch/cevo/taming-the-beast/overview-2020/registration.html">now open</a>!</p>
 
 <p>The workshop will take place from <strong>May 31 through to June 5, 2020,</strong> 
-and is once again being organized by members of Tanja Stadler&#39;s
+and is once again being organized by members of Tanja Stadler’s
 Computational Evolution Group, <a href="https://www.bsse.ethz.ch/cevo">cEvo</a>.</p>
 
 <p>For further information visit the <a href="https://www.bsse.ethz.ch/cevo/taming-the-beast/overview-2020.html">cEvo Taming the BEAST 2020 homepage</a>.</p>
 
 <figure>
-    <img src="/images/workshops/Taming-the-BEAST-2020-Flyer.jpg" alt="TTB Flyer with background showing beautiful Oberaegeri and giving the link to the registration site.">
+	<img src="/images/workshops/Taming-the-BEAST-2020-Flyer.jpg" alt="TTB Flyer with background showing beautiful Oberaegeri and giving the link to the registration site." />
 </figure>
+<p><br /></p>
 
-<p><br></p>
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
 
-				</div>	
-			</div>			
-			<div class="col-md-1"></div>
-		</div>
-	
-		<div class="bigspacer"></div>
-		<div class="spacer"></div>	
-	
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
 
-	</div>
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-2020/" class="off">Taming the BEAST in Switzerland 2020!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  22 Nov 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>We are excited to announce that the next installment of Taming the BEAST
+will once more be in Switzerland!</p>
+
+<p>The workshop will take place from <strong>May 31 through to June 5, 2020,</strong> 
+and is once again being organized by members of Tanja Stadler’s
+Computational Evolution Group, <a href="https://www.bsse.ethz.ch/cevo">cEvo</a>.</p>
+
+<p>Registration will open shortly.</p>
+
+<p>For further information visit the <a href="https://www.bsse.ethz.ch/cevo/taming-the-beast/">cEvo Taming the BEAST homepage</a>.</p>
+
+<p>Check back often for updates!</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Squamish-wrap-up-Eh/" class="off">Squamish wrap up eh!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  22 Aug 2019
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <figure>
+	<img src="/images/workshops/Taming-the-BEAST-Eh-GroupPhoto.jpg" alt="Group Photo" />
+	<figcaption>The workshop organisers and participants of Taming the
+    BEAST Eh at Quest University in Squamish, British Columbia.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The sixth Taming the BEAST workshop was held last week at Quest University in Squamish, British Columbia. Thanks to all of the invited speakers, instructors and participants for making it a very enjoyable experience! I hope all of the participants enjoyed it as much as we did! A huge thank you also to Francois Cholette and Jeffrey Joy for organising a fantastic workshop in a stunning location!</p>
+
+<p>The lecture slides and tutorials used during the workshop are available online from the
+links displayed on the <a href="/workshops/Taming-the-BEAST-Squamish/">workshop programme</a>.</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/TTB-Canada-Programme/" class="off">Programme for Taming the BEAST Eh!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  10 Jul 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>The programme for the next Taming the BEAST workshop in Squamish, BC is
+now available on the <a href="/workshops/Taming-the-BEAST-Squamish/">TTB Eh! workshop page</a>.</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/TTB-Canada-Website/" class="off">Taming the BEAST Canada webpage launched!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  20 Mar 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>The official webpage for the upcoming Taming the BEAST workshop in Squamish this
+year is <a href="https://ttbcanada.ca/">now live</a>!  You can also access this link directly
+from the <a href="/workshops">workshops page</a>.</p>
+
+<p><br /></p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-Down-Under-wrap-up/" class="off">TTB Down Under wrap up</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  23 Feb 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <figure>
+	<img src="/images/workshops/Taming-the-BEAST-Down-Under-GroupPhoto.jpg" alt="Group Photo" />
+	<figcaption>The workshop organisers and participants in the Charles Perkins Centre at the University of Sydney.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The fifth Taming the BEAST workshop was held last week at the University of Sydney, Australia.
+An enormous thank you goes to all of the speakers and participants for making this once again
+such an enjoyable and productive event!</p>
+
+<p>All of the lecture slides and tutorials used during the workshop are available online from the
+links displayed on the <a href="/workshops/Taming-the-BEAST-Down-Under/">workshop programme</a>.</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/TTB-Canada/" class="off">Taming the BEAST in Canada!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  17 Feb 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>We are excited to announce that the first North American Taming the BEAST workshop
+will be held in Squamish, BC, Canada!</p>
+
+<p>The workshop will take place from 12-16 August this year and is being hosted
+by BC Centre for Excellence in HIV/AIDS and the JC Wilt Infectious Diseases Research
+Centre.</p>
+
+<p>Check back often for updates!</p>
+
+<figure>
+	<img src="/images/workshops/Taming-the-BEAST-Squamish-Flyer.jpg" alt="" />
+</figure>
+<p><br /></p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/TTBDU_Programme_Final/" class="off">Final Programme for TTB Down Under</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  15 Feb 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>The final programme for Taming the BEAST Down Under is now
+available on the <a href="/workshops/Taming-the-BEAST-Down-Under/">TTB Down Under workshop page</a>.</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-Down-Under-programme/" class="off">Preliminary Programme for TTB Down Under</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  14 Jan 2019
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>A preliminary programme for Taming the BEAST Down Under is now
+available on the <a href="/workshops/Taming-the-BEAST-Down-Under/">TTB Down Under workshop page</a>.</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-Down-Under/" class="off">Taming the BEAST Down Under!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  6 Sep 2018
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>We are delighted to announce that the next Taming the BEAST workshop
+will be in Sydney, Australia!</p>
+
+<p>The workshop will take place from <strong>17-22 February</strong> next year, and is being organized
+by the
+<a href="https://sydney.edu.au/science/biology/meep/index.shtml">Molecular Ecology, Evolution and Phylogenetics</a>
+lab at the University of Sydney.</p>
+
+<p>For further information visit
+<a href="https://sydney.edu.au/science/biology/meep/workshops/">this page</a>
+or refer to the flyer below.</p>
+
+<p>Check back often for updates!</p>
+
+<figure>
+	<img src="/images/workshops/Taming-the-BEAST-Down-Under-Flyer.jpg" alt="Flyer" />
+</figure>
+<p><br /></p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Oberaegeri-wrap-up/" class="off">TTB Oberägeri wrap up</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  24 Jun 2018
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <figure>
+	<img src="/images/workshops/Taming-the-BEAST-Oberageri_GroupPhoto.jpg" alt="" />
+	<figcaption>The workshop organisers and participants of Taming the
+    BEAST 2018 in Oberägeri, Switzerland.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The fourth Taming the BEAST workshop was held last week in Oberägeri,
+Switzerland.  An enormous thank you goes to all of the speakers and
+participants for making this such an enjoyable and productive event!</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Oberaegeri-programme/" class="off">Oberägeri programme</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  8 May 2018
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>A preliminary programme for Taming the BEAST in Oberägeri is now
+available on the <a href="/workshops/Taming-the-BEAST-2018/">Oberägeri workshop page</a>.</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-returns-to-Switzerland!/" class="off">Taming the BEAST returns to Switzerland!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  8 Feb 2018
+                  
+                    by <a class="off" href="/team/tim-vaughan/">Tim</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>We are excited to announce that the next installment of Taming the BEAST
+will once more be in Switzerland!</p>
+
+<p>The workshop will take place from 17-22 June this year and is being organized
+by members of Tanja Stadler’s Computational Evolution Group,
+<a href="https://www.bsse.ethz.ch/cevo">cEvo</a>.  Registration is <strong><a href="https://www.bsse.ethz.ch/cevo/taming-the-beast/overview-2018/registration.html">now
+open</a></strong>.
+For further information visit the <a href="https://www.bsse.ethz.ch/cevo/taming-the-beast/overview-2018.html">workshop
+homepage</a> or
+refer to the flyer below.</p>
+
+<p>Check back often for updates!</p>
+
+<figure>
+	<img src="/images/workshops/Taming-the-BEAST-Oberageri-Flyer.jpg" alt="" />
+</figure>
+<p><br /></p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/London-wrap-up/" class="off">London wrap up</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  4 Aug 2017
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <figure>
+	<img src="/images/workshops/Taming-the-BEAST-London.jpg" alt="" />
+	<figcaption>The workshop organisers and participants outside of the London School of Hygiene and Tropical Medicine.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The third edition of Taming the BEAST took place last week at the London School of Hygiene and Tropical Medicine. I had a lot of fun at the workshop in London and also learned a lot. Thanks to a great bunch of participants who came out to learn about BEAST2 with us, I hope you enjoyed the workshop!</p>
+
+<p>A lot of thanks goes to Stéphane Hué for organising and hosting the workshop at the London School of Hygiene and Tropical Medicine. Thanks also to Stéphane Hué, Sebastian Funk and Tanja Stadler for contributing to the cost of the workshop. Many thanks for the great talks from the invited speakers: Oliver Pybus, Alexei Drummond, Tim Vaughan, Huw Ogilvie, Tanja Stadler, Erik Volz, Nuno Faria and Nicola de Maio. All of their slides, as well as the lecture slides are available <a href="https://github.com/Taming-the-BEAST/Taming-the-BEAST-2017-London-Lectures">online</a>. Thanks also to Remco Bouckaert and Walter Xie for their support all the way from New Zealand.</p>
+
+<p>This was the first time the workshop was organised by a group not directly involved in developing BEAST2 packages. I think it went really well and I’m looking forward to the next edition! It was also the first time we ran the BEAST clinic - two 2-hour sessions specifically designed for participants to come to us with their own datasets and problems. I really enjoyed learning about what everyone is doing in BEAST2 and trying to help them improve analyses and get their runs mixing. Unfortunately the workshop was too short to get to everyone and solve all of the problems. I hope everyone got some pointers and got at least their most urgent issues resolved!</p>
+
+<p>Before the workshop we also made a few tweaks to the website, added two new tutorials and updated several of the older tutorials:</p>
+
+<ul>
+  <li><a href="/tutorials/Mascot-Tutorial/">MASCOT Tutorial</a>: <strong>NEW</strong> Use an approximation to the structured coalescent to quickly infer unbiased estimates of the migration rates between regions for bigger datasets than is possible with the full structured coalescent.</li>
+  <li><a href="/tutorials/SCOTTI-Tutorial/">SCOTTI Tutorial</a>: <strong>NEW</strong> Reconstruct transmission trees using within-host data with an approximate structured coalescent.</li>
+  <li><a href="/tutorials/Prior-selection/">Prior selection</a>: <strong>UPDATED</strong></li>
+  <li><a href="/tutorials/Substitution-model-averaging/">Substitution model averaging</a>: <strong>UPDATED</strong></li>
+  <li><a href="/tutorials/Structured-birth-death-model/">Structured birth-death model</a>: <strong>UPDATED</strong></li>
+</ul>
+
+<p>Finally, it is now also possible to read the news feed and see tutorial updates by subscribing to the RSS feeds.</p>
+
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-in-Systematic-Biology!/" class="off">Taming the BEAST in Systematic Biology!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  12 Jul 2017
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>Our paper is now available in <a href="https://doi.org/10.1093/sysbio/syx060">Systematic Biology</a>!</p>
+
+<figure>
+	<img src="/images/website_structure.png" alt="" />
+</figure>
+<p><br /></p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/London-programme/" class="off">London programme</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  5 May 2017
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>A preliminary programme for Taming the BEAST in London is now available on the <a href="/workshops/Taming-the-BEAST-in-London/">workshops</a> page.</p>
+
+<p>Just a reminder that <a href="http://www.lshtm.ac.uk/newsevents/events/2017/07/taming-the-beast-2017">registration</a> is still open until 26 June and that the workshop costs only £245!</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Taming-the-BEAST-comes-to-London!/" class="off">Taming the BEAST comes to London!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  3 Apr 2017
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>We are happy to announce that the next installment of Taming the BEAST will be in London, where it will be hosted by the London School of Hygiene &amp; Tropical Medicine! Thanks to Stephane Hue for organising!</p>
+
+<p>The workshop will take place from 24-28 July this year and will cost £245. Unlike previous workshops the fee does <strong>NOT</strong> include accommodation. It’s the first time we are holding a workshop in a big city and it proved just too complicated to book a venue with accommodation, so we ask that participants arrange their own accommodation.</p>
+
+<p>For more information visit the workshop’s <a href="http://www.lshtm.ac.uk/newsevents/events/2017/07/taming-the-beast-2017">homepage</a>.</p>
+
+<p><a href="https://www.eventbrite.co.uk/e/taming-the-beast-2017-workshop-on-bayesian-phylogenetic-and-phylodynamics-analyses-registration-33205687104">Registration</a> will be open until 26 June.</p>
+
+<p>A preliminary programme will be posted on the <a href="/workshops/Taming-the-BEAST-in-London/">workshops</a> page soon.</p>
+
+<figure>
+	<img src="/images/workshops/Taming-the-BEAST-in-London-Flyer.jpg" alt="" />
+</figure>
+<p><br /></p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Waiheke-and-what-comes-next/" class="off">Waiheke and what comes next</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  28 Feb 2017
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <figure>
+	<img src="/images/workshops/Taming-the-BEAST-Waiheke1.jpg" alt="" />
+	<figcaption>The workshop organisers and participants on the beach outside the workshop venue.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>It has already been more than two weeks since the second Taming the BEAST workshop took place on Waiheke island in New Zealand. 
+Thanks to the <a href="https://www.compevol.auckland.ac.nz/en.html">group</a> from the University of Auckland for putting up an amazing workshop in a stunning location! 
+Thanks also to all the speakers for agreeing to take part and making the long journey to New Zealand!</p>
+
+<p>The workshop was the first test of the website as a workshop tool. Although there were a few issues and misunderstandings, the website seems to be working. 
+I’ll be going over the feedback from the workshop in the next month and integrating any suggestions to the website.
+We also identified some issues with a few of the tutorials during the workshop and I’ll also be updating them soon as well. 
+If there are any further issues, please raise them on the Github repository of the tutorial in question. 
+Finally, all of the lecture slides from the workshop have been uploaded and are available from the <a href="/workshops/">workshops</a> page.</p>
+
+<p>We are currently discussing and planning the next workshop in the series and it will be posted here as soon as the dates have been finalised!</p>
+
+<figure>
+	<img src="/images/workshops/Taming-the-BEAST-Waiheke2.jpg" alt="" />
+	<figcaption>At the Goldie estate vineyard where we had the workshop dinner.</figcaption>
+</figure>
+<p><br /></p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Welcome-to-Waiheke!/" class="off">Welcome to Waiheke!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  5 Feb 2017
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>The next Taming the BEAST workshop is officially about to start, on the beautiful Waiheke island, in the Hauruki Gulf of New Zealand! This time the workshop was organised by Alexei Drummond’s <a href="https://www.compevol.auckland.ac.nz/en.html">group</a> at the University of Auckland. 
+The workshop program can be found <a href="/workshops/Taming-the-BEAST-in-the-South-Pacific/">here</a>.</p>
+
+<p>To prepare for the workshop we also uploaded 5 (five!) new tutorials and updated several of the older tutorials. The new tutorials are:</p>
+
+<ul>
+  <li><a href="/tutorials/FBD-tutorial/">Divergence Time Estimation using BEAST v2.x</a></li>
+  <li><a href="/tutorials/Bacter-Tutorial/">Bacter Tutorial</a></li>
+  <li><a href="/tutorials/species-tree-clocks/">Species Trees with Relaxed Molecular Clocks</a></li>
+  <li><a href="/tutorials/calibrated-species-trees/">Calibrated Species Trees</a></li>
+  <li><a href="/tutorials/adequacy_tutorial/">Model adequacy using BEAST2</a></li>
+</ul>
+
+<p>Thanks to Tim Vaughan, Walter Xie, Remco Bouckaert, Huw Ogilvie, David Duchêne and Simon Ho for their help preparing and checking tutorials!</p>
+
+<p>I would also like to congratulate Tanja Stadler and her <a href="https://www.bsse.ethz.ch/cevo">group</a> for successfully writing a grant to host another Taming the BEAST workshop and to support 3 more workshops in the future! Keep checking the <a href="/workshops/">workshops</a> page for updates on future workshops!</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Engelberg-lecture-slides/" class="off">Engelberg lecture slides</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  19 Dec 2016
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>All of the lecture slides from the workshop held in Engelberg are now available for download. The slides are kept in a GitHub repository, and there is a link to the repository on the <a href="/workshops/">workshops</a> page. Thanks to everyone for making their slides available! Please do not forget to attribute the authors if you use the slides anywhere!</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
+
+
+
+    
+
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-2"></div>	
+        <div class="col-md-8">
+          <div class="media">
+            <div class="media-body">
+              <div class="title media-heading">
+                <a href="/news/Welcome-BEAST-tamers!/" class="off">Welcome BEAST tamers!</a>
+              </div>
+              <p>
+                <div class="smallhead">
+                  4 Nov 2016
+                  
+                    by <a class="off" href="/team/louis-du-plessis/">Louis</a>
+                  		
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>					
+      </div>
+
+      <div class="bigspacer"></div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">	
+          
+          <div class="post">
+            <p>In June this year we organised the first Taming the BEAST workshop, surrounded by the Swiss Alps, in Engelberg, Switzerland. 
+The idea of holding a BEAST 2 workshop has been brewing for a while, motivated by the need for a Bayesian phylogenetics workshop that is focused on BEAST 2 and facilitates exchanges between developers and (both current and future) BEAST 2 users.
+During the workshop we realised that the materials we created and assembled for the workshop represent a very useful resource and that we could reach many more users by making them available to the community.</p>
+
+<figure>
+	<img src="/images/workshops/Taming-the-BEAST-Engelberg.JPG" alt="" />
+	<figcaption>The 2016 workshop organisers and participants.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Originally we intended to simply release the tutorials and lecture slides in a single GitHub repository. However, after some discussions, we decided to build a Taming the BEAST website. The website provides a user-friendly front-end that collects tutorials, lecture slides and more in one location. 
+To start, we have collected all of the <a href="/tutorials">tutorials</a> from this year’s workshop on the website (a couple are still missing, but they will be uploaded soon). Behind the scenes each tutorial lives in its own GitHub repository, where it’s bundled along with all of the supporting data files and scripts needed to run the tutorial. We’ve also bundled example XML and output files with each tutorial. Although everything is available on a GitHub repository, there are also links to all of the files on the website.</p>
+
+<p>All tutorials are available as PDF files from the website. We have started converting some of the tutorials to Markdown, which can be more easily displayed in a web browser. So far, three tutorials have been converted:</p>
+
+<ul>
+  <li><a href="/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a></li>
+  <li><a href="/tutorials/Skyline-plots/">Skyline plots</a></li>
+  <li><a href="/tutorials/Structured-birth-death-model/">Structured birth-death model</a></li>
+</ul>
+
+<p>We hope that with time we will be able to convert all tutorials to Markdown.
+Don’t worry if you want to print or download tutorials - PDFs of tutorials will always be available! (At present there is no PDF tutorial for the <a href="/tutorials/Structured-birth-death-model/">Structured birth-death model</a>, but this will be uploaded shortly).</p>
+
+<p>Since tutorials are stored on GitHub, it is easy for anyone in the community to contribute to Taming the BEAST. 
+Because each tutorial is stored in its own repository the website is robust to changes in any single repository.
+We hope that the community will play an active role in curating the tutorials, either by updating or correcting existing tutorials, or by contributing new tutorials. 
+For instance, someone who has developed a new BEAST 2 package can add a tutorial for the package to Taming the BEAST, where it will be accessible in a central location, along with other BEAST 2 tutorials, making it easier for BEAST 2 users to become familiar with the package.</p>
+
+<p>We hope that the website will serve as a central repository that collects BEAST 2 teaching resources in one central location. 
+The resources on the website are not only useful for individuals who want to learn how to use BEAST2, but also as a teaching aid, for workshops or even regular university courses.</p>
+
+          </div>	
+        </div>			
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="bigspacer"></div>
+      <div class="spacer"></div>	
+
+
+    </div>
 
 
 
 </div>
-
-<div class="infinite-spinner"></div>
 
 <div class="row">
-	<div class="col-md-12">
-		<div id="scroll" class="centered-pills">
-			<ul class="nav nav-pills note">
-				<li role="presentation">
-					<a class="off" href="/news/">
-						<i class="fa fa-chevron-up fa-fw"></i> Back to top
-					</a>
-				</li>				
-			</ul>
-		</div>
-	</div>
+  <div class="col-md-12">
+    <div id="scroll" class="centered-pills">
+      <ul class="nav nav-pills note">
+        <li role="presentation">
+          <a class="off" href="/news/">
+            <i class="bi bi-arrow-up-square"></i> Back to top
+          </a>
+        </li>				
+      </ul>
+    </div>
+  </div>
 </div>
 
-<!-- Infinite scroll -->	
-<script async src="/js/infinite-scroll.js"></script>
 	
 	</div>
 
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

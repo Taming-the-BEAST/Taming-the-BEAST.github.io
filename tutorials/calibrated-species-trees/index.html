@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,24 +118,24 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="/tutorials/calibrated-species-trees/calibrated-species-trees.pdf">calibrated-species-trees.pdf</a>	
 				</li>
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/genomescale/calibrated-species-trees" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/genomescale/calibrated-species-trees/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -181,7 +152,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/data/47.nex" target="_blank" rel="nofollow">
 						47.nex
 					</a>
@@ -190,7 +161,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/data/53.nex" target="_blank" rel="nofollow">
 						53.nex
 					</a>
@@ -199,7 +170,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/data/26.nex" target="_blank" rel="nofollow">
 						26.nex
 					</a>
@@ -208,7 +179,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/data/29.nex" target="_blank" rel="nofollow">
 						29.nex
 					</a>
@@ -217,7 +188,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/data/59.nex" target="_blank" rel="nofollow">
 						59.nex
 					</a>
@@ -226,7 +197,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/data/64.nex" target="_blank" rel="nofollow">
 						64.nex
 					</a>
@@ -235,7 +206,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/data/72.nex" target="_blank" rel="nofollow">
 						72.nex
 					</a>
@@ -255,7 +226,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/xml/pocket-gophers-calibrated.xml" target="_blank" download rel="nofollow">
 						pocket-gophers-calibrated.xml
 					</a>
@@ -276,7 +247,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/precooked_runs/species.trees" target="_blank" download rel="nofollow">
 						species.trees
 					</a>
@@ -285,7 +256,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/raw/master/precooked_runs/starbeast.log" target="_blank" download rel="nofollow">
 						starbeast.log
 					</a>
@@ -330,7 +301,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf">
 					03 Feb 2017 - <span class="text-gray">Merge pull request #1 from Taming-the-BEAST/master
 
@@ -340,7 +311,7 @@ Add input data</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/da5a3fb8f2c3b4e4cd5a23fceb961d6003d6ec31">
 					02 Feb 2017 - <span class="text-gray">Add input data</span>
 					</a> 
@@ -348,7 +319,7 @@ Add input data</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/6f2ae2f39e7640c0444041910b1180108b0bd8c2">
 					02 Feb 2017 - <span class="text-gray">Added data</span>
 					</a> 
@@ -356,7 +327,7 @@ Add input data</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/a5a7b20f6fd8f77a535121b2077b73707c8868a8">
 					31 Jan 2017 - <span class="text-gray">Minor</span>
 					</a> 
@@ -364,7 +335,7 @@ Add input data</span>
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/2d89bdc9a25f3b8c8e5c092de210622d52e6756a">
 					31 Jan 2017 - <span class="text-gray">Added markdown intro</span>
 					</a> 
@@ -379,7 +350,7 @@ Add input data</span>
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
 <p>This tutorial walks through through how to set up a calibrated species tree
 analysis in StarBEAST2. It follows on from <strong>Species Trees with Relaxed
@@ -409,41 +380,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

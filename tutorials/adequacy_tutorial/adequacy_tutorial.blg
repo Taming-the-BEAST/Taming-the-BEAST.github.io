@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2020)
+This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: adequacy_tutorial.aux
 The style file: biblatex.bst
@@ -19,13 +19,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: adequacy_tutorial-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.13
+Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 4 entries,
-            6365 wiz_defined-function locations,
-            1226 strings with 10906 characters,
-and the built_in function-call counts, 20322 in all, are:
+            6393 wiz_defined-function locations,
+            1234 strings with 10976 characters,
+and the built_in function-call counts, 20291 in all, are:
 = -- 1346
 > -- 367
 < -- 82
@@ -39,9 +39,9 @@ change.case$ -- 33
 chr.to.int$ -- 44
 cite$ -- 6
 duplicate$ -- 1798
-empty$ -- 1962
+empty$ -- 1965
 format.name$ -- 186
-if$ -- 4270
+if$ -- 4236
 int.to.chr$ -- 0
 int.to.str$ -- 6
 missing$ -- 0

@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,18 +118,18 @@
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/nicfel/AIM-Tutorial" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/nicfel/AIM-Tutorial/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -175,7 +146,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1452.fa" target="_blank" rel="nofollow">
 						chrX-1452.fa
 					</a>
@@ -184,7 +155,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1536.fa" target="_blank" rel="nofollow">
 						chrX-1536.fa
 					</a>
@@ -193,7 +164,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1724.fa" target="_blank" rel="nofollow">
 						chrX-1724.fa
 					</a>
@@ -202,7 +173,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1664.fa" target="_blank" rel="nofollow">
 						chrX-1664.fa
 					</a>
@@ -211,7 +182,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1098.fa" target="_blank" rel="nofollow">
 						chrX-1098.fa
 					</a>
@@ -220,7 +191,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1798.fa" target="_blank" rel="nofollow">
 						chrX-1798.fa
 					</a>
@@ -229,7 +200,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-100.fa" target="_blank" rel="nofollow">
 						chrX-100.fa
 					</a>
@@ -238,7 +209,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1285.fa" target="_blank" rel="nofollow">
 						chrX-1285.fa
 					</a>
@@ -247,7 +218,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-174.fa" target="_blank" rel="nofollow">
 						chrX-174.fa
 					</a>
@@ -256,7 +227,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1121.fa" target="_blank" rel="nofollow">
 						chrX-1121.fa
 					</a>
@@ -265,7 +236,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1257.fa" target="_blank" rel="nofollow">
 						chrX-1257.fa
 					</a>
@@ -274,7 +245,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1828.fa" target="_blank" rel="nofollow">
 						chrX-1828.fa
 					</a>
@@ -283,7 +254,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1173.fa" target="_blank" rel="nofollow">
 						chrX-1173.fa
 					</a>
@@ -292,7 +263,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-162.fa" target="_blank" rel="nofollow">
 						chrX-162.fa
 					</a>
@@ -301,7 +272,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1036.fa" target="_blank" rel="nofollow">
 						chrX-1036.fa
 					</a>
@@ -310,7 +281,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1047.fa" target="_blank" rel="nofollow">
 						chrX-1047.fa
 					</a>
@@ -319,7 +290,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-159.fa" target="_blank" rel="nofollow">
 						chrX-159.fa
 					</a>
@@ -328,7 +299,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1534.fa" target="_blank" rel="nofollow">
 						chrX-1534.fa
 					</a>
@@ -337,7 +308,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1455.fa" target="_blank" rel="nofollow">
 						chrX-1455.fa
 					</a>
@@ -346,7 +317,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/data/chrX-1079.fa" target="_blank" rel="nofollow">
 						chrX-1079.fa
 					</a>
@@ -366,7 +337,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/xml/anoph.xml" target="_blank" download rel="nofollow">
 						anoph.xml
 					</a>
@@ -386,7 +357,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-cogs fa-fw"></i>
+					<i class="bi bi-gear"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/scripts/plotSpeciesTree.R" target="_blank" download rel="nofollow">
 						plotSpeciesTree.R
 					</a>
@@ -406,7 +377,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1828.trees" target="_blank" download rel="nofollow">
 						chrX-1828.trees
 					</a>
@@ -415,7 +386,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_1_occurances_939.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_1_occ...
 					</a>
@@ -424,7 +395,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-159.trees" target="_blank" download rel="nofollow">
 						chrX-159.trees
 					</a>
@@ -433,7 +404,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1664.trees" target="_blank" download rel="nofollow">
 						chrX-1664.trees
 					</a>
@@ -442,7 +413,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/species.trees" target="_blank" download rel="nofollow">
 						species.trees
 					</a>
@@ -451,7 +422,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-162.trees" target="_blank" download rel="nofollow">
 						chrX-162.trees
 					</a>
@@ -460,7 +431,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_7_occurances_1.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_7_occ...
 					</a>
@@ -469,7 +440,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/aim.log" target="_blank" download rel="nofollow">
 						aim.log
 					</a>
@@ -478,7 +449,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1257.trees" target="_blank" download rel="nofollow">
 						chrX-1257.trees
 					</a>
@@ -487,7 +458,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_2_occurances_911.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_2_occ...
 					</a>
@@ -496,7 +467,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1724.trees" target="_blank" download rel="nofollow">
 						chrX-1724.trees
 					</a>
@@ -505,7 +476,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1036.trees" target="_blank" download rel="nofollow">
 						chrX-1036.trees
 					</a>
@@ -514,7 +485,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_6_occurances_1.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_6_occ...
 					</a>
@@ -523,7 +494,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-100.trees" target="_blank" download rel="nofollow">
 						chrX-100.trees
 					</a>
@@ -532,7 +503,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1173.trees" target="_blank" download rel="nofollow">
 						chrX-1173.trees
 					</a>
@@ -541,7 +512,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1798.trees" target="_blank" download rel="nofollow">
 						chrX-1798.trees
 					</a>
@@ -550,7 +521,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1121.trees" target="_blank" download rel="nofollow">
 						chrX-1121.trees
 					</a>
@@ -559,7 +530,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1455.trees" target="_blank" download rel="nofollow">
 						chrX-1455.trees
 					</a>
@@ -568,7 +539,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1079.trees" target="_blank" download rel="nofollow">
 						chrX-1079.trees
 					</a>
@@ -577,7 +548,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_0_occurances_1724.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_0_occ...
 					</a>
@@ -586,7 +557,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-174.trees" target="_blank" download rel="nofollow">
 						chrX-174.trees
 					</a>
@@ -595,7 +566,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_5_occurances_2.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_5_occ...
 					</a>
@@ -604,7 +575,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1536.trees" target="_blank" download rel="nofollow">
 						chrX-1536.trees
 					</a>
@@ -613,7 +584,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1285.trees" target="_blank" download rel="nofollow">
 						chrX-1285.trees
 					</a>
@@ -622,7 +593,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1534.trees" target="_blank" download rel="nofollow">
 						chrX-1534.trees
 					</a>
@@ -631,7 +602,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_4_occurances_5.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_4_occ...
 					</a>
@@ -640,7 +611,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1047.trees" target="_blank" download rel="nofollow">
 						chrX-1047.trees
 					</a>
@@ -649,7 +620,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees" target="_blank" download rel="nofollow">
 						Anopheles.trees
 					</a>
@@ -658,7 +629,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1098.trees" target="_blank" download rel="nofollow">
 						chrX-1098.trees
 					</a>
@@ -667,7 +638,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.STATE_3_occurances_18.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.STATE_3_occ...
 					</a>
@@ -676,7 +647,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/Anopheles.trees.ranked.log" target="_blank" download rel="nofollow">
 						Anopheles.trees.ranked.log
 					</a>
@@ -685,7 +656,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/raw/master/precooked_runs/chrX-1452.trees" target="_blank" download rel="nofollow">
 						chrX-1452.trees
 					</a>
@@ -730,7 +701,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/f8c88590e02d789143541f4c1b5fcd54e9bcc425">
 					14 Sep 2020 - <span class="text-gray">switch to bf</span>
 					</a> 
@@ -738,7 +709,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/3fc6291002c06912355acaa394f101d2484730e0">
 					14 Sep 2020 - <span class="text-gray">adds final figure</span>
 					</a> 
@@ -746,7 +717,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/4196691dcee13faefab9c3081f4dea99d3d8a9d1">
 					14 Sep 2020 - <span class="text-gray">updates title</span>
 					</a> 
@@ -754,7 +725,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/7c26be07ca46840256e61040014b30ff66170d5f">
 					14 Sep 2020 - <span class="text-gray">updates title</span>
 					</a> 
@@ -762,7 +733,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/c0e5a456aeeecb530559d5ced8d56e4e0bbe6f62">
 					14 Sep 2020 - <span class="text-gray">updates tracer figure</span>
 					</a> 
@@ -777,113 +748,111 @@
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
-<hr>
+<hr />
 
-<h1>Programs used in this Exercise</h1>
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
 
-<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
 <p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
-<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
 <p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>TreeAnnotator</h3>
+<h3 id="treeannotator">TreeAnnotator</h3>
 
 <p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
 
 <p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>Tracer</h3>
+<h3 id="tracer">Tracer</h3>
 
 <p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v.</p>
 
-<h3>FigTree</h3>
+<h3 id="figtree">FigTree</h3>
 
 <p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v.</p>
 
-<h3>R</h3>
+<h3 id="r">R</h3>
 
-<p>We will be using <a href="href%7Bhttps://www.r-project.org">R</a> to analyze and plot the output of the AIM analysis</p>
+<p>We will be using <a href="\href{https://www.r-project.org">R</a> to analyze and plot the output of the AIM analysis</p>
 
-<hr>
+<hr />
 
-<h1>Practical: Inferring species trees and gene flow from multiple loci of 6 anopheles mosquitos using AIM</h1>
+<h1 id="practical-inferring-species-trees-and-gene-flow-from-multiple-loci-of-6-anopheles-mosquitos-using-aim">Practical: Inferring species trees and gene flow from multiple loci of 6 anopheles mosquitos using AIM</h1>
 
-<p><a class="citation" href="#Mueller348391">(Mueller, Ogilvie, Zhang, Drummond, &amp; Stadler, 2018)</a></p>
+<p><a class="citation" href="#Mueller348391">(Mueller et al., 2018)</a></p>
 
 <p>In this tutorial, we wil infer the species history of 6 different anopheles mosquitos species by using AIM, which is short for <em>Approximate Isolation with Migration</em>. AIM is part of the StarBeast2 package. This model can be used when we want to jointly infer the species histories for multiple loci and gene flow between extant and ancestral species.</p>
 
 <p>The aim is to:</p>
 
 <ul>
-<li> Learn how to jointly infer the species tree and gene flow of multiple loci from multiple species</li>
-<li> Get to know how to choose the set-up of such an analysis</li>
-<li> Learn how to process the output of an AIM analysis</li>
+  <li>Learn how to jointly infer the species tree and gene flow of multiple loci from multiple species</li>
+  <li>Get to know how to choose the set-up of such an analysis</li>
+  <li>Learn how to process the output of an AIM analysis</li>
 </ul>
 
-<h2>About the data</h2>
+<h2 id="about-the-data">About the data</h2>
 
 <p>The data was previously used to infer the species history of the anopheles gambie complex in <a class="citation" href="#fontaine2015extensive">(Fontaine et al., 2015)</a>. It is comprised of 20 loci, each of a length of about 1000 bp, from the X chromosome of mosquitos from the anopholes Gambia species complex.</p>
 
-<h2>Setting up an analysis in BEAUti</h2>
+<h2 id="setting-up-an-analysis-in-beauti">Setting up an analysis in BEAUti</h2>
 
-<h3>Download StarBeast2</h3>
-
-<p>First, we have to download the packages StarBeast2 and CoupledMCMC by using the BEAUTi package manager. Go to <em>File &gt;&gt; Manage Packages</em> and download the package and CoupledMCMC StarBeast2.</p>
+<h3 id="download-starbeast2">Download StarBeast2</h3>
+<p>First, we have to download the packages StarBeast2 and CoupledMCMC by using the BEAUTi package manager. Go to <em>File » Manage Packages</em> and download the package and CoupledMCMC StarBeast2.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:50%;" src="figures/StarBeastDownload.png" alt="">
-    <figcaption>Figure 1: Download the StarBeast2 package.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:50%;" src="figures/StarBeastDownload.png" alt="" />
+	<figcaption>Figure 1: Download the StarBeast2 package.</figcaption>
 </figure>
 
-<h3>Loading the template</h3>
+<h3 id="loading-the-template">Loading the template</h3>
 
-<p>Next, we have to load the BEAUTi template from <em>File</em>, select <em>Template &gt;&gt; AIM</em>.</p>
+<p>Next, we have to load the BEAUTi template from <em>File</em>, select <em>Template » AIM</em>.</p>
 
-<h3>Loading the different loci</h3>
+<h3 id="loading-the-different-loci">Loading the different loci</h3>
 
 <p>The sequences for the different loci can be found in the <em>data</em> folder name can be either drag and dropped into BEAUti or imported by <em>Import Alignment</em>.
 It will ask us what type the data is. If we say nucleotide, it will ask us for each loci individually.
 Since all loci are nucleotide data, we can choose <em>all are nucleotide</em>. To speed up the setup later, we can press <em>Link Site Models</em> and <em>Link Clock Models</em></p>
 
-<h3>Get species corresponding to the different individuals (Taxon sets)</h3>
-
+<h3 id="get-species-corresponding-to-the-different-individuals-taxon-sets">Get species corresponding to the different individuals (Taxon sets)</h3>
 <p>Next, we have to go to the Taxon sets tab.
 To assign the different individuals to different species, press the <em>Guess</em> button. Use everything before first and press the <em>OK</em> button.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/TaxonSet.png" alt="">
-    <figcaption>Figure 2: Guess the species of each sampled individual.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/TaxonSet.png" alt="" />
+	<figcaption>Figure 2: Guess the species of each sampled individual.</figcaption>
 </figure>
 
-<h3>Specify the Site Model (Site Model)</h3>
+<h3 id="specify-the-site-model-site-model">Specify the Site Model (Site Model)</h3>
 
-<p>Since we Linked all the site models of the different loci together when loading the sequence data, we only have to set up the site models once. We will be using an HKY + &Gamma; <sub>4</sub> model that allows for different relative rates of transversions and transitions, as well as for rate hetereogeneity across different sites.
+<p>Since we Linked all the site models of the different loci together when loading the sequence data, we only have to set up the site models once. We will be using an HKY + Γ <sub>4</sub> model that allows for different relative rates of transversions and transitions, as well as for rate hetereogeneity across different sites.
 Additionally, we should make sure that the <em>estimate</em> button for the substitution rates is clicked to allow for rate variation across different loci.
 To reduce the number of parameters we have to estimate, we can set frequencies to empirical.
 After, we can go back to the <em>Partitions</em> field and press <em>Unlink Site Models</em>.
 Now each loci will have the same site model, but each with different parameters.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/SiteModel.png" alt="">
-    <figcaption>Figure 3: Set the site model.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/SiteModel.png" alt="" />
+	<figcaption>Figure 3: Set the site model.</figcaption>
 </figure>
 
-<h3>Set the clock model (Clock Model)</h3>
+<h3 id="set-the-clock-model-clock-model">Set the clock model (Clock Model)</h3>
 
 <p>Since we have all sequences sampled at the present and no calibration, we do not have any information of time to estimate the clock rate.
 This means that none of our estimates will be in units of time (e.g. in years), but instead will be in number of substitutions.</p>
 
-<h3>Specify the priors (Priors)</h3>
+<h3 id="specify-the-priors-priors">Specify the priors (Priors)</h3>
 
 <p>The most important priors to specify here are the priors on the number of active routes of gene flow, the rates of gene flow and the effective population sizes.
 An active route of gene flow denotes a route of gene flow between two species that is non zero. The prior on the number of active routes (migIndicatorSum.species) of gene flow is by defaults a Poisson Prior with lambda=0.693.
@@ -897,54 +866,54 @@ If we set the mean of the log Normal distribution to 25, this assumes that we ex
 This is not exactly true, but is an ok approximation for the order of magnitude of how many migration events we expect under this prior.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/MigRatesPrior.png" alt="">
-    <figcaption>Figure 4: Setting up the prior on the migration rates.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/MigRatesPrior.png" alt="" />
+	<figcaption>Figure 4: Setting up the prior on the migration rates.</figcaption>
 </figure>
 
 <p>By default, AIM assumes that the migration rate between two co-existing species can not be larger than the inverse time that they co-existed.
-This can lead to issues when starting a run, where beast doesn&#39;t find a proper state to initialize.
+This can lead to issues when starting a run, where beast doesn’t find a proper state to initialize.
 To avoid this (in this example) we have to set the initial migration rates a bit lower, from 1.0 to 0.1.
-To do so, you can click <code>Initial</code>, next to the migration Rates prior and set the value to 0.1.</p>
+To do so, you can click <code class="language-plaintext highlighter-rouge">Initial</code>, next to the migration Rates prior and set the value to 0.1.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/MigRatesInitial.png" alt="">
-    <figcaption>Figure 5: Setting the initial value of the migration rates to 0.1.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/MigRatesInitial.png" alt="" />
+	<figcaption>Figure 5: Setting the initial value of the migration rates to 0.1.</figcaption>
 </figure>
 
 <p>We can next go to the MCMC tab to specify how long we want the analysis to run for.
 In this example, we will increase the Chain Length from 10000000 to 20000000.
-Last, we can save the <code>*.xml</code> file under <em>File &gt;&gt; Save as</em>.</p>
+Last, we can save the <code class="language-plaintext highlighter-rouge">*.xml</code> file under <em>File » Save as</em>.</p>
 
-<h3>Run the Analysis using BEAST2</h3>
+<h3 id="run-the-analysis-using-beast2">Run the Analysis using BEAST2</h3>
 
-<p>Run the <code>*.xml</code> using BEAST2 or use finished runs from the <em>precooked-runs</em> folder.
+<p>Run the <code class="language-plaintext highlighter-rouge">*.xml</code> using BEAST2 or use finished runs from the <em>precooked-runs</em> folder.
 The analysis should take about 20 minutes.</p>
 
-<h3>Analyse the log file using Tracer</h3>
+<h3 id="analyse-the-log-file-using-tracer">Analyse the log file using Tracer</h3>
 
-<p>First, we can open the <code>aim.log</code> file in tracer to check if the MCMC has converged.
+<p>First, we can open the <code class="language-plaintext highlighter-rouge">aim.log</code> file in tracer to check if the MCMC has converged.
 If we look at the ESS values, they are below 200 for the posterior and the prior and the analysis should be run for a bit longer.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/LogPosterior.png" alt="">
-    <figcaption>Figure 6: Check if the posterior converged.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/LogPosterior.png" alt="" />
+	<figcaption>Figure 6: Check if the posterior converged.</figcaption>
 </figure>
 
 <p>We can additionally check whether tree likelihoods of individual loci, tree heights etc. have converged.
-The information about population sizes and migration rates in an AIM log file is not super informative, since it doesn&#39;t contain any information about what does parameters correspond to.
+The information about population sizes and migration rates in an AIM log file is not super informative, since it doesn’t contain any information about what does parameters correspond to.
 This information is instead part of the species.trees file.</p>
 
-<h3>Analyse the species tree distribution in DensiTree</h3>
+<h3 id="analyse-the-species-tree-distribution-in-densitree">Analyse the species tree distribution in DensiTree</h3>
 
 <p>Nex, we can have a look at the distribution of species trees in DensiTree.
-To do so, open the files <code>species.trees</code> in DensiTree.</p>
+To do so, open the files <code class="language-plaintext highlighter-rouge">species.trees</code> in DensiTree.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:70%;" src="figures/DensiTree_aim.png" alt="">
+<img style="width:70%;" src="figures/DensiTree_aim.png" alt="" />
 <figcaption>Figure 7: Distribution of species trees inferred under AIM.</figcaption>
 </figure>
 
@@ -952,54 +921,54 @@ To do so, open the files <code>species.trees</code> in DensiTree.</p>
 It is, however, uncertain about how the ancestral species of A. col. and A. gam. attaches to the rest of the tree.
 There are overall three possible species trees that model says have somewhat stronger support.</p>
 
-<h3>Summarize the species tree using the AIM species tree annotator</h3>
+<h3 id="summarize-the-species-tree-using-the-aim-species-tree-annotator">Summarize the species tree using the AIM species tree annotator</h3>
 
-<p>To summarize the species tree, open BEAUTi, go to  <em>File &gt;&gt; Launch Apps</em>, select <code>AIM species tree annotator</code> and click <code>launch</code>.
+<p>To summarize the species tree, open BEAUTi, go to  <em>File » Launch Apps</em>, select <code class="language-plaintext highlighter-rouge">AIM species tree annotator</code> and click <code class="language-plaintext highlighter-rouge">launch</code>.
 This will open the AIM species tree annotator.
 The AIM species tree annotator summarizes the species trees file.
 To do so, it looks for all trees that have the same ranked topology.
 For each unique ranked topology, it will then compute its posterior support, as well as the rates of migration and effective populations sizes for each unique ranked topology.
-First, we have to choose the input file by clicking <code>Choose File</code> next to <code>Isolation with migration species tree file</code>.
-Then, we have to choose the output file by clocking <code>Choose File</code> next to <code>Output file</code>.
+First, we have to choose the input file by clicking <code class="language-plaintext highlighter-rouge">Choose File</code> next to <code class="language-plaintext highlighter-rouge">Isolation with migration species tree file</code>.
+Then, we have to choose the output file by clocking <code class="language-plaintext highlighter-rouge">Choose File</code> next to <code class="language-plaintext highlighter-rouge">Output file</code>.
 In order to ensure that the output is saved to the same directory, click on a file and then name the file Anopheles.trees.</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:70%;" src="figures/Annotator.png" alt="">
+<img style="width:70%;" src="figures/Annotator.png" alt="" />
 <figcaption>Figure 8: Setup of the AIM species tree annotator.</figcaption>
 </figure>
 
-<p>After, we can click <code>Analyze</code>.</p>
+<p>After, we can click <code class="language-plaintext highlighter-rouge">Analyze</code>.</p>
 
 <p>This will create a few different files.
-<code>Anopheles.trees</code> is a tree file that contains all the different unique ranked topologies encountered during the MCMC.
-The file <code>Anopheles.trees.ranked.log</code> contains a single log file, where the only thing logged is the at which point during the MCMC, the chains was equal to which unique ranked topologies.
+<code class="language-plaintext highlighter-rouge">Anopheles.trees</code> is a tree file that contains all the different unique ranked topologies encountered during the MCMC.
+The file <code class="language-plaintext highlighter-rouge">Anopheles.trees.ranked.log</code> contains a single log file, where the only thing logged is the at which point during the MCMC, the chains was equal to which unique ranked topologies.
 Then there are a few additional log files.
-<code>Anopheles.trees.STATE_0_occurances_1724.log</code> contains all the effective population sizes, migration rates between co-existing species and speciation times for the unique ranked topology number 0 (STATE_0) in the file <code>Anopheles.trees</code>.
+<code class="language-plaintext highlighter-rouge">Anopheles.trees.STATE_0_occurances_1724.log</code> contains all the effective population sizes, migration rates between co-existing species and speciation times for the unique ranked topology number 0 (STATE_0) in the file <code class="language-plaintext highlighter-rouge">Anopheles.trees</code>.
 The number after occurances (here 1724) denotes how often that ranked topology was encountered during the MCMC.
 This number will be different for every run.</p>
 
-<p>If we open the file <code>Anopheles.trees</code> in icytree.org (or figtree), we can see to which ranked topology each state corresponds to</p>
+<p>If we open the file <code class="language-plaintext highlighter-rouge">Anopheles.trees</code> in icytree.org (or figtree), we can see to which ranked topology each state corresponds to</p>
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:70%;" src="figures/RankedTreeState.png" alt="">
+<img style="width:70%;" src="figures/RankedTreeState.png" alt="" />
 <figcaption>Figure 9: Best supported ranked tree.</figcaption>
 </figure>
 
-<p>We can next open the file <code>Anopheles.trees.STATE_0_occurances_1724.log</code> in tracer to see the effective population sizes of extant and ancestral species, the (backwards in time) migration rates between co-existing species and the speciation times.</p>
+<p>We can next open the file <code class="language-plaintext highlighter-rouge">Anopheles.trees.STATE_0_occurances_1724.log</code> in tracer to see the effective population sizes of extant and ancestral species, the (backwards in time) migration rates between co-existing species and the speciation times.</p>
 
-<h3>Plotting the species tree</h3>
+<h3 id="plotting-the-species-tree">Plotting the species tree</h3>
 
-<p>With the files <code>Anopheles.trees</code> and <code>Anopheles.trees.STATE_0_occurances_1724.log</code> you can plot the species trees yourselves.
-Alternatively, the R script <code>plotSpeciesTree.R</code> can help you to do so.
+<p>With the files <code class="language-plaintext highlighter-rouge">Anopheles.trees</code> and <code class="language-plaintext highlighter-rouge">Anopheles.trees.STATE_0_occurances_1724.log</code> you can plot the species trees yourselves.
+Alternatively, the R script <code class="language-plaintext highlighter-rouge">plotSpeciesTree.R</code> can help you to do so.
 It uses ggplot, ape, phytools and coda that all need to be installed.
 We first have to load the species tree function in R using:
-<code>source(&quot;../scripts/plotSpeciesTree.R&quot;)</code>
+<code class="language-plaintext highlighter-rouge">source("../scripts/plotSpeciesTree.R")</code>
 We can next plot the species tree using:
-<code>plotSpeciesTree(&quot;Anopheles.trees&quot;, &quot;STATE_0_occurances_1724&quot;,0.1,0,0,T)</code>
-The <code>T</code> (true) at the end will lead to arrows being plotted as forward in time arrows (i.e. migration was from species to species).
-If it&#39;s <code>F</code> (false), then it will plot arrows for backwards in time gene flow.
+<code class="language-plaintext highlighter-rouge">plotSpeciesTree("Anopheles.trees", "STATE_0_occurances_1724",0.1,0,0,T)</code>
+The <code class="language-plaintext highlighter-rouge">T</code> (true) at the end will lead to arrows being plotted as forward in time arrows (i.e. migration was from species to species).
+If it’s <code class="language-plaintext highlighter-rouge">F</code> (false), then it will plot arrows for backwards in time gene flow.
 The value 0.1 denotes the posterior threshold to plot an arrow (i.e. the posterior support for gene flow has to be above that value to be plotted).
 The second number is for a Bayes Factor values threshold for Bayes Factor values calculated using the third number as a prior probability for gene flow.</p>
 
@@ -1007,36 +976,36 @@ The second number is for a Bayes Factor values threshold for Bayes Factor values
 
 <figure>
 <a id="fig:example1"></a>
-<img style="width:70%;" src="figures/SpeciesTreeGeneFlow.png" alt="">
+<img style="width:70%;" src="figures/SpeciesTreeGeneFlow.png" alt="" />
 <figcaption>Figure 10: Best supported ranked tree with gene flow and node height bars.</figcaption>
 </figure>
 
-<h3>Some notes of caution</h3>
+<h3 id="some-notes-of-caution">Some notes of caution</h3>
 
 <ul>
-<li>Different priors, especially on how much and how strong gene flow is expected to occur, can have a large impact on the species tree that is inferred. The reason is that in a IM model, coalescent events on a gene between two species can either be explained by gene flow or by a speciation event.</li>
-<li>Variation in the data that is not accounted for by the model can lead to wrong estimates of the species tree or between which species gene flow occurs.</li>
-<li>Jointly inferring the species tree, gene flow, effective population sizes, gene trees and evolutionary models can take a long time.</li>
+  <li>Different priors, especially on how much and how strong gene flow is expected to occur, can have a large impact on the species tree that is inferred. The reason is that in a IM model, coalescent events on a gene between two species can either be explained by gene flow or by a speciation event.</li>
+  <li>Variation in the data that is not accounted for by the model can lead to wrong estimates of the species tree or between which species gene flow occurs.</li>
+  <li>Jointly inferring the species tree, gene flow, effective population sizes, gene trees and evolutionary models can take a long time.</li>
 </ul>
 
-<hr>
+<hr />
 
-<h1>Useful Links</h1>
+<h1 id="useful-links">Useful Links</h1>
 
 <ul>
-<li>AIM source code: <a href="https://github.com/genomescale/starbeast2">https://github.com/genomescale/starbeast2</a></li>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
-<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+  <li>AIM source code: <a href="https://github.com/genomescale/starbeast2">https://github.com/genomescale/starbeast2</a></li>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
 
-<hr>
+<hr />
 
-<h1>Relevant References</h1>
+<h1 id="relevant-references">Relevant References</h1>
 
 <ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
 <li><span id="Mueller348391">Mueller, N. F., Ogilvie, H., Zhang, C., Drummond, A., &amp; Stadler, T. (2018). Inference of species histories in the presence of gene flow. <i>BioRxiv</i>. https://doi.org/10.1101/348391</span></li>
-<li><span id="fontaine2015extensive">Fontaine, M. C., Pease, J. B., Steele, A., Waterhouse, R. M., Neafsey, D. E., Sharakhov, I. V., … others. (2015). Extensive introgression in a malaria vector species complex revealed by phylogenomics. <i>Science</i>, <i>347</i>(6217), 1258524.</span></li></ol>
+<li><span id="fontaine2015extensive">Fontaine, M. C., Pease, J. B., Steele, A., Waterhouse, R. M., Neafsey, D. E., Sharakhov, I. V., Jiang, X., Hall, A. B., Catteruccia, F., Kakani, E., &amp; others. (2015). Extensive introgression in a malaria vector species complex revealed by phylogenomics. <i>Science</i>, <i>347</i>(6217), 1258524.</span></li></ol>
 
 
 			<hr>
@@ -1060,41 +1029,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,18 +118,18 @@
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -175,7 +146,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/data/hcv.nexus" target="_blank" rel="nofollow">
 						hcv.nexus
 					</a>
@@ -195,7 +166,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv_mcmc.xml" target="_blank" download rel="nofollow">
 						hcv_mcmc.xml
 					</a>
@@ -204,7 +175,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/xml/hcv.xml" target="_blank" download rel="nofollow">
 						hcv.xml
 					</a>
@@ -224,7 +195,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-cogs fa-fw"></i>
+					<i class="bi bi-gear"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/scripts/analyseAIMrun.R" target="_blank" download rel="nofollow">
 						analyseAIMrun.R
 					</a>
@@ -244,7 +215,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/hcv.log" target="_blank" download rel="nofollow">
 						hcv.log
 					</a>
@@ -253,7 +224,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/raw/master/precooked_runs/hcv.trees" target="_blank" download rel="nofollow">
 						hcv.trees
 					</a>
@@ -298,7 +269,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/63a0145c1ada7717aa2117b0b1da91bb0248dac3">
 					06 Dec 2019 - <span class="text-gray">adds app description</span>
 					</a> 
@@ -306,7 +277,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/50d20f9ae1776bb7ad0c1b6a29e402ab4ded3d37">
 					06 Dec 2019 - <span class="text-gray">changes tutorial to adaptive parallel tempering</span>
 					</a> 
@@ -314,7 +285,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/70309dd640c2a135a31b9f1c5490b46fc283abcf">
 					26 Jul 2019 - <span class="text-gray">dummy commit</span>
 					</a> 
@@ -322,7 +293,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/f91378358131d45090f1f1aa9b6816ef23c7da61">
 					25 Mar 2019 - <span class="text-gray">fixes error in citations</span>
 					</a> 
@@ -330,7 +301,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/47f8a36a2da9b45921044cfd4ea64806849e906d">
 					25 Mar 2019 - <span class="text-gray">adds missing pictures</span>
 					</a> 
@@ -345,7 +316,7 @@
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
 <p>Parallel tempering is a Bayesian approach that uses heated chains in order to traverse unfavourable intermediate states more easily and in order to parallelise analyses.
 Parallel tempering works by having one cold chain which works exactly the same as a standard MCMC chain and one or more heated chains.
@@ -359,31 +330,31 @@ The webpage <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-temperin
 
 <p>Typically, using such an approach requires to find optimal temperatures for heated chains that allow using the additional computational resources efficiently.
 The parallel tempering approach implemented in CoupledMCMC circumvents this by automatically tuning this temperature difference during a run to achieve an acceptance probability of swaps of 0.234.
-This means that the only additional parameter that has to be specified by the user is the number of chains used, which is typically determined by the number of CPU&#39;s available.</p>
+This means that the only additional parameter that has to be specified by the user is the number of chains used, which is typically determined by the number of CPU’s available.</p>
 
-<hr>
+<hr />
 
-<h1>Programs used in this Exercise</h1>
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
 
-<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
 <p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.6.0 <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
-<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
 <p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>TreeAnnotator</h3>
+<h3 id="treeannotator">TreeAnnotator</h3>
 
 <p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
 
 <p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<hr>
+<hr />
 
-<h1>Practical: Setting up an analysis with CoupledMCMC</h1>
+<h1 id="practical-setting-up-an-analysis-with-coupledmcmc">Practical: Setting up an analysis with CoupledMCMC</h1>
 
 <p>In this tutorial, we will describe the two different ways to setup a BEAST2 analysis to run with CoupledMCMC
 To do so, we will setup a Bayesian Skyline plot analysis by following analogue to the tutorial on <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>.</p>
@@ -392,117 +363,121 @@ To do so, we will setup a Bayesian Skyline plot analysis by following analogue t
 
 <p>All other analyses can use a conversion tool to convert an MCMC xml into a parallel tempering xml.</p>
 
-<h2>The Data</h2>
+<h2 id="the-data">The Data</h2>
 
 <p>The dataset consists of an alignment of 63 Hepatitis C sequences sampled in 1993 in Egypt (missing reference). This dataset has been used previously to test the performance of skyline methods (missing reference).</p>
 
-<p>With an estimated 15-25%, Egypt has the highest Hepatits C prevalence in the world. In the mid 20<sup>th</sup> century, the prevalence of Hepatitis C increased drastically (see <a href="#fig:prevalence">Figure 1</a> for estimates). We will try to infer this increase from sequence data.</p>
+<p>With an estimated 15-25%, Egypt has the highest Hepatits C prevalence in the world. In the mid 20^(th) century, the prevalence of Hepatitis C increased drastically (see <a href="#fig:prevalence">Figure 1</a> for estimates). We will try to infer this increase from sequence data.</p>
 
 <figure>
-    <a id="fig:prevalence"></a>
-    <img style="width:50%;" src="figures/Estimated_number_hcv.png" alt="">
-    <figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt (missing reference).</figcaption>
+	<a id="fig:prevalence"></a>
+	<img style="width:50%;" src="figures/Estimated_number_hcv.png" alt="" />
+	<figcaption>Figure 1: The estimated number of Hepatitis C cases in Egypt (missing reference).</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
-
-<h3>Download CoupledMCMC</h3>
-
-<p>First, we have to download the CoupledMCMC package by using the BEAUTi package manager. Go to <code>File &gt;&gt; Manage Packages</code> and download the package and CoupledMCMC StarBeast2.</p>
+<h3 id="download-coupledmcmc">Download CoupledMCMC</h3>
+<p>First, we have to download the CoupledMCMC package by using the BEAUTi package manager. Go to <code class="language-plaintext highlighter-rouge">File &gt;&gt; Manage Packages</code> and download the package and CoupledMCMC StarBeast2.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:50%;" src="figures/Package.png" alt="">
-    <figcaption>Figure 1: Download the CoupledMCMC package</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:50%;" src="figures/Package.png" alt="" />
+	<figcaption>Figure 1: Download the CoupledMCMC package</figcaption>
 </figure>
 
-<h2>For analyses that don&#39;t require to load a template</h2>
+<h2 id="for-analyses-that-dont-require-to-load-a-template">For analyses that don’t require to load a template</h2>
 
 <p>If for your analysis, no loading of a template is required, we can setup the analysis in BEAUTi:</p>
 
-<h3>Loading the template</h3>
+<h3 id="loading-the-template">Loading the template</h3>
 
-<p>Next, we have to load the BEAUTi template from <code>File</code>, select <code>Template &gt;&gt; CoupledMCMC</code>.</p>
+<p>Next, we have to load the BEAUTi template from <code class="language-plaintext highlighter-rouge">File</code>, select <code class="language-plaintext highlighter-rouge">Template &gt;&gt; CoupledMCMC</code>.</p>
 
 <figure>
-    <a id="fig:example1"></a>
-    <img style="width:70%;" src="figures/Template.png" alt="">
-    <figcaption>Figure 2: Load the CoupledMCMC template to setup an analysis.</figcaption>
+	<a id="fig:example1"></a>
+	<img style="width:70%;" src="figures/Template.png" alt="" />
+	<figcaption>Figure 2: Load the CoupledMCMC template to setup an analysis.</figcaption>
 </figure>
 
 <p>This template is exactly the same as the standard BEAUTi template, but uses parallel tempering instead of regular MCMC.</p>
 
-<h3>Setting up the analysis with Bayesian Coalescent Skyline (similar to <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>)</h3>
+<h3 id="setting-up-the-analysis-with-bayesian-coalescent-skyline-similar-to-skyline-plots">Setting up the analysis with Bayesian Coalescent Skyline (similar to <a href="https://taming-the-beast.org/tutorials/Skyline-plots/">skyline plots</a>)</h3>
 
-<p>To import the aligned sequences into BEAUti, use <code>File &gt; Import Alignment</code> to select the <code>*.nexus</code> file.</p>
+<p>To import the aligned sequences into BEAUti, use <code class="language-plaintext highlighter-rouge">File &gt; Import Alignment</code> to select the <code class="language-plaintext highlighter-rouge">*.nexus</code> file.</p>
 
-<p>BEAUti will recognize the sequences from the <code>*.nexus</code> file as nucleotide data. It will do so for sequence files with the character set of <strong>A | C | G | T | N</strong>, where <strong>N</strong> indicates an unknown nucleotide. As soon as other non-gap characters are included (e.g. using <strong>R</strong> or <strong>Y</strong> to indicate purines and pyramidines) BEAUti will not recognize the data as nucleotides anymore, unless the type of data is specified in the <code>*.nexus</code> file.</p>
+<table>
+  <tbody>
+    <tr>
+      <td>BEAUti will recognize the sequences from the <code class="language-plaintext highlighter-rouge">*.nexus</code> file as nucleotide data. It will do so for sequence files with the character set of **A</td>
+      <td>C</td>
+      <td>G</td>
+      <td>T</td>
+      <td>N<strong>, where **N</strong> indicates an unknown nucleotide. As soon as other non-gap characters are included (e.g. using <strong>R</strong> or <strong>Y</strong> to indicate purines and pyramidines) BEAUti will not recognize the data as nucleotides anymore, unless the type of data is specified in the <code class="language-plaintext highlighter-rouge">*.nexus</code> file.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>After we have loaded the sequences into BEAUti, we have to specify the evolutionary model. We will be using the very general GTR model (<a href="#fig:model">Figure 3</a>), which estimates transition probabilities between individual nucleotides separately, meaning that transition probabilities between e.g. <strong>A</strong> and <strong>T</strong> will be inferred separately to the ones between <strong>A</strong> and <strong>C</strong>. Additionally, we should allow for rate heterogeneity among sites. We can do this by changing the Gamma Category Count to 4 (normally between 4 and 6).</p>
 
 <figure>
-    <a id="fig:model"></a>
-    <img src="figures/choose_gtr.png" alt="">
-    <figcaption>Figure 3: Set GTR as a site model. Also use a Gamma Category Count of 4.</figcaption>
+	<a id="fig:model"></a>
+	<img src="figures/choose_gtr.png" alt="" />
+	<figcaption>Figure 3: Set GTR as a site model. Also use a Gamma Category Count of 4.</figcaption>
 </figure>
-
-<p><br></p>
+<p><br /></p>
 
 <p>As we use sequences that were sampled at the same point in time, we need to fix the clock rate (for more information on this please refer to the tutorial on molecular clocks). We will use an estimate inferred in (missing reference) to fix the clock rate. In this case all the samples were contemporaneous (at the same time) and the clock rate works as a mapping of the estimated tree branch lengths into calendar time.</p>
 
-<p>We will keep the strict clock model and will set <code>Clock.rate</code> to 0.00079.</p>
+<p>We will keep the strict clock model and will set <code class="language-plaintext highlighter-rouge">Clock.rate</code> to 0.00079.</p>
 
-<p>Next, we need to go the the <code>Priors</code> tab and set the Bayesian Coalescent Skyline as a tree prior (<a href="#fig:coalescent">Figure 4</a>).</p>
+<p>Next, we need to go the the <code class="language-plaintext highlighter-rouge">Priors</code> tab and set the Bayesian Coalescent Skyline as a tree prior (<a href="#fig:coalescent">Figure 4</a>).</p>
 
 <figure>
-    <a id="fig:coalescent"></a>
-    <img src="figures/choose_coalescentSkyline.png" alt="">
-    <figcaption>Figure 4: Choose the Coalescent Bayesian Skyline as a population prior.</figcaption>
+	<a id="fig:coalescent"></a>
+	<img src="figures/choose_coalescentSkyline.png" alt="" />
+	<figcaption>Figure 4: Choose the Coalescent Bayesian Skyline as a population prior.</figcaption>
 </figure>
-
-<p><br></p>
+<p><br /></p>
 
 <p>The Bayesian Coalescent Skyline works by dividing the time between the present and the root of the tree into intervals, thus the number of these intervals has to be defined. Each interval will have a different effective population size.
-The Bayesian Coalescent Skyline will estimate the number of coalescent events within each interval (which is captured in the Group Size parameter) as well as the effective population size for that interval. The number of intervals is equal to the dimension specified. If we have <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span>  intervals, the effective population size is allowed to change <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span> times. To specify the number of dimensions, we need to first go to the initialization panel. This is by default not visible <code>View &gt; Show Initialization Panel</code>.</p>
+The Bayesian Coalescent Skyline will estimate the number of coalescent events within each interval (which is captured in the Group Size parameter) as well as the effective population size for that interval. The number of intervals is equal to the dimension specified. If we have <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span>  intervals, the effective population size is allowed to change <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">d-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> times. To specify the number of dimensions, we need to first go to the initialization panel. This is by default not visible <code class="language-plaintext highlighter-rouge">View &gt; Show Initialization Panel</code>.</p>
 
-<p>For this analysis we will set the number of dimensions to 4 (the default value is 5). Keep in mind that one has to change the dimension of <code>bPopSizes</code> as well as <code>bGroupSizes</code>. The dimension of both parameters has to be the same (<a href="#fig:dimensions">Figure 5</a>).</p>
+<p>For this analysis we will set the number of dimensions to 4 (the default value is 5). Keep in mind that one has to change the dimension of <code class="language-plaintext highlighter-rouge">bPopSizes</code> as well as <code class="language-plaintext highlighter-rouge">bGroupSizes</code>. The dimension of both parameters has to be the same (<a href="#fig:dimensions">Figure 5</a>).</p>
 
 <figure>
-    <a id="fig:dimensions"></a>
-    <img src="figures/set_dimension.png" alt="">
-    <figcaption>Figure 5: Set the dimension of the two parameters, bPopSizes and bGroupSizes, to 4.</figcaption>
+	<a id="fig:dimensions"></a>
+	<img src="figures/set_dimension.png" alt="" />
+	<figcaption>Figure 5: Set the dimension of the two parameters, bPopSizes and bGroupSizes, to 4.</figcaption>
 </figure>
-
-<p><br></p>
+<p><br /></p>
 
 <p>Choosing the dimension for the Bayesian Coalescent Skyline can be rather arbitrary. If the dimension is chosen too low, not all population changes are captured, if it is chosen too large, there might be too little information in an interval to support an estimate of a population size. There are implementations in BEAST of the coalescent skyline that either sample dimensions (Extended Bayesian Skyline (missing reference)) or do not require dimensions to be specified (Skyride (missing reference)).</p>
 
-<p>We can leave the rest of the priors as they are and go to the <code>Parallel tempering</code> panel.
+<p>We can leave the rest of the priors as they are and go to the <code class="language-plaintext highlighter-rouge">Parallel tempering</code> panel.
 In contrast to regular MCMC, we have to define a few more things.
 First, we have to define the number of chains.
 This number should be equal to the number of threads you can run, resp. the number of CPU cores.
-The <code>Resample Every</code>, defines after how many iterations, two chains should be proposed to exchange states.
+The <code class="language-plaintext highlighter-rouge">Resample Every</code>, defines after how many iterations, two chains should be proposed to exchange states.
 If this is too low, the chains will communicate a lot and the exchanging of states itself can consume more time then the actual MCMC.
-If it&#39;s too high, the states of chains are exchanged and the ESS per time isn&#39;t as high as it could be.
+If it’s too high, the states of chains are exchanged and the ESS per time isn’t as high as it could be.
 We here exchange states between the 2 chains every 1000 iterations, which will allow for at most 10 000 swaps of states during the whole analysis.</p>
 
-<p>The next parameter we have to set is the <code>Delta Temperature</code>.
+<p>The next parameter we have to set is the <code class="language-plaintext highlighter-rouge">Delta Temperature</code>.
 Hotter chains are more easily able to cross unlikely intermediate states and can therefore help chains to move out of local optimas.
-<code>Delta Temperature</code> here is only the initial value of the temperature difference between the two chains and will be tuned lated on automatically.
-<code>Target</code> defines the target acceptance probability.
+<code class="language-plaintext highlighter-rouge">Delta Temperature</code> here is only the initial value of the temperature difference between the two chains and will be tuned lated on automatically.
+<code class="language-plaintext highlighter-rouge">Target</code> defines the target acceptance probability.
 The temperature difference will be adapted during the analysis to match this acceptance probability over the course of the analysis.</p>
 
 <p>Overall, it should be chosen such that the acceptance probability of an exchange of states between chains is between 0.25 and 0.6 (missing reference).</p>
 
 <figure>
-    <a id="fig:dimensions"></a>
-    <img src="figures/CoupledMCMCpanel.png" alt="">
-    <figcaption>Figure 6: Setting up the parameters fo the coupled MCMC.</figcaption>
+	<a id="fig:dimensions"></a>
+	<img src="figures/CoupledMCMCpanel.png" alt="" />
+	<figcaption>Figure 6: Setting up the parameters fo the coupled MCMC.</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
-
-<h3>Running the xml</h3>
+<h3 id="running-the-xml">Running the xml</h3>
 
 <p>Next, we can run the xml.
 The output to the screen of a Coupled MCMC run looks slightly different then the one of a standard MCMC run.
@@ -511,64 +486,63 @@ The column <em>swapsColdChain</em> denotes how many times the one cold chain (th
 The <em>swapProbability</em> denotes how likely it is that a swapping between two chains is accepted.
 By default, a value of 0.234 is targeted.
 The column <em>deltaTemperature</em> denotes the current temperature difference between chains.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">sample  swapsColdCain   swapProbability deltaTemperature
-    0   0   0.0 0.1
-    1000    0   0.0 0.1 --
-    2000    0   0.0 0.1 --
-    3000    0   0.0 0.1 --
-    4000    0   0.0 0.1 --
-    5000    1   0.2 0.1 --
-    6000    1   0.16666666666666666 0.1 --
-    7000    1   0.2857142857142857  0.1 --
-    8000    1   0.25    0.1 --
-    9000    1   0.2222222222222222  0.1 --
-    10000   1   0.2 0.1 --
-    11000   1   0.18181818181818182 0.1 2m29s/Msamples
-    12000   1   0.16666666666666666 0.1 2m35s/Msamples
-    13000   1   0.15384615384615385 0.1 2m39s/Msamples
-    14000   1   0.14285714285714285 0.1 2m37s/Msamples
-    15000   1   0.13333333333333333 0.1 2m41s/Msamples
-    16000   1   0.125   0.1 2m42s/Msamples
-    17000   1   0.11764705882352941 0.1 2m46s/Msamples
-</code></pre></div>
-<h3>Exploring the results of Bayesian Coalescent Skyline analysis</h3>
 
-<p>For the reconstruction of the population dynamics, we need two files: the <code>hcv.log</code> file and the <code>hcv.trees</code> file.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sample	swapsColdCain	swapProbability	deltaTemperature
+	0	0	0.0	0.1
+	1000	0	0.0	0.1 --
+	2000	0	0.0	0.1 --
+	3000	0	0.0	0.1 --
+	4000	0	0.0	0.1 --
+	5000	1	0.2	0.1 --
+	6000	1	0.16666666666666666	0.1 --
+	7000	1	0.2857142857142857	0.1 --
+	8000	1	0.25	0.1 --
+	9000	1	0.2222222222222222	0.1 --
+	10000	1	0.2	0.1 --
+	11000	1	0.18181818181818182	0.1 2m29s/Msamples
+	12000	1	0.16666666666666666	0.1 2m35s/Msamples
+	13000	1	0.15384615384615385	0.1 2m39s/Msamples
+	14000	1	0.14285714285714285	0.1 2m37s/Msamples
+	15000	1	0.13333333333333333	0.1 2m41s/Msamples
+	16000	1	0.125	0.1 2m42s/Msamples
+	17000	1	0.11764705882352941	0.1 2m46s/Msamples
+</code></pre></div></div>
+
+<h3 id="exploring-the-results-of-bayesian-coalescent-skyline-analysis">Exploring the results of Bayesian Coalescent Skyline analysis</h3>
+
+<p>For the reconstruction of the population dynamics, we need two files: the <code class="language-plaintext highlighter-rouge">hcv.log</code> file and the <code class="language-plaintext highlighter-rouge">hcv.trees</code> file.
 These outputs can be handled exactly the same as the ones of a regular MCMC analysis.
 The log files contain the information about the group size and the population size.
 The group size specifies how many intervals are combined to have the same effective population size.</p>
 
 <figure>
-    <a id="fig:dimensions"></a>
-    <img src="figures/Tracer.png" alt="">
-    <figcaption>Figure 7: opening the log file in tracer.</figcaption>
+	<a id="fig:dimensions"></a>
+	<img src="figures/Tracer.png" alt="" />
+	<figcaption>Figure 7: opening the log file in tracer.</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
-
-<p>After the runs have finished, load the finished <code>hcv.log</code> file into Tracer. Alternatively you can use the <code>hcv.log</code> files and the <code>hcv.trees</code> files you downloaded with the data. To run the analysis, open the finished <code>hcv.log</code> file into Tracer, then go to <code>Analysis &gt; Bayesian Skyline Reconstruction</code>. From there open the finished <code>hcv.trees</code> file. To get the correct years in the analysis we should specify the <code>Age of the youngest tip</code>. In our case it is 1993, the year where all the samples were taken. If the samples were taken through time, the age of the youngest tip is the time when the most recent sample was taken. If you now press the <code>Ok</code> button, the reconstruction of the past population dynamics will be performed (<a href="#fig:trees">Figure 8</a>).</p>
+<p>After the runs have finished, load the finished <code class="language-plaintext highlighter-rouge">hcv.log</code> file into Tracer. Alternatively you can use the <code class="language-plaintext highlighter-rouge">hcv.log</code> files and the <code class="language-plaintext highlighter-rouge">hcv.trees</code> files you downloaded with the data. To run the analysis, open the finished <code class="language-plaintext highlighter-rouge">hcv.log</code> file into Tracer, then go to <code class="language-plaintext highlighter-rouge">Analysis &gt; Bayesian Skyline Reconstruction</code>. From there open the finished <code class="language-plaintext highlighter-rouge">hcv.trees</code> file. To get the correct years in the analysis we should specify the <code class="language-plaintext highlighter-rouge">Age of the youngest tip</code>. In our case it is 1993, the year where all the samples were taken. If the samples were taken through time, the age of the youngest tip is the time when the most recent sample was taken. If you now press the <code class="language-plaintext highlighter-rouge">Ok</code> button, the reconstruction of the past population dynamics will be performed (<a href="#fig:trees">Figure 8</a>).</p>
 
 <figure>
-    <a id="fig:trees"></a>
-    <img style="width:50%;" src="figures/open_trees.png" alt="">
-    <figcaption>Figure 8: Reconstructing the Bayesian Skyline plot in Tracer.</figcaption>
+	<a id="fig:trees"></a>
+	<img style="width:50%;" src="figures/open_trees.png" alt="" />
+	<figcaption>Figure 8: Reconstructing the Bayesian Skyline plot in Tracer.</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
-
-<p>The output will have the years on the x-axis and the effective population size on the y-axis. By default, the y-axis is on a log-scale. If everything worked as it is supposed to work you will see a sharp increase in the effective population size in the mid 20<sup>th</sup> century, similar to what is seen on <a href="#fig:skyline">Figure 9</a>.</p>
+<p>The output will have the years on the x-axis and the effective population size on the y-axis. By default, the y-axis is on a log-scale. If everything worked as it is supposed to work you will see a sharp increase in the effective population size in the mid 20^(th) century, similar to what is seen on <a href="#fig:skyline">Figure 9</a>.</p>
 
 <figure>
-    <a id="fig:skyline"></a>
-    <img style="width:50%;" src="figures/skyline_analysis.png" alt="">
-    <figcaption>Figure 9: Bayesian Coalescent Skyline analysis output. The black line is the median estimate of the estimated effective population size (can be changed to the mean estimate). The two blue lines are the upper an the lower estimates of 95% interval. The x-axis is the time in years.</figcaption>
+	<a id="fig:skyline"></a>
+	<img style="width:50%;" src="figures/skyline_analysis.png" alt="" />
+	<figcaption>Figure 9: Bayesian Coalescent Skyline analysis output. The black line is the median estimate of the estimated effective population size (can be changed to the mean estimate). The two blue lines are the upper an the lower estimates of 95% interval. The x-axis is the time in years.</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
+<p>There are two ways to save the analysis, it can either be saved as a <code class="language-plaintext highlighter-rouge">*.pdf</code> or as a tab delimited file. To save it as a tab delimited file, you can go to <code class="language-plaintext highlighter-rouge">File &gt; Export Data</code>. The exported file will have five rows, the time, the mean, median lower 95% interval and the upper 95% interval of the estimates, which you can use to plot the data with other software (R, Matlab, etc).</p>
 
-<p>There are two ways to save the analysis, it can either be saved as a <code>*.pdf</code> or as a tab delimited file. To save it as a tab delimited file, you can go to <code>File &gt; Export Data</code>. The exported file will have five rows, the time, the mean, median lower 95% interval and the upper 95% interval of the estimates, which you can use to plot the data with other software (R, Matlab, etc).</p>
-
-<h3>Assessing convergence</h3>
+<h3 id="assessing-convergence">Assessing convergence</h3>
 
 <p>Since parallel tempering runs multiple chains, it is possible for all these chains to be stuck in local optima.
 Parallel tempering will then cycle through these chains that are all stuck in local optima.
@@ -578,11 +552,11 @@ Additionally, ESS might not be the best measure of converge of a parallel temper
 
 <p>(Running replicates is not only advisable for parallel tempering analysis, but for MCMC as well).</p>
 
-<h2>Setting up the same analysis for packages that require loading their own template</h2>
+<h2 id="setting-up-the-same-analysis-for-packages-that-require-loading-their-own-template">Setting up the same analysis for packages that require loading their own template</h2>
 
 <p>In order to setup a parallel tempering analysis for packages that require loading their own packages, we can use a BEAUti app.
-To do so, open BEAUti and go to <code>File</code>, select <code>Launch Apps</code>.
-There, click on MCMC to Coupled MCMC converter and click <code>Launch</code>.</p>
+To do so, open BEAUti and go to <code class="language-plaintext highlighter-rouge">File</code>, select <code class="language-plaintext highlighter-rouge">Launch Apps</code>.
+There, click on MCMC to Coupled MCMC converter and click <code class="language-plaintext highlighter-rouge">Launch</code>.</p>
 
 <p>First, load the MCMC xml and define an output file for the parallel tempering xml.
 Then, the analysis can be setup, such as for example the number of chains can be defined.
@@ -590,28 +564,27 @@ When everything is setup, just press launch and the parallel tempering xml will 
 This xml can then be run using parallel tempering.</p>
 
 <figure>
-    <a id="fig:skyline"></a>
-    <img style="width:50%;" src="figures/App.png" alt="">
-    <figcaption>Figure 10: Launching the MCMC to Coupled MCMC app.</figcaption>
+	<a id="fig:skyline"></a>
+	<img style="width:50%;" src="figures/App.png" alt="" />
+	<figcaption>Figure 10: Launching the MCMC to Coupled MCMC app.</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
+<hr />
 
-<hr>
-
-<h1>Useful Links</h1>
+<h1 id="useful-links">Useful Links</h1>
 
 <ul>
-<li>Blog post explaining coupled MCMC <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a></li>
-<li>Coupled MCMC source code: <a href="https://github.com/nicfel/CoupledMCMC">https://github.com/nicfel/CoupledMCMC</a></li>
-<li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
-<li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-<li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+  <li>Blog post explaining coupled MCMC <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/</a></li>
+  <li>Coupled MCMC source code: <a href="https://github.com/nicfel/CoupledMCMC">https://github.com/nicfel/CoupledMCMC</a></li>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
 </ul>
 
-<hr>
+<hr />
 
-<h1>Relevant References</h1>
+<h1 id="relevant-references">Relevant References</h1>
 
 <ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
 
@@ -637,41 +610,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	

@@ -40,7 +40,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/walterxie/MEP-tutorial/commit/0dc38ad402d6e3077781399b3ef30af605d5ff0f'
+						'https://github.com/walterxie/MEP-tutorial/commit/62754c0691ec1d4df9daee0b28e6379e864e3057'
 					&gt;
 						10 May 2021
 					&lt;/a&gt;
@@ -50,7 +50,7 @@
 					&gt;
 						walterxie
 					&lt;/a&gt;
-					: add Fabio
+					: remove extra space
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -58,7 +58,7 @@
 						Requires: BEAST v2.6.4
 					
 				</description>
-				<pubDate>Mon, 10 May 2021 03:26:41 +0200</pubDate>
+				<pubDate>Mon, 10 May 2021 20:22:22 +0000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
@@ -103,7 +103,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Thu, 19 Nov 2020 15:31:14 +0100</pubDate>
+				<pubDate>Thu, 19 Nov 2020 14:31:14 +0000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
@@ -144,7 +144,7 @@
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Mon, 14 Sep 2020 19:51:32 +0200</pubDate>
+				<pubDate>Mon, 14 Sep 2020 17:51:32 +0000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
@@ -173,9 +173,9 @@
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						'https://github.com/bjoelle'
+						''
 					&gt;
-						bjoelle
+						Unknown
 					&lt;/a&gt;
 					: Merge pull request #1 from laduplessis/master
 
@@ -187,7 +187,7 @@ Update tutorial for TTB website
 						Requires: BEAST v2.6.0
 					
 				</description>
-				<pubDate>Mon, 03 Aug 2020 16:14:58 +0200</pubDate>
+				<pubDate>Mon, 03 Aug 2020 14:14:58 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/MSBD-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MSBD-tutorial/</guid>
@@ -228,7 +228,7 @@ Update tutorial for TTB website
 						Requires: BEAST v2.6.x
 					
 				</description>
-				<pubDate>Fri, 24 Jul 2020 05:54:03 +0200</pubDate>
+				<pubDate>Fri, 24 Jul 2020 03:54:03 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
@@ -269,7 +269,7 @@ Update tutorial for TTB website
 						Requires: BEAST v2.6.0
 					
 				</description>
-				<pubDate>Thu, 16 Jul 2020 18:10:16 +0200</pubDate>
+				<pubDate>Thu, 16 Jul 2020 16:10:16 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Reassortment-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Reassortment-Tutorial/</guid>
@@ -312,7 +312,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Mon, 16 Mar 2020 23:14:33 +0100</pubDate>
+				<pubDate>Mon, 16 Mar 2020 22:14:33 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
@@ -353,7 +353,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.6.0
 					
 				</description>
-				<pubDate>Fri, 06 Dec 2019 02:03:14 +0100</pubDate>
+				<pubDate>Fri, 06 Dec 2019 01:03:14 +0000</pubDate>
 				<category>Easy</category>
 				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
@@ -398,7 +398,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.5.x
 					
 				</description>
-				<pubDate>Tue, 27 Aug 2019 16:34:41 +0200</pubDate>
+				<pubDate>Tue, 27 Aug 2019 14:34:41 +0000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
@@ -447,7 +447,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.6.x
 					
 				</description>
-				<pubDate>Tue, 13 Aug 2019 17:59:30 +0200</pubDate>
+				<pubDate>Tue, 13 Aug 2019 15:59:30 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
@@ -496,7 +496,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Thu, 08 Aug 2019 18:00:04 +0200</pubDate>
+				<pubDate>Thu, 08 Aug 2019 16:00:04 +0000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
@@ -545,7 +545,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 08 Aug 2019 17:54:23 +0200</pubDate>
+				<pubDate>Thu, 08 Aug 2019 15:54:23 +0000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
@@ -590,7 +590,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Mon, 29 Jul 2019 10:20:13 +0200</pubDate>
+				<pubDate>Mon, 29 Jul 2019 08:20:13 +0000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
@@ -631,7 +631,7 @@ Added section on sampling fossil ages with fully extinct clades
 						Requires: BEAST v2.5.2
 					
 				</description>
-				<pubDate>Sun, 24 Mar 2019 23:45:59 +0100</pubDate>
+				<pubDate>Sun, 24 Mar 2019 22:45:59 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
@@ -673,7 +673,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 21 Feb 2019 23:43:45 +0100</pubDate>
+				<pubDate>Thu, 21 Feb 2019 22:43:45 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
@@ -722,7 +722,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Mon, 05 Nov 2018 16:43:08 +0100</pubDate>
+				<pubDate>Mon, 05 Nov 2018 15:43:08 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</guid>
@@ -763,7 +763,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 21 Jun 2018 23:09:40 +0200</pubDate>
+				<pubDate>Thu, 21 Jun 2018 21:09:40 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
@@ -804,7 +804,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.5.0
 					
 				</description>
-				<pubDate>Thu, 21 Jun 2018 20:23:40 +0200</pubDate>
+				<pubDate>Thu, 21 Jun 2018 18:23:40 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/starbeast2-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/starbeast2-tutorial/</guid>
@@ -845,7 +845,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.5
 					
 				</description>
-				<pubDate>Thu, 21 Jun 2018 09:30:17 +0200</pubDate>
+				<pubDate>Thu, 21 Jun 2018 07:30:17 +0000</pubDate>
 				<category>Basic</category>
 				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
@@ -886,7 +886,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.4.1+
 					
 				</description>
-				<pubDate>Mon, 18 Jun 2018 17:55:54 +0200</pubDate>
+				<pubDate>Mon, 18 Jun 2018 15:55:54 +0000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Troubleshooting/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting/</guid>
@@ -931,7 +931,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.4.7
 					
 				</description>
-				<pubDate>Mon, 24 Jul 2017 16:10:26 +0200</pubDate>
+				<pubDate>Mon, 24 Jul 2017 14:10:26 +0000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</guid>
@@ -976,7 +976,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.4.2
 					
 				</description>
-				<pubDate>Wed, 12 Jul 2017 17:33:51 +0200</pubDate>
+				<pubDate>Wed, 12 Jul 2017 15:33:51 +0000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-coalescent/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-coalescent/</guid>
@@ -1017,7 +1017,7 @@ Added local update describing species-tree specification with BEAUti.
 						Requires: BEAST v2.4.x
 					
 				</description>
-				<pubDate>Thu, 09 Feb 2017 02:46:12 +0100</pubDate>
+				<pubDate>Thu, 09 Feb 2017 01:46:12 +0000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/adequacy_tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/adequacy_tutorial/</guid>
@@ -1042,7 +1042,7 @@ Added local update describing species-tree specification with BEAUti.
 					&lt;a class='off' href=
 						'https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf'
 					&gt;
-						3 Feb 2017
+						2 Feb 2017
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
@@ -1060,7 +1060,7 @@ Add input data
 						Requires: BEAST v2.4.4
 					
 				</description>
-				<pubDate>Fri, 03 Feb 2017 00:19:14 +0100</pubDate>
+				<pubDate>Thu, 02 Feb 2017 23:19:14 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/calibrated-species-trees/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/calibrated-species-trees/</guid>
@@ -1117,7 +1117,7 @@ Add input data
 						Requires: BEAST v2.4.x
 					
 				</description>
-				<pubDate>Thu, 02 Feb 2017 22:07:01 +0100</pubDate>
+				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</guid>

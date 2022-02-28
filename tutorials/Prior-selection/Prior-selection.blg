@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2020)
+This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Prior-selection.aux
 The style file: biblatex.bst
@@ -19,13 +19,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Prior-selection-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.13
+Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 10 entries,
-            6365 wiz_defined-function locations,
-            1251 strings with 11030 characters,
-and the built_in function-call counts, 108680 in all, are:
+            6393 wiz_defined-function locations,
+            1259 strings with 11100 characters,
+and the built_in function-call counts, 108601 in all, are:
 = -- 8965
 > -- 1475
 < -- 389
@@ -39,9 +39,9 @@ change.case$ -- 196
 chr.to.int$ -- 44
 cite$ -- 18
 duplicate$ -- 10113
-empty$ -- 9324
+empty$ -- 9333
 format.name$ -- 988
-if$ -- 21799
+if$ -- 21711
 int.to.chr$ -- 0
 int.to.str$ -- 23
 missing$ -- 0

@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2020)
+This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: calibrated-species-trees.aux
 The style file: biblatex.bst
@@ -19,13 +19,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: calibrated-species-trees-blx.bib
 Database file #2: master-refs.bib
-Biblatex version: 3.13
+Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 3 entries,
-            6365 wiz_defined-function locations,
-            1320 strings with 14625 characters,
-and the built_in function-call counts, 14833 in all, are:
+            6393 wiz_defined-function locations,
+            1328 strings with 14695 characters,
+and the built_in function-call counts, 14810 in all, are:
 = -- 965
 > -- 300
 < -- 60
@@ -39,9 +39,9 @@ change.case$ -- 22
 chr.to.int$ -- 44
 cite$ -- 4
 duplicate$ -- 1347
-empty$ -- 1359
+empty$ -- 1361
 format.name$ -- 144
-if$ -- 3075
+if$ -- 3050
 int.to.chr$ -- 0
 int.to.str$ -- 4
 missing$ -- 0

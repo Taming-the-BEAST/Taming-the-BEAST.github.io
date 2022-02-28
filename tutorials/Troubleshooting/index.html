@@ -11,29 +11,14 @@
 	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
-    <!-- Customized Bootstrap + Font Awesome + Solarized -->
-    <link href="/css/style.css" rel="stylesheet" media="screen">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="/images/favicon.ico"/>	
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-	<!-- Typekit -->
-	<script>
-	  (function(d) {
-		var config = {
-		  kitId: 'xeu8jut',
-		  scriptTimeout: 3000
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-		
-	<!-- jQuery -->
-	<script src="/js/jquery.min.js"></script>
-	
-	<!-- Bootstrap -->
-	<script src="/js/transition.js"></script>
-	<script src="/js/collapse.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
 
 
 </head>
@@ -42,60 +27,46 @@
 <body>
 	
 	<div id="header">
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">	 
-		<div class="container">	
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-									
-				<a class="navbar-brand" href="/">Taming the BEAST</a>
-				<object class="logo navbar-brand" data="/images/logo_bw.svg" type="image/svg+xml"></object>
-				
-			</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-element">
-				<ul class="nav navbar-nav navbar-right">					
-					
-					<li>
-					
-					<a href="/news/">news</a></li>
-
-					
-                                        <li>
-					
-                                        <a href="/workshops/">workshops</a></li>
-
-					
-					<li>
-					
-					<a href="/tutorials/">tutorials</a></li>	    	  
-
-					
-					<li>
-					
-					<a href="/contribute/">contribute</a></li>
-					<li><a type="application/rss+xml" href="/feed.news.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-			
-		</div>
-	</nav>	
 </div>
-
-<!--div class="headerspacer"></div-->
 
 	
 	<div class="container">	
 		
-	<script src="/js/sidebar.js"></script>
-
-
-
+	
 
 <div class="row">
 	<div class="hidden-xs hidden-sm col-md-12">
@@ -147,24 +118,24 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="/tutorials/Troubleshooting/Troubleshooting.pdf">Troubleshooting.pdf</a>	
 				</li>
 			
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-github fa-fw"></i>
+				<i class="bi bi-github"></i>
 				<a class="off" href="https://github.com/taming-the-beast/Troubleshooting" target="_blank">Github repository</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>
-				<i class="fa fa-certificate fa-fw"></i>
+				<i class="bi bi-star"></i>
 				<a class="off" href="LICENSE.html">
 				License</a>
 			</li>
 			<div class="smallspacer"></div>
 			<li>			
-				<i class="fa fa-bar-chart fa-fw"></i>
+				<i class="bi bi-bar-chart"></i>
 				<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/graphs/traffic" target="_blank">
 				Statistics</a>
 			</li>
@@ -181,7 +152,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/data/coalTreeTest.tre" target="_blank" rel="nofollow">
 						coalTreeTest.tre
 					</a>
@@ -190,7 +161,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-align-justify fa-fw"></i>
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/data/seqs.nex" target="_blank" rel="nofollow">
 						seqs.nex
 					</a>
@@ -210,7 +181,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/xml/tutorial_run1.xml" target="_blank" download rel="nofollow">
 						tutorial_run1.xml
 					</a>
@@ -219,7 +190,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/xml/tutorial_run2.xml" target="_blank" download rel="nofollow">
 						tutorial_run2.xml
 					</a>
@@ -228,7 +199,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/xml/tutorial_run3.xml" target="_blank" download rel="nofollow">
 						tutorial_run3.xml
 					</a>
@@ -237,7 +208,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-code fa-fw"></i>
+					<i class="bi bi-code-slash"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/xml/tutorial_run4.xml" target="_blank" download rel="nofollow">
 						tutorial_run4.xml
 					</a>
@@ -258,7 +229,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run2.trees" target="_blank" download rel="nofollow">
 						tutorial_run2.trees
 					</a>
@@ -267,7 +238,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run4.trees" target="_blank" download rel="nofollow">
 						tutorial_run4.trees
 					</a>
@@ -276,7 +247,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run1.trees" target="_blank" download rel="nofollow">
 						tutorial_run1.trees
 					</a>
@@ -285,7 +256,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run1.log" target="_blank" download rel="nofollow">
 						tutorial_run1.log
 					</a>
@@ -294,7 +265,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run2.log" target="_blank" download rel="nofollow">
 						tutorial_run2.log
 					</a>
@@ -303,7 +274,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run3.log" target="_blank" download rel="nofollow">
 						tutorial_run3.log
 					</a>
@@ -312,7 +283,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run3.trees" target="_blank" download rel="nofollow">
 						tutorial_run3.trees
 					</a>
@@ -321,7 +292,7 @@
 				
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-file-text-o fa-fw"></i>
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting/raw/master/precooked_runs/tutorial_run4.log" target="_blank" download rel="nofollow">
 						tutorial_run4.log
 					</a>
@@ -366,7 +337,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/55382af70e60908458a10c9c52d78e9687b40fb9">
 					18 Jun 2018 - <span class="text-gray">Minor fixes for the tutorial</span>
 					</a> 
@@ -374,7 +345,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/5f278eca4a709777603c3a1cc87c16fada3e2edb">
 					13 Jul 2017 - <span class="text-gray">Update latex tutorial</span>
 					</a> 
@@ -382,7 +353,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/1259a28e5f3cde169af467e118dc4144ccb0bb0e">
 					13 Jul 2017 - <span class="text-gray">Small changes</span>
 					</a> 
@@ -390,7 +361,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/5c0da1bad6c8bdb7f0c6eb269df8ba167013249e">
 					12 Jul 2017 - <span class="text-gray">Update programs used section</span>
 					</a> 
@@ -398,7 +369,7 @@
 			
 				<div class="smallspacer"></div>
 				<li> 
-					<i class="fa fa-check-square-o fa-fw"></i>
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting/commit/fb0332acafb68361adbb99a44169f924faac3799">
 					01 Feb 2017 - <span class="text-gray">Renamed files</span>
 					</a> 
@@ -413,225 +384,228 @@
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1>Background</h1>
+			<h1 id="background">Background</h1>
 
-<p>The primary goal of most phylogenetic analyses in BEAST is to infer the posterior distribution of trees and associated model parameters using Markov chain Monte Carlo (MCMC) sampling. In this tutorial, we will learn how to analyze the output of a MCMC analysis in BEAST using Tracer. This program allows us to easily visualize BEAST&#39;s output and summarize results. As we will see, we can also use Tracer to troubleshoot some of the most common MCMC problems  encountered in BEAST.</p>
+<p>The primary goal of most phylogenetic analyses in BEAST is to infer the posterior distribution of trees and associated model parameters using Markov chain Monte Carlo (MCMC) sampling. In this tutorial, we will learn how to analyze the output of a MCMC analysis in BEAST using Tracer. This program allows us to easily visualize BEAST’s output and summarize results. As we will see, we can also use Tracer to troubleshoot some of the most common MCMC problems  encountered in BEAST.</p>
 
-<p>While BEAST&#39;s MCMC algorithm is fairly well optimised for phylogenetic inference, problems can arise, especially as the complexity of our data and models increase. A MCMC run may not converge on a stationary target distribution. More commonly, a run might converge but mix poorly - meaning our samples from the posterior are highly autocorrelated and therefore not independent. In these cases, it is often necessary to tune the performance of the MCMC algorithm.</p>
+<p>While BEAST’s MCMC algorithm is fairly well optimised for phylogenetic inference, problems can arise, especially as the complexity of our data and models increase. A MCMC run may not converge on a stationary target distribution. More commonly, a run might converge but mix poorly - meaning our samples from the posterior are highly autocorrelated and therefore not independent. In these cases, it is often necessary to tune the performance of the MCMC algorithm.</p>
 
-<p>In this tutorial, we will consider a relatively simple example where we would like to infer a phylogeny and evolutionary parameters from a small alignment of sequences.  Our job will be to work together to increase the efficiency of the MCMC so we can make BEAST purr...</p>
+<p>In this tutorial, we will consider a relatively simple example where we would like to infer a phylogeny and evolutionary parameters from a small alignment of sequences.  Our job will be to work together to increase the efficiency of the MCMC so we can make BEAST purr…</p>
 
-<hr>
+<hr />
 
-<h1>Programs used in this Exercise</h1>
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
 
-<h3>BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.1+ <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>. </p>
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.4.1+ <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
 
-<h3>BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
 <p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
-<h3>Tracer</h3>
+<h3 id="tracer">Tracer</h3>
 
 <p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.</p>
 
-<hr>
+<hr />
 
-<h1>Practical: Getting BEAST to purr</h1>
+<h1 id="practical-getting-beast-to-purr">Practical: Getting BEAST to purr</h1>
 
-<h2>The Data</h2>
+<h2 id="the-data">The Data</h2>
 
 <p>To get started, I have generated a XML file that we can run our phylogenetic analysis in BEAST.</p>
 
 <blockquote>
-<p>Download the first BEAST input file <code>tutorial_run1.xml</code></p>
+  <p>Download the first BEAST input file <code class="language-plaintext highlighter-rouge">tutorial_run1.xml</code></p>
+
 </blockquote>
 
-<p>The XML contains an alignment of 36 randomly simulated DNA sequences. </p>
+<p>The XML contains an alignment of 36 randomly simulated DNA sequences.</p>
 
-<h2>Inspecting the XML file in BEAUti</h2>
+<h2 id="inspecting-the-xml-file-in-beauti">Inspecting the XML file in BEAUti</h2>
 
-<p>While we can open the XML file in any standard text editor, BEAUTi offers an easy way to inspect the different elements of the analysis: </p>
+<p>While we can open the XML file in any standard text editor, BEAUTi offers an easy way to inspect the different elements of the analysis:</p>
 
 <blockquote>
-<p>Open BEAUti and load in the <code>tutorial_run1.xml</code> file by navigating to <strong>File &gt; Load</strong>.</p>
+  <p>Open BEAUti and load in the <code class="language-plaintext highlighter-rouge">tutorial_run1.xml</code> file by navigating to <strong>File &gt; Load</strong>.</p>
+
 </blockquote>
 
 <p>By navigating between the different tabs at the top of the application window, we can inspect the data and each element of the analysis. For example, in the <strong>Site Model</strong> panel, we can see that we are fitting a GTR substitution model with no gamma rate heterogeneity (<a href="#fig:beauti_run1">Figure 1</a>).</p>
 
 <figure>
-    <a id="fig:beauti_run1"></a>
-    <img style="width:80.0%;" src="figures/beauti_run1.png" alt="">
-    <figcaption>Figure 1: The Site Model panel in BEAUTi</figcaption>
+	<a id="fig:beauti_run1"></a>
+	<img style="width:80.0%;" src="figures/beauti_run1.png" alt="" />
+	<figcaption>Figure 1: The Site Model panel in BEAUTi</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
-
-<h3>Running the XML in BEAST</h3>
+<h3 id="running-the-xml-in-beast">Running the XML in BEAST</h3>
 
 <p>We are now ready to run our first analysis in BEAST.</p>
 
 <blockquote>
-<p>Open BEAST and choose <code>tutorial_run1.xml</code> as the BEAST XML file. Then click <strong>Run</strong>.</p>
+  <p>Open BEAST and choose <code class="language-plaintext highlighter-rouge">tutorial_run1.xml</code> as the BEAST XML file. Then click <strong>Run</strong>.</p>
+
 </blockquote>
 
 <figure>
-    <a id="fig:beast_run1"></a>
-    <img style="width:50.0%;" src="figures/beast_input_run1.png" alt="">
-    <figcaption>Figure 2: Running BEAST with the specified XML configuration file.</figcaption>
+	<a id="fig:beast_run1"></a>
+	<img style="width:50.0%;" src="figures/beast_input_run1.png" alt="" />
+	<figcaption>Figure 2: Running BEAST with the specified XML configuration file.</figcaption>
 </figure>
-
-<p><br></p>
+<p><br /></p>
 
 <p>Since we are only running 200,000 iterations, the MCMC should finish running in under 30 seconds.</p>
 
-<h3>Visualizing BEAST&#39;s output in Tracer</h3>
+<h3 id="visualizing-beasts-output-in-tracer">Visualizing BEAST’s output in Tracer</h3>
 
 <blockquote>
-<p>Open Tracer and navigate to <strong>File &gt; Import Trace File</strong>, then open <code>tutorial_run1.log</code></p>
+  <p>Open Tracer and navigate to <strong>File &gt; Import Trace File</strong>, then open <code class="language-plaintext highlighter-rouge">tutorial_run1.log</code></p>
+
 </blockquote>
 
 <p>The results of your run will look similar, but not necessarily identical, to my results shown in <a href="#fig:beast_run1">Figure 2</a>.</p>
 
-<p>Tracer allows us to quickly visualize BEAST&#39;s MCMC output in order to check performance and see our parameter estimates. On the left there is a panel where all model parameters are listed along with their mean posterior estimates and Effective Sample Size (ESS). Recall that the ESS tells us how many pseudo-independent samples we have from the posterior, so the higher the better. Here, we can see that the ESS is low for all parameters, indicating that we do not yet have a good estimate of the posterior distribution.</p>
+<p>Tracer allows us to quickly visualize BEAST’s MCMC output in order to check performance and see our parameter estimates. On the left there is a panel where all model parameters are listed along with their mean posterior estimates and Effective Sample Size (ESS). Recall that the ESS tells us how many pseudo-independent samples we have from the posterior, so the higher the better. Here, we can see that the ESS is low for all parameters, indicating that we do not yet have a good estimate of the posterior distribution.</p>
 
-<p>By selecting a parameter in the left panel and then clicking on the <strong>Trace</strong> tab, we can see how the MCMC explored parameter space (<a href="#fig:tracer_run1">Figure 3</a>). For the <strong>clockRate</strong> parameter for instance, we see that the chain quickly converged to a value of about 0.01 (the true value used to simulate the sequence data), but mixing was poor, hence the low ESS. </p>
+<p>By selecting a parameter in the left panel and then clicking on the <strong>Trace</strong> tab, we can see how the MCMC explored parameter space (<a href="#fig:tracer_run1">Figure 3</a>). For the <strong>clockRate</strong> parameter for instance, we see that the chain quickly converged to a value of about 0.01 (the true value used to simulate the sequence data), but mixing was poor, hence the low ESS.</p>
 
 <figure>
-    <a id="fig:tracer_run1"></a>
-    <img style="width:80.0%;" src="figures/tracer_run1.png" alt="">
-    <figcaption>Figure 3: A trace plot for the **clockRate** parameter</figcaption>
+	<a id="fig:tracer_run1"></a>
+	<img style="width:80.0%;" src="figures/tracer_run1.png" alt="" />
+	<figcaption>Figure 3: A trace plot for the **clockRate** parameter</figcaption>
 </figure>
-
-<p><br></p>
+<p><br /></p>
 
 <p>We can also see our posterior estimates for each parameter by clicking on the <strong>Estimates</strong> tab while highlighting the desired parameter in the left panel. This provides us with various summary statistics and a frequency histogram representing our estimate of the posterior distribution constructed from our MCMC samples. For the <strong>clockRate</strong> parameter, we can see that our estimate of the posterior is extremely rough, again because we have so few uncorrelated samples from the posterior (<a href="#fig:tracer_run1_ests">Figure 4</a>).</p>
 
 <figure>
-    <a id="fig:tracer_run1_ests"></a>
-    <img style="width:80.0%;" src="figures/tracer_run1_ests.png" alt="">
-    <figcaption>Figure 4: Posterior estimates of the **clockRate** in Tracer.</figcaption>
+	<a id="fig:tracer_run1_ests"></a>
+	<img style="width:80.0%;" src="figures/tracer_run1_ests.png" alt="" />
+	<figcaption>Figure 4: Posterior estimates of the **clockRate** in Tracer.</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
-
-<h3>Run 2: Increasing the chain length</h3>
+<h3 id="run-2-increasing-the-chain-length">Run 2: Increasing the chain length</h3>
 
 <p>By checking the ESS, trace plots and parameter estimates, we got the picture that none of our parameters in Run 1 mixed well. In this case, the simplest thing to try is to rerun the MCMC for more iterations.</p>
 
 <blockquote>
-<p>Load the <code>tutorial_run1.xml</code> back into BEAUti using <strong>File &gt; Load</strong>. Navigate to the MCMC panel and increase the chain length to 1 million. You may also want to change the file name for the log file to <code>tutorial_run2.log</code> and to <code>tutorial_run2.trees</code> for the tree file so we do not overwrite our previous results. When done, navigate <strong>File &gt; Save As</strong> and save as <code>tutorial_run2.xml</code>.</p>
+  <p>Load the <code class="language-plaintext highlighter-rouge">tutorial_run1.xml</code> back into BEAUti using <strong>File &gt; Load</strong>. Navigate to the MCMC panel and increase the chain length to 1 million. You may also want to change the file name for the log file to <code class="language-plaintext highlighter-rouge">tutorial_run2.log</code> and to <code class="language-plaintext highlighter-rouge">tutorial_run2.trees</code> for the tree file so we do not overwrite our previous results. When done, navigate <strong>File &gt; Save As</strong> and save as <code class="language-plaintext highlighter-rouge">tutorial_run2.xml</code>.</p>
 
-<p>Run the <code>tutorial_run2.xml</code> file in BEAST as we did before. When done, open the <code>tutorial_run2.log</code> in Tracer.</p>
 </blockquote>
-
-<figure>
-    <a id="fig:beauti_run2"></a>
-    <img style="width:80.0%;" src="figures/beauti_run2.png" alt="">
-    <figcaption>Figure 5: Increasing the chain length in BEAUTi</figcaption>
-</figure>
-
-<p><br></p>
-
-<p>Looking at the MCMC output in Tracer, we see that that increasing the chain length did help some (<a href="#fig:tracer_run2">Figure 6</a>). The ESS values are higher and the traces look better, but still not great. In the next section, we will continue to focus on the <strong>clockRate</strong> parameter because it still has a low ESS and appears to mix especially poorly. </p>
-
-<figure>
-    <a id="fig:tracer_run2"></a>
-    <img style="width:80.0%;" src="figures/tracer_run2.png" alt="">
-    <figcaption>Figure 6: A trace plot for the **clockRate** parameter</figcaption>
-</figure>
-
-<p><br></p>
-
-<h3>Run 3: Changing the <strong>clockRate</strong> operators</h3>
-
-<p>If one parameter in particular is not converging or mixing well, we can try to tweak that parameter&#39;s operator(s). Remember that BEAST&#39;s operators control what new parameter values are proposed at each MCMC iteration and how these proposals are made (i.e. the proposal distribution). Since the <strong>clockRate</strong> parameter was not mixing well in Run 2, we will try increasing the frequency at which new <strong>clockRates</strong> are proposed.</p>
 
 <blockquote>
-<p>Load the <code>tutorial_run2.xml</code> back into BEAUti and select <code>View &gt; Show Operators</code> panel. This will bring up a new panel showing all the operators in use (<a href="#fig:beauti_run3">Figure 7</a>). Click on the black triangle next to <code>Scale:clockRate</code>. In the menu that drops down, check <strong>Optimise</strong>. In the box to the right of <code>Scale.clockRate</code>, change the value from <strong>0.1</strong> to <strong>3.0</strong>. Now navigate to the MCMC panel and change the file name for the log file to <code>tutorial_run3.log</code> and the tree file to <code>tutorial_run3.trees</code>. When done, save as <code>tutorial_run3.xml</code>.</p>
+  <p>Run the <code class="language-plaintext highlighter-rouge">tutorial_run2.xml</code> file in BEAST as we did before. When done, open the <code class="language-plaintext highlighter-rouge">tutorial_run2.log</code> in Tracer.</p>
+
 </blockquote>
 
 <figure>
-    <a id="fig:beauti_run3"></a>
-    <img style="width:80.0%;" src="figures/beauti_run3.png" alt="">
-    <figcaption>Figure 7: The Operators panel in BEAUTi</figcaption>
+	<a id="fig:beauti_run2"></a>
+	<img style="width:80.0%;" src="figures/beauti_run2.png" alt="" />
+	<figcaption>Figure 5: Increasing the chain length in BEAUTi</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
+<p>Looking at the MCMC output in Tracer, we see that that increasing the chain length did help some (<a href="#fig:tracer_run2">Figure 6</a>). The ESS values are higher and the traces look better, but still not great. In the next section, we will continue to focus on the <strong>clockRate</strong> parameter because it still has a low ESS and appears to mix especially poorly.</p>
+
+<figure>
+	<a id="fig:tracer_run2"></a>
+	<img style="width:80.0%;" src="figures/tracer_run2.png" alt="" />
+	<figcaption>Figure 6: A trace plot for the **clockRate** parameter</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="run-3-changing-the-clockrate-operators">Run 3: Changing the <strong>clockRate</strong> operators</h3>
+
+<p>If one parameter in particular is not converging or mixing well, we can try to tweak that parameter’s operator(s). Remember that BEAST’s operators control what new parameter values are proposed at each MCMC iteration and how these proposals are made (i.e. the proposal distribution). Since the <strong>clockRate</strong> parameter was not mixing well in Run 2, we will try increasing the frequency at which new <strong>clockRates</strong> are proposed.</p>
+
+<blockquote>
+  <p>Load the <code class="language-plaintext highlighter-rouge">tutorial_run2.xml</code> back into BEAUti and select <code class="language-plaintext highlighter-rouge">View &gt; Show Operators</code> panel. This will bring up a new panel showing all the operators in use (<a href="#fig:beauti_run3">Figure 7</a>). Click on the black triangle next to <code class="language-plaintext highlighter-rouge">Scale:clockRate</code>. In the menu that drops down, check <strong>Optimise</strong>. In the box to the right of <code class="language-plaintext highlighter-rouge">Scale.clockRate</code>, change the value from <strong>0.1</strong> to <strong>3.0</strong>. Now navigate to the MCMC panel and change the file name for the log file to <code class="language-plaintext highlighter-rouge">tutorial_run3.log</code> and the tree file to <code class="language-plaintext highlighter-rouge">tutorial_run3.trees</code>. When done, save as <code class="language-plaintext highlighter-rouge">tutorial_run3.xml</code>.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:beauti_run3"></a>
+	<img style="width:80.0%;" src="figures/beauti_run3.png" alt="" />
+	<figcaption>Figure 7: The Operators panel in BEAUTi</figcaption>
+</figure>
+<p><br /></p>
 
 <p>So, what just happened? We told BEAST to try to automatically optimise the scale operator on the <strong>clockRate</strong>, which moves the parameter value up or down. Note that by default, operators are automatically optimised in BEAST, but for the purposes of this tutorial I turned off auto-optimization to get especially bad mixing. We also increased the weight on this scale operator so that new <strong>clockRates</strong> will be proposed more often in the MCMC. Going from a weight of 0.1 to 3.0 means that new proposals for that parameter will be made thirty times as often, but the frequency at which a given operator is called depends on the weights given to other operators. So if there are parameters with very high ESS values, we may want to reallocate weight on their operators to operators on less well mixing parameters. For fun, you may want to guess what each operator in the <strong>Operators</strong> panel is doing.</p>
 
 <blockquote>
-<p>Run the <code>tutorial_run3.xml</code> in BEAST and then open the <code>tutorial_run3.log</code> in Tracer.</p>
+  <p>Run the <code class="language-plaintext highlighter-rouge">tutorial_run3.xml</code> in BEAST and then open the <code class="language-plaintext highlighter-rouge">tutorial_run3.log</code> in Tracer.</p>
+
 </blockquote>
 
 <p>We can see that optimizing the operator dramatically improves mixing for the <strong>clockRate</strong> (<a href="#fig:tracer_run3">Figure 8</a>). But there is still room for improvement.</p>
 
 <figure>
-    <a id="fig:tracer_run3"></a>
-    <img style="width:80.0%;" src="figures/tracer_run3.png" alt="">
-    <figcaption>Figure 8: A trace plot for the **clockRate** parameter</figcaption>
+	<a id="fig:tracer_run3"></a>
+	<img style="width:80.0%;" src="figures/tracer_run3.png" alt="" />
+	<figcaption>Figure 8: A trace plot for the **clockRate** parameter</figcaption>
 </figure>
-
-<p><br></p>
+<p><br /></p>
 
 <p>One thing to keep in mind is that BEAST is using MCMC to explore a multidimensional parameter space, and poor mixing in one dimension can be caused by poor mixing in another dimension. This often arises because two parameters are highly correlated. We can identify these correlations in Tracer by visualizing the joint distribution of a pair of parameters together. To do this, select one parameter in the left panel and then, while holding the command key (Mac) or control key (Windows), select another. Then click on the <strong>Joint-Marginal</strong> tab at the top. Looking at the pairwise joint distribution for <strong>TreeHeight</strong> and <strong>clockRate</strong>, we see that these two parameters are highly negatively correlated (<a href="#fig:tracer_run3Joint">Figure 9</a>). We therefore may want to add an operator that updates these parameters together to more efficiently explore their parameter space.</p>
 
 <figure>
-    <a id="fig:tracer_run3Joint"></a>
-    <img style="width:80.0%;" src="figures/tracer_run3Joint.png" alt="">
-    <figcaption>Figure 9: The joint posterior distribution of **TreeHeight** and **clockRate**</figcaption>
+	<a id="fig:tracer_run3Joint"></a>
+	<img style="width:80.0%;" src="figures/tracer_run3Joint.png" alt="" />
+	<figcaption>Figure 9: The joint posterior distribution of **TreeHeight** and **clockRate**</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
+<h3 id="run-4-adding-an-updown-operator">Run 4: Adding an upDown operator</h3>
 
-<h3>Run 4: Adding an upDown operator</h3>
-
-<p>The easiest way to improve MCMC performance when two parameters are highly negatively correlated is to add an <strong>UpDown</strong> operator. This operator scales one parameter up while scaling the other parameter down. If two parameters are highly positively correlated we can also use this operator to scale both parameters in the same direction, up or down. </p>
+<p>The easiest way to improve MCMC performance when two parameters are highly negatively correlated is to add an <strong>UpDown</strong> operator. This operator scales one parameter up while scaling the other parameter down. If two parameters are highly positively correlated we can also use this operator to scale both parameters in the same direction, up or down.</p>
 
 <blockquote>
-<p>Load the <code>tutorial_run3.xml</code> back into BEAUti and select <code>View &gt; Show Operators</code> panel. Click on the black triangle next to <strong>UpDown clockRate</strong>. In the menu that drops down, check <strong>Optimise</strong>. In the box to the right, change the weight on the UpDown operator from <strong>0.0</strong> to <strong>3.0</strong>. In the MCMC panel, change the file name for the log file to <code>tutorial_run4.log</code> and the tree file to <code>tutorial_run4.trees</code>. When done, save as tutorial_run4.xml`.</p>
+  <p>Load the <code class="language-plaintext highlighter-rouge">tutorial_run3.xml</code> back into BEAUti and select <code class="language-plaintext highlighter-rouge">View &gt; Show Operators</code> panel. Click on the black triangle next to <strong>UpDown clockRate</strong>. In the menu that drops down, check <strong>Optimise</strong>. In the box to the right, change the weight on the UpDown operator from <strong>0.0</strong> to <strong>3.0</strong>. In the MCMC panel, change the file name for the log file to <code class="language-plaintext highlighter-rouge">tutorial_run4.log</code> and the tree file to <code class="language-plaintext highlighter-rouge">tutorial_run4.trees</code>. When done, save as tutorial_run4.xml`.</p>
+
 </blockquote>
 
 <p>We just added an <strong>UpDown</strong> operator on the <strong>clockRate</strong> and the <strong>TreeHeight</strong>. The fact that these two parameters are highly negatively correlated makes perfect sense. An increase in the <strong>clockRate</strong> means that less time is needed for substitutions to accumulate along branches; meaning branches can be shorter and yet still explain the same amount of accumulated evolutionary change in the sequence data. If all branches in the tree become shorter, then the total <strong>TreeHeight</strong> will also decrease. Thus it makes sense to include an <strong>UpDown</strong> operator on <strong>clockRate</strong> and <strong>TreeHeight</strong>. In fact, by default BEAUTi includes this operator. However, I disabled it in the original XML file by setting the weight on this operator to zero for the purpose of illustration.</p>
 
 <blockquote>
-<p>Run the <code>tutorial_run4.xml</code> in BEAST and then open the <code>tutorial_run4.log</code> in Tracer.</p>
+  <p>Run the <code class="language-plaintext highlighter-rouge">tutorial_run4.xml</code> in BEAST and then open the <code class="language-plaintext highlighter-rouge">tutorial_run4.log</code> in Tracer.</p>
+
 </blockquote>
 
-<p>Looking at the MCMC output in Tracer, we see that all parameters are starting to mix well with relatively high ESS values. Personally, I would probably want to run one final MCMC for several million iterations just to be on the safe side, but this can easily be done by adding more iterations to the chain as we did for Run 2.  Alternatively, multiple different MCMC runs can be combined using the program LogCombiner that comes packaged with BEAST. This may be better than running one single long analysis, as it allows us to be sure independent runs are converging on similar parameters.  </p>
+<p>Looking at the MCMC output in Tracer, we see that all parameters are starting to mix well with relatively high ESS values. Personally, I would probably want to run one final MCMC for several million iterations just to be on the safe side, but this can easily be done by adding more iterations to the chain as we did for Run 2.  Alternatively, multiple different MCMC runs can be combined using the program LogCombiner that comes packaged with BEAST. This may be better than running one single long analysis, as it allows us to be sure independent runs are converging on similar parameters.</p>
 
 <figure>
-    <a id="fig:tracer_run4"></a>
-    <img style="width:80.0%;" src="figures/tracer_run4.png" alt="">
-    <figcaption>Figure 10: A trace plot for the **clockRate** parameter</figcaption>
+	<a id="fig:tracer_run4"></a>
+	<img style="width:80.0%;" src="figures/tracer_run4.png" alt="" />
+	<figcaption>Figure 10: A trace plot for the **clockRate** parameter</figcaption>
 </figure>
+<p><br /></p>
 
-<p><br></p>
-
-<h3>Further things to keep in mind</h3>
-
-<ul>
-<li> The number of MCMC iterations needed to achieve a reasonable posterior sample in this tutorial was quite small. With larger alignments, much longer chains may be needed.</li>
-<li> In this tutorial we only considered MCMC performance with respect to exploring parameter space, but we also need to consider tree space. One simple diagnostic for checking convergence and mixing in tree space is to look at the trace plot for the tree likelihood. Poor mixing in the tree likelihood can indicate problems exploring tree space.</li>
-<li> It is always a good idea to check your posterior estimates against sampling from the prior.<br></li>
-</ul>
-
-<h1>Useful Links</h1>
+<h3 id="further-things-to-keep-in-mind">Further things to keep in mind</h3>
 
 <ul>
-<li> <a href="http://www.beast2.org/book.html"><em>Bayesian Evolutionary Analysis with BEAST 2; chapter 10.</em></a>  <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>The number of MCMC iterations needed to achieve a reasonable posterior sample in this tutorial was quite small. With larger alignments, much longer chains may be needed.</li>
+  <li>In this tutorial we only considered MCMC performance with respect to exploring parameter space, but we also need to consider tree space. One simple diagnostic for checking convergence and mixing in tree space is to look at the trace plot for the tree likelihood. Poor mixing in the tree likelihood can indicate problems exploring tree space.</li>
+  <li>It is always a good idea to check your posterior estimates against sampling from the prior.</li>
 </ul>
 
-<hr>
+<h1 id="useful-links">Useful Links</h1>
 
-<h1>Relevant References</h1>
+<ul>
+  <li><a href="http://www.beast2.org/book.html"><em>Bayesian Evolutionary Analysis with BEAST 2; chapter 10.</em></a>  <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
 
 <ol class="bibliography"><li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
 
 
 			<hr>
@@ -655,41 +629,25 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
-	<div class="container">
-		<div class="col-md-6 reduced-gutter">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/about/">about</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/contact/">contact</a>
-					</li>	
-					<li class="footernav">
-						<i class="fa"></i> <a class="foot" href="/license/">license</a>
-					</li>	
-				</ul>
-			<div class="spacer"></div>			
-		</div>
-		
-		<div class="col-md-5 text-right">
-			<div class="bigspacer"></div>		
-				<ul class="list-inline">					
-					<li class="footernav">
-						<i class="fa"></i>powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
-					</li>								
-				</ul>
-			<div class="spacer"></div>			
-		</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
 
-		<div class="col-md-1 reduced-gutter">
-			<div class="spacer"></div>						
-				<div class="title text-gray">
-					<a class="foot" href="http://www.github.com/taming-the-beast"><i class="fa fa-github fa-fw"></i></a>
-				</div>
-			<div class="spacer"></div>			
-		</div>
-	</div>
+  </div>
 </div>
 
 	
