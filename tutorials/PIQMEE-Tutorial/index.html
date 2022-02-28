@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>PIQMEE-Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div clas="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+        </a>
+        
+        <ul class="nav navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news/">news</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/workshops/">workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorials/">tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contribute/">contribute</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+              <i class="bi bi-rss"></i>
+          </a></li>
+        </ul>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+    </div>
+  </nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/PIQMEE-Tutorial/">PIQMEE Tutorial</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				How to efficiently analyze large data sets containing duplicates
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Veronika Bošková
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/raw/master/data/data_with_duplicates.fasta" target="_blank" rel="nofollow">
+						data_with_duplicates.fasta
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/raw/master/xml/data_with_duplicates.xml" target="_blank" download rel="nofollow">
+						data_with_duplicates.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-gear"></i>
+					<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/raw/master/scripts/Skyline_Re.R" target="_blank" download rel="nofollow">
+						Skyline_Re.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/raw/master/precooked_runs/data_with_duplicates.data_with_duplicates.log" target="_blank" download rel="nofollow">
+						data_with_duplicates.data_w...
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/boskovav">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/2584478?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				boskovav
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/commit/2044d8eb9cbf2eaeed8fbf41ba92c4efb5745fc4">
+					22 Sep 2020 - <span class="text-gray">Update for PIQMEE v1.0.1 - also increased the chain length</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/commit/4abb9401ce503e4767258c58327c1cfef45ef897">
+					20 Aug 2020 - <span class="text-gray">Correcting typos</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/commit/969e3ee5729cd6bf22d5e9c1a8353da54edb0c51">
+					20 Aug 2020 - <span class="text-gray">Initial commit for PIQMEE tutorial with all files.</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>In a usual Bayesian phylodynamic analysis only a few hundred sequences can be input and successfully processed within a reasonable runtime.
+Data sets containing thousands of sequences are usually impossible to be analysed.
+Down-sampling the data set at random is an option, but leads to imprecise parameter estimates and could lead to underestimation of the time of the most recent common ancestor.</p>
+
+<p>Many data sets however contain duplicates.
+This is especially the case for longitudinally sampled sequences from one host infected by a pathogen causing a chronic infection, or for sequences obtained from multiple individuals infected by a slowly mutating pathogen.
+One could take advantage of this duplicity to reduce the analysis runtime and thus allow large data sets to be analyzed.</p>
+
+<p>The fact that a certain sequence is seen in multiple copies in the resulting sequence alignment is informative for the tree prior model and thus helps to narrow down the parameters of the population dynamic process.
+However, these duplicates do not contain information for their confident placing in a phylogenetic tree (resulting in poorly supported bifurcations).
+Sampling from all possible topological configurations during the MCMC thus represents a waste of computational time.
+A new package for BEAST 2, called PIQMEE, draws information from these duplicates for population dynamic inference (under the birth-death model) without inferring the full topologies of duplicate sequences <a class="citation" href="#Boskova2020">(Boskova &amp; Stadler, 2020)</a>.
+This approach reduces the complexity of analyses and enables datasets as large as 20000 sequences (~20 unique, rest being duplicates) to be processed within a 10-day runtime.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.
+This tutorial uses the BEAST2 version 2.6.3.</p>
+
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms.
+For us it simply means that the interface will be the same on all platforms.
+The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux.
+BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p>Tracer (<a href="http://beast.community/tracer">http://beast.community/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain.
+This program can be used for visual inspection and to assess convergence.
+It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters.
+It can also be used to investigate potential parameter correlations.
+We will be using Tracer v1.7.1.</p>
+
+<h3 id="r--rstudio">R / RStudio</h3>
+
+<p>We will be using R to analyze the output of the Birth-Death Skyline plot.
+RStudio provides a user-friendly graphical user interface to R that makes it easier to edit and run scripts.
+(It is not necessary to use RStudio for this tutorial).</p>
+
+<hr />
+
+<h1 id="practical-analysing-a-simulated-data-set-with-piqmee">Practical: Analysing a simulated data set with PIQMEE</h1>
+
+<p>The aim of this tutorial is to become familiar with setting up the analyses with PIQMEE and with the subsequent analysis of the output.
+We will demonstrate how to use the PIQMEE package by applying it a simulated data set of 150 sequences sampled longitudinally mimicking a situation where a pathogen population from an infected patient gets sampled and sequenced at 3 distinct time points.</p>
+
+<h2 id="the-data">The Data</h2>
+
+<p>The data set used in this tutorial consists of 150 sequences in total, of which only 20 are unique.
+Note that since PIQMEE cannot handle recombining sequences, the sequences were simulated without recombination.</p>
+
+<p>When preparing the alignment file for BEAUti one needs to keep in mind that we will need to somehow tell PIQMEE (and thus BEAUti) about the number of copies, as well as the sampling times, of each unique sequence.
+This specification can be done directly in the sequence annotation of the alignment file or can be later input manually in BEAUti.
+In either case, both the sequence sampling times and the number of copies will each have to be specified as a <em>single number, not a vector</em>.
+Therefore, if there are unique sequences in the data set that have been sampled at multiple time points (dates), we need to be able to specify this in our alignment, such that it can later be processed correctly by BEAUti.
+We will now describe two ways to make this specification for such data sets.</p>
+
+<p><strong>Option 1</strong>: The first and simpler way is to represent each copy of each unique sequence as a separate entry in the alignment.
+This means that each unique sequence will appear in the alignment (fasta file) as many times as is the number of its total copies.
+Sampling time point has to specified accordingly for each sequence and the number of total copies has to be set to 1 either in the sequence annotation directly in the alignment file, or will be input later in BEAUti manually.
+However, if the data set is large, specifying the number of copies in this way may cause BEAST to use too much memory when reading in the xml file, and thus lead to initialization errors.</p>
+
+<p><strong>Option 2</strong>: The second and recommended way is to de-duplicate repetitive sequences per each time point.
+In other words, each unique sequence will appear in the alignment (fasta file) as many times as there are different sampling times associated with that sequence.
+Each instance of that sequence in the alignment has to be assigned one sampling time and the number of copies of that sequence is set to its observed count at that particular time point.</p>
+
+<p>The data used in this tutorial contain several unique sequences, of which one is associated with multiple sampling time points.
+We de-duplicated the sequences according to <em>Option 2</em> described above, and thus obtained an alignment of 21 sequences, 1500 nucleotides each.
+We specified the sampling dates and number of copies of each sequence in the sequence annotation.
+<!-- The number of copies here represents the number of reads that have been obtained for each sequence at that particular time point. -->
+You can check out this annotation by opening the alignment file in a text editor.
+The alignment can be downloaded as part of this tutorial (data_with_duplicates.fasta).</p>
+
+<blockquote>
+  <p><strong>Downloading from taming-the-beast.org</strong></p>
+
+  <p>Link to the alignment file, <code class="language-plaintext highlighter-rouge">data_with_duplicates.fasta</code> is on the left-hand panel, under the heading <strong>Data</strong>.
+<strong>Right-click</strong> on the link and select <strong>“Save Link As…“</strong> (Firefox and Chrome) or <strong>“Download Linked File As…“</strong> (Safari) and save the file to a convenient location on your local drive.
+Alternatively, if you <strong>left-click</strong> on the link most browsers will display the alignment file.
+You can then press <strong>File &gt; Save As</strong> to store a local copy of the file.
+Note that some browsers will inject an HTML header into the file, which will make it unusable in BEAST2 (making this the less preferable option for downloading data files).</p>
+
+</blockquote>
+
+<h2 id="creating-the-analysis-file-with-beauti">Creating the analysis file with BEAUti</h2>
+
+<h3 id="installing-piqmee">Installing PIQMEE</h3>
+
+<p>To use the PIQMEE package within BEAUti2 or BEAST2, we first need to download it. To do so, open BEAUti and click on <code class="language-plaintext highlighter-rouge">File &gt;&gt; Manage Packages</code>, select PIQMEE and then hit the <code class="language-plaintext highlighter-rouge">Install/Upgrade</code> button.</p>
+
+<figure>
+    <a id="fig:packagemanager"></a>
+    <img style="width:75%;" src="figures/PackageManager.png" alt="" />
+    <figcaption>Figure 1: Opening up the Package Manager in BEAUti</figcaption>
+</figure>
+<p><br /></p>
+
+<figure>
+    <a id="fig:download"></a>
+    <img style="width:75%;" src="figures/PIQMEEdownload.png" alt="" />
+    <figcaption>Figure 2: Installing PIQMEE with BEAUti</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Downloading PIQMEE will automatically trigger the download of BDSKY <a class="citation" href="#Stadler2013">(Stadler et al., 2013)</a> as well, if not installed already, since PIQMEE’s tree prior is based on the birth-death skyline model implemented in BDSKY.</p>
+
+<p>Now you need to restart BEAUti for the installed packages to load up properly.</p>
+
+<h3 id="loading-piqmee-template">Loading PIQMEE template</h3>
+
+<p>By default, BEAUti loads the standard template for setting up xml files. However, setting up analysis with PIQME requires a few additional input tabs (for duplicate counts for instance).
+Thus, we need to change to piqmee template instead.</p>
+
+<blockquote>
+
+  <p>Click on <code class="language-plaintext highlighter-rouge">File &gt;&gt; Template</code> and select <em>piqmee</em> from the given options.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:template"></a>
+    <img style="width:75%;" src="figures/PIQMEEtemplate.png" alt="" />
+    <figcaption>Figure 3: Switching to PIQMEE template </figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="importing-alignment">Importing alignment</h3>
+
+<p>Now we can continue setting up the xml as usual.
+Drag and drop, or input the data file <code class="language-plaintext highlighter-rouge">data_with_duplicates.fasta</code> via <code class="language-plaintext highlighter-rouge">File &gt;&gt; Import Alignment</code> option and navigating to the location of the fasta file.</p>
+
+<figure>
+    <a id="fig:alignmentimport"></a>
+    <img style="width:75%;" src="figures/PIQMEEalignment.png" alt="" />
+    <figcaption>Figure 4: Importing alignment </figcaption>
+</figure>
+<p><br /></p>
+
+<p>When prompted, confirm that the data are <code class="language-plaintext highlighter-rouge">nucleotide</code> sequences.</p>
+
+<figure>
+    <a id="fig:alignmentimportnucleotide"></a>
+    <img style="width:25%;" src="figures/PIQMEEalignmentnucleotide.png" alt="" />
+    <figcaption>Figure 5: Specifying that the alignment contains nucleotide sequences </figcaption>
+</figure>
+<p><br /></p>
+
+<p>After you have loaded the fasta file in BEAUti, you can see that the alignment contains 21 sequences, as described above.</p>
+
+<figure>
+    <a id="fig:alignmentimported"></a>
+    <img style="width:75%;" src="figures/PIQMEEalignmentinBEAUti.png" alt="" />
+    <figcaption>Figure 6: Visulization of imported alignment in BEAUti </figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="setting-up-the-sampling-times">Setting up the sampling times</h3>
+<p>Since our data set contain longitudinally sampled sequences, we need to extract the sampling times for each sequence in order to correctly analyze this data.</p>
+
+<blockquote>
+
+  <p>Click on <strong>Tip Dates</strong> tab and tick the option <code class="language-plaintext highlighter-rouge">Use tip dates</code>.</p>
+
+</blockquote>
+
+<p>The date that specifies the sampling time associated with the given sequence is contained in the sequence annotation.</p>
+
+<blockquote>
+
+  <p>Click on the <strong>Auto Configure</strong> button.
+Here, select <code class="language-plaintext highlighter-rouge">split on character</code> option.
+The default character to split the string on is the underscore <code class="language-plaintext highlighter-rouge">_</code>.
+This is exactly the separator character used in our sequence annotation, and so we leave it to the default.
+Then, specify that we are interested in the <code class="language-plaintext highlighter-rouge">3</code><sup>rd</sup> character group.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:dates"></a>
+    <img style="width:75%;" src="figures/PIQMEEdates.png" alt="" />
+    <figcaption>Figure 7: Specifying tip dates </figcaption>
+</figure>
+<p><br /></p>
+
+<p>Since we have simulated data, the date is in arbitrary time units.
+However, due to the fact that our data set has been simulated such as to mimic within-host pathogen data, the realistic time unit would be years post-infection.
+Specifying the time unit for the sampling times automatically provides the unit for the molecular clock.
+So, since we selected the unit for the tip dates in years, we would have the substitution rate in units of substitutions/site/year.</p>
+
+<h3 id="specifying-the-number-of-copies-of-each-sequence">Specifying the number of copies of each sequence</h3>
+<p>As mentioned earlier, our alignment has been de-duplicated such that we only have unique sequences per each time point.
+However, since each sequence has been observed in multiple copies and we want to account for this in our analysis, we need to inform our method where it can get this count information from.</p>
+
+<blockquote>
+
+  <p>Change to the <strong>Sequence Counts</strong> tab.
+Click on the <strong>Guess</strong> button and select <code class="language-plaintext highlighter-rouge">use everything</code>, specifying that you want to select field which follows <code class="language-plaintext highlighter-rouge">after last _</code>.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:counts"></a>
+    <img style="width:75%;" src="figures/PIQMEEcounts.png" alt="" />
+    <figcaption>Figure 8: Specifying observed counts of each sequence </figcaption>
+</figure>
+<p><br /></p>
+
+<p><strong>Side note</strong>: If the duplicate sequences were specified as separate entries in the alignment (Option 1 described in the <em>Data</em> section), we would have left the <strong>Sequence Counts</strong> tab settings unchanged, i.e. we would have specified that each sequence in the alignment has been observed exactly once.
+When running this alignment with PIQMEE in BEAST, the software would automatically group identical sequences together and de-duplicate them internally.</p>
+
+<h3 id="specifying-the-site-model">Specifying the Site Model</h3>
+<p>In the <strong>Site Model</strong> tab, specify that we assume the <code class="language-plaintext highlighter-rouge">Gamma Category Count</code> to be <code class="language-plaintext highlighter-rouge">4</code> and leave all the other option to the default.</p>
+
+<figure>
+    <a id="fig:sitemodel"></a>
+    <img style="width:75%;" src="figures/PIQMEESiteModel.png" alt="" />
+    <figcaption>Figure 9: Specifying site model settings </figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="specifying-the-clock-model">Specifying the Clock Model</h3>
+<p>Toggle to the <code class="language-plaintext highlighter-rouge">Clock Model</code> tab.
+We keep the <em>Strict Clock</em> model but we change (the starting value of) the clock rate from 1 to <code class="language-plaintext highlighter-rouge">0.001</code>, units being is substitutions/site/year.</p>
+
+<figure>
+    <a id="fig:clockmodel"></a>
+    <img style="width:75%;" src="figures/PIQMEEClockModel.png" alt="" />
+    <figcaption>Figure 10: Setting up the clock model </figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="specifying-priors">Specifying Priors</h3>
+<p>Now we need to specify the tree prior and the prior distribution for the parameters of our models.
+For the tree prior, we would like to use a model that takes into account the fact that our sequences have been sampled at several points in time.
+In fact, there have been three points in time where intense sampling happened.
+At each time point many sequences were obtained at once.
+This is due to the type of the data we are dealing with - sequences have been simulated to mimic a chronically infected patient and the pathogen population from within this patient has been sampled and sequenced at various time points.
+If we look back at the <strong>Tip Dates</strong> tab, we can spot these 3 time points.</p>
+
+<figure>
+    <a id="fig:samplingtimepoints2"></a>
+    <img style="width:75%;" src="figures/PIQMEErhoChangeTimesInTipDatesTab.png" alt="" />
+    <figcaption>Figure 11: The three distinct sampling times in our data set (0, 0.25, 0.5) are highlighted </figcaption>
+</figure>
+<p><br /></p>
+
+<p>The tree prior in PIQMEE has been implemented as a birth-death skyline model.
+A specific type of this model allows for “mass sampling” events and assumes that the sampling proportion <code class="language-plaintext highlighter-rouge">rho</code> is different for each such period of intense sampling.
+This is exactly the model that fits our data and we thus select it for the analysis.</p>
+
+<blockquote>
+
+  <p>In the <strong>Priors</strong> tab, select as the tree prior the <code class="language-plaintext highlighter-rouge">Birth-death skyline Multi Rho</code> model.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:treeprior"></a>
+    <img style="width:75%;" src="figures/PIQMEETreePrior.png" alt="" />
+    <figcaption>Figure 12: Setting up the tree prior</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We will now specify when exactly did the intense sampling happen.
+These times correspond to the tip times we have just looked at a moment ago.
+They are specified as <code class="language-plaintext highlighter-rouge">Height</code>, i.e. time since the last sample.
+These times are 0, 0.25 and 0.5, meaning, we sequenced the pathogen population from the patient at some point corresponding to 0, then 3 months earlier (height 0.25) and 6 months earlier (height 0.5).</p>
+
+<blockquote>
+
+  <p><strong>Setting up the sampling proportion changes for BDSKY model</strong></p>
+
+  <p>Go to the <strong>Initialization</strong> tab and expand the <code class="language-plaintext highlighter-rouge">rhoChangeTimes</code> entry by clicking on the arrow to the left.
+Change the <code class="language-plaintext highlighter-rouge">Dimension</code> to <code class="language-plaintext highlighter-rouge">3</code>.
+Then copy the <em>unique <code class="language-plaintext highlighter-rouge">Height</code> values</em> you saw in the <strong>Tip Dates</strong> tab and input them as <code class="language-plaintext highlighter-rouge">Value</code> of the <code class="language-plaintext highlighter-rouge">rhoChangeTimes</code>.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:rhosamplingchangetimes"></a>
+    <img style="width:75%;" src="figures/PIQMEErhoChangeTimes.png" alt="" />
+    <figcaption>Figure 13: Setting up the rho change times</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Back in the <strong>Priors</strong> tab, we can now specify the actual prior distributions for the parameters.
+For the selected birth-death model, we have to specify a prior for the death (become uninfectious) rate, the reproductive number, the sampling proportion rho and the origin time of the tree.
+The first three parameters are correlated, meaning, that without fixing one, or without having very strong priors, we cannot get a good estimate of each parameter.</p>
+
+<p>Usually, one has no or very little knowledge about the values for the sampling proportion and the birth rate (the duplication rate of the pathogen) and thus very little idea about the reproductive number (=birth rate / death rate).
+However, for most pathogens, a good estimate (from previous studies) about the death rate is available.
+This then allows for fixing or using a narrow prior for the death rate parameter.</p>
+
+<p>For this tutorial, we will fix the death (become uninfectious) rate parameter.
+As we have simulated the data we know its value exactly.</p>
+
+<blockquote>
+
+  <p>Click on the arrow to the left of <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate</code> to expand the parameter prior settings.
+Click on the tab with the initial values.
+A pop-up window will show up.
+In this pop-up window, set the <code class="language-plaintext highlighter-rouge">Value</code> to <code class="language-plaintext highlighter-rouge">124</code>.
+Then, untick the <code class="language-plaintext highlighter-rouge">Estimate</code> box and hit <em>OK</em>.</p>
+
+  <p>Note that once you untick the Estimate box and click OK, the entry for become uninfectious rate will disappear immediately from the Priors tab and you will not be able to change this settings any longer, unless you start the whole process of setting up the xml in BEAUti from scratch.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:deathrate"></a>
+    <img style="width:75%;" src="figures/PIQMEEPriorbecomeUninfectiousRate.png" alt="" />
+    <figcaption>Figure 14: Setting up the death (becomeUninfectious) rate</figcaption>
+</figure>
+<p><br /></p>
+
+<p>For the reproductive number and the sampling proportion rho, we will set quite broad priors.</p>
+
+<blockquote>
+
+  <p>Expand the <code class="language-plaintext highlighter-rouge">reproductiveNumber</code> entry.
+Leave the prior distribution to the default Log Normal, but tick the box next to the <code class="language-plaintext highlighter-rouge">Mean In Real Space</code> option and <code class="language-plaintext highlighter-rouge">set both M and S to 1.0</code>.
+Then, click on the initial value tab and change the <code class="language-plaintext highlighter-rouge">Dimension</code> to <code class="language-plaintext highlighter-rouge">3</code>.
+Confirm the setting by clicking <em>OK</em>.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:R0"></a>
+    <img style="width:75%;" src="figures/PIQMEEPriorReproductiveNumber.png" alt="" />
+    <figcaption>Figure 15: Setting up the reproductive number prior</figcaption>
+</figure>
+<p><br /></p>
+
+<blockquote>
+
+  <p>Now expand the <code class="language-plaintext highlighter-rouge">rhoMultiRho</code> entry.
+Again, keep the prior distribution to the default Beta.
+Click on the initial value tab and change the <code class="language-plaintext highlighter-rouge">Dimension</code> to <code class="language-plaintext highlighter-rouge">3</code>.
+Then, we input the vector of starting values for the rho parameter <code class="language-plaintext highlighter-rouge">0.01 0.01 0.01</code> as the <code class="language-plaintext highlighter-rouge">Value</code>.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:rhoprior"></a>
+    <img style="width:75%;" src="figures/PIQMEEPriorrho.png" alt="" />
+    <figcaption>Figure 16: Setting up rho</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The last parameter relevant to the tree prior for which we need to set the prior distribution is the origin.
+We will set a uniform prior for this parameter between 0 and 2 and the initial value to 1.</p>
+
+<blockquote>
+
+  <p>Expand the <code class="language-plaintext highlighter-rouge">origin</code> entry.
+Change <code class="language-plaintext highlighter-rouge">Upper</code> bound to <code class="language-plaintext highlighter-rouge">2</code>.
+Then click on the initial value tab to expand it.
+Change the (starting) <code class="language-plaintext highlighter-rouge">Value</code> to <code class="language-plaintext highlighter-rouge">1</code>.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:origin"></a>
+    <img style="width:75%;" src="figures/PIQMEEPriorOrigin.png" alt="" />
+    <figcaption>Figure 17: Setting up the origin prior</figcaption>
+</figure>
+<p><br /></p>
+
+<p>To make sure that the initialization of the tree when running BEAST will go smoothly, we have to make sure that the first built tree fits with our requirement of the origin height being 1, i.e. the tree height has to be less than 1.
+To achieve this, we can tell BEAST to scale the first proposed tree such that it follows this requirement.
+We set this up in the “Starting Tree panel”, which it hidden at first.
+To make it visible, click on <code class="language-plaintext highlighter-rouge">View &gt;&gt; Show Starting tree panel</code>.</p>
+
+<figure>
+    <a id="fig:startintreepanel"></a>
+    <img style="width:75%;" src="figures/PIQMEEStartingTreePanel.png" alt="" />
+    <figcaption>Figure 18: Viewing starting tree panel</figcaption>
+</figure>
+<p><br /></p>
+
+<p>A new tab will become visible, where we can see that the first tree will be a random coalescent tree with population size 1.0.
+We leave everything to the default but set the maximum root height to 0.99.</p>
+
+<blockquote>
+
+  <p>In the <strong>Starting tree</strong> panel, next to the <code class="language-plaintext highlighter-rouge">Root Heigh</code>, type in <code class="language-plaintext highlighter-rouge">0.99</code>.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:treerootheigh"></a>
+    <img style="width:75%;" src="figures/PIQMEEInitialTreeHeight.png" alt="" />
+    <figcaption>Figure 19: Making sure the initial tree height is smaller than the origin height</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Lastly, we will set the prior for the clock rate.
+Again, we have some information about the clock rate.
+We have simulated the data such as to mimic within-host pathogen evolution.
+Namely, we tried to mimic HIV, and so we set the substitution rate on the order of 10<sup>-3</sup> substitutions/site/year.
+Let our prior on the clock rate reflect this.</p>
+
+<blockquote>
+
+  <p>Back in the <strong>Priors</strong> tab, expand the <code class="language-plaintext highlighter-rouge">clockRate</code> entry.
+Change the distribution from <em>Uniform</em> to <code class="language-plaintext highlighter-rouge">Log Normal</code>.
+Change <code class="language-plaintext highlighter-rouge">M to 0.002 and S to 0.25</code>.
+Also, check the box next to <code class="language-plaintext highlighter-rouge">Mean In Real Space</code>.</p>
+
+</blockquote>
+
+<figure>
+    <a id="fig:clock"></a>
+    <img style="width:75%;" src="figures/PIQMEEPriorClockRate.png" alt="" />
+    <figcaption>Figure 20: Setting up the clock rate prior</figcaption>
+</figure>
+<p><br /></p>
+
+<p>For the gammaShape parameter we leave the prior settings to the default.</p>
+
+<h3 id="specifying-chain-length">Specifying Chain Length</h3>
+<p>In the <strong>MCMC</strong> tab, inspect the settings.
+Change the <code class="language-plaintext highlighter-rouge">Chain Length</code> to 15,000,000.
+This is a reasonable chain length for the size of our data set and the number of parameters we need to estimate.
+We leave everything else set to the default.</p>
+
+<figure>
+    <a id="fig:chainlength"></a>
+    <img style="width:75%;" src="figures/PIQMEEChainLength.png" alt="" />
+    <figcaption>Figure 21: Setting up the chain length</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We have now finished the xml set up.
+Save the xml by clicking on <code class="language-plaintext highlighter-rouge">File &gt;&gt; Save as</code> in BEAUti navigation panel and name the file <code class="language-plaintext highlighter-rouge">data_with_duplicates.xml</code>.</p>
+
+<figure>
+    <a id="fig:savexml"></a>
+    <img style="width:25%;" src="figures/PIQMEESavexml.png" alt="" />
+    <figcaption>Figure 22: Saving the xml file</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="run-the-xml">Run the xml</h2>
+<p>We are now ready to run the xml in <code class="language-plaintext highlighter-rouge">BEAST</code>.
+Open the <code class="language-plaintext highlighter-rouge">BEAST2</code> application and input the xml.
+<em>Optional</em>: If you want to obtain exactly the same results as we did for this tutorial, set the Random number seed to 1.</p>
+
+<figure>
+    <a id="fig:beast"></a>
+    <img style="width:50%;" src="figures/PIQMEEBEAST.png" alt="" />
+    <figcaption>Figure 23: Running xml with BEAST</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The analysis will take around 15-20 minutes.
+If you do not have the time to wait for it to finish, in <code class="language-plaintext highlighter-rouge">precooked_runs</code>, we provide an example output that you can use for the rest of this tutorial.</p>
+
+<h2 id="inspect-the-run-in-tracer">Inspect the run in Tracer</h2>
+<p>When inspecting the <code class="language-plaintext highlighter-rouge">*.log</code> file in tracer, we find that all parameters mixed (ESS&gt;200).
+Though, some parameters, such as the “rhoMultiRho.2” (which is the sampling proportion estimate for the second mass sampling, i.e. 3 months before the last sample), just barely made it past the 200 ESS boundary.</p>
+
+<p>By selecting and comparing estimates for the three sampling proportions, we also see that the sampling proportion for the second time point is lower than for the other two sampling points - the median being 0.78 for the first (at height 0.5), 0.37 for the second (at height 0.25), and 0.73 for the last (at height 0.0) sampling time point, respectively.
+These estimates are very close to the true values; the actual values (from simulation) being 0.91, 0.2 and 1.</p>
+
+<figure>
+	<a id="fig:tracer"></a>
+	<img style="width:100%;" src="figures/TracerRho.png" alt="" />
+	<figcaption>Figure 24: Checking the values of sampling proportion rho in Tracer</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We can also check the other parameters and their estimates in Tracer.
+The median tree height, for instance, is 0.65 years, corresponding to around 8 months and the maximum tree height is 1.66 years.
+The median clock rate estimate is 2x10<sup>-3</sup> substitutions/site/year.</p>
+
+<p>Let us now have a detailed look at the effective reproductive number (R<sub>e</sub>), a quantity of great interest for epidemiologist.
+Looking at the estimates for R<sub>e</sub> directly in Tracer can be confusing.
+Tracer does not necessarily give us a clear picture of the changes in the reproductive number over time.
+This is due to the fact that the lengths of intervals for which these estimates are obtained vary during MCMC sampling in BEAST, since trees with different origin values are considered (for details of how skyline models work, refer to the <em>Skyline plots</em> tutorial).</p>
+
+<p>To properly look at the R<sub>e</sub> estimate’s changes over time, we have to use a custom script to properly vizualize it.</p>
+
+<h2 id="plotting-the-reproductive-number-with-r">Plotting the reproductive number with R</h2>
+
+<p>We will plot the R<sub>e</sub> estimate’s changes over time using R.
+Namely, we will use the R-package <code class="language-plaintext highlighter-rouge">bdskytools</code>.
+It is not available over CRAN, so (if not installed yet) we need to get the package from the GitHub:</p>
+
+<pre><code class="language-{R}">install.packages("devtools")
+library(devtools)
+
+devtools::install_github("laduplessis/bdskytools")
+</code></pre>
+<p>If you have the package downloaded and installed, we can now load it into our R workspace.</p>
+
+<pre><code class="language-{R}">library(bdskytools)
+</code></pre>
+
+<p>Now, we need to navigate to the directory with the <code class="language-plaintext highlighter-rouge">*.log</code> file of our PIQMEE analysis run and tell R what is the file we want to analyze.</p>
+
+<pre><code class="language-{R}"># Navigate to Session &gt; Set Working Directory &gt; Choose Directory
+#  (if using RStudio)
+# or set fname to the full path to the log file
+fname &lt;- "data_with_duplicates.data_with_duplicates.log"   
+lf    &lt;- readLogfile(fname, burnin=0.1)
+</code></pre>
+
+<p>Notice that we directly discarded first 10% of our chain as burn-in.</p>
+
+<p>Next, we want to smoothen R<sub>e</sub> estimates over a regular (not arbitrary, i.e. based on tree’s origin) time grid.
+We will use a grid with many more points than the three skyline intervals used in BEAST run.</p>
+
+<pre><code class="language-{R}"># time period covered by the grid starts at present (0) and
+#   goes back into the past until 1.7 years before present
+#   (remember that the maximum tree height we observed in our estimates
+#    was 1.66, so rounded 1.7 years)
+timegrid       &lt;- seq(0,1.7,length.out=101)
+</code></pre>
+
+<p>Next, we can extract log entries for the R<sub>e</sub> and smoothen over a regular (not arbitrary, based on tree’s origin) time grid.
+We will then calculate median estimate and the highest posterior density (HPD) interval for R<sub>e</sub> for each grid point.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># extracting the relevant columns from the log file</span><span class="w">
+</span><span class="n">Re_sky</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getSkylineSubset</span><span class="p">(</span><span class="n">lf</span><span class="p">,</span><span class="w"> </span><span class="s2">"reproductiveNumber"</span><span class="p">)</span><span class="w">
+</span><span class="c1"># calculating the actual R&lt;sub&gt;e&lt;/sub&gt; values and HPDs</span><span class="w">
+</span><span class="c1">#    for each time grid point and each entry in our log file</span><span class="w">
+</span><span class="n">Re_gridded</span><span class="w">     </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gridSkyline</span><span class="p">(</span><span class="n">Re_sky</span><span class="p">,</span><span class="w"> </span><span class="n">lf</span><span class="o">$</span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">timegrid</span><span class="p">)</span><span class="w">
+</span><span class="n">Re_gridded_hpd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getMatrixHPD</span><span class="p">(</span><span class="n">Re_gridded</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now we are ready to plot the smooth skyline:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="o">-</span><span class="n">timegrid</span><span class="w">
+</span><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded_hpd</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'smooth'</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time (Years)"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="nf">expression</span><span class="p">(</span><span class="s2">"R"</span><span class="p">[</span><span class="n">e</span><span class="p">]))</span><span class="w">
+</span><span class="n">abline</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+	<a id="fig:bdsky_smooth"></a>
+	<img style="width:80%;" src="figures/bdsky_smooth.png" alt="" />
+	<figcaption>Figure 25: The smooth R<sub>e</sub> skyline.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We can see from the figure above that the R<sub>e</sub> was always around 1, but there seems to have been a time period (0.3-0.6 years before present, so 3.5-7 months before the last sample) where it was rather close to 1.1.</p>
+
+<hr />
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Boskova2020">Boskova, V., &amp; Stadler, T. (2020). PIQMEE: Bayesian phylodynamic method for analysis of large datasets with duplicate sequences. <i>Molecular Biology and Evolution</i>. https://doi.org/10.1093/molbev/msaa136</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Stadler2013">Stadler, T., Kühnert, D., Bonhoeffer, S., &amp; Drummond, A. J. (2013). Birth–death skyline plot reveals temporal changes of epidemic spread in HIV and hepatitis C virus (HCV). <i>Proceedings of the National Academy of Sciences</i>, <i>110</i>(1), 228–233.</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+                
+      <div class="col-md-5 text-right">
+            powered by <a class="foot" href="http://pages.github.com">GitHub</a> and <a class="foot" href="http://www.jekyllrb.com">Jekyll</a>
+      </div>
+      <div class="col-md-1">
+        <a class="foot" href="http://pages.github.com"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

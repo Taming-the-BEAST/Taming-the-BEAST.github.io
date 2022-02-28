@@ -110,6 +110,47 @@
 			</item>
 				
 			<item>
+				<title>PIQMEE Tutorial</title>
+				<description>
+					How to efficiently analyze large data sets containing duplicates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/boskovav/PIQMEE-Tutorial/commit/2044d8eb9cbf2eaeed8fbf41ba92c4efb5745fc4'
+					&gt;
+						22 Sep 2020
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/boskovav'
+					&gt;
+						boskovav
+					&lt;/a&gt;
+					: Update for PIQMEE v1.0.1 - also increased the chain length
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.6.3
+					
+				</description>
+				<pubDate>Tue, 22 Sep 2020 15:09:25 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>AIM in StarBeast2 v0.15.2 Tutorial</title>
 				<description>
 					Inferring species trees and gene flow from multiple loci
@@ -1064,63 +1105,6 @@ Add input data
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/calibrated-species-trees/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/calibrated-species-trees/</guid>
-			</item>
-				
-			<item>
-				<title>StarBeast Tutorial</title>
-				<description>
-					Estimating species tree from multilocus sequence data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joseph Heled
-							
-					
-						
-								, Remco Bouckaert
-						
-					
-						
-								, Walter Xie
-						
-					
-						
-								, Alexei J. Drummond
-						
-					
-						
-								
-									and Chi Zhang
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/StarBeast-Tutorial/commit/128840d025a64b8d5e562098c6f91e270dc63c0c'
-					&gt;
-						2 Feb 2017
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Change level
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.x
-					
-				</description>
-				<pubDate>Thu, 02 Feb 2017 21:07:01 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBeast-Tutorial/</guid>
 			</item>
 		
 	</channel>
