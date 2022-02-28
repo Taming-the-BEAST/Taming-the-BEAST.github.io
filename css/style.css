@@ -2512,7 +2512,7 @@ img.avatar { width: 20px; }
 
 .post img { float: none; margin-left: auto; margin-right: auto; }
 
-blockquote { padding: 0.3; margin: 0 0 0.8; font-size: 0rem; line-height: 1.6; border: 1px solid #dee2e6; border-radius: 0.25rem; background-color: #eeeef8; }
+blockquote { padding: 0.3; margin: 0 0 0.8; font-size: 1rem; line-height: 1.6; border: 1px solid #dee2e6; border-radius: 0.25rem; background-color: #eeeef8; }
 
 blockquote p { font-size: 1rem; color: #777777; }
 
