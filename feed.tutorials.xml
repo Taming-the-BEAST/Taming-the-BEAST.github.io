@@ -32,7 +32,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/fc35f414d05749a571a9253e3fba92dcb6ccf609'
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/a4629e6414b13b8c1fe911b47a01ab144d378a2c'
 					&gt;
 						28 Feb 2022
 					&lt;/a&gt;
@@ -42,7 +42,7 @@
 					&gt;
 						tgvaughan
 					&lt;/a&gt;
-					: Fixed formatting issue due to vertical bars.
+					: Replaced github markdown table with HTML.
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -50,7 +50,7 @@
 						Requires: BEAST v2.5.x
 					
 				</description>
-				<pubDate>Mon, 28 Feb 2022 16:45:23 +0000</pubDate>
+				<pubDate>Mon, 28 Feb 2022 17:32:27 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
