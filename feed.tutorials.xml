@@ -12,6 +12,94 @@
 		</image>
 				
 			<item>
+				<title>Skyline plots</title>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/fc35f414d05749a571a9253e3fba92dcb6ccf609'
+					&gt;
+						28 Feb 2022
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Fixed formatting issue due to vertical bars.
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.x
+					
+				</description>
+				<pubDate>Mon, 28 Feb 2022 16:45:23 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
+				<title>PIQMEE Tutorial</title>
+				<description>
+					How to efficiently analyze large data sets containing duplicates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/boskovav/PIQMEE-Tutorial/commit/b6051e191da19b952fd9eba445a4d895d5d499c5'
+					&gt;
+						28 Feb 2022
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/boskovav'
+					&gt;
+						boskovav
+					&lt;/a&gt;
+					: Merge pull request #1 from tgvaughan/patch-1
+
+Removed references to tutorial template bib file.
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.6.3
+					
+				</description>
+				<pubDate>Mon, 28 Feb 2022 14:15:49 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/PIQMEE-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/PIQMEE-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Time stamped data</title>
 				<description>
 					Time-stamped data
@@ -107,47 +195,6 @@
 				<category>Professional</category>
 				<link>http://localhost:4000/tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-birth-death-model/</guid>
-			</item>
-				
-			<item>
-				<title>PIQMEE Tutorial</title>
-				<description>
-					How to efficiently analyze large data sets containing duplicates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/boskovav/PIQMEE-Tutorial/commit/2044d8eb9cbf2eaeed8fbf41ba92c4efb5745fc4'
-					&gt;
-						22 Sep 2020
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/boskovav'
-					&gt;
-						boskovav
-					&lt;/a&gt;
-					: Update for PIQMEE v1.0.1 - also increased the chain length
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.3
-					
-				</description>
-				<pubDate>Tue, 22 Sep 2020 15:09:25 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/PIQMEE-Tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/PIQMEE-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -398,51 +445,6 @@ Added section on sampling fossil ages with fully extinct clades
 				<category>Easy</category>
 				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Skyline plots</title>
-				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/cf34a88c16d0992f01164b40e660ed84d896a815'
-					&gt;
-						27 Aug 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Fix mistake with quantiles
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.x
-					
-				</description>
-				<pubDate>Tue, 27 Aug 2019 14:34:41 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
