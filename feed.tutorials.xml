@@ -12,6 +12,51 @@
 		</image>
 				
 			<item>
+				<title>Structured birth death model</title>
+				<description>
+					Population structure using the multi-type birth-death model
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Denise Kühnert
+							
+					
+						
+								
+									and  Jūlija Pečerska
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/f506e56ba30595a6d40e799fa09141f01d5c4e13'
+					&gt;
+						16 Mar 2022
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Fixed typos.
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Wed, 16 Mar 2022 15:49:53 +0000</pubDate>
+				<category>Professional</category>
+				<link>http://localhost:4000/tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-birth-death-model/</guid>
+			</item>
+				
+			<item>
 				<title>Skyline plots</title>
 				<description>
 					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
@@ -150,51 +195,6 @@ Removed references to tutorial template bib file.
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/MEP-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/MEP-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Structured birth death model</title>
-				<description>
-					Population structure using the multi-type birth-death model
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Denise Kühnert
-							
-					
-						
-								
-									and  Jūlija Pečerska
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/5a37c5a2288fb7f443d7a325cc45501d684b7f40'
-					&gt;
-						19 Nov 2020
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Removed obsolete LaTeX version.
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Thu, 19 Nov 2020 14:31:14 +0000</pubDate>
-				<category>Professional</category>
-				<link>http://localhost:4000/tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
