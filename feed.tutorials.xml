@@ -12,6 +12,55 @@
 		</image>
 				
 			<item>
+				<title>Introduction to BEAST2</title>
+				<description>
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Jūlija Pečerska
+							
+					
+						
+								, Veronika Bošková
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/121e729ce97dc50284623f7134280e4f08be3af6'
+					&gt;
+						28 Nov 2022
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Updated LaTeX file for BEAST 2.7.
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.0
+					
+				</description>
+				<pubDate>Mon, 28 Nov 2022 11:58:33 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
+			</item>
+				
+			<item>
 				<title>Estimating Reassortment Networks with CoalRe</title>
 				<description>
 					Estimating Reassortment Networks with CoalRe
@@ -545,55 +594,6 @@ Added section on sampling fossil ages with fully extinct clades
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
-				<title>Introduction to BEAST2</title>
-				<description>
-					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Jūlija Pečerska
-							
-					
-						
-								, Veronika Bošková
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/816c32c66ee2ff7e18f0cf6bb93f4a657a9cc72e'
-					&gt;
-						8 Aug 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update LaTeX tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Thu, 08 Aug 2019 15:54:23 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
