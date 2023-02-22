@@ -12,6 +12,26 @@
 		</image>
 		
 			<item>
+				<title>Taming the BEAST in Squamish, Canada, 2023!</title>
+				<description>&lt;p&gt;We are very excited to announce the next installment of Taming the BEAST,
+which will again be held in Squamish, BC.&lt;/p&gt;
+
+&lt;p&gt;The workshop will take place from &lt;strong&gt;August 14 to 18, 2023,&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For information on the venue, prices and registration, visit the &lt;a href=&quot;https://ttbcanada.ca&quot;&gt;Squamish BEAST Tamers website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Details on the programme will be posted here as soon as they are available, so check back often for updates!&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src=&quot;/images/workshops/Taming-the-BEAST-SBT-Flyer.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+				<pubDate>Wed, 22 Feb 2023 00:00:00 +0100</pubDate>
+				<link>http://localhost:4000/news/Taming-the-BEAST-SBT/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-SBT/</guid>
+			</item>
+		
+			<item>
 				<title>Taming the BEAST Online 2021 wrap up</title>
 				<description>&lt;figure&gt;
 	&lt;img src=&quot;/images/workshops/Taming-the-BEAST-Online.png&quot; alt=&quot;&quot; /&gt;
@@ -412,37 +432,6 @@ refer to the flyer below.&lt;/p&gt;
 				<pubDate>Mon, 03 Apr 2017 00:00:00 +0200</pubDate>
 				<link>http://localhost:4000/news/Taming-the-BEAST-comes-to-London!/</link>
 				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-comes-to-London!/</guid>
-			</item>
-		
-			<item>
-				<title>Waiheke and what comes next</title>
-				<description>&lt;figure&gt;
-	&lt;img src=&quot;/images/workshops/Taming-the-BEAST-Waiheke1.jpg&quot; alt=&quot;&quot; /&gt;
-	&lt;figcaption&gt;The workshop organisers and participants on the beach outside the workshop venue.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;It has already been more than two weeks since the second Taming the BEAST workshop took place on Waiheke island in New Zealand. 
-Thanks to the &lt;a href=&quot;https://www.compevol.auckland.ac.nz/en.html&quot;&gt;group&lt;/a&gt; from the University of Auckland for putting up an amazing workshop in a stunning location! 
-Thanks also to all the speakers for agreeing to take part and making the long journey to New Zealand!&lt;/p&gt;
-
-&lt;p&gt;The workshop was the first test of the website as a workshop tool. Although there were a few issues and misunderstandings, the website seems to be working. 
-I’ll be going over the feedback from the workshop in the next month and integrating any suggestions to the website.
-We also identified some issues with a few of the tutorials during the workshop and I’ll also be updating them soon as well. 
-If there are any further issues, please raise them on the Github repository of the tutorial in question. 
-Finally, all of the lecture slides from the workshop have been uploaded and are available from the &lt;a href=&quot;/workshops/&quot;&gt;workshops&lt;/a&gt; page.&lt;/p&gt;
-
-&lt;p&gt;We are currently discussing and planning the next workshop in the series and it will be posted here as soon as the dates have been finalised!&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/workshops/Taming-the-BEAST-Waiheke2.jpg&quot; alt=&quot;&quot; /&gt;
-	&lt;figcaption&gt;At the Goldie estate vineyard where we had the workshop dinner.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-				<pubDate>Tue, 28 Feb 2017 00:00:00 +0100</pubDate>
-				<link>http://localhost:4000/news/Waiheke-and-what-comes-next/</link>
-				<guid isPermaLink="true">http://localhost:4000/news/Waiheke-and-what-comes-next/</guid>
 			</item>
 		
 	</channel>
