@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Skyline analyses for macroevolution</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Skyline-analyses-for-macroevolution/">Skyline analyses for macroevolution</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Estimating evolutionary parameters from species phylogenies
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Bethany J. Allen
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/data/empty.nexus" target="_blank" rel="nofollow">
+						empty.nexus
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/data/Lloyd.tree" target="_blank" rel="nofollow">
+						Lloyd.tree
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/xml/dinosaur_coal_BEAUti.xml" target="_blank" download rel="nofollow">
+						dinosaur_coal_BEAUti.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/xml/dinosaur_BDSKY_final.xml" target="_blank" download rel="nofollow">
+						dinosaur_BDSKY_final.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/xml/dinosaur_coal_final.xml" target="_blank" download rel="nofollow">
+						dinosaur_coal_final.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/xml/dinosaur_BDSKY_BEAUti.xml" target="_blank" download rel="nofollow">
+						dinosaur_BDSKY_BEAUti.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-gear"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/scripts/plot_skylines.R" target="_blank" download rel="nofollow">
+						plot_skylines.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/precooked_runs/dinosaur_coal.log" target="_blank" download rel="nofollow">
+						dinosaur_coal.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/raw/master/precooked_runs/dinosaur_BDSKY.log" target="_blank" download rel="nofollow">
+						dinosaur_BDSKY.log
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/bethany-j-allen">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/39991015?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				bethany-j-allen
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/86ce23519b976d2a0df401ea83cd206062e42b80">
+					15 Mar 2023 - <span class="text-gray">Remove citation section</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/bebc5224bd93c496273e3a32f8d1f01165b46a76">
+					13 Mar 2023 - <span class="text-gray">Upgrade level</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/0b8136c290bd55c49e03f540a06e23df63ad2acd">
+					13 Mar 2023 - <span class="text-gray">Reformat time estimates</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/208f91fe9c3583d9a558e8da3ed306533146c0d3">
+					13 Mar 2023 - <span class="text-gray">Add time estimates</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/843b964d84c668c3608911f9f4fa841682a303ff">
+					13 Mar 2023 - <span class="text-gray">Fix mistake in R code</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>Bayesian phylodynamics uses the shape of a phylogenetic tree to infer characteristics of the population represented in the phylogeny. Although widely applied to epidemiological datasets, the approach is yet to be used widely in macroevolution. In this case, skyline methods can be used to estimate parameters such as speciation, extinction and sampling rates over time, as well as the total number of lineages (usually species diversity). In this tutorial, we demonstrate how to apply piecewise exponential growth coalescent and fossilised-birth-death skyline models, which both estimate piecewise-constant evolutionary rates through time, to a dinosaur supertree. The models differ in the temporal direction in which they are applied, and the assumptions they make about how the phylogeny is sampled. We recommend reading the <a href="../Skyline-plots/"><strong>Skyline plots</strong></a> tutorial before attempting this one, as it covers a lot of the theory behind the models which we will not repeat here, except to highlight points which are relevant to macroevolutionary datasets.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p><a href="http://www.beast2.org">BEAST2</a> is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST v2.6.6.</p>
+
+<h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs, and the interface will be the same, on all computing platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="any-programmer-friendly-text-editor">Any programmer-friendly text editor</h3>
+
+<p>We will need to edit the XML files produced by BEAUti, for which we’ll need a text editor. It’s best to use one designed for programmers as these include nice features such as syntax highlighting, which makes the code more reader-friendly. <a href="https://www.sublimetext.com">Sublime Text</a> is a good option which is available for MacOS, Windows and Linux.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p><a href="http://beast.community/tracer">Tracer</a> is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.x.</p>
+
+<h3 id="r--rstudio">R / RStudio</h3>
+
+<p>We will be using R to analyze the outputs of our analyses. RStudio provides a user-friendly graphical user interface to R that makes it easier to edit and run scripts. (It is not necessary to use RStudio for this tutorial.)</p>
+
+<hr />
+
+<h1 id="practical-skyline-analyses-for-macroevolution">Practical: Skyline analyses for macroevolution</h1>
+
+<p>In this tutorial we will estimate diversification rates for dinosaurs using a previously published supertree. The evolutionary history of dinosaurs is somewhat controversial; although non-avian dinosaurs are well agreed to have become extinct as a result of an asteroid impact at the Cretaceous-Paleogene boundary, it has been fiercely debated whether the clade was already in decline prior to this event (e.g. <a class="citation" href="#Brusatte2015">(Brusatte et al., 2015; Benson, 2018)</a>).</p>
+
+<p>The aim of this tutorial is to:</p>
+<ul>
+  <li>Learn how to set up a piecewise rate analysis using an existing (previously constructed) phylogeny;</li>
+  <li>Develop skills in XML hacking;</li>
+  <li>Highlight the differences between piecewise exponential growth coalescent and fossilised-birth-death skyline models.</li>
+</ul>
+
+<p>If you have limited time, or only want to run part of the tutorial, we estimate that it should take:</p>
+<ul>
+  <li>Set up piecewise exponential growth coalescent - 30-45 mins</li>
+  <li>Set up fossilised-birth-death skyline - 30-45 mins (20-30 mins if you have already set up the other analysis)</li>
+  <li>Analyse outputs - 20 mins</li>
+</ul>
+
+<h2 id="the-data">The data</h2>
+
+<p>We will be inferring our skyline parameters using a ready-made phylogeny containing 420 dinosaur species, published by <a class="citation" href="#Lloyd2008">(Lloyd et al., 2008)</a>. This phylogeny is a “supertree”, created using an informal method to collate several smaller dinosaur phylogenies into a larger one. Supertrees are typically cladograms, and must be timescaled using fossil data to estimate their branch lengths. The branch lengths we use here were inferred by <a class="citation" href="#Sakamoto2016">(Sakamoto et al., 2016)</a>: they used fossil occurrences from the <a href="http://paleobiodb.org">Paleobiology Database</a> to define the temporal range of each species, used the midpoint of the temporal range for each tip date, and timescaled the phylogeny using the “equal” method, which distributes time evenly between the available branches.</p>
+
+<h2 id="install-beast2-packages">Install BEAST2 packages</h2>
+
+<p>The piecewise exponential growth coalescent model is included in the BEAST2 core, but we will need to install the <strong>BDSKY</strong> package, which contains the fossilized-birth-death skyline model. We will also need the <strong>feast</strong> package, which will allow us to use a piecewise formulation of the model, and to integrate some more complex features into our analyses. Installation of packages is done using the package manager, which is integrated into BEAUti.</p>
+
+<figure>
+	<a id="fig:1"></a>
+	<img style="width:75%;" src="figures/BEAUti packages.png" alt="" />
+	<figcaption>Figure 1: The package manager window in BEAUti.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>.</p>
+
+  <p>Install the <strong>BDSKY</strong> and <strong>feast</strong> packages by selecting them and clicking the <strong>Install/Upgrade</strong> button one at a time.</p>
+</blockquote>
+
+<p>After installing a package, it is on your computer, but BEAUti is unable to load the template files for the newly installed packages unless it is restarted.</p>
+
+<blockquote>
+  <p>Close the <strong>BEAST2 Package Manager</strong> and <strong><em>restart</em></strong> BEAUti to fully load the <strong>BDSKY</strong> and <strong>feast</strong> packages.</p>
+</blockquote>
+
+<h2 id="setting-up-the-piecewise-exponential-growth-coalescent-analysis">Setting up the Piecewise Exponential Growth Coalescent analysis</h2>
+
+<p>We will start with the simpler of the two models, the <strong>piecewise exponential growth coalescent</strong>. This model is somewhat similar in construction to the <strong>coalescent Bayesian skyline</strong> model used in the <strong>Skyline plots</strong> tutorial, but instead of assuming that the size of the population remains constant during our individual time intervals, we instead assume that they are experiencing <strong>exponential growth or decline</strong> at a constant rate throughout the interval, with instantaneous shifts in the growth rate between intervals. The advantage of using this model is that while the constant coalescent estimates <strong>constant effective population sizes</strong> within each time interval, we instead estimate <strong>diversification rates</strong> for each of the time intervals, which is what we would like to infer for our dinosaurs. Furthermore, whereas the coalescent Bayesian skyline model only allows interval boundaries to coincide with coalescent (or branching) times in the tree, we will use predefined time intervals, which will allow us to directly estimate diversification rates during our geological intervals of interest.</p>
+
+<p>Many of the features we will need in our XML files are not currently implemented in BEAUti. However, for both models, we will start our analyses by creating XML files in BEAUti which will then serve as a template for us to alter by hand (“hack”) later.</p>
+
+<h3 id="creating-the-analysis-files-with-beauti">Creating the Analysis Files with BEAUti</h3>
+
+<p>The first step in setting up an analysis in BEAUti is to upload an alignment. In our case, we do not have an alignment as we are using a ready-made phylogeny instead, but we will still need to upload an alignment in order to initialise our XML. We have a dummy <code class="language-plaintext highlighter-rouge">.nexus</code> file for this purpose, which we will replace later with code that reads in our phylogeny.</p>
+
+<blockquote>
+  <p>In the <strong>Partitions</strong> panel, import the nexus file with the empty alignment by navigating to <strong>File &gt; Import Alignment</strong> in the menu and then finding the <code class="language-plaintext highlighter-rouge">empty.nexus</code> file on your computer, <em>or</em> drag and drop the file into the <strong>BEAUti</strong> window.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:2"></a>
+	<img style="width:75%;" src="figures/Empty alignment.png" alt="" />
+	<figcaption>Figure 2: The partitions tab containing the empty alignment.</figcaption>
+</figure>
+
+<p>Most of the default tabs in BEAUti relate to inferring the phylogeny, which we will not be doing, so we can skip straight to the <strong>Priors</strong> tab. It’s worth remembering that a lot of the default parameters in BEAUti are set up for analyses very different to ours, so we need to check these thoroughly.</p>
+
+<blockquote>
+  <p>Select the <strong>Priors</strong> tab and choose <strong>Coalescent Exponential Population</strong> as the tree prior.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:3"></a>
+	<img style="width:75%;" src="figures/Coalescent priors tab.png" alt="" />
+	<figcaption>Figure 3: The priors tab with a Coalescent Exponential Population tree prior.</figcaption>
+</figure>
+
+<p>Here we see that the model has two parameters, <code class="language-plaintext highlighter-rouge">ePopSize</code> and <code class="language-plaintext highlighter-rouge">growthRate</code>. Our <code class="language-plaintext highlighter-rouge">growthRate</code> is simply our <strong>diversification rate</strong>. <code class="language-plaintext highlighter-rouge">ePopSize</code> refers to the <strong>effective population size</strong> at the start of the coalescent process. Because coalescent models consider time from the present backwards, this therefore refers to the size of the population at the end of our youngest time interval. The tips in our phylogeny are species, and so in this context, our effective population size can be considered to be a measure of the <strong>total species richness</strong>. Strictly speaking, it is an estimate of the number of species in the clade at the start of the coalescent process, under the assumption that these species act as a Wright-Fisher population (see <a href="../Skyline-plots/"><strong>Skyline plots</strong></a> tutorial). As this assumption is very likely violated, this value should be interpreted with caution in a macroevolutionary context.</p>
+
+<p>The default <code class="language-plaintext highlighter-rouge">ePopSize</code> prior is a 1/X distribution (or <code class="language-plaintext highlighter-rouge">OneOnX</code>), which is a reasonable choice when you have little knowledge about what the shape of your prior should be, placing reduced probability on higher values. However, it is not “proper”; a <strong>proper prior</strong> is one which is bounded, and therefore has an area under the curve equal to 1, which should ideally be the case when defining probability distributions. To meet this requirement, we will use a similarly shaped, but proper, <strong>lognormal distribution</strong>, with the default parameter values. We will also change the initialisation value (the value of the parameter in the first iteration of the chain) to 1.</p>
+
+<blockquote>
+  <p>Change the <code class="language-plaintext highlighter-rouge">ePopSize</code> prior to <strong>Log Normal</strong>, checking that <code class="language-plaintext highlighter-rouge">M</code> is <code class="language-plaintext highlighter-rouge">1.0</code> and <code class="language-plaintext highlighter-rouge">S</code> is <code class="language-plaintext highlighter-rouge">1.25</code>.</p>
+
+  <p>Click on the <strong>initial =</strong> button for <code class="language-plaintext highlighter-rouge">ePopSize</code> and change the <strong>initialisation value</strong> to 1.0.</p>
+</blockquote>
+
+<p>The default <code class="language-plaintext highlighter-rouge">growthRate</code> prior is a Laplace distribution, but we will instead use a <strong>normal distribution</strong>, with diversification limits dictated by the magnitude of those estimated from living animals and plants <a class="citation" href="#HenaoDiaz2019">(Henao Diaz et al., 2019)</a>. We will also set the initial <code class="language-plaintext highlighter-rouge">growthRate</code> estimate to 0.</p>
+
+<blockquote>
+  <p>Change the <code class="language-plaintext highlighter-rouge">growthRate</code> prior to <strong>Normal</strong>, keeping the <code class="language-plaintext highlighter-rouge">mean</code> at <code class="language-plaintext highlighter-rouge">0.0</code> but changing <code class="language-plaintext highlighter-rouge">sigma</code> to <code class="language-plaintext highlighter-rouge">0.5</code>.</p>
+
+  <p>Click on the <strong>initial =</strong> button for <code class="language-plaintext highlighter-rouge">growthRate</code> and change the <strong>initialisation value</strong> to 0.0.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:4"></a>
+	<img style="width:50%;" src="figures/Coalescent initialisation.png" alt="" />
+	<figcaption>Figure 4: The initialisation window.</figcaption>
+</figure>
+
+<p>We will go into much more detail on the contents of this tab later, when setting up our birth-death model.</p>
+
+<p>We can leave the rest of the tabs as they are and save the XML file. We want to shorten the chain length and decrease the sampling frequency so the analysis completes in a reasonable time and the output files stay small. Note that we won’t alter the <strong>treelog</strong>, because we won’t be using it, as our tree is fixed.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>MCMC</strong> panel.</p>
+
+  <p>Change the <strong>Chain Length</strong> from 10’000’000 to 1’000’000.</p>
+
+  <p>Click on the arrow next to <strong>tracelog</strong> and change the <strong>File Name</strong> to <code class="language-plaintext highlighter-rouge">$(filebase).log</code>, and make sure <strong>Log Every</strong> is set to 1’000.</p>
+
+  <p>Leave all other settings at their default values and save the file as <code class="language-plaintext highlighter-rouge">dinosaur_coal.xml</code>.</p>
+
+  <p>Since we used <code class="language-plaintext highlighter-rouge">$(filebase).log</code> as the name of the <strong>tracelog</strong>, the log file will be saved with the same name as our XML file, in this case <code class="language-plaintext highlighter-rouge">dinosaur_coal.xml</code>.</p>
+</blockquote>
+
+<h3 id="amending-the-analysis-files">Amending the Analysis Files</h3>
+
+<p>We can now start “hacking” our XML template to ensure that it includes our desired features, including some that are not available in BEAUti.</p>
+
+<blockquote>
+  <p>Open <code class="language-plaintext highlighter-rouge">dinosaur_coal.xml</code> in your preferred text editor.</p>
+</blockquote>
+
+<p>The first line sets out information about the format of the XML file and its contents, which we can ignore. The next section is labelled <code class="language-plaintext highlighter-rouge">data</code>, and contains our dummy alignment. We don’t need this section, so it can be commented out or simply deleted.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">data</code> section of the XML:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nt">&lt;data</span>
+<span class="na">id=</span><span class="s">"empty"</span>
+<span class="na">spec=</span><span class="s">"Alignment"</span>
+<span class="na">name=</span><span class="s">"alignment"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;sequence</span> <span class="na">id=</span><span class="s">"seq_Tyrannosaurus_rex"</span> <span class="na">spec=</span><span class="s">"Sequence"</span> <span class="na">taxon=</span><span class="s">"Tyrannosaurus_rex"</span> <span class="na">totalcount=</span><span class="s">"4"</span> <span class="na">value=</span><span class="s">"N"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/data&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>In its place, we instead need to read in our phylogeny. We will do this by pasting in a new section, <code class="language-plaintext highlighter-rouge">tree</code>, which will use <code class="language-plaintext highlighter-rouge">TreeFromNewickFile</code> in the package <strong>feast</strong> to retrieve the phylogeny from our tree file, <code class="language-plaintext highlighter-rouge">Lloyd.tree</code>.</p>
+
+<blockquote>
+  <p>Where the <code class="language-plaintext highlighter-rouge">data</code> section was in the XML, paste in the <code class="language-plaintext highlighter-rouge">tree</code> section:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;tree</span> <span class="na">id=</span><span class="s">"tree"</span>
+       <span class="na">spec=</span><span class="s">"feast.fileio.TreeFromNewickFile"</span> <span class="na">fileName=</span><span class="s">"Lloyd.tree"</span>
+       <span class="na">IsLabelledNewick=</span><span class="s">"true"</span> <span class="na">adjustTipHeights=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The section after this contains a block of statements labelled <code class="language-plaintext highlighter-rouge">map</code>, which links the different distributions we might use (for example, for our priors) to the BEAST2 code which defines them. We will leave this alone, and move on to the largest and final block, <code class="language-plaintext highlighter-rouge">run</code>, which describes the analysis we want to carry out.</p>
+
+<p>The first subsection within the <code class="language-plaintext highlighter-rouge">run</code> block is labelled <code class="language-plaintext highlighter-rouge">state</code>. This describes the objects inferred within the analysis (i.e. all of the model parameters we want to estimate). The first object described is the <code class="language-plaintext highlighter-rouge">tree</code>, based on our dummy alignment. As we are not inferring our tree, it can be removed from this section.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">tree</code> part of the <code class="language-plaintext highlighter-rouge">state</code> subsection of the XML:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       <span class="nt">&lt;tree</span> <span class="na">id=</span><span class="s">"Tree.t:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.tree.Tree"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;taxonset</span> <span class="na">id=</span><span class="s">"TaxonSet.empty"</span> <span class="na">spec=</span><span class="s">"TaxonSet"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;alignment</span> <span class="na">idref=</span><span class="s">"empty"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/taxonset&gt;</span>
+       <span class="nt">&lt;/tree&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>After this we see descriptions of our two parameters, <code class="language-plaintext highlighter-rouge">ePopSize</code> and <code class="language-plaintext highlighter-rouge">growthRate</code>. Rather than one growth rate, we actually want to infer one for each of our <strong>time intervals</strong> of interest. To keep our analysis simple (in the hope of a timely convergence!), we are going to use <strong>four</strong> time bins, corresponding to the major geological intervals spanned by the phylogeny: the Triassic, Jurassic, Early Cretaceous and Late Cretaceous. We will therefore copy and paste the <code class="language-plaintext highlighter-rouge">growthRate</code> parameter three times, giving each a new name (<code class="language-plaintext highlighter-rouge">id</code>).</p>
+
+<blockquote>
+  <p>Convert the single <code class="language-plaintext highlighter-rouge">growthRate</code> parameter into four with different <code class="language-plaintext highlighter-rouge">ids</code>:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;state</span> <span class="na">id=</span><span class="s">"state"</span> <span class="na">spec=</span><span class="s">"State"</span> <span class="na">storeEvery=</span><span class="s">"5000"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"ePopSize.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+	<span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"growthRate1"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+	<span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"growthRate2"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+	<span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"growthRate3"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+	<span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"growthRate4"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+<span class="nt">&lt;/state&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The next block, <code class="language-plaintext highlighter-rouge">init</code>, describes the initialisation processes, namely construction of the starting tree, which is a random tree simulated from an associated population model (here a constant-sized coalescent). Since we are reading in a previously constructed tree, our tree is already initialised, so we don’t need this block.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">init</code> subsection of the XML:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nt">&lt;init</span> <span class="na">id=</span><span class="s">"RandomTree.t:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.tree.RandomTree"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">initial=</span><span class="s">"@Tree.t:empty"</span> <span class="na">taxa=</span><span class="s">"@empty"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;populationModel</span> <span class="na">id=</span><span class="s">"ConstantPopulation0.t:empty"</span> <span class="na">spec=</span><span class="s">"ConstantPopulation"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"randomPopSize.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"popSize"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+       <span class="nt">&lt;/populationModel&gt;</span>
+   <span class="nt">&lt;/init&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The next block of the XML is arguably the most important: it defines the <strong>prior and posterior distributions</strong> of our analysis, including the <strong>model</strong> we are using. The model itself is described in the third nested <code class="language-plaintext highlighter-rouge">distribution</code> line, labelled <code class="language-plaintext highlighter-rouge">CoalescentExponential</code>. With the addition of line breaks to aid readability, it should currently look like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"CoalescentExponential.t:empty"</span> <span class="na">spec=</span><span class="s">"Coalescent"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;populationModel</span> <span class="na">id=</span><span class="s">"ExponentialGrowth.t:empty"</span>
+	<span class="na">spec=</span><span class="s">"ExponentialGrowth"</span>
+	<span class="na">growthRate=</span><span class="s">"@growthRate.t:empty"</span>
+	<span class="na">popSize=</span><span class="s">"@ePopSize.t:empty"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;treeIntervals</span> <span class="na">id=</span><span class="s">"TreeIntervals.t:empty"</span> <span class="na">spec=</span><span class="s">"TreeIntervals"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/distribution&gt;</span>
+</code></pre></div></div>
+
+<p>The arguments determine the model to be used, and link the two parameters in the model, <code class="language-plaintext highlighter-rouge">growthRate</code> and <code class="language-plaintext highlighter-rouge">popSize</code>, to their definitions elsewhere in the XML. We can see that at present, the model uses a single growth rate for the full duration of the coalescent process. Instead of using this model, we are going to use a variation on it which is available in the package <strong>feast</strong>. This model is described as a <code class="language-plaintext highlighter-rouge">CompoundPopulationModel</code>, and allows multiple intervals to be defined over the course of our coalescent process, each of which can have their own population model. This will enable us to estimate a different diversification rate for each of our four time intervals of interest. The basic parameterisation of the model, as described on the <a href="https://github.com/tgvaughan/feast">feast Github page</a>, is as follows:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"CompoundPopulationModel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ConstantPopulation"</span><span class="nt">&gt;</span> <span class="nt">&lt;popSize</span> <span class="na">spec=</span><span class="s">"RealParameter"</span> <span class="na">value=</span><span class="s">"5.0"</span><span class="nt">/&gt;&lt;/populationModel&gt;</span>
+    <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ConstantPopulation"</span><span class="nt">&gt;</span> <span class="nt">&lt;popSize</span> <span class="na">spec=</span><span class="s">"RealParameter"</span> <span class="na">value=</span><span class="s">"10.0"</span><span class="nt">/&gt;&lt;/populationModel&gt;</span>
+    <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ConstantPopulation"</span><span class="nt">&gt;</span> <span class="nt">&lt;popSize</span> <span class="na">spec=</span><span class="s">"RealParameter"</span> <span class="na">value=</span><span class="s">"2.0"</span><span class="nt">/&gt;&lt;/populationModel&gt;</span>
+    <span class="nt">&lt;changeTimes</span> <span class="na">spec=</span><span class="s">"RealParameter"</span> <span class="na">value=</span><span class="s">"1.0 3.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/populationModel&gt;</span>
+</code></pre></div></div>
+
+<p>We will be changing the <code class="language-plaintext highlighter-rouge">ConstantPopulation</code> specification to <code class="language-plaintext highlighter-rouge">ExponentialGrowth</code>, to match our desired model. We will also link the size of the population at the end of one interval as the starting population size in the next, using the <code class="language-plaintext highlighter-rouge">makeContinuous="true"</code> argument.</p>
+
+<p>As well as defining models for three time intervals here, you can also see an object called <code class="language-plaintext highlighter-rouge">changeTimes</code>. Here we can provide a vector which describes when the boundaries between our time intervals should be, so it is easy for us to set these as our geological interval boundaries. The vector needs to provide the boundaries relative to the timescale of the phylogeny. We are assuming that the youngest tip lies at the Cretaceous-Paleogene boundary, so the times will need to describe the cumulative duration of these geological intervals relative to this boundary.</p>
+
+<blockquote>
+  <p>Replace the current <code class="language-plaintext highlighter-rouge">populationModel</code> with the following:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"feast.popmodels.CompoundPopulationModel"</span> <span class="na">makeContinuous=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"@ePopSize.t:empty"</span> <span class="na">growthRate=</span><span class="s">"@growthRate1"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"1.0"</span> <span class="na">growthRate=</span><span class="s">"@growthRate2"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"1.0"</span> <span class="na">growthRate=</span><span class="s">"@growthRate3"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"1.0"</span> <span class="na">growthRate=</span><span class="s">"@growthRate4"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;changeTimes</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">value=</span><span class="s">"32.55 77.05 133.35"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/populationModel&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>We also need to change the <code class="language-plaintext highlighter-rouge">tree</code> name in <code class="language-plaintext highlighter-rouge">treeIntervals</code> so that it links with the phylogeny we are reading in at the start of the XML.</p>
+
+<blockquote>
+  <p>Change <code class="language-plaintext highlighter-rouge">tree="@Tree.t:empty"</code> to <code class="language-plaintext highlighter-rouge">tree="@tree"</code> in the <code class="language-plaintext highlighter-rouge">treeIntervals</code> line.</p>
+</blockquote>
+
+<p>As the fit of the model to the phylogeny is what we are interested in, we are going to rename this small block <code class="language-plaintext highlighter-rouge">likelihood</code> to ensure that this is what is recorded in our output logs.</p>
+
+<blockquote>
+  <p>Change <code class="language-plaintext highlighter-rouge">id="CoalescentExponential.t:empty"</code> to <code class="language-plaintext highlighter-rouge">id="likelihood"</code>.</p>
+</blockquote>
+
+<p>The model block should now look like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"likelihood"</span> <span class="na">spec=</span><span class="s">"Coalescent"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"feast.popmodels.CompoundPopulationModel"</span> <span class="na">makeContinuous=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"@ePopSize.t:empty"</span> <span class="na">growthRate=</span><span class="s">"@growthRate1"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"1.0"</span> <span class="na">growthRate=</span><span class="s">"@growthRate2"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"1.0"</span> <span class="na">growthRate=</span><span class="s">"@growthRate3"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;populationModel</span> <span class="na">spec=</span><span class="s">"ExponentialGrowth"</span> <span class="na">popSize=</span><span class="s">"1.0"</span> <span class="na">growthRate=</span><span class="s">"@growthRate4"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;changeTimes</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">value=</span><span class="s">"32.55 77.05 133.35"</span><span class="nt">/&gt;</span>
+	<span class="nt">&lt;/populationModel&gt;</span>
+        <span class="nt">&lt;treeIntervals</span> <span class="na">id=</span><span class="s">"TreeIntervals.t:empty"</span> <span class="na">spec=</span><span class="s">"TreeIntervals"</span> <span class="na">tree=</span><span class="s">"@tree"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/distribution&gt;</span>
+</code></pre></div></div>
+
+<p>In the next few lines of our XML we can see that the shape of our prior distributions are defined. Our prior for <code class="language-plaintext highlighter-rouge">ePopSize</code> needs no further intervention beyond the settings we inputted into BEAUti. However, we only have a single <code class="language-plaintext highlighter-rouge">GrowthRatePrior</code>, but we now have four <code class="language-plaintext highlighter-rouge">growthRate</code> parameters, one for each of our time intervals. We need to copy and paste this prior three times, linking each prior to the diversification rate in one of those time intervals.</p>
+
+<blockquote>
+  <p>To tidy up, cut the <code class="language-plaintext highlighter-rouge">&lt;distribution id="prior" spec="util.CompoundDistribution"&gt;</code> line from above the model block and paste it below this block (immediately above the <code class="language-plaintext highlighter-rouge">ePopSize</code> prior).</p>
+
+  <p>Copy and paste the <code class="language-plaintext highlighter-rouge">GrowthRatePrior</code> block three times, immediately below the first. Change the ` prior id<code class="language-plaintext highlighter-rouge"> and </code>x<code class="language-plaintext highlighter-rouge"> names to correspond to each of the four </code>growthRate<code class="language-plaintext highlighter-rouge"> parameters. Renumber the </code>Normal id<code class="language-plaintext highlighter-rouge"> and </code>parameter id<code class="language-plaintext highlighter-rouge"> names so that each parameter has a different </code>id`.</p>
+</blockquote>
+
+<p>The priors block should now look like this:</p>
+
+<blockquote>
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	   <span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"prior"</span> <span class="na">spec=</span><span class="s">"util.CompoundDistribution"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;prior</span> <span class="na">id=</span><span class="s">"ePopSizePrior.t:empty"</span> <span class="na">name=</span><span class="s">"distribution"</span> <span class="na">x=</span><span class="s">"@ePopSize.t:empty"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;LogNormal</span> <span class="na">id=</span><span class="s">"LogNormalDistributionModel.1"</span> <span class="na">name=</span><span class="s">"distr"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.11"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"M"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.12"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"S"</span> <span class="na">upper=</span><span class="s">"5.0"</span><span class="nt">&gt;</span>1.25<span class="nt">&lt;/parameter&gt;</span>
+               <span class="nt">&lt;/LogNormal&gt;</span>
+           <span class="nt">&lt;/prior&gt;</span>
+
+           <span class="nt">&lt;prior</span> <span class="na">id=</span><span class="s">"GrowthRatePrior1"</span> <span class="na">name=</span><span class="s">"distribution"</span> <span class="na">x=</span><span class="s">"@growthRate1"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Normal</span> <span class="na">id=</span><span class="s">"Normal.1"</span> <span class="na">name=</span><span class="s">"distr"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.1"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"mean"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.2"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"sigma"</span><span class="nt">&gt;</span>0.5<span class="nt">&lt;/parameter&gt;</span>
+               <span class="nt">&lt;/Normal&gt;</span>
+           <span class="nt">&lt;/prior&gt;</span>
+
+           <span class="nt">&lt;prior</span> <span class="na">id=</span><span class="s">"GrowthRatePrior2"</span> <span class="na">name=</span><span class="s">"distribution"</span> <span class="na">x=</span><span class="s">"@growthRate2"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Normal</span> <span class="na">id=</span><span class="s">"Normal.2"</span> <span class="na">name=</span><span class="s">"distr"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.3"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"mean"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.4"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"sigma"</span><span class="nt">&gt;</span>0.5<span class="nt">&lt;/parameter&gt;</span>
+               <span class="nt">&lt;/Normal&gt;</span>
+           <span class="nt">&lt;/prior&gt;</span>
+
+           <span class="nt">&lt;prior</span> <span class="na">id=</span><span class="s">"GrowthRatePrior3"</span> <span class="na">name=</span><span class="s">"distribution"</span> <span class="na">x=</span><span class="s">"@growthRate3"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Normal</span> <span class="na">id=</span><span class="s">"Normal.3"</span> <span class="na">name=</span><span class="s">"distr"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.5"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"mean"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.6"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"sigma"</span><span class="nt">&gt;</span>0.5<span class="nt">&lt;/parameter&gt;</span>
+               <span class="nt">&lt;/Normal&gt;</span>
+           <span class="nt">&lt;/prior&gt;</span>
+
+           <span class="nt">&lt;prior</span> <span class="na">id=</span><span class="s">"GrowthRatePrior4"</span> <span class="na">name=</span><span class="s">"distribution"</span> <span class="na">x=</span><span class="s">"@growthRate4"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;Normal</span> <span class="na">id=</span><span class="s">"Normal.4"</span> <span class="na">name=</span><span class="s">"distr"</span><span class="nt">&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.7"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"mean"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+                   <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.8"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"sigma"</span><span class="nt">&gt;</span>0.5<span class="nt">&lt;/parameter&gt;</span>
+               <span class="nt">&lt;/Normal&gt;</span>
+           <span class="nt">&lt;/prior&gt;</span>
+       <span class="nt">&lt;/distribution&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The last part of the <code class="language-plaintext highlighter-rouge">distribution</code> block is labelled the <code class="language-plaintext highlighter-rouge">likelihood</code>, and contains the <code class="language-plaintext highlighter-rouge">treeLikelihood</code>, which determines how well the inferred tree fits the sequences or morphological data. As we are using a fixed phylogeny and don’t have any other input data, we can remove this from our XML (we have already renamed our model the <code class="language-plaintext highlighter-rouge">likelihood</code> anyway).</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">likelihood</code> block containing the <code class="language-plaintext highlighter-rouge">treeLikelihood</code>:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"likelihood"</span> <span class="na">spec=</span><span class="s">"util.CompoundDistribution"</span> <span class="na">useThreads=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"treeLikelihood.empty"</span> <span class="na">spec=</span><span class="s">"ThreadedTreeLikelihood"</span> <span class="na">data=</span><span class="s">"@empty"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;siteModel</span> <span class="na">id=</span><span class="s">"SiteModel.s:empty"</span> <span class="na">spec=</span><span class="s">"SiteModel"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"mutationRate.s:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"mutationRate"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"gammaShape.s:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"shape"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"proportionInvariant.s:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"proportionInvariant"</span> <span class="na">upper=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+      <span class="nt">&lt;substModel</span> <span class="na">id=</span><span class="s">"JC69.s:empty"</span> <span class="na">spec=</span><span class="s">"JukesCantor"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/siteModel&gt;</span>
+    <span class="nt">&lt;branchRateModel</span> <span class="na">id=</span><span class="s">"StrictClock.c:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.branchratemodel.StrictClockModel"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"clockRate.c:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"clock.rate"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+    <span class="nt">&lt;/branchRateModel&gt;</span>
+  <span class="nt">&lt;/distribution&gt;</span>
+<span class="nt">&lt;/distribution&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The penultimate block of the XML describes our <strong>operators</strong>. These define the moves that are used to propose new parameter values in the next iteration of the MCMC algorithm, so are fundamentally important to how our chain explores parameter space. Some are relevant to tree construction, so we can remove these.</p>
+
+<blockquote>
+  <p>Remove the tree operators:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"CoalescentExponentialTreeScaler.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">scaleFactor=</span><span class="s">"0.5"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"CoalescentExponentialTreeRootScaler.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">rootOnly=</span><span class="s">"true"</span> <span class="na">scaleFactor=</span><span class="s">"0.5"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"CoalescentExponentialUniformOperator.t:empty"</span> <span class="na">spec=</span><span class="s">"Uniform"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"30.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"CoalescentExponentialSubtreeSlide.t:empty"</span> <span class="na">spec=</span><span class="s">"SubtreeSlide"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"15.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"CoalescentExponentialNarrow.t:empty"</span> <span class="na">spec=</span><span class="s">"Exchange"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"15.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"CoalescentExponentialWide.t:empty"</span> <span class="na">spec=</span><span class="s">"Exchange"</span> <span class="na">isNarrow=</span><span class="s">"false"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"CoalescentExponentialWilsonBalding.t:empty"</span> <span class="na">spec=</span><span class="s">"WilsonBalding"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The next operator is a <code class="language-plaintext highlighter-rouge">ScaleOperator</code> which, when fired, <strong>scales</strong> the value of our <code class="language-plaintext highlighter-rouge">ePopSize</code> parameter. This is followed by a <code class="language-plaintext highlighter-rouge">RealRandomWalkOperator</code>, which alters our <code class="language-plaintext highlighter-rouge">growthRate</code> parameter via a <strong>random walk</strong> process. The first thing we will do is ensure that we have a <code class="language-plaintext highlighter-rouge">RealRandomWalkOperator</code> for each of our four growth rates.</p>
+
+<blockquote>
+  <p>Copy and paste the <code class="language-plaintext highlighter-rouge">RealRandomWalkOperator</code> three times, and change the <code class="language-plaintext highlighter-rouge">id</code> and <code class="language-plaintext highlighter-rouge">parameter</code> names to our four separate growth rates, to create this:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"GrowthRateRandomWalk1.t:empty"</span> <span class="na">spec=</span><span class="s">"RealRandomWalkOperator"</span> <span class="na">parameter=</span><span class="s">"@growthRate1"</span> <span class="na">weight=</span><span class="s">"3.0"</span> <span class="na">windowSize=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"GrowthRateRandomWalk2.t:empty"</span> <span class="na">spec=</span><span class="s">"RealRandomWalkOperator"</span> <span class="na">parameter=</span><span class="s">"@growthRate2"</span> <span class="na">weight=</span><span class="s">"3.0"</span> <span class="na">windowSize=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"GrowthRateRandomWalk3.t:empty"</span> <span class="na">spec=</span><span class="s">"RealRandomWalkOperator"</span> <span class="na">parameter=</span><span class="s">"@growthRate3"</span> <span class="na">weight=</span><span class="s">"3.0"</span> <span class="na">windowSize=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"GrowthRateRandomWalk4.t:empty"</span> <span class="na">spec=</span><span class="s">"RealRandomWalkOperator"</span> <span class="na">parameter=</span><span class="s">"@growthRate4"</span> <span class="na">weight=</span><span class="s">"3.0"</span> <span class="na">windowSize=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>One of the parameters in the <code class="language-plaintext highlighter-rouge">RealRandomWalkOperator</code> is the <code class="language-plaintext highlighter-rouge">windowSize</code>, which describes the permitted amplitude of parameter change. We will set this to 0.05 for each of our four rates.</p>
+
+<blockquote>
+  <p>Change the <code class="language-plaintext highlighter-rouge">windowSize</code> of each of the <code class="language-plaintext highlighter-rouge">growthRate</code> operators to <strong>0.05</strong>.</p>
+</blockquote>
+
+<p>You can also see that each of our operators has a <code class="language-plaintext highlighter-rouge">weight</code> specified. This defines how often these operators fire relative to each other. All five of the weights have a value of 3.0, meaning that they are equally likely to fire. This is a reasonable set-up for our analysis so we will leave these values as they are.</p>
+
+<p>And finally we reach the last block of the XML, which determines the <strong>logs</strong> outputted by our BEAST2 analysis. We can see a <code class="language-plaintext highlighter-rouge">tracelog</code>, which records our parameters to a log file, a <code class="language-plaintext highlighter-rouge">screenlog</code>, which provides settings on what is printed to the screen during the analysis, and a <code class="language-plaintext highlighter-rouge">treelog</code>, which records the trees sampled during our analysis. Our <code class="language-plaintext highlighter-rouge">treelog</code> would simply save identical versions of our input tree, so to save on file space we will remove it. We will also remove the <code class="language-plaintext highlighter-rouge">OperatorSchedule</code> - this can be useful for fine-tuning operators but we do not need it here.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">treelog</code> and <code class="language-plaintext highlighter-rouge">operatorschedule</code>:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;logger</span> <span class="na">id=</span><span class="s">"treelog.t:empty"</span> <span class="na">spec=</span><span class="s">"Logger"</span> <span class="na">fileName=</span><span class="s">"$(tree).trees"</span> <span class="na">logEvery=</span><span class="s">"1000"</span> <span class="na">mode=</span><span class="s">"tree"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;log</span> <span class="na">id=</span><span class="s">"TreeWithMetaDataLogger.t:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.tree.TreeWithMetaDataLogger"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/logger&gt;</span>
+<span class="nt">&lt;operatorschedule</span> <span class="na">id=</span><span class="s">"OperatorSchedule"</span> <span class="na">spec=</span><span class="s">"OperatorSchedule"</span><span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>We also need to remove parameters from the <code class="language-plaintext highlighter-rouge">tracelog</code> and <code class="language-plaintext highlighter-rouge">screenlog</code> that no longer exist in our XML, and ensure that we are logging all four of our <code class="language-plaintext highlighter-rouge">growthRate</code> parameters.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">treeLikelihood</code>, <code class="language-plaintext highlighter-rouge">TreeHeight</code>, and <code class="language-plaintext highlighter-rouge">CoalescentExponential</code> parameters from the <code class="language-plaintext highlighter-rouge">tracelog</code>. Copy and paste <code class="language-plaintext highlighter-rouge">&lt;log idref="growthRate.t:empty"/&gt;</code> three times, changing the <code class="language-plaintext highlighter-rouge">idref</code> to <code class="language-plaintext highlighter-rouge">growthRate1</code>, <code class="language-plaintext highlighter-rouge">growthRate2</code>, <code class="language-plaintext highlighter-rouge">growthRate3</code>, and <code class="language-plaintext highlighter-rouge">growthRate4</code>.</p>
+</blockquote>
+
+<p>With that, our XML is ready!</p>
+
+<blockquote>
+  <p><strong>Save</strong> all changes to your XML file and close it.</p>
+</blockquote>
+
+<p>We can now run the analysis in BEAST2. It’s important to have <code class="language-plaintext highlighter-rouge">Lloyd.tree</code> saved somewhere that BEAST2 can access it.</p>
+
+<blockquote>
+  <p>Download and save <code class="language-plaintext highlighter-rouge">Lloyd.tree</code> in the same folder as your BEAST2 program. Open the program and select <code class="language-plaintext highlighter-rouge">dinosaur_coal.xml</code> (or <code class="language-plaintext highlighter-rouge">dinosaur_coal_final.xml</code> if you’re using our ready-made version). Hit <strong>Run</strong> to start the analysis.</p>
+
+  <p><strong>OR</strong></p>
+
+  <p>Download and save <code class="language-plaintext highlighter-rouge">Lloyd.tree</code> in the folder containing your XML file. Find the BEAST2 executable in <strong>BEAST_2.X.X</strong> (depending on your version) <strong>&gt; bin</strong>. Right-click on the <strong>beast</strong> executable and select <strong>Create shortcut</strong> on Windows or <strong>Make alias</strong> on Mac. Cut and paste the created shortcut/alias into the folder containing your analysis files. If you open your <strong>terminal</strong> and navigate to the folder containing your files, you should now be able to run the analysis through the terminal using <code class="language-plaintext highlighter-rouge">beast dinosaur_coal.xml</code> (or <code class="language-plaintext highlighter-rouge">beast dinosaur_coal_final.xml</code> if you’re using our ready-made version).</p>
+</blockquote>
+
+<p>The analysis should take about 5 minutes to run. In the meantime, you can start setting up the fossilised-birth-death analysis.</p>
+
+<h2 id="setting-up-the-fossilised-birth-death-skyline-analysis">Setting up the Fossilised-Birth-Death Skyline analysis</h2>
+
+<p>As with the piecewise exponential growth coalescent model, many of the features we will need in our fossilised-birth-death XML file are not yet implemented in BEAUti, but we will start our analyses by creating template XML files in BEAUti.</p>
+
+<h3 id="creating-the-analysis-files-with-beauti-1">Creating the Analysis Files with BEAUti</h3>
+
+<p>As before, we need to start by uploading our dummy <code class="language-plaintext highlighter-rouge">.nexus</code> file as an alignment.</p>
+
+<blockquote>
+  <p>In the <strong>Partitions</strong> panel, import the nexus file with the empty alignment by navigating to <strong>File &gt; Import Alignment</strong> in the menu and then finding the <code class="language-plaintext highlighter-rouge">empty.nexus</code> file on your computer, <em>or</em> drag and drop the file into the <strong>BEAUti</strong> window.</p>
+</blockquote>
+
+<p>Once again, we will skip straight to the <strong>Priors</strong> tab.</p>
+
+<blockquote>
+  <p>Select the <strong>Priors</strong> tab and choose <strong>Birth Death Skyline Contemporary BDSParam</strong> as the tree prior.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:5"></a>
+	<img style="width:75%;" src="figures/FBD priors tab.png" alt="" />
+	<figcaption>Figure 5: The priors tab with a birth-death skyline tree prior.</figcaption>
+</figure>
+
+<p>The “standard” <code class="language-plaintext highlighter-rouge">contemporary</code> birth-death skyline is parameterised using a reproductive number, a “become uninfectious” rate and a sampling proportion. However, here we are using the <code class="language-plaintext highlighter-rouge">BDSParam</code> model, which refers to the so-called “canonical” parameterisation, using a birth rate (here representing speciation), a death rate (here representing extinction) and an extant sampling probability (as defined in <a class="citation" href="#Stadler2009">(Stadler, 2009)</a>). As our phylogeny is of non-avian dinosaurs, for which we only have fossils and no extant (genetic) samples, we will later exchange the extant sampling probability, usually denoted using <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span>, for a fossil sampling rate, usually denoted using <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>.</p>
+
+<p>Choosing sensible priors for these parameters is not straightforward, so we will select priors which are relatively unrestrictive. For the birth and death rates, we will use <strong>exponential</strong> priors with a mean of 1.0; this places more weight on low rates, but still permits values which are towards the higher end of those estimated from living animals and plants <a class="citation" href="#HenaoDiaz2019">(Henao Diaz et al., 2019)</a>. For the sampling rate, we will also choose an exponential prior, this time with a mean of 0.2.</p>
+
+<p>On the <strong>initial =</strong> buttons you will see two sets of square brackets. The first indicates what the starting value for that parameter will be; we always need to check our initialisation values to ensure that they sit within our prior distributions. The second contains two values which denote the limits of the range of values that our parameters are permitted to take, which are also important to consider carefully. The prior distribution influences the probability of certain parameter values being sampled in the MCMC chain, but values across the entire prior range, even very improbable values, can still be sampled. This is especially true if there is a strong signal for such parameter values in the data (high likelihood). If we have a strong reason to believe such parameter values are unrealistic, we can (and should) use parameter limits to exclude them. Setting finite upper and lower bounds in effect changes the prior to be the specified prior distribution multiplied by a uniform distribution on this range. Note that when no prior distribution is explicitly specified in BEAST2, the prior is then just a uniform prior across the parameter range (all parameters therefore have priors). Our parameters are all rates, expressed per branch per million years, so the full set of values they can take ranges between 0 and infinity. (For now, the <strong>rho</strong> parameter is defined between 0 and 1 because it is a sampling probability; later we will change this to a sampling rate, defined between 0 and infinity.)</p>
+
+<p>This is also the point where we express how many sections (here called <strong>dimensions</strong>) we want in our <strong>piecewise constant</strong> rates. Our rates will be assumed to be constant within these sections, but will be permitted to change at the break points between them. Similar to the exponential coalescent model, we are going to give our rates <strong>four</strong> dimensions, corresponding to the Triassic, Jurassic, Early Cretaceous and Late Cretaceous.</p>
+
+<blockquote>
+  <p>Change the <strong>birth rate</strong> prior from a uniform distribution to an exponential. Using the drop-down arrow on the left, check that the <strong>mean</strong> is set to 1.0. Click on the <strong>initial =</strong> button and change the <strong>initialisation value</strong> to 1.0. Check that the lower value is 0.0 and the upper value is <code class="language-plaintext highlighter-rouge">Infinity</code>. Change the <strong>Dimension</strong> to 4. Repeat these four steps for the <strong>death rate</strong> prior.</p>
+
+  <p>Change the <strong>rho</strong> (sampling) prior from a uniform distribution to an exponential. Using the drop-down arrow on the left, change the <strong>mean</strong> value to 0.2. Click on the <strong>initial =</strong> button and change the <strong>initialisation value</strong> to 0.5. Check that the lower value is 0.0, and change the upper value to <code class="language-plaintext highlighter-rouge">Infinity</code>. Change the <strong>Dimension</strong> to 4.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:6"></a>
+	<img style="width:50%;" src="figures/FBD initialisation.png" alt="" />
+	<figcaption>Figure 6: The initialisation tab.</figcaption>
+</figure>
+
+<p>We can leave the rest of the tabs as they are and save the XML file. We will again shorten the chain length and decrease the sampling frequency of our analysis, so the analysis completes in a reasonable time and the output files stay small.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>MCMC</strong> panel.</p>
+
+  <p>Change the <strong>Chain Length</strong> from 10’000’000 to 5’000’000.</p>
+
+  <p>Click on the arrow next to <strong>tracelog</strong> and change the <strong>File Name</strong> to <code class="language-plaintext highlighter-rouge">$(filebase).log</code>, and make sure <strong>Log Every</strong> is set to 1’000.</p>
+
+  <p>Leave all other settings at their default values and save the file as <code class="language-plaintext highlighter-rouge">dinosaur_BDSKY.xml</code>.</p>
+</blockquote>
+
+<h3 id="amending-the-analysis-files-1">Amending the Analysis Files</h3>
+
+<p>It is now time to “hack” our XML template, to remove the content we don’t need and add some additional features. The first few steps are the same as for our exponential coalescent XML.</p>
+
+<blockquote>
+  <p>Open <code class="language-plaintext highlighter-rouge">dinosaur_BDSKY.xml</code> in your preferred text editor.</p>
+
+  <p>Remove the <code class="language-plaintext highlighter-rouge">data</code> section of the XML:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nt">&lt;data</span>
+<span class="na">id=</span><span class="s">"empty"</span>
+<span class="na">spec=</span><span class="s">"Alignment"</span>
+<span class="na">name=</span><span class="s">"alignment"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;sequence</span> <span class="na">id=</span><span class="s">"seq_Tyrannosaurus_rex"</span> <span class="na">spec=</span><span class="s">"Sequence"</span> <span class="na">taxon=</span><span class="s">"Tyrannosaurus_rex"</span> <span class="na">totalcount=</span><span class="s">"4"</span> <span class="na">value=</span><span class="s">"N"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/data&gt;</span>
+</code></pre></div>  </div>
+
+  <p>Where the <code class="language-plaintext highlighter-rouge">data</code> section was in the XML, paste in the <code class="language-plaintext highlighter-rouge">tree</code> section:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;tree</span> <span class="na">id=</span><span class="s">"tree"</span>
+       <span class="na">spec=</span><span class="s">"feast.fileio.TreeFromNewickFile"</span> <span class="na">fileName=</span><span class="s">"Lloyd.tree"</span>
+       <span class="na">IsLabelledNewick=</span><span class="s">"true"</span> <span class="na">adjustTipHeights=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+
+  <p>Remove the <code class="language-plaintext highlighter-rouge">tree</code> part of the <code class="language-plaintext highlighter-rouge">state</code> subsection of the XML:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       <span class="nt">&lt;tree</span> <span class="na">id=</span><span class="s">"Tree.t:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.tree.Tree"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;taxonset</span> <span class="na">id=</span><span class="s">"TaxonSet.empty"</span> <span class="na">spec=</span><span class="s">"TaxonSet"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;alignment</span> <span class="na">idref=</span><span class="s">"empty"</span><span class="nt">/&gt;</span>
+           <span class="nt">&lt;/taxonset&gt;</span>
+       <span class="nt">&lt;/tree&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Following this we see a description of our three inferred rates: birth, death and sampling. These lines include a lot of information, much of which we specified earlier via the <strong>Priors</strong> tab in BEAUti. As previously mentioned, our sampling parameter is currently set up as the extant sampling probability, <code class="language-plaintext highlighter-rouge">rho</code>, which we want to exchange for a fossil sampling rate, <code class="language-plaintext highlighter-rouge">sampling</code>. For the sake of readability, we will change the <code class="language-plaintext highlighter-rouge">id</code> (name) of our sampling parameter here from <code class="language-plaintext highlighter-rouge">rhoBDS</code> to <code class="language-plaintext highlighter-rouge">samplingBDS</code>. Here, this is simply a label and does not change what the parameter does, but it is how the parameter is referenced in other parts of the XML, where its name will also need to be changed.</p>
+
+<blockquote>
+  <p>Replace all instances of <code class="language-plaintext highlighter-rouge">rho</code> in the XML with <code class="language-plaintext highlighter-rouge">sampling</code>. There should be eight. This is most easily (and reliably) done using the <code class="language-plaintext highlighter-rouge">Find &amp; Replace</code> functionality.</p>
+</blockquote>
+
+<p>To our three rates we will also add a fourth parameter, <code class="language-plaintext highlighter-rouge">origin</code>. This denotes the time at which the evolutionary process started, in our case the origin of the dinosaur clade. Here we need to set the limits of our origin time and its initial value. BEAST2 assumes that time runs from the present backwards (as is the case in our <strong>Exponential Coalescent</strong> model), so we will set our origin’s lower limit to 0 (the age of the youngest tip), and to be maximally conservative, its upper limit to <code class="language-plaintext highlighter-rouge">Infinity</code>. We will set the starting value to 200 (200 million years before the youngest tip), which corresponds to an age of approximately 200 + 66 = 266Ma (if our youngest tip lies at the Cretaceous-Paleogene boundary, when non-avian dinosaurs are thought to have become extinct). This would place the origin of dinosaurs during the middle Permian, which is perhaps a little earlier than most palaeontologists would speculate (Early to Middle Triassic, e.g. <a class="citation" href="#Brusatte2010">(Brusatte et al., 2010; Langer et al., 2010)</a>), but is certainly adequate for our first iteration.</p>
+
+<blockquote>
+  <p>Paste in the <code class="language-plaintext highlighter-rouge">origin</code> line to the end of the <code class="language-plaintext highlighter-rouge">parameter</code> block:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"origin.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"stateNode"</span> <span class="na">upper=</span><span class="s">"Infinity"</span><span class="nt">&gt;</span>200.0<span class="nt">&lt;/parameter&gt;</span>
+</code></pre></div>  </div>
+
+  <p>The <code class="language-plaintext highlighter-rouge">state</code> block should now look like this:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;state</span> <span class="na">id=</span><span class="s">"state"</span> <span class="na">spec=</span><span class="s">"State"</span> <span class="na">storeEvery=</span><span class="s">"5000"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"birthRateBDS.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">dimension=</span><span class="s">"4"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"stateNode"</span> <span class="na">upper=</span><span class="s">"Infinity"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+       <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"deathRateBDS.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">dimension=</span><span class="s">"4"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"stateNode"</span> <span class="na">upper=</span><span class="s">"Infinity"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+       <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"samplingBDS.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">dimension=</span><span class="s">"4"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"stateNode"</span> <span class="na">upper=</span><span class="s">"Infinity"</span><span class="nt">&gt;</span>0.5<span class="nt">&lt;/parameter&gt;</span>
+	 <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"origin.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"stateNode"</span> <span class="na">upper=</span><span class="s">"Infinity"</span><span class="nt">&gt;</span>200<span class="nt">&lt;/parameter&gt;</span>
+<span class="nt">&lt;/state&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Note that each of our rate parameters have 4 <strong>dimensions</strong> but that we do not specify this value for our origin; while our <strong>piecewise constant</strong> rates will have four values in each iteration (one for each time interval), only a single origin value is needed, and we therefore do not need to specify its number of dimensions (as 1).</p>
+
+<p>As before, the <code class="language-plaintext highlighter-rouge">init</code> block is not needed for this analysis.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">init</code> subsection of the XML:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nt">&lt;init</span> <span class="na">id=</span><span class="s">"RandomTree.t:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.tree.RandomTree"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">initial=</span><span class="s">"@Tree.t:empty"</span> <span class="na">taxa=</span><span class="s">"@empty"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;populationModel</span> <span class="na">id=</span><span class="s">"ConstantPopulation0.t:empty"</span> <span class="na">spec=</span><span class="s">"ConstantPopulation"</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"randomPopSize.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"popSize"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+       <span class="nt">&lt;/populationModel&gt;</span>
+   <span class="nt">&lt;/init&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The next block describes the model, which is labelled <code class="language-plaintext highlighter-rouge">BirthDeathSkyContemporaryBDSParam</code>. With the addition of line breaks to aid readability, it should look like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"BirthDeathSkyContemporaryBDSParam.t:empty"</span>
+                          <span class="na">spec=</span><span class="s">"beast.evolution.speciation.BirthDeathSkylineModel"</span>
+                          <span class="na">birthRate=</span><span class="s">"@birthRateBDS.t:empty"</span>
+                          <span class="na">conditionOnRoot=</span><span class="s">"true"</span>
+                          <span class="na">contemp=</span><span class="s">"true"</span>
+                          <span class="na">deathRate=</span><span class="s">"@deathRateBDS.t:empty"</span>
+                          <span class="na">sampling=</span><span class="s">"@samplingBDS.t:empty"</span>
+                          <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Although perhaps initially intimidating, we will walk through the various arguments here and what they mean. The model will also require some tweaking to fit our intended usage.</p>
+
+<p>The first thing to note is that we’re linking the parameters we defined earlier into the model. For example, <code class="language-plaintext highlighter-rouge">birthRate="@birthRateBDS.t:empty"</code> is simply telling the model the name we have given to our birth rate parameter. This is also true for <code class="language-plaintext highlighter-rouge">deathRate</code>. If you successfully changed all of the <code class="language-plaintext highlighter-rouge">rho</code> references to <code class="language-plaintext highlighter-rouge">sampling</code> earlier, you should also see that <code class="language-plaintext highlighter-rouge">sampling="@samplingBDS.t:empty"</code>. The name of the argument in the model is actually <code class="language-plaintext highlighter-rouge">samplingRate</code>, so we will correct that now.</p>
+
+<blockquote>
+  <p>Change <code class="language-plaintext highlighter-rouge">sampling="@samplingBDS.t:empty"</code> to <code class="language-plaintext highlighter-rouge">samplingRate="@samplingBDS.t:empty"</code>.</p>
+</blockquote>
+
+<p>We also need to link the origin parameter (which we defined earlier) into the model.</p>
+
+<blockquote>
+  <p>Somewhere within the model line, add <code class="language-plaintext highlighter-rouge">origin="@origin.t:empty"</code>.</p>
+</blockquote>
+
+<p>The next argument to note is <code class="language-plaintext highlighter-rouge">conditionOnRoot="true"</code>. <strong>Conditioning</strong> refers to the process of tuning the model settings to align with our prior knowledge about the specific evolutionary system we are investigating. The different directions of time between coalescent and birth-death models means that this process is fundamentally different between the two. Our coalescent model is conditioned on fitting the input data, our sampled phylogeny. However, in birth-death models, our sampled phylogeny is instead an output of the process, and so we need to provide additional information about how the model should work. In BDSKY, there are two main ways to condition our model: determining when the evolutionary process is considered to have started, and whether (or how) the process has been sampled.</p>
+
+<p>The first of these settings is determined using the <code class="language-plaintext highlighter-rouge">conditionOnRoot</code> parameter. When <code class="language-plaintext highlighter-rouge">conditionOnRoot="true"</code>, we are telling BDSKY to commence our evolutionary process at the root of the tree; in macroevolution, this corresponds to our first speciation event, when the most recent common ancestor (MRCA) of our clade first diverged into two daughter species. Using this setting allows us to place a prior on the timing of the root of the tree. When <code class="language-plaintext highlighter-rouge">conditionOnRoot="false"</code>, we are telling BDSKY to instead commence our evolutionary process at the origin; this is when the first branch in the tree initially appeared. In doing so, we are including this initial branch within our clade. Using this setting allows us to place a prior on the timing of the origin, rather than the root. As we discussed before, we intend to place a prior on the origin, and consider this initial branch to be our first dinosaur, meaning that it should be included in our evolutionary process. We therefore want to set <code class="language-plaintext highlighter-rouge">conditionOnRoot="false"</code>. This is the default setting, and so we can simply remove this parameter specification from our XML.</p>
+
+<figure>
+	<a id="fig:7"></a>
+	<img style="width:75%;" src="figures/Conditioning schematic.png" alt="" />
+	<figcaption>Figure 7: A schematic showing the difference between conditioning on the root and conditioning on the origin. This setting determines whether the evolutionary process commences at the start of the initial branch, or the first observed speciation event. </figcaption>
+</figure>
+
+<p>The second way to condition our BDSKY model is to ensure that the model produces at least one sample (is observable). Depending on the relevant type of sampling, we can either use <code class="language-plaintext highlighter-rouge">conditionOnRhoSampling</code> or <code class="language-plaintext highlighter-rouge">conditionOnSurvival</code>: the former assumes at least one extant sample, while the latter assumes at least one sample of either type (an extant sample or an observed fossil). It’s worth noting that when <code class="language-plaintext highlighter-rouge">conditionOnRoot="true"</code>, the model assumes that our samples are drawn from both sides of the root, and therefore that the MRCA in the sampled tree corresponds to the MRCA in the “true” tree. As our phylogeny of non-avian dinosaurs only includes extinct species, we will set <code class="language-plaintext highlighter-rouge">conditionOnRhoSampling="false"</code> and <code class="language-plaintext highlighter-rouge">conditionOnSurvival="true"</code>.</p>
+
+<blockquote>
+  <p>Change <code class="language-plaintext highlighter-rouge">conditionOnRoot="true"</code> to <code class="language-plaintext highlighter-rouge">conditionOnSurvival="true" conditionOnRhoSampling="false"</code>.</p>
+</blockquote>
+
+<p>After this is the argument <code class="language-plaintext highlighter-rouge">contemp="true"</code>. When true, this means that all samples were collected at the same time (assumed to be the present, i.e. contemporaneous) and is the default setting for the <strong>Birth Death Skyline Contemporary BDSParam</strong> parameterization in BEAUti. Since our dataset is not homochronous, but we instead have heterochronous samples (in our case fossils that were deposited at different times), and no extant samples, we should set <code class="language-plaintext highlighter-rouge">contemp="false"</code>. However, the default for the fossilized-birth-death skyline is <code class="language-plaintext highlighter-rouge">contemp="false"</code>, so we can simply delete the line.</p>
+
+<p>For our fossil sampling rate, we instead need to specify a different parameter, the <code class="language-plaintext highlighter-rouge">removalProbability</code>. When applying birth-death models to epidemiological datasets, sampling events are often assumed to be associated with removal; once patients have been sampled and their pathogens sequenced (which adds them to the phylogeny), it is assumed that they are removed from the infectious population, either through isolation or successful treatment and that they cannot subsequently infect anyone else. For our dataset, this assumption would prevent multiple fossils from existing for any single species, and mean that species for which fossils have been found could not be direct ancestors of other species in the phylogeny. In effect, this would be equivalent to assuming that fossils are only deposited at the time of extinction. We can set the <code class="language-plaintext highlighter-rouge">removalProbability</code> to relax this assumption, and allow so-called “sampled ancestors”. While the relevance of this assumption to supertrees is debatable, it is logical to set <code class="language-plaintext highlighter-rouge">removalProbability</code> to 0 for fossil phylogenies, since the probability is vanishingly small that any species went extinct exactly at the time a fossil was deposited (see <a class="citation" href="#Gavryushkina2014">(Gavryushkina et al., 2014)</a>).</p>
+
+<blockquote>
+  <p>Change <code class="language-plaintext highlighter-rouge">contemp="true"</code> to <code class="language-plaintext highlighter-rouge">removalProbability="0.0"</code>.</p>
+</blockquote>
+
+<p>The last argument currently in the model line links the tree into the model. We need to update the name of the tree object to correspond to our fixed phylogeny, which we read in at the start of the XML.</p>
+
+<blockquote>
+  <p>Change <code class="language-plaintext highlighter-rouge">tree="@Tree.t:empty"</code> to <code class="language-plaintext highlighter-rouge">tree="@tree"</code>.</p>
+</blockquote>
+
+<p>The model is almost ready, but we want to add one last set of arguments to it. Our rates are <strong>piecewise constant</strong>, and we have already specified in the <code class="language-plaintext highlighter-rouge">state</code> block how many <strong>dimensions</strong> (constant intervals) each of our rates will have. By default, the break points in our rates are evenly spaced between the origin and the youngest tip, meaning that all of the intervals are the same length. However, we can add arguments to our model specifying when we would like our break points to be. For us, it makes sense to place these break points at the boundaries of geological intervals, so that we estimate a rate for each interval. As mentioned before, we are going to align our break points to the boundaries between the Triassic, Jurassic, Early Cretaceous and Late Cretaceous. To do this, we need to supply vectors of these times relative to the phylogeny. We are assuming that the youngest tip, at which <code class="language-plaintext highlighter-rouge">t=0</code>, lies at the Cretaceous-Paleogene boundary, so the vectors describe the cumulative duration of these geological intervals relative to this boundary. We need to specify a separate vector for each of our rates.</p>
+
+<blockquote>
+  <p>Add to the end of the model line:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>birthRateChangeTimes="0 32.55 77.05 133.35"
+deathRateChangeTimes="0 32.55 77.05 133.35"
+samplingRateChangeTimes="0 32.55 77.05 133.35"
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Beneath our model, you will see a line which sets the <code class="language-plaintext highlighter-rouge">samplingRate</code> to 0. This refers to fossil sampling, which we have now introduced into our model, so this line needs to be removed.</p>
+
+<p>In its place, we instead need to add an instruction to the XML about the direction of time. The birth-death skyline model implemented in BEAST2 assumes that time runs forwards, from the origin to the present. That means that by default it assumes the break point times are measured forward-in-time from the origin. However, we specified our break point times as offsets backward-in-time from the youngest tip. We did this because we know the age of the youngest tip exactly, but we don’t know the age of the origin (we are estimating it instead). To switch the time direction for the break point times, we use the <code class="language-plaintext highlighter-rouge">reverseTimeArrays</code> parameter. Here, we are telling the model to use the opposite direction of time to the default in five dimensions: in order, this refers to our three rate parameters (<code class="language-plaintext highlighter-rouge">birth</code>, <code class="language-plaintext highlighter-rouge">death</code> and <code class="language-plaintext highlighter-rouge">sampling</code>) plus <code class="language-plaintext highlighter-rouge">rho</code> and the <code class="language-plaintext highlighter-rouge">removalProbability</code> (which we do not need but will specify anyway).</p>
+
+<blockquote>
+  <p>Remove the line fixing <code class="language-plaintext highlighter-rouge">samplingRate</code> to 0:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"samplingRateBDS.t:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">name=</span><span class="s">"samplingRate"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+</code></pre></div>  </div>
+
+  <p>Replace it with an instruction to <code class="language-plaintext highlighter-rouge">reverseTimeArrays</code>:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;reverseTimeArrays</span> <span class="na">id=</span><span class="s">"BooleanParameter.0"</span> <span class="na">spec=</span><span class="s">"parameter.BooleanParameter"</span> <span class="na">dimension=</span><span class="s">"5"</span><span class="nt">&gt;</span>true true true true true<span class="nt">&lt;/reverseTimeArrays&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>And with that our model is complete! In summary, the model should now read (with arguments in any order):</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"BirthDeathSkyContemporaryBDSParam.t:empty"</span>
+                          <span class="na">spec=</span><span class="s">"beast.evolution.speciation.BirthDeathSkylineModel"</span>
+			  <span class="na">origin=</span><span class="s">"@origin.t:empty"</span>
+                          <span class="na">birthRate=</span><span class="s">"@birthRateBDS.t:empty"</span>
+			  <span class="na">deathRate=</span><span class="s">"@deathRateBDS.t:empty"</span>
+                          <span class="na">samplingRate=</span><span class="s">"@samplingBDS.t:empty"</span>
+                          <span class="na">conditionOnSurvival=</span><span class="s">"true"</span>
+			  <span class="na">conditionOnRhoSampling=</span><span class="s">"false"</span>
+                          <span class="na">removalProbability=</span><span class="s">"0.0"</span>
+                          <span class="na">tree=</span><span class="s">"@tree"</span>
+			  <span class="na">birthRateChangeTimes=</span><span class="s">"0 32.55 77.05 133.35"</span>
+			  <span class="na">deathRateChangeTimes=</span><span class="s">"0 32.55 77.05 133.35"</span>
+			  <span class="na">samplingRateChangeTimes=</span><span class="s">"0 32.55 77.05 133.35"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;reverseTimeArrays</span> <span class="na">id=</span><span class="s">"BooleanParameter.0"</span> <span class="na">spec=</span><span class="s">"parameter.BooleanParameter"</span> <span class="na">dimension=</span><span class="s">"5"</span><span class="nt">&gt;</span>true true true true true<span class="nt">&lt;/reverseTimeArrays&gt;</span>
+	<span class="nt">&lt;/distribution&gt;</span>
+</code></pre></div></div>
+
+<p>The next part of our XML specifies the shape of our prior distributions. As long as you changed all of the <code class="language-plaintext highlighter-rouge">rho</code> references to <code class="language-plaintext highlighter-rouge">sampling</code> previously, we don’t need to modify the priors we already have any further; we provided all of the necessary information in BEAUti. We do, however, need to add a prior on our <code class="language-plaintext highlighter-rouge">origin</code>. You may remember that when specifying the parameter, we set our starting value to 200 (corresponding to 266Ma). To keep things simple, we will set the origin prior to a <strong>uniform</strong> distribution between 0 and 200.</p>
+
+<blockquote>
+  <p>Add an <code class="language-plaintext highlighter-rouge">origin</code> prior to the <code class="language-plaintext highlighter-rouge">priors</code> block:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;prior</span> <span class="na">id=</span><span class="s">"originPrior"</span> <span class="na">name=</span><span class="s">"distribution"</span> <span class="na">x=</span><span class="s">"@origin.t:empty"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;Uniform</span> <span class="na">name=</span><span class="s">"distr"</span> <span class="na">upper=</span><span class="s">"200"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/prior&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>As before, the last part of the <code class="language-plaintext highlighter-rouge">distribution</code> block is labelled the <code class="language-plaintext highlighter-rouge">likelihood</code>, and contains the <code class="language-plaintext highlighter-rouge">treeLikelihood</code>, which we don’t need because we are using a fixed phylogeny. What we consider the <code class="language-plaintext highlighter-rouge">likelihood</code> in our analysis is instead how well the model parameters fit our phylogeny, so this time we will cut and paste our fossilized-birth-death model into this part of the XML.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">treeLikelihood</code> block from the <code class="language-plaintext highlighter-rouge">likelihood</code> part of the XML:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"likelihood"</span> <span class="na">spec=</span><span class="s">"util.CompoundDistribution"</span> <span class="na">useThreads=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;distribution</span> <span class="na">id=</span><span class="s">"treeLikelihood.empty"</span> <span class="na">spec=</span><span class="s">"ThreadedTreeLikelihood"</span> <span class="na">data=</span><span class="s">"@empty"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;siteModel</span> <span class="na">id=</span><span class="s">"SiteModel.s:empty"</span> <span class="na">spec=</span><span class="s">"SiteModel"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"mutationRate.s:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"mutationRate"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+                    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"gammaShape.s:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"shape"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+                    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"proportionInvariant.s:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"proportionInvariant"</span> <span class="na">upper=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+                    <span class="nt">&lt;substModel</span> <span class="na">id=</span><span class="s">"JC69.s:empty"</span> <span class="na">spec=</span><span class="s">"JukesCantor"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/siteModel&gt;</span>
+                <span class="nt">&lt;branchRateModel</span> <span class="na">id=</span><span class="s">"StrictClock.c:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.branchratemodel.StrictClockModel"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"clockRate.c:empty"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"clock.rate"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+                <span class="nt">&lt;/branchRateModel&gt;</span>
+            <span class="nt">&lt;/distribution&gt;</span>
+        <span class="nt">&lt;/distribution&gt;</span>
+</code></pre></div>  </div>
+
+  <p>Cut and paste the model into this section and remove <code class="language-plaintext highlighter-rouge">useThreads="true"</code>:
+```xml</p>
+  <distribution id="likelihood" spec="util.CompoundDistribution">
+           <distribution id="BirthDeathSkyContemporaryBDSParam.t:empty" spec="beast.evolution.speciation.BirthDeathSkylineModel" origin="@origin.t:empty" birthRate="@birthRateBDS.t:empty" deathRate="@deathRateBDS.t:empty" samplingRate="@samplingBDS.t:empty" conditionOnSurvival="true" conditionOnRhoSampling="false" removalProbability="0.0" tree="@tree" birthRateChangeTimes="0 32.55 77.05 133.35" deathRateChangeTimes="0 32.55 77.05 133.35" samplingRateChangeTimes="0 32.55 77.05 133.35">
+                           <reverseTimeArrays id="BooleanParameter.0" spec="parameter.BooleanParameter" dimension="5">true true true true true</reverseTimeArrays>
+           </distribution>
+</distribution>
+</blockquote>
+
+<p>The next part of the XML file sets the <strong>operators</strong>. As for the exponential coalescent model, we will remove the operators related to tree construction, which we don’t need.</p>
+
+<blockquote>
+  <p>Remove the tree operators:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_treeScaler.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">scaleFactor=</span><span class="s">"0.5"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_treeRootScaler.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">rootOnly=</span><span class="s">"true"</span> <span class="na">scaleFactor=</span><span class="s">"0.5"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_UniformOperator.t:empty"</span> <span class="na">spec=</span><span class="s">"Uniform"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"30.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_SubtreeSlide.t:empty"</span> <span class="na">spec=</span><span class="s">"SubtreeSlide"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"15.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_narrow.t:empty"</span> <span class="na">spec=</span><span class="s">"Exchange"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"15.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_wide.t:empty"</span> <span class="na">spec=</span><span class="s">"Exchange"</span> <span class="na">isNarrow=</span><span class="s">"false"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_WilsonBalding.t:empty"</span> <span class="na">spec=</span><span class="s">"WilsonBalding"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The next three operators are all labelled <code class="language-plaintext highlighter-rouge">ScaleOperator</code>, and when fired, scale the values of our <code class="language-plaintext highlighter-rouge">death</code>, <code class="language-plaintext highlighter-rouge">sampling</code> and <code class="language-plaintext highlighter-rouge">birth</code> rates, respectively. As before, you can see a <code class="language-plaintext highlighter-rouge">weight</code> specified, defining how often these operators fire relative to each other. As all three of these rates are important to us, and we want to ensure that we have explored their parameter space equally, we will make their weights equal.</p>
+
+<blockquote>
+  <p>Change the <code class="language-plaintext highlighter-rouge">weight</code> of the <code class="language-plaintext highlighter-rouge">deathRateScaler</code>, <code class="language-plaintext highlighter-rouge">samplingScaler</code>, and <code class="language-plaintext highlighter-rouge">birthRateScaler</code> to 10.0.</p>
+</blockquote>
+
+<p>One thing we are currently missing is a <code class="language-plaintext highlighter-rouge">ScaleOperator</code> for our additional parameter, the <code class="language-plaintext highlighter-rouge">origin</code>, so we will add one. The timing of the origin is less important to us than our three rates, so we will give its operator a smaller weight.</p>
+
+<blockquote>
+  <p>Add an <code class="language-plaintext highlighter-rouge">originScaler</code> to the <code class="language-plaintext highlighter-rouge">operator</code> block:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_originScaler.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">parameter=</span><span class="s">"@origin.t:empty"</span> <span class="na">weight=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>These operators are currently set to scale each of the <strong>dimensions</strong> in our rate vectors individually, but we can also add operators which scale all of the dimensions in our vectors in concert. This could prove useful in quickly determining the typical size of our rates. This can be done by setting <code class="language-plaintext highlighter-rouge">scaleAll="true"</code> in additional <code class="language-plaintext highlighter-rouge">ScaleOperators</code>.</p>
+
+<blockquote>
+  <p>Add some <code class="language-plaintext highlighter-rouge">scaleAll</code> operators to the <code class="language-plaintext highlighter-rouge">operator</code> block:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_deathRateScalerAll.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">parameter=</span><span class="s">"@deathRateBDS.t:empty"</span> <span class="na">scaleAll=</span><span class="s">"true"</span> <span class="na">weight=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_samplingScalerAll.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">parameter=</span><span class="s">"@samplingBDS.t:empty"</span> <span class="na">scaleAll=</span><span class="s">"true"</span> <span class="na">weight=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_birthRateScalerAll.t:empty"</span> <span class="na">spec=</span><span class="s">"ScaleOperator"</span> <span class="na">parameter=</span><span class="s">"@birthRateBDS.t:empty"</span> <span class="na">scaleAll=</span><span class="s">"true"</span> <span class="na">weight=</span><span class="s">"10.0"</span><span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Beneath the <code class="language-plaintext highlighter-rouge">ScaleOperators</code> you can see one more operator, an <code class="language-plaintext highlighter-rouge">UpDownOperator</code>. It has <code class="language-plaintext highlighter-rouge">up</code> and <code class="language-plaintext highlighter-rouge">down</code> arguments, which are specified as our <code class="language-plaintext highlighter-rouge">birth</code> and <code class="language-plaintext highlighter-rouge">death</code> rates respectively. As currently defined, when this operator fires, it increases the birth rate and decreases the death rate. This operator can be very useful in cases where we expect two of our parameters to be correlated with one another, as speciation and extinction rates often are <a class="citation" href="#HenaoDiaz2019">(Henao Diaz et al., 2019)</a>. However, the current parameterisation places a negative directionality on this relationship, whereas we would actually expect higher speciation rates to be matched by higher extinction rates. Instead, we are going to raise our birth and death rates in concert, and instead decrease our sampling rate. We will also increase the weight of this operator to match that of our <code class="language-plaintext highlighter-rouge">scaleOperators</code>.</p>
+
+<blockquote>
+  <p>Change the <code class="language-plaintext highlighter-rouge">UpDownOperator</code> parameterisation from:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_updownBD.t:empty"</span> <span class="na">spec=</span><span class="s">"UpDownOperator"</span> <span class="na">scaleFactor=</span><span class="s">"0.75"</span> <span class="na">weight=</span><span class="s">"2.0"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;up</span> <span class="na">idref=</span><span class="s">"birthRateBDS.t:empty"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;down</span> <span class="na">idref=</span><span class="s">"deathRateBDS.t:empty"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/operator&gt;</span>
+</code></pre></div>  </div>
+
+  <p>to:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;operator</span> <span class="na">id=</span><span class="s">"BDSKY_contemp_bds_updownBD.t:empty"</span> <span class="na">spec=</span><span class="s">"UpDownOperator"</span> <span class="na">scaleFactor=</span><span class="s">"0.75"</span> <span class="na">weight=</span><span class="s">"10.0"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;up</span> <span class="na">idref=</span><span class="s">"birthRateBDS.t:empty"</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;up</span> <span class="na">idref=</span><span class="s">"deathRateBDS.t:empty"</span><span class="nt">/&gt;</span>
+	 <span class="nt">&lt;down</span> <span class="na">idref=</span><span class="s">"samplingBDS.t:empty"</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/operator&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Once again, the last block of the XML determines the <strong>logs</strong> outputted by the analysis. We will remove the <code class="language-plaintext highlighter-rouge">treelog</code> and <code class="language-plaintext highlighter-rouge">operatorschedule</code> to save file space.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">treelog</code> and <code class="language-plaintext highlighter-rouge">operatorschedule</code>:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;logger</span> <span class="na">id=</span><span class="s">"treelog.t:empty"</span> <span class="na">spec=</span><span class="s">"Logger"</span> <span class="na">fileName=</span><span class="s">"$(tree).trees"</span> <span class="na">logEvery=</span><span class="s">"1000"</span> <span class="na">mode=</span><span class="s">"tree"</span><span class="nt">&gt;</span>
+    	<span class="nt">&lt;log</span> <span class="na">id=</span><span class="s">"TreeWithMetaDataLogger.t:empty"</span> <span class="na">spec=</span><span class="s">"beast.evolution.tree.TreeWithMetaDataLogger"</span> <span class="na">tree=</span><span class="s">"@Tree.t:empty"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/logger&gt;</span>
+  <span class="nt">&lt;operatorschedule</span> <span class="na">id=</span><span class="s">"OperatorSchedule"</span> <span class="na">spec=</span><span class="s">"OperatorSchedule"</span><span class="nt">/&gt;</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p>We also need to remove parameters from the <code class="language-plaintext highlighter-rouge">tracelog</code> and <code class="language-plaintext highlighter-rouge">screenlog</code> that no longer exist in our XML, and log the <code class="language-plaintext highlighter-rouge">origin</code>.</p>
+
+<blockquote>
+  <p>Remove the <code class="language-plaintext highlighter-rouge">treeLikelihood</code> and <code class="language-plaintext highlighter-rouge">TreeHeight</code> parameters from the <code class="language-plaintext highlighter-rouge">tracelog</code>, and add <code class="language-plaintext highlighter-rouge">&lt;log idref="origin.t:empty"/&gt;</code>.</p>
+</blockquote>
+
+<p>Our XML file is finally ready!</p>
+
+<blockquote>
+  <p><strong>Save</strong> all changes to your XML file and close it.</p>
+</blockquote>
+
+<p>We can now run the analysis in BEAST2. As with the exponential coalescent model, it’s important to have <code class="language-plaintext highlighter-rouge">Lloyd.tree</code> saved somewhere that BEAST2 can access it (check back to the instructions for running the <strong>exponential coalescent</strong> XML if you skipped this).</p>
+
+<blockquote>
+  <p>Open the program and select <code class="language-plaintext highlighter-rouge">dinosaur_BDSKY.xml</code> (or <code class="language-plaintext highlighter-rouge">dinosaur_BDSKY_final.xml</code> if you’re using our ready-made version). Hit <strong>Run</strong> to start the analysis.</p>
+
+  <p><strong>OR</strong></p>
+
+  <p>Ensure your XML file and <code class="language-plaintext highlighter-rouge">Lloyd.tree</code> are saved in the same folder, which also contains the BEAST2 shortcut/alias you created earlier. Open your <strong>terminal</strong> and navigate to the folder containing your files, then run the analysis through the terminal using <code class="language-plaintext highlighter-rouge">beast dinosaur_BDSKY.xml</code> (or <code class="language-plaintext highlighter-rouge">beast dinosaur_BDSKY_final.xml</code> if you’re using our ready-made version).</p>
+</blockquote>
+
+<p>The analysis should take about 15 minutes to run.</p>
+
+<h2 id="checking-the-logs-and-assessing-convergence">Checking the logs and assessing convergence</h2>
+
+<p>Once the BEAST2 analyses have finished running, it is good practice to check the logs, particularly to determine whether the analyses have <strong>converged</strong> and to verify that there is no abnormal behaviour in the traces. The easiest way to do this is to load your logs into <strong>Tracer</strong>.</p>
+
+<blockquote>
+  <p>Open <strong>Tracer</strong> and load both <code class="language-plaintext highlighter-rouge">dinosaur_coal.log</code> and <code class="language-plaintext highlighter-rouge">dinosaur_BDSKY.log</code>.</p>
+</blockquote>
+
+<p>Next to the file names, you can see the number of states in the logs (the length of the MCMC chain), and the burn-in which has been applied (the default is the first 10%). Beneath this is a list of the parameters which are stored in the log. You can select each one to examine the characteristics of that specific parameter. Alongside the parameter names are their <code class="language-plaintext highlighter-rouge">mean</code> and <code class="language-plaintext highlighter-rouge">ESS</code> values. <code class="language-plaintext highlighter-rouge">ESS</code> stands for <strong>effective sample size</strong>, and is a metric commonly used to determine whether a Bayesian analysis has converged. Values over 200 are typically taken to denote convergence; if any of the parameter values are below this, then the chain should be run for more iterations prior to analysis of the results. A quick glance at our two files shows that our coalescent analysis has already converged, but that our BDSKY analysis has not. You can (and should) also confirm this visually: select any parameter which has an ESS over 200, then click the <code class="language-plaintext highlighter-rouge">Trace</code> button at the top of the window, and you should see the characteristic “caterpillar” of a well-mixed chain, but select any parameter with an ESS below this value, and the trace will appear more undulating. In the interests of time, we will analyse our logs as they are, but ideally the BDSKY analysis should be run until convergence.</p>
+
+<h2 id="visualising-the-results">Visualising the results</h2>
+
+<p>We can now use <strong>R</strong> to plot our skylines. We will be using <strong>coda</strong> to summarise the log files, and the <strong>tidyverse</strong> (specifically, we will use <strong>dplyr</strong> and <strong>ggplot2</strong>) for wrangling and plotting.</p>
+
+<p>The first step is to install the <code class="language-plaintext highlighter-rouge">tidyverse</code> and <code class="language-plaintext highlighter-rouge">coda</code> packages if you haven’t previously, and then to load the packages.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="s2">"tidyverse"</span><span class="p">)</span><span class="w">
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"coda"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">coda</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="the-exponential-coalescent-model-results">The Exponential Coalescent model results</h3>
+
+<p>First we will take a look at our <strong>piecewise exponential growth coalescent</strong> skyline. The log file from this analysis needs to be read into R, either with or without setting the working directory (the location where R will look for your files). We will also immediately trim the log file to remove the first 10% of iterations as burn-in.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Navigate to Session &gt; Set Working Directory &gt; Choose Directory (on RStudio)</span><span class="w">
+</span><span class="c1"># or change file name to the full path to the log file</span><span class="w">
+</span><span class="c1">#(Use "dinosaur_coal_final.log" if you used our pre-cooked XML)</span><span class="w">
+</span><span class="n">coal_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"dinosaur_coal.log"</span><span class="w">
+
+</span><span class="c1">#Read in coalescent log and trim 10% burn-in</span><span class="w">
+</span><span class="n">coalescent</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="n">coal_file</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">slice_tail</span><span class="p">(</span><span class="n">prop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The next job is to summarise the values across the remaining iterations in the log. We will estimate our 95% <strong>highest posterior density</strong> (HPD interval; a Bayesian analogue to a confidence interval) values using coda, and our median values using base R, within each time bin.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Tell coda that this is an mcmc file, and calculate 95% HPD values</span><span class="w">
+</span><span class="n">coalescent_mcmc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.mcmc</span><span class="p">(</span><span class="n">coalescent</span><span class="p">)</span><span class="w">
+</span><span class="n">summary_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">HPDinterval</span><span class="p">(</span><span class="n">coalescent_mcmc</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">#Add median values to data frame</span><span class="w">
+</span><span class="n">summary_data</span><span class="o">$</span><span class="n">median</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">coalescent</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">median</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Select growth rate parameters</span><span class="w">
+</span><span class="n">diversification_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">summary_data</span><span class="p">[</span><span class="m">6</span><span class="o">:</span><span class="m">9</span><span class="p">,]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We will also add a column which converts the numbers of our time bins into their interval names: as coalescent models run from the phylogeny tips backwards in time, our “first” time bin is the youngest and our “fourth” time bin is the oldest. We will also tell R that these intervals have a set order, and specify it.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Add the interval names</span><span class="w">
+</span><span class="n">diversification_data</span><span class="o">$</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Late Cretaceous"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w">
+                                 </span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Triassic"</span><span class="p">)</span><span class="w">
+				 
+
+</span><span class="c1">#Ensure that the time intervals plot in the correct order</span><span class="w">
+</span><span class="n">diversification_data</span><span class="o">$</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">diversification_data</span><span class="o">$</span><span class="n">interval</span><span class="p">,</span><span class="w">
+                                      </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Triassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w">
+                                                 </span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w">
+                                                 </span><span class="s2">"Late Cretaceous"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can plot our skyline as error bars, with a discrete bar showing the range of estimated diversification rates in each time interval.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Plot diversification skyline as error bars</span><span class="w">
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diversification_data</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interval</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower</span><span class="p">,</span><span class="w">
+                             </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upper</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_errorbar</span><span class="p">(</span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_colour_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"black"</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">str_wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Interval"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Diversification rate"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_classic</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+	<a id="fig:8"></a>
+	<img style="width:50%;" src="figures/Coalescent_errors.png" alt="" />
+	<figcaption>Figure 8: The piecewise exponential growth coalescent diversification rate skyline plotted using error bars.</figcaption>
+</figure>
+
+<p>Alternatively, by extending our estimates across the temporal duration of each time interval, we can plot the diversification rate over time as a <strong>piecewise constant</strong> skyline.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Plot diversification skyline as a ribbon plot</span><span class="w">
+</span><span class="n">ages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">seq.int</span><span class="p">(</span><span class="m">252</span><span class="p">,</span><span class="w"> </span><span class="m">66</span><span class="p">)</span><span class="w">
+</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Triassic"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">252</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">202</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)),</span><span class="w">
+              </span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">201</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">146</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)),</span><span class="w">
+              </span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">145</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">101</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)),</span><span class="w">
+              </span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Late Cretaceous"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">66</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span><span class="w">
+</span><span class="n">age_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">interval</span><span class="p">))</span><span class="w">
+</span><span class="n">to_plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">left_join</span><span class="p">(</span><span class="n">age_table</span><span class="p">,</span><span class="w"> </span><span class="n">diversification_data</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"interval"</span><span class="p">)</span><span class="w">
+</span><span class="n">to_plot</span><span class="o">$</span><span class="n">ages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">to_plot</span><span class="o">$</span><span class="n">ages</span><span class="p">)</span><span class="w">
+
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">to_plot</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_ribbon</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upper</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_reverse</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Age (Ma)"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Diversification rate"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_classic</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+	<a id="fig:9"></a>
+	<img style="width:50%;" src="figures/Coalescent_ribbon.png" alt="" />
+	<figcaption>Figure 9: The exponential coalescent diversification rate skyline plotted using a ribbon plot.</figcaption>
+</figure>
+
+<p>We can also investigate the other parameter estimated in the model, the estimated <strong>effective population size</strong> at the start of the coalescent process (which is the youngest end of our time interval). This estimate is a measure of the <strong>total species diversity</strong> of non-avian dinosaurs just before the Cretaceous-Paleogene boundary (although, as mentioned before, under the assumption of a Wright-Fisher population, so this value should be interpreted with caution). Again, we can calculate the median and 95% HPD values for our diversity estimate.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Select estimated species diversity at end of time interval</span><span class="w">
+</span><span class="n">population</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pull</span><span class="p">(</span><span class="n">coalescent</span><span class="p">,</span><span class="w"> </span><span class="s2">"ePopSize"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Tell coda that this is an mcmc file, and calculate 95% HPD values</span><span class="w">
+</span><span class="n">pop_mcmc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.mcmc</span><span class="p">(</span><span class="n">population</span><span class="p">)</span><span class="w">
+</span><span class="n">pop_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">HPDinterval</span><span class="p">(</span><span class="n">pop_mcmc</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">#Add median values to data frame</span><span class="w">
+</span><span class="n">pop_data</span><span class="o">$</span><span class="n">median</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">median</span><span class="p">(</span><span class="n">population</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Display estimated species diversity and HPDs</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">pop_data</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+	<a id="fig:10"></a>
+	<img style="width:25%;" src="figures/Coalescent pop table.png" alt="" />
+	<figcaption>Figure 10: The estimated effective population size of the dinosaur clade just before the Cretaceous-Paleogene boundary.</figcaption>
+</figure>
+
+<h3 id="the-fossilised-birth-death-model-results">The Fossilised-Birth-Death model results</h3>
+
+<p>We can now examine the results of our <strong>fossilised-birth-death</strong> model. Again, we need to read in the relevant log file and trim off the first 10% as burn-in.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Navigate to Session &gt; Set Working Directory &gt; Choose Directory (on RStudio)</span><span class="w">
+</span><span class="c1"># or change file name to the full path to the log file</span><span class="w">
+</span><span class="c1">#(Use "dinosaur_BDSKY_final.log" if you used our pre-cooked XML)</span><span class="w">
+</span><span class="n">fbd_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"dinosaur_BDSKY.log"</span><span class="w">
+
+</span><span class="c1">#Read in coalescent log and trim 10% burn-in</span><span class="w">
+</span><span class="n">fbd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="n">fbd_file</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">slice_tail</span><span class="p">(</span><span class="n">prop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We parameterised this model using <strong>birth</strong>, <strong>death</strong> and <strong>fossil sampling</strong> rates, so these are the parameters included in our log. However, our exponential coalescent model estimated <strong>diversification</strong> rates. If we want to make the fairest comparison between the two models, we should do so using the same parameters. Fortunately, it is straightforward to convert birth and death rates into diversification rates: simply, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>diversification</mtext><mo>=</mo><mrow><mi mathvariant="normal">b</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">s</mi></mrow><mo>−</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">s</mi></mrow></mrow><annotation encoding="application/x-tex">\textrm{diversification} = \mathrm{births} - \mathrm{deaths}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord textrm">diversification</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathrm">births</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathrm">deaths</span></span></span></span></span>.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Calculate diversification and turnover</span><span class="w">
+</span><span class="n">birth_rates</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">fbd</span><span class="p">,</span><span class="w"> </span><span class="n">starts_with</span><span class="p">(</span><span class="s2">"birthRate"</span><span class="p">))</span><span class="w">
+</span><span class="n">death_rates</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">fbd</span><span class="p">,</span><span class="w"> </span><span class="n">starts_with</span><span class="p">(</span><span class="s2">"deathRate"</span><span class="p">))</span><span class="w">
+
+</span><span class="n">div_rates</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">birth_rates</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">death_rates</span><span class="w">
+</span><span class="n">colnames</span><span class="p">(</span><span class="n">div_rates</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="s2">"divRate."</span><span class="p">,</span><span class="w">
+                              </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="n">ncol</span><span class="p">(</span><span class="n">div_rates</span><span class="p">)))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can then calculate the median and 95% HPD values for our diversification estimates, just as we did before. This time, note that because the birth-death model runs from the origin forward-in-time, our “first” time bin is the oldest and our “fourth” time bin is the youngest. Even though we flipped the time direction of the break point times when setting up the XML file (using the <code class="language-plaintext highlighter-rouge">reverseTimeArrays</code> vector to change the direction of <code class="language-plaintext highlighter-rouge">birthRateChangeTimes</code> etc.), this has no effect on the order in which time bins are logged in the log file.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Tell coda that this is an mcmc file, and calculate 95% HPD values</span><span class="w">
+</span><span class="n">div_mcmc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.mcmc</span><span class="p">(</span><span class="n">div_rates</span><span class="p">)</span><span class="w">
+</span><span class="n">div_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">HPDinterval</span><span class="p">(</span><span class="n">div_mcmc</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">#Add median values to data frame</span><span class="w">
+</span><span class="n">div_data</span><span class="o">$</span><span class="n">median</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">div_rates</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">median</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Add interval names</span><span class="w">
+</span><span class="n">div_data</span><span class="o">$</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Triassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w">
+                       </span><span class="s2">"Late Cretaceous"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can also use this same process to examine our fossil sampling rates.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Select sampling estimates from log</span><span class="w">
+</span><span class="n">samp_log</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">fbd</span><span class="p">,</span><span class="w"> </span><span class="n">starts_with</span><span class="p">(</span><span class="s2">"samplingBDS"</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">#Tell coda that this is an mcmc file, and calculate 95% HPD values</span><span class="w">
+</span><span class="n">samp_mcmc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.mcmc</span><span class="p">(</span><span class="n">samp_log</span><span class="p">)</span><span class="w">
+</span><span class="n">samp_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">HPDinterval</span><span class="p">(</span><span class="n">samp_mcmc</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">#Add median values to data frame</span><span class="w">
+</span><span class="n">samp_data</span><span class="o">$</span><span class="n">median</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">samp_log</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">median</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Add interval names</span><span class="w">
+</span><span class="n">samp_data</span><span class="o">$</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Triassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"Late Cretaceous"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Once again, we will make sure that we specify the order of our time intervals.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Ensure that the time intervals plot in the correct order</span><span class="w">
+</span><span class="n">div_data</span><span class="o">$</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">div_data</span><span class="o">$</span><span class="n">interval</span><span class="p">,</span><span class="w">
+                            </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Triassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w">
+                                       </span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Late Cretaceous"</span><span class="p">))</span><span class="w">
+
+</span><span class="n">samp_data</span><span class="o">$</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">samp_data</span><span class="o">$</span><span class="n">interval</span><span class="p">,</span><span class="w">
+                             </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Triassic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Late Cretaceous"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Again we have provided code so that the skylines can be plotted as discrete error bars…</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">div_data</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interval</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower</span><span class="p">,</span><span class="w">
+                                      </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upper</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_errorbar</span><span class="p">(</span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_colour_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"black"</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">str_wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Interval"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Diversification rate"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_classic</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">)</span><span class="w">
+
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">samp_data</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">interval</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower</span><span class="p">,</span><span class="w">
+                            </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upper</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_point</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_errorbar</span><span class="p">(</span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_colour_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"black"</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">str_wrap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Interval"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Sampling rate"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_classic</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+	<a id="fig:11"></a>
+	<img style="width:50%;" src="figures/FBD errors.png" alt="" />
+	<figcaption>Figure 11: The fossilsed-birth-death diversification rate skyline plotted using error bars.</figcaption>
+</figure>
+
+<p>…but also as <strong>piecewise constant</strong> skylines using ribbon plots.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">seq.int</span><span class="p">(</span><span class="m">252</span><span class="p">,</span><span class="w"> </span><span class="m">66</span><span class="p">)</span><span class="w">
+</span><span class="n">interval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Triassic"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">252</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">202</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)),</span><span class="w">
+              </span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Jurassic"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">201</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">146</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)),</span><span class="w">
+              </span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Early Cretaceous"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">145</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">101</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)),</span><span class="w">
+              </span><span class="nf">rep</span><span class="p">(</span><span class="s2">"Late Cretaceous"</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="m">100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">66</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span><span class="w">
+</span><span class="n">age_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">interval</span><span class="p">))</span><span class="w">
+
+</span><span class="n">div_plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">left_join</span><span class="p">(</span><span class="n">age_table</span><span class="p">,</span><span class="w"> </span><span class="n">div_data</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"interval"</span><span class="p">)</span><span class="w">
+</span><span class="n">div_plot</span><span class="o">$</span><span class="n">ages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">div_plot</span><span class="o">$</span><span class="n">ages</span><span class="p">)</span><span class="w">
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">div_plot</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_ribbon</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upper</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_reverse</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Age (Ma)"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Diversification rate"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_classic</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">)</span><span class="w">
+
+</span><span class="n">samp_plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">left_join</span><span class="p">(</span><span class="n">age_table</span><span class="p">,</span><span class="w"> </span><span class="n">samp_data</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"interval"</span><span class="p">)</span><span class="w">
+</span><span class="n">samp_plot</span><span class="o">$</span><span class="n">ages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">samp_plot</span><span class="o">$</span><span class="n">ages</span><span class="p">)</span><span class="w">
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">samp_plot</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_ribbon</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upper</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ages</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_reverse</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Age (Ma)"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Sampling rate"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_classic</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">17</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+	<a id="fig:12"></a>
+	<img style="width:50%;" src="figures/FBD ribbon.png" alt="" />
+	<figcaption>Figure 12: The fossilsed-birth-death diversification rate skyline plotted using a ribbon plot.</figcaption>
+</figure>
+
+<p>We can also examine the last parameter in our fossilised-birth-death model, which is the <strong>origin</strong> of the dinosaurian clade. Note that we add 66 to our estimates to account for the difference between the youngest tip (at the Cretaceous-Paleogene boundary) and the present day. If we didn’t add 66 to our estimates we would be estimating the duration of non-avian dinosaurs on Earth, instead of the time of their origin.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Select origin data as an mcmc file, and calculate 95% HPD values</span><span class="w">
+</span><span class="n">origin_mcmc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.mcmc</span><span class="p">(</span><span class="n">pull</span><span class="p">(</span><span class="n">fbd</span><span class="p">,</span><span class="w"> </span><span class="s2">"origin"</span><span class="p">))</span><span class="w">
+</span><span class="n">origin_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">HPDinterval</span><span class="p">(</span><span class="n">origin_mcmc</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">#Add median value to data frame</span><span class="w">
+</span><span class="n">origin_data</span><span class="o">$</span><span class="n">median</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">median</span><span class="p">(</span><span class="n">fbd</span><span class="o">$</span><span class="n">origin</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Convert to time before present, rather than time before K-Pg boundary</span><span class="w">
+</span><span class="n">origin_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">origin_data</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">66</span><span class="w">
+
+</span><span class="c1">#Display estimated origin and HPDs</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">origin_data</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+	<a id="fig:13"></a>
+	<img style="width:25%;" src="figures/FBD origin table.png" alt="" />
+	<figcaption>Figure 13: The estimated origin of dinosaurs (in Ma).</figcaption>
+</figure>
+
+<p>Our fossilised-birth-death model therefore suggests that dinosaurs originated around 246Ma, which would be during the Middle Triassic.</p>
+
+<h3 id="model-comparison">Model comparison</h3>
+
+<p>If we compare the skylines generated using our piecewise exponential growth coalescent and fossilised-birth-death models, we can see that they do not reconstruct the same diversification trajectory for dinosaurs across their evolutionary history. The piecewise exponential growth coalescent model indicates that the dinosaurs were experiencing negative diversification (net loss of species) during the Late Cretaceous, even prior to their total extinction at the Cretaceous-Paleogene boundary. In contrast, the fossilised-birth-death model suggests that the dinosaurs may have been in decline in the Early Cretaceous, but had returned to net diversification by the Late Cretaceous. One possible reason for this is that the fossilised-birth-death model includes fossil sampling rate as a parameter, whereas the exponential coalescent model simply assumes that there is no relationship between the sampling process and species richness, which may not be the case. Understanding the assumptions of the models we apply, and how well these assumptions fit our data, is therefore essential in Bayesian phylodynamics.</p>
+
+<hr />
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Brusatte2015">Brusatte, S. L., Butler, R. J., Barrett, P. M., Carrano, M. T., Evans, D. C., Lloyd, G. T., Mannion, P. D., Norell, M. A., Peppe, D. J., Upchurch, P., &amp; Williamson, T. E. (2015). The extinction of the dinosaurs. <i>Biological Reviews</i>, <i>90</i>(2), 628–642. https://doi.org/10.1111/brv.12128</span></li>
+<li><span id="Benson2018">Benson, R. B. J. (2018). Dinosaur macroevolution and macroecology. <i>Annual Review of Ecology, Evolution, and Systematics</i>, <i>49</i>, 379–408. https://doi.org/10.1146/annurev-ecolsys-110617-062231</span></li>
+<li><span id="Lloyd2008">Lloyd, G. T., Davis, K. E., Pisani, D., Tarver, J. E., Ruta, M., Sakamoto, M., Hone, D. W. E., Jennings, R., &amp; Benton, M. J. (2008). Dinosaurs and the Cretaceous Terrestrial Revolution. <i>Proceedings of the Royal Society B: Biological Sciences</i>, <i>275</i>(1650), 2483–2490. https://doi.org/10.1098/rspb.2008.0715</span></li>
+<li><span id="Sakamoto2016">Sakamoto, M., Benton, M. J., &amp; Venditti, C. (2016). Dinosaurs in decline tens of millions of years before their final extinction. <i>Proceedings of the National Academy of Sciences</i>, <i>113</i>(18), 5036–5040. https://doi.org/10.1073/pnas.1521478113</span></li>
+<li><span id="HenaoDiaz2019">Henao Diaz, L. F., Harmon, L. J., Sugawara, M. T. C., Miller, E. T., &amp; Pennell, M. W. (2019). Macroevolutionary diversification rates show time dependency. <i>Proceedings of the National Academy of Sciences</i>, <i>116</i>(15), 7403–7408. https://doi.org/10.1073/pnas.1818058116</span></li>
+<li><span id="Stadler2009">Stadler, T. (2009). On incomplete sampling under birth–death models and connections to the sampling-based coalescent. <i>Journal of Theoretical Biology</i>, <i>261</i>(1), 58–66. https://doi.org/10.1016/j.jtbi.2009.07.018</span></li>
+<li><span id="Brusatte2010">Brusatte, S. L., Nesbitt, S. J., Irmis, R. B., Butler, R. J., Benton, M. J., &amp; Norell, M. A. (2010). The origin and early radiation of dinosaurs. <i>Earth-Science Reviews</i>, <i>101</i>(1-2), 68–100. https://doi.org/10.1016/j.earscirev.2010.04.001</span></li>
+<li><span id="Langer2010">Langer, M. C., Ezcurra, M. D., Bittencourt, J. S., &amp; Novas, F. E. (2010). The origin and early evolution of dinosaurs. <i>Biological Reviews</i>, <i>85</i>(1), 55–110. https://doi.org/10.1111/j.1469-185X.2009.00094.x</span></li>
+<li><span id="Gavryushkina2014">Gavryushkina, A., Welch, D., Stadler, T., &amp; Drummond, A. J. (2014). Bayesian Inference of Sampled Ancestor Trees for Epidemiology and Fossil Calibration. <i>PLoS Computational Biology</i>, <i>10</i>(12), e1003919. https://doi.org/10.1371/journal.pcbi.1003919</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

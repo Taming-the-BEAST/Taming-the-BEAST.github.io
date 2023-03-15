@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" required="" version="2.6">
+
+ <tree id="tree"
+       spec="feast.fileio.TreeFromNewickFile" fileName="Lloyd.tree"
+       IsLabelledNewick="true" adjustTipHeights="false" />
+
+<map name="Uniform" >beast.math.distributions.Uniform</map>
+<map name="Exponential" >beast.math.distributions.Exponential</map>
+<map name="LogNormal" >beast.math.distributions.LogNormalDistributionModel</map>
+<map name="Normal" >beast.math.distributions.Normal</map>
+<map name="Beta" >beast.math.distributions.Beta</map>
+<map name="Gamma" >beast.math.distributions.Gamma</map>
+<map name="LaplaceDistribution" >beast.math.distributions.LaplaceDistribution</map>
+<map name="prior" >beast.math.distributions.Prior</map>
+<map name="InverseGamma" >beast.math.distributions.InverseGamma</map>
+<map name="OneOnX" >beast.math.distributions.OneOnX</map>
+
+<run id="mcmc" spec="MCMC" chainLength="1000000">
+
+    <state id="state" spec="State" storeEvery="5000">
+        <parameter id="ePopSize.t:empty" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
+        <parameter id="growthRate1" spec="parameter.RealParameter" name="stateNode">0.0</parameter>
+        <parameter id="growthRate2" spec="parameter.RealParameter" name="stateNode">0.0</parameter>
+        <parameter id="growthRate3" spec="parameter.RealParameter" name="stateNode">0.0</parameter>
+        <parameter id="growthRate4" spec="parameter.RealParameter" name="stateNode">0.0</parameter>
+    </state>
+    
+    <distribution id="posterior" spec="util.CompoundDistribution">
+
+            <distribution id="likelihood" spec="Coalescent">
+                <populationModel spec="feast.popmodels.CompoundPopulationModel" makeContinuous="true">
+                    <populationModel spec="ExponentialGrowth" popSize="@ePopSize.t:empty" growthRate="@growthRate1"/>
+                    <populationModel spec="ExponentialGrowth" popSize="1.0" growthRate="@growthRate2"/>
+                    <populationModel spec="ExponentialGrowth" popSize="1.0" growthRate="@growthRate3"/>
+                    <populationModel spec="ExponentialGrowth" popSize="1.0" growthRate="@growthRate4"/>
+                    <changeTimes spec="parameter.RealParameter" value="32.55 77.05 133.35"/>
+                </populationModel>
+                <treeIntervals id="TreeIntervals.t:empty" spec="TreeIntervals" tree="@tree"/>
+            </distribution>
+
+        <distribution id="prior" spec="util.CompoundDistribution">
+            <prior id="ePopSizePrior.t:empty" name="distribution" x="@ePopSize.t:empty">
+                <LogNormal id="LogNormalDistributionModel.1" name="distr">
+                    <parameter id="RealParameter.11" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                    <parameter id="RealParameter.12" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">1.25</parameter>
+                </LogNormal>
+            </prior>
+
+            <prior id="GrowthRatePrior1" name="distribution" x="@growthRate1">
+                <Normal id="Normal.1" name="distr">
+                    <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="mean">0.0</parameter>
+                    <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="sigma">0.5</parameter>
+                </Normal>
+            </prior>
+
+            <prior id="GrowthRatePrior2" name="distribution" x="@growthRate2">
+                <Normal id="Normal.2" name="distr">
+                    <parameter id="RealParameter.3" spec="parameter.RealParameter" estimate="false" name="mean">0.0</parameter>
+                    <parameter id="RealParameter.4" spec="parameter.RealParameter" estimate="false" name="sigma">0.5</parameter>
+                </Normal>
+            </prior>
+
+            <prior id="GrowthRatePrior3" name="distribution" x="@growthRate3">
+                <Normal id="Normal.3" name="distr">
+                    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="mean">0.0</parameter>
+                    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="sigma">0.5</parameter>
+                </Normal>
+            </prior>
+
+            <prior id="GrowthRatePrior4" name="distribution" x="@growthRate4">
+                <Normal id="Normal.4" name="distr">
+                    <parameter id="RealParameter.7" spec="parameter.RealParameter" estimate="false" name="mean">0.0</parameter>
+                    <parameter id="RealParameter.8" spec="parameter.RealParameter" estimate="false" name="sigma">0.5</parameter>
+                </Normal>
+            </prior>
+        </distribution>
+    </distribution>
+
+    <operator id="ePopSizeScaler.t:empty" spec="ScaleOperator" parameter="@ePopSize.t:empty" weight="3.0"/>
+    <operator id="GrowthRateRandomWalk1.t:empty" spec="RealRandomWalkOperator" parameter="@growthRate1" weight="3.0" windowSize="0.05"/>
+    <operator id="GrowthRateRandomWalk2.t:empty" spec="RealRandomWalkOperator" parameter="@growthRate2" weight="3.0" windowSize="0.05"/>
+    <operator id="GrowthRateRandomWalk3.t:empty" spec="RealRandomWalkOperator" parameter="@growthRate3" weight="3.0" windowSize="0.05"/>
+    <operator id="GrowthRateRandomWalk4.t:empty" spec="RealRandomWalkOperator" parameter="@growthRate4" weight="3.0" windowSize="0.05"/>
+
+    <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="ePopSize.t:empty"/>
+        <log idref="growthRate1"/>
+        <log idref="growthRate2"/>
+        <log idref="growthRate3"/>
+        <log idref="growthRate4"/>
+    </logger>
+
+    <logger id="screenlog" spec="Logger" logEvery="1000">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+    </logger>
+
+</run>
+</beast>
