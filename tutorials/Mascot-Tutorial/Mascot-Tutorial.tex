@@ -25,7 +25,7 @@
 \begin{center}
 
 	% Enter the name of your tutorial here
-	\textbf{\LARGE Tutorial using BEAST v2.4.7}\\\vspace{2mm}
+	\textbf{\LARGE Tutorial using BEAST v2.7.3}\\\vspace{2mm}
 
 	% Enter a short description of your tutorial here
 	\textbf{\textcolor{mycol}{\Large MASCOT Tutorial}}\\
@@ -60,7 +60,7 @@ structured coalescent, which integrate over all ancestral migration
 histories, have been developed. This tutorial gives an introduction into
 how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for
 \textbf{M}arginal \textbf{A}pproximation of the \textbf{S}tructured
-\textbf{CO}alescen\textbf{T} and implements a structured coalescent
+\textbf{CO}alescen\textbf{T}\citep{mueller2017mascot} and implements a structured coalescent
 approximation \citep{Mueller2017}. This approximation doesn't require
 migration histories to be sampled using MCMC and therefore allows to
 analyse phylogenies with more than three or four states. \clearpage
@@ -74,7 +74,7 @@ Exercise}\label{programs-used-in-this-exercise}
 BEAST2 (\url{http://www.beast2.org}) is a free software package for
 Bayesian evolutionary analysis of molecular sequences using MCMC and
 strictly oriented toward inference using rooted, time-measured
-phylogenetic trees. This tutorial is written for BEAST v2.4.7 \citep{BEAST2book2014}.
+phylogenetic trees. This tutorial is written for BEAST v2.7.x \citep{BEAST2book2014}.
 
 \subsubsection{BEAUti2 - Bayesian Evolutionary Analysis
 Utility}\label{beauti2---bayesian-evolutionary-analysis-utility}
@@ -109,7 +109,7 @@ assess convergence. It helps to quickly view median estimates and 95\%
 highest posterior density intervals of the parameters, and calculates
 the effective sample sizes (ESS) of parameters. It can also be used to
 investigate potential parameter correlations. We will be using Tracer
-v1.6.0.
+v1.7.2.
 
 \subsubsection{FigTree}\label{figtree}
 
@@ -117,7 +117,7 @@ FigTree (\url{http://tree.bio.ed.ac.uk/software/figtree}) is a program
 for viewing trees and producing publication-quality figures. It can
 interpret the node-annotations created on the summary trees by
 TreeAnnotator, allowing the user to display node-based statistics
-(e.g.~posterior probabilities). We will be using FigTree v1.4.2. \clearpage
+(e.g.~posterior probabilities). We will be using FigTree v1.4.4. \clearpage
 
 \section{Practical: Parameter and State inference using the approximate
 structured
@@ -125,7 +125,7 @@ coalescent}\label{practical-parameter-and-state-inference-using-the-approximate-
 
 In this tutorial we will estimate migration rates, effective population
 sizes and locations of internal nodes using the marginal approximation
-of the structured coalescent implemented in BEAST2, MASCOT.
+of the structured coalescent implemented in BEAST2, MASCOT \citep{mueller2017mascot}.
 
 The aim is to:
 
@@ -158,28 +158,22 @@ and download the package MASCOT.
 MASCOT will only be available in BEAUti once you close and restart the
 program.
 
-\subsubsection{Loading the template}\label{loading-the-template}
-
-Next, we have to load the BEAUTi template from \emph{File}, select
-\emph{Template \textgreater{}\textgreater{} Mascot}.
-
-\subsubsection{Loading the Influenza A/H3N2 Sequences
+\subsubsection{Loading\textbf{} the Influenza A/H3N2 Sequences
 (Partitions)}\label{loading-the-influenza-ah3n2-sequences-partitions}
 
 The sequences from the \emph{data} folder name \emph{H3N2.nexus} can be
-either drag and dropped into BEAUti or added by going to \emph{File
+either drag and dropped into BEAUti or added using BEAUti’s menu system via \emph{File
 \textgreater{}\textgreater{} Import Alignment}. Once the sequences are
-added, we need to specify the sampling dates and locations.
+added, we need to specify the sampling dates.
 
 \subsubsection{Get the sampling times (Tip
 Dates)}\label{get-the-sampling-times-tip-dates}
 
-After clicking the \emph{Auto-configure} button, the sampling times can
-be guessed. The sampling times are encoded in the sequence names and are
-in the third group after splitting on the vertical bar ``\textbar{}''.
-The first group after splitting is the name of the sequence, the second
-group contains the accession numbers. The third are the sampling times
-and the fourth are the sampling location.
+Open the "Tip Dates" panel and then select the "Use tip dates" checkbox.
+
+The sampling times are encoded in the sequence names.  We can tell BEAUti 
+to use these by clicking the \emph{Auto-configure} button. The sampling times 
+appear following the third vertical bar "|" in the sequence name. To extract these times, select "split on character", enter "|" (without the quotes) in the text box immediately to the right, and then select "3" from the drop-down box to the right, as shown in the figure below.
 
 \begin{figure}
     \centering
@@ -188,29 +182,8 @@ and the fourth are the sampling location.
     \label{fig:example1}
 \end{figure}
 
-After guessing the sampling times, the column \textbf{Date} should now
-have values between 2000 and 2002 and the column \textbf{Height} should
-have values from 0 to 2. The heights denote the time difference from a
-sequence to the most recently sampled sequence. If everything is
-specified correctly, the sequence with Height 0.0 should have Date
-2001.9. Next, the sampling locations need to be specified.
-
-\subsubsection{Get the sampling locations (Tip
-Locations)}\label{get-the-sampling-locations-tip-locations}
-
-As for the sampling times, they can be guessed from the sequence names.
-Initially the column \textbf{Location} should be NOT\_SET for every
-sequence. After clicking the \emph{Guess} button, you can split the
-sequence on the vertical bar ``\textbar{}'' again. As said before, the
-locations are in the fourth group. After clicking the \emph{OK} button,
-the window should now look like in the figure below:
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.700000\textwidth]{figures/TipLocations.png}
-    \caption{Guess sampling locations.}
-    \label{fig:example1}
-\end{figure}
+Clicking "Ok" should now populate the table with the sample times extracted from the sequence names: the column \textbf{Date} should now have values between 2000 and 2002 and the column \textbf{Height} should have values from 0 to 2. The heights denote the time difference from a sequence to the most recently sampled sequence. If everything is 
+specified correctly, the sequence with Height 0.0 should have Date 2001.9. 
 
 \subsubsection{Specify the Site Model (Site
 Model)}\label{specify-the-site-model-site-model}
@@ -222,7 +195,7 @@ transition rates. Meaning that changes between bases that are chemically
 closer related (transitions) are allowed to have a different rate than
 changes between bases that chemically more distinct (transversion).
 Additionally, we should allow for different rate categories for
-different sires in the alignment. This can be done by setting the
+different sites in the alignment. This can be done by setting the
 \emph{Gamma Category Count} to 4, which is just a value that has
 typically been used. Make sure that estimate is checked next to the
 shape parameter. To reduce the number of parameters we have to estimate,
@@ -250,52 +223,68 @@ initial value to 0.005.
     \label{fig:example1}
 \end{figure}
 
-\subsubsection{Specify the priors and set dimensions
-(Priors)}\label{specify-the-priors-and-set-dimensions-priors}
+\subsubsection{Get the sampling locations (Tip
+Locations)}\label{get-the-sampling-times-tip-dates}
 
-Now, we need to set the priors as well as the dimensions of the
-effective population sizes and the migration rates. For this example we
-have sequences from Hong Kong, New Zealand and, New York . Overall we
-have three different locations, meaning that we need an effective
-population size for each of these locations. You can set the dimension
-of the effective population size by pressing the \emph{initial} button.
-A window will then appear where you can set the dimension to 3. Next, we
-can change the prior to a Log Normal prior with M=0 and S=1. Since we
-have only a few samples per location, meaning little information about
-the different effective population sizes, we will need an informative
-prior.
+We first have to choose the tree prior, which in this case is MASCOT. 
+We do this by switching to the "Priors" tab. Search the drop down menu 
+next to \emph{Tree.t:H3N2} and choose MASCOT.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.700000\textwidth]{figures/SetNeDimension.png}
-    \caption{Set the dimension for the effective population sizes to 3.}
-    \label{fig:example1}
-\end{figure}
+By default, the rate dynamics for this setting is \emph{Constant}, 
+which means that effective population sizes and migration rates are assumed 
+to be constant through time.
+We next have to define the sampling location of the individual tips.
 
-Next, we have to set the dimension of the migration rate parameter. A
-lineage from any of the 3 locations can migrate to 2 (3-1) other
-locations. Overall, we therefore have to estimate 3*(3-1) migration
-rates and have to set the dimension accordingly. The exponential
-distribution as a prior on the migration rate puts much weight on lower
-values while not prohibiting larger ones. For migration rates, a prior
-that prohibits too large values while not greatly distinguishing between
-very small and very very small values (such as the inverse uniform) is
-generally a good choice.
+Initially the column \textbf{Location} should be NOT\_SET for every sequence.  
+After clicking the \emph{Guess}button, you can split the sequence on the 
+vertical bar "|" again by selecting "split on character" and entering "|" 
+in the box. However, the locations are in the fourth group, so this time 
+choose "4" from the drop-down menu.
+After clicking the \emph{OK} button, the window should look like the 
+one shown in the figure below:
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.700000\textwidth]{figures/SetMigrationDimension.png}
-    \caption{Set the dimension of the migration rates to 6.}
+    \includegraphics[width=0.700000\textwidth]{figures/TipLocations.png}
+    \caption{Configuring sample locations.}
     \label{fig:example1}
 \end{figure}
 
-Next, we have to set a prior for the clock rate. Since we only have a
-narrow time window of less than a year and only 24 sequences, there
-isn't much information in the data about the clock rate. We have however
-a good idea about it for Influenza A/H3N2 Hemagglutinin. We can
-therefore set the prior to be normally distributed around 0.005
-substitution per site and year with a variance of 0.0001. (At this point
-we could also just fix the rate)
+
+\subsubsection{Specify the priors (Priors)}\label{specify-the-priors-and-set-dimensions-priors}
+
+Now, we need to set the priors for the various parameters of the model. 
+You can find the parameter priors below the tree prior.
+
+First, consider the effective population size parameter \emph{Ne}. Since we
+have only a few samples per location, meaning little information about the
+different effective population sizes, we will need an informative prior. 
+In this case we will use a log normal prior with parameters M=0 and S=1. 
+(These are respectively the mean and variance of the corresponding normal 
+distribution in log space.) To use this prior, choose "Log Normal" from 
+the drop down menu to the right of the \emph{Ne.t:H3N2} parameter label, 
+then click the arrow to the left of the same label and fill in the parameter 
+values appropriately (i.e. M=0 and S=1). Ensure that the "Mean In Real Space" 
+checkbox remains unchecked.
+
+The existing exponential distribution as a prior on the migration rate puts 
+much weight on lower values while not prohibiting larger ones. For migration 
+rates, a prior that prohibits too large values while not greatly distinguishing between very small and very \textbf{very} small values is generally a good choice. 
+Be aware however that the exponential distribution is quite an informative prior: one should be careful that to choose a mean so that feasible rates are at least within the 95\% HPD interval of the prior.  (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.) We keep the default mean value of 1.
+
+Finally, set the prior for the clock rate. We have a good idea about the clock 
+rate of Influenza A/H3N2 Hemagglutinin. From previous work by other people, 
+we know that the clock rate will be around 0.005 substitution per site per year. To include that prior knowledge, we can set the prior on the clock rate to a Log Normal distribution with mean in \textbf{real space} set to 0.005. To specify the mean in real space, make sure that the box "Mean In Real Space" is checked. If  we set the S value to 0.25, we say that we expect the clock rate to be with 95\%  certainty between 0.00321 and 0.00731.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.700000\textwidth]{figures/Priors.png}
+    \caption{Set up of the prior distributions.}
+    \label{fig:example1}
+\end{figure}
+
+We keep the default priors for the parameters gammaShape and kappa.
+
 
 \subsubsection{Specify the MCMC chain length
 (MCMC)}\label{specify-the-mcmc-chain-length-mcmc}
@@ -303,7 +292,7 @@ we could also just fix the rate)
 Here we can set the length of the MCMC chain and after how many
 iterations the parameter and trees a logged. For this dataset, 2 million
 iterations should be sufficient. In order to have enough samples but not
-create too large files, we can set the logEvery to 2500, so we have 801
+create too large files, we can set the logEvery to 2000, so we have 1001
 samples overall. Next, we have to save the \lstinline!*.xml! file under
 \emph{File \textgreater{}\textgreater{} Save as}.
 
@@ -326,8 +315,7 @@ Tracer}\label{analyse-the-log-file-using-tracer}
 
 First, we can open the \lstinline!*.log! file in tracer to check if the
 MCMC has converged. The ESS value should be above 200 for almost all
-values and especially for the posterior estimates. The burnin taken by
-Tracer is 10\%, but for this analysis 1\% is enough.
+values and especially for the posterior estimates. 
 
 \begin{figure}
     \centering
@@ -384,7 +372,8 @@ TreeAnnotator}\label{make-the-mcc-tree-using-treeannotator}
 Next, we want to summarize the trees. This we can do using
 treeAnnotator. Open the programm and then set the options as below. You
 have to specify the \emph{Burnin precentage}, the \emph{Node heights},
-\emph{Input Tree File} and the \emph{Output File} after clicking
+\emph{Input Tree File} and the \emph{Output File}. Use the typed trees 
+in the file \emph{H3N2.H32.trees} as \emph{Input Tree File}. After clicking
 \emph{Run} the programm should summarize the trees.
 
 \begin{figure}
@@ -397,27 +386,47 @@ have to specify the \emph{Burnin precentage}, the \emph{Node heights},
 \subsubsection{Check the MCC tree using
 FigTree}\label{check-the-mcc-tree-using-figtree}
 
-We can now open the MCC tree using FigTree. The output contains several
-things. Each node has several traits. Among them are those called
-Hong\_Kong, New\_York and New\_Zealand. The value of those traits is the
-probability of that node being in that location as inferred using
-MASCOT.
+In each logging step of the tree during the MCMC, MASCOT logs several different things. It logs the inferred probability of each node being in any possible location. In this example, these would be the inferred probabilities of being in Hong Kong, New York and New Zealand. Additonally, it logs the most likely location of each node.
+
+After opening the MCC tree in FigTree, we can visualize several things.
+To color branches, you can go to \emph{Appearance} \textgreater{}\textgreater{}  \emph{Colour by} and select \textbf{max}. 
+This is the location that was inferred to be most often the most likely location of the node.
 
 \begin{figure}
     \centering
-    \includegraphics[width=1.000000\textwidth]{figures/HongKongLabels.png}
+    \includegraphics[width=1.000000\textwidth]{figures/ColorsTree.png}
     \caption{Compare the inferred node probabilities.}
     \label{fig:example1}
 \end{figure}
 
-We can now check if lineages ancestral to samples from New York are
-actually inferred to be from Hong Kong, or the probability of the root
-being in any of the locations. It should here be mentioned that the
-inference of nodes being in a particular location makes some simplifying
-assumptions, such as that there are no other locations where lineages
-could have been. \clearpage
+We can now determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations.
+
+To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to \emph{Node Labels} \textgreater{}\textgreater{}  \emph{Display} an then choose Hong\_Kong, New\_York or New\_Zealand. These are the actual inferred probabilities of the nodes being in any location.
+
+It should however be mentioned that the inference of nodes being in a particular location makes some simplifying assumptions, such as that there are no other locations (i.e. apart from the sampled locations) where lineages could have been.
+
+Another important thing to know is that currently, we assume rates to be constant. This means that we assume that the population size of the different locations does not change over time. We also make the same assumption about the migration rates through time.
+
+\subsubsection{Errors that can occur (Work in progress)}\label{errors-that-can-occur}
+
+One of the errors message that can occur regularly is the following:
+\emph{too many iterations, return negative infinity}.
+This occurs when the integration step size of the ODE's to compute the probability of observing a phylogenetic tree in MASCOT is becoming too small.
+This generally occurs if at least one migration rate is really large or at least one effective population size is really small (i.e. the coalescent rate is really high). This causes integration steps to be extremely small, which in turn would require a lot of time to compute the probability of a phylogenetic tree under MASCOT. Instead of doing that, this state is rejected by assigning its log probability the value negative infinity.
+
+This error can have different origins and a likely incomplete list is the following:
+\begin{enumerate}
+\item The priors on migration rates put too much weight on really high rates. To fix this, reconsider your priors on the migration rates. Particularly, check if the prior on the migration rates make sense in comparison to the height of the tree. If, for example, the tree has a height of 1000 years, but the prior on the migration rate is exponential with mean 1, then the prior assumption is that between any two states, we expected approximately
+ 1000 migration events.
+\item  The prior on the effective population sizes is too low, meaning that the prior on the coalescent rates (1 over the effective population size) is too high. This can for example occur when the prior on the effective population size was chosen to be 1/X. To fix, reconsider your prior on the effective population size.
+\item  There is substantial changes of the effective population sizes and/or migration rates over time that are not modeled. In that case, changes in the effective population sizes or migration rates have to be explained by population structure, which can again lead to some effective population sizes being very low and some migration rates being very high. In that case, there is unfortunately not much that can be done, since MASCOT is not an appropriate model for the dataset.
+\item  There is strong subpopulation structure within the different subpopulations used. In that case, reconsider if the individual sub-populations used are reasonable.
+\end{enumerate}
+
 
 \section{Useful Links}\label{useful-links}
+
+If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here \citep{Mueller2017}. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper \citep{mueller2017mascot}.
 
 \begin{itemize}
 
@@ -432,6 +441,8 @@ could have been. \clearpage
   Join the BEAST user discussion:
   \url{http://groups.google.com/group/beast-users} 
 \end{itemize}
+
+
 
 
 

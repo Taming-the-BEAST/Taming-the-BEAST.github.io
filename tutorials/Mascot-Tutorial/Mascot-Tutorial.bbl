@@ -47,6 +47,52 @@
     \field{year}{2014}
   \endentry
 
+  \entry{mueller2017mascot}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MNF}{%
+         family={M{\"u}ller},
+         familyi={M\bibinitperiod},
+         given={Nicola\bibnamedelima F},
+         giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Rasmussen},
+         familyi={R\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Tanja},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MNF+1}
+    \strng{fullhash}{MNFRDST1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1093/bioinformatics/bty406
+    \endverb
+    \verb{eprint}
+    \verb /oup/backfile/content_public/journal/bioinformatics/pap/10.1093_bioin
+    \verb formatics_bty406/1/bty406.pdf
+    \endverb
+    \field{pages}{bty406}
+    \field{title}{MASCOT: Parameter and state inference under the marginal
+  structured coalescent approximation}
+    \verb{url}
+    \verb http://dx.doi.org/10.1093/bioinformatics/bty406
+    \endverb
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2018}
+  \endentry
+
   \entry{Mueller2017}{article}{}
     \name{author}{3}{}{%
       {{hash=MNF}{%

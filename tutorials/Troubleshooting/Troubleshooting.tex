@@ -25,7 +25,7 @@
 \begin{center}
 
 	% Enter the name of your tutorial here
-	\textbf{\LARGE Tutorial using BEAST v2.4.1+}\\\vspace{2mm}
+	\textbf{\LARGE Tutorial using BEAST v2.7.x}\\\vspace{2mm}
 
 	% Enter a short description of your tutorial here
 	\textbf{\textcolor{mycol}{\Large Troubleshooting}}\\
@@ -42,42 +42,46 @@
 % Tutorial body %
 %%%%%%%%%%%%%%%%%
 
-\section{Background}\label{background}
+\hypertarget{background}{%
+\section{Background}\label{background}}
 
 The primary goal of most phylogenetic analyses in BEAST is to infer the
 posterior distribution of trees and associated model parameters using
 Markov chain Monte Carlo (MCMC) sampling. In this tutorial, we will
-learn how to analyze the output of a MCMC analysis in BEAST using
+learn how to analyze the output of an MCMC analysis in BEAST2 using
 Tracer. This program allows us to easily visualize BEAST's output and
 summarize results. As we will see, we can also use Tracer to
 troubleshoot some of the most common MCMC problems encountered in BEAST.
 
 While BEAST's MCMC algorithm is fairly well optimised for phylogenetic
 inference, problems can arise, especially as the complexity of our data
-and models increase. A MCMC run may not converge on a stationary target
+and models increase. An MCMC run may not converge on a stationary target
 distribution. More commonly, a run might converge but mix poorly -
-meaning our samples from the posterior are highly autocorrelated and
-therefore not independent. In these cases, it is often necessary to tune
-the performance of the MCMC algorithm.
+meaning that our samples from the posterior are highly autocorrelated
+and therefore not independent. In these cases, it is often necessary to
+tune the performance of the MCMC algorithm.
 
 In this tutorial, we will consider a relatively simple example where we
 would like to infer a phylogeny and evolutionary parameters from a small
 alignment of sequences. Our job will be to work together to increase the
 efficiency of the MCMC so we can make BEAST purr\ldots{} \clearpage
 
+\hypertarget{programs-used-in-this-exercise}{%
 \section{Programs used in this
-Exercise}\label{programs-used-in-this-exercise}
+Exercise}\label{programs-used-in-this-exercise}}
 
+\hypertarget{beast2---bayesian-evolutionary-analysis-sampling-trees-2}{%
 \subsubsection{BEAST2 - Bayesian Evolutionary Analysis Sampling Trees
-2}\label{beast2---bayesian-evolutionary-analysis-sampling-trees-2}
+2}\label{beast2---bayesian-evolutionary-analysis-sampling-trees-2}}
 
 BEAST2 (\url{http://www.beast2.org}) is a free software package for
 Bayesian evolutionary analysis of molecular sequences using MCMC and
 strictly oriented toward inference using rooted, time-measured
-phylogenetic trees. This tutorial is written for BEAST v2.4.1 \citep{BEAST2book2014}.
+phylogenetic trees. This tutorial is written for BEAST v2.7.x \citep{Bouckaert2014, Bouckaert2019}.
 
+\hypertarget{beauti2---bayesian-evolutionary-analysis-utility}{%
 \subsubsection{BEAUti2 - Bayesian Evolutionary Analysis
-Utility}\label{beauti2---bayesian-evolutionary-analysis-utility}
+Utility}\label{beauti2---bayesian-evolutionary-analysis-utility}}
 
 BEAUti2 is a graphical user interface tool for generating BEAST2 XML
 configuration files.
@@ -90,42 +94,48 @@ will have the same layout and functionality on both Windows and Linux.
 BEAUti2 is provided as a part of the BEAST2 package so you do not need
 to install it separately.
 
-\subsubsection{Tracer}\label{tracer}
+\hypertarget{tracer}{%
+\subsubsection{Tracer}\label{tracer}}
 
-Tracer (\url{http://tree.bio.ed.ac.uk/software/tracer}) is used to
-summarise the posterior estimates of the various parameters sampled by
-the Markov Chain. This program can be used for visual inspection and to
-assess convergence. It helps to quickly view median estimates and 95\%
-highest posterior density intervals of the parameters, and calculates
-the effective sample sizes (ESS) of parameters. It can also be used to
+Tracer (\url{http://beast.community/tracer}) is used to summarise the
+posterior estimates of the various parameters sampled by the Markov
+Chain. This program can be used for visual inspection and to assess
+convergence. It helps to quickly view median estimates and 95\% highest
+posterior density intervals of the parameters, and calculates the
+effective sample sizes (ESS) of parameters. It can also be used to
 investigate potential parameter correlations. We will be using Tracer
-v1.6.0.
+v1.7.x.
 
 \clearpage
 
+\hypertarget{practical-getting-beast-to-purr}{%
 \section{Practical: Getting BEAST to
-purr}\label{practical-getting-beast-to-purr}
+purr}\label{practical-getting-beast-to-purr}}
 
-\subsection{The Data}\label{the-data}
+\hypertarget{the-data}{%
+\subsection{The data}\label{the-data}}
 
 To get started, I have generated a XML file that we can run our
 phylogenetic analysis in BEAST.
 
 \begin{framed}
-Download the first BEAST input file \lstinline!tutorial_run1.xml!
+Download the first \textbf{BEAST2} input file
+\passthrough{\lstinline!tutorial\_run1.xml!}
 \end{framed}
 
 The XML contains an alignment of 36 randomly simulated DNA sequences.
 
+\hypertarget{inspecting-the-xml-file-in-beauti}{%
 \subsection{Inspecting the XML file in
-BEAUti}\label{inspecting-the-xml-file-in-beauti}
+BEAUti}\label{inspecting-the-xml-file-in-beauti}}
 
 While we can open the XML file in any standard text editor, BEAUTi
 offers an easy way to inspect the different elements of the analysis:
 
 \begin{framed}
-Open BEAUti and load in the \lstinline!tutorial_run1.xml! file by
-navigating to \textbf{File \textgreater{} Load}.
+Open \textbf{BEAUti} and load in the
+\passthrough{\lstinline!tutorial\_run1.xml!} file by navigating to
+\textbf{File \textgreater{} Load}.
 \end{framed}
 
 By navigating between the different tabs at the top of the application
@@ -141,13 +151,16 @@ fitting a GTR substitution model with no gamma rate heterogeneity
     \label{fig:beauti_run1}
 \end{figure}
 
-\subsubsection{Running the XML in BEAST}\label{running-the-xml-in-beast}
+\hypertarget{running-the-xml-in-beast}{%
+\subsubsection{Running the XML in
+BEAST}\label{running-the-xml-in-beast}}
 
 We are now ready to run our first analysis in BEAST.
 
 \begin{framed}
-Open BEAST and choose \lstinline!tutorial_run1.xml! as the BEAST XML
-file. Then click \textbf{Run}.
+Open \textbf{BEAST2} and choose
+\passthrough{\lstinline!tutorial\_run1.xml!} as the Input file. Then
+click \textbf{Run}.
 \end{framed}
 
 \begin{figure}
@@ -157,20 +170,22 @@ file. Then click \textbf{Run}.
     \label{fig:beast_run1}
 \end{figure}
 
-Since we are only running 200,000 iterations, the MCMC should finish running
-in under 30 seconds.
+Since we are only running 200,000 iterations, the MCMC should finish
+running in under 30 seconds.
 
-
+\hypertarget{visualizing-beasts-output-in-tracer}{%
 \subsubsection{Visualizing BEAST's output in
-Tracer}\label{visualizing-beasts-output-in-tracer}
+Tracer}\label{visualizing-beasts-output-in-tracer}}
 
 \begin{framed}
-Open Tracer and navigate to \textbf{File \textgreater{} Import Trace
-File}, then open \lstinline!tutorial_run1.log!
+Open \textbf{Tracer} and navigate to \textbf{File \textgreater{} Import
+Trace File}, then open \passthrough{\lstinline!tutorial\_run1.log!}
+\textbf{or} simply drag and drop the file into the \textbf{Tracer}
+window.
 \end{framed}
 
-The results of your run will look similar, but not necessarily identical,
-to my results shown in Figure \ref{fig:beast_run1}.
+The results of your run will look similar, but not necessarily
+identical, to my results shown in Figure \ref{fig:beast_run1}.
 
 Tracer allows us to quickly visualize BEAST's MCMC output in order to
 check performance and see our parameter estimates. On the left there is
@@ -191,7 +206,7 @@ poor, hence the low ESS.
 \begin{figure}
     \centering
     \includegraphics[width=0.800000\textwidth]{figures/tracer_run1.png}
-    \caption{A trace plot for the \textbf{clockRate} parameter}
+    \caption{A trace plot for the clockRate parameter}
     \label{fig:tracer_run1}
 \end{figure}
 
@@ -199,62 +214,64 @@ We can also see our posterior estimates for each parameter by clicking
 on the \textbf{Estimates} tab while highlighting the desired parameter
 in the left panel. This provides us with various summary statistics and
 a frequency histogram representing our estimate of the posterior
-distribution constructed from our MCMC samples. For the \textbf{clockRate}
-parameter, we can see that our estimate of the posterior is extremely
-rough, again because we have so few uncorrelated samples from the
-posterior (Figure \ref{fig:tracer_run1_ests}).
+distribution constructed from our MCMC samples. For the
+\textbf{clockRate} parameter, we can see that our estimate of the
+posterior is extremely rough, again because we have so few uncorrelated
+samples from the posterior (Figure \ref{fig:tracer_run1_ests}).
 
 \begin{figure}
     \centering
     \includegraphics[width=0.800000\textwidth]{figures/tracer_run1_ests.png}
-    \caption{Posterior estimates of the \textbf{clockRate} in Tracer.}
+    \caption{Posterior estimates of the clockRate in Tracer.}
     \label{fig:tracer_run1_ests}
 \end{figure}
 
+\hypertarget{run-2-increasing-the-chain-length}{%
 \subsubsection{Run 2: Increasing the chain
-length}\label{run-2-increasing-the-chain-length}
+length}\label{run-2-increasing-the-chain-length}}
 
 By checking the ESS, trace plots and parameter estimates, we got the
 picture that none of our parameters in Run 1 mixed well. In this case,
 the simplest thing to try is to rerun the MCMC for more iterations.
 
 \begin{framed}
-Load the \lstinline!tutorial_run1.xml! back into BEAUti using
-\textbf{File \textgreater{} Load}. Navigate to the MCMC panel and
-increase the chain length to 1 million. You may also want to change the
-file name for the log file to \lstinline!tutorial_run2.log! and to 
-\lstinline!tutorial_run2.trees! for the tree file so we do not
-overwrite our previous results. When done, navigate \textbf{File
-\textgreater{} Save As} and save as \lstinline!tutorial_run2.xml!.
+Load \passthrough{\lstinline!tutorial\_run1.xml!} back into
+\textbf{BEAUti} using \textbf{File \textgreater{} Load}. Navigate to the
+MCMC panel and increase the chain length to 1 million. When done,
+navigate \textbf{File \textgreater{} Save As} and save as
+\passthrough{\lstinline!tutorial\_run2.xml!}.
 \end{framed}
+
+Note that we didn't need to change the file names fo the
+\textbf{tracelog} or \textbf{treelog}, since they are by default set to
+\passthrough{\lstinline!$(filebase).log!} and
+\passthrough{\lstinline!$(filebase)-$(tree).trees!}. When running the
+analysis \passthrough{\lstinline!$(filebase)!} will be replaced by the
+name of the XML file and \passthrough{\lstinline!$(tree)!} by the name
+of tree in the analysis (in this case the name of the alignment).
 
 \begin{framed}
-Run the \lstinline!tutorial_run2.xml! file in BEAST as we did before.
-When done, open the \lstinline!tutorial_run2.log! in Tracer.
+Run the \passthrough{\lstinline!tutorial\_run2.xml!} file in
+\textbf{BEAST2} as we did before. When done, open
+\passthrough{\lstinline!tutorial\_run2.log!} in \textbf{Tracer}.
 \end{framed}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.800000\textwidth]{figures/beauti_run2.png}
-    \caption{Increasing the chain length in BEAUTi}
-    \label{fig:beauti_run2}
-\end{figure}
-
-Looking at the MCMC output in Tracer, we see that that increasing the
-chain length did help some (Figure \ref{fig:tracer_run2}). The ESS
-values are higher and the traces look better, but still not great. In
-the next section, we will continue to focus on the \textbf{clockRate} parameter
+Looking at the MCMC output in Tracer, we see that increasing the chain
+length did help (Figure \ref{fig:tracer_run2}). The ESS values are
+higher and the traces look better, but still not great. In the next
+section, we will continue to focus on the \textbf{clockRate} parameter
 because it still has a low ESS and appears to mix especially poorly.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.800000\textwidth]{figures/tracer_run2.png}
-    \caption{A trace plot for the \textbf{clockRate} parameter}
+    \caption{A trace plot for the clockRate parameter}
     \label{fig:tracer_run2}
 \end{figure}
 
-\subsubsection{Run 3: Changing the \textbf{clockRate}
-operators}\label{run-3-changing-the-clockrate-operators}
+\hypertarget{run-3-changing-the-clockrate-operators}{%
+\subsubsection{\texorpdfstring{Run 3: Changing the \textbf{clockRate}
+operators}{Run 3: Changing the clockRate operators}}\label{run-3-changing-the-clockrate-operators}}
 
 If one parameter in particular is not converging or mixing well, we can
 try to tweak that parameter's operator(s). Remember that BEAST's
@@ -265,16 +282,13 @@ well in Run 2, we will try increasing the frequency at which new
 \textbf{clockRates} are proposed.
 
 \begin{framed}
-Load the \lstinline!tutorial_run2.xml! back into BEAUti and select
-\lstinline!View > Show Operators! panel. This will bring up a new panel
-showing all the operators in use (Figure \ref{fig:beauti_run3}). Click
-on the black triangle next to \lstinline!Scale:clockRate!. In the menu
-that drops down, check \textbf{Optimise}. In the box to the right of
-\lstinline!Scale.clockRate!, change the value from \textbf{0.1} to
-\textbf{3.0}. Now navigate to the MCMC panel and change the file name
-for the log file to \lstinline!tutorial_run3.log! and the tree file to
-\lstinline!tutorial_run3.trees!. When done, save as
-\lstinline!tutorial_run3.xml!.
+Load \passthrough{\lstinline!tutorial\_run2.xml!} back into
+\textbf{BEAUti} and select \textbf{View \textgreater{} Show Operators
+panel}. This will bring up a new panel showing all the operators in use
+(Figure \ref{fig:beauti_run3}). In the box to the right of
+\passthrough{\lstinline!Adaptable Sampler: clockRate.c:seqs  Scale substitution rate of partition c:seqs!},
+change the value from \textbf{0.05} to \textbf{3.0}. When done, save as
+\passthrough{\lstinline!tutorial\_run3.xml!}.
 \end{framed}
 
 \begin{figure}
@@ -284,34 +298,29 @@ for the log file to \lstinline!tutorial_run3.log! and the tree file to
     \label{fig:beauti_run3}
 \end{figure}
 
-So, what just happened? We told BEAST to try to automatically optimise
-the scale operator on the \mbox{\textbf{clockRate}}, which moves the parameter value up
-or down. Note that by default, operators are automatically optimised in
-BEAST, but for the purposes of this tutorial I turned off
-auto-optimization to get especially bad mixing. We also increased the
-weight on this scale operator so that new \textbf{clockRates} will be
-proposed more often in the MCMC. Going from a weight of 0.1 to 3.0 means
-that new proposals for that parameter will be made thirty times as
-often, but the frequency at which a given operator is called depends on
-the weights given to other operators. So if there are parameters with
-very high ESS values, we may want to reallocate weight on their
-operators to operators on less well mixing parameters. For fun, you may
-want to guess what each operator in the \textbf{Operators} panel is
-doing.
+So, what just happened? We increased the weight of the scale operator on
+the \textbf{clockRate}, which moves the parameter value up or down, so
+that new \textbf{clockRates} will be proposed more often in the MCMC.
+Going from a weight of 0.05 to 3.0 means that new proposals for that
+parameter will be made sixty times as often, but the frequency at which
+a given operator is called depends on the weights given to other
+operators. So if there are parameters with very high ESS values, we may
+want to reallocate weight on their operators to operators on less well
+mixing parameters.
 
 \begin{framed}
-Run the \lstinline!tutorial_run3.xml! in BEAST and then open the
-\lstinline!tutorial_run3.log! in Tracer.
+Run \passthrough{\lstinline!tutorial\_run3.xml!} in \textbf{BEAST2} and
+then open \passthrough{\lstinline!tutorial\_run3.log!} in
+\textbf{Tracer}.
 \end{framed}
 
 We can see that optimizing the operator dramatically improves mixing for
-the \textbf{clockRate} (Figure \ref{fig:tracer_run3}). But there is still room
-for improvement.
+the \textbf{clockRate} (Figure \ref{fig:tracer_run3}).
 
 \begin{figure}
     \centering
     \includegraphics[width=0.800000\textwidth]{figures/tracer_run3.png}
-    \caption{A trace plot for the \textbf{clockRate} parameter}
+    \caption{A trace plot for the clockRate parameter}
     \label{fig:tracer_run3}
 \end{figure}
 
@@ -322,8 +331,9 @@ two parameters are highly correlated. We can identify these correlations
 in Tracer by visualizing the joint distribution of a pair of parameters
 together. To do this, select one parameter in the left panel and then,
 while holding the command key (Mac) or control key (Windows), select
-another. Then click on the \textbf{Joint-Marginal} tab at the top.
-Looking at the pairwise joint distribution for \textbf{TreeHeight} and
+another. Then click on the \textbf{Joint-Marginal} tab at the top and
+uncheck the \textbf{Sample only} box at the bottom. Looking at the
+pairwise joint distribution for \textbf{Tree.height} and
 \textbf{clockRate}, we see that these two parameters are highly
 negatively correlated (Figure \ref{fig:tracer_run3Joint}). We therefore
 may want to add an operator that updates these parameters together to
@@ -332,12 +342,13 @@ more efficiently explore their parameter space.
 \begin{figure}
     \centering
     \includegraphics[width=0.800000\textwidth]{figures/tracer_run3Joint.png}
-    \caption{The joint posterior distribution of \textbf{TreeHeight} and \textbf{clockRate}}
+    \caption{The joint posterior distribution of Tree.height and clockRate}
     \label{fig:tracer_run3Joint}
 \end{figure}
 
-\subsubsection{Run 4: Adding an upDown
-operator}\label{run-4-adding-an-updown-operator}
+\hypertarget{run-4-adding-an-updown-operator}{%
+\subsubsection{Run 4: Adding an UpDown
+operator}\label{run-4-adding-an-updown-operator}}
 
 The easiest way to improve MCMC performance when two parameters are
 highly negatively correlated is to add an \textbf{UpDown} operator. This
@@ -346,32 +357,32 @@ If two parameters are highly positively correlated we can also use this
 operator to scale both parameters in the same direction, up or down.
 
 \begin{framed}
-Load the \lstinline!tutorial_run3.xml! back into BEAUti and select
-\lstinline!View > Show Operators! panel. Click on the black triangle
-next to \textbf{UpDown clockRate}. In the menu that drops down, check
-\textbf{Optimise}. In the box to the right, change the weight on the
-UpDown operator from \textbf{0.0} to \textbf{3.0}. In the MCMC panel,
-change the file name for the log file to \lstinline!tutorial_run4.log!
-and the tree file to \lstinline!tutorial_run4.trees!.
-When done, save as \lstinline!tutorial_run4.xml!.
+Load \passthrough{\lstinline!tutorial\_run3.xml!} back into
+\textbf{BEAUti} and select \textbf{View \textgreater{} Show Operators
+panel} as before. In the box to the right of
+\passthrough{\lstinline!Adaptable Sampler: clockRate.c:seqs Tree.t:seqs  Scale up substitution rate c:seqs and scale down tree t:seqs!},
+change the weight on the \textbf{Bactrian UpDown} operator from
+\textbf{0.0} to \textbf{3.0}. When done, save as
+\passthrough{\lstinline!tutorial\_run4.xml!}.
 \end{framed}
 
 We just added an \textbf{UpDown} operator on the \textbf{clockRate} and
-the \textbf{TreeHeight}. The fact that these two parameters are highly
-negatively correlated makes perfect sense. An increase in the
+the \textbf{Tree.height} parameters. The fact that these two parameters
+are highly negatively correlated makes perfect sense. An increase in the
 \textbf{clockRate} means that less time is needed for substitutions to
 accumulate along branches; meaning branches can be shorter and yet still
 explain the same amount of accumulated evolutionary change in the
 sequence data. If all branches in the tree become shorter, then the
-total \textbf{TreeHeight} will also decrease. Thus it makes sense to
+total \textbf{Tree.height} will also decrease. Thus, it makes sense to
 include an \textbf{UpDown} operator on \textbf{clockRate} and
-\textbf{TreeHeight}. In fact, by default BEAUTi includes this operator.
+\textbf{Tree.height}. In fact, by default BEAUTi includes this operator.
 However, I disabled it in the original XML file by setting the weight on
 this operator to zero for the purpose of illustration.
 
 \begin{framed}
-Run the \lstinline!tutorial_run4.xml! in BEAST and then open the
-\lstinline!tutorial_run4.log! in Tracer.
+Run \passthrough{\lstinline!tutorial\_run4.xml!} in \textbf{BEAST2} and
+then open \passthrough{\lstinline!tutorial\_run4.log!} in
+\textbf{Tracer}.
 \end{framed}
 
 Looking at the MCMC output in Tracer, we see that all parameters are
@@ -382,17 +393,19 @@ iterations to the chain as we did for Run 2. Alternatively, multiple
 different MCMC runs can be combined using the program LogCombiner that
 comes packaged with BEAST. This may be better than running one single
 long analysis, as it allows us to be sure independent runs are
-converging on similar parameters.
+converging on posterior parameter values and increases our confidence
+that we are sampling from the equilibrium distribution.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.800000\textwidth]{figures/tracer_run4.png}
-    \caption{A trace plot for the \textbf{clockRate} parameter}
+    \caption{A trace plot for the clockRate parameter}
     \label{fig:tracer_run4}
 \end{figure}
 
+\hypertarget{further-things-to-keep-in-mind}{%
 \subsubsection{Further things to keep in
-mind}\label{further-things-to-keep-in-mind}
+mind}\label{further-things-to-keep-in-mind}}
 
 \begin{itemize}
 
@@ -412,7 +425,8 @@ mind}\label{further-things-to-keep-in-mind}
   sampling from the prior.
 \end{itemize}
 
-\section{Useful Links}\label{useful-links}
+\hypertarget{useful-links}{%
+\section{Useful Links}\label{useful-links}}
 
 \begin{itemize}
 
@@ -423,7 +437,8 @@ mind}\label{further-things-to-keep-in-mind}
 
 \clearpage
 
-
+\hypertarget{relevant-references}{%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % Tutorial disclaimer %
@@ -431,7 +446,9 @@ mind}\label{further-things-to-keep-in-mind}
 % Please do not change the license
 % Add the author names and relevant links
 % Add any other aknowledgments here
-\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[scale=0.8]{figures/ccby.pdf}} This tutorial was written by David A. Rasmussen for \href{https://taming-the-beast.github.io}{Taming the BEAST} and is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. 
+\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[scale=0.8]{figures/ccby.pdf}} This tutorial was written by David
+A.
+Rasmussen for \href{https://taming-the-beast.github.io}{Taming the BEAST} and is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. 
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -441,6 +458,7 @@ Version dated: \today
 
 
 
+\newpage
 
 %%%%%%%%%%%%%%%%
 %  REFERENCES  %

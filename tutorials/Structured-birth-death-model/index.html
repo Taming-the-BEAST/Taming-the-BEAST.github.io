@@ -234,6 +234,15 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/precooked_runs/h3n2-bdmm.h3n2_2deme.summary.trees" target="_blank" download rel="nofollow">
+						h3n2-bdmm.h3n2_2deme.summar...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-model/raw/master/precooked_runs/h3n2-bdmm.xml.state" target="_blank" download rel="nofollow">
 						h3n2-bdmm.xml.state
 					</a>
@@ -277,6 +286,16 @@
     			</div>
  				</a>
  			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/EtthelWindels">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/81649627?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				EtthelWindels
+    			</div>
+ 				</a>
+ 			</div>			
  			
 		</div>
 		<div class="bigspacer"></div>
@@ -285,6 +304,24 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/a45898e69d5c274792e8962db07bb1851b32cf3b">
+					08 Jun 2023 - <span class="text-gray">Merge pull request #4 from EtthelWindels/master
+
+Update figures and precooked runs for BEAST2.7 compatibility</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/fcb195911864785f6b7ef80079e4e65770a887d7">
+					24 May 2023 - <span class="text-gray">Update figures and precooked runs for BEAST2.7 compatibility</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -307,22 +344,6 @@
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/2425e49927343b6a2bd934d3a985d660b97c5711">
 					19 Nov 2020 - <span class="text-gray">Fixed mistake in time direction of count logger.</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/7eb210510c6daf4cdecbe3d1416f98fc1b9a4bcc">
-					12 Mar 2019 - <span class="text-gray">Updated figure and BEAST version.</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/d28357b4babb106433c540d677aa6ffb1fd71780">
-					20 Feb 2019 - <span class="text-gray">Minor fixes.</span>
 					</a> 
 				</li>
 			
@@ -353,7 +374,7 @@ assembled from publicly-available data sets provided by various authors on
 
 <h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
 
-<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.5.2 <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.7.4 <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
 
 <h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -369,7 +390,7 @@ assembled from publicly-available data sets provided by various authors on
 
 <h3 id="tracer">Tracer</h3>
 
-<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.0.</p>
+<p>Tracer (<a href="https://github.com/beast-dev/tracer/releases/tag/v1.7.2">https://github.com/beast-dev/tracer/releases/tag/v1.7.2</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.2.</p>
 
 <h3 id="icytree">IcyTree</h3>
 
@@ -385,7 +406,7 @@ assembled from publicly-available data sets provided by various authors on
 
 <ol>
   <li>Start BEAUti;</li>
-  <li>In the application menu, <code class="language-plaintext highlighter-rouge">File &gt; Manage packages</code>.</li>
+  <li>In the application menu, <code class="language-plaintext highlighter-rouge">File &gt; Manage Packages</code>.</li>
   <li>Find <code class="language-plaintext highlighter-rouge">bdmm</code> in the list of packages shown, select it and then click <code class="language-plaintext highlighter-rouge">Install/Upgrade</code>.</li>
 </ol>
 
@@ -406,7 +427,7 @@ Also note that <code class="language-plaintext highlighter-rouge">bdmm</code> de
 
 <h1 id="setting-up-the-analysis-using-beauti">Setting up the analysis using BEAUti</h1>
 
-<h2 id="loading-the-template">Loading the Template</h2>
+<h2 id="loading-the-template">Loading the template</h2>
 
 <p>A BEAUTi template defines the basic structure and contents of your XML configuration file.
 By default BEAUTi will construct an XML file with standard uncoloured BEAST trees, however <code class="language-plaintext highlighter-rouge">bdmm</code> uses coloured trees which are defined in the <code class="language-plaintext highlighter-rouge">MultiTypeTree</code> package.
@@ -421,22 +442,18 @@ To use the appropriate template for the configuration file, select <code class="
 
 <h2 id="loading-the-data">Loading the data</h2>
 
-<p>Once the template is loaded, we can load in our example sequence data.  In our case, this data is stored in a FASTA file, the first few lines of which look like this (the sequences have been truncated for better readability):</p>
+<p>Once the template is loaded, we can load in our example sequence data.  In our case, these data are stored in a FASTA file, the first few lines of which look like this (the sequences have been truncated for better readability):</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; EU856841_HongKong_2005.34246575
------------GGGATAATTCTATTAACCATGAAGACTATCATTGCTTTGAGCTACATTT...
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
 &gt; EU856989_HongKong_2002.58356164
---CAAAAGCAGGGGATAATTCTATTAACCATGAAGACTATCATTGCTTTGAGCTACATTT...
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
 &gt; CY039495_HongKong_2004.5890411
-------------------TTCTATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
 &gt; EU856853_HongKong_2001.17808219
----------------------TATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
-&gt; CY010084_NewZealand_2005.62739726
----------------------TATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
-&gt; CY007387_NewZealand_2004.63287671
----------------------TATTAACCATGAAGACTATCATTGCTTTGAGCTACATTC...
-&gt; CY012432_NewZealand_2000.81643836
----------------------------CCATGAAGACTATCATTGCTTTGAGCTACATTT...
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTTTATGTCTGGTTTTCGCTC...
+&gt; EU857026_HongKong_2003.51232877
+-----------ATGAAGGCTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
 </code></pre></div></div>
 
 <p>The lines beginning with “&gt;” are labels for the sequences immediately
@@ -458,7 +475,7 @@ To set the working directory, select <code class="language-plaintext highlighter
 </figure>
 <p><br /></p>
 
-<p>To load the file, select <code class="language-plaintext highlighter-rouge">File &gt; Add alignment</code>.</p>
+<p>To load the file, select <code class="language-plaintext highlighter-rouge">File &gt; Add Alignment</code>.</p>
 
 <p>This will open a file selection dialog box.  The example influenza sequence data
 file is named <code class="language-plaintext highlighter-rouge">h3n2_2deme.fna</code>.
@@ -514,7 +531,7 @@ To do this, we follow a very similar set of steps to those we used to set the sa
 
 <ol>
   <li>Select the <code class="language-plaintext highlighter-rouge">Tip Locations</code> panel. You’ll find that the locations are already filled with a single default value – <code class="language-plaintext highlighter-rouge">NOT_SET</code>.</li>
-  <li>Click the <code class="language-plaintext highlighter-rouge">Guess</code> button at the top-right of the panel. This opens the same dialog that we saw in the previous section when setting up the dates.</li>
+  <li>Click the <code class="language-plaintext highlighter-rouge">Guess</code> button at the top-left of the panel. This opens the same dialog that we saw in the previous section when setting up the dates.</li>
   <li>The locations are included as the second element of the underscore-delimited sequence names.
 Therefore we choose the <code class="language-plaintext highlighter-rouge">split on character</code> radio button and select group <code class="language-plaintext highlighter-rouge">2</code> from the drop-down menu.
 Note again that the underscore character is already chosen as the delimiter.</li>
@@ -541,19 +558,16 @@ The BEAUTi panel should look as shown in <a href="#fig:tip-types-set">Figure 8</
 
 <h2 id="setting-the-substitution-model">Setting the substitution model</h2>
 
-<p>For this analysis, we will use the HKY substitution model with 4 gamma categories and estimated base frequencies.
+<p>For this analysis, we will use the JC69 substitution model with 4 gamma categories.
 To configure this in BEAUti, switch to the <code class="language-plaintext highlighter-rouge">Site Model</code> panel.
 First, we need to set up the rate category count.
 To approximate the continuous gamma rate distribution BEAST2 uses the discrete gamma distribution, where sites are divided into k equally probable rate categories.
-In general, 4-6 categories work well for most datasets, while having more categories involve a lot of computation at little precision gain, so we set the <code class="language-plaintext highlighter-rouge">Gamma category count</code> to 4.
+In general, 4-6 categories work well for most datasets, while having more categories involve a lot of computation at little precision gain, so we set the <code class="language-plaintext highlighter-rouge">Gamma Category Count</code> to 4.
 We would also like to estimate the <code class="language-plaintext highlighter-rouge">Shape</code> parameter, which describes the shape of the continuous gamma distribution we approximate.
 To do so, we need to set it to a non-zero value (e.g. the default 1.0) and tick the <code class="language-plaintext highlighter-rouge">estimate</code> checkbox.
 While the gamma categories account for rate variation, allowing some sites to have an evolutionary rate of 0 can improve fit to real data.
-To speed up the analysis we will fix this to the actual proportion of invariant sites we have in our alignment, which is 0.867.</p>
-
-<p>Next, to set up the substitution model, select <code class="language-plaintext highlighter-rouge">HKY</code> from the drop-down menu (the default option is <code class="language-plaintext highlighter-rouge">JC69</code>).
-We would like to estimate the kappa parameter of HKY, so we leave the <code class="language-plaintext highlighter-rouge">Kappa</code> at the default value of 2.0 and leave the <code class="language-plaintext highlighter-rouge">estimate</code> checkbox checked.
-We would also like to estimate nucleotide frequencies, so we leave the <code class="language-plaintext highlighter-rouge">Frequencies</code> parameter at the default value (<code class="language-plaintext highlighter-rouge">Estimated</code>).
+To speed up the analysis we will fix this to the actual proportion of invariant sites we have in our alignment, which is 0.867.
+We leave the substitution model to the default option <code class="language-plaintext highlighter-rouge">JC69</code>.
 The BEAUti panel should now look as shown in <a href="#fig:site-model">Figure 9</a>.</p>
 
 <figure>
@@ -583,7 +597,7 @@ The <code class="language-plaintext highlighter-rouge">Clock Model</code> panel 
 </figure>
 <p><br /></p>
 
-<h2 id="adjusting-priors">Adjusting Priors</h2>
+<h2 id="adjusting-priors">Adjusting priors</h2>
 
 <h3 id="setting-up-the-bdmm-tree-prior">Setting up the <code class="language-plaintext highlighter-rouge">bdmm</code> tree prior</h3>
 
@@ -706,7 +720,7 @@ You can see the sampling prior setup in <a href="#fig:samplingProportion-prior">
 </figure>
 <p><br /></p>
 
-<p>For the purpose of this tutorial and given that we know little about the outbreak in question to set strict priors on the <code class="language-plaintext highlighter-rouge">rateMatrix</code>, we will leave the other priors on the default values, but feel free to through them yourself and verify their sensibility.</p>
+<p>For the purpose of this tutorial and given that we know little about the outbreak in question to set strict priors on the <code class="language-plaintext highlighter-rouge">rateMatrix</code>, we will leave the other priors on the default values, but feel free to go through them yourself and verify their sensibility.</p>
 
 <h2 id="saving-the-configuration">Saving the configuration</h2>
 
@@ -735,25 +749,24 @@ we’ll use to assemble a summary tree.</p>
 
 <h2 id="parameter-log-file-analysis">Parameter log file analysis</h2>
 
-<p>We can use the program <a href="http://tree.bio.ed.ac.uk/software/tracer/">Tracer</a> to view the parameter log file.
-To do this, start Tracer and then press the <code class="language-plaintext highlighter-rouge">+</code> button in the top-left hand corner of the window (under <code class="language-plaintext highlighter-rouge">Trace files</code>).
-Select the log file for this analysis (<code class="language-plaintext highlighter-rouge">h3n2_2deme.log</code>) from the file selection dialog box.
+<p>We can use the program <a href="https://github.com/beast-dev/tracer/releases/tag/v1.7.2">Tracer</a> to view the parameter log file.
+To do this, start Tracer and then press the <code class="language-plaintext highlighter-rouge">+</code> button in the top-left hand corner of the window (under <code class="language-plaintext highlighter-rouge">Trace File</code>).
+Select the log file for this analysis (<code class="language-plaintext highlighter-rouge">h3n2-bdmm.log</code>) from the file selection dialog box.
 You can also simply drag your log file from the file browser to the Tracer window.
 The <code class="language-plaintext highlighter-rouge">Traces</code> table will then be populated with parameters and summary
-statistics corresponding to our multitype birth-death analysis.
-Note that the screen captures below were taken using Tracer 1.6 and may therefore slightly differ from what you see on screen.</p>
+statistics corresponding to our multitype birth-death analysis.</p>
 
 <p>Important traces are:</p>
 
 <ul>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme1</code> and <code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme2</code>: These give the effective reproduction numbers for deme 1 (Hong Kong) and 2 (New Zealand), respectively.</p>
+    <p><code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.2</code>: These give the effective reproduction numbers for deme 1 (Hong Kong) and 2 (New Zealand), respectively.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_deme21</code> and <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_deme22</code>: These are the rates of recovery for someone with flu in either of the locations.</p>
+    <p><code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme.2</code>: These are the rates of recovery for someone with flu in either of the locations.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">rateMatrix.t:h3n2_2deme1</code> and <code class="language-plaintext highlighter-rouge">rateMatrix.t:h3n2_2deme2</code>: These give the (per lineage per year) migration rates from deme 1 to 2 and vice versa.</p>
+    <p><code class="language-plaintext highlighter-rouge">rateMatrix.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">rateMatrix.t:h3n2_2deme.2</code>: These give the (per lineage per year) migration rates from deme 1 to 2 and vice versa.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Tree.t:h3n2_2deme.count_HongKong_to_NewZealand</code>: these give the number of ancestral migrations from Hong Kong to New Zealand on the inferred tree, <strong>backwards in time</strong>.</p>
@@ -761,11 +774,11 @@ Note that the screen captures below were taken using Tracer 1.6 and may therefor
 </ul>
 
 <p>The tabs at the top-right of the window can be used to display one or more selected traces in various ways.
-We can look at the become uninfectious rate by selecting the <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme1</code> trace (see <a href="#fig:tracer-bUR">Figure 16</a>).
-The 95% HPD for the parameter is quite wide ([18.2465, 93.2316]), which is most likely due to the fact that we have very little data, however the mean value is 50.102, which gives us an infectious period of 7.3 days.
-Next, selecting the two R<sub>0</sub> traces (<code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme1</code> and <code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme2</code>) and choosing the <code class="language-plaintext highlighter-rouge">Marginal prob distribution</code> panel results in useful comparison between the sampled population size marginal posterior distributions (see <a href="#fig:tracer-R0">Figure 17</a>).
+We can look at the become uninfectious rate by selecting the <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme.1</code> trace (see <a href="#fig:tracer-bUR">Figure 16</a>).
+The 95% HPD for the parameter is quite wide ([18.699, 88.5431]), which is most likely due to the fact that we have very little data, however the mean value is 49.3247, which gives us an infectious period of 7.4 days.
+Next, selecting the two R<sub>0</sub> traces (<code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.2</code>) and choosing the <code class="language-plaintext highlighter-rouge">Marginal Density</code> panel results in useful comparison between the sampled population size marginal posterior distributions (see <a href="#fig:tracer-R0">Figure 17</a>).
 Looking at the posterior distributions we can not see any significant difference in R<sub>0</sub> between the two demes.
-While the distributions are visibly different, they cover the same parameter range (deme 1 95% HPD interval [0.991, 1.0247], deme 2 95% HPD interval [0.9096, 1.0413]), so the values are indistinguishable through such analysis.</p>
+While the distributions are visibly different, they cover the same parameter range (deme 1 95% HPD interval [0.9922, 1.0258], deme 2 95% HPD interval [0.9057, 1.038]), so the values are indistinguishable through such analysis.</p>
 
 <figure>
 	<a id="fig:tracer-bUR"></a>
@@ -843,7 +856,7 @@ The setup can be seen in <a href="#fig:TreeAnnotator-setup">Figure 20</a>.</p>
 
 <p>Pressing the <code class="language-plaintext highlighter-rouge">Run</code> button will produce an annotated summary tree.</p>
 
-<p>To visualize this tree, open IcyTree once more (maybe open it in a new browser tab), choose <code class="language-plaintext highlighter-rouge">File &gt; Open</code>, then select the file <code class="language-plaintext highlighter-rouge">h3n2_2deme.h3n2_2deme.summary.tree</code> using the file selection dialog.
+<p>To visualize this tree, open IcyTree once more (maybe open it in a new browser tab), choose <code class="language-plaintext highlighter-rouge">File &gt; Load from file</code>, then select the file <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.summary.trees</code> using the file selection dialog.
 Follow the instructions provided above to colour the tree by the <code class="language-plaintext highlighter-rouge">type</code> attribute and add the legend and time axis.
 In addition, open the <code class="language-plaintext highlighter-rouge">Style</code> menu and select <code class="language-plaintext highlighter-rouge">Node height error bars &gt; height_95%_HPD</code> to add error bars to the internal node heights.
 Finally, open the <code class="language-plaintext highlighter-rouge">Style</code> menu and select <code class="language-plaintext highlighter-rouge">Relative edge width &gt; type.prob</code>.
@@ -862,7 +875,7 @@ This makes the edges become increasingly thinner as the posterior probability fo
 This is a much more comprehensive summary of the phylogenetic side of our analysis.
 One thing to pay attention to here is that the most probable root location in the summary tree is Hong Kong (under our model which assumes that only Hong Kong and New Zealand exist).
 Hovering the mouse cursor over the tiny edge above the root will bring up a table in which posterior probability of the displayed root location (<code class="language-plaintext highlighter-rouge">type.prob</code>) can be seen.
-In this analysis we see that it is about 88.8%.
+In this analysis we see that it is about 91%.
 The analysis therefore strongly supports a Hong Kong origin over a New Zealand origin for this flu sample.</p>
 
 <!--[Very useful final notes from Tim](https://github.com/CompEvol/MultiTypeTree/wiki/Beginner%27s-Tutorial-%28short-version%29#final-notes)-->
