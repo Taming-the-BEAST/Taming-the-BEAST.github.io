@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>Divergence Time Estimation using BEAST v2.x</title>
+				<description>
+					Dating Species Divergences with the Fossilized Birth-Death Process
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Tracy A. Heath
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/007a296b392945250e27e0441849b63b62223133'
+					&gt;
+						9 Jun 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Updated text for beast 2.7. (Figures still not updated.)
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.4
+					
+				</description>
+				<pubDate>Fri, 09 Jun 2023 16:30:03 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>MASCOT v3.0.0 Tutorial</title>
 				<description>
 					Parameter and State inference using the approximate structured coalescent
@@ -142,47 +183,6 @@ Fully update tutorial to BEAST 2.7.4
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
-			</item>
-				
-			<item>
-				<title>Divergence Time Estimation using BEAST v2.x</title>
-				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tracy A. Heath
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/448d2807118ce0e7401f76b8513b45162469672a'
-					&gt;
-						9 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Updated precooked runs and xml files for beast 2.7.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Fri, 09 Jun 2023 11:52:41 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>

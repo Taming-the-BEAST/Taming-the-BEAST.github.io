@@ -456,7 +456,7 @@ Be sure that this is the version that came from the BEAST 2 download from: \href
 \subsubsection{Install BEAST 2 Plug-Ins}
 
 Next, we have to install the BEAST 2 packages (also called ``plug-ins'' or ``add-ons'') that are needed for this analysis. 
-The package that we will use is called \mi{SA}.
+The packages that we will use called \mi{SA} and \mi{ORC}.
 \begin{framed}
 Open the \mi{BEAST 2 Package Manager} by navigating to \mi{File\textrightarrow Manage Packages} in the menu. [Figure \ref{packageManage}]
 \end{framed}
@@ -464,7 +464,7 @@ Open the \mi{BEAST 2 Package Manager} by navigating to \mi{File\textrightarrow M
 In the package manager, you can install all of the available plug-ins for BEAST 2. 
 These include a number of packages for analyses such as species delimitation (DISSECT, STACEY), population dynamics (MASTER), the phylodynamics of infectious disease (BDSKY, phylodynamics), etc. 
 \begin{framed}
-Install the \mi{SA} package by selecting it and clicking the \mi{Install/Upgrade} button. [Figure \ref{packageManage}]
+Install the \mi{SA} package by selecting it and clicking the \mi{Install/Upgrade} button. Do the same for the \mi{ORC} package. [Figure \ref{packageManage}]
 \end{framed}
 
 \begin{figure}[h!]
@@ -474,7 +474,7 @@ Install the \mi{SA} package by selecting it and clicking the \mi{Install/Upgrade
 \label{packageManage}
 \end{figure}
 
-It is important to note that you only need to install a BEAST 2 package once, thus if you close BEAUti, you don't have to load \mi{SA} the next time you open the program. 
+It is important to note that you only need to install a BEAST 2 package once, thus if you close BEAUti, you don't have to load these packages the next time you open the program. 
 However, it is worth checking the package manager for updates to plug-ins, particularly if you update your version of BEAST 2.
 \begin{framed}
 Close the \mi{BEAST 2 Package Manager} and {\textcolor{red}{\underline{\bf restart BEAUti}}} to fully load the \mi{SA} package.
@@ -630,10 +630,10 @@ This means that we are estimating the \textit{relative} substitution rates for o
 Navigate to the \mi{Clock Model} window.
 \end{framed}
 
-Here, we can specify the model of lineage-specific substitution rate variation. The default model in BEAUti is the \mi{Strict Clock} with a fixed substitution rate equal to \cl{1}. Three models for relaxing the assumption of a constant substitution rate can be specified in BEAUti as well. The \mi{Relaxed Clock Log Normal} option assumes that the substitution rates associated with each branch are independently drawn from a single, discretized lognormal distribution \citep{drummond06}. Under the \mi{Relaxed Clock Exponential} model, the rates associated with each branch are exponentially distributed \citep{drummond06}. The \mi{Random Local Clock} uses Bayesian stochastic search variable selection to average over random local molecular clocks \citep{drummond10}. 
+Here, we can specify the model of lineage-specific substitution rate variation. The default model in BEAUti is the \mi{Strict Clock} with a fixed substitution rate equal to \cl{1}. Models for relaxing the assumption of a constant substitution rate can be specified in BEAUti as well. The \mi{Optimized Relaxed Clock} option (provided by the ORC package) assumes that the substitution rates associated with each branch are independently drawn from a single, discretized lognormal distribution \citep{drummond06}. The \mi{Random Local Clock} uses Bayesian stochastic search variable selection to average over random local molecular clocks \citep{drummond10}. 
 For this analysis we will use the uncorrelated, lognormal model of branch-rate variation.
 \begin{framed}
-Change the clock model to \mi{Relaxed Clock Log Normal}.
+Change the clock model to \mi{Optimized Relaxed Clock}.
 \end{framed}
 The uncorrelated relaxed clock models in BEAST2 are discretized for computational feasibility. 
 This means that for any given parameters of the lognormal distribution, the probability density is discretized into some number of discrete rate bins. 
@@ -642,8 +642,6 @@ By default, BEAUti sets the \mi{Number Of Discrete Rates} to \cl{-1}. This means
 
 The fully specified \mi{Clock Model} assumes that the rates for each branch are drawn independently from a single lognormal distribution. 
 The mean of the rate distribution will be estimated, thus we can account for uncertainty in this parameter by placing a prior distribution on its value.
-Note that there is an option to \mi{Normalize} the average clock rate. We will leave this unchecked. 
-
 
 
 \bigskip
@@ -709,11 +707,11 @@ Then change all of the other rates: \mi{rateAC.s}, \mi{rateAT.s}, \mi{rateCG.s},
 \subsubsection{Priors for the Clock Model}
 
 
-Since we are assuming that the branch rates are drawn from a lognormal distribution, this induces two hyperparameters: the mean and standard deviation (\mi{ucldMean.c} and \mi{ucldStdev.c} respectively). 
-By default, the prior distribution on the \mi{ucldMean.c} parameter is an improper, uniform distribution on the interval ($0,\infty$). 
+Since we are assuming that the branch rates are drawn from a lognormal distribution, this induces two hyperparameters: the mean and standard deviation (\mi{ORCucldMean.c} and \mi{ORCsigma.c} respectively). 
+By default, the prior distribution on the \mi{ORCucldMean.c} parameter is an improper, uniform distribution on the interval ($0,\infty$). 
 Note that this type of prior is called improper because the prior density of a \textit{uniform} distribution with infinite bounds does not integrate to $1$. Although improper priors can sometimes lead to proper posterior distributions, they may also have undesired effects and cause problems with mixing and convergence. 
 \begin{framed}
-Reveal the options for the prior on \mi{ucldMean.c} by clicking on the $\blacktriangleright$. Change the prior density to an \mi{Exponential} with a mean of \cl{10.0}. [Figure \ref{setPriorUCLD}]
+Reveal the options for the prior on \mi{ORCucldMean.c} by clicking on the $\blacktriangleright$. Change the prior density to an \mi{Exponential} with a mean of \cl{10.0}. [Figure \ref{setPriorUCLD}]
 \end{framed}
 %%% More info needed here
 
@@ -726,9 +724,9 @@ Reveal the options for the prior on \mi{ucldMean.c} by clicking on the $\blacktr
 
 The other parameter of our relaxed-clock model is, by default assigned a gamma prior distribution. 
 However, we have a strong prior belief that the variation in substitution rates among branches is low, since some previous studies have indicated that the rates of molecular evolution in bears is somewhat clock-like \citep{krause2008}. 
-Thus, we will assume an exponential prior distribution with 95\% of the probability density on values less than 1 for the \mi{ucldStdev.c} parameter.
+Thus, we will assume an exponential prior distribution with 95\% of the probability density on values less than 1 for the \mi{ORCsigma.c} parameter.
 \begin{framed}
-Reveal the options for the prior on \mi{ucldStdev.c} by clicking on the $\blacktriangleright$. Change the prior density to an \mi{Exponential} with a mean of \cl{0.3337}. [Figure \ref{setPriorUCLDSTDV}]
+Reveal the options for the prior on \mi{ORCsigma.c} by clicking on the $\blacktriangleright$. Change the prior density to an \mi{Exponential} with a mean of \cl{0.3337}. [Figure \ref{setPriorUCLDSTDV}]
 \end{framed}
 
 \begin{figure}[h!]
@@ -1149,11 +1147,11 @@ Open the \cl{bearsDivtime\_FBD.xml} and  \cl{bearsDivtime\_FBD.prior.xml} files 
 Change all instances of \mi{TipDatesRandomWalker} to \mi{SampledNodeDateRandomWalker} in both files.
 \end{framed}
 
-As you look over the contents of these files, you will notice that the components are specified in an order similar to the steps you took in BEAUti. The XML syntax is very verbose. This feature makes it fairly easy to understand the different elements of the BEAST input file. If you wished to alter your analysis or realized that you misspecified a prior parameter, changing the XML file is far simpler than going through all of the steps in BEAUti again. For example, if you wanted to change the mean of the exponential prior distribution on the mean clock rate (\cl{ucldMean.c}), this can be done easily by altering this value in the XML file (Box 4), though leave this at \cl{10.0} for this exercise. 
+As you look over the contents of these files, you will notice that the components are specified in an order similar to the steps you took in BEAUti. The XML syntax is very verbose. This feature makes it fairly easy to understand the different elements of the BEAST input file. If you wished to alter your analysis or realized that you misspecified a prior parameter, changing the XML file is far simpler than going through all of the steps in BEAUti again. For example, if you wanted to change the mean of the exponential prior distribution on the mean clock rate (\cl{ORCucldMean.c}), this can be done easily by altering this value in the XML file (Box 4), though leave this at \cl{10.0} for this exercise. 
 \begin{center}
 {\tt \scriptsize{\begin{minipage}{6.5in}
 \begin{lstlisting}[language=XML]
-<prior id="MeanRatePrior.c:bearsClock" name="distribution" x="@ucldMean.c:bearsClock">
+<prior id="MeanRatePrior.c:bearsClock" name="distribution" x="@ORCucldMean.c:bearsClock">
     <Exponential id="Exponential.02" name="distr">
         <parameter id="RealParameter.020" estimate="false" name="mean">10.0</parameter>
     </Exponential>
@@ -1218,13 +1216,13 @@ Select and highlight all three files (\cl{bearsDivtime\_FBD.1.log}, \cl{bearsDiv
 
 The 95\% credible interval is a Bayesian measure of uncertainty that accounts for the data. If we use the 95\% credible interval, this means that the probability the true value of a parameter lies within this interval is 0.95, given our model and data. This measure is often used to approximate the 95\% highest posterior density region (HPD). 
 \begin{framed}
-Find the parameter \mi{ucldStdev} and compare the estimates of the standard deviation of the uncorrelated log-normal distribution.
+Find the parameter \mi{ORCsigma} and compare the estimates of the standard deviation of the uncorrelated log-normal distribution.
 \end{framed}
 
-The \mi{ucldStdev} indicates the amount of variation in the substitution rates across branches. Our prior on this parameter is an exponential distribution with $\nu = 2.997$ ($mean = 0.3337$). Thus, there is a considerable amount of prior weight on \mi{ucldStdev} $= 0$. A standard deviation of 0 indicates support for no variation in substitution rates and the presence of a molecular clock. 
+The \mi{ORCsigma} indicates the amount of variation in the substitution rates across branches. Our prior on this parameter is an exponential distribution with $\nu = 2.997$ ($mean = 0.3337$). Thus, there is a considerable amount of prior weight on \mi{ORCsigma} $= 0$. A standard deviation of 0 indicates support for no variation in substitution rates and the presence of a molecular clock. 
 
 \begin{framed}
-With \mi{ucldStdev} highlighted for all three runs, go to the \mi{Marginal Density} window, which allows you to compare the marginal posterior densities for each parameter. (By default Tracer gives the kernel density estimate (\mi{KDE}) of the marginal density. You can change this to a \mi{Histogram} using the options at the top of the window.)
+With \mi{ORCsigma} highlighted for all three runs, go to the \mi{Marginal Density} window, which allows you to compare the marginal posterior densities for each parameter. (By default Tracer gives the kernel density estimate (\mi{KDE}) of the marginal density. You can change this to a \mi{Histogram} using the options at the top of the window.)
 
 Color (or ``colour'') the densities by \mi{Trace File} next to \mi{Colour by} at the bottom of the window (if you do not see this option, increase the size of your Tracer window). You can also add a \mi{Legend} to reveal which density belongs to which run file. [Figure \ref{tracerStdev}]
 \end{framed}
@@ -1236,7 +1234,7 @@ Color (or ``colour'') the densities by \mi{Trace File} next to \mi{Colour by} at
 \centering
 %\fbox{\includegraphics[width=6in]{figures/tracer_image_stdev.png}}
 \includegraphics[width=6in]{figures/tracer_image_stdev.png}
-\caption{\small Comparing the marginal densities (using the kernel density estimate) of the \mi{ucldStdev} parameter from 2 independent runs (blue and green) and the prior (red) in Tracer.}
+\caption{\small Comparing the marginal densities (using the kernel density estimate) of the \mi{ORCsigma} parameter from 2 independent runs (blue and green) and the prior (red) in Tracer.}
 \label{tracerStdev}
 \end{figure}
 
@@ -1698,8 +1696,8 @@ The function \cl{convert.MCC.tree} can then be used to remove the dummy tip from
 \section{Useful Links}
 
 \begin{itemize}
-\item Taming the BEAST -- tutorials and workshops for learning BEAST 2: \href{https://taming-the-beast.github.io/}{https://taming-the-beast.github.io}
-\item BEAST 2 website and documentation: \href{http://www.beast2.org/}{http://www.beast2.org} 
+\item Taming the BEAST -- tutorials and workshops for learning BEAST 2: \href{https://taming-the-beast.org/}{https://taming-the-beast.org}
+\item BEAST 2 website and documentation: \href{https://www.beast2.org/}{https://www.beast2.org} 
 \item BEAST 1 website and documentation: \href{http://beast.bio.ed.ac.uk}{http://beast.bio.ed.ac.uk} 
 \item Join the BEAST user discussion: \href{http://groups.google.com/group/beast-users}{http://groups.google.com/group/beast-users} 
 \item RevBayes: \href{https://github.com/revbayes/code}{https://github.com/revbayes/code} 
