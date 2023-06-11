@@ -12,6 +12,102 @@
 		</image>
 				
 			<item>
+				<title>Prior selection</title>
+				<description>
+					Prior selection and clock calibration using Influenza A data.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+					
+						
+								, Venelin Mitov
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/5ef94e9e2b4fcea8af621951b1f82cfe5679a7ee'
+					&gt;
+						11 Jun 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Merged Louis' updates.
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Sun, 11 Jun 2023 19:05:04 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
+			</item>
+				
+			<item>
+				<title>Skyline plots</title>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/de071786380ef36cdf589fb78c3e567a6ed97eff'
+					&gt;
+						11 Jun 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Merge pull request #11 from Taming-the-BEAST/edits2023
+
+Update LaTex tutorial, R-scripts and one figure
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Sun, 11 Jun 2023 18:38:36 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
 				<title>Divergence Time Estimation using BEAST v2.x</title>
 				<description>
 					Dating Species Divergences with the Fossilized Birth-Death Process
@@ -186,53 +282,6 @@ Fully update tutorial to BEAST 2.7.4
 			</item>
 				
 			<item>
-				<title>Skyline plots</title>
-				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/8122b0e47970262c0d1ad551f9e7f5fa3416d0be'
-					&gt;
-						9 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Merge pull request #10 from Taming-the-BEAST/edits2023
-
-Update to BEAST 2.7.4
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 09 Jun 2023 07:43:52 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
-			</item>
-				
-			<item>
 				<title>Structured birth death model</title>
 				<description>
 					Population structure using the multi-type birth-death model
@@ -277,55 +326,6 @@ Update figures and precooked runs for BEAST2.7 compatibility
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
-			</item>
-				
-			<item>
-				<title>Prior selection</title>
-				<description>
-					Prior selection and clock calibration using Influenza A data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-					
-						
-								, Venelin Mitov
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/5626c1b2c24de54d3b74491297bbea1e4fa83068'
-					&gt;
-						23 May 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Updated long precooked logs.
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.0
-					
-				</description>
-				<pubDate>Tue, 23 May 2023 11:58:45 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
