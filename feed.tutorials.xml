@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>The MSBD package</title>
+				<description>
+					Inferring lineage-dependent birth and death rates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/bjoelle/MSBD-tutorial/commit/9771f16649525f75f4950b1d36a46ece0d1b2e5d'
+					&gt;
+						13 Jul 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/bjoelle'
+					&gt;
+						bjoelle
+					&lt;/a&gt;
+					: Merge branch 'master' of https://github.com/bjoelle/MSBD-tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 13 Jul 2023 14:55:38 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/MSBD-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MSBD-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Prior selection</title>
 				<description>
 					Prior selection and clock calibration using Influenza A data.
@@ -547,49 +588,6 @@ Removed references to tutorial template bib file.
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>The MSBD package</title>
-				<description>
-					Inferring lineage-dependent birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/bjoelle/MSBD-tutorial/commit/d3512156c1c991e4d9ff5a7fd7697752d01a1af0'
-					&gt;
-						3 Aug 2020
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: Merge pull request #1 from laduplessis/master
-
-Update tutorial for TTB website
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.0
-					
-				</description>
-				<pubDate>Mon, 03 Aug 2020 14:14:58 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/MSBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MSBD-tutorial/</guid>
 			</item>
 				
 			<item>
