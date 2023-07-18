@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>The ClaDS package</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/ClaDS-tutorial/">The ClaDS package</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Inferring progressive changes in birth and death rates
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Joëlle Barido-Sottani
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="/tutorials/ClaDS-tutorial/ClaDS-tutorial.pdf">ClaDS-tutorial.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/raw/master/data/primate-mtDNA.nex" target="_blank" rel="nofollow">
+						primate-mtDNA.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/raw/master/xml/primates_clads.xml" target="_blank" download rel="nofollow">
+						primates_clads.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-gear"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/raw/master/scripts/plot_MCC.R" target="_blank" download rel="nofollow">
+						plot_MCC.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/raw/master/precooked_runs/primates.log" target="_blank" download rel="nofollow">
+						primates.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/raw/master/precooked_runs/primates.trees" target="_blank" download rel="nofollow">
+						primates.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/raw/master/precooked_runs/primates.rates.trees" target="_blank" download rel="nofollow">
+						primates.rates.trees
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/bjoelle">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/14575423?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				bjoelle
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/c76d5e67e3f619849b9781cb90e9157624005652">
+					17 Jul 2023 - <span class="text-gray">Merge pull request #1 from laduplessis/master
+
+Updates for website</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/77edeec78e230501ed01a0b436a39e60cb3e8fd2">
+					17 Jul 2023 - <span class="text-gray">Fix math formatting, escape & in references, fix latex tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/b7e7aa91b2fa4fb07c9c8cde3837c147b486ea64">
+					17 Jul 2023 - <span class="text-gray">Edit text to improve LaTeX math formatting and remove ambiguities</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/cd6864aa1a529bbbecd6c690363de19e4f5a31f9">
+					17 Jul 2023 - <span class="text-gray">Resize figure</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/d479177dd0f07e37341c493f27efa487a2990d74">
+					17 Jul 2023 - <span class="text-gray">Add missing reference</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>This tutorial will show how to configure and run a model with progressive changes in birth and death rates, using the ClaDS tree prior implemented in the BEAST2 package ClaDS.</p>
+
+<p>The Cladogenetic Diversification rate Shift (ClaDS) model is a birth-death process which is designed to represent gradual, progressive changes in rates throughout a phylogeny. It is similar in principle to an autocorrelated clock model, as new birth and death rates are drawn for each edge from a distribution which depends on the ancestral rates.</p>
+
+<p>As an example, we consider a lineage <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>, with its associated birth rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and death rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">\mu_N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. At the next birth event, the lineage <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> splits into lineages <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">N^\prime</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup></mrow><annotation encoding="application/x-tex">N^{\prime\prime}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span></span></span></span></span></span></span></span>. The new birth rates <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>λ</mi><mi>N</mi><mo mathvariant="normal">′</mo></msubsup></mrow><annotation encoding="application/x-tex">\lambda_N^\prime</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0272em;vertical-align:-0.2753em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-2.4247em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2753em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>λ</mi><mi>N</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\lambda_N^{\prime\prime}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0272em;vertical-align:-0.2753em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-2.4247em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2753em;"><span></span></span></span></span></span></span></span></span></span> are drawn from a lognormal distribution with mean <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>α</mi><mo>×</mo><msub><mi>λ</mi><mi>N</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">M = \log(\alpha \times \lambda_N )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> and standard deviation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">S = \sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>. The model parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>, and the birth rate at the root, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\lambda_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, can be estimated by the inference.</p>
+
+<p>The package includes two separate options for sampling the death rate:</p>
+<ol>
+  <li>New death rates are not sampled separately, but controlled by the turnover parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">ϵ</span></span></span></span>, which is the same throughout the phylogeny and can be estimated by the inference. Thus for each lineage <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>, we have <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>N</mi></msub><mo>=</mo><mi>ϵ</mi><mo>×</mo><msub><mi>λ</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">\mu_N = \epsilon \times \lambda_N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">ϵ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. This is the parametrization by default.</li>
+  <li>New death rates are sampled from the ancestral rates, following a similar lognormal distribution to the birth rates. Thus, for lineage <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> with descendants <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">N^\prime</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup></mrow><annotation encoding="application/x-tex">N^{\prime\prime}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span></span></span></span></span></span></span></span>, we draw the new death rates <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>μ</mi><mi>N</mi><mo mathvariant="normal">′</mo></msubsup></mrow><annotation encoding="application/x-tex">\mu_N^\prime</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0272em;vertical-align:-0.2753em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-2.4247em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">′</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2753em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>μ</mi><mi>N</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\mu_N^{\prime\prime}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0272em;vertical-align:-0.2753em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-2.4247em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2753em;"><span></span></span></span></span></span></span></span></span></span> from a lognormal distribution with mean <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>α</mi><mi>M</mi></msub><mo>×</mo><msub><mi>μ</mi><mi>N</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">M = \log(\alpha_M \times \mu_N )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> and standard deviation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msub><mi>σ</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">S = \sigma_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. In this case and similar to the birth rate, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">\alpha_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">\sigma_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and the death rate at the root, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mu_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, are parameters of the model and can be estimated by the inference.
+The choice of death rate parametrization is left to the user, and will depend on the dataset and on which characteristics are thought to drive the variations in rate. The first parametrization is appropriate when the variations of both rates are tied to the same factor and thus strongly correlated, whereas the second parametrization is more appropriate when the variations in birth rates and death rates are uncorrelated. The first parametrization is also more simple and contains less parameters, and thus may be easier to use when the available data is limited.</li>
+</ol>
+
+<p>Finally, it is also possible to set either the birth rate or the death rate to be constant throughout the phylogeny, by setting the corresponding trend parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">\alpha_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to 1 and the corresponding standard deviation parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">\sigma_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> to 0. This will lead to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>N</mi></msub><mo>=</mo><msub><mi>λ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\lambda_N = \lambda_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>N</mi></msub><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mu_N = \mu_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> for all lineages.</p>
+
+<p>More details on the model and an evaluation of its performance in various conditions can be found in the original publication <a class="citation" href="#Maliet2019">(Maliet et al., 2019)</a>. The specific implementation of ClaDS as a BEAST2 package is presented in a separate article <a class="citation" href="#ClaDS2022">(Barido-Sottani &amp; Morlon, 2023)</a>.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2019">(Bouckaert et al., 2019)</a>. This tutorial uses BEAST2 version 2.6, however the ClaDS package is also available for BEAST2 version 2.7 and works the same way.</p>
+
+<h3 id="beauti--bayesian-evolutionary-analysis-utility">BEAUti – Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti is a utility program with a graphical user interface for creating BEAST2 input files, which are written in XML. The eXtensible Markup Language (XML) is a general-purpose markup language, which allows for the combination of text and additional information. The use of the XML makes analysis specification very flexible and readable by both the program and people. The XML file specifies all the components of the analysis, including sequences, node calibrations, models, priors, output file names.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p>Tracer is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95% credible intervals (which approximate the 95% highest posterior density intervals) and effective sample sizes (ESS) of parameters. Contrary to the other software in this section, Tracer is not distributed with BEAST2 and needs to be downloaded separately <a href="http://beast.community/tracer">here</a>.</p>
+
+<hr />
+
+<h1 id="practical-lineage-specific-birth-and-death-rate-inference-under-the-clads-model">Practical: Lineage-specific Birth and Death Rate Inference Under the ClaDS Model</h1>
+
+<h2 id="dataset">Dataset</h2>
+
+<p>The dataset used in this tutorial is an alignment of sequences sampled from twelve primate species, also used in the Introduction tutorial.</p>
+
+<h2 id="setting-up-the-xml-file">Setting up the XML file</h2>
+
+<p>This section will demonstrate how to create an XML configuration file using BEAUti, which will then be used to run the analysis in BEAST2.</p>
+
+<h3 id="package-installation">Package installation</h3>
+
+<p>The first step is to install the ClaDS package, which will allow us to set up and run an analysis with lineage-specific birth and death rates.</p>
+
+<blockquote>
+  <p>Launch <strong>BEAUti</strong>, then open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
+
+</blockquote>
+
+<figure>
+	<a id="packageManage1"></a>
+	<img style="width:80.0%;" src="figures/package_manager.png" alt="" />
+	<figcaption>Figure 1: Finding the BEAST2 Package Manager.</figcaption>
+</figure>
+<p><br /></p>
+
+<blockquote>
+  <p>Install the <strong>ClaDS</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button. (<a href="#packageManage2">Figure 2</a>)</p>
+
+</blockquote>
+
+<figure>
+	<a id="packageManage2"></a>
+	<img style="width:70.0%;" src="figures/packageClaDS.png" alt="" />
+	<figcaption>Figure 2: The BEAST2 Package Manager.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>BEAUti needs to be restarted for the newly installed package to be loaded properly.</p>
+
+<blockquote>
+  <p>Close the <strong>BEAST2 Package Manager</strong> and <strong><em>restart</em></strong> BEAUti to fully load the <strong>ClaDS</strong> package.</p>
+
+</blockquote>
+
+<h3 id="setting-the-templates">Setting the templates</h3>
+
+<p>BEAUti uses templates to define specific model configurations. The ClaDS template needs to be selected to set up an analysis using the ClaDS model.</p>
+
+<blockquote>
+  <p>Select the <strong>ClaDS template</strong> by navigating to <strong>File &gt; Template</strong>. (<a href="#template">Figure 3</a>)</p>
+
+</blockquote>
+
+<figure>
+	<a id="template"></a>
+	<img style="width:80.0%;" src="figures/template.png" alt="" />
+	<figcaption>Figure 3: Selecting the ClaDS template.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="importing-the-alignment">Importing the alignment</h3>
+
+<p>The first step of the setup is to import the alignment that we will be using in this analysis.</p>
+
+<blockquote>
+  <p>Open <strong>BEAUti</strong>. Navigate to <strong>File &gt; Import Alignment</strong> (<a href="#importAlignment">Figure 4</a>) and select the file <code class="language-plaintext highlighter-rouge">primate-mtDNA.nex</code> in the data directory or simply drag and drop the file in the <strong>Partitions</strong> window.</p>
+
+</blockquote>
+
+<figure>
+	<a id="importAlignment"></a>
+	<img style="width:80.0%;" src="figures/alignment.png" alt="" />
+	<figcaption>Figure 4: Importing the alignment into BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="linking-the-tree-and-clock-model">Linking the tree and clock model</h3>
+
+<p>Since we have imported an alignment containing different partitions, BEAUti has automatically created separate substitution models, clock models and trees for each of the partitions. We will keep the separate substitution models, however we would like to estimate only one clock model and one phylogeny. Thus we need to link the clock models and trees for all partitions.</p>
+
+<blockquote>
+  <p>In the <strong>Partitions</strong> panel, select all partitions.
+Click on the <strong>Link Clock Models</strong> button. You should see that the <strong>Clock Model</strong> column now contains the same value for all partitions.
+Click on the <strong>Link trees</strong> button. You should see that the <strong>Tree</strong> column now contains the same value for all partitions.
+Optionally, rename the tree and clock model to <strong>primates</strong> by clicking on the name field, typing the new name then pressing <strong>Enter</strong>.</p>
+
+</blockquote>
+
+<p>The final alignment configuration is shown in <a href="#linkedModels">Figure 5</a>.</p>
+
+<figure>
+	<a id="linkedModels"></a>
+	<img style="width:80.0%;" src="figures/linked_models.png" alt="" />
+	<figcaption>Figure 5: Partition panel with linked tree and clock model.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="setting-up-the-substitution-models">Setting up the substitution models</h3>
+
+<p>The next set is to set up the substitution models for each alignments, found in the <strong>Site Model</strong> panel. We will set up HKY + G models for both alignments, with the number of rate categories set to 4.</p>
+
+<blockquote>
+  <p>In the <strong>Site Model</strong> panel, set the <strong>Gamma Category Count</strong> to <strong>4</strong>.
+Click on the arrow next to <strong>JC69</strong>, and select the <strong>HKY</strong> model.
+Select the remaining three partitions (use <strong>shift+click</strong>). 
+Select <code class="language-plaintext highlighter-rouge">noncoding</code> and click <strong>OK</strong> to to clone the site model for the other three partitions from <code class="language-plaintext highlighter-rouge">noncoding</code>.</p>
+
+</blockquote>
+
+<p>The final substitution model configuration is shown in <a href="#subst">Figure 6</a>.</p>
+
+<figure>
+	<a id="subst"></a>
+	<img style="width:80.0%;" src="figures/subst.png" alt="" />
+	<figcaption>Figure 6: Site model panel with HKY+G model.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="setting-priors">Setting priors</h3>
+
+<h4 id="adding-calibration-times">Adding calibration times</h4>
+
+<p>The next step is to look at the different priors, in the <strong>Priors</strong> panel. The default priors for most parameters are reasonable for this dataset so we will not change them. However, we need to add calibration times to our analysis in order to estimate the clock rate and node ages. We will accomplish this by setting an MRCA prior, which adds a prior on the age of the most recent common ancestor of selected tips. These priors can also constrain certain subclades of the tree to be monophyletic.</p>
+
+<blockquote>
+  <p>In the <strong>Priors</strong> panel, click on the <strong>+ Add Prior</strong> button at the bottom of the list and select the <strong>MRCA Prior</strong>. This opens the <strong>Taxon Set Editor</strong>.
+ Select the taxa <strong>Homo_Sapiens</strong> and <strong>Pan</strong> and click on the <strong>»</strong> button to add them to the set.
+ Write the name of the taxon set <strong>human-chimp</strong> in the box <strong>Taxon set label</strong> (<a href="#taxonSet">Figure 7</a>) and click <strong>OK</strong> to confirm.</p>
+
+</blockquote>
+
+<figure>
+	<a id="taxonSet"></a>
+	<img style="width:40.0%;" src="figures/taxonSet.png" alt="" />
+	<figcaption>Figure 7: Taxon set editor.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The new prior now appears at the bottom of the list of priors, but it is not completely configured yet. We still need to set this subclade to be monophyletic, and select a distribution for the age of its most recent common ancestor.</p>
+
+<blockquote>
+  <p>Click on the arrow on the right to <strong>[none]</strong> and select a <strong>Normal</strong> distribution for the age of the clade.
+ Click on the arrow on the left of <strong>human-chimp.prior</strong> to open the detailed view of the distribution.
+ Set the <strong>Mean</strong> parameter of the distribution to <strong>6</strong> and the <strong>Sigma</strong> parameter of the distribution to <strong>0.5</strong> (<a href="#MRCApriorDet">Figure 8</a>).
+ Click on the arrow again to close the detailed view.
+ Check the <strong>monophyletic</strong> checkbox next to the <strong>human-chimp.prior</strong>.</p>
+
+</blockquote>
+
+<figure>
+	<a id="MRCApriorDet"></a>
+	<img style="width:80.0%;" src="figures/MRCAprior_det.png" alt="" />
+	<figcaption>Figure 8: MRCA prior with age distribution.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>You will notice that a new parameter (and prior) has been added to the list, the mean clock rate <strong>clockRate.c:primates</strong>. By adding a prior on the age of one of the nodes in the tree, we have calibrated our time tree and BEAUti has automatically adjusted the analysis as a result.</p>
+
+<h3 id="the-tree-prior">The tree prior</h3>
+
+<p>Next, we will take a look the tree prior, i.e. the ClaDS model. By default most of the parameters of the model are estimated, so it is usually not necessary to change their starting values. However, the extant sampling proportion (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span>) is fixed, and so needs to be correct. Our dataset contains 12 taxa compared to an estimated 414 extant species for the clade of primates, so the correct extant sampling probability would be <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>0.03</mn></mrow><annotation encoding="application/x-tex">\rho = 0.03</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.03</span></span></span></span>. But the ClaDS package performs badly for low sampling probabilities, so for the purpose of this exercise we will assume an extant sampling probability of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">\rho = 0.3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.3</span></span></span></span>.</p>
+
+<blockquote>
+  <p>Click on the arrow next to <strong>Tree</strong> to open the <strong>ClaDS</strong> options. 
+ Change the value for <strong>rho</strong> (extant sampling proportion) of the ClaDS model to <strong>0.3</strong> (<a href="#treePrior">Figure 9</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="treePrior"></a>
+	<img style="width:80.0%;" src="figures/treeprior.png" alt="" />
+	<figcaption>Figure 9: The ClaDS tree prior.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Note that many other options are available in this section, such as fixing the value of some parameters (<strong>estimate</strong> checkboxes), or changing the parametrization of the death rate (<strong>Use fixed turnover</strong> checkbox). Our current dataset only contains extant species, so it unlikely that we will be able to estimate the death rate precisely. In consequence, we will set the death rate by using the simpler constant turnover model, which is the default.</p>
+
+<h3 id="the-parameter-priors">The parameter priors</h3>
+
+<p>Most of the default parameter priors are reasonable, so we will not change them. However, the default prior for the mean clock rate is a uniform distribution from 0 to Infinity, which allows values which are too large for most datasets. A reasonable value for the global substitution rate of primates is on the order of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> substitution/site/My, so we will set a exponential prior around this value.</p>
+
+<blockquote>
+  <p>Use the dropdown menu on the right of <strong>clockRate.c:primates</strong> to select a <strong>Exponential</strong> distribution for this prior.
+ Click on the arrow left to <strong>clockRate.c:primates</strong> to open the detailed options. Set the <strong>Mean</strong> parameter to <strong>0.01</strong>.
+ Click on the arrow again to close the detailed view.</p>
+
+</blockquote>
+
+<p>The final configuration for this prior is shown in <a href="#clockPrior">Figure 10</a>.</p>
+
+<figure>
+	<a id="clockPrior"></a>
+	<img style="width:80.0%;" src="figures/clockprior.png" alt="" />
+	<figcaption>Figure 10: Setting the prior on the clock rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="mcmc-options">MCMC options</h3>
+
+<p>The next step is to set the options for running the chain, in the <strong>MCMC</strong> panel. We can see that several loggers are set by default:</p>
+
+<ul>
+  <li>the regular trace log, which records the posterior, likelihood and prior, as well as parameter values for the substitution, clock and tree models.</li>
+  <li>the screenlog, which shows the advancement of the chain to the screen.</li>
+  <li>the tree log, which will log the trees in Nexus format, with the estimated clock rate on each edge as metadata.</li>
+  <li>the tree rates log, which will log the trees in Nexus format, with the estimated birth and death rates on each edge as metadata.</li>
+</ul>
+
+<p>This last log is specific to ClaDS. The only thing we will change here are the names of the log files, to ensure we can find them again.</p>
+<blockquote>
+  <p>Switch to the <strong>MCMC</strong> panel.
+ In the <strong>tracelog</strong>, change the <strong>File Name</strong> to <strong>primates.log</strong>.
+ In the <strong>treeRatesLog</strong>, change the <strong>File Name</strong> to <strong>primates.rates.trees</strong>.</p>
+
+</blockquote>
+
+<p>For this tutorial, we will also adjust the chain length and sampling frequency, in order for the inference to complete rapidly.</p>
+
+<blockquote>
+  <p>In the <strong>MCMC</strong> panel, change the <strong>Chain Length</strong> to <strong>100000</strong>.
+ In the <strong>tracelog</strong>, <strong>treelog</strong> and <strong>treeRatesLog</strong>, change the <strong>Log Every</strong> to <strong>1000</strong>.</p>
+
+</blockquote>
+
+<p>Once all the options have been set, the final step is to save the XML.</p>
+
+<blockquote>
+  <p>Save the XML file as <code class="language-plaintext highlighter-rouge">primates_clads.xml</code> by navigating to <strong>File &gt; Save</strong>.</p>
+
+</blockquote>
+
+<h2 id="running-the-analysis-in-beast2">Running the analysis in BEAST2</h2>
+
+<blockquote>
+  <p>Start <strong>BEAST2</strong> and choose the file <code class="language-plaintext highlighter-rouge">primates_clads.xml</code>. 
+Hit <strong>Run</strong> to start the analysis.</p>
+
+</blockquote>
+
+<p>We can already see that running the ClaDS model is quite slow. In general, ClaDS is an expensive model to run due to its complexity, as it requires the birth rate and/or the death rate to be resampled for each edge of the phylogeny. Note also that having a low sampling probability increases the computational cost of accounting for all possible histories in the unsampled parts of the tree, and so will result in slower inferences. In a real analysis, we could use for instance a starting tree to make sure that the inference starts in a good place, which should help the chain to converge faster.</p>
+
+<h2 id="analyzing-the-output">Analyzing the output</h2>
+
+<h3 id="output-files">Output files</h3>
+
+<p>Our run has generated 3 different files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">primates.log</code> which is the general trace log.</li>
+  <li><code class="language-plaintext highlighter-rouge">primates.trees</code> and <code class="language-plaintext highlighter-rouge">primates.rates.trees</code> which recorded the sampled trees in Nexus format.</li>
+</ul>
+
+<p>Note that our shortened analysis has not converged (as can easily be seen when importing the log file into Tracer). If you prefer you can analyze the pre-made log and tree files provided in this tutorial, which have been run for longer.</p>
+
+<h3 id="analyzing-the-log-files">Analyzing the log files</h3>
+
+<p>We will use the software Tracer to analyze the log file. We can see in particular the posterior distribution of the different parameters of the ClaDS model: the birth rate at the root <code class="language-plaintext highlighter-rouge">lambda_0</code>, the trend <code class="language-plaintext highlighter-rouge">alpha</code> and variance <code class="language-plaintext highlighter-rouge">sigma</code> of the lognormal distribution used to sample the birth rate and the <code class="language-plaintext highlighter-rouge">turnover</code> which gives the ratio of death rates to birth rates.</p>
+
+<p>One metric of interest reported by ClaDS is the mean deviation between the rate of an edge and the rate of its parent age, which is given by <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>α</mi><mo>×</mo><mi>e</mi><mi>x</mi><mi>p</mi><mo stretchy="false">(</mo><msup><mi>σ</mi><mn>2</mn></msup><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">m = \alpha \times exp(\sigma ^2 /2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal">x</span><span class="mord mathnormal">p</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">/2</span><span class="mclose">)</span></span></span></span>. If the mean deviation is above 1, then the general trend is for rates to increase from the root towards the tips of the phylogeny, whereas if the mean deviation is below 1, the general trend is a decrease in rates from the root to the tips. This measure is stored by ClaDS in the log file as <code class="language-plaintext highlighter-rouge">augTree.mB</code> for the birth rates, and <code class="language-plaintext highlighter-rouge">augTree.mD</code> for the death rates. Here we have parametrized the death rates using a fixed turnover, so only the mean deviation in birth rates appears in the log (<a href="#mB">Figure 10</a>).</p>
+
+<figure>
+	<a id="mB"></a>
+	<img src="figures/tracer_mB.png" alt="" />
+	<figcaption>Figure 11: Estimated posterior distribution of the mean deviation in birth rates, as shown in Tracer.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="analyzing-the-trees">Analyzing the trees</h3>
+
+<p>Another way to visualize the results is to look at the rates as plotted on the tree. We can use TreeAnnotator to build an MCC tree from the tree log in the file <code class="language-plaintext highlighter-rouge">primates.rates.trees</code>. Since we also logged the birth and death rates for each edge in the tree log, these parameters will also be summarized along with the tree.</p>
+
+<blockquote>
+  <p>Start <strong>TreeAnnotator</strong> and set the input tree to the tree file <code class="language-plaintext highlighter-rouge">primates.rates.trees</code>.
+The burn-in percentage is set to 10% by default.
+Give a name to the output file, for instance <code class="language-plaintext highlighter-rouge">primates.MCC.tre</code>.</p>
+
+  <p>Finally, click <strong>Run</strong> to start the summary.</p>
+</blockquote>
+
+<p>The MCC tree can be loaded into any tree visualization software, such as FigTree or IcyTree, however these tools are designed to plot discrete characters, and do not perform as well with a continuous character like the birth rate. We are going to use the R script provided in this tutorial <code class="language-plaintext highlighter-rouge">plot_MCC.R</code>. This script takes as input the MCC tree file and an output file to store the plot, and it will plot the MCC tree with edges coloured by the median estimates of the birth and death rates.
+Run the following commands in an R console to create the plots:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span><span class="p">(</span><span class="s2">"plot_MCC.R"</span><span class="p">)</span><span class="w">
+</span><span class="n">MCC_colour_plot</span><span class="p">(</span><span class="s2">"primates.MCC.tre"</span><span class="p">,</span><span class="w"> </span><span class="n">plotfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"primates_MCC.pdf"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#mcc_birth">Figure 12</a> and <a href="#mcc_death">Figure 13</a> show the resulting plots for the birth rate and the death rate, respectively.</p>
+
+<figure>
+	<a id="mcc_birth"></a>
+	<img src="figures/mcc_birth.png" alt="" />
+	<figcaption>Figure 12: MCC tree with edges coloured by the median birth rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<figure>
+	<a id="mcc_death"></a>
+	<img src="figures/mcc_death.png" alt="" />
+	<figcaption>Figure 13: MCC tree with edges coloured by the median death rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We can see .</p>
+
+<blockquote>
+  <p><strong>Topic for discussion:</strong> Do you think the pattern of birth and death rates shown in this picture is real? 
+Are there any other factors in our dataset which could explain it?</p>
+</blockquote>
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Maliet2019">Maliet, O., Hartig, F., &amp; Morlon, H. (2019). A model with many small shifts for estimating species-specific diversification rates. <i>Nature Ecology &amp; Evolution</i>, <i>3</i>(7), 1086–1092. https://doi.org/10.1038/s41559-019-0908-0</span></li>
+<li><span id="ClaDS2022">Barido-Sottani, J., &amp; Morlon, H. (2023). The ClaDS rate-heterogeneous birth-death prior for full phylogenetic inference in BEAST2. <i>Systematic Biology</i>, syad027. https://doi.org/10.1093/sysbio/syad027</span></li>
+<li><span id="Bouckaert2019">Bouckaert, R., Vaughan, T. G., Barido-Sottani, J., Duchêne, S., Fourment, M., Gavryushkina, A., Heled, J., Jones, G., Kühnert, D., Maio, N. D., Matschiner, M., Mendes, F. K., Müller, N. F., Ogilvie, H. A., du Plessis, L., Popinga, A., Rambaut, A., Rasmussen, D., Siveroni, I., … Drummond, A. J. (2019). BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. <i>PLOS Computational Biology</i>, <i>15</i>(4).</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+<hr />
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

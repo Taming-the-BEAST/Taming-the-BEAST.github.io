@@ -5,7 +5,7 @@
 #' @param scalem min and max values of mu to use for the colour scale. If NULL, calculated from the tree values.
 #' @param colour_gradient colours used on the scale, in order from low to high values.
 MCC_colour_plot = function(treefile, plotfile = NULL, scalel = NULL, scalem = NULL, 
-                           colour_gradient = c("red","yellow","green")) {
+                           colour_gradient = c("#13548b", "#fced36", "#e0740b")) {
   library(ape)
   library(treeio)
   
@@ -49,7 +49,7 @@ MCC_colour_plot = function(treefile, plotfile = NULL, scalel = NULL, scalem = NU
   if(!is.null(plotfile)) dev.off()
 }
 
-legendplot = function(intervals = seq(0,11,0.5), axis.int = NULL, colours = c("red","yellow","green")) {
+legendplot = function(intervals = seq(0,11,0.5), axis.int = NULL, colours = c("#13548b", "#fced36", "#e0740b")) {
   lut = colorRampPalette(colours) (length(intervals))
   if(is.null(axis.int)) axis.int = intervals
   
@@ -62,7 +62,7 @@ legendplot = function(intervals = seq(0,11,0.5), axis.int = NULL, colours = c("r
   }
 }
 
-colour.gradient <- function(x, intervals = seq(0,11,0.1), colours=c("red","yellow","green")) {
+colour.gradient <- function(x, intervals = seq(0,11,0.1), colours = c("#13548b", "#fced36", "#e0740b")) {
   colfun = colorRampPalette(colours)
   return(  colfun(length(intervals)) [ findInterval(x, intervals) ] )
 }
