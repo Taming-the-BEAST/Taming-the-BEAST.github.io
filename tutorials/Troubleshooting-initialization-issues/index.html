@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Troubleshooting initialization issues</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Troubleshooting-initialization-issues/">Troubleshooting initialization issues</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Getting BEAST2 to start
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Joëlle Barido-Sottani
+					
+			
+				
+						
+							and Louis du Plessis
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/data/bears_irbp_fossils.nex" target="_blank" rel="nofollow">
+						bears_irbp_fossils.nex
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/data/bears_morphology.nex" target="_blank" rel="nofollow">
+						bears_morphology.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/xml/issue2.xml" target="_blank" download rel="nofollow">
+						issue2.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/xml/issue1.xml" target="_blank" download rel="nofollow">
+						issue1.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/xml/issue4.xml" target="_blank" download rel="nofollow">
+						issue4.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/xml/issue3a.xml" target="_blank" download rel="nofollow">
+						issue3a.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/xml/issue3c.xml" target="_blank" download rel="nofollow">
+						issue3c.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/xml/issue3b.xml" target="_blank" download rel="nofollow">
+						issue3b.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-initialization-issues/raw/master/xml/issue4_working.xml" target="_blank" download rel="nofollow">
+						issue4_working.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/bjoelle">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/14575423?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				bjoelle
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/afdd1505d0065f34accdddd97910afae00763d5e">
+					07 Jul 2023 - <span class="text-gray">screenshots</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/17e54e2eb7a93d882e993695404aadab6c4d3f4a">
+					07 Jul 2023 - <span class="text-gray">beast screenshots</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/3f0f0bba970ec81ee04643f9c176025a466fe218">
+					07 Jul 2023 - <span class="text-gray">typo</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/b43ca7f316645c3c58e0cf8f7ca54883a7d759a4">
+					07 Jul 2023 - <span class="text-gray">error screenshots</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/0b1ce9519b0a1ba8ba93a65b3420db76f79040df">
+					30 Jun 2023 - <span class="text-gray">finalizing tutorial text & xmls</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>Many different problems can prevent a BEAST2 analysis from starting, from technical and file issues to incompatibilities in the model setup. Most analyses setup in BEAUti will run out-of-the-box, but as soon as you start tinkering with prior distributions and initial values the chance of running into an issue starts rising. This shouldn’t act to discourage you from editing the default priors and initial values! You should <strong>always</strong> consider all priors and initial values and edit them if the default values don’t make sense for your analysis.</p>
+
+<p>In this tutorial, we will show some examples of common issues and learn how to diagnose and fix them. Most of the initialization issues you are likely to encounter should be similar to one of the issues presented below. The more issues you encounter and fix the easier it will become to solve issues and get your BEAST analysis to start!</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.7.x <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014; Bouckaert et al., 2019)</a>.</p>
+
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="any-programmer-friendly-text-editor">Any programmer-friendly text editor</h3>
+
+<p>We will need to perform some manual edits on the XML files produced by BEAUti, for which we’ll need a text editor. XML files can be opened by any text editor, but it’s best to use one designed for programmers as these include nice features such as syntax highlighting, which makes the code more reader-friendly. <a href="https://www.sublimetext.com">Sublime Text</a> is a good option which is available for MacOS, Windows and Linux. Other options include <a href="https://notepad-plus-plus.org">Notepad++</a> (Windows), <a href="https://www.gnu.org/software/emacs/">Emacs</a> (any platform) or <a href="https://code.visualstudio.com">VSCode</a> (any platform).</p>
+
+<hr />
+
+<h1 id="practical-getting-beast2-to-start">Practical: Getting BEAST2 to start</h1>
+
+<h2 id="the-data">The Data</h2>
+
+<p>The data used in this tutorial is an alignment of genetic sequences for the interphotoreceptor retinoid-binding protein (irbp), and a morphological character matrix. Both alignments contain data for 8 extant and 14 fossil bear species. To illustrate different issues we have created several XML files using this dataset, each with a different initalization issue, available on the left-hand panel, under the heading <strong>XML</strong>.</p>
+
+<h2 id="packages">Packages</h2>
+
+<p>Examples in this tutorial require the <strong>SA</strong> (Sampled Ancestors) package to be installed.</p>
+
+<blockquote>
+  <p>Launch <strong>BEAUti</strong>, then open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong> (<a href="#packageManage1">Figure 1</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="packageManage1"></a>
+	<img style="width:40.0%;" src="figures/package_manager.png" alt="" />
+	<figcaption>Figure 1: Finding the BEAST2 Package Manager.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The <strong>SA</strong> package may already be installed. Otherwise, install it by doing the following.</p>
+
+<blockquote>
+  <p>Install the <strong>SA</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button (<a href="#packageSA">Figure 2</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="packageSA"></a>
+	<img style="width:80.0%;" src="figures/packageSA.png" alt="" />
+	<figcaption>Figure 2: Install the SA package.</figcaption>
+</figure>
+<p><br /></p>
+
+<blockquote>
+  <p>Next, uninstall the <strong>MM</strong> package by selecting it and clicking the <strong>Uninstall</strong> button (<a href="#packageMM">Figure 3</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="packageMM"></a>
+	<img style="width:80.0%;" src="figures/packageMM.png" alt="" />
+	<figcaption>Figure 3: Uninstalling the MM package.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The reason for uninstalling the MM package will become clear later. If the MM package wasn’t installed then clicking uninstall will have no effect.</p>
+
+<p>BEAUti needs to be closed for the newly installed packages to be loaded properly.</p>
+
+<blockquote>
+  <p>Close the <strong>BEAST2 Package Manager</strong> and <strong>BEAUti</strong>.</p>
+
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="common-issue-1-class-could-not-be-found">Common issue #1: Class could not be found</h2>
+
+<blockquote>
+  <p>Download the BEAST2 input file <code class="language-plaintext highlighter-rouge">issue1.xml</code>.</p>
+
+  <ul>
+    <li>Open <strong>BEAST2</strong> and select the file <code class="language-plaintext highlighter-rouge">issue1.xml</code> as input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. You should get an error message, as shown in <a href="#errorPackage">Figure 4</a>.</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="errorPackage"></a>
+	<img style="width:100.0%;" src="figures/errorPackage.png" alt="" />
+	<figcaption>Figure 4: The error message when running issue1.xml in BEAST2.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>This error means that BEAST2 could not identify one of the components of the analysis in the XML file. The error message shows which component is unidentified, in this example the class <em>morphmodels.evolution.substitutionmodel.LewisMK</em>, as well as the program’s closest guess for what the component could be, here <em>beastlabs.inference.ML</em>. BEAST2 also shows you roughly where the reference to the missing component was found within the hierarchical structure of the XML file (here it is the substitution model, inside the site model, inside the tree likelihood, and so on).</p>
+
+<p>There are two main causes for this error:</p>
+
+<ul>
+  <li>An error was introduced in the component name when editing the XML file manually. In this case, you simply need to edit the XML file to use the correct name.</li>
+  <li>The BEAST2 package which contains this component is not installed. In this case, you need to identify which package is missing. If the file was produced by BEAUti, it should contain a list of required packages in the first line of the file.</li>
+</ul>
+
+<p>In this example, we have not edited the XML manually, so we conclude that we are missing a package. If we open the XML file in a text editor, we can see the list of required packages (separated by colons) in the XML header on the first line.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>required="BEAST.base v2.7.4:SA v2.1.1:MM v1.2.1" 
+</code></pre></div></div>
+
+<p><strong>BEAST.base</strong> is always installed and we just installed <strong>SA</strong>. Thus we are missing the <strong>MM</strong> package which contains morphological substitution models (earlier we made sure that this package is uninstalled so that this XML file would not initialize). In fact, because the required packages are listed in the XML file, <strong>BEAST2</strong> also detected the missing package and reported it with the error message: <em>The following package is required, but is not available: MM v1.2.1</em>.</p>
+
+<p>However, keep in mind that if the XML file was manually edited then it is possible that not all required packages are listed in the XML header. In these cases you have to examine the missing component error to fix the issue.</p>
+
+<blockquote>
+  <p>Open <code class="language-plaintext highlighter-rouge">issue1.xml</code> in a text editor and remove the <strong>MM</strong> package from the requirements. Save the file and run it in <strong>BEAST2</strong>.</p>
+
+  <p>Did the error message change?</p>
+
+</blockquote>
+
+<p>When the required packages are not listed in the XML file it can sometimes be tricky to figure out which package to install, because not all packages have self-explanatory names and the Java classpath of the missing component doesn’t always contain the package name (as is the case here). In this case we can guess that the missing component (<em>morphmodels.evolution.substitutionmodel.LewisMK</em>) has something to do with morphological models. In the BEAST2 package manager there are short descriptions of each package on the right. For <strong>MM</strong> the description reads “Enables models of morphological character evolution.” We can also click on the link icon to be taken to the code repository for the <strong>MM</strong> package, where we can easily verify that <em>morphmodels.evolution.substitutionmodel.LewisMK</em> is indeed included in it (within the <code class="language-plaintext highlighter-rouge">src/</code> directory).</p>
+
+<p>There are still times when this strategy won’t work (the package is messy, contains many different types of models, or the package may not even be available on the default BEAST2 package repository). In such cases you can try examining the source of the XML file (e.g. a tutorial or a publication) or simply do an online search for the name of the missing component. For instance, the <strong>MM</strong> package repository is one of the top results in a Google search for <em>morphmodels.evolution.substitutionmodel.LewisMK</em>.</p>
+
+<blockquote>
+  <p>Following the same process as for the <strong>SA</strong> package, open the <strong>BEAST2 Package Manager</strong> in <strong>BEAUti</strong> and install the <strong>MM</strong> package.</p>
+
+  <p>Close and reopen <strong>BEAST2</strong> and run the file <code class="language-plaintext highlighter-rouge">issue1.xml</code> again, checking that it now initializes and runs.</p>
+
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="common-issue-2-output-files-already-exist">Common issue #2: Output files already exist</h2>
+
+<blockquote>
+  <p>Download the BEAST2 input file <code class="language-plaintext highlighter-rouge">issue2.xml</code> in the same folder as <code class="language-plaintext highlighter-rouge">issue</code>1<code class="language-plaintext highlighter-rouge">.xml</code>.</p>
+
+  <ul>
+    <li>Open <strong>BEAST2</strong> and select the file <code class="language-plaintext highlighter-rouge">issue2.xml</code> as input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. You should get an error message, as shown in <a href="#errorOverwrite">Figure 5</a>.</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="errorOverwrite"></a>
+	<img style="width:100.0%;" src="figures/errorOverwrite.png" alt="" />
+	<figcaption>Figure 5: Another error message in BEAST2, this time for issue2.xml.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>This error means that BEAST2 is attempting to overwrite a <code class="language-plaintext highlighter-rouge">.log</code> or <code class="language-plaintext highlighter-rouge">.tree</code> file that already exists, as explained in the message <em>Trying to write file bears.log but the file already exists</em>. By default, overwriting files is not permitted in order to avoid accidentally losing data. If <strong>BEAST2</strong> is run in interactive mode from the command line, for instance on your local machine, it offers you the possibility to continue the analysis, by typing <strong>Y</strong> to overwrite the files. However, if <strong>BEAST2</strong> is run on a computing cluster, it will simply stop when encountering this issue.</p>
+
+<p>To solve this problem, there are three possibilities:</p>
+
+<ul>
+  <li>If the intention is to overwrite the existing files, select the <strong>overwrite</strong> option from the dropdown menu in the <strong>BEAST2</strong> launcher (see <a href="#overwrite">Figure 6</a>) or use the <strong>-overwrite</strong> option in the command-line interface.</li>
+</ul>
+
+<figure>
+	<a id="overwrite"></a>
+	<img style="width:70.0%;" src="figures/overwrite.png" alt="" />
+	<figcaption>Figure 6: BEAST2 launcher with the overwrite option selected.</figcaption>
+</figure>
+<p><br /></p>
+
+<ul>
+  <li>If the intention is to resume a run, i.e. to append to the existing files, select the <strong>resume</strong> option from the dropdown menu in the <strong>BEAST2</strong> launcher (see <a href="#resume">Figure 7</a>) or use the <strong>-resume</strong> option in the command-line interface.</li>
+</ul>
+
+<figure>
+	<a id="resume"></a>
+	<img style="width:70.0%;" src="figures/resume.png" alt="" />
+	<figcaption>Figure 7: BEAST2 launcher with resume option selected.</figcaption>
+</figure>
+<p><br /></p>
+
+<ul>
+  <li>If you would like to create new files, either move the original files, move the XML file, or change the names of the <code class="language-plaintext highlighter-rouge">.log</code> and <code class="language-plaintext highlighter-rouge">.tree</code> files in the new analysis.</li>
+</ul>
+
+<blockquote>
+  <p>Open <strong>BEAUti</strong> and load the file <code class="language-plaintext highlighter-rouge">issue2.xml</code>.</p>
+  <ul>
+    <li>In the <strong>MCMC</strong> panel, expand the options for the <strong>tracelog</strong> by clicking on the arrow to the left. Change the <strong>File Name</strong> to <code class="language-plaintext highlighter-rouge">bears_longer.log</code>.</li>
+    <li>Do the same for the <strong>treelog</strong> and change the <strong>File Name</strong> to <code class="language-plaintext highlighter-rouge">bears_longer.trees</code>.</li>
+    <li>Save the file <code class="language-plaintext highlighter-rouge">issue2.xml</code>. Run it in <strong>BEAST2</strong> again, and check that it now works.</li>
+  </ul>
+
+</blockquote>
+
+<p><strong>This issue may seem simple and straightforward, but it has been the cause of countless hours of delays and lost computing time!</strong></p>
+
+<p>To make your life easier and avoid accidentally overwriting output files you can use the variables <code class="language-plaintext highlighter-rouge">$(filebase)</code>, <code class="language-plaintext highlighter-rouge">$(seed)</code> and <code class="language-plaintext highlighter-rouge">$(tree)</code> in the names for the <code class="language-plaintext highlighter-rouge">.log</code> and <code class="language-plaintext highlighter-rouge">.tree</code> files. When you run the analysis <code class="language-plaintext highlighter-rouge">$(filebase)</code> will be replaced by the name of the XML file (without the <code class="language-plaintext highlighter-rouge">.xml</code> extension), and <code class="language-plaintext highlighter-rouge">$(seed)</code> by the random number seed (useful for reproducing exactly the same analysis). The <code class="language-plaintext highlighter-rouge">$(tree)</code> variable can be used to label different <code class="language-plaintext highlighter-rouge">.tree</code> files when an analysis contains more than one tree. Since BEAST 2.7 the default <code class="language-plaintext highlighter-rouge">.log</code> filename is <code class="language-plaintext highlighter-rouge">$(filebase).log</code> and the default <code class="language-plaintext highlighter-rouge">.tree</code> file name is <code class="language-plaintext highlighter-rouge">$(filebase)-$(tree).trees</code>.</p>
+
+<p><br /></p>
+
+<h2 id="common-issue-3-could-not-find-a-proper-state-to-initialize">Common issue #3: Could not find a proper state to initialize</h2>
+
+<h3 id="troubleshooting-a-simple-parameter-issue">Troubleshooting a simple parameter issue</h3>
+
+<blockquote>
+  <p>Download the BEAST input file <code class="language-plaintext highlighter-rouge">issue3a.xml</code>.</p>
+
+  <ul>
+    <li>Open <strong>BEAST2</strong> and select the file <code class="language-plaintext highlighter-rouge">issue3a.xml</code> as input file.</li>
+    <li>Start the run with the <strong>Run</strong> button.</li>
+  </ul>
+
+  <p>You should get an error message, as shown in <a href="#errorStarting">Figure 8</a>.</p>
+
+</blockquote>
+
+<figure>
+	<a id="errorStarting"></a>
+	<img style="width:100.0%;" src="figures/errorStarting.png" alt="" />
+	<figcaption>Figure 8: Yet another error message in BEAST2, this time for issue3a.xml.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The inference failed to start because a good initial state could not be found, as explained by the error message (<em>Could not find a proper state to initialise. Perhaps try another seed</em>). This issue is much more complex to diagnose than the previous ones, as it can be caused by many different parts of the analysis configuration. The suggestion to try another seed is not a very good one and we will come back to it in the <strong>“Number of initialization attempts”</strong> section below.</p>
+
+<p>Above the error message BEAST2 traces through its attempt to calculate an initial value for the posterior. We can use this trace to figure out which model component is responsible for the issue. Remember that the posterior is given by Bayes’ formula,</p>
+
+<div style="text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo>∣</mo><mi>D</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo>∣</mo><mi>θ</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle P(\theta \mid D) = \frac{P(D \mid \theta) P(\theta)}{P(D)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div>
+
+<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span> is a vector of all the model parameters and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span> is the data, here consisting of the genetic data, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>G</mi></msub></mrow><annotation encoding="application/x-tex">D_G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and the morphological data, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">D_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. In the equation above <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo>∣</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(D \mid \theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span> is the likelihood and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span> the prior.</p>
+
+<p>In our model we are estimating the following parameters:</p>
+
+<ul>
+  <li>Tree, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">T</mi></mrow><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.25417em;">T</span></span></span></span></li>
+  <li>Fossilized birth-death (FBD) model:
+    <ul>
+      <li>Diversification rate, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span></span></span></span></li>
+      <li>Turnover, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span></li>
+      <li>Sampling proportion, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></li>
+      <li>Origin time, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">t_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7651em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+    </ul>
+  </li>
+  <li>HKY nucleotide substitution model:
+    <ul>
+      <li>Transition/transversion ratio, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi></mrow><annotation encoding="application/x-tex">\kappa</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">κ</span></span></span></span></li>
+      <li>Nucleotide equilibrium frequencies, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Π</mi><mo>=</mo><mo stretchy="false">(</mo><msub><mi>π</mi><mi>A</mi></msub><mo separator="true">,</mo><msub><mi>π</mi><mi>C</mi></msub><mo separator="true">,</mo><msub><mi>π</mi><mi>G</mi></msub><mo separator="true">,</mo><msub><mi>π</mi><mi>T</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Pi = (\pi_A, \pi_C, \pi_G, \pi_T)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Π</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></li>
+    </ul>
+  </li>
+  <li>Lewis MK morphological trait substitution model:
+    <ul>
+      <li>Relative mutation rate, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span></li>
+    </ul>
+  </li>
+  <li>Strict clock models:
+    <ul>
+      <li>Nucleotide substitution rate, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>G</mi></msub></mrow><annotation encoding="application/x-tex">\mu_G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+      <li>Morphological trait substitution rate, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">\mu_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Thus, we can write the posterior as,</p>
+
+<div style="text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo>∣</mo><mi>D</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>D</mi><mi>G</mi></msub><mo separator="true">,</mo><msub><mi>D</mi><mi>M</mi></msub><mo>∣</mo><mi mathvariant="script">T</mi><mo separator="true">,</mo><mi>λ</mi><mo separator="true">,</mo><mi>γ</mi><mo separator="true">,</mo><mi>p</mi><mo separator="true">,</mo><msub><mi>t</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>κ</mi><mo separator="true">,</mo><mi mathvariant="normal">Π</mi><mo separator="true">,</mo><mi>ϕ</mi><mo separator="true">,</mo><msub><mi>μ</mi><mi>G</mi></msub><mo separator="true">,</mo><msub><mi>μ</mi><mi>M</mi></msub><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi mathvariant="script">T</mi><mo separator="true">,</mo><mi>λ</mi><mo separator="true">,</mo><mi>γ</mi><mo separator="true">,</mo><mi>p</mi><mo separator="true">,</mo><msub><mi>t</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>κ</mi><mo separator="true">,</mo><mi mathvariant="normal">Π</mi><mo separator="true">,</mo><mi>ϕ</mi><mo separator="true">,</mo><msub><mi>μ</mi><mi>G</mi></msub><mo separator="true">,</mo><msub><mi>μ</mi><mi>M</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>D</mi><mi>G</mi></msub><mo separator="true">,</mo><msub><mi>D</mi><mi>M</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle P(\theta \mid D) = \frac{P(D_G, D_M \mid \mathcal{T}, \lambda, \gamma, p, t_0, \kappa, \Pi, \phi, \mu_G, \mu_M) P(\mathcal{T}, \lambda, \gamma, p, t_0, \kappa, \Pi, \phi, \mu_G, \mu_M)}{P(D_G, D_M)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">κ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Π</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">κ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Π</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div>
+
+<p>We assume that the genetic and morphological likelihoods are independent and that all of the other model parameters are independent of each other (except for the tree, which is generated by the FBD parameters), so we can factorise the likelihood and the prior. We also don’t need to calculate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(D)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span></span></span></span> when using MCMC to estimate posterior distributions, so what BEAST2 actually calculates is,</p>
+
+<div style="text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo>∣</mo><mi>D</mi><mo stretchy="false">)</mo><mo>∝</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>D</mi><mi>G</mi></msub><mo>∣</mo><mi mathvariant="script">T</mi><mo separator="true">,</mo><mi>κ</mi><mo separator="true">,</mo><mi mathvariant="normal">Π</mi><mo separator="true">,</mo><msub><mi>μ</mi><mi>G</mi></msub><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>D</mi><mi>M</mi></msub><mo>∣</mo><mi mathvariant="script">T</mi><mo separator="true">,</mo><mi>ϕ</mi><mo separator="true">,</mo><msub><mi>μ</mi><mi>M</mi></msub><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi mathvariant="script">T</mi><mo>∣</mo><mi>λ</mi><mo separator="true">,</mo><mi>γ</mi><mo separator="true">,</mo><mi>p</mi><mo separator="true">,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>κ</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi mathvariant="normal">Π</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>μ</mi><mi>G</mi></msub><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><msub><mi>μ</mi><mi>M</mi></msub><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle P(\theta \mid D) \propto P(D_G \mid \mathcal{T}, \kappa, \Pi, \mu_G) P(D_M \mid \mathcal{T}, \phi, \mu_M) P(\mathcal{T} \mid \lambda, \gamma, p, t_0) P(\lambda) P(\gamma) P(p) P(t_0) P(\kappa) P(\Pi) P(\phi) P(\mu_G) P(\mu_M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∝</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">κ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Π</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ϕ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">κ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord">Π</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">ϕ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></div>
+
+<p>In this nasty expression <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi mathvariant="script">T</mi><mo>∣</mo><mi>λ</mi><mo separator="true">,</mo><mi>γ</mi><mo separator="true">,</mo><mi>p</mi><mo separator="true">,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(\mathcal{T} \mid \lambda, \gamma, p, t_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathcal" style="margin-right:0.25417em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> is the tree prior (here the fossilized birth-death model), which is the only part of the prior that depends on other parameters. You can find all the model parameters by loading the XML file into BEAUti, or by locating the <code class="language-plaintext highlighter-rouge">&lt;state&gt;</code> section in the XML file.</p>
+
+<p>For computational reasons BEAST2 calculates log probabilities, which means values of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∞</span></span></span></span> correspond to prior or model probabilities of 0. When initialising, BEAST2 attempts to calculate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo>∣</mo><mi>D</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(\theta \mid D)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span></span></span></span>. To do so, it recursively attempts to calculate all of the parts of the posterior, until it reaches a density that can be evaluated without calculating anything else. Thus it firsts calculates all the parameter priors (because they don’t depend on anything else), then the tree prior (which depends on some parameters), then the likelihoods and finally the posterior. To find the root of the problem we have to trace through our posterior calculation and find the component furthest downstream with a value of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∞</span></span></span></span>. When tracing through the error message above we see three parts of the model returned  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∞</span></span></span></span>:</p>
+
+<ul>
+  <li><em>P(posterior) = -Infinity (was -Infinity)</em></li>
+  <li><em>P(prior) = -Infinity (was -Infinity)</em></li>
+  <li><em>P(ClockPrior.c:bears_irbp_fossils) = -Infinity (was -Infinity)</em></li>
+</ul>
+
+<p>The likelihoods returned <em>NaN</em> (not a number), which means BEAST2 crashed before they could be calculated (BEAST2 stops as soon as a model component returns <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∞</span></span></span></span>). Thus, we can conclude that the model most likely failed when calculating the prior of the clock rate of the genetic alignment, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>G</mi></msub></mrow><annotation encoding="application/x-tex">\mu_G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> above.</p>
+
+<p>To inspect the parameter and find the issue, we will first load the file into BEAUti.</p>
+
+<blockquote>
+  <p>Open <strong>BEAUti</strong> and load in the <code class="language-plaintext highlighter-rouge">issue3a.xml</code> file by navigating to <strong>File &gt; Load</strong>.</p>
+
+  <ul>
+    <li>Switch to the <strong>Priors</strong> panel.</li>
+    <li>Click on the arrow left of the <strong>clockRate.c:bears_irbp_fossils</strong> to see the details of this prior (<a href="#clockRatePrior">Figure 9</a>).</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="clockRatePrior"></a>
+	<img style="width:80.0%;" src="figures/clockRatePrior.png" alt="" />
+	<figcaption>Figure 9: Details of the genetic clock rate prior.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We can see that the clock rate prior was changed from the default, which is a uniform distribution between 0 and infinity, to a uniform distribution between 0 and 0.5. In general, changing this default prior is a good idea, as the default is extremely vague, places far too much weight on very large and unrealistic values and is thus not an accurate description of our prior knowledge.</p>
+
+<p>Whenever we change a prior distribution from the default and especially when setting priors with hard bounds (e.g. a uniform or Beta distribution),  we need to make sure that the initial value of the parameter still falls within the bounds of the distribution. For each parameter, the initial value is shown in the box to the right, as <strong>initial = [x] [min, max]</strong>. Here <em>x</em> indicates the initial value and <em>min</em> and <em>max</em> the range of possible values for the corresponding parameter.</p>
+
+<blockquote>
+  <p>Check the initial value of the <strong>clockRate.c:bears_irbp_fossils</strong> parameter in the box to the right of the parameter.
+We can see that the box reads <strong>initial = [1.0]</strong>.</p>
+
+</blockquote>
+
+<p>The initial value of the clock rate is set to <strong>1.0</strong>, which is outside the bounds of the prior for this parameter. This is why the initialization failed.</p>
+
+<blockquote>
+  <p>In the <strong>Priors</strong> panel, click on the <strong>initial = [1.0]</strong> box right of the <strong>clockRate.c:bears_irbp_fossils</strong> parameter.</p>
+
+  <ul>
+    <li>Change the initial value in the <strong>Value</strong> box to <strong>0.01</strong> (<a href="#initialClock">Figure 10</a>).</li>
+    <li>Click on <strong>OK</strong> to close the box.</li>
+    <li>Save the updated configuration as <code class="language-plaintext highlighter-rouge">issue3a_fixed.xml</code> by navigating to <strong>File &gt; Save As</strong>.&gt;</li>
+    <li>Open <strong>BEAST2</strong> and select <code class="language-plaintext highlighter-rouge">issue3a_fixed.xml</code> as the input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. It works now!</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="initialClock"></a>
+	<img style="width:70.0%;" src="figures/initialClock.png" alt="" />
+	<figcaption>Figure 10: Changing the initial value of the clock rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Using this procedure to trace through the calculation of the posterior you can always identify which model component is causing an initialization issue. Usually simple issues like initial values are the cause, but there are times when things are more complex.</p>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>In the XML file <code class="language-plaintext highlighter-rouge">issue3a.xml</code>, is there a prior for the relative mutation rate in the Lewis MK model, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span>?</p>
+
+  <p>It is not shown in the initialization trace <a href="#errorStarting">Figure 8</a>, which means no explicit prior was set for this parameter. 
+Is this a problem? If no prior distribution is set in the XML file, what prior is used for the parameter?</p>
+
+  <details>
+	<summary>Answer</summary>
+
+If no prior is set for a parameter the implicit prior becomes a uniform distribution between the parameter bounds. In the case of the mutation rate (called <i>mutationRate.s:bears_morphology2</i> in the XML file), no bounds are set either, so it inherits the default bounds of a real parameter in BEAST2, which is between negative and positive infinity. 
+<br /><br />
+In this case it doesn't make any difference. Although the parameter is estimated, the Delta exchange operator on it parameter constrains it to be always equal to one (it would probably have made more sense to just fix the parameter though). 
+<br /><br />
+In general though, an unbounded uniform prior is a bad idea for most parameters for exactly the same reasons it is a bad choice for the clock rate. 
+More importantly, "hidden" priors like these are a problem when doing model selection. An unbounded uniform prior is an improper prior (there exists no normalising constant that can make it integrate to 1, so it integrates to infinity). Improper priors can cause issues with model selection if the posterior then also integrates to infinity. In general it's impossible to know if using an improper prior will lead to a proper posterior, so it is recommended to not use improper priors (we can only know if the posterior is proper if we can analytically integrate it, which is usually not the case for BEAST models). It is always possible to set some sensible parameter bounds, so we can always make all of our priors proper. 
+<br /><br />
+Finding out if there are "hidden" priors in your model is more complex, especially when the BEAUti template for a model doesn't explicitly initialize priors for all model parameters. You can navigate to the <b>Initialization</b> panel in BEAUti (click <b>View &gt; Show Initialization panel</b> to display it) to check if all model parameters also have prior distributions set (by comparing with the <b>Priors</b> panel), but it is unfortunately not possible to add a missing prior from BEAUti. If you've identified such a model parameter then you would need to add the prior by manually editing the XML file. It is also a good idea to contact the package developers, so they can address the issue in future releases.
+
+</details>
+
+</blockquote>
+
+<p><br /></p>
+
+<h3 id="troubleshooting-incompatibilities-between-model-components">Troubleshooting incompatibilities between model components</h3>
+
+<p>In the example above the incompatibility was just within one parameter that was out of the bounds of its prior. When one model parameter appears in multiple model components, incompatibilities between different model components can lead to the posterior evaluating to negative infinity. This most often involves the tree, which appears in many model components. If, in addition, MRCA priors with hard bounds or offsets are set, or the starting tree is fixed, the probability for an incompatibility is much higher.</p>
+
+<p>One particular example occurs with birth-death models where the origin parameter is estimated (such as the BDSKY, BDMM or FBD models).</p>
+
+<blockquote>
+  <p>Download the BEAST2 input file <code class="language-plaintext highlighter-rouge">issue3b.xml</code>.</p>
+
+  <ul>
+    <li>Open <strong>BEAST2</strong> and select the file <code class="language-plaintext highlighter-rouge">issue3b.xml</code> as input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. You should get an error message, as shown in <a href="#errorOrigin">Figure 11</a>.</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="errorOrigin"></a>
+	<img style="width:100.0%;" src="figures/errorOrigin.png" alt="" />
+	<figcaption>Figure 11: The return of the error message (issue3b.xml).</figcaption>
+</figure>
+<p><br /></p>
+
+<p>While this is a validation issue, the error message is different to the example above. Here the message (<em>Initial value of origin (100.0) should be greater than initial root height (125.1)</em>) indicates clearly what is going on: we have specified an origin parameter with an initial value which is incompatible with the initial tree (by definition the origin should be larger than the height of the tree).</p>
+
+<p>Unfortunately, while it is straightforward to create an XML file with this error in BEAUti, it cannot be loaded into BEAUti again for editing (give it a try). This is because BEAUti does more than simply write XML code to files. While editing the XML file, BEAUti also instantiates the model (using the same code that BEAST2 uses to run the model). This is done to ensure that BEAUti only produces XML files containing BEAST2 analyses with the correct syntax. Similarly, when loading an XML file into BEAUti, the model is instantiated. If doing so returns any errors, BEAUti cannot load the XML file. This would be the case if, for example the XML file contains syntax errors, or it refers to classes in packages that are not installed. In this particular case, the FBD model checks that the initial value of the origin parameter is greater than the height of the starting tree. Since this is not the case here, the model throws an error and BEAUti fails to load the XML file. To correct this error we can either recreate the whole XML file from scratch in BEAUti, or quickly edit it in a text editor.</p>
+
+<blockquote>
+  <p>Open the <code class="language-plaintext highlighter-rouge">issue3b.xml</code> file in a text editor.</p>
+  <ul>
+    <li>Look for the parameter <strong>originFBD.t:bears</strong> and examine its initial value.</li>
+    <li>Look for the root prior <strong>root.prior</strong> and examine its distribution. Look in particular at the values for the <strong>offset</strong>, <strong>M</strong> and <strong>S</strong> parameters.</li>
+  </ul>
+
+</blockquote>
+
+<p>The origin parameter configuration is:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"originFBD.t:bears"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"stateNode"</span><span class="nt">&gt;</span>100.0<span class="nt">&lt;/parameter&gt;</span>
+</code></pre></div></div>
+<p>And the root prior distribution is set up like this:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;LogNormal</span> <span class="na">id=</span><span class="s">"LogNormalDistributionModel.9"</span> <span class="na">name=</span><span class="s">"distr"</span> <span class="na">offset=</span><span class="s">"125.0"</span><span class="nt">&gt;</span>                                 
+     <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.92"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">name=</span><span class="s">"M"</span><span class="nt">&gt;</span>2.0<span class="nt">&lt;/parameter&gt;</span>
+     <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"RealParameter.93"</span> <span class="na">spec=</span><span class="s">"parameter.RealParameter"</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"S"</span> <span class="na">upper=</span><span class="s">"5.0"</span><span class="nt">&gt;</span>0.5<span class="nt">&lt;/parameter&gt;</span>
+<span class="nt">&lt;/LogNormal&gt;</span>
+</code></pre></div></div>
+
+<p>We can see that the distribution for the root prior has an offset of <strong>125.0</strong>, meaning that the root of the tree will always be greater than this value. However the initial value of the origin parameter was left to the default, which is <strong>100.0</strong>. This is the source of the error reported by <strong>BEAST2</strong>. Thus we need to change the value of the origin to be compatible with our starting tree.</p>
+
+<blockquote>
+  <ul>
+    <li>In the text editor, look for the parameter <strong>originFBD.t:bears</strong> and change its initial value from <strong>100.0</strong> to <strong>150.00</strong>.</li>
+    <li>Save the updated configuration as <code class="language-plaintext highlighter-rouge">issue3b_fixed.xml</code>.</li>
+    <li>Open <strong>BEAST2</strong> and select <code class="language-plaintext highlighter-rouge">issue3b_fixed.xml</code> as the input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. It works now!</li>
+  </ul>
+
+</blockquote>
+
+<p>Here the incompatibility stemmed from us setting a root prior with an offset. However, this issue can also happen when using a user-specified starting tree, for instance a tree from a Newick string. In this case the origin parameter needs to be compatible with the specified tree, i.e. the initial value of the origin needs to be higher than the root of the Newick tree. Finally, it is also entirely possible for this issue to occur even when using a default randomly initialized tree.</p>
+
+<p>Some other common cases where inconsistencies between model components can lead to initialization failures are:</p>
+
+<ul>
+  <li>Setting multiple (reciprocally incompatible) MRCA priors on different nodes in the tree.</li>
+  <li>Setting monophyly constraints on the tree and supplying a starting tree incompatible with these constraints.</li>
+  <li>When an initial tree is specified for a structured analysis that is incompatible with the initial parameter values of the migration model.</li>
+  <li>When the initial values for rates are set to 0, for instance setting the initial value of the sampling rate (of a birth-death model) to 0 means that it is impossible to have observed any samples, so every tree has a probability of 0 under the model.</li>
+</ul>
+
+<p>Some more common model incompatibilities are also listed <a href="http://www.beast2.org/2018/07/04/fatal-errors.html">here</a>.</p>
+
+<p><br /></p>
+
+<h3 id="troubleshooting-a-complex-parameter-issue">Troubleshooting a complex parameter issue</h3>
+
+<blockquote>
+  <p>Download the BEAST input file <code class="language-plaintext highlighter-rouge">issue3c.xml</code>.</p>
+
+  <ul>
+    <li>Open <strong>BEAST2</strong> and select the file <code class="language-plaintext highlighter-rouge">issue3c.xml</code> as input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. You should get an error message, as shown in <a href="#errorStarting2">Figure 12</a>.</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="errorStarting2"></a>
+	<img style="width:100.0%;" src="figures/errorStarting2.png" alt="" />
+	<figcaption>Figure 12: A similar error message as earlier (issue3c.xml).</figcaption>
+</figure>
+<p><br /></p>
+
+<p>As before, <strong>BEAST2</strong> could not find a valid state to start the inference. This time there are finite values for all of the simple parameter priors, meaning that all of the initial values fall within the prior bounds. The two exceptions are the FBD tree prior, which reads <em>P(FBD.t:bears) = -Infinity</em> and an MRCA prior on the root of the tree, which reads <em>P(root.prior) = NaN</em>, meaning it was not evaluated before BEAST2 crashed. Thus, we can conclude that the issue likely has something to do with the calculation of the FBD density. The FBD prior is a tree prior, and depends on the tree as well as several other parameters, so there are several possible causes for the issue:</p>
+
+<ul>
+  <li><strong>An issue with the initial tree:</strong> the inference will not start if the initial tree is impossible under the specified tree model or MRCA constraints. By default, most analyses use a simple coalescent model to simulate a random initial tree that respects all MRCA constraints. However, with more complex models, or incompatible MRCA priors, the simulation process can fail to find a good tree. Similarly, when there are additional constraints on the tree that are not encoded in MRCA priors (as with the origin parameter in the example above), the simulated tree can also be incompatible. In such cases the simulation either needs to be fine-tuned to satisfy the constraints, or a valid initial tree should be provided to the analysis.</li>
+  <li><strong>An issue with the initial parameter values:</strong> if the initial values set in the analysis are very far from plausible, the resulting density of the model will be extremely small. Because of the limitations of floating point arithmetic used by computers, numbers with very large magnitudes get approximated to positive or negative infinity and numbers with very small magnitudes to zero. That means for very improbable parameter combinations, the density of a model, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P(\theta) \approx 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>. Usually, calculations are done in logspace to alleviate this effect, however for extremely unlikely parameter combinations we will have <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo><mo>≈</mo><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\log P(\theta) \approx -\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∞</span></span></span></span>. Most of the parametric prior distributions available in BEAST2 only tend to 0 as the parameter tends to infinity, making it very unlikely to encounter numerical underflow issues with these distributions. However, more complex distributions, like tree priors, have complex, high-dimensional density landscapes and it is entirely possible that a parameter combination that works for one model evaluates to negative infinity for a related model.</li>
+  <li><strong>A bug in the density calculation:</strong> BEAST2 packages can contain calculation issues which have remained undetected so far (especially if they only appear under very specific circumstances). Such bugs should be reported to the package developers. However, this is unlikely in our case, as the FBD model has been extensively tested and used in the past, and our analysis setup is similar to previous analyses.</li>
+</ul>
+
+<p>To inspect the initial values and find the issue, we will first load the file into BEAUti.</p>
+
+<blockquote>
+  <p>Open <strong>BEAUti</strong> and load in the <code class="language-plaintext highlighter-rouge">issue3c.xml</code> file by navigating to <strong>File &gt; Load</strong>.</p>
+
+</blockquote>
+
+<p>The starting tree can be found in the <strong>Starting tree</strong> panel, which is hidden by default.</p>
+
+<blockquote>
+  <p>Open the <strong>Starting tree</strong> panel by navigating to <strong>View &gt; Show Starting tree panel</strong>.
+Switch to the <strong>Starting tree</strong> panel.</p>
+
+</blockquote>
+
+<figure>
+	<a id="startingTree"></a>
+	<img style="width:80.0%;" src="figures/startingTree.png" alt="" />
+	<figcaption>Figure 13: Starting tree panel.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>As we can see in <a href="#startingTree">Figure 13</a>, the initial tree in this analysis is set to a Newick tree, chosen by the user. The <strong>Newick</strong> box gives the full Newick string, which we could use to inspect the tree in an other program. This string can also be copied directly from the XML file. First, we will check if this tree is compatible with the tree constraints set in the <strong>Priors</strong> panel.</p>
+
+<blockquote>
+  <p>Switch to the <strong>Priors</strong> panel.
+Click on the arrow left of the <strong>root.prior</strong> to see the details of this prior (<a href="#rootPrior">Figure 14</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="rootPrior"></a>
+	<img style="width:80.0%;" src="figures/rootPrior.png" alt="" />
+	<figcaption>Figure 14: Priors panel showing the root prior.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The only constraint set on the tree is a prior on the age of the root, which we can see in the <strong>Priors</strong> panel. By checking the details, we can see that this is a wide lognormal prior, with the 5% quantile of the prior at <strong>206 Ma</strong> and the 95% quantile at <strong>437 Ma</strong> (in this analysis branch lengths are in millions of years). Normally, a single lognormal MRCA prior will not be incompatible with any tree, since it is defined across all positive real numbers and only approaches 0 for parameter values approaching infinity. However, this particular prior also has an offset of <strong>25 Ma</strong> set. That means any tree with a root height less than 25 Ma will be incompatible with this prior.</p>
+
+<p>Let’s import our starting tree in Icytree to check if the root age is compatible with the prior.</p>
+
+<blockquote>
+  <p>Open Icytree (<a href="https://icytree.org/">https://icytree.org/</a>) in a web browser.</p>
+
+  <ul>
+    <li>Copy the Newick string from the <strong>Starting tree</strong> panel or from the XML file.</li>
+    <li>In the IcyTree browser window click <strong>File &gt; Enter tree directly</strong>.</li>
+    <li>Paste the copied Newick string and press <strong>Done</strong> to display the tree in IcyTree.</li>
+  </ul>
+
+</blockquote>
+
+<p>By hovering over the root node of the starting tree, we can see that its age is set to <strong>417.2 Ma</strong>, which is consistent with the root prior set in the analysis.</p>
+
+<p>Next, we will inspect the initial values of the parameters of the FBD model, found in the <strong>Priors</strong> panel in <strong>BEAUti</strong>. The FBD model has 3 parameters: the diversification rate, the turnover and the sampling proportion. We can see that the initial diversification rate is <strong>1.0</strong>, the initial sampling proportion <strong>0.5</strong> and the initial turnover <strong>0.5</strong>. These are the default values of these parameters, but they may not be adapted to all datasets. In particular, a diversification rate of 1.0/My is a very high value - since our starting tree is more than 400 My old, it means that we would expect about <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>400</mn><mo>×</mo><mn>1.0</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>5</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>173</mn></msup></mrow><annotation encoding="application/x-tex">\exp(400 \times 1.0) \approx 5 \times 10^{173}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord">400</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1.0</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">173</span></span></span></span></span></span></span></span></span></span></span></span> extant species (as opposed to the 8 extant bears we actually have). Having a very implausible starting value for the diversification rate could explain the failure we observed earlier when calculating the likelihood of the FBD model, so we will change it to a more realistic value of <strong>0.01</strong>. This leads to the much more reasonable <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>400</mn><mo>×</mo><mn>0.01</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">\exp(400 \times 0.01) \approx 55</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord">400</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0.01</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">55</span></span></span></span>, still more than observed, but not so unlikely that the log density would evaluate to negative infinity.</p>
+
+<blockquote>
+  <p>In the <strong>Priors</strong> panel, click on the <strong>initial = [1.0]</strong> box right of the <strong>diversificationRateFBD</strong> parameter.</p>
+
+  <ul>
+    <li>Change the initial value in the <strong>Value</strong> box to <strong>0.01</strong> and click on <strong>OK</strong> to close the box (<a href="#initialDiv">Figure 15</a>).</li>
+    <li>Save the updated configuration as <code class="language-plaintext highlighter-rouge">issue3c_fixed.xml</code> by navigating to <strong>File &gt; Save As</strong>.</li>
+    <li>Open <strong>BEAST2</strong> and select <code class="language-plaintext highlighter-rouge">issue3c_fixed.xml</code> as the input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. It works now!</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="initialDiv"></a>
+	<img style="width:70.0%;" src="figures/initialDiv.png" alt="" />
+	<figcaption>Figure 15: Changing the initial value of the diversification rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>We investigated three model components in the example above, the MRCA prior, the initial tree and the FBD tree prior.</p>
+
+  <p>We finally found that the initial parameter combination of the FBD tree prior was very unlikely, specifically the diversification rate was incompatible with the tree height. If we had not specified an MRCA prior or an initial tree, would we still have encountered the initialization error?</p>
+
+  <p>Try removing the MRCA prior and changing the initial tree back to a randomly simulated tree in BEAUti to investigate this question!</p>
+
+</blockquote>
+
+<h3 id="using-a-different-seed-or-increasing-the-number-of-initialization-attempts">Using a different seed or increasing the number of initialization attempts</h3>
+
+<p>If there are no obvious incompatibilities in the analysis setup, it is possible that the problem is simply due to bad luck rather than a fundamental problem with the setup. During initialization some model components are randomly initialized. In a standard analysis this is just the starting tree, but could also be other model components, depending on the models and packages used. It is possible that the random starting tree is just extremely unlikely under the model configuration and causes initialization to fail. This is rare, but it can happen with complex configurations or with packages and models that are still under development.</p>
+
+<p>For randomly initialized model components the random number seed is very important and if a specific seed was used to run the analysis then changing it may indeed help, as suggested by BEAST2 (<a href="#errorStarting">Figure 8</a>). However, if no seed is provided to BEAST2 then the seed is itself random and a different seed is used each time the analysis is attempted.</p>
+
+<p>To save time rerunning the same analysis with many different seeds, BEAST2 by default tries to initialize an analysis <strong>10</strong> times before giving up, but it is possible to increase the number of attempts.</p>
+
+<blockquote>
+  <p>Open <strong>BEAUti</strong> and load in the <code class="language-plaintext highlighter-rouge">issue3b.xml</code> file by navigating to <strong>File &gt; Load</strong>.</p>
+
+  <ul>
+    <li>Switch to the <strong>MCMC</strong> tab.</li>
+    <li>The number of initialization attempts is controlled by the <strong>Num Initialization Attempts</strong> setting, shown in <a href="#numInit">Figure 16</a>.</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="numInit"></a>
+	<img style="width:80.0%;" src="figures/numInit.png" alt="" />
+	<figcaption>Figure 16: Setting the number of initialization attempts.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Note that changing this setting will never help if the analysis contains incompatibilities (or any of the other issues above). In the case of the <code class="language-plaintext highlighter-rouge">issue3a.xml</code> file, for instance, the starting value of the clock rate is outside of the bounds of the corresponding prior, so initialization will always fail regardless of how many attempts are performed. Similarly, if no model components are randomly initialised (e.g. a fixed starting tree is used) and there is an initialization issue, then no number of initalization attempts will solve the issue.</p>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>If no model components are randomly initialised does the random number seed still have an effect on the analysis?</p>
+
+  <details>
+	<summary>Answer</summary>
+
+Yes, it still makes a difference! Although each analysis will start from the exact same point in the posterior landscape, the random number seed is important for initializing the operators, used to make proposals in the MCMC run. Thus, each random number seed will result in a unique trajectory followed across the posterior. However, it is a good idea to initialize at least some model components randomly, as always starting with the same initial values can mean we get stuck in a local optimum. (Keep in mind that in the case of large trees a random initial tree will take extremely long to burn in and for pragmatic reasons a "good" initial tree is often used).
+</details>
+
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="common-issue-4-validation-error-when-parsing-xml-file">Common issue #4: Validation error when parsing XML file</h2>
+
+<blockquote>
+  <p>Download the BEAST input file <code class="language-plaintext highlighter-rouge">issue4.xml</code> and <code class="language-plaintext highlighter-rouge">issue4_working.xml</code>.</p>
+
+  <ul>
+    <li>Open <strong>BEAST2</strong> and select the file <code class="language-plaintext highlighter-rouge">issue4.xml</code> as input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. You should get an error message, as shown in <a href="#errorParsing">Figure 17</a>.</li>
+  </ul>
+
+</blockquote>
+
+<figure>
+	<a id="errorParsing"></a>
+	<img style="width:100.0%;" src="figures/errorParsing.png" alt="" />
+	<figcaption>Figure 17: The revenge of the return of the error message (issue4.xml).</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Here the run failed to start because the XML file could not be parsed, as explained by the error message <em>Error 110 parsing the xml input file</em>. Thankfully the error message tells us exactly where the error happened (<em>&lt;log id=’ORCRatesStat.c:bears_morphology’ spec=’beast.base.evolution.RateStatistic’&gt;</em>) and what the issue is (<em>Input ‘tree’ must be specified.</em>). If we open the <code class="language-plaintext highlighter-rouge">issue4.xml</code> file and look for <strong>ORCRatesStat.c:bears_morphology</strong>, we can see that line 771 corresponds to the error message and reads as follows:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;log</span> <span class="na">id=</span><span class="s">"ORCRatesStat.c:bears_morphology"</span> <span class="na">spec=</span><span class="s">"beast.base.evolution.RateStatistic"</span> <span class="na">branchratemodel=</span><span class="s">"@OptimisedRelaxedClock.c:bears_morphology"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+<p>By comparing to a previous (working) analysis in the file <code class="language-plaintext highlighter-rouge">issue4_working.xml</code>, we can see that the correct configuration should be (line 733):</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;log</span> <span class="na">id=</span><span class="s">"ORCRatesStat.c:bears_morphology"</span> <span class="na">spec=</span><span class="s">"beast.base.evolution.RateStatistic"</span> <span class="na">branchratemodel=</span><span class="s">"@OptimisedRelaxedClock.c:bears_morphology"</span> <span class="na">tree=</span><span class="s">"@Tree.t:bears"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+<p>As the error message told us, the <strong>tree</strong> element of the configuration is missing in the non-working XML file, so we need to add it back in.</p>
+
+<blockquote>
+  <p>Open the file <code class="language-plaintext highlighter-rouge">issue4.xml</code> in a text editor.</p>
+
+  <ul>
+    <li>Modify <strong>line 771</strong> of the file to add the <code class="language-plaintext highlighter-rouge">tree="@Tree.t:bears"</code> element. Save the file as <code class="language-plaintext highlighter-rouge">issue4_fixed.xml</code>.</li>
+    <li>Open <strong>BEAST2</strong> and select the file <code class="language-plaintext highlighter-rouge">issue4_fixed.xml</code> as input file.</li>
+    <li>Start the run with the <strong>Run</strong> button. Now it works!</li>
+  </ul>
+
+</blockquote>
+
+<p>XML parsing errors usually occur when the XML file has been manually edited and parts of the configuration have been accidentally deleted or modified. This is why it’s important to always keep a copy of the original XML file or use version control when making manual edits, as this provides an easy way to compare edits to a working configuration. Loading, saving and re-loading complex configurations into BEAUti repeatedly can also lead to parsing issues, although if this happens it is a bug and should be reported to the package developers (for instance by opening an issue on the package repository, findable in the BEAST2 package manager). In general, if an XML parsing error occurs in a file which was generated entirely through BEAUti, then this bug should be reported to the package developers.</p>
+
+<h3 id="debugging-beast2-xml-optional">Debugging BEAST2 XML (optional)</h3>
+
+<p>Unless you know your way around the BEAST2 source code it can be difficult to know how to manually edit the components in an XML file. In the example above, we already had a previous, working analysis and could use that to debug the issue. But if we didn’t have it, it may have taken us much longer to figure out how to specify the tree for the rate statistic component.</p>
+
+<p>Fortunately, all of the components are documented in the BEAST2 XML manual at <a href="http://www.beast2.org/xml/index.html">http://www.beast2.org/xml/index.html</a>. If we search for <code class="language-plaintext highlighter-rouge">RateStatistic</code> in the left-hand panel, we see that <code class="language-plaintext highlighter-rouge">tree</code> is a required input (<a href="#beastdoc">Figure 18</a>).</p>
+
+<figure>
+	<a id="beastdoc"></a>
+	<img style="width:100.0%;" src="figures/beastdoc.png" alt="" />
+	<figcaption>Figure 18: The XML documentation for rate statistic.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>However, there is a problem. The online manual is for BEAST v2.6.7 and may be outdated for some components. More importantly, the online documentation only contains components in the BEAST2 core and nothing in any of the packages we installed. Luckily we can easily generate the documenation for the version of BEAST2 and all packages we have installed using the <strong>DocMaker</strong> utility, which comes with BEAST2.</p>
+
+<blockquote>
+  <p>Open a terminal and navigate to the directory where you want to save the BEAST2 XML manual</p>
+
+  <ul>
+    <li>Type <code class="language-plaintext highlighter-rouge">&lt;beast2 path&gt;/bin/applauncher DocMaker .</code> where <code class="language-plaintext highlighter-rouge">&lt;beast 2 path&gt;</code> should be replaced with the directory where BEAST2 is installed.</li>
+    <li>Now open the newly generated <code class="language-plaintext highlighter-rouge">index.html</code> in any browser.</li>
+  </ul>
+
+  <p>This is also documented <a href="http://www.beast2.org/2023/06/01/docmaker.html">here</a></p>
+</blockquote>
+
+<p>The generated documentation should be for the version of BEAST2 that is installed and contain XML documentation for all packages that are installed. Note that while this documentation is extremely useful, it can still be very sparse for most components since most developers don’t invest a lot of time in documentation. Most BEAST2 packages come with some example XML files and these can also be very useful for figuring out how to specify models that cannot be specified in BEAUti. You can locate the directory where a package (and its example XML files) is installed from BEAUti by navigating to <strong>File &gt; Set working dir</strong> and selecting a package. If you then try to open a file BEAUti will open in the directory where that package is installed.</p>
+
+<h2 id="error-messages-not-covered-in-this-tutorial">Error messages not covered in this tutorial</h2>
+
+<p>Many different issues can occur in <strong>BEAST2</strong>, and it is impossible to cover them all in this tutorial. However, one important thing to keep in mind is that <strong>BEAST2</strong> will always attempt to provide some information on the issue it has encountered. Thus it is critical to carefully read the error messages, as in all of the examples in this tutorial. While the error messages may not always be very insightful, they usually contain enough information to solve most common issues.</p>
+
+<p>For the issues that cannot be easily debugged it is recommended to contact the package developers, or to make a post on <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a>. If it is a common issue it is likely that someone else has encountered it before you!</p>
+
+<p>In the rare case where BEAST2 initializes an analysis without any problems and then subsequently crashes it is likely that there are issues with the code (contact the developers) or with your setup (try running it on a different machine).</p>
+
+<hr />
+
+<h1 id="acknowledgment">Acknowledgment</h1>
+
+<p>The complex parameter issue example in this tutorial was inspired by a real issue encountered during the analysis of the convergent evolution of true crabs <a class="citation" href="#Wolfe2022">(Wolfe et al., 2022)</a>.</p>
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+  <li><a href="http://www.beast2.org/xml/index.html">BEAST 2 XML documentation</a> and how to compile it for your own setup: <a href="http://www.beast2.org/2023/06/01/docmaker.html">http://www.beast2.org/2023/06/01/docmaker.html</a></li>
+  <li>Some common reasons why BEAST 2 may fail to find a valid initial state: <a href="http://www.beast2.org/2018/07/04/fatal-errors.html">http://www.beast2.org/2018/07/04/fatal-errors.html</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Bouckaert2019">Bouckaert, R., Vaughan, T. G., Barido-Sottani, J., Duchêne, S., Fourment, M., Gavryushkina, A., Heled, J., Jones, G., Kühnert, D., Maio, N. D., Matschiner, M., Mendes, F. K., Müller, N. F., Ogilvie, H. A., Plessis, L. du, Popinga, A., Rambaut, A., Rasmussen, D., Siveroni, I., … Drummond, A. J. (2019). BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. <i>PLOS Computational Biology</i>, <i>15</i>(4).</span></li>
+<li><span id="Wolfe2022">Wolfe, J. M., Ballou, L., Luque, J., Watson-Zink, V. M., Ahyong, S. T., Barido-Sottani, J., Chan, T.-Y., Chu, K. H., Crandall, K. A., Daniels, S. R., Felder, D. L., Mancke, H., Martin, J. W., Ng, P. K. L., Ortega-Hernández, J., Theil, E. P., Pentcheff, N. D., Robles, R., Thoma, B. P., … Bracken-Grissom, H. D. (2022). Convergent adaptation of true crabs (Decapoda: Brachyura) to a gradient of terrestrial environments. <i>BioRxiv</i>. https://doi.org/10.1101/2022.12.09.519815</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+
