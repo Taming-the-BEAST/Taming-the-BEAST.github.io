@@ -418,7 +418,7 @@
 </figure>
 <p><br /></p>
 
-<p>The reason for uninstalling the MM package will become clear later. If the MM package wasn’t installed then clicking uninstall will have no effect.</p>
+<p>The reason for uninstalling the MM package will become clear later. Note that uninstalling <strong>MM</strong> will also necessitate uninstalling any installed packages that depend on it. Please remember to reinstall these packages after finishing this tutorial! If the MM package wasn’t installed then clicking uninstall will have no effect.</p>
 
 <p>BEAUti needs to be closed for the newly installed packages to be loaded properly.</p>
 
@@ -448,7 +448,7 @@
 </figure>
 <p><br /></p>
 
-<p>This error means that BEAST2 could not identify one of the components of the analysis in the XML file. The error message shows which component is unidentified, in this example the class <em>morphmodels.evolution.substitutionmodel.LewisMK</em>, as well as the program’s closest guess for what the component could be, here <em>beastlabs.inference.ML</em>. BEAST2 also shows you roughly where the reference to the missing component was found within the hierarchical structure of the XML file (here it is the substitution model, inside the site model, inside the tree likelihood, and so on).</p>
+<p>This error means that BEAST2 could not identify one of the components of the analysis in the XML file. We have helpfully highlighted the important part of the error message in <a href="#errorPackage">Figure 4</a>. It shows which component is unidentified, in this example the class <em>morphmodels.evolution.substitutionmodel.LewisMK</em>, as well as the program’s closest guess for what the component could be, here <em>beastlabs.inference.ML</em>. BEAST2 also shows you roughly where the reference to the missing component was found within the hierarchical structure of the XML file (here it is the substitution model, inside the site model, inside the tree likelihood, and so on).</p>
 
 <p>There are two main causes for this error:</p>
 
@@ -699,9 +699,9 @@ Is this a problem? If no prior distribution is set in the XML file, what prior i
 
 If no prior is set for a parameter the implicit prior becomes a uniform distribution between the parameter bounds. In the case of the mutation rate (called <i>mutationRate.s:bears_morphology2</i> in the XML file), no bounds are set either, so it inherits the default bounds of a real parameter in BEAST2, which is between negative and positive infinity. 
 <br /><br />
-In this case it doesn't make any difference. Although the parameter is estimated, the Delta exchange operator on it parameter constrains it to be always equal to one (it would probably have made more sense to just fix the parameter though). 
+In this case it doesn't make any difference. Although the parameter is estimated, the Delta exchange operator that acts on it constrains it to always be equal to one (it would probably have made more sense to just fix the parameter though). 
 <br /><br />
-In general though, an unbounded uniform prior is a bad idea for most parameters for exactly the same reasons it is a bad choice for the clock rate. 
+In general, an unbounded uniform prior is a bad idea for most parameters for exactly the same reasons it is a bad choice for the clock rate. 
 More importantly, "hidden" priors like these are a problem when doing model selection. An unbounded uniform prior is an improper prior (there exists no normalising constant that can make it integrate to 1, so it integrates to infinity). Improper priors can cause issues with model selection if the posterior then also integrates to infinity. In general it's impossible to know if using an improper prior will lead to a proper posterior, so it is recommended to not use improper priors (we can only know if the posterior is proper if we can analytically integrate it, which is usually not the case for BEAST models). It is always possible to set some sensible parameter bounds, so we can always make all of our priors proper. 
 <br /><br />
 Finding out if there are "hidden" priors in your model is more complex, especially when the BEAUti template for a model doesn't explicitly initialize priors for all model parameters. You can navigate to the <b>Initialization</b> panel in BEAUti (click <b>View &gt; Show Initialization panel</b> to display it) to check if all model parameters also have prior distributions set (by comparing with the <b>Priors</b> panel), but it is unfortunately not possible to add a missing prior from BEAUti. If you've identified such a model parameter then you would need to add the prior by manually editing the XML file. It is also a good idea to contact the package developers, so they can address the issue in future releases.
@@ -742,8 +742,11 @@ Finding out if there are "hidden" priors in your model is more complex, especial
 <blockquote>
   <p>Open the <code class="language-plaintext highlighter-rouge">issue3b.xml</code> file in a text editor.</p>
   <ul>
-    <li>Look for the parameter <strong>originFBD.t:bears</strong> and examine its initial value.</li>
-    <li>Look for the root prior <strong>root.prior</strong> and examine its distribution. Look in particular at the values for the <strong>offset</strong>, <strong>M</strong> and <strong>S</strong> parameters.</li>
+    <li>Look for where the parameter <strong>originFBD.t:bears</strong> is defined in the XML file and examine its initial value. (It is defined within the <code class="language-plaintext highlighter-rouge">&lt;state&gt;</code> block)</li>
+    <li>The initial value is the unlabelled value just before the closing <code class="language-plaintext highlighter-rouge">&lt;/parameter&gt;</code> tag.</li>
+    <li>Look for the root prior <strong>root.prior</strong> and examine its distribution.</li>
+    <li>The root prior’s distribution is inside the prior, the <code class="language-plaintext highlighter-rouge">&lt;distribution id="prior" spec="CompoundDistribution"&gt;</code> block, and within the prior is inside the <code class="language-plaintext highlighter-rouge">&lt;distribution id="root.prior"</code> block, after the taxon set defining all the taxa included in this MRCA prior.</li>
+    <li>Look in particular at the values for the <strong>offset</strong>, <strong>M</strong> and <strong>S</strong> parameters.</li>
   </ul>
 
 </blockquote>
@@ -770,7 +773,7 @@ Finding out if there are "hidden" priors in your model is more complex, especial
 
 </blockquote>
 
-<p>Here the incompatibility stemmed from us setting a root prior with an offset. However, this issue can also happen when using a user-specified starting tree, for instance a tree from a Newick string. In this case the origin parameter needs to be compatible with the specified tree, i.e. the initial value of the origin needs to be higher than the root of the Newick tree. Finally, it is also entirely possible for this issue to occur even when using a default randomly initialized tree.</p>
+<p>Here the incompatibility stemmed from us setting a root prior with an offset. This scenario is a little contrived, however setting a root prior is not the only way this issue can occur! It can also happen when using a user-specified starting tree, for instance a tree from a Newick string. In such a case the origin parameter needs to be compatible with the specified tree, i.e. the initial value of the origin needs to be higher than the root of the Newick tree. Finally, it is also entirely possible for this issue to occur even when using a default randomly initialized tree.</p>
 
 <p>Some other common cases where inconsistencies between model components can lead to initialization failures are:</p>
 
@@ -857,7 +860,7 @@ Click on the arrow left of the <strong>root.prior</strong> to see the details of
   <p>Open Icytree (<a href="https://icytree.org/">https://icytree.org/</a>) in a web browser.</p>
 
   <ul>
-    <li>Copy the Newick string from the <strong>Starting tree</strong> panel or from the XML file.</li>
+    <li>Copy the Newick string from the <strong>Starting tree</strong> panel or from the XML file. Make sure that you copy the whole string, up to the semi-colon at the end (it may be easiest to double or triple click on it to select everything).</li>
     <li>In the IcyTree browser window click <strong>File &gt; Enter tree directly</strong>.</li>
     <li>Paste the copied Newick string and press <strong>Done</strong> to display the tree in IcyTree.</li>
   </ul>
@@ -1000,7 +1003,7 @@ Yes, it still makes a difference! Although each analysis will start from the exa
   <p>Open a terminal and navigate to the directory where you want to save the BEAST2 XML manual</p>
 
   <ul>
-    <li>Type <code class="language-plaintext highlighter-rouge">&lt;beast2 path&gt;/bin/applauncher DocMaker .</code> where <code class="language-plaintext highlighter-rouge">&lt;beast 2 path&gt;</code> should be replaced with the directory where BEAST2 is installed.</li>
+    <li>Type <code class="language-plaintext highlighter-rouge">&lt;beast2 path&gt;/bin/applauncher DocMaker .</code> where <code class="language-plaintext highlighter-rouge">&lt;beast 2 path&gt;</code> should be replaced with the directory where BEAST2 is installed. For instance, if you’re using a Mac and you installed BEAST v2.7.4 in the default location, you would need to type <code class="language-plaintext highlighter-rouge">/Applications/BEAST\ 2.7.4/bin/applauncher DocMaker .</code></li>
     <li>Now open the newly generated <code class="language-plaintext highlighter-rouge">index.html</code> in any browser.</li>
   </ul>
 
