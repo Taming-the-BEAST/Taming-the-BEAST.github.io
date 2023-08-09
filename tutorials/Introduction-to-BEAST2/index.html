@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Favicon -->
@@ -298,6 +298,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/740027bdadad3782da86e53f257163c6abca137c">
+					09 Aug 2023 - <span class="text-gray">Update LaTeX tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/9e077ee36a8d82aa89327b6e1f3f7255183d6168">
+					09 Aug 2023 - <span class="text-gray">Update two figures (after bug in BEAUti was fixed)</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/101012a339c023db07f24764fcf9f7c48f20084f">
 					09 Jun 2023 - <span class="text-gray">Merge pull request #4 from Taming-the-BEAST/edits2023
 
@@ -318,22 +334,6 @@ Fully update tutorial to BEAST 2.7.4</span>
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/00f2b02ec073dee9ee90388042824d70ca5275ec">
 					09 Jun 2023 - <span class="text-gray">Small tweaks</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/d55ec6614d53216907cc6fde2d812e978d59fafd">
-					09 Jun 2023 - <span class="text-gray">New xml files and precooked runs (empirical instead of estimated frequencies)</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/4770d061cb09f21aa1e2cc2d0827ac915451fb0b">
-					09 Jun 2023 - <span class="text-gray">Update figures to BEAST 2.7</span>
 					</a> 
 				</li>
 			
@@ -649,7 +649,7 @@ Don’t worry if you can’t figure it out, it is explained in detail in later t
 
   <ul>
     <li>Set the <strong>Taxon set label</strong> to <code class="language-plaintext highlighter-rouge">human-chimp</code>.</li>
-    <li>Locate <code class="language-plaintext highlighter-rouge">Homo_sapiens</code> in the left hand side list and click the <strong>»</strong> button to add it to the <code class="language-plaintext highlighter-rouge">human-chimp</code> taxon set. (Note that the arrows may not render in BEAST 2.7. <strong>»</strong> is the top button and <strong>«</strong> is at the bottom).</li>
+    <li>Locate <code class="language-plaintext highlighter-rouge">Homo_sapiens</code> in the left hand side list and click the <strong>»</strong> button to add it to the <code class="language-plaintext highlighter-rouge">human-chimp</code> taxon set.</li>
     <li>Locate <code class="language-plaintext highlighter-rouge">Pan</code> in the left hand side list and click the <strong>»</strong> button to add it to the <code class="language-plaintext highlighter-rouge">human-chimp</code> taxon set.</li>
   </ul>
 </blockquote>
@@ -723,7 +723,7 @@ Don’t worry if you can’t figure it out, it is explained in detail in later t
 
   <ul>
     <li>Set the <strong>Log Every</strong> parameter to <strong>200</strong>.</li>
-    <li>Leave the filename as is (<code class="language-plaintext highlighter-rouge">$filebase).log</code>).</li>
+    <li>Leave the filename as is (<code class="language-plaintext highlighter-rouge">$(filebase).log</code>).</li>
   </ul>
 
 </blockquote>

@@ -12,6 +12,96 @@
 		</image>
 				
 			<item>
+				<title>Prior selection</title>
+				<description>
+					Prior selection and clock calibration using Influenza A data.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+					
+						
+								, Venelin Mitov
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/5934f31124dd8be5cff72005d1dd9f35b9727816'
+					&gt;
+						9 Aug 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Update figures and figure widths
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Wed, 09 Aug 2023 11:40:07 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
+			</item>
+				
+			<item>
+				<title>Troubleshooting convergence issues</title>
+				<description>
+					Post-processing and improving performance
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/f9f59809f0a13226d360ee096e728fb940f14ff7'
+					&gt;
+						9 Aug 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Update title too
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Wed, 09 Aug 2023 09:55:26 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Troubleshooting-convergence-issues/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-convergence-issues/</guid>
+			</item>
+				
+			<item>
 				<title>Skyline plots</title>
 				<description>
 					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
@@ -32,7 +122,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/3134c2322d77ad57f02b88e66b3d1f20c354eb26'
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/1688b3cbb21924ae57a69ca756fdf46f8ca20515'
 					&gt;
 						9 Aug 2023
 					&lt;/a&gt;
@@ -50,10 +140,59 @@
 						Requires: BEAST v2.7.x
 					
 				</description>
-				<pubDate>Wed, 09 Aug 2023 08:31:08 +0000</pubDate>
+				<pubDate>Wed, 09 Aug 2023 09:38:49 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
+				<title>Introduction to BEAST2</title>
+				<description>
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Jūlija Pečerska
+							
+					
+						
+								, Veronika Bošková
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/740027bdadad3782da86e53f257163c6abca137c'
+					&gt;
+						9 Aug 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Update LaTeX tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Wed, 09 Aug 2023 09:36:43 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
@@ -239,55 +378,6 @@ Updates for website
 			</item>
 				
 			<item>
-				<title>Prior selection</title>
-				<description>
-					Prior selection and clock calibration using Influenza A data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-					
-						
-								, Venelin Mitov
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/5ef94e9e2b4fcea8af621951b1f82cfe5679a7ee'
-					&gt;
-						11 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Merged Louis' updates.
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Sun, 11 Jun 2023 19:05:04 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
 				<title>Divergence Time Estimation using BEAST v2.x</title>
 				<description>
 					Dating Species Divergences with the Fossilized Birth-Death Process
@@ -367,98 +457,6 @@ Updates for website
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Mascot-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Mascot-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Troubleshooting</title>
-				<description>
-					Post-processing and improving performance
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting/commit/abe0fdc99d03d367bf7632a7d9000b6b84a12f16'
-					&gt;
-						9 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Actually update LaTeX tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 09 Jun 2023 14:43:30 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Troubleshooting/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting/</guid>
-			</item>
-				
-			<item>
-				<title>Introduction to BEAST2</title>
-				<description>
-					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Jūlija Pečerska
-							
-					
-						
-								, Veronika Bošková
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/101012a339c023db07f24764fcf9f7c48f20084f'
-					&gt;
-						9 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Merge pull request #4 from Taming-the-BEAST/edits2023
-
-Fully update tutorial to BEAST 2.7.4
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 09 Jun 2023 12:53:50 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
