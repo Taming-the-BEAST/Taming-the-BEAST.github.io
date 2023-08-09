@@ -12,6 +12,190 @@
 		</image>
 				
 			<item>
+				<title>Skyline plots</title>
+				<description>
+					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/3134c2322d77ad57f02b88e66b3d1f20c354eb26'
+					&gt;
+						9 Aug 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Update LaTeX tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Wed, 09 Aug 2023 08:31:08 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
+			</item>
+				
+			<item>
+				<title>Substitution model averaging</title>
+				<description>
+					A tutorial using bModelTest
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+					
+						
+								, Carsten Magnus
+						
+					
+						
+								
+									and Remco Bouckaert
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/5d2f29beb56fbefd9483bbaca46c4fbc3eefd4cf'
+					&gt;
+						24 Jul 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Merge pull request #1 from bjoelle/master
+
+updated for 2.7
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Mon, 24 Jul 2023 12:37:34 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
+			</item>
+				
+			<item>
+				<title>The MSBD package</title>
+				<description>
+					Inferring lineage-dependent birth and death rates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/bjoelle/MSBD-tutorial/commit/5b122c76ba22c019d5e79c688edfcfc73c5f7d12'
+					&gt;
+						20 Jul 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/bjoelle'
+					&gt;
+						bjoelle
+					&lt;/a&gt;
+					: renamed data file to avoid confusion
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 20 Jul 2023 17:05:44 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/MSBD-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/MSBD-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Troubleshooting initialization issues</title>
+				<description>
+					Getting BEAST2 to start
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/85f899d198c99b7069e0670ae9887958af99112a'
+					&gt;
+						20 Jul 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Merge pull request #2 from Taming-the-BEAST/louis-edits
+
+Updates based on comments (thanks Bethany)
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 20 Jul 2023 14:23:53 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</guid>
+			</item>
+				
+			<item>
 				<title>The ClaDS package</title>
 				<description>
 					Inferring progressive changes in birth and death rates
@@ -52,92 +236,6 @@ Updates for website
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/ClaDS-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/ClaDS-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>The MSBD package</title>
-				<description>
-					Inferring lineage-dependent birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/bjoelle/MSBD-tutorial/commit/9771f16649525f75f4950b1d36a46ece0d1b2e5d'
-					&gt;
-						13 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: Merge branch 'master' of https://github.com/bjoelle/MSBD-tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Thu, 13 Jul 2023 14:55:38 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/MSBD-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/MSBD-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Troubleshooting initialization issues</title>
-				<description>
-					Getting BEAST2 to start
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/afdd1505d0065f34accdddd97910afae00763d5e'
-					&gt;
-						7 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: screenshots
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 07 Jul 2023 13:28:41 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</guid>
 			</item>
 				
 			<item>
@@ -187,53 +285,6 @@ Updates for website
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
-				<title>Skyline plots</title>
-				<description>
-					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/de071786380ef36cdf589fb78c3e567a6ed97eff'
-					&gt;
-						11 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Merge pull request #11 from Taming-the-BEAST/edits2023
-
-Update LaTex tutorial, R-scripts and one figure
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Sun, 11 Jun 2023 18:38:36 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
@@ -717,55 +768,6 @@ Removed references to tutorial template bib file.
 				<category>Easy</category>
 				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Substitution model averaging</title>
-				<description>
-					A tutorial using bModelTest
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-					
-						
-								, Carsten Magnus
-						
-					
-						
-								
-									and Remco Bouckaert
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/9902ffed05c09c4801a56ea915019676659adc4d'
-					&gt;
-						13 Aug 2019
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/rbouckaert'
-					&gt;
-						rbouckaert
-					&lt;/a&gt;
-					: update rateCorrelations figure
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.x
-					
-				</description>
-				<pubDate>Tue, 13 Aug 2019 15:59:30 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
 			</item>
 				
 			<item>

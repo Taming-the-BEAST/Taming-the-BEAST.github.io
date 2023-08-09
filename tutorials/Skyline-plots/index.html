@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Favicon -->
@@ -230,8 +230,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-gear"></i>
-					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/Logfile_Utilities.R" target="_blank" download rel="nofollow">
-						Logfile_Utilities.R
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/bdsky_example.Rmd" target="_blank" download rel="nofollow">
+						bdsky_example.Rmd
 					</a>
 				</li>
 			
@@ -239,8 +239,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-gear"></i>
-					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/Figure_Utilities.R" target="_blank" download rel="nofollow">
-						Figure_Utilities.R
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/bdsky_example.html" target="_blank" download rel="nofollow">
+						bdsky_example.html
 					</a>
 				</li>
 			
@@ -248,17 +248,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-gear"></i>
-					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/SkylinePlot.R" target="_blank" download rel="nofollow">
-						SkylinePlot.R
-					</a>
-				</li>
-			
-				
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-gear"></i>
-					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/Skyline_Example.R" target="_blank" download rel="nofollow">
-						Skyline_Example.R
+					<a class="off" href="https://github.com/taming-the-beast/Skyline-plots/raw/master/scripts/figs" target="_blank" download rel="nofollow">
+						figs
 					</a>
 				</li>
 			
@@ -404,6 +395,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/3134c2322d77ad57f02b88e66b3d1f20c354eb26">
+					09 Aug 2023 - <span class="text-gray">Update LaTeX tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/b54a7dc6646a4f4e4e533012232d18250163b78b">
+					09 Aug 2023 - <span class="text-gray">Small changes to text (remove ambiguities, fix some errors) and update one figure</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/de071786380ef36cdf589fb78c3e567a6ed97eff">
 					11 Jun 2023 - <span class="text-gray">Merge pull request #11 from Taming-the-BEAST/edits2023
 
@@ -424,24 +431,6 @@ Update LaTex tutorial, R-scripts and one figure</span>
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/41270875bc7cb9c07fca8e1f31fb35065e3d0e8e">
 					11 Jun 2023 - <span class="text-gray">Update LaTeX tutorial</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/1c7e8cfe7160e4561428e50d849a4fffcce0c044">
-					11 Jun 2023 - <span class="text-gray">Update the BDSKY visualisation in R section</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/8122b0e47970262c0d1ad551f9e7f5fa3416d0be">
-					09 Jun 2023 - <span class="text-gray">Merge pull request #10 from Taming-the-BEAST/edits2023
-
-Update to BEAST 2.7.4</span>
 					</a> 
 				</li>
 			
@@ -557,7 +546,8 @@ Update to BEAST 2.7.4</span>
 
 </blockquote>
 
-<p>The next step is to specify the model of nucleotide evolution (the site model). We will be using the GTR model, which is the most general reversible model and estimates transition probabilities between individual nucleotides separately. That means that the transition probabilities between e.g. <strong>A</strong> and <strong>T</strong> will be inferred separately to the ones between <strong>A</strong> and <strong>C</strong>, however transition probabilities from <strong>A</strong> to <strong>C</strong> will be the same as <strong>C</strong> to <strong>A</strong> etc. Additionally, we allow for rate heterogeneity among sites. We do this by changing the Gamma Category Count to 4 (normally between 4 and 6).</p>
+<p>The next step is to specify the model of nucleotide evolution (the site model). We will be using the GTR model, which is the most general reversible model and estimates transition probabilities between individual nucleotides separately. That means that the transition probabilities between e.g. <strong>A</strong> and <strong>T</strong> will be inferred separately to the ones between <strong>A</strong> and <strong>C</strong>, however transition probabilities from <strong>A</strong> to <strong>C</strong> will be the same as <strong>C</strong> to <strong>A</strong> etc. (Note that the transition probabilities here refer to the transition between <em>any</em> two states in the continuous time Markov-chain stochastic process that is used for the substitution model, and not specifically to <em>transitions</em> in the context of genetics, i.e. mutations from purines to purines or pyramidines to pyramidines). 
+Additionally, we allow for rate heterogeneity among sites. We do this by changing the Gamma Category Count to 4 (normally between 4 and 6).</p>
 
 <blockquote>
   <p>Change the <strong>Gamma Category Count</strong> to 4, make sure that the estimate box next to the <strong>Shape</strong> parameter of the Gamma distribution is ticked and set <strong>Subst Model</strong> to <strong>GTR</strong>. Make sure that the estimate box is ticked for all but one of the 6 rates (there should be 5 ticked boxes) and that <strong>Frequencies</strong> are estimated (<a href="#fig:model">Figure 3</a>).</p>
@@ -674,7 +664,7 @@ Update to BEAST 2.7.4</span>
 
 <h3 id="the-coalescent-bayesian-skyline-parameterization">The Coalescent Bayesian Skyline parameterization</h3>
 
-<p>The coalescent model that the Coalescent Bayesian Skyline is based on assumes that the sequences represent a small sample from a haploid population evolving under Wright-Fisher dynamics (<a href="#fig:wrightfisher">Figure 9</a>). The model works by calculating the probability of the tree under this assumption. This essentially boils down to repeatedly asking the question of how likely it is for two lineages to coalesce (have a common ancestor) in a given time.</p>
+<p>The Coalescent Bayesian Skyline model uses the Kingman coalescent for each segment, which assumes that the sequences are a small sample drawn from a haploid population evolving under Wright-Fisher dynamics (<a href="#fig:wrightfisher">Figure 9</a>). The model works by calculating the probability of observing the tree under this assumption. This essentially boils down to repeatedly asking the question of how likely it is for two lineages to coalesce (have a common ancestor) in a given time.</p>
 
 <figure>
 	<a id="fig:wrightfisher"></a>
@@ -823,7 +813,7 @@ There are descendants of the coalescent skyline in BEAST that either estimate th
 
   <p>Click on the arrow to the left of <strong>reproductiveNumber</strong> to open all the options for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> settings</p>
 
-  <p>Set <strong>M</strong> to 0, which results in a median of 1. We set the variance to 1.25, which places most weight below 7.82 (95% quantile). (<a href="#fig:r0prior">Figure 17</a>).</p>
+  <p>Set <strong>M</strong> to 0, which results in a median of 1. We set <strong>S</strong> to 1.25, which places most weight below 7.82 (95% quantile). (<a href="#fig:r0prior">Figure 17</a>).</p>
 
 </blockquote>
 
@@ -989,65 +979,73 @@ There are descendants of the coalescent skyline in BEAST that either estimate th
 </figure>
 <p><br /></p>
 
-<p>We will use the R-package <code class="language-plaintext highlighter-rouge">bdskytools</code> to plot the output of the BDSKY analysis. The package is still in development and not available over CRAN. Thus, we have to install the package directly over GitHub (note that you only have to install the package once):</p>
+<p>We will use R to post-process and plot the Birth-Death Skyline. The below steps are also in an RMarkDown notebook on the left-hand panel, under the heading <strong>Scripts</strong>.</p>
+
+<p>First, install the necessary packages. Once installed, we don’t need to install the packages again. Because two of the packages we need are not available on CRAN we install them from GitHub.</p>
 
 <pre><code class="language-{R}">install.packages("devtools")
-library(devtools)
-
+install.packages("coda")
 devtools::install_github("laduplessis/bdskytools")
+devtools::install_github("laduplessis/beastio")
 </code></pre>
 
-<p>Once the package is installed we have to load it into our R workspace before we can use the functions in the package.
-To plot the results, we need to first tell R where to find the <code class="language-plaintext highlighter-rouge">*.log</code> file of our run and then load it into R (discarding 10% of samples as burn-in). If you are using RStudio, you can change the working directory to the directory where you stored your log files, which makes it easier to load the files in R.</p>
+<p>Once the packages are installed we have to load them into our R workspace before we can use their functions.</p>
 
-<pre><code class="language-{R}">library(bdskytools)
+<p>To plot the results, we need to first tell R where to find the <code class="language-plaintext highlighter-rouge">*.log</code> file of our run and then load it into R (discarding 10% of samples as burn-in). If you are using RStudio, you can change the working directory to the directory where you stored your log files, which makes it easier to load the files in R. In the RMarkDown notebook the logfile location is stored in the <code class="language-plaintext highlighter-rouge">params$logfile</code> parameter.</p>
 
-# Navigate to Session &gt; Set Working Directory &gt; Choose Directory (on RStudio)
-# or change fname to the full path to the log file
-fname &lt;- "hcv_bdsky.log"   
-lf    &lt;- readLogfile(fname, burnin=0.1)
+<pre><code class="language-{R}">library(coda)
+library(bdskytools)
+library(beastio)
+
+bdsky_trace   &lt;- beastio::readLog(params$logfile, burnin=0.1)
 </code></pre>
+
+<p>With the trace loaded as an <code class="language-plaintext highlighter-rouge">mcmc</code> object from the coda package we can use coda functions to investigate the trace and check convergence. For details on how to use coda see the package on <a href="https://cran.r-project.org/web/packages/coda/index.html">CRAN</a>.</p>
 
 <p>Next, we can extract the HPDs of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and the becoming uninfectious rate:</p>
 
-<pre><code class="language-{R}">Re_sky    &lt;- getSkylineSubset(lf, "reproductiveNumber")
-Re_hpd    &lt;- getMatrixHPD(Re_sky)
-delta_hpd &lt;- getHPD(lf$becomeUninfectiousRate)
+<pre><code class="language-{R}">Re_sky    &lt;- beastio::getLogFileSubset(bdsky_trace, "reproductiveNumber_BDSKY_Contemp")
+Re_hpd    &lt;- t(beastio::getHPDMedian(Re_sky))
+delta_hpd &lt;- beastio::getHPDMedian(bdsky_trace[, "becomeUninfectiousRate_BDSKY_Contemp"])
+
 </code></pre>
 
 <p>Next we plot the raw HPD intervals of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. This is equivalent to the output in Tracer.</p>
 
-<pre><code class="language-{R}">plotSkyline(1:10, Re_hpd, type='step', ylab="R")
+<pre><code class="language-{R}">bdskytools::plotSkyline(1:10, Re_hpd, type='step', ylab="R")
 </code></pre>
 
 <figure>
 	<a id="fig:bdsky_hpds"></a>
-	<img style="width:80%;" src="figures/bdsky_hpds.png" alt="" />
+	<img style="width:80%;" src="scripts/figs/plot-Re-ungridded-1.png" alt="" />
 	<figcaption>Figure 24: The HPDs of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> (equivalent to the previous figure from Tracer).</figcaption>
 </figure>
 <p><br /></p>
 
-<p>In order to plot the smooth skyline we have to marginalise our <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> estimates on a regular timegrid and calculate the HPD at each gridpoint. It is usually a good idea to use a grid with more cells than the dimension of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. To do this we first calculate the marginal posterior at every time of interest using the function <code class="language-plaintext highlighter-rouge">gridSkyline</code> and then calculate the HPD for each of the finer time intervals. The times to grid the skyline on (<code class="language-plaintext highlighter-rouge">timegrid</code>), refers to years in the past.</p>
+<p>In order to plot the smooth skyline we have to marginalise our <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> estimates on a regular timegrid and calculate the HPD at each gridpoint. It is usually a good idea to use a grid with more cells than the dimension of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> (but using too many can result in noisy estimates). To do this we first calculate the marginal posterior at every time of interest using the function <code class="language-plaintext highlighter-rouge">bdskytools::gridSkyline</code> and then calculate the HPD for each of the finer time intervals. Here we choose to look at <code class="language-plaintext highlighter-rouge">params$gridsize</code> equidistantly spaced points between the median tMRCA and the most recent sequence. The times to grid the skyline on (<code class="language-plaintext highlighter-rouge">timegrid</code>), refers to years in the past.</p>
 
-<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">timegrid</span><span class="w">       </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">400</span><span class="p">,</span><span class="n">length.out</span><span class="o">=</span><span class="m">101</span><span class="p">)</span><span class="w">
-</span><span class="n">Re_gridded</span><span class="w">     </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gridSkyline</span><span class="p">(</span><span class="n">Re_sky</span><span class="p">,</span><span class="w">    </span><span class="n">lf</span><span class="o">$</span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">timegrid</span><span class="p">)</span><span class="w">
-</span><span class="n">Re_gridded_hpd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getMatrixHPD</span><span class="p">(</span><span class="n">Re_gridded</span><span class="p">)</span><span class="w">
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tmrca_med</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">median</span><span class="p">(</span><span class="n">bdsky_trace</span><span class="p">[,</span><span class="w"> </span><span class="s2">"Tree.height"</span><span class="p">])</span><span class="w">
+</span><span class="n">gridTimes</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">median</span><span class="p">(</span><span class="n">tmrca_med</span><span class="p">),</span><span class="w"> </span><span class="n">length.out</span><span class="o">=</span><span class="n">params</span><span class="o">$</span><span class="n">gridsize</span><span class="p">)</span><span class="w">  
+    
+</span><span class="n">Re_gridded</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mcmc</span><span class="p">(</span><span class="n">bdskytools</span><span class="o">::</span><span class="n">gridSkyline</span><span class="p">(</span><span class="n">Re_sky</span><span class="p">,</span><span class="w"> </span><span class="n">bdsky_trace</span><span class="p">[,</span><span class="w"> </span><span class="s2">"origin_BDSKY_Contemp"</span><span class="p">],</span><span class="w"> </span><span class="n">gridTimes</span><span class="p">))</span><span class="w">
+</span><span class="n">Re_gridded_hpd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">getHPDMedian</span><span class="p">(</span><span class="n">Re_gridded</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Now we are ready to plot the smooth skyline (remember that the sequences were sampled in 1993):</p>
 
-<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">times</span><span class="w">     </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1993</span><span class="o">-</span><span class="n">timegrid</span><span class="w">
-</span><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded_hpd</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'smooth'</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"R"</span><span class="p">)</span><span class="w">
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1993</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">gridTimes</span><span class="w">
+</span><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded_hpd</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"Re"</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">"smooth"</span><span class="p">)</span><span class="w"> 
 </span></code></pre></div></div>
 
 <figure>
 	<a id="fig:bdsky_smooth"></a>
-	<img style="width:80%;" src="figures/bdsky_smooth.png" alt="" />
+	<img style="width:80%;" src="scripts/figs/plot-Re-1.png" alt="" />
 	<figcaption>Figure 25: The smooth <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> skyline.</figcaption>
 </figure>
 <p><br /></p>
 
-<p>We can plot the gridded <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> skyline (not its HPDs) for a few of the MCMC samples to see what it really looks like as the Markov chain samples parameters. Note that the intervals overlap between different posterior samples. This is because the origin is different in each of the plotted samples. As we add more samples to the plot we start to see the smooth skyline appear.</p>
+<p>We can plot the gridded <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">R_e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> skyline (not its HPDs) for a few of the states in our MCMC chain to see what it really looks like as the Markov chain samples parameters. Note that the intervals overlap between different posterior samples. This is because the origin estimate is a different sample from the origin’s 
+posterior density in each of the plotted samples. As we add more samples to the plot we start to see the smooth skyline appear.</p>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plotSkyline</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">Re_gridded</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s1">'steplines'</span><span class="p">,</span><span class="w"> </span><span class="n">traces</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">pal.dark</span><span class="p">(</span><span class="n">cblue</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">ylims</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="w"> 
             </span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s2">"R"</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s2">"1 random sample"</span><span class="p">)</span><span class="w">
@@ -1061,7 +1059,7 @@ delta_hpd &lt;- getHPD(lf$becomeUninfectiousRate)
 
 <figure>
 	<a id="fig:bdsky_traces"></a>
-	<img style="width:80%;" src="figures/bdsky_traces.png" alt="" />
+	<img style="width:80%;" src="scripts/figs/plot-Re-traces-1.png" alt="" />
 	<figcaption>Figure 26: Increasing the number of traces plotted from 1 to 10, to 100, to 1000.</figcaption>
 </figure>
 <p><br /></p>
@@ -1087,11 +1085,8 @@ delta_hpd &lt;- getHPD(lf$becomeUninfectiousRate)
 </figure>
 <p><br /></p>
 
-<p>An R-script with the above commands (and a few extras) is in the <code class="language-plaintext highlighter-rouge">scripts/</code> directory (<code class="language-plaintext highlighter-rouge">Skyline_Example.R</code>). 
-If the bdskytools package cannot be installed from GitHub the relevant scripts are also provided in the <code class="language-plaintext highlighter-rouge">scripts/</code> directory.</p>
-
 <blockquote>
-  <p><strong>Topic for discussion:</strong> Do the Birth-Death Skyline resgit bults agree with the Coalescent Bayesian Skyline results? How would your conclusions from the two analyses differ? (Hint: Use R to plot the results from both analyses).</p>
+  <p><strong>Topic for discussion:</strong> Do the Birth-Death Skyline results agree with the Coalescent Bayesian Skyline results? How would your conclusions from the two analyses differ? (Hint: Use R to plot the results from both analyses).</p>
 
 </blockquote>
 
