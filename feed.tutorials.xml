@@ -12,6 +12,90 @@
 		</image>
 				
 			<item>
+				<title>StarBEAST2 v1.0.0 tutorial</title>
+				<description>
+					Estimating species trees using StarBEAST2
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/genomescale/starbeast2-tutorial/commit/21af15493a5cf564d064686526b03c54712bbd50'
+					&gt;
+						15 Aug 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/genomescale'
+					&gt;
+						genomescale
+					&lt;/a&gt;
+					: Merge pull request #1 from laduplessis/master
+
+Update to BEAST 2.7
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Tue, 15 Aug 2023 17:40:53 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>The ClaDS package</title>
+				<description>
+					Inferring progressive changes in birth and death rates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/bjoelle/ClaDS-tutorial/commit/fe9b15d3d69258920d42f6e4d8d65134b53a2d9e'
+					&gt;
+						11 Aug 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/bjoelle'
+					&gt;
+						bjoelle
+					&lt;/a&gt;
+					: Merge branch 'master' of https://github.com/bjoelle/ClaDS-tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 11 Aug 2023 14:45:14 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/ClaDS-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/ClaDS-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Divergence Time Estimation</title>
 				<description>
 					Dating Species Divergences with the Fossilized Birth-Death Process
@@ -381,49 +465,6 @@ Updates based on comments (thanks Bethany)
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</guid>
-			</item>
-				
-			<item>
-				<title>The ClaDS package</title>
-				<description>
-					Inferring progressive changes in birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/bjoelle/ClaDS-tutorial/commit/c76d5e67e3f619849b9781cb90e9157624005652'
-					&gt;
-						17 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: Merge pull request #1 from laduplessis/master
-
-Updates for website
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Mon, 17 Jul 2023 15:54:16 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/ClaDS-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/ClaDS-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -992,47 +1033,6 @@ Added local update describing species-tree specification with BEAUti.
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Bacter-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Bacter-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>StarBEAST2 v14 tutorial</title>
-				<description>
-					Estimating species trees using StarBEAST2
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Huw A. Ogilvie
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/genomescale/starbeast2-tutorial/commit/d88d4c588e76f5662f169eaeca13eb7d749d6928'
-					&gt;
-						21 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Small change so the website will compile
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Thu, 21 Jun 2018 18:23:40 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
 			</item>
 				
 			<item>
