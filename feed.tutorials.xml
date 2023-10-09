@@ -12,139 +12,6 @@
 		</image>
 				
 			<item>
-				<title>StarBEAST2 v1.0.0 tutorial</title>
-				<description>
-					Estimating species trees using StarBEAST2
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Huw A. Ogilvie
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/genomescale/starbeast2-tutorial/commit/21af15493a5cf564d064686526b03c54712bbd50'
-					&gt;
-						15 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/genomescale'
-					&gt;
-						genomescale
-					&lt;/a&gt;
-					: Merge pull request #1 from laduplessis/master
-
-Update to BEAST 2.7
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Tue, 15 Aug 2023 17:40:53 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>The ClaDS package</title>
-				<description>
-					Inferring progressive changes in birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/bjoelle/ClaDS-tutorial/commit/fe9b15d3d69258920d42f6e4d8d65134b53a2d9e'
-					&gt;
-						11 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: Merge branch 'master' of https://github.com/bjoelle/ClaDS-tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 11 Aug 2023 14:45:14 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/ClaDS-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/ClaDS-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Divergence Time Estimation</title>
-				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tracy A. Heath
-							
-					
-						
-								, Rachel Warnock
-						
-					
-						
-								
-									and Bethany J. Allen
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/bbde865fc2eaa606eb85df932ec8b5a8789c27a3'
-					&gt;
-						11 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update figures (drop shadows, no backgrounds) and figure widths
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.4
-					
-				</description>
-				<pubDate>Fri, 11 Aug 2023 13:54:17 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/FBD-tutorial/</guid>
-			</item>
-				
-			<item>
 				<title>Prior selection</title>
 				<description>
 					Prior selection and clock calibration using Influenza A data.
@@ -169,17 +36,17 @@ Update to BEAST 2.7
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/5934f31124dd8be5cff72005d1dd9f35b9727816'
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/5ef94e9e2b4fcea8af621951b1f82cfe5679a7ee'
 					&gt;
-						9 Aug 2023
+						11 Jun 2023
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						'https://github.com/laduplessis'
+						'https://github.com/tgvaughan'
 					&gt;
-						laduplessis
+						tgvaughan
 					&lt;/a&gt;
-					: Update figures and figure widths
+					: Merged Louis' updates.
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -187,51 +54,10 @@ Update to BEAST 2.7
 						Requires: BEAST v2.7.x
 					
 				</description>
-				<pubDate>Wed, 09 Aug 2023 11:40:07 +0000</pubDate>
+				<pubDate>Sun, 11 Jun 2023 19:05:04 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
-				<title>Troubleshooting convergence issues</title>
-				<description>
-					Post-processing and improving performance
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/f9f59809f0a13226d360ee096e728fb940f14ff7'
-					&gt;
-						9 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update title too
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Wed, 09 Aug 2023 09:55:26 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Troubleshooting-convergence-issues/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-convergence-issues/</guid>
 			</item>
 				
 			<item>
@@ -255,9 +81,9 @@ Update to BEAST 2.7
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/1688b3cbb21924ae57a69ca756fdf46f8ca20515'
+						'https://github.com/Taming-the-BEAST/Skyline-plots/commit/de071786380ef36cdf589fb78c3e567a6ed97eff'
 					&gt;
-						9 Aug 2023
+						11 Jun 2023
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
@@ -265,7 +91,9 @@ Update to BEAST 2.7
 					&gt;
 						laduplessis
 					&lt;/a&gt;
-					: Update LaTeX tutorial
+					: Merge pull request #11 from Taming-the-BEAST/edits2023
+
+Update LaTex tutorial, R-scripts and one figure
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -273,198 +101,51 @@ Update to BEAST 2.7
 						Requires: BEAST v2.7.x
 					
 				</description>
-				<pubDate>Wed, 09 Aug 2023 09:38:49 +0000</pubDate>
+				<pubDate>Sun, 11 Jun 2023 18:38:36 +0000</pubDate>
 				<category>Beginner</category>
 				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
-				<title>Introduction to BEAST2</title>
+				<title>Divergence Time Estimation using BEAST v2.x</title>
 				<description>
-					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
+					Dating Species Divergences with the Fossilized Birth-Death Process
 					&lt;br&gt;
 					By 
 					
 					
 						
-								Jūlija Pečerska
+								Tracy A. Heath
 							
-					
-						
-								, Veronika Bošková
-						
-					
-						
-								
-									and Louis du Plessis
 								
 							
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/740027bdadad3782da86e53f257163c6abca137c'
+						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/007a296b392945250e27e0441849b63b62223133'
 					&gt;
-						9 Aug 2023
+						9 Jun 2023
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						'https://github.com/laduplessis'
+						'https://github.com/tgvaughan'
 					&gt;
-						laduplessis
+						tgvaughan
 					&lt;/a&gt;
-					: Update LaTeX tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Wed, 09 Aug 2023 09:36:43 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
-			</item>
-				
-			<item>
-				<title>Substitution model averaging</title>
-				<description>
-					A tutorial using bModelTest
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-					
-						
-								, Carsten Magnus
-						
-					
-						
-								
-									and Remco Bouckaert
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/5d2f29beb56fbefd9483bbaca46c4fbc3eefd4cf'
-					&gt;
-						24 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Merge pull request #1 from bjoelle/master
-
-updated for 2.7
+					: Updated text for beast 2.7. (Figures still not updated.)
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
 						&lt;br&gt;
-						Requires: BEAST v2.7.x
+						Requires: BEAST v2.7.4
 					
 				</description>
-				<pubDate>Mon, 24 Jul 2023 12:37:34 +0000</pubDate>
+				<pubDate>Fri, 09 Jun 2023 16:30:03 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
-			</item>
-				
-			<item>
-				<title>The MSBD package</title>
-				<description>
-					Inferring lineage-dependent birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/bjoelle/MSBD-tutorial/commit/5b122c76ba22c019d5e79c688edfcfc73c5f7d12'
-					&gt;
-						20 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: renamed data file to avoid confusion
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Thu, 20 Jul 2023 17:05:44 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/MSBD-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/MSBD-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Troubleshooting initialization issues</title>
-				<description>
-					Getting BEAST2 to start
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/85f899d198c99b7069e0670ae9887958af99112a'
-					&gt;
-						20 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Merge pull request #2 from Taming-the-BEAST/louis-edits
-
-Updates based on comments (thanks Bethany)
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Thu, 20 Jul 2023 14:23:53 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</guid>
+				<link>http://localhost:4000/tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -506,6 +187,98 @@ Updates based on comments (thanks Bethany)
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Mascot-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Mascot-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Troubleshooting</title>
+				<description>
+					Post-processing and improving performance
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Troubleshooting/commit/abe0fdc99d03d367bf7632a7d9000b6b84a12f16'
+					&gt;
+						9 Jun 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Actually update LaTeX tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 09 Jun 2023 14:43:30 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Troubleshooting/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting/</guid>
+			</item>
+				
+			<item>
+				<title>Introduction to BEAST2</title>
+				<description>
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Jūlija Pečerska
+							
+					
+						
+								, Veronika Bošková
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/101012a339c023db07f24764fcf9f7c48f20084f'
+					&gt;
+						9 Jun 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Merge pull request #4 from Taming-the-BEAST/edits2023
+
+Fully update tutorial to BEAST 2.7.4
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 09 Jun 2023 12:53:50 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
@@ -777,6 +550,49 @@ Removed references to tutorial template bib file.
 			</item>
 				
 			<item>
+				<title>The MSBD package</title>
+				<description>
+					Inferring lineage-dependent birth and death rates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/bjoelle/MSBD-tutorial/commit/d3512156c1c991e4d9ff5a7fd7697752d01a1af0'
+					&gt;
+						3 Aug 2020
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: Merge pull request #1 from laduplessis/master
+
+Update tutorial for TTB website
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.6.0
+					
+				</description>
+				<pubDate>Mon, 03 Aug 2020 14:14:58 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/MSBD-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/MSBD-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial</title>
 				<description>
 					Adaptive parallel Tempering
@@ -815,6 +631,55 @@ Removed references to tutorial template bib file.
 				<category>Easy</category>
 				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Substitution model averaging</title>
+				<description>
+					A tutorial using bModelTest
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+					
+						
+								, Carsten Magnus
+						
+					
+						
+								
+									and Remco Bouckaert
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/9902ffed05c09c4801a56ea915019676659adc4d'
+					&gt;
+						13 Aug 2019
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/rbouckaert'
+					&gt;
+						rbouckaert
+					&lt;/a&gt;
+					: update rateCorrelations figure
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.6.x
+					
+				</description>
+				<pubDate>Tue, 13 Aug 2019 15:59:30 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
 			</item>
 				
 			<item>
@@ -1036,6 +901,47 @@ Added local update describing species-tree specification with BEAUti.
 			</item>
 				
 			<item>
+				<title>StarBEAST2 v14 tutorial</title>
+				<description>
+					Estimating species trees using StarBEAST2
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Huw A. Ogilvie
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/genomescale/starbeast2-tutorial/commit/d88d4c588e76f5662f169eaeca13eb7d749d6928'
+					&gt;
+						21 Jun 2018
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Small change so the website will compile
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.0
+					
+				</description>
+				<pubDate>Thu, 21 Jun 2018 18:23:40 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Species Trees with Relaxed Molecular Clocks</title>
 				<description>
 					Estimating per-species substitution rates using StarBEAST2
@@ -1119,6 +1025,92 @@ Added local update describing species-tree specification with BEAUti.
 				<category>Professional</category>
 				<link>http://localhost:4000/tutorials/SCOTTI-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/SCOTTI-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Structured coalescent</title>
+				<description>
+					Population structure using MultiTypeTree
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Tim Vaughan
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/Taming-the-BEAST/Structured-coalescent/commit/a99e9fd4f3b0e2351a5130fd136a3e8e5d56e40d'
+					&gt;
+						12 Jul 2017
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Update programs used section
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.2
+					
+				</description>
+				<pubDate>Wed, 12 Jul 2017 15:33:51 +0000</pubDate>
+				<category>Professional</category>
+				<link>http://localhost:4000/tutorials/Structured-coalescent/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-coalescent/</guid>
+			</item>
+				
+			<item>
+				<title>Model adequacy using BEAST2</title>
+				<description>
+					Assessing clock and substitution models
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David Duchêne
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/duchene/adequacy_tutorial/commit/d91fb88ec94359166fe5fc3aafd5a9229ee73fd2'
+					&gt;
+						9 Feb 2017
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: updated text
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.4.x
+					
+				</description>
+				<pubDate>Thu, 09 Feb 2017 01:46:12 +0000</pubDate>
+				<category>Professional</category>
+				<link>http://localhost:4000/tutorials/adequacy_tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/adequacy_tutorial/</guid>
 			</item>
 		
 	</channel>

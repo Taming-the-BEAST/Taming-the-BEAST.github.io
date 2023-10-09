@@ -164,6 +164,11 @@
     \verb .1003537
     \endverb
     \field{volume}{10}
+    \verb{file}
+    \verb :Users/nicmuell/Library/Application Support/Mendeley Desktop/Download
+    \verb ed/Bouckaert et al. - 2014 - BEAST 2 a software platform for Bayesian
+    \verb  evolutionary analysis.pdf:pdf
+    \endverb
     \field{journaltitle}{PLoS computational biology}
     \field{year}{2014}
     \warn{\item Invalid format of field 'month'}

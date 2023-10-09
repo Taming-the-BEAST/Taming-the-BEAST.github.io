@@ -19,13 +19,12 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: starbeast2-tutorial-blx.bib
 Database file #2: master-refs.bib
-Warning--I didn't find a database entry for "Ogilvie2021"
 Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 14 entries,
             6393 wiz_defined-function locations,
-            1440 strings with 20595 characters,
+            1438 strings with 20573 characters,
 and the built_in function-call counts, 214193 in all, are:
 = -- 18565
 > -- 2295
@@ -64,4 +63,3 @@ warning$ -- 0
 while$ -- 3468
 width$ -- 0
 write$ -- 1042
-(There was 1 warning)

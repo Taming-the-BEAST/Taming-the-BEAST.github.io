@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8"/>
-	<title>Divergence Time Estimation</title>
+	<title>Divergence Time Estimation using BEAST v2.x</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
@@ -83,7 +83,7 @@
 				
 				
 				
-				<li><a class="off" href="/tutorials/FBD-tutorial/">Divergence Time Estimation</a></li>
+				<li><a class="off" href="/tutorials/FBD-tutorial/">Divergence Time Estimation using BEAST v2.x</a></li>
 				
 			
 			</ol>
@@ -102,14 +102,6 @@
 				
 						Tracy A. Heath
 					
-			
-				
-						, Rachel Warnock
-				
-			
-				
-						
-							and Bethany J. Allen
 						
 					
 			
@@ -334,16 +326,6 @@
  				
 			<div class="smallspacer"></div>				
 			<div>
-				<a class="off" href="https://github.com/bethany-j-allen">
-    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/39991015?v=4&s=50">
-    			<div class="handlebox" style="padding-left:5px;">
-    				bethany-j-allen
-    			</div>
- 				</a>
- 			</div>			
- 				
-			<div class="smallspacer"></div>				
-			<div>
 				<a class="off" href="https://github.com/rachelwarnock">
     			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/2503583?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
@@ -383,42 +365,42 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/bbde865fc2eaa606eb85df932ec8b5a8789c27a3">
-					11 Aug 2023 - <span class="text-gray">Update figures (drop shadows, no backgrounds) and figure widths</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/007a296b392945250e27e0441849b63b62223133">
+					09 Jun 2023 - <span class="text-gray">Updated text for beast 2.7. (Figures still not updated.)</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/c76c9c35869f95476faad5910fb2a6c16eab56ae">
-					11 Aug 2023 - <span class="text-gray">Update author list</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/448d2807118ce0e7401f76b8513b45162469672a">
+					09 Jun 2023 - <span class="text-gray">Updated precooked runs and xml files for beast 2.7.</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/435da0920cd4bb9ed93f397d933a4d0c43837711">
-					11 Aug 2023 - <span class="text-gray">Update text style and formatting, correct a few errors</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/dafa02911d300a1790d5bb36b788658dfd72f32c">
-					11 Aug 2023 - <span class="text-gray">Merge pull request #7 from bethany-j-allen/master
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/ce37fd46d0ae6cfb6222be1fc0274b5f2f2ec799">
+					16 Mar 2020 - <span class="text-gray">Merge pull request #4 from bjoelle/master
 
-Updated website version</span>
+Added section on sampling fossil ages with fully extinct clades</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/aa6aece817454b07fbcc3cca5af142e303e4dc39">
-					18 Jul 2023 - <span class="text-gray">Update tex for SAMRCA prior</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/9858113de372691959cc9ca44cea6fc5a0d42833">
+					19 Dec 2019 - <span class="text-gray">Merge branch 'master' of https://github.com/Taming-the-BEAST/FBD-tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/239b7a5e887a689e24d3a458b389e7ac4fb0729e">
+					19 Dec 2019 - <span class="text-gray">added a section on sampling fossil ages in fully extinct clades</span>
 					</a> 
 				</li>
 			
@@ -431,677 +413,21 @@ Updated website version</span>
 	<div class="col-md-8">				
 		<div class="post">
 			<p>
-			<h1 id="background">Background</h1>
+			<p>Central among the questions explored in biology are those that seek to understand the timing and rates of evolutionary processes. Accurate estimates of species divergence times are vital to understanding historical biogeography, estimating diversification rates, and identifying the causes of variation in rates of molecular evolution.</p>
 
-<p>Central among the questions explored in biology are those that seek to understand the timing and rates of evolutionary processes. Accurate estimates of species divergence times are vital to understanding historical biogeography, estimating diversification rates, and identifying the causes of variation in rates of molecular evolution.</p>
+<p>This tutorial will provide a general overview of divergence time estimation and fossil calibration using a stochastic branching process and relaxed-clock model in a Bayesian framework. The exercise will guide you through the steps necessary for estimating phylogenetic relationships and dating species divergences using the program BEAST v2.x.</p>
 
-<p>This tutorial will provide a general overview of divergence time estimation and fossil calibration using a stochastic branching process and relaxed-clock model in a Bayesian framework. The exercise will guide you through the steps necessary for estimating phylogenetic relationships and dating species divergences using the program BEAST v2.7.x.</p>
+<p><strong>Things to Note</strong></p>
 
-<p>This tutorial is available in two formats.  A link to a PDF can be found in the column on the left-hand side of this page; the PDF is a more in-depth version of the tutorial, which includes a lot of the background about the fossilized birth-death model. Below is a shorter version which is focused on the more practical aspects of implementing the divergence time analysis.</p>
+<ol>
+  <li>
+    <p>This tutorial is available only in PDF format.  A link to the PDF can be found in the column on the left-hand side of this page.</p>
+  </li>
+  <li>
+    <p>While the tutorial has been tested with BEAST version 2.7, and the pre-cooked XML and log files have be updated for this version, many of the figures contained in the tutorial still depict the version 2.6 user interface.  This means that minor differences may exist between what you see when working through the tutorial and what is shown in the document.  Don’t be alarmed, this is perfectly normal!</p>
+  </li>
+</ol>
 
-<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
-
-<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
-
-<p><a href="http://www.beast2.org">BEAST2</a> is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#drummond06">(Drummond et al., 2006; Drummond &amp; Rambaut, 2007; Bouckaert et al., 2014)</a>. The development and maintenance of BEAST is a large, collaborative effort and the program includes a wide array of different types of analyses. This tutorial uses the BEAST v2.7.4.</p>
-
-<h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
-
-<p>BEAUti2 is a utility program with a graphical user interface for creating BEAST2 input files which must be written in the XML. This application provides a clear way to specify priors, partition data, calibrate internal nodes, etc.</p>
-
-<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs, and the interface will be the same, on all computing platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
-
-<h3 id="treeannotator">TreeAnnotator</h3>
-
-<p>TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis.</p>
-
-<h3 id="tracer">Tracer</h3>
-
-<p><a href="http://beast.community/tracer">Tracer</a> is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95\% credible intervals (which approximate the 95\% highest posterior density intervals) and effective sample sizes (ESS) of parameters. We will be using Tracer v.</p>
-
-<h3 id="figtree">FigTree</h3>
-
-<p><a href="http://tree.bio.ed.ac.uk/software/figtree">FigTree</a> is an excellent program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities) in a visually appealing way.</p>
-
-<h1 id="practical-divergence-time-estimation">Practical: Divergence Time Estimation</h1>
-
-<p>This tutorial will walk you through an analysis of the divergence times of the bears. The occurrence times of 14 fossil species are integrated into the tree prior to impose a time structure on the tree and calibrate the analysis to absolute time. Additionally, an uncorrelated, lognormal relaxed clock model is used to describe the branch-specific substitution rates.</p>
-
-<h2 id="the-data">The Data</h2>
-
-<p>The data files and pre-cooked output files can be downloaded from the panel on the left. The analysis in this tutorial includes data from several different sources.</p>
-
-<p>We have molecular sequence data for eight extant species, which represent all of the living bear taxa. The sequence data include interphotoreceptor retinoid-binding protein (irbp) sequences (in the file <code class="language-plaintext highlighter-rouge">bears_irbp_fossils.nex</code>) and 1000 bps of the mitochondrial gene cytochrome b (in the file  <code class="language-plaintext highlighter-rouge">bears_cytb_fossils.nex</code>). If you open either of these files in your text editor or alignment viewer, you will notice that there are 22 taxa listed in each one, with most of these taxa associated with sequences that are entirely made up of missing data (i.e., <strong>?????</strong>). This is because the NEXUS files also contain the names of 14 fossil species, that we will include in our analysis as calibration information for the fossilized birth-death process.</p>
-
-<p>For these extinct taxa, we must provide an occurrence time for each taxon sampled from the fossil record. This information is obtained from the literature or fossil databases like the <a href="http://paleobiodb.org/">Paleobiology Database</a> or the <a href="http://fossilcalibrations.org/">Fossil Calibration Database</a>, or from your own paleontological expertise.</p>
-
-<p>The final source of data required for our analysis is some information about the phylogenetic placement of the fossils. This prior knowledge can come from previous studies of morphological data and taxonomy. Ideally, we would like to know exactly where in the phylogeny each fossil belongs. However, this is uncommon for most groups in the fossil record. For the bear species in our analysis, we do have some prior knowledge about their relationships. Four out of five of the clades we will define in the NEXUS file <code class="language-plaintext highlighter-rouge">bears_cytb_fossils.nex</code> as <strong>taxsets</strong> in the <strong>sets</strong> block. The one clade that is not included in the data file will be created using the BEAUti options.</p>
-
-<figure>
- <a id="fig:1"></a>
- <img style="width:75%;" src="figures/bears_clades_tree.png" alt="" />
- <figcaption>Figure 1: The phylogenetic relationships of crown and stem bears based on taxonomy and morphological data. The resolution of monophyletic clades is based on well-supported previous analyses. Monophyletic clades are indicated with labeled circles. In addition to the root node (R), there are 5 nodes defining clades containing both fossil and extant species. The origin of the tree is indicated with a red square. The time of this node represents the start of the diversification process that generated these lineages. The extant lineages are shown with heavy, solid lines and the fossil lineages are dotted lines.</figcaption>
-</figure>
-
-<h2 id="creating-the-analysis-file-with-beauti">Creating the Analysis File with BEAUti</h2>
-
-<p>Creating a properly-formatted BEAST XML file from scratch is not a simple task. However, BEAUti provides a simple way to navigate the various elements specific to the BEAST XML format.</p>
-
-<blockquote>
-  <p>Begin by starting <strong>BEAUti2</strong>.</p>
-</blockquote>
-
-<h3 id="install-beast2-packages">Install BEAST2 packages</h3>
-
-<p>Next, we have to install the BEAST 2 packages that are needed for this analysis. The packages that we will use called <strong>SA</strong> (Sampled Ancestors) and <strong>ORC</strong> (Optimized Relaxed Clock).</p>
-
-<blockquote>
-  <p>Open the <strong>Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong> in the menu. Install the <strong>SA</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button. Do the same for the <strong>ORC</strong> package. Close the BEAST2 Package Manager and <strong>restart BEAUti</strong> to fully load the packages.</p>
-</blockquote>
-
-<figure>
- <a id="fig:2"></a>
- <img src="figures/beast2_package_manager.png" alt="" />
- <figcaption>Figure 2: The BEAST2 Package Manager.</figcaption>
-</figure>
-
-<h3 id="import-alignments">Import Alignments</h3>
-
-<p>Next we will load the alignment files for each of our genes from our NEXUS files.</p>
-
-<blockquote>
-  <p>Navigate to the <strong>Partitions</strong> window. Using the menu commands <strong>File &gt; Import Alignment</strong>, import the data files <code class="language-plaintext highlighter-rouge">bears_irbp_fossils.nex</code> and <code class="language-plaintext highlighter-rouge">bears_cytb_fossils.nex</code>.</p>
-</blockquote>
-
-<p>Now that the data are loaded into BEAUti, we can unlink the site models, link the clock models, link the trees, and rename these variables so they are easier to understand in the output files.</p>
-
-<blockquote>
-  <p>Highlight both partitions (using <strong>shift and click</strong>) and click on <strong>Unlink Site Models</strong> to assume different models of sequence evolution for each gene (the partitions are typically already unlinked by default). Click the <strong>Link Clock Models</strong> button so that the two genes have the same relative rates of substitution among branches. Click <strong>Link Trees</strong> to ensure that both partitions share the same tree topology and branching times.</p>
-
-  <p>Double click on the site model for the cytochrome b gene (<strong>bears_cytb_fossils</strong>). Rename this to <strong>cytb</strong>. (Note that you may have to hit the return or enter key after typing in the new label for the new name to be retained.) Do the same for the site model for the other gene, calling it <strong>irbp</strong>. Rename the clock model to <strong>bearsClock</strong>, and rename the tree to <strong>bearsTree</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:3"></a>
- <img src="figures/link_trees_partitions.png" alt="" />
- <figcaption>Figure 3: The Partitions window after unlinking the site models, linking the clock and tree models, and renaming the variables.</figcaption>
-</figure>
-
-<h3 id="set-tip-dates">Set Tip Dates</h3>
-
-<p>We must indicate that we have sequentially sampled sequences, and when those sequences were collected. We will indicate that the dates are in <strong>years</strong>, even though they are in fact in units of <strong>millions of years</strong>. This is because the units themselves are arbitrary and this scale difference will not matter. Additionally, we will tell BEAUti that the “zero time” of our tree is the present and the ages we are providing are the number of years <strong>before the present</strong>.</p>
-
-<blockquote>
-  <p>Navigate to the <strong>Tip Dates</strong> panel. Toggle on the <strong>Use tip dates</strong> option. Change <strong>Dates specified</strong> to <strong>year Before the present</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:4"></a>
- <img style="width:75%;" src="figures/tip_dates_years.png" alt="" />
- <figcaption>Figure 4: Specifying the units and reference point of the fossil dates.</figcaption>
-</figure>
-
-<p>Conveniently, we can specify that our dates are included in the taxon names, so that BEAUti can extract them for us using the <strong>Auto-configure</strong> option.</p>
-
-<blockquote>
-  <p>Click on the <strong>Auto-configure</strong> button. Tell BEAUti to <strong>use everything after the last _</strong>, then click <strong>OK</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:5"></a>
- <img style="width:75%;" src="figures/guess_tip_dates.png" alt="" />
- <figcaption>Figure 5: Specify the text pattern in the taxon names that identifies the tip's age using the Guess dates option.</figcaption>
-</figure>
-
-<p>You should now see that the tip ages have been filled in for all of the fossil taxa and that the same age is listed in the <strong>Date</strong> and <strong>Height</strong> column for each species.</p>
-
-<h3 id="specify-the-site-model">Specify the Site Model</h3>
-
-<p>The molecular sequence data sampled for each extant bear species are from two different genes: the mitochondrial cytochrome b gene (<strong>cytb</strong>) and the nuclear interphotoreceptor retinoid-binding protein gene (<strong>irbp</strong>). We will partition these loci into two separate alignments and apply different models of sequence evolution to each one. For the <strong>cytb</strong> gene, we will apply a general-time reversible model with homogeneous rates across sites: GTR. For the nuclear gene <strong>irbp</strong>, we will assume a 2-rate model where transitions and transversions happen at different rates, and that the rates vary across the alignment according to a mean-one gamma distribution: HKY+Gamma.</p>
-
-<blockquote>
-  <p>Navigate to the <strong>Site Model</strong> window. Select the <strong>cytb</strong> gene and change the <strong>Subst Model</strong> to <strong>GTR</strong>. Toggle on <strong>estimate</strong> for the <strong>Substitution Rate</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:6"></a>
- <img src="figures/set_mito_sites_model.png" alt="" />
- <figcaption>Figure 6: The fully specified site model for the cytb gene: GTR.</figcaption>
-</figure>
-
-<blockquote>
-  <p>Select the <strong>irbp</strong> gene and change the <strong>Subst Model</strong> to <strong>HKY</strong>. To indicate gamma-distributed rates, set the <strong>Gamma Category Count</strong> to 4. Check that the  <strong>Shape</strong> parameter is set to <strong>estimate</strong>. Toggle on <strong>estimate</strong> for the <strong>Substitution Rate</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:7"></a>
- <img src="figures/set_irbp_sites_model.png" alt="" />
- <figcaption>Figure 7: The fully specified site model for the irbp gene: HKY+Gamma.</figcaption>
-</figure>
-
-<p>Now both models are fully specified for the unlinked genes. Note that <strong>Fix mean substitution rate</strong> is always specified and we also have indicated that we wish to estimate the substitution rate for each gene. This means that we are estimating the <em>relative</em> substitution rates for our two loci.</p>
-
-<h3 id="the-clock-model">The Clock Model</h3>
-
-<p>Here, we can specify the model of lineage-specific substitution rate variation. The default model in BEAUti is the <strong>Strict Clock</strong>. For this analysis we will use an uncorrelated, lognormal model of branch-rate variation. The <strong>Optimized Relaxed Clock</strong> option (provided by the <strong>ORC package</strong>) assumes that the substitution rates associated with each branch are independently drawn from a single, discretized lognormal distribution <a class="citation" href="#drummond06">(Drummond et al., 2006)</a>.</p>
-
-<blockquote>
-  <p>Navigate to the <strong>Clock Model</strong> window. Change the clock model to <strong>Optimized Relaxed Clock</strong>.</p>
-</blockquote>
-
-<p>The uncorrelated relaxed clock models in BEAST2 are discretized for computational feasibility. This means that for any given parameters of the lognormal distribution, the probability density is discretized into some number of discrete rate bins. Each branch is then assigned to one of these bins. By default, BEAUti sets the <strong>Number Of Discrete Rates</strong> to <strong>-1</strong>. This means that the number of bins is equal to the number of branches. The fully specified Clock Model assumes that the rates for each branch are drawn independently from a single lognormal distribution. The mean of the rate distribution will be estimated, thus we can account for uncertainty in this parameter by placing a prior distribution on its value.</p>
-
-<h3 id="priors-on-parameters-of-the-site-models">Priors on Parameters of the Site Models</h3>
-
-<p>In the <strong>Priors</strong> panel we will begin by specifying priors for the parameters associated with the site models. Since we partitioned the two genes, there are parameters for the two different models:</p>
-<ul>
-  <li>exchangeability rates for the GTR model (<code class="language-plaintext highlighter-rouge">rateAC.s:cytb</code>, <code class="language-plaintext highlighter-rouge">rateAG.s:cytb</code>, …, <code class="language-plaintext highlighter-rouge">rateGT:.s:cytb</code>)</li>
-  <li>the transition-transversion rate ratio (<code class="language-plaintext highlighter-rouge">kappa.s:irbp</code>) and the shape parameter of the gamma distribution on site rates (<code class="language-plaintext highlighter-rouge">gammaShape.s:irbp</code>)</li>
-  <li>The equilibrium nucleotide frequencies for both partitions (<code class="language-plaintext highlighter-rouge">freqParameter.s:cytb</code> and <code class="language-plaintext highlighter-rouge">freqParameter.s:irbp</code>)</li>
-</ul>
-
-<figure>
- <a id="fig:8"></a>
- <img src="figures/priors_panel_initial.png" alt="" />
- <figcaption>Figure 8: The Priors window with default (unmodified) site model priors.</figcaption>
-</figure>
-
-<p>We will keep the default priors for the HKY model on the evolution of <code class="language-plaintext highlighter-rouge">irbp</code>. The default gamma priors on the GTR exchangeability rates for the <code class="language-plaintext highlighter-rouge">cytb</code> gene place a lot of prior density on very small values. For some datasets, the sequences might not be informative for some of the rates, consequentially the MCMC may propose values very close to zero and this can induce long mixing times. Because of this problem, we will alter the gamma priors on the exchangeability rates. For each one, we will keep the expected values as in the default priors. The default priors assume that transitions (A &lt;-&gt; G or C &lt;-&gt; T) have an expected rate of 1.0. Note that BEAUti automatically fixes the parameter <strong>rateCT</strong> to be equal 1.0 in the <strong>Site Model</strong> window, thus this parameter isn’t present in the Priors window. For all other rates, transversions, the expected value of the priors is lower: 0.5. In BEAST2, the gamma distribution is parameterized by a shape parameter (<strong>Alpha</strong>) and a scale parameter (<strong>Beta</strong>). Under this parameterization, the expected value for any gamma distribution is: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">E</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>α</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\mathbb{E}(x) = \alpha\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathbb">E</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>. To reduce the prior density on very low values, we can increase the shape parameter and then we have to adjust the scale parameter accordingly.</p>
-
-<blockquote>
-  <p>Navigate to the <strong>Priors</strong> window. Begin by changing the gamma prior on the transition rate <code class="language-plaintext highlighter-rouge">rateAG.s:cytb</code>. Clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span> next to this parameter name to reveal the prior options. Change the parameters: <code class="language-plaintext highlighter-rouge">Alpha</code> = 2 and <code class="language-plaintext highlighter-rouge">Beta</code> = 0.5. Then change all of the other rates, for <code class="language-plaintext highlighter-rouge">rateAC.s</code>, <code class="language-plaintext highlighter-rouge">rateAT.s</code>, <code class="language-plaintext highlighter-rouge">rateCG.s</code>, and <code class="language-plaintext highlighter-rouge">rateGT.s</code>, to  <code class="language-plaintext highlighter-rouge">Alpha</code> = 2 and <code class="language-plaintext highlighter-rouge">Beta</code> = 0.25.</p>
-</blockquote>
-
-<figure>
- <a id="fig:9"></a>
- <img src="figures/priors_on_GTR_rates.png" alt="" />
- <figcaption>Figure 9: Gamma prior distributions on two of the five relative rates of the GTR model.</figcaption>
-</figure>
-
-<h3 id="priors-for-the-clock-model">Priors for the Clock Model</h3>
-
-<p>Since we are assuming that the branch rates are drawn from a lognormal distribution, this induces two hyperparameters: the mean and standard deviation (<strong>ORCucldMean.c</strong> and <strong>ORCsigma.c</strong> respectively). By default, the prior distribution on the <strong>ORCucldMean.c</strong> parameter is an improper, uniform distribution on the interval <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0,\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∞</span><span class="mclose">)</span></span></span></span>. Instead, we will change this to an exponential prior.</p>
-
-<blockquote>
-  <p>Reveal the options for the prior on <strong>ORCucldMean.c</strong> by clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span>. Change the prior density to an <strong>Exponential</strong> with a mean of <strong>10.0</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:10"></a>
- <img src="figures/exp_prior_on_ucldmean.png" alt="" />
- <figcaption>Figure 10: The exponential prior distribution on the mean of the log normal relaxed clock model.</figcaption>
-</figure>
-
-<p>The other parameter of our relaxed-clock model is, by default, assigned a gamma prior distribution. However, we have a strong prior belief that the variation in substitution rates among branches is low, since some previous studies have indicated that the rates of molecular evolution in bears is somewhat clock-like <a class="citation" href="#krause2008">(Krause et al., 2008)</a>. Thus, we will assume an exponential prior distribution with 95% of the probability density on values less than 1 for the <strong>ORCsigma.c</strong> parameter.</p>
-
-<blockquote>
-  <p>Reveal the options for the prior on <code class="language-plaintext highlighter-rouge">ORCsigma.c</code> by clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span>. Change the prior density to an <strong>Exponential</strong> with a mean of <strong>0.3337</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:11"></a>
- <img src="figures/exp_prior_on_ucldstdv.png" alt="" />
- <figcaption>Figure 11: The exponential prior distribution on the standard deviation of the log normal relaxed clock model.</figcaption>
-</figure>
-
-<h3 id="the-tree-prior">The Tree Prior</h3>
-
-<p>Next we will specify the prior distribution on the tree topology and branching times in the <strong>Priors</strong> panel. Here is where we specify that we want to use the fossilized birth-death process.</p>
-
-<blockquote>
-  <p>Change the tree model for <code class="language-plaintext highlighter-rouge">Tree.t:bearsTree</code> to <strong>Fossilized Birth Death Model</strong>. Reveal the options for the prior on <code class="language-plaintext highlighter-rouge">Tree.t</code> by clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span>.</p>
-</blockquote>
-
-<p>This model, like any branching process (i.e., constant rate birth-death, Yule) can be conditioned on either the origin time or the root age. If you know that all of the fossils in your dataset are <em>crown</em> fossils—descendants of the MRCA of all the extant taxa—and you have some prior knowledge of the age of the clade, then it is reasonable to condition the FBD on the root. Alternatively, if the fossils in your analysis are stem fossils, or can only reliably be assigned to your total group, then it is appropriate to condition on the origin age. For this analysis, we have several bear fossils that are considered stem fossils, thus we will condition on the origin age. Previous studies <a class="citation" href="#dosReis2012">(dos Reis et al., 2012)</a> estimated an age of approximately 45.5 My for the MRCA of seals and bears. We will use this time as a starting value for the origin.</p>
-
-<blockquote>
-  <p>Set the starting value of the <strong>Origin</strong> to 45.5 and make sure that the <strong>estimate</strong> box is checked. (You may have to expand the width of the BEAUti window to see the check-boxes for these parameters.)</p>
-</blockquote>
-
-<figure>
- <a id="fig:12"></a>
- <img src="figures/specified_FBD_model.png" alt="" />
- <figcaption>Figure 12: The values and conditions for the fossilized birth-death process <a class="citation" href="#stadler10">(Stadler, 2010; Heath et al., 2014; Gavryushkina et al., 2014)</a></figcaption>
-</figure>
-
-<p>Since we are estimating the origin parameter, we must assign a prior distribution to it. We will assume that the origin time is drawn from a lognormal distribution with an expected value (mean) equal to 45.5 My and a standard deviation of 1.0. We will use the <strong>Mean in Real Space</strong> option, to indicate that the mean value we enter is the expected value in real space rather than log-transformed space, and set the value to 8.5 My.</p>
-
-<blockquote>
-  <p>Reveal the options for the prior on <code class="language-plaintext highlighter-rouge">originFBD.t</code> by clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span>. Change the prior distribution to <strong>Log Normal</strong>. Check the box marked <strong>Mean In Real Space</strong> and set the mean <strong>M</strong> equal to 8.5 and the standard deviation <strong>S</strong> to 1.0. Set the <strong>Offset</strong> of the lognormal distribution to equal the age of the oldest fossil: 37.0.</p>
-</blockquote>
-
-<figure>
- <a id="fig:13"></a>
- <img src="figures/ln_den.png" alt="" />
- <figcaption>Figure 13: The lognormal prior distribution on the origin time.</figcaption>
-</figure>
-
-<p>The diversification rate is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>λ</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">d = \lambda-\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>. We would expect that this value is fairly small, particularly since we have few extant species and many fossils. Therefore, an exponential distribution is a reasonable prior for this parameter as it places the highest probability on zero. For this analysis we will assume <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>∼</mo><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>1.0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">d\sim \exp(1.0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord">1.0</span><span class="mclose">)</span></span></span></span>. The exponential distribution’s only parameter is called the <em>rate</em> parameter (denoted <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ν</mi></mrow><annotation encoding="application/x-tex">\nu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span></span></span></span>) and it controls both the mean and variance of the distribution (here <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ν</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\nu=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>).</p>
-
-<blockquote>
-  <p>Reveal the options for the prior on <code class="language-plaintext highlighter-rouge">diversificationRateFBD.t</code> by clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span>. Change the prior distribution to <strong>Exponential</strong> with a <strong>Mean</strong> equal to 1.0.</p>
-</blockquote>
-
-<p>The sampling proportion is the probability of observing a fossil of a given lineage. This parameter is a function of the extinction rate (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>) and the fossil recovery rate (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>): <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>ψ</mi><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mi>μ</mi><mo>+</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s=\psi / (\mu+\psi)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mord">/</span><span class="mopen">(</span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mclose">)</span></span></span></span>. Let’s say that we have prior knowledge that this parameter is approximately equal to 0.5, and that we wish extreme values (very close to 0 or 1) to have low probability. This prior density can be described with a beta distribution. The <a href="http://en.wikipedia.org/wiki/Beta_distribution">beta distribution</a> is a probability density over values between 0 and 1 and is parameterized by two values, called <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>. For this prior we will set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mi>β</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\alpha=\beta=2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>.</p>
-
-<blockquote>
-  <p>Reveal the options for the prior on <code class="language-plaintext highlighter-rouge">samplingProportionFBD.t</code> by clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span>. Change the prior distribution to <strong>Beta</strong> with <strong>Alpha</strong> equal to 2.0 and <strong>Beta</strong> equal to 2.0.</p>
-
-</blockquote>
-
-<figure>
- <a id="fig:14"></a>
- <img src="figures/beta_den.png" alt="" />
- <figcaption>Figure 14: Prior distribution on sampling proportion.</figcaption>
-</figure>
-
-<p>The parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span> (<strong>Rho</strong>) represents the probability of sampling a tip in the present. For most birth-death processes, it is helpful to be able to fix or place a very strong prior on one of the parameters (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo separator="true">,</mo><mi>μ</mi><mo separator="true">,</mo><mi>ρ</mi><mo separator="true">,</mo><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\lambda, \mu, \rho, \psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">λ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">ρ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>) because of the strong correlations that exist among them. Typically, we may have the most prior knowledge about the proportion of sampled extant species (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span>). We know that there are only 8 species of bear around today, and we have sequence data representing each of these species, so we can fix <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\rho=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>. As a result, we do not need to specify a prior for this parameter. This is already the default setting of the fossilized birth-death process and there is nothing for us to do here (see <a href="#fig:12">Figure 12</a> to chck that <strong>Rho</strong> is set to 1 and not estimated).</p>
-
-<p>The <strong>turnover</strong> parameter represents the relative rate of extinction: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>μ</mi><mi mathvariant="normal">/</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">r = \mu/\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">μ</span><span class="mord">/</span><span class="mord mathnormal">λ</span></span></span></span>. This parameterisation of the birth-death model assumes that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>&lt;</mo><mi>λ</mi></mrow><annotation encoding="application/x-tex">\mu &lt; \lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span></span></span></span>, thus this parameter is always <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">r &lt; 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>. It is challenging to define an appropriate prior for the turnover parameter and we will simply assume that all values on the interval [0,1] have equal probability. Thus, we can leave the default prior, a <strong>Uniform(0,1)</strong>, on this parameter.</p>
-
-<h3 id="creating-taxon-sets">Creating Taxon Sets</h3>
-
-<p>Since some of the relationships between fossil and living bears are well understood (from previous analyses of molecular and morphological data), we can incorporate this prior information by creating monophyletic taxon sets in BEAUti. In the absence of morphological data for our extinct species, if we do not impose any phylogenetic structure on them, they will have equal probability of attaching to any branch in the tree. Given that previous studies have provided information about the relationships of fossil bears, we can limit the MCMC to only place these fossil bears within their known groups.</p>
-
-<p>There are five distinct clades within the phylogeny of bears that we can define, and four out of five of these clades are defined as taxon sets in one of the NEXUS files containing our sequences (<code class="language-plaintext highlighter-rouge">bears_cytb_fossils.nex</code>). The taxa represented in our dataset are in the <em>total group</em> of bears. This includes all of the fossils that diverged before the most-recent-common-ancestor (MRCA) of all <em>living</em> bears. These early diverging fossils are <em>stem</em> lineages.</p>
-
-<p>Four out of five of the taxon sets needed for this analysis have already been specified in one of the NEXUS files containing our sequences. The first taxon set is the crown bears, shown below. The crown bears include all living species of bears and all the fossils that are descended from the MRCA of living taxa.</p>
-
-<figure>
- <a id="fig:15"></a>
- <img style="width:75%;" src="figures/ts_crown_urs.png" alt="" />
- <figcaption>Figure 15: The species belonging to the Crown Bears clade.</figcaption>
-</figure>
-
-<p>You can open and view the automatically generated BEAUti taxon set for the crown bears by clicking the <strong>1_CrownBears.prior</strong> button.</p>
-
-<figure>
- <a id="fig:16"></a>
- <img style="width:75%;" src="figures/ts_crown_editor_window.png" alt="" />
- <figcaption>Figure 16: The Taxon set editor showing the clade containing the crown bear species.</figcaption>
-</figure>
-
-<p>The second node defined in our NEXUS file is the MRCA of all species within the subfamily Ailuropodinae. This group includes the giant panda (<em>Aliuropoda melanoleuca</em>) and six fossil relatives.</p>
-
-<figure>
- <a id="fig:17"></a>
- <img style="width:75%;" src="figures/ts_pandas.png" alt="" />
- <figcaption>Figure 17: The species belonging to the Panda clade.</figcaption>
-</figure>
-
-<p>The subfamily Tremarctinae includes only the extant spectacled bear (<em>Tremarctos ornatus</em>) and the short-faced bear (<em>Arctodus simus</em>). The occurrence time of the short-faced bear is only 500,000 years ago since it is known from the Pleistocene.</p>
-
-<figure>
- <a id="fig:18"></a>
- <img style="width:75%;" src="figures/ts_Tremarctini.png" alt="" />
- <figcaption>Figure 18: The two species in the clade Tremarctinae.</figcaption>
-</figure>
-
-<p>The subfamily Ursinae comprises all of the species in the genus <em>Ursus</em> (including two fossil species) as well as the sun bear (<em>Helarctos malayanus</em>) and the sloth bear (<em>Melursus ursinus</em>).</p>
-
-<figure>
- <a id="fig:19"></a>
- <img style="width:75%;" src="figures/ts_ursinae.png" alt="" />
- <figcaption>Figure 19: The species belonging to the subfamily Ursinae.</figcaption>
-</figure>
-
-<p>Finally, multiple studies using molecular data have shown that the polar bear (<em>Ursus maritimus</em>) and the brown bear (<em>Ursus arctos</em>) are closely related. Furthermore, phylogenetic analyses of ancient DNA from Pleistocene sub-fossils concluded that the cave bear (<em>Ursus spelaeus</em>) is closely related to the polar bear and the brown bear. This taxon set is not included in our NEXUS file, so we will define it using BEAUti.</p>
-
-<figure>
- <a id="fig:20"></a>
- <img style="width:75%;" src="figures/ts_polar.png" alt="" />
- <figcaption>Figure 20: Three closely related _Ursus_ species in the "Brown Bears" clade.</figcaption>
-</figure>
-
-<blockquote>
-  <p>Create a new taxon set for node 5 by clicking the <strong>+ Add Prior</strong> button and select <strong>MRCA prior</strong> in the pop-up option box. Label this taxon set <strong>5_BrownBears</strong>. Move <em>Ursus arctos</em>, <em>Ursus maritimus</em> and <em>Ursus spelaeus</em> to the right-hand column, and click <strong>OK</strong>. Back in the <strong>Priors</strong> window, check the box labeled <strong>monophyletic</strong> for node 5.</p>
-</blockquote>
-
-<figure>
- <a id="fig:21"></a>
- <img style="width:75%;" src="figures/brown_bears_taxset.png" alt="" />
- <figcaption>Figure 21: The Taxon set editor showing the clade containing the brown bear, polar bear, and cave bear.</figcaption>
-</figure>
-
-<p>At this point, there should be five monophyletic taxon sets listed in the <strong>Priors</strong> window.</p>
-
-<h3 id="sampling-the-fossil-ages">Sampling the fossil ages</h3>
-
-<p>In order to sample the age of fossil specimens, we need to specify prior distributions for these ages. The age ranges for our fossil samples are shown in the table below, modified from Table S.3 in the supplemental appendix of <a class="citation" href="#heath2013fossilized">(Heath et al., 2014)</a>.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Fossil species</th>
-      <th>Age range (My)</th>
-      <th>Citation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>Parictis montanus</em></td>
-      <td>33.9-37.2</td>
-      <td><a class="citation" href="#clark1972">(Clark &amp; Guensburg, 1972; Krause et al., 2008)</a></td>
-    </tr>
-    <tr>
-      <td><em>Zaragocyon daamsi</em></td>
-      <td>20-22.8</td>
-      <td><a class="citation" href="#ginsburg1995">(Ginsburg &amp; Morales, 1995; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Ballusia elmensis</em></td>
-      <td>13.7-16</td>
-      <td><a class="citation" href="#ginsburg1998">(Ginsburg &amp; Morales, 1998; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Ursavus primaevus</em></td>
-      <td>13.65-15.97</td>
-      <td><a class="citation" href="#andrews1977">(Andrews &amp; Tobien, 1977; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Ursavus brevihinus</em></td>
-      <td>15.97-16.9</td>
-      <td><a class="citation" href="#heizmann1980">(Heizmann et al., 1980; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Indarctos vireti</em></td>
-      <td>7.75-8.7</td>
-      <td><a class="citation" href="#montoya2001">(Montoya et al., 2001; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Indarctos arctoides</em></td>
-      <td>8.7-9.7</td>
-      <td><a class="citation" href="#geraads2005">(Geraads et al., 2005; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Indarctos punjabiensis</em></td>
-      <td>4.9-9.7</td>
-      <td><a class="citation" href="#baryshnikov2002">(Baryshnikov, 2002; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Ailurarctos lufengensis</em></td>
-      <td>5.8-8.2</td>
-      <td><a class="citation" href="#jin2007">(Jin et al., 2007; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Agriarctos</em> spp.</td>
-      <td>4.9-7.75</td>
-      <td><a class="citation" href="#abella2011">(Abella et al., 2011; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Kretzoiarctos beatrix</em></td>
-      <td>11.2-11.8</td>
-      <td><a class="citation" href="#abella2011">(Abella et al., 2011; Abella et al., 2012)</a></td>
-    </tr>
-    <tr>
-      <td><em>Arctodus simus</em></td>
-      <td>0.012-2.588</td>
-      <td><a class="citation" href="#churcher1993">(Churcher et al., 1993; Krause et al., 2008)</a></td>
-    </tr>
-    <tr>
-      <td><em>Ursus abstrusus</em></td>
-      <td>1.8-5.3</td>
-      <td><a class="citation" href="#bjork1970">(Bjork, 1970; Krause et al., 2008)</a></td>
-    </tr>
-    <tr>
-      <td><em>Ursus spelaeus</em></td>
-      <td>0.027-0.25</td>
-      <td><a class="citation" href="#loreille2001">(Loreille et al., 2001; Krause et al., 2008)</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Since we have no prior knowledge on where the true age of the specimen lies within the range, we will use uniform distributions. To add a prior on the age of a tip, we first need to define a taxon set containing only this tip. We will specify the taxon set using the <strong>Sampled Ancestors MRCA prior</strong>, as this ensures that the operator acting on the tip age in our MCMC responds correctly to sampled ancestors.</p>
-
-<blockquote>
-  <p>Create a new taxon set for tip <em>Agriarctos spp.</em> by clicking the <strong>+ Add Prior</strong> button and selecting <strong>Sampled Ancestors MRCA prior</strong> in the pop-up option box. Label the taxon set <strong>Agriarctos_spp</strong>. Move the taxon <strong>Agriarctos_spp_5.0</strong> to the right-hand side column, click <strong>OK</strong>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:22"></a>
- <img style="width:75%;" src="figures/ts_tip.png" alt="" />
- <figcaption>Figure 22: The Taxon set editor used to create the clade containing the Agriarctos spp. fossil.</figcaption>
-</figure>
-
-<p>We then need to specify the prior distribution for that tip.</p>
-
-<blockquote>
-  <p>Back in the <strong>Priors</strong> window, reveal the options for the prior on the age of <strong>Agriarctos_spp</strong> by clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span>. Change the prior distribution to <strong>Uniform</strong>, with a <strong>Lower</strong> value equal to 4.9 and an <strong>Upper</strong> value equal to 7.75. Check the box labeled <strong>Tipsonly</strong>.</p>
-
-  <p>Repeat for each of the 14 fossils in our dataset using the information in the table.</p>
-</blockquote>
-
-<figure>
- <a id="fig:23"></a>
- <img src="figures/prior_tip.png" alt="" />
- <figcaption>Figure 23: The Priors window showing the prior set on the age of the Agriarctos spp. fossil.</figcaption>
-</figure>
-
-<figure>
- <a id="fig:24"></a>
- <img src="figures/priors_all_tips.png" alt="" />
- <figcaption>Figure 24: The Priors window showing the priors set on the ages of all fossils.</figcaption>
-</figure>
-
-<h3 id="set-mcmc-options-and-save-the-xml-file">Set MCMC Options and Save the XML File</h3>
-
-<p>Now that you have specified all of your data elements, models, priors, and operators, go to the <strong>MCMC</strong> tab to set the length of the Markov chain, sample frequency, and file names.</p>
-
-<blockquote>
-  <p>Navigate to the <strong>MCMC</strong> window. Since we have a limited amount of time for this exercise, change the <strong>Chain Length</strong> to 2,000,000.</p>
-
-  <p>Reveal the options for the <strong>tracelog</strong> using the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span> to the left. Change <strong>Log Every</strong> to 100. Leave the name as the default.</p>
-
-  <p>Reveal the options for the <strong>treelog</strong> using the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span> to the left. Change <strong>Log Every</strong> to 100. Leave the name as the default.</p>
-</blockquote>
-
-<p>Now we are ready to save the XML file!</p>
-
-<blockquote>
-  <p>In the pull-down menu save the file by going to <strong>File &gt; Save As</strong> and save the file: <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.xml</code>.</p>
-</blockquote>
-
-<p>For the last step in BEAUti, create an XML file that will run the analysis by sampling under the prior. This means that the MCMC will ignore the information coming from the sequence data and only sample parameters in proportion to their prior probability. The output files produced from this run will provide a way to visualize the marginal prior distributions on each parameter.</p>
-
-<blockquote>
-  <p>Check the box labeled <strong>Sample From Prior</strong> at the bottom of the <strong>MCMC</strong> panel.</p>
-
-  <p>Save these changes by going to <strong>File &gt; Save As</strong> and name the file <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.prior.xml</code>.</p>
-</blockquote>
-
-<h2 id="running-beast-2">Running BEAST 2</h2>
-
-<p>Now you are ready to start your BEAST analysis. BEAST allows you to use the BEAGLE library if you already have it installed. BEAGLE is an application programming interface and library that takes advantage of your computer hardware (CPUs and GPUs) for doing the heavy lifting (likelihood calculation) needed for statistical phylogenetic inference <a class="citation" href="#ayers12">(Ayers et al., 2012)</a>. When using BEAGLE’s GPU (NVIDIA) implementation, runtimes are significantly shorter.</p>
-
-<blockquote>
-  <p>Execute <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.prior.xml</code> and <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.xml</code> in BEAST2. You should see the screen output every 1,000 generations, reporting the likelihood and several other statistics.</p>
-</blockquote>
-
-<h2 id="summarizing-the-output">Summarizing the output</h2>
-
-<p>Once the run reaches the end of the chain, you will find three new files in your analysis directory. The MCMC samples of various scalar parameters and statistics are written to the file called <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.log</code>. The tree-state at every sampled iteration is saved to <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD-bearsTree.trees</code>. The tree strings in this file are all annotated in extended Newick format with the substitution rate from the uncorrelated lognormal relaxed clock model at each node. The file called <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.xml.state</code> summarizes the performance of the proposal mechanisms (operators) used in your analysis, providing information about the acceptance rate for each move.</p>
-
-<p>The main output files are the <code class="language-plaintext highlighter-rouge">.log</code> file and <code class="language-plaintext highlighter-rouge">.trees</code> files. We will use Tracer for assessing convergence, mixing, and determining an adequate burn-in based on the log file. Tree topologies, branch rates, and node heights are summarized using the program <strong>TreeAnnotator</strong> and visualized in <strong>FigTree</strong>.</p>
-
-<h3 id="tracer-1">Tracer</h3>
-
-<p>Provided with the files for this exercise are the output files from analyses run for 50,000,000 iterations. The files can be found under the <strong>Output</strong> heading in the left-hand column of this page and are all labeled with the file stem: <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.*.log</code> and <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.*.trees</code>. Note that the files are compressed with gzip (because they are quite large) and you’ll first need to extract them after downloading.</p>
-
-<blockquote>
-  <p>Open Tracer and import <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.1.log</code>, <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.2.log</code> and <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.prior.log</code> using <strong>File &gt; Import New Trace File</strong>.</p>
-</blockquote>
-
-<p>These log files are from two independent, identical analyses, and we can compare the log files in Tracer and determine if they have converged on the same stationary distribution. Additionally, analyzing samples from the prior allows you to compare your posterior estimates to the prior distributions used for each parameter.</p>
-
-<blockquote>
-  <p>Select and highlight all three files in the <strong>Trace Files</strong> pane (do not include <code class="language-plaintext highlighter-rouge">Combined</code>). This allows you to compare all three runs simultaneously. Click on the various parameters and view how they differ in their estimates and 95% credible intervals for those parameters.</p>
-</blockquote>
-
-<p>The <strong>ORCsigma</strong> parameter indicates the amount of variation in the substitution rates across branches. Our prior on this parameter is an exponential distribution with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ν</mi><mo>=</mo><mn>2.997</mn></mrow><annotation encoding="application/x-tex">\nu = 2.997</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2.997</span></span></span></span> (mean <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>0.3337</mn></mrow><annotation encoding="application/x-tex">= 0.3337</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.3337</span></span></span></span>). Thus, there is a considerable amount of prior weight on <strong>ORCsigma = 0</strong>. A standard deviation of 0 indicates support for no variation in substitution rates and the presence of a strict molecular clock.</p>
-
-<blockquote>
-  <p>Find the parameter <strong>ORCsigma</strong> and compare the estimates of the standard deviation of the uncorrelated log-normal distribution.</p>
-
-  <p>With <strong>ORCsigma</strong> highlighted for all three runs, go to the <strong>Marginal Density</strong> window, which allows you to compare the marginal posterior densities for each parameter. (By default Tracer gives the kernel density estimate (<strong>KDE</strong>) of the marginal density. You can change this to a <strong>Histogram</strong> using the options at the top of the window.)</p>
-
-  <p>Color the densities by <strong>Trace File</strong> next to <strong>Colour by</strong> at the bottom of the window (if you do not see this option, increase the size of your Tracer window). You can also add a <strong>Legend</strong> to reveal which density belongs to which run file.</p>
-</blockquote>
-
-<figure>
- <a id="fig:25"></a>
- <img src="figures/tracer_image_stdev.png" alt="" />
- <figcaption>Figure 25: Comparing the marginal densities (using the kernel density estimate) of the ORCsigma parameter from 2 independent runs (blue and green) and the prior (red) in Tracer.</figcaption>
-</figure>
-
-<p>You will notice that the marginal densities from each of our analysis runs (<code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.1.log</code> and <code class="language-plaintext highlighter-rouge">bearsDivtime_FBD.2.log</code>) are nearly identical. If you click through the other sampled parameters, these densities are the same for each one. This indicates that both of our runs have converged on the same stationary distribution. Also, it is likely that the <strong>ORC</strong> rates appear to be somewhat sensitive to the priors. That is because we have several lineages in our tree without any data, since we are using fossils to calibrate under the FBD model. For these branches, the clock rate assigned to them is sampled purely from the prior. The branches with extant descendants, however have rates that are informed by their DNA sequence data.</p>
-
-<p>Next, we will look at the <strong>Marginal Distribution</strong> for the turnover parameter (<strong>turnoverFBD</strong>).</p>
-
-<blockquote>
-  <p>Select all trace files for the <strong>turnoverFBD</strong> parameter and go to the <strong>Marginal Density</strong> window. Color the densities by <strong>Trace file</strong> and add a legend.</p>
-</blockquote>
-
-<figure>
- <a id="fig:26"></a>
- <img src="figures/tracer_image_turnover.png" alt="" />
- <figcaption>Figure 26: Comparing the marginal densities (using the histogram) of the turnoverFBD parameter from 2 independent runs (blue and green) and the prior (red) in Tracer.</figcaption>
-</figure>
-
-<p>When comparing the MCMC with data to those sampled just under the prior, we can see that the prior and posterior densities are nearly identical. Additionally, you may be alarmed that the prior density looks nothing like the Uniform(0,1) prior we applied in BEAUti. However, it’s important to understand that when specifying <strong>Sample From Prior</strong> in BEAUti, we are telling BEAST to ignore the likelihood coming from the <em>sequence data</em>, but the MCMC continues to account for the other data—fossil occurrence times—that we have specified. Thus, since we have a good number of fossils, the estimates of turnover, diversification, and the sampling proportion are highly informed by these occurrence times.</p>
-
-<h3 id="summarizing-the-trees-in-treeannotator">Summarizing the Trees in Treeannotator</h3>
-
-<p>After reviewing the trace files from the two independent runs in Tracer and verifying that both runs converged on the posterior distributions and reached stationarity, we can combine the sampled trees into a single tree file and summarize the results.</p>
-
-<blockquote>
-  <p>Open the program <strong>LogCombiner</strong> and set the <strong>File type</strong> to <strong>Tree Files</strong>. Next, import <code class="language-plaintext highlighter-rouge">bearsTree.1.trees</code> and <code class="language-plaintext highlighter-rouge">bearsTree.2.trees</code> using the <strong>+</strong> button. Set a burn-in percentage of 20 for each file, thus discarding the first 20% of the samples in each tree file.</p>
-</blockquote>
-
-<p>Both of these files contain 50,000 trees, so it is helpful to thin the tree samples and summarize fewer states to avoid creating unnecessarily large files.</p>
-
-<blockquote>
-  <p>Turn on <strong>Resample states at lower frequency</strong> and set this value to 10000.</p>
-
-  <p>Click on the <strong>Choose file …</strong> button to create an output file and run the program. Name the file: <code class="language-plaintext highlighter-rouge">bearsTree.combined.trees</code>.</p>
-</blockquote>
-
-<p>Once <strong>LogCombiner</strong> has terminated, you will have a file containing 8,000 trees which can be summarized using <strong>TreeAnnotator</strong>. TreeAnnotator takes a collection of trees and summarizes them by identifying the topology with the best support, calculating clade posterior probabilities, and calculating 95% credible intervals for node-specific parameters. All of the node statistics are annotated on the tree topology for each node in the Newick string. We will generate a <strong>maximum clade credibility tree</strong>, which is the topology with the highest product of clade posterior probabilities across all nodes.</p>
-
-<blockquote>
-  <p>Open the program <strong>TreeAnnotator</strong>. Since we already discarded a set of burn-in trees when combining the tree files, we can leave <strong>Burnin</strong> set to 0 (though, if TreeAnnotator is taking a long time to load the trees, click on the <strong>Low memory</strong> option at the bottom left and set the burnin to 10–60% to reduce the number of trees). For the <strong>Target tree type</strong>, choose <strong>Maximum clade credibility tree</strong>. Choose <strong>Median heights</strong> for <strong>Node heights</strong>, and choose <code class="language-plaintext highlighter-rouge">bearsTree.combined.trees</code> as your <strong>Input Tree File</strong>. Then name the <strong>Output File</strong> <code class="language-plaintext highlighter-rouge">bearsTree.summary.tre</code> and click <strong>Run</strong>.</p>
-</blockquote>
-
-<h3 id="visualizing-the-dated-tree">Visualizing the Dated Tree</h3>
-
-<p>The tree file produced by TreeAnnotator contains the maximum clade credibility tree and is annotated with summaries of the various parameters. The summary tree and it’s annotations can be visualized in the program <strong>FigTree</strong>.</p>
-
-<blockquote>
-  <p>Execute <strong>FigTree</strong> and open the file <code class="language-plaintext highlighter-rouge">bearsTree.summary.tre</code>.</p>
-</blockquote>
-
-<p>The tree you are viewing in FigTree has several fossil taxa with zero-length branches, e.g., <em>Parictis montanus</em> and <em>Ursus abstrusus</em>. These branches actually indicate fossil taxa with a significant probability of representing a sampled ancestor. However, it is difficult to represent this in typical tree-viewing programs. A tree with sampled ancestors properly represented will have two-degree nodes — i.e., a node with only one descendant. The web-based tree viewer <a href="http://icytree.org/">IcyTree</a> <a class="citation" href="#Vaughan2017">(Vaughan, 2017)</a> is capable of plotting such trees from BEAST2 analyses.</p>
-
-<figure>
- <a id="fig:27"></a>
- <img style="width:75%;" src="figures/bearsTree_icytree.png" alt="" />
- <figcaption>Figure 27: A sampled-ancestor tree exported from IcyTree.</figcaption>
-</figure>
-
-<p>Although the tree above looks awesome, the topology can be misleading for this particular analysis. Because we did not provide character data for our 14 fossil taxa, the fossil lineages can attach to any lineage on the tree that is consistent with the monophyletic clades we specified and the fossil occurrence times with equal probability. However, we can prune off all of the fossil lineages, leaving only the tips infomed with DNA sequence data. We can do this using <strong>FullToExtantTreeConverter</strong>, then use <strong>TreeAnnotator</strong> to summarize the extant-only trees.</p>
-
-<blockquote>
-  <p>Open BEAUti and launch the accessory apps via <strong>File &gt; Launch Apps</strong>. This will open a window with a few applications, launch <strong>FullToExtantTreeConverter</strong>. In the file specification window for <strong>Trees</strong> provide the file called <code class="language-plaintext highlighter-rouge">bearsTree.combined.trees</code>. And give the <strong>Output</strong> file the name <code class="language-plaintext highlighter-rouge">bearsTree.extant.trees</code>.</p>
-</blockquote>
-
-<figure>
- <a id="fig:28"></a>
- <img style="width:50%;" src="figures/full_to_extant_converter.png" alt="" />
- <figcaption>Figure 28: The options for FullToExtantTreeConverter.</figcaption>
-</figure>
-
-<blockquote>
-  <p>Run <strong>TreeAnnotator</strong> on the file called <code class="language-plaintext highlighter-rouge">bearsTree.extant.trees</code>, selecting the same options as you did for the file with complete trees. Name the summary tree file <code class="language-plaintext highlighter-rouge">bearsTree.extant_summary.tre</code>.</p>
-</blockquote>
-
-<p>R code is also provided in the <strong>Scripts</strong> directory, which can be used to plot the tree against a geological timescale using the <code class="language-plaintext highlighter-rouge">strap</code> package <a class="citation" href="#bell2014strap">(Bell &amp; Lloyd, 2014)</a>.</p>
-
-<figure>
- <a id="fig:29"></a>
- <img style="width:75%;" src="figures/geoscaled_bears_ext.png" alt="" />
- <figcaption>Figure 29: The maximum clade credibility tree of extant bears summarized by TreeAnnotator and plotted against stratigraphy using the strap package in R. The internal nodes of the tree are indicated with circles, where circles mark nodes with posterior probability. The 95% credible intervals for node ages are shown with transparent blue bars.</figcaption>
-</figure>
-
-<h1 id="useful-links">Useful Links</h1>
-
-<ul>
-  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
-  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
-  <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
-  <li>RevBayes: <a href="https://github.com/revbayes/code">https://github.com/revbayes/code</a></li>
-  <li>DPPDiv: <a href="https://github.com/trayc7/FDPPDIV">https://github.com/trayc7/FDPPDIV</a></li>
-  <li>PhyloBayes: <a href="www.phylobayes.org/">www.phylobayes.org/</a></li>
-  <li>multidivtime: <a href="http://statgen.ncsu.edu/thorne/multidivtime.html">http://statgen.ncsu.edu/thorne/multidivtime.html</a></li>
-  <li>MCMCTree (PAML): <a href="http://abacus.gene.ucl.ac.uk/software/paml.html">http://abacus.gene.ucl.ac.uk/software/paml.html</a></li>
-  <li>BEAGLE: <a href="https://github.com/beagle-dev/beagle-lib">https://github.com/beagle-dev/beagle-lib</a></li>
-  <li>Paleobiology Database: <a href="http://www.paleodb.org">http://www.paleodb.org</a></li>
-  <li>Fossil Calibration Database: <a href="http://fossilcalibrations.org">http://fossilcalibrations.org</a></li>
-  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
-</ul>
-
-<h1 id="relevant-references">Relevant References</h1>
-
-<ol class="bibliography"><li><span id="drummond06">Drummond, A. J., Ho, S. Y., Phillips, M. J., &amp; Rambaut, A. (2006). Relaxed phylogenetics and dating with confidence. <i>PLoS Biology</i>, <i>4</i>, e88.</span></li>
-<li><span id="drummond07">Drummond, A. J., &amp; Rambaut, A. (2007). BEAST: Bayesian evolutionary analysis by sampling trees. <i>BMC Evolutionary Biology</i>, <i>7</i>, 214.</span></li>
-<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: A Software Platform for Bayesian Evolutionary Analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537.</span></li>
-<li><span id="krause2008">Krause, J., Unger, T., Noçon, A., Malaspinas, A.-S., Kolokotronis, S.-O., Stiller, M., Soibelzon, L., Spriggs, H., Dear, P. H., Briggs, A. W., &amp; others. (2008). Mitochondrial genomes reveal an explosive radiation of extinct and
-	extant bears near the Miocene-Pliocene boundary. <i>BMC Evolutionary Biology</i>, <i>8</i>(1), 220.</span></li>
-<li><span id="dosReis2012">dos Reis, M., Inoue, J., Hasegawa, M., Asher, R. J., Donoghue, P. C. J., &amp; Yang, Z. (2012). Phylogenomic datasets provide both precision and accuracy in estimating
-	the timescale of placental mammal phylogeny. <i>Proceedings of the Royal Society B: Biological Sciences</i>, <i>279</i>(1742), 3491–3500.</span></li>
-<li><span id="stadler10">Stadler, T. (2010). Sampling-through-time in birth-death trees. <i>Journal of Theoretical Biology</i>, <i>267</i>, 396–404.</span></li>
-<li><span id="heath2013fossilized">Heath, T. A., Huelsenbeck, J. P., &amp; Stadler, T. (2014). The fossilized birth-death process for coherent calibration of divergence-time
-	estimates. <i>Proceedings of the National Academy of Sciences, USA</i>, <i>111</i>, E2957–E2966.</span></li>
-<li><span id="gavryushkina2014">Gavryushkina, A., Welch, D., Stadler, T., &amp; Drummond, A. J. (2014). Bayesian inference of sampled ancestor trees for epidemiology and
-	fossil calibration. <i>PLoS Computational Biology</i>, <i>10</i>(12), e1003919.</span></li>
-<li><span id="clark1972">Clark, J., &amp; Guensburg, T. E. (1972). <i>Arctoid Genetic Characters as Related to the Genus \emphParictis</i> (Vol. 1150). Field Museum of Natural History.</span></li>
-<li><span id="ginsburg1995">Ginsburg, L., &amp; Morales, J. (1995). \textitZaragocyon daamsi n. gen. sp. nov., Ursidae primitif
-	du Miocène inférieur d’Espagne. <i>Comptes Rendus De l’Académie Des Sciences. Série 2. Sciences
-	De La Terre Et Des Planètes</i>, <i>321</i>(9), 811–815.</span></li>
-<li><span id="abella12">Abella, J., Alba, D. M., Robles, J. M., Valenciano, A., Rotgers, C., Carmona, R., Montoya, P., &amp; Morales, J. (2012). \textitKretzoiarctos gen. nov., the Oldest Member of the Giant
-	Panda Clade. <i>PLoS One</i>, <i>17</i>, e48985.</span></li>
-<li><span id="ginsburg1998">Ginsburg, L., &amp; Morales, J. (1998). Les Hemicyoninae (Ursidae, Carnivora, Mammalia) et les formes apparentées
-	du Miocène inférieur et moyen d’Europe occidentale. <i>Annales De Paléontologie</i>, <i>84</i>(1), 71–123.</span></li>
-<li><span id="andrews1977">Andrews, P., &amp; Tobien, H. (1977). New Miocene locality in Turkey with evidence on the origin of \textitRamapithecus
-	and \textitSivapithecus. <i>Nature</i>, <i>268</i>(5622), 699.</span></li>
-<li><span id="heizmann1980">Heizmann, E., Ginsburg, L., &amp; Bulot, C. (1980). \textitProsansanosmilus peregrinus, ein neuer machairodontider
-	Felidae aus dem Miozän Deutschlands und Frankreichs. <i>Stuttgarter Beitr. Naturk. B</i>, <i>58</i>, 1–27.</span></li>
-<li><span id="montoya2001">Montoya, P., Alcalá, L., &amp; Morales, J. (2001). \textitIndarctos (Ursidae, Mammalia) from the Spanish Turolian
-	(Upper Miocene). <i>Scripta Geologica</i>, <i>122</i>, 123–151.</span></li>
-<li><span id="geraads2005">Geraads, D., Kaya, T., Mayda, S., &amp; others. (2005). Late Miocene large mammals from Yulafli, Thrace region, Turkey,
-	and their biogeographic implications. <i>Acta Palaeontologica Polonica</i>, <i>50</i>(3), 523–544.</span></li>
-<li><span id="baryshnikov2002">Baryshnikov, G. F. (2002). Late Miocene \textitIndarctos punjabiensis atticus (Carnivora,
-	Ursidae) in Ukraine with survey of \textitIndarctos records
-	from the former USSR. <i>Russian J. Theriol</i>, <i>1</i>(2), 83–89.</span></li>
-<li><span id="jin2007">Jin, C., Ciochon, R. L., Dong, W., Hunt, R. M., Liu, J., Jaeger, M., &amp; Zhu, Q. (2007). The first skull of the earliest giant panda. <i>Proceedings of the National Academy of Sciences</i>, <i>104</i>(26), 10932–10937.</span></li>
-<li><span id="abella2011">Abella, J., Montoya, P., &amp; Morales, J. (2011). Una nueva especie de \textitAgriarctos (Ailuropodinae, Ursidae,
-	Carnivora) en la localidad de Nombrevilla 2 (Zaragoza, España). <i>Estudios Geológicos</i>, <i>67</i>(2), 187–191.</span></li>
-<li><span id="churcher1993">Churcher, C. S., Morgan, A. V., &amp; Carter, L. D. (1993). \textitArctodus simus from the Alaskan Arctic slope. <i>Canadian Journal of Earth Sciences</i>, <i>30</i>(5), 1007–1013.</span></li>
-<li><span id="bjork1970">Bjork, P. R. (1970). The Carnivora of the Hagerman local fauna (late Pliocene) of
-	Southwestern Idaho. <i>Transactions of the American Philosophical Society</i>, <i>60</i>(7), 3–54.</span></li>
-<li><span id="loreille2001">Loreille, O., Orlando, L., Patou-Mathis, M., Philippe, M., Taberlet, P., &amp; Hänni, C. (2001). Ancient DNA analysis reveals divergence of the cave bear, \textitUrsus
-	spelaeus, and brown bear, \textitUrsus arctos, lineages. <i>Current Biology</i>, <i>11</i>(3), 200–203.</span></li>
-<li><span id="ayers12">Ayers, D. L., Darling, A., Zwickl, D. J., Beerli, P., Holder, M. T., Lewis, P. O., Huelsenbeck, J. P., Ronquist, F., Swofford, D. L., Cummings, M. P., Rambaut, A., &amp; Suchard, M. A. (2012). BEAGLE: An Application Programming Interface and High-Performance
-	Computing Library for Statistical Phylogenetics. <i>Systematic Biology</i>, <i>61</i>, 170–173.</span></li>
-<li><span id="Vaughan2017">Vaughan, T. G. (2017). IcyTree: Rapid browser-based visualization for phylogenetic trees and networks. <i>Bioinformatics</i>, in press. https://doi.org/https://doi.org/10.1093/bioinformatics/btx155</span></li>
-<li><span id="bell2014strap">Bell, M. A., &amp; Lloyd, G. T. (2014). strap: an R package for plotting phylogenies against stratigraphy
-	and assessing their stratigraphic congruence. <i>Palaeontology</i>.</span></li>
-<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
-
-<!-- Tutorial disclaimer
-
-Please do not change the license
-Add the author names and relevant links
-Add any other aknowledgments here
-\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[scale=0.8]{figures/ccby.pdf}} This tutorial was written by \href{http://phyloworks.org/}{Tracy Heath} (with helpful contributions from Alexandra Gavryushkina, Rachel Warnock, and members the \href{https://taming-the-beast.github.io/}{Taming the BEAST} team) for workshops on applied phylogenetics and molecular evolution and is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. -->
 
 
 			<hr>

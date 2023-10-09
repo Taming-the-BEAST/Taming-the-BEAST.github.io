@@ -2,14 +2,6 @@ This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Skyline-plots.aux
 The style file: biblatex.bst
-White space in argument---line 35 of file Skyline-plots.aux
- : \citation{Bouckaert2014
- :                         Bouckaert2019}
-I'm skipping whatever remains of this command
-White space in argument---line 51 of file Skyline-plots.aux
- : \citation{Drummond2005
- :                        Stadler2013}
-I'm skipping whatever remains of this command
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -30,45 +22,44 @@ Database file #2: master-refs.bib
 Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 12 entries,
+You've used 14 entries,
             6393 wiz_defined-function locations,
-            1423 strings with 21441 characters,
-and the built_in function-call counts, 189846 in all, are:
-= -- 16395
-> -- 2224
-< -- 539
-+ -- 5736
-- -- 1055
-* -- 15316
-:= -- 24220
+            1441 strings with 24138 characters,
+and the built_in function-call counts, 246585 in all, are:
+= -- 21568
+> -- 2767
+< -- 641
++ -- 7503
+- -- 1340
+* -- 20079
+:= -- 31812
 add.period$ -- 0
-call.type$ -- 12
-change.case$ -- 311
-chr.to.int$ -- 51
-cite$ -- 22
-duplicate$ -- 18590
-empty$ -- 15648
-format.name$ -- 1682
-if$ -- 36702
+call.type$ -- 14
+change.case$ -- 359
+chr.to.int$ -- 52
+cite$ -- 26
+duplicate$ -- 23936
+empty$ -- 20231
+format.name$ -- 2164
+if$ -- 47496
 int.to.chr$ -- 0
-int.to.str$ -- 31
+int.to.str$ -- 37
 missing$ -- 0
-newline$ -- 992
-num.names$ -- 662
-pop$ -- 5103
+newline$ -- 1253
+num.names$ -- 775
+pop$ -- 6264
 preamble$ -- 1
-purify$ -- 526
+purify$ -- 642
 quote$ -- 0
-skip$ -- 3020
+skip$ -- 3625
 stack$ -- 0
-substring$ -- 32488
-swap$ -- 3400
-text.length$ -- 466
-text.prefix$ -- 15
+substring$ -- 43233
+swap$ -- 4219
+text.length$ -- 574
+text.prefix$ -- 17
 top$ -- 1
-type$ -- 396
+type$ -- 464
 warning$ -- 0
-while$ -- 3261
+while$ -- 4252
 width$ -- 0
-write$ -- 981
-(There were 2 error messages)
+write$ -- 1240
