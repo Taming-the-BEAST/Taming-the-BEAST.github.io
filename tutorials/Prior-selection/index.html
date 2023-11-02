@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
     <!-- Favicon -->
@@ -382,6 +382,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/5934f31124dd8be5cff72005d1dd9f35b9727816">
+					09 Aug 2023 - <span class="text-gray">Update figures and figure widths</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/5ef94e9e2b4fcea8af621951b1f82cfe5679a7ee">
 					11 Jun 2023 - <span class="text-gray">Merged Louis' updates.</span>
 					</a> 
@@ -408,14 +416,6 @@
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/24825da7a5e491edab553d67d5f2f6fc236e2df8">
 					11 Jun 2023 - <span class="text-gray">Minor updates to the text</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/5626c1b2c24de54d3b74491297bbea1e4fa83068">
-					23 May 2023 - <span class="text-gray">Updated long precooked logs.</span>
 					</a> 
 				</li>
 			
@@ -540,7 +540,7 @@
 
 <figure>
 	<a id="packageManage2"></a>
-	<img style="width:75.0%;" src="figures/beast2_package_manager.png" alt="" />
+	<img src="figures/beast2_package_manager.png" alt="" />
 	<figcaption>Figure 2: The BEAST2 Package Manager.</figcaption>
 </figure>
 <p><br /></p>
@@ -563,7 +563,7 @@
 
 <figure>
 	<a id="importAlignment"></a>
-	<img style="width:75.0%;" src="figures/beast2_import_alignment.png" alt="" />
+	<img src="figures/beast2_import_alignment.png" alt="" />
 	<figcaption>Figure 3: Importing the alignment into BEAUti.</figcaption>
 </figure>
 <p><br /></p>
@@ -587,7 +587,7 @@
 
 <figure>
 	<a id="timeUnitsAndFlow"></a>
-	<img style="width:100.0%;" src="figures/beast2_time_specification.png" alt="" />
+	<img src="figures/beast2_time_specification.png" alt="" />
 	<figcaption>Figure 4: Specifying time units and direction of time flow.</figcaption>
 </figure>
 <p><br /></p>
@@ -603,12 +603,12 @@
 
 <figure>
 	<a id="guessDates"></a>
-	<img style="width:50.0%;" src="figures/beast2_guess_dates.png" alt="" />
+	<img style="width:75.0%;" src="figures/beast2_guess_dates.png" alt="" />
 	<figcaption>Figure 5: Specifying tip dates.</figcaption>
 </figure>
 <p><br /></p>
 
-<p>You should now see that the tip ages have been filled in for all of the taxa with the <strong>Date (raw value)</strong> columns showing the date strings extracted from the taxon names, and the <strong>Age/Height</strong> column showing numbers on the order of 0.1 (the age in years of each tip relative to the most recent sample).</p>
+<p>You should now see that the tip ages have been filled in for all of the taxa with the <strong>Date (raw value)</strong> columns showing the date strings extracted from the taxon names, and the <strong>Age/Height</strong> column showing numbers on the order of 0.1 (the age in years of each tip relative to the most recent sample). If you did everything correctly, the sequence with the <em>most recent</em> sampling date (2009/06/08) should have the samllest height (0.0 in this case).</p>
 
 <p>Now we are done with the data specification and we are about to start specifying models and priors for the model parameters.</p>
 
@@ -646,7 +646,7 @@
 
 <figure>
 	<a id="substitutionModel"></a>
-	<img style="width:75.0%;" src="figures/beast2_substitution_model.png" alt="" />
+	<img src="figures/beast2_substitution_model.png" alt="" />
 	<figcaption>Figure 6: Specifying the substitution model.</figcaption>
 </figure>
 <p><br /></p>
@@ -672,7 +672,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 
 <figure>
 	<a id="clockModel"></a>
-	<img style="width:75.0%;" src="figures/beast2_clock_model.png" alt="" />
+	<img src="figures/beast2_clock_model.png" alt="" />
 	<figcaption>Figure 7: Specifying the clock model.</figcaption>
 </figure>
 <p><br /></p>
@@ -862,7 +862,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 <figure>
 	<a id="freqPrior"></a>
 	<img src="figures/beast2_prior_frequencies.png" alt="" />
-	<figcaption>Figure 16: Specifying the equilibrium nucleotide frequencies prior.</figcaption>
+	<figcaption>Figure 16: Specifying the equilibrium nucleotide frequencies prior. As it is a multivariate distribution, BEAUti cannot plot it.</figcaption>
 </figure>
 <p><br /></p>
 

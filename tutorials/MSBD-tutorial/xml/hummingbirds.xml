@@ -1,433 +1,424 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='MSBDtemplate' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" required="" version="2.6">
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='MSBDtemplate' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:MSBD v2.0.1" version="2.7">
 
     <data
 id="hummingbirds"
 spec="Alignment"
 name="alignment">
-                    <sequence id="seq_Abeillia.abeillei.22002" spec="Sequence" taxon="Abeillia.abeillei.22002" totalcount="4" value="A"/>
-                    <sequence id="seq_Adelomyia.melanogenys.8025" spec="Sequence" taxon="Adelomyia.melanogenys.8025" totalcount="4" value="A"/>
-                    <sequence id="seq_Adelomyia.sp.nov.Valqui.656" spec="Sequence" taxon="Adelomyia.sp.nov.Valqui.656" totalcount="4" value="A"/>
-                    <sequence id="seq_Aglaeactis.castelnaudii.8215" spec="Sequence" taxon="Aglaeactis.castelnaudii.8215" totalcount="4" value="A"/>
-                    <sequence id="seq_Aglaeactis.cupripennis.6304" spec="Sequence" taxon="Aglaeactis.cupripennis.6304" totalcount="4" value="A"/>
-                    <sequence id="seq_Aglaeactis.pamela.106743" spec="Sequence" taxon="Aglaeactis.pamela.106743" totalcount="4" value="A"/>
-                    <sequence id="seq_Aglaiocercus.coelestis.7813" spec="Sequence" taxon="Aglaiocercus.coelestis.7813" totalcount="4" value="A"/>
-                    <sequence id="seq_Agliocercus.kingi.8017" spec="Sequence" taxon="Agliocercus.kingi.8017" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.amabilis.28483" spec="Sequence" taxon="Amazilia.amabilis.28483" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.amazilia.14263" spec="Sequence" taxon="Amazilia.amazilia.14263" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.berryllina.fmnh394217" spec="Sequence" taxon="Amazilia.berryllina.fmnh394217" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.brevirost.nmnhb11307" spec="Sequence" taxon="Amazilia.brevirost.nmnhb11307" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.candida.ku.mbr4474" spec="Sequence" taxon="Amazilia.candida.ku.mbr4474" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.castaneiventris.oc" spec="Sequence" taxon="Amazilia.castaneiventris.oc" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.chionogaster.17165" spec="Sequence" taxon="Amazilia.chionogaster.17165" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.chionopectus.35896" spec="Sequence" taxon="Amazilia.chionopectus.35896" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.cyanocephala.19260" spec="Sequence" taxon="Amazilia.cyanocephala.19260" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.cyanura.Burke.DAB1441" spec="Sequence" taxon="Amazilia.cyanura.Burke.DAB1441" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.decora.B100024" spec="Sequence" taxon="Amazilia.decora.B100024" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.edward.2303" spec="Sequence" taxon="Amazilia.edward.2303" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.fimbriata.5956" spec="Sequence" taxon="Amazilia.fimbriata.5956" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.franciae.12063" spec="Sequence" taxon="Amazilia.franciae.12063" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.lactea.9484" spec="Sequence" taxon="Amazilia.lactea.9484" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.leucogaster.ansp8392" spec="Sequence" taxon="Amazilia.leucogaster.ansp8392" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.rosenbergi.zmc114807" spec="Sequence" taxon="Amazilia.rosenbergi.zmc114807" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.rutila.burkedab1054" spec="Sequence" taxon="Amazilia.rutila.burkedab1054" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.saucer.hof.fmnh393025" spec="Sequence" taxon="Amazilia.saucer.hof.fmnh393025" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.saucerottia.JVLP34" spec="Sequence" taxon="Amazilia.saucerottia.JVLP34" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.tobacii.amnh.2796" spec="Sequence" taxon="Amazilia.tobacii.amnh.2796" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.tzacatl.16538" spec="Sequence" taxon="Amazilia.tzacatl.16538" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.versicolor.15313" spec="Sequence" taxon="Amazilia.versicolor.15313" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.vfrons.UNAM.OMVP684" spec="Sequence" taxon="Amazilia.vfrons.UNAM.OMVP684" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.violiceps.unam.828" spec="Sequence" taxon="Amazilia.violiceps.unam.828" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.viridicauda.8136" spec="Sequence" taxon="Amazilia.viridicauda.8136" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.viridigaster.7490" spec="Sequence" taxon="Amazilia.viridigaster.7490" totalcount="4" value="A"/>
-                    <sequence id="seq_Amazilia.yucatanensis.4090" spec="Sequence" taxon="Amazilia.yucatanensis.4090" totalcount="4" value="A"/>
-                    <sequence id="seq_Androdon.aequatorialis.1402" spec="Sequence" taxon="Androdon.aequatorialis.1402" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthoc.floriceps.Juan.i1253" spec="Sequence" taxon="Anthoc.floriceps.Juan.i1253" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthrac.dominicus.11318" spec="Sequence" taxon="Anthrac.dominicus.11318" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthrac.mango.cjc27" spec="Sequence" taxon="Anthrac.mango.cjc27" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthrac.nigricollis.9552" spec="Sequence" taxon="Anthrac.nigricollis.9552" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthrac.prevostii.nmnhb360" spec="Sequence" taxon="Anthrac.prevostii.nmnhb360" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthrac.veraguensis.nmnhB1347" spec="Sequence" taxon="Anthrac.veraguensis.nmnhB1347" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthrac.viridigula.fmnh391258" spec="Sequence" taxon="Anthrac.viridigula.fmnh391258" totalcount="4" value="A"/>
-                    <sequence id="seq_Anthrac.viridis.11519" spec="Sequence" taxon="Anthrac.viridis.11519" totalcount="4" value="A"/>
-                    <sequence id="seq_Aphantochr.cirrochl.fmnh399167" spec="Sequence" taxon="Aphantochr.cirrochl.fmnh399167" totalcount="4" value="A"/>
-                    <sequence id="seq_Arch.alexandri.21848" spec="Sequence" taxon="Arch.alexandri.21848" totalcount="4" value="A"/>
-                    <sequence id="seq_Archilochus.colubris.5270" spec="Sequence" taxon="Archilochus.colubris.5270" totalcount="4" value="A"/>
-                    <sequence id="seq_Atthis.heloisa.fmnh343218" spec="Sequence" taxon="Atthis.heloisa.fmnh343218" totalcount="4" value="A"/>
-                    <sequence id="seq_Avocettula.recurv.fmnh334368" spec="Sequence" taxon="Avocettula.recurv.fmnh334368" totalcount="4" value="A"/>
-                    <sequence id="seq_Boisson.mathewsii.8130" spec="Sequence" taxon="Boisson.mathewsii.8130" totalcount="4" value="A"/>
-                    <sequence id="seq_Boissonn.flavescens.12099" spec="Sequence" taxon="Boissonn.flavescens.12099" totalcount="4" value="A"/>
-                    <sequence id="seq_Boissonn.jardini.ANSP15805" spec="Sequence" taxon="Boissonn.jardini.ANSP15805" totalcount="4" value="A"/>
-                    <sequence id="seq_CHLORESTES.NOTATUS.4558" spec="Sequence" taxon="CHLORESTES.NOTATUS.4558" totalcount="4" value="A"/>
-                    <sequence id="seq_Calliphlox.amet.nmnhb10703" spec="Sequence" taxon="Calliphlox.amet.nmnhb10703" totalcount="4" value="A"/>
-                    <sequence id="seq_Calliphlox.bryantae.28180" spec="Sequence" taxon="Calliphlox.bryantae.28180" totalcount="4" value="A"/>
-                    <sequence id="seq_Calliphlox.evelynae.b58890" spec="Sequence" taxon="Calliphlox.evelynae.b58890" totalcount="4" value="A"/>
-                    <sequence id="seq_Calliphlox.mitchellii.12194" spec="Sequence" taxon="Calliphlox.mitchellii.12194" totalcount="4" value="A"/>
-                    <sequence id="seq_Calothorax.lucifer.43113" spec="Sequence" taxon="Calothorax.lucifer.43113" totalcount="4" value="A"/>
-                    <sequence id="seq_Calypte.anna.24864" spec="Sequence" taxon="Calypte.anna.24864" totalcount="4" value="A"/>
-                    <sequence id="seq_Calypte.costae.21595" spec="Sequence" taxon="Calypte.costae.21595" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.duidae.7443" spec="Sequence" taxon="Campylopt.duidae.7443" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.excellens.fmnh343205" spec="Sequence" taxon="Campylopt.excellens.fmnh343205" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.falcatus.IAVHP.77" spec="Sequence" taxon="Campylopt.falcatus.IAVHP.77" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.hemileucurus.26474" spec="Sequence" taxon="Campylopt.hemileucurus.26474" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.hyperythrus.fmnh339628" spec="Sequence" taxon="Campylopt.hyperythrus.fmnh339628" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.largipennis.4474" spec="Sequence" taxon="Campylopt.largipennis.4474" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.rufus.FMNH434025" spec="Sequence" taxon="Campylopt.rufus.FMNH434025" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopt.villaviscen.5588" spec="Sequence" taxon="Campylopt.villaviscen.5588" totalcount="4" value="A"/>
-                    <sequence id="seq_Campylopterus.ensipennis.ce115" spec="Sequence" taxon="Campylopterus.ensipennis.ce115" totalcount="4" value="A"/>
-                    <sequence id="seq_Chaetocercus.bombus.5225" spec="Sequence" taxon="Chaetocercus.bombus.5225" totalcount="4" value="A"/>
-                    <sequence id="seq_Chaetocercus.mulsant.6301" spec="Sequence" taxon="Chaetocercus.mulsant.6301" totalcount="4" value="A"/>
-                    <sequence id="seq_Chalco.stanleyi.nk195810" spec="Sequence" taxon="Chalco.stanleyi.nk195810" totalcount="4" value="A"/>
-                    <sequence id="seq_Chalybura.buffonii.26911" spec="Sequence" taxon="Chalybura.buffonii.26911" totalcount="4" value="A"/>
-                    <sequence id="seq_Chalybura.urochrysia.28467" spec="Sequence" taxon="Chalybura.urochrysia.28467" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostil.canivetii.burkdab1591" spec="Sequence" taxon="Chlorostil.canivetii.burkdab1591" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostil.ricordii.ansp5570" spec="Sequence" taxon="Chlorostil.ricordii.ansp5570" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilb.assim.b46483" spec="Sequence" taxon="Chlorostilb.assim.b46483" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilb.lucidus.18899" spec="Sequence" taxon="Chlorostilb.lucidus.18899" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilb.maugaeus.11520" spec="Sequence" taxon="Chlorostilb.maugaeus.11520" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilb.melanorhynch.6327" spec="Sequence" taxon="Chlorostilb.melanorhynch.6327" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilb.poortmani.Juan.i4198" spec="Sequence" taxon="Chlorostilb.poortmani.Juan.i4198" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilbon.mellisugus.9450" spec="Sequence" taxon="Chlorostilbon.mellisugus.9450" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilbon.pucherani.fmnh392810" spec="Sequence" taxon="Chlorostilbon.pucherani.fmnh392810" totalcount="4" value="A"/>
-                    <sequence id="seq_Chlorostilbon.salvini.JK00_048" spec="Sequence" taxon="Chlorostilbon.salvini.JK00_048" totalcount="4" value="A"/>
-                    <sequence id="seq_Chrysolamp.mosquitus.35902" spec="Sequence" taxon="Chrysolamp.mosquitus.35902" totalcount="4" value="A"/>
-                    <sequence id="seq_Chrysuronia.oenone.5381" spec="Sequence" taxon="Chrysuronia.oenone.5381" totalcount="4" value="A"/>
-                    <sequence id="seq_Clytolaema.rubr.fmnh395404" spec="Sequence" taxon="Clytolaema.rubr.fmnh395404" totalcount="4" value="A"/>
-                    <sequence id="seq_Coel.torquata.inca.AMNHDOT2598" spec="Sequence" taxon="Coel.torquata.inca.AMNHDOT2598" totalcount="4" value="A"/>
-                    <sequence id="seq_Coelig.helianthea.Juan.2504" spec="Sequence" taxon="Coelig.helianthea.Juan.2504" totalcount="4" value="A"/>
-                    <sequence id="seq_Coelig.orina.Juan.i5169" spec="Sequence" taxon="Coelig.orina.Juan.i5169" totalcount="4" value="A"/>
-                    <sequence id="seq_Coelig.phalerata.Juan.i485" spec="Sequence" taxon="Coelig.phalerata.Juan.i485" totalcount="4" value="A"/>
-                    <sequence id="seq_Coelig.prunellei.Juan42" spec="Sequence" taxon="Coelig.prunellei.Juan42" totalcount="4" value="A"/>
-                    <sequence id="seq_Coeligena.bonapartei.IAVHB.4188" spec="Sequence" taxon="Coeligena.bonapartei.IAVHB.4188" totalcount="4" value="A"/>
-                    <sequence id="seq_Coeligena.coeligena.8015" spec="Sequence" taxon="Coeligena.coeligena.8015" totalcount="4" value="A"/>
-                    <sequence id="seq_Coeligena.iris.31770" spec="Sequence" taxon="Coeligena.iris.31770" totalcount="4" value="A"/>
-                    <sequence id="seq_Coeligena.lutetia.340" spec="Sequence" taxon="Coeligena.lutetia.340" totalcount="4" value="A"/>
-                    <sequence id="seq_Coeligena.torquata.6230" spec="Sequence" taxon="Coeligena.torquata.6230" totalcount="4" value="A"/>
-                    <sequence id="seq_Coeligena.violifer.8200" spec="Sequence" taxon="Coeligena.violifer.8200" totalcount="4" value="A"/>
-                    <sequence id="seq_Coeligena.wilsoni.7858" spec="Sequence" taxon="Coeligena.wilsoni.7858" totalcount="4" value="A"/>
-                    <sequence id="seq_Colibri.coruscans.6310" spec="Sequence" taxon="Colibri.coruscans.6310" totalcount="4" value="A"/>
-                    <sequence id="seq_Colibri.delphinae.5403" spec="Sequence" taxon="Colibri.delphinae.5403" totalcount="4" value="A"/>
-                    <sequence id="seq_Colibri.serrirostris.14576" spec="Sequence" taxon="Colibri.serrirostris.14576" totalcount="4" value="A"/>
-                    <sequence id="seq_Colibri.sp.b49711" spec="Sequence" taxon="Colibri.sp.b49711" totalcount="4" value="A"/>
-                    <sequence id="seq_Colibri.thalassinus.28263" spec="Sequence" taxon="Colibri.thalassinus.28263" totalcount="4" value="A"/>
-                    <sequence id="seq_Cyanophaia.bicol.stri.docb17" spec="Sequence" taxon="Cyanophaia.bicol.stri.docb17" totalcount="4" value="A"/>
-                    <sequence id="seq_Cynanthus.doubledayi.JK04_339" spec="Sequence" taxon="Cynanthus.doubledayi.JK04_339" totalcount="4" value="A"/>
-                    <sequence id="seq_Cynanthus.latirostris.33304" spec="Sequence" taxon="Cynanthus.latirostris.33304" totalcount="4" value="A"/>
-                    <sequence id="seq_Cynanthus.sordidus.22004" spec="Sequence" taxon="Cynanthus.sordidus.22004" totalcount="4" value="A"/>
-                    <sequence id="seq_Damophila.julie.16556" spec="Sequence" taxon="Damophila.julie.16556" totalcount="4" value="A"/>
-                    <sequence id="seq_Discosura.conversii.16064" spec="Sequence" taxon="Discosura.conversii.16064" totalcount="4" value="A"/>
-                    <sequence id="seq_Discosura.langsdorfii.9633" spec="Sequence" taxon="Discosura.langsdorfii.9633" totalcount="4" value="A"/>
-                    <sequence id="seq_Discosura.longic.nmnh5265" spec="Sequence" taxon="Discosura.longic.nmnh5265" totalcount="4" value="A"/>
-                    <sequence id="seq_Discosura.popelairii.5950" spec="Sequence" taxon="Discosura.popelairii.5950" totalcount="4" value="A"/>
-                    <sequence id="seq_Doricha.eliza.ku4435" spec="Sequence" taxon="Doricha.eliza.ku4435" totalcount="4" value="A"/>
-                    <sequence id="seq_Doryfera.johannae.1728" spec="Sequence" taxon="Doryfera.johannae.1728" totalcount="4" value="A"/>
-                    <sequence id="seq_Doryfera.ludovicae.8000" spec="Sequence" taxon="Doryfera.ludovicae.8000" totalcount="4" value="A"/>
-                    <sequence id="seq_Elvira.chionura.26446" spec="Sequence" taxon="Elvira.chionura.26446" totalcount="4" value="A"/>
-                    <sequence id="seq_Elvira.cupreiceps.16066" spec="Sequence" taxon="Elvira.cupreiceps.16066" totalcount="4" value="A"/>
-                    <sequence id="seq_Ensifera.ensifera.8224" spec="Sequence" taxon="Ensifera.ensifera.8224" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocn.glaucopoides.uwbm77170" spec="Sequence" taxon="Eriocn.glaucopoides.uwbm77170" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocnem.cupreioventris.JPLV30" spec="Sequence" taxon="Eriocnem.cupreioventris.JPLV30" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocnem.nigrivestis.zmc114629" spec="Sequence" taxon="Eriocnem.nigrivestis.zmc114629" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocnemis.alinae.1805" spec="Sequence" taxon="Eriocnemis.alinae.1805" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocnemis.derbyi.ANSP15698" spec="Sequence" taxon="Eriocnemis.derbyi.ANSP15698" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocnemis.luciani.6337" spec="Sequence" taxon="Eriocnemis.luciani.6337" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocnemis.mosquera.6335" spec="Sequence" taxon="Eriocnemis.mosquera.6335" totalcount="4" value="A"/>
-                    <sequence id="seq_Eriocnemis.vestitus.324" spec="Sequence" taxon="Eriocnemis.vestitus.324" totalcount="4" value="A"/>
-                    <sequence id="seq_Eugenes.fulgens.9964" spec="Sequence" taxon="Eugenes.fulgens.9964" totalcount="4" value="A"/>
-                    <sequence id="seq_Eulampus.holosericeus.nmnh2121" spec="Sequence" taxon="Eulampus.holosericeus.nmnh2121" totalcount="4" value="A"/>
-                    <sequence id="seq_Eulampus.jugularis.stridoej413" spec="Sequence" taxon="Eulampus.jugularis.stridoej413" totalcount="4" value="A"/>
-                    <sequence id="seq_Eulidia.yarrellii_Wouter" spec="Sequence" taxon="Eulidia.yarrellii_Wouter" totalcount="4" value="A"/>
-                    <sequence id="seq_Eupetomena.macroura.15299" spec="Sequence" taxon="Eupetomena.macroura.15299" totalcount="4" value="A"/>
-                    <sequence id="seq_Eupherusa.cyanophrys.21997" spec="Sequence" taxon="Eupherusa.cyanophrys.21997" totalcount="4" value="A"/>
-                    <sequence id="seq_Eupherusa.eximia.21998" spec="Sequence" taxon="Eupherusa.eximia.21998" totalcount="4" value="A"/>
-                    <sequence id="seq_Eupherusa.nigriventris.16055" spec="Sequence" taxon="Eupherusa.nigriventris.16055" totalcount="4" value="A"/>
-                    <sequence id="seq_Eupherusa.poliocerca.21999" spec="Sequence" taxon="Eupherusa.poliocerca.21999" totalcount="4" value="A"/>
-                    <sequence id="seq_Eutoxeres.aquila.2110" spec="Sequence" taxon="Eutoxeres.aquila.2110" totalcount="4" value="A"/>
-                    <sequence id="seq_Eutoxeres.condamini.8094" spec="Sequence" taxon="Eutoxeres.condamini.8094" totalcount="4" value="A"/>
-                    <sequence id="seq_Florisuga.fusca.16936" spec="Sequence" taxon="Florisuga.fusca.16936" totalcount="4" value="A"/>
-                    <sequence id="seq_Florisuga.mellivora.9646" spec="Sequence" taxon="Florisuga.mellivora.9646" totalcount="4" value="A"/>
-                    <sequence id="seq_Glaucis.aeneus.nmnhb368" spec="Sequence" taxon="Glaucis.aeneus.nmnhb368" totalcount="4" value="A"/>
-                    <sequence id="seq_Glaucis.hirsuta.28468" spec="Sequence" taxon="Glaucis.hirsuta.28468" totalcount="4" value="A"/>
-                    <sequence id="seq_Goethalsia.bella.2111" spec="Sequence" taxon="Goethalsia.bella.2111" totalcount="4" value="A"/>
-                    <sequence id="seq_Goldmania.violiceps.28405" spec="Sequence" taxon="Goldmania.violiceps.28405" totalcount="4" value="A"/>
-                    <sequence id="seq_Haplophaedia.aureliae.32971" spec="Sequence" taxon="Haplophaedia.aureliae.32971" totalcount="4" value="A"/>
-                    <sequence id="seq_Haplophaedia.lugens.30032" spec="Sequence" taxon="Haplophaedia.lugens.30032" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliactin.bilopha.14845ak1.c1" spec="Sequence" taxon="Heliactin.bilopha.14845ak1.c1" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliangelus.amethysticol.6246" spec="Sequence" taxon="Heliangelus.amethysticol.6246" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliangelus.exortis.JVLP40" spec="Sequence" taxon="Heliangelus.exortis.JVLP40" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliangelus.micraster.ANSP26261" spec="Sequence" taxon="Heliangelus.micraster.ANSP26261" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliangelus.regalis.5532" spec="Sequence" taxon="Heliangelus.regalis.5532" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliangelus.strophianus.6296" spec="Sequence" taxon="Heliangelus.strophianus.6296" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliangelus.viola.ANSP16990" spec="Sequence" taxon="Heliangelus.viola.ANSP16990" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliangelus.zusii" spec="Sequence" taxon="Heliangelus.zusii" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.aurescens.6789" spec="Sequence" taxon="Heliodoxa.aurescens.6789" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.branickii.1996" spec="Sequence" taxon="Heliodoxa.branickii.1996" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.gularis.5428" spec="Sequence" taxon="Heliodoxa.gularis.5428" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.imperatrix.12088" spec="Sequence" taxon="Heliodoxa.imperatrix.12088" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.jacula.11940" spec="Sequence" taxon="Heliodoxa.jacula.11940" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.leadbeateri.6036" spec="Sequence" taxon="Heliodoxa.leadbeateri.6036" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.rubinoides.1651" spec="Sequence" taxon="Heliodoxa.rubinoides.1651" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliodoxa.xanthogonys.7415" spec="Sequence" taxon="Heliodoxa.xanthogonys.7415" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliomaster.constan.burdab1903" spec="Sequence" taxon="Heliomaster.constan.burdab1903" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliomaster.furcifer.6709" spec="Sequence" taxon="Heliomaster.furcifer.6709" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliomaster.longirostris.18268" spec="Sequence" taxon="Heliomaster.longirostris.18268" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliomaster.squamos.fmnh392806" spec="Sequence" taxon="Heliomaster.squamos.fmnh392806" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliothryx.aurita.6913" spec="Sequence" taxon="Heliothryx.aurita.6913" totalcount="4" value="A"/>
-                    <sequence id="seq_Heliothryx.barroti.12039" spec="Sequence" taxon="Heliothryx.barroti.12039" totalcount="4" value="A"/>
-                    <sequence id="seq_Hylocharis.chrysura.1503" spec="Sequence" taxon="Hylocharis.chrysura.1503" totalcount="4" value="A"/>
-                    <sequence id="seq_Hylocharis.cyanus.rostrata.9547" spec="Sequence" taxon="Hylocharis.cyanus.rostrata.9547" totalcount="4" value="A"/>
-                    <sequence id="seq_Hylocharis.eliciae.16074" spec="Sequence" taxon="Hylocharis.eliciae.16074" totalcount="4" value="A"/>
-                    <sequence id="seq_Hylocharis.grayi.ansp.5064" spec="Sequence" taxon="Hylocharis.grayi.ansp.5064" totalcount="4" value="A"/>
-                    <sequence id="seq_Hylocharis.leucotis.22003" spec="Sequence" taxon="Hylocharis.leucotis.22003" totalcount="4" value="A"/>
-                    <sequence id="seq_Hylocharis.sapphirina.12912" spec="Sequence" taxon="Hylocharis.sapphirina.12912" totalcount="4" value="A"/>
-                    <sequence id="seq_Hylocharis.xantusii.3794" spec="Sequence" taxon="Hylocharis.xantusii.3794" totalcount="4" value="A"/>
-                    <sequence id="seq_Klais.guimeti.6168" spec="Sequence" taxon="Klais.guimeti.6168" totalcount="4" value="A"/>
-                    <sequence id="seq_Lafresnaya.lafresnayi.32576" spec="Sequence" taxon="Lafresnaya.lafresnayi.32576" totalcount="4" value="A"/>
-                    <sequence id="seq_Lamporn.ameth.fmnh.343217" spec="Sequence" taxon="Lamporn.ameth.fmnh.343217" totalcount="4" value="A"/>
-                    <sequence id="seq_Lamporn.castaneovent.28257" spec="Sequence" taxon="Lamporn.castaneovent.28257" totalcount="4" value="A"/>
-                    <sequence id="seq_Lamporn.sybillae.burkedab1362" spec="Sequence" taxon="Lamporn.sybillae.burkedab1362" totalcount="4" value="A"/>
-                    <sequence id="seq_Lampornis.calolaemus.28169" spec="Sequence" taxon="Lampornis.calolaemus.28169" totalcount="4" value="A"/>
-                    <sequence id="seq_Lampornis.cinereicauda.19791" spec="Sequence" taxon="Lampornis.cinereicauda.19791" totalcount="4" value="A"/>
-                    <sequence id="seq_Lampornis.clemenciae.10119" spec="Sequence" taxon="Lampornis.clemenciae.10119" totalcount="4" value="A"/>
-                    <sequence id="seq_Lampornis.hemileucus.16006" spec="Sequence" taxon="Lampornis.hemileucus.16006" totalcount="4" value="A"/>
-                    <sequence id="seq_Lampornis.viridipallens.19268" spec="Sequence" taxon="Lampornis.viridipallens.19268" totalcount="4" value="A"/>
-                    <sequence id="seq_Lamprolaima.rhami.22001" spec="Sequence" taxon="Lamprolaima.rhami.22001" totalcount="4" value="A"/>
-                    <sequence id="seq_Lepidopyga.coeruleo.29053" spec="Sequence" taxon="Lepidopyga.coeruleo.29053" totalcount="4" value="A"/>
-                    <sequence id="seq_Lepidopyga.goudoti.jcc" spec="Sequence" taxon="Lepidopyga.goudoti.jcc" totalcount="4" value="A"/>
-                    <sequence id="seq_Lesbia.nuna.3615" spec="Sequence" taxon="Lesbia.nuna.3615" totalcount="4" value="A"/>
-                    <sequence id="seq_Lesbia.victoriae.zmc.113657" spec="Sequence" taxon="Lesbia.victoriae.zmc.113657" totalcount="4" value="A"/>
-                    <sequence id="seq_Leucippus.baeri.5232" spec="Sequence" taxon="Leucippus.baeri.5232" totalcount="4" value="A"/>
-                    <sequence id="seq_Leucippus.chlorocercus.7264" spec="Sequence" taxon="Leucippus.chlorocercus.7264" totalcount="4" value="A"/>
-                    <sequence id="seq_Leucippus.fallax.striLFA6" spec="Sequence" taxon="Leucippus.fallax.striLFA6" totalcount="4" value="A"/>
-                    <sequence id="seq_Leucippus.taczanowski.33447" spec="Sequence" taxon="Leucippus.taczanowski.33447" totalcount="4" value="A"/>
-                    <sequence id="seq_Leucochloris.albic.fmnh395730" spec="Sequence" taxon="Leucochloris.albic.fmnh395730" totalcount="4" value="A"/>
-                    <sequence id="seq_Lodiggesia.mirabilis.44698" spec="Sequence" taxon="Lodiggesia.mirabilis.44698" totalcount="4" value="A"/>
-                    <sequence id="seq_Lophornis.chalybeus.9399" spec="Sequence" taxon="Lophornis.chalybeus.9399" totalcount="4" value="A"/>
-                    <sequence id="seq_Lophornis.delattrei.22644" spec="Sequence" taxon="Lophornis.delattrei.22644" totalcount="4" value="A"/>
-                    <sequence id="seq_Lophornis.pavoninus.ku6045" spec="Sequence" taxon="Lophornis.pavoninus.ku6045" totalcount="4" value="A"/>
-                    <sequence id="seq_Mellisuga.minima.cjc33" spec="Sequence" taxon="Mellisuga.minima.cjc33" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.aeneocauda.1236" spec="Sequence" taxon="Metallura.aeneocauda.1236" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.baroni.zmc113658" spec="Sequence" taxon="Metallura.baroni.zmc113658" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.eupogon.8293" spec="Sequence" taxon="Metallura.eupogon.8293" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.odomae.353" spec="Sequence" taxon="Metallura.odomae.353" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.phoebe.103876" spec="Sequence" taxon="Metallura.phoebe.103876" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.theresiae.3534" spec="Sequence" taxon="Metallura.theresiae.3534" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.tyrianthina.6272" spec="Sequence" taxon="Metallura.tyrianthina.6272" totalcount="4" value="A"/>
-                    <sequence id="seq_Metallura.williami.5939" spec="Sequence" taxon="Metallura.williami.5939" totalcount="4" value="A"/>
-                    <sequence id="seq_Microchera.albocor.35764" spec="Sequence" taxon="Microchera.albocor.35764" totalcount="4" value="A"/>
-                    <sequence id="seq_Microstilbon.burmeist.zmc.114832" spec="Sequence" taxon="Microstilbon.burmeist.zmc.114832" totalcount="4" value="A"/>
-                    <sequence id="seq_Myrtis.fanny.3592" spec="Sequence" taxon="Myrtis.fanny.3592" totalcount="4" value="A"/>
-                    <sequence id="seq_Ocreatus.underwoodii.22594" spec="Sequence" taxon="Ocreatus.underwoodii.22594" totalcount="4" value="A"/>
-                    <sequence id="seq_Opisthopr.euryptera.zmc115166" spec="Sequence" taxon="Opisthopr.euryptera.zmc115166" totalcount="4" value="A"/>
-                    <sequence id="seq_Oreonympha.nobilis.fmnh324115" spec="Sequence" taxon="Oreonympha.nobilis.fmnh324115" totalcount="4" value="A"/>
-                    <sequence id="seq_Oreotroch.stolzmani.ANSP19518" spec="Sequence" taxon="Oreotroch.stolzmani.ANSP19518" totalcount="4" value="A"/>
-                    <sequence id="seq_Orthorhyncus.cristatus.11526" spec="Sequence" taxon="Orthorhyncus.cristatus.11526" totalcount="4" value="A"/>
-                    <sequence id="seq_Oxypogon.guerini.zmc115370" spec="Sequence" taxon="Oxypogon.guerini.zmc115370" totalcount="4" value="A"/>
-                    <sequence id="seq_Patagona.gigas.6303" spec="Sequence" taxon="Patagona.gigas.6303" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaeochroa.cuvierii.26913" spec="Sequence" taxon="Phaeochroa.cuvierii.26913" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaeth.longirostris.28503" spec="Sequence" taxon="Phaeth.longirostris.28503" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaeth.longuemareus.35952a" spec="Sequence" taxon="Phaeth.longuemareus.35952a" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaeth.supercil.b48308" spec="Sequence" taxon="Phaeth.supercil.b48308" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethorn.eurynome.fmnh395410" spec="Sequence" taxon="Phaethorn.eurynome.fmnh395410" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethorn.koepckeae.5398" spec="Sequence" taxon="Phaethorn.koepckeae.5398" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethorn.rupurumii.20240" spec="Sequence" taxon="Phaethorn.rupurumii.20240" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethorn.syrmat.12138" spec="Sequence" taxon="Phaethorn.syrmat.12138" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.anthophilus.umt594" spec="Sequence" taxon="Phaethornis.anthophilus.umt594" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.atrimentalis.1969" spec="Sequence" taxon="Phaethornis.atrimentalis.1969" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.augusti.um.t604" spec="Sequence" taxon="Phaethornis.augusti.um.t604" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.bourcieri.11017" spec="Sequence" taxon="Phaethornis.bourcieri.11017" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.griseo.5571" spec="Sequence" taxon="Phaethornis.griseo.5571" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.guy.35966" spec="Sequence" taxon="Phaethornis.guy.35966" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.hispidus.10629" spec="Sequence" taxon="Phaethornis.hispidus.10629" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.malaris.27511" spec="Sequence" taxon="Phaethornis.malaris.27511" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.mexicanus.JK07_108" spec="Sequence" taxon="Phaethornis.mexicanus.JK07_108" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.nattereri.12859" spec="Sequence" taxon="Phaethornis.nattereri.12859" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.philippii.8868" spec="Sequence" taxon="Phaethornis.philippii.8868" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.pretrei.14702" spec="Sequence" taxon="Phaethornis.pretrei.14702" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.ruber.9481" spec="Sequence" taxon="Phaethornis.ruber.9481" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.rupurumii.iavhb4463" spec="Sequence" taxon="Phaethornis.rupurumii.iavhb4463" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.striigularis.b28411" spec="Sequence" taxon="Phaethornis.striigularis.b28411" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.subochraceus.6544" spec="Sequence" taxon="Phaethornis.subochraceus.6544" totalcount="4" value="A"/>
-                    <sequence id="seq_Phaethornis.yaruqui.7812" spec="Sequence" taxon="Phaethornis.yaruqui.7812" totalcount="4" value="A"/>
-                    <sequence id="seq_Phlogophilus.harteri.KU18424" spec="Sequence" taxon="Phlogophilus.harteri.KU18424" totalcount="4" value="A"/>
-                    <sequence id="seq_Polyonymus.caroli.15503" spec="Sequence" taxon="Polyonymus.caroli.15503" totalcount="4" value="A"/>
-                    <sequence id="seq_Polytmus.guainumbi.6691" spec="Sequence" taxon="Polytmus.guainumbi.6691" totalcount="4" value="A"/>
-                    <sequence id="seq_Polytmus.milleri.amnh.prs476" spec="Sequence" taxon="Polytmus.milleri.amnh.prs476" totalcount="4" value="A"/>
-                    <sequence id="seq_Polytmus.theresiae.nmnh10307" spec="Sequence" taxon="Polytmus.theresiae.nmnh10307" totalcount="4" value="A"/>
-                    <sequence id="seq_Pterophanes.cyanopterus.1296" spec="Sequence" taxon="Pterophanes.cyanopterus.1296" totalcount="4" value="A"/>
-                    <sequence id="seq_Ramphodon.naevius.zmc.115250" spec="Sequence" taxon="Ramphodon.naevius.zmc.115250" totalcount="4" value="A"/>
-                    <sequence id="seq_Ramphomicron.microrhyn.8376" spec="Sequence" taxon="Ramphomicron.microrhyn.8376" totalcount="4" value="A"/>
-                    <sequence id="seq_Rhodopis.vesper.jose2" spec="Sequence" taxon="Rhodopis.vesper.jose2" totalcount="4" value="A"/>
-                    <sequence id="seq_Sappho.sparganura.1195" spec="Sequence" taxon="Sappho.sparganura.1195" totalcount="4" value="A"/>
-                    <sequence id="seq_Schistes.geoffroyi.6300" spec="Sequence" taxon="Schistes.geoffroyi.6300" totalcount="4" value="A"/>
-                    <sequence id="seq_Selasphorus.flammula.28269" spec="Sequence" taxon="Selasphorus.flammula.28269" totalcount="4" value="A"/>
-                    <sequence id="seq_Selasphorus.platycercus.23428" spec="Sequence" taxon="Selasphorus.platycercus.23428" totalcount="4" value="A"/>
-                    <sequence id="seq_Selasphorus.rufus.MVZ180196" spec="Sequence" taxon="Selasphorus.rufus.MVZ180196" totalcount="4" value="A"/>
-                    <sequence id="seq_Selasphorus.sasin.33988" spec="Sequence" taxon="Selasphorus.sasin.33988" totalcount="4" value="A"/>
-                    <sequence id="seq_Selasphorus.scintilla.16266" spec="Sequence" taxon="Selasphorus.scintilla.16266" totalcount="4" value="A"/>
-                    <sequence id="seq_Selasphorus.scintilla.B52913" spec="Sequence" taxon="Selasphorus.scintilla.B52913" totalcount="4" value="A"/>
-                    <sequence id="seq_Sephanoides.fernandensis.mr620" spec="Sequence" taxon="Sephanoides.fernandensis.mr620" totalcount="4" value="A"/>
-                    <sequence id="seq_Sephanoides.sephaniodes.amnh1126" spec="Sequence" taxon="Sephanoides.sephaniodes.amnh1126" totalcount="4" value="A"/>
-                    <sequence id="seq_Stellula.calliope.B16854" spec="Sequence" taxon="Stellula.calliope.B16854" totalcount="4" value="A"/>
-                    <sequence id="seq_Stephanoxis.lalandi.25958" spec="Sequence" taxon="Stephanoxis.lalandi.25958" totalcount="4" value="A"/>
-                    <sequence id="seq_Taphrolesbia.griseivent.10388" spec="Sequence" taxon="Taphrolesbia.griseivent.10388" totalcount="4" value="A"/>
-                    <sequence id="seq_Taphrospilus.hypostictus.5465" spec="Sequence" taxon="Taphrospilus.hypostictus.5465" totalcount="4" value="A"/>
-                    <sequence id="seq_Thalur.glaucopus.fmnh395402" spec="Sequence" taxon="Thalur.glaucopus.fmnh395402" totalcount="4" value="A"/>
-                    <sequence id="seq_Thalurania.colombica.11793" spec="Sequence" taxon="Thalurania.colombica.11793" totalcount="4" value="A"/>
-                    <sequence id="seq_Thalurania.fannyi.11728" spec="Sequence" taxon="Thalurania.fannyi.11728" totalcount="4" value="A"/>
-                    <sequence id="seq_Thalurania.furcata.2807" spec="Sequence" taxon="Thalurania.furcata.2807" totalcount="4" value="A"/>
-                    <sequence id="seq_Thalurania.ridgwayi.FMNH_b225" spec="Sequence" taxon="Thalurania.ridgwayi.FMNH_b225" totalcount="4" value="A"/>
-                    <sequence id="seq_Thalurania.watertoni.fmnh392348" spec="Sequence" taxon="Thalurania.watertoni.fmnh392348" totalcount="4" value="A"/>
-                    <sequence id="seq_Thaumastura.cora.14278" spec="Sequence" taxon="Thaumastura.cora.14278" totalcount="4" value="A"/>
-                    <sequence id="seq_Threnetes.leucurus.2673" spec="Sequence" taxon="Threnetes.leucurus.2673" totalcount="4" value="A"/>
-                    <sequence id="seq_Threnetes.ruckeri.28170" spec="Sequence" taxon="Threnetes.ruckeri.28170" totalcount="4" value="A"/>
-                    <sequence id="seq_Tilmatura.dupontii.KU8188" spec="Sequence" taxon="Tilmatura.dupontii.KU8188" totalcount="4" value="A"/>
-                    <sequence id="seq_Topaza.pella.35362" spec="Sequence" taxon="Topaza.pella.35362" totalcount="4" value="A"/>
-                    <sequence id="seq_Topaza.pyra.b42167" spec="Sequence" taxon="Topaza.pyra.b42167" totalcount="4" value="A"/>
-                    <sequence id="seq_Troch.scitulus.fmnh331062" spec="Sequence" taxon="Troch.scitulus.fmnh331062" totalcount="4" value="A"/>
-                    <sequence id="seq_Trochilus.polytmus.cjc31" spec="Sequence" taxon="Trochilus.polytmus.cjc31" totalcount="4" value="A"/>
-                    <sequence id="seq_Urochroa.bougueri.zmc114654" spec="Sequence" taxon="Urochroa.bougueri.zmc114654" totalcount="4" value="A"/>
-                    <sequence id="seq_Urosticte.benjamani.5546" spec="Sequence" taxon="Urosticte.benjamani.5546" totalcount="4" value="A"/>
-                    <sequence id="seq_Urosticte.ruficrissa.Juan.i2325" spec="Sequence" taxon="Urosticte.ruficrissa.Juan.i2325" totalcount="4" value="A"/>
-                    <sequence id="seq_chalco.olivaceum.103924" spec="Sequence" taxon="chalco.olivaceum.103924" totalcount="4" value="A"/>
-                    <sequence id="seq_chalcostigma.herrani.6277" spec="Sequence" taxon="chalcostigma.herrani.6277" totalcount="4" value="A"/>
-                    <sequence id="seq_chalcostigma.ruficeps.1293" spec="Sequence" taxon="chalcostigma.ruficeps.1293" totalcount="4" value="A"/>
-                    <sequence id="seq_chlorostil.swains.amnhnkk1017" spec="Sequence" taxon="chlorostil.swains.amnhnkk1017" totalcount="4" value="A"/>
-                    <sequence id="seq_heliodoxa.schreibersii.5440" spec="Sequence" taxon="heliodoxa.schreibersii.5440" totalcount="4" value="A"/>
-                    <sequence id="seq_myrmia.micrura.5233" spec="Sequence" taxon="myrmia.micrura.5233" totalcount="4" value="A"/>
-                    <sequence id="seq_oreotroch.chimborazo.zmc114549" spec="Sequence" taxon="oreotroch.chimborazo.zmc114549" totalcount="4" value="A"/>
-                    <sequence id="seq_oreotroch.estella.103835" spec="Sequence" taxon="oreotroch.estella.103835" totalcount="4" value="A"/>
-                    <sequence id="seq_oreotroch.melanogaster.2077" spec="Sequence" taxon="oreotroch.melanogaster.2077" totalcount="4" value="A"/>
-                    <sequence id="seq_panterpe.insignis.16264" spec="Sequence" taxon="panterpe.insignis.16264" totalcount="4" value="A"/>
-                </data>
+        <sequence id="seq_Abeillia.abeillei.22002" spec="Sequence" taxon="Abeillia.abeillei.22002" totalcount="4" value="A"/>
+        <sequence id="seq_Adelomyia.melanogenys.8025" spec="Sequence" taxon="Adelomyia.melanogenys.8025" totalcount="4" value="A"/>
+        <sequence id="seq_Adelomyia.sp.nov.Valqui.656" spec="Sequence" taxon="Adelomyia.sp.nov.Valqui.656" totalcount="4" value="A"/>
+        <sequence id="seq_Aglaeactis.castelnaudii.8215" spec="Sequence" taxon="Aglaeactis.castelnaudii.8215" totalcount="4" value="A"/>
+        <sequence id="seq_Aglaeactis.cupripennis.6304" spec="Sequence" taxon="Aglaeactis.cupripennis.6304" totalcount="4" value="A"/>
+        <sequence id="seq_Aglaeactis.pamela.106743" spec="Sequence" taxon="Aglaeactis.pamela.106743" totalcount="4" value="A"/>
+        <sequence id="seq_Aglaiocercus.coelestis.7813" spec="Sequence" taxon="Aglaiocercus.coelestis.7813" totalcount="4" value="A"/>
+        <sequence id="seq_Agliocercus.kingi.8017" spec="Sequence" taxon="Agliocercus.kingi.8017" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.amabilis.28483" spec="Sequence" taxon="Amazilia.amabilis.28483" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.amazilia.14263" spec="Sequence" taxon="Amazilia.amazilia.14263" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.berryllina.fmnh394217" spec="Sequence" taxon="Amazilia.berryllina.fmnh394217" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.brevirost.nmnhb11307" spec="Sequence" taxon="Amazilia.brevirost.nmnhb11307" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.candida.ku.mbr4474" spec="Sequence" taxon="Amazilia.candida.ku.mbr4474" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.castaneiventris.oc" spec="Sequence" taxon="Amazilia.castaneiventris.oc" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.chionogaster.17165" spec="Sequence" taxon="Amazilia.chionogaster.17165" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.chionopectus.35896" spec="Sequence" taxon="Amazilia.chionopectus.35896" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.cyanocephala.19260" spec="Sequence" taxon="Amazilia.cyanocephala.19260" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.cyanura.Burke.DAB1441" spec="Sequence" taxon="Amazilia.cyanura.Burke.DAB1441" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.decora.B100024" spec="Sequence" taxon="Amazilia.decora.B100024" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.edward.2303" spec="Sequence" taxon="Amazilia.edward.2303" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.fimbriata.5956" spec="Sequence" taxon="Amazilia.fimbriata.5956" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.franciae.12063" spec="Sequence" taxon="Amazilia.franciae.12063" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.lactea.9484" spec="Sequence" taxon="Amazilia.lactea.9484" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.leucogaster.ansp8392" spec="Sequence" taxon="Amazilia.leucogaster.ansp8392" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.rosenbergi.zmc114807" spec="Sequence" taxon="Amazilia.rosenbergi.zmc114807" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.rutila.burkedab1054" spec="Sequence" taxon="Amazilia.rutila.burkedab1054" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.saucer.hof.fmnh393025" spec="Sequence" taxon="Amazilia.saucer.hof.fmnh393025" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.saucerottia.JVLP34" spec="Sequence" taxon="Amazilia.saucerottia.JVLP34" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.tobacii.amnh.2796" spec="Sequence" taxon="Amazilia.tobacii.amnh.2796" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.tzacatl.16538" spec="Sequence" taxon="Amazilia.tzacatl.16538" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.versicolor.15313" spec="Sequence" taxon="Amazilia.versicolor.15313" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.vfrons.UNAM.OMVP684" spec="Sequence" taxon="Amazilia.vfrons.UNAM.OMVP684" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.violiceps.unam.828" spec="Sequence" taxon="Amazilia.violiceps.unam.828" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.viridicauda.8136" spec="Sequence" taxon="Amazilia.viridicauda.8136" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.viridigaster.7490" spec="Sequence" taxon="Amazilia.viridigaster.7490" totalcount="4" value="A"/>
+        <sequence id="seq_Amazilia.yucatanensis.4090" spec="Sequence" taxon="Amazilia.yucatanensis.4090" totalcount="4" value="A"/>
+        <sequence id="seq_Androdon.aequatorialis.1402" spec="Sequence" taxon="Androdon.aequatorialis.1402" totalcount="4" value="A"/>
+        <sequence id="seq_Anthoc.floriceps.Juan.i1253" spec="Sequence" taxon="Anthoc.floriceps.Juan.i1253" totalcount="4" value="A"/>
+        <sequence id="seq_Anthrac.dominicus.11318" spec="Sequence" taxon="Anthrac.dominicus.11318" totalcount="4" value="A"/>
+        <sequence id="seq_Anthrac.mango.cjc27" spec="Sequence" taxon="Anthrac.mango.cjc27" totalcount="4" value="A"/>
+        <sequence id="seq_Anthrac.nigricollis.9552" spec="Sequence" taxon="Anthrac.nigricollis.9552" totalcount="4" value="A"/>
+        <sequence id="seq_Anthrac.prevostii.nmnhb360" spec="Sequence" taxon="Anthrac.prevostii.nmnhb360" totalcount="4" value="A"/>
+        <sequence id="seq_Anthrac.veraguensis.nmnhB1347" spec="Sequence" taxon="Anthrac.veraguensis.nmnhB1347" totalcount="4" value="A"/>
+        <sequence id="seq_Anthrac.viridigula.fmnh391258" spec="Sequence" taxon="Anthrac.viridigula.fmnh391258" totalcount="4" value="A"/>
+        <sequence id="seq_Anthrac.viridis.11519" spec="Sequence" taxon="Anthrac.viridis.11519" totalcount="4" value="A"/>
+        <sequence id="seq_Aphantochr.cirrochl.fmnh399167" spec="Sequence" taxon="Aphantochr.cirrochl.fmnh399167" totalcount="4" value="A"/>
+        <sequence id="seq_Arch.alexandri.21848" spec="Sequence" taxon="Arch.alexandri.21848" totalcount="4" value="A"/>
+        <sequence id="seq_Archilochus.colubris.5270" spec="Sequence" taxon="Archilochus.colubris.5270" totalcount="4" value="A"/>
+        <sequence id="seq_Atthis.heloisa.fmnh343218" spec="Sequence" taxon="Atthis.heloisa.fmnh343218" totalcount="4" value="A"/>
+        <sequence id="seq_Avocettula.recurv.fmnh334368" spec="Sequence" taxon="Avocettula.recurv.fmnh334368" totalcount="4" value="A"/>
+        <sequence id="seq_Boisson.mathewsii.8130" spec="Sequence" taxon="Boisson.mathewsii.8130" totalcount="4" value="A"/>
+        <sequence id="seq_Boissonn.flavescens.12099" spec="Sequence" taxon="Boissonn.flavescens.12099" totalcount="4" value="A"/>
+        <sequence id="seq_Boissonn.jardini.ANSP15805" spec="Sequence" taxon="Boissonn.jardini.ANSP15805" totalcount="4" value="A"/>
+        <sequence id="seq_CHLORESTES.NOTATUS.4558" spec="Sequence" taxon="CHLORESTES.NOTATUS.4558" totalcount="4" value="A"/>
+        <sequence id="seq_Calliphlox.amet.nmnhb10703" spec="Sequence" taxon="Calliphlox.amet.nmnhb10703" totalcount="4" value="A"/>
+        <sequence id="seq_Calliphlox.bryantae.28180" spec="Sequence" taxon="Calliphlox.bryantae.28180" totalcount="4" value="A"/>
+        <sequence id="seq_Calliphlox.evelynae.b58890" spec="Sequence" taxon="Calliphlox.evelynae.b58890" totalcount="4" value="A"/>
+        <sequence id="seq_Calliphlox.mitchellii.12194" spec="Sequence" taxon="Calliphlox.mitchellii.12194" totalcount="4" value="A"/>
+        <sequence id="seq_Calothorax.lucifer.43113" spec="Sequence" taxon="Calothorax.lucifer.43113" totalcount="4" value="A"/>
+        <sequence id="seq_Calypte.anna.24864" spec="Sequence" taxon="Calypte.anna.24864" totalcount="4" value="A"/>
+        <sequence id="seq_Calypte.costae.21595" spec="Sequence" taxon="Calypte.costae.21595" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.duidae.7443" spec="Sequence" taxon="Campylopt.duidae.7443" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.excellens.fmnh343205" spec="Sequence" taxon="Campylopt.excellens.fmnh343205" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.falcatus.IAVHP.77" spec="Sequence" taxon="Campylopt.falcatus.IAVHP.77" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.hemileucurus.26474" spec="Sequence" taxon="Campylopt.hemileucurus.26474" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.hyperythrus.fmnh339628" spec="Sequence" taxon="Campylopt.hyperythrus.fmnh339628" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.largipennis.4474" spec="Sequence" taxon="Campylopt.largipennis.4474" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.rufus.FMNH434025" spec="Sequence" taxon="Campylopt.rufus.FMNH434025" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopt.villaviscen.5588" spec="Sequence" taxon="Campylopt.villaviscen.5588" totalcount="4" value="A"/>
+        <sequence id="seq_Campylopterus.ensipennis.ce115" spec="Sequence" taxon="Campylopterus.ensipennis.ce115" totalcount="4" value="A"/>
+        <sequence id="seq_Chaetocercus.bombus.5225" spec="Sequence" taxon="Chaetocercus.bombus.5225" totalcount="4" value="A"/>
+        <sequence id="seq_Chaetocercus.mulsant.6301" spec="Sequence" taxon="Chaetocercus.mulsant.6301" totalcount="4" value="A"/>
+        <sequence id="seq_Chalco.stanleyi.nk195810" spec="Sequence" taxon="Chalco.stanleyi.nk195810" totalcount="4" value="A"/>
+        <sequence id="seq_Chalybura.buffonii.26911" spec="Sequence" taxon="Chalybura.buffonii.26911" totalcount="4" value="A"/>
+        <sequence id="seq_Chalybura.urochrysia.28467" spec="Sequence" taxon="Chalybura.urochrysia.28467" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostil.canivetii.burkdab1591" spec="Sequence" taxon="Chlorostil.canivetii.burkdab1591" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostil.ricordii.ansp5570" spec="Sequence" taxon="Chlorostil.ricordii.ansp5570" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilb.assim.b46483" spec="Sequence" taxon="Chlorostilb.assim.b46483" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilb.lucidus.18899" spec="Sequence" taxon="Chlorostilb.lucidus.18899" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilb.maugaeus.11520" spec="Sequence" taxon="Chlorostilb.maugaeus.11520" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilb.melanorhynch.6327" spec="Sequence" taxon="Chlorostilb.melanorhynch.6327" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilb.poortmani.Juan.i4198" spec="Sequence" taxon="Chlorostilb.poortmani.Juan.i4198" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilbon.mellisugus.9450" spec="Sequence" taxon="Chlorostilbon.mellisugus.9450" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilbon.pucherani.fmnh392810" spec="Sequence" taxon="Chlorostilbon.pucherani.fmnh392810" totalcount="4" value="A"/>
+        <sequence id="seq_Chlorostilbon.salvini.JK00_048" spec="Sequence" taxon="Chlorostilbon.salvini.JK00_048" totalcount="4" value="A"/>
+        <sequence id="seq_Chrysolamp.mosquitus.35902" spec="Sequence" taxon="Chrysolamp.mosquitus.35902" totalcount="4" value="A"/>
+        <sequence id="seq_Chrysuronia.oenone.5381" spec="Sequence" taxon="Chrysuronia.oenone.5381" totalcount="4" value="A"/>
+        <sequence id="seq_Clytolaema.rubr.fmnh395404" spec="Sequence" taxon="Clytolaema.rubr.fmnh395404" totalcount="4" value="A"/>
+        <sequence id="seq_Coel.torquata.inca.AMNHDOT2598" spec="Sequence" taxon="Coel.torquata.inca.AMNHDOT2598" totalcount="4" value="A"/>
+        <sequence id="seq_Coelig.helianthea.Juan.2504" spec="Sequence" taxon="Coelig.helianthea.Juan.2504" totalcount="4" value="A"/>
+        <sequence id="seq_Coelig.orina.Juan.i5169" spec="Sequence" taxon="Coelig.orina.Juan.i5169" totalcount="4" value="A"/>
+        <sequence id="seq_Coelig.phalerata.Juan.i485" spec="Sequence" taxon="Coelig.phalerata.Juan.i485" totalcount="4" value="A"/>
+        <sequence id="seq_Coelig.prunellei.Juan42" spec="Sequence" taxon="Coelig.prunellei.Juan42" totalcount="4" value="A"/>
+        <sequence id="seq_Coeligena.bonapartei.IAVHB.4188" spec="Sequence" taxon="Coeligena.bonapartei.IAVHB.4188" totalcount="4" value="A"/>
+        <sequence id="seq_Coeligena.coeligena.8015" spec="Sequence" taxon="Coeligena.coeligena.8015" totalcount="4" value="A"/>
+        <sequence id="seq_Coeligena.iris.31770" spec="Sequence" taxon="Coeligena.iris.31770" totalcount="4" value="A"/>
+        <sequence id="seq_Coeligena.lutetia.340" spec="Sequence" taxon="Coeligena.lutetia.340" totalcount="4" value="A"/>
+        <sequence id="seq_Coeligena.torquata.6230" spec="Sequence" taxon="Coeligena.torquata.6230" totalcount="4" value="A"/>
+        <sequence id="seq_Coeligena.violifer.8200" spec="Sequence" taxon="Coeligena.violifer.8200" totalcount="4" value="A"/>
+        <sequence id="seq_Coeligena.wilsoni.7858" spec="Sequence" taxon="Coeligena.wilsoni.7858" totalcount="4" value="A"/>
+        <sequence id="seq_Colibri.coruscans.6310" spec="Sequence" taxon="Colibri.coruscans.6310" totalcount="4" value="A"/>
+        <sequence id="seq_Colibri.delphinae.5403" spec="Sequence" taxon="Colibri.delphinae.5403" totalcount="4" value="A"/>
+        <sequence id="seq_Colibri.serrirostris.14576" spec="Sequence" taxon="Colibri.serrirostris.14576" totalcount="4" value="A"/>
+        <sequence id="seq_Colibri.sp.b49711" spec="Sequence" taxon="Colibri.sp.b49711" totalcount="4" value="A"/>
+        <sequence id="seq_Colibri.thalassinus.28263" spec="Sequence" taxon="Colibri.thalassinus.28263" totalcount="4" value="A"/>
+        <sequence id="seq_Cyanophaia.bicol.stri.docb17" spec="Sequence" taxon="Cyanophaia.bicol.stri.docb17" totalcount="4" value="A"/>
+        <sequence id="seq_Cynanthus.doubledayi.JK04_339" spec="Sequence" taxon="Cynanthus.doubledayi.JK04_339" totalcount="4" value="A"/>
+        <sequence id="seq_Cynanthus.latirostris.33304" spec="Sequence" taxon="Cynanthus.latirostris.33304" totalcount="4" value="A"/>
+        <sequence id="seq_Cynanthus.sordidus.22004" spec="Sequence" taxon="Cynanthus.sordidus.22004" totalcount="4" value="A"/>
+        <sequence id="seq_Damophila.julie.16556" spec="Sequence" taxon="Damophila.julie.16556" totalcount="4" value="A"/>
+        <sequence id="seq_Discosura.conversii.16064" spec="Sequence" taxon="Discosura.conversii.16064" totalcount="4" value="A"/>
+        <sequence id="seq_Discosura.langsdorfii.9633" spec="Sequence" taxon="Discosura.langsdorfii.9633" totalcount="4" value="A"/>
+        <sequence id="seq_Discosura.longic.nmnh5265" spec="Sequence" taxon="Discosura.longic.nmnh5265" totalcount="4" value="A"/>
+        <sequence id="seq_Discosura.popelairii.5950" spec="Sequence" taxon="Discosura.popelairii.5950" totalcount="4" value="A"/>
+        <sequence id="seq_Doricha.eliza.ku4435" spec="Sequence" taxon="Doricha.eliza.ku4435" totalcount="4" value="A"/>
+        <sequence id="seq_Doryfera.johannae.1728" spec="Sequence" taxon="Doryfera.johannae.1728" totalcount="4" value="A"/>
+        <sequence id="seq_Doryfera.ludovicae.8000" spec="Sequence" taxon="Doryfera.ludovicae.8000" totalcount="4" value="A"/>
+        <sequence id="seq_Elvira.chionura.26446" spec="Sequence" taxon="Elvira.chionura.26446" totalcount="4" value="A"/>
+        <sequence id="seq_Elvira.cupreiceps.16066" spec="Sequence" taxon="Elvira.cupreiceps.16066" totalcount="4" value="A"/>
+        <sequence id="seq_Ensifera.ensifera.8224" spec="Sequence" taxon="Ensifera.ensifera.8224" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocn.glaucopoides.uwbm77170" spec="Sequence" taxon="Eriocn.glaucopoides.uwbm77170" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocnem.cupreioventris.JPLV30" spec="Sequence" taxon="Eriocnem.cupreioventris.JPLV30" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocnem.nigrivestis.zmc114629" spec="Sequence" taxon="Eriocnem.nigrivestis.zmc114629" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocnemis.alinae.1805" spec="Sequence" taxon="Eriocnemis.alinae.1805" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocnemis.derbyi.ANSP15698" spec="Sequence" taxon="Eriocnemis.derbyi.ANSP15698" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocnemis.luciani.6337" spec="Sequence" taxon="Eriocnemis.luciani.6337" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocnemis.mosquera.6335" spec="Sequence" taxon="Eriocnemis.mosquera.6335" totalcount="4" value="A"/>
+        <sequence id="seq_Eriocnemis.vestitus.324" spec="Sequence" taxon="Eriocnemis.vestitus.324" totalcount="4" value="A"/>
+        <sequence id="seq_Eugenes.fulgens.9964" spec="Sequence" taxon="Eugenes.fulgens.9964" totalcount="4" value="A"/>
+        <sequence id="seq_Eulampus.holosericeus.nmnh2121" spec="Sequence" taxon="Eulampus.holosericeus.nmnh2121" totalcount="4" value="A"/>
+        <sequence id="seq_Eulampus.jugularis.stridoej413" spec="Sequence" taxon="Eulampus.jugularis.stridoej413" totalcount="4" value="A"/>
+        <sequence id="seq_Eulidia.yarrellii_Wouter" spec="Sequence" taxon="Eulidia.yarrellii_Wouter" totalcount="4" value="A"/>
+        <sequence id="seq_Eupetomena.macroura.15299" spec="Sequence" taxon="Eupetomena.macroura.15299" totalcount="4" value="A"/>
+        <sequence id="seq_Eupherusa.cyanophrys.21997" spec="Sequence" taxon="Eupherusa.cyanophrys.21997" totalcount="4" value="A"/>
+        <sequence id="seq_Eupherusa.eximia.21998" spec="Sequence" taxon="Eupherusa.eximia.21998" totalcount="4" value="A"/>
+        <sequence id="seq_Eupherusa.nigriventris.16055" spec="Sequence" taxon="Eupherusa.nigriventris.16055" totalcount="4" value="A"/>
+        <sequence id="seq_Eupherusa.poliocerca.21999" spec="Sequence" taxon="Eupherusa.poliocerca.21999" totalcount="4" value="A"/>
+        <sequence id="seq_Eutoxeres.aquila.2110" spec="Sequence" taxon="Eutoxeres.aquila.2110" totalcount="4" value="A"/>
+        <sequence id="seq_Eutoxeres.condamini.8094" spec="Sequence" taxon="Eutoxeres.condamini.8094" totalcount="4" value="A"/>
+        <sequence id="seq_Florisuga.fusca.16936" spec="Sequence" taxon="Florisuga.fusca.16936" totalcount="4" value="A"/>
+        <sequence id="seq_Florisuga.mellivora.9646" spec="Sequence" taxon="Florisuga.mellivora.9646" totalcount="4" value="A"/>
+        <sequence id="seq_Glaucis.aeneus.nmnhb368" spec="Sequence" taxon="Glaucis.aeneus.nmnhb368" totalcount="4" value="A"/>
+        <sequence id="seq_Glaucis.hirsuta.28468" spec="Sequence" taxon="Glaucis.hirsuta.28468" totalcount="4" value="A"/>
+        <sequence id="seq_Goethalsia.bella.2111" spec="Sequence" taxon="Goethalsia.bella.2111" totalcount="4" value="A"/>
+        <sequence id="seq_Goldmania.violiceps.28405" spec="Sequence" taxon="Goldmania.violiceps.28405" totalcount="4" value="A"/>
+        <sequence id="seq_Haplophaedia.aureliae.32971" spec="Sequence" taxon="Haplophaedia.aureliae.32971" totalcount="4" value="A"/>
+        <sequence id="seq_Haplophaedia.lugens.30032" spec="Sequence" taxon="Haplophaedia.lugens.30032" totalcount="4" value="A"/>
+        <sequence id="seq_Heliactin.bilopha.14845ak1.c1" spec="Sequence" taxon="Heliactin.bilopha.14845ak1.c1" totalcount="4" value="A"/>
+        <sequence id="seq_Heliangelus.amethysticol.6246" spec="Sequence" taxon="Heliangelus.amethysticol.6246" totalcount="4" value="A"/>
+        <sequence id="seq_Heliangelus.exortis.JVLP40" spec="Sequence" taxon="Heliangelus.exortis.JVLP40" totalcount="4" value="A"/>
+        <sequence id="seq_Heliangelus.micraster.ANSP26261" spec="Sequence" taxon="Heliangelus.micraster.ANSP26261" totalcount="4" value="A"/>
+        <sequence id="seq_Heliangelus.regalis.5532" spec="Sequence" taxon="Heliangelus.regalis.5532" totalcount="4" value="A"/>
+        <sequence id="seq_Heliangelus.strophianus.6296" spec="Sequence" taxon="Heliangelus.strophianus.6296" totalcount="4" value="A"/>
+        <sequence id="seq_Heliangelus.viola.ANSP16990" spec="Sequence" taxon="Heliangelus.viola.ANSP16990" totalcount="4" value="A"/>
+        <sequence id="seq_Heliangelus.zusii" spec="Sequence" taxon="Heliangelus.zusii" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.aurescens.6789" spec="Sequence" taxon="Heliodoxa.aurescens.6789" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.branickii.1996" spec="Sequence" taxon="Heliodoxa.branickii.1996" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.gularis.5428" spec="Sequence" taxon="Heliodoxa.gularis.5428" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.imperatrix.12088" spec="Sequence" taxon="Heliodoxa.imperatrix.12088" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.jacula.11940" spec="Sequence" taxon="Heliodoxa.jacula.11940" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.leadbeateri.6036" spec="Sequence" taxon="Heliodoxa.leadbeateri.6036" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.rubinoides.1651" spec="Sequence" taxon="Heliodoxa.rubinoides.1651" totalcount="4" value="A"/>
+        <sequence id="seq_Heliodoxa.xanthogonys.7415" spec="Sequence" taxon="Heliodoxa.xanthogonys.7415" totalcount="4" value="A"/>
+        <sequence id="seq_Heliomaster.constan.burdab1903" spec="Sequence" taxon="Heliomaster.constan.burdab1903" totalcount="4" value="A"/>
+        <sequence id="seq_Heliomaster.furcifer.6709" spec="Sequence" taxon="Heliomaster.furcifer.6709" totalcount="4" value="A"/>
+        <sequence id="seq_Heliomaster.longirostris.18268" spec="Sequence" taxon="Heliomaster.longirostris.18268" totalcount="4" value="A"/>
+        <sequence id="seq_Heliomaster.squamos.fmnh392806" spec="Sequence" taxon="Heliomaster.squamos.fmnh392806" totalcount="4" value="A"/>
+        <sequence id="seq_Heliothryx.aurita.6913" spec="Sequence" taxon="Heliothryx.aurita.6913" totalcount="4" value="A"/>
+        <sequence id="seq_Heliothryx.barroti.12039" spec="Sequence" taxon="Heliothryx.barroti.12039" totalcount="4" value="A"/>
+        <sequence id="seq_Hylocharis.chrysura.1503" spec="Sequence" taxon="Hylocharis.chrysura.1503" totalcount="4" value="A"/>
+        <sequence id="seq_Hylocharis.cyanus.rostrata.9547" spec="Sequence" taxon="Hylocharis.cyanus.rostrata.9547" totalcount="4" value="A"/>
+        <sequence id="seq_Hylocharis.eliciae.16074" spec="Sequence" taxon="Hylocharis.eliciae.16074" totalcount="4" value="A"/>
+        <sequence id="seq_Hylocharis.grayi.ansp.5064" spec="Sequence" taxon="Hylocharis.grayi.ansp.5064" totalcount="4" value="A"/>
+        <sequence id="seq_Hylocharis.leucotis.22003" spec="Sequence" taxon="Hylocharis.leucotis.22003" totalcount="4" value="A"/>
+        <sequence id="seq_Hylocharis.sapphirina.12912" spec="Sequence" taxon="Hylocharis.sapphirina.12912" totalcount="4" value="A"/>
+        <sequence id="seq_Hylocharis.xantusii.3794" spec="Sequence" taxon="Hylocharis.xantusii.3794" totalcount="4" value="A"/>
+        <sequence id="seq_Klais.guimeti.6168" spec="Sequence" taxon="Klais.guimeti.6168" totalcount="4" value="A"/>
+        <sequence id="seq_Lafresnaya.lafresnayi.32576" spec="Sequence" taxon="Lafresnaya.lafresnayi.32576" totalcount="4" value="A"/>
+        <sequence id="seq_Lamporn.ameth.fmnh.343217" spec="Sequence" taxon="Lamporn.ameth.fmnh.343217" totalcount="4" value="A"/>
+        <sequence id="seq_Lamporn.castaneovent.28257" spec="Sequence" taxon="Lamporn.castaneovent.28257" totalcount="4" value="A"/>
+        <sequence id="seq_Lamporn.sybillae.burkedab1362" spec="Sequence" taxon="Lamporn.sybillae.burkedab1362" totalcount="4" value="A"/>
+        <sequence id="seq_Lampornis.calolaemus.28169" spec="Sequence" taxon="Lampornis.calolaemus.28169" totalcount="4" value="A"/>
+        <sequence id="seq_Lampornis.cinereicauda.19791" spec="Sequence" taxon="Lampornis.cinereicauda.19791" totalcount="4" value="A"/>
+        <sequence id="seq_Lampornis.clemenciae.10119" spec="Sequence" taxon="Lampornis.clemenciae.10119" totalcount="4" value="A"/>
+        <sequence id="seq_Lampornis.hemileucus.16006" spec="Sequence" taxon="Lampornis.hemileucus.16006" totalcount="4" value="A"/>
+        <sequence id="seq_Lampornis.viridipallens.19268" spec="Sequence" taxon="Lampornis.viridipallens.19268" totalcount="4" value="A"/>
+        <sequence id="seq_Lamprolaima.rhami.22001" spec="Sequence" taxon="Lamprolaima.rhami.22001" totalcount="4" value="A"/>
+        <sequence id="seq_Lepidopyga.coeruleo.29053" spec="Sequence" taxon="Lepidopyga.coeruleo.29053" totalcount="4" value="A"/>
+        <sequence id="seq_Lepidopyga.goudoti.jcc" spec="Sequence" taxon="Lepidopyga.goudoti.jcc" totalcount="4" value="A"/>
+        <sequence id="seq_Lesbia.nuna.3615" spec="Sequence" taxon="Lesbia.nuna.3615" totalcount="4" value="A"/>
+        <sequence id="seq_Lesbia.victoriae.zmc.113657" spec="Sequence" taxon="Lesbia.victoriae.zmc.113657" totalcount="4" value="A"/>
+        <sequence id="seq_Leucippus.baeri.5232" spec="Sequence" taxon="Leucippus.baeri.5232" totalcount="4" value="A"/>
+        <sequence id="seq_Leucippus.chlorocercus.7264" spec="Sequence" taxon="Leucippus.chlorocercus.7264" totalcount="4" value="A"/>
+        <sequence id="seq_Leucippus.fallax.striLFA6" spec="Sequence" taxon="Leucippus.fallax.striLFA6" totalcount="4" value="A"/>
+        <sequence id="seq_Leucippus.taczanowski.33447" spec="Sequence" taxon="Leucippus.taczanowski.33447" totalcount="4" value="A"/>
+        <sequence id="seq_Leucochloris.albic.fmnh395730" spec="Sequence" taxon="Leucochloris.albic.fmnh395730" totalcount="4" value="A"/>
+        <sequence id="seq_Lodiggesia.mirabilis.44698" spec="Sequence" taxon="Lodiggesia.mirabilis.44698" totalcount="4" value="A"/>
+        <sequence id="seq_Lophornis.chalybeus.9399" spec="Sequence" taxon="Lophornis.chalybeus.9399" totalcount="4" value="A"/>
+        <sequence id="seq_Lophornis.delattrei.22644" spec="Sequence" taxon="Lophornis.delattrei.22644" totalcount="4" value="A"/>
+        <sequence id="seq_Lophornis.pavoninus.ku6045" spec="Sequence" taxon="Lophornis.pavoninus.ku6045" totalcount="4" value="A"/>
+        <sequence id="seq_Mellisuga.minima.cjc33" spec="Sequence" taxon="Mellisuga.minima.cjc33" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.aeneocauda.1236" spec="Sequence" taxon="Metallura.aeneocauda.1236" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.baroni.zmc113658" spec="Sequence" taxon="Metallura.baroni.zmc113658" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.eupogon.8293" spec="Sequence" taxon="Metallura.eupogon.8293" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.odomae.353" spec="Sequence" taxon="Metallura.odomae.353" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.phoebe.103876" spec="Sequence" taxon="Metallura.phoebe.103876" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.theresiae.3534" spec="Sequence" taxon="Metallura.theresiae.3534" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.tyrianthina.6272" spec="Sequence" taxon="Metallura.tyrianthina.6272" totalcount="4" value="A"/>
+        <sequence id="seq_Metallura.williami.5939" spec="Sequence" taxon="Metallura.williami.5939" totalcount="4" value="A"/>
+        <sequence id="seq_Microchera.albocor.35764" spec="Sequence" taxon="Microchera.albocor.35764" totalcount="4" value="A"/>
+        <sequence id="seq_Microstilbon.burmeist.zmc.114832" spec="Sequence" taxon="Microstilbon.burmeist.zmc.114832" totalcount="4" value="A"/>
+        <sequence id="seq_Myrtis.fanny.3592" spec="Sequence" taxon="Myrtis.fanny.3592" totalcount="4" value="A"/>
+        <sequence id="seq_Ocreatus.underwoodii.22594" spec="Sequence" taxon="Ocreatus.underwoodii.22594" totalcount="4" value="A"/>
+        <sequence id="seq_Opisthopr.euryptera.zmc115166" spec="Sequence" taxon="Opisthopr.euryptera.zmc115166" totalcount="4" value="A"/>
+        <sequence id="seq_Oreonympha.nobilis.fmnh324115" spec="Sequence" taxon="Oreonympha.nobilis.fmnh324115" totalcount="4" value="A"/>
+        <sequence id="seq_Oreotroch.stolzmani.ANSP19518" spec="Sequence" taxon="Oreotroch.stolzmani.ANSP19518" totalcount="4" value="A"/>
+        <sequence id="seq_Orthorhyncus.cristatus.11526" spec="Sequence" taxon="Orthorhyncus.cristatus.11526" totalcount="4" value="A"/>
+        <sequence id="seq_Oxypogon.guerini.zmc115370" spec="Sequence" taxon="Oxypogon.guerini.zmc115370" totalcount="4" value="A"/>
+        <sequence id="seq_Patagona.gigas.6303" spec="Sequence" taxon="Patagona.gigas.6303" totalcount="4" value="A"/>
+        <sequence id="seq_Phaeochroa.cuvierii.26913" spec="Sequence" taxon="Phaeochroa.cuvierii.26913" totalcount="4" value="A"/>
+        <sequence id="seq_Phaeth.longirostris.28503" spec="Sequence" taxon="Phaeth.longirostris.28503" totalcount="4" value="A"/>
+        <sequence id="seq_Phaeth.longuemareus.35952a" spec="Sequence" taxon="Phaeth.longuemareus.35952a" totalcount="4" value="A"/>
+        <sequence id="seq_Phaeth.supercil.b48308" spec="Sequence" taxon="Phaeth.supercil.b48308" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethorn.eurynome.fmnh395410" spec="Sequence" taxon="Phaethorn.eurynome.fmnh395410" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethorn.koepckeae.5398" spec="Sequence" taxon="Phaethorn.koepckeae.5398" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethorn.rupurumii.20240" spec="Sequence" taxon="Phaethorn.rupurumii.20240" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethorn.syrmat.12138" spec="Sequence" taxon="Phaethorn.syrmat.12138" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.anthophilus.umt594" spec="Sequence" taxon="Phaethornis.anthophilus.umt594" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.atrimentalis.1969" spec="Sequence" taxon="Phaethornis.atrimentalis.1969" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.augusti.um.t604" spec="Sequence" taxon="Phaethornis.augusti.um.t604" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.bourcieri.11017" spec="Sequence" taxon="Phaethornis.bourcieri.11017" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.griseo.5571" spec="Sequence" taxon="Phaethornis.griseo.5571" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.guy.35966" spec="Sequence" taxon="Phaethornis.guy.35966" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.hispidus.10629" spec="Sequence" taxon="Phaethornis.hispidus.10629" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.malaris.27511" spec="Sequence" taxon="Phaethornis.malaris.27511" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.mexicanus.JK07_108" spec="Sequence" taxon="Phaethornis.mexicanus.JK07_108" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.nattereri.12859" spec="Sequence" taxon="Phaethornis.nattereri.12859" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.philippii.8868" spec="Sequence" taxon="Phaethornis.philippii.8868" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.pretrei.14702" spec="Sequence" taxon="Phaethornis.pretrei.14702" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.ruber.9481" spec="Sequence" taxon="Phaethornis.ruber.9481" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.rupurumii.iavhb4463" spec="Sequence" taxon="Phaethornis.rupurumii.iavhb4463" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.striigularis.b28411" spec="Sequence" taxon="Phaethornis.striigularis.b28411" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.subochraceus.6544" spec="Sequence" taxon="Phaethornis.subochraceus.6544" totalcount="4" value="A"/>
+        <sequence id="seq_Phaethornis.yaruqui.7812" spec="Sequence" taxon="Phaethornis.yaruqui.7812" totalcount="4" value="A"/>
+        <sequence id="seq_Phlogophilus.harteri.KU18424" spec="Sequence" taxon="Phlogophilus.harteri.KU18424" totalcount="4" value="A"/>
+        <sequence id="seq_Polyonymus.caroli.15503" spec="Sequence" taxon="Polyonymus.caroli.15503" totalcount="4" value="A"/>
+        <sequence id="seq_Polytmus.guainumbi.6691" spec="Sequence" taxon="Polytmus.guainumbi.6691" totalcount="4" value="A"/>
+        <sequence id="seq_Polytmus.milleri.amnh.prs476" spec="Sequence" taxon="Polytmus.milleri.amnh.prs476" totalcount="4" value="A"/>
+        <sequence id="seq_Polytmus.theresiae.nmnh10307" spec="Sequence" taxon="Polytmus.theresiae.nmnh10307" totalcount="4" value="A"/>
+        <sequence id="seq_Pterophanes.cyanopterus.1296" spec="Sequence" taxon="Pterophanes.cyanopterus.1296" totalcount="4" value="A"/>
+        <sequence id="seq_Ramphodon.naevius.zmc.115250" spec="Sequence" taxon="Ramphodon.naevius.zmc.115250" totalcount="4" value="A"/>
+        <sequence id="seq_Ramphomicron.microrhyn.8376" spec="Sequence" taxon="Ramphomicron.microrhyn.8376" totalcount="4" value="A"/>
+        <sequence id="seq_Rhodopis.vesper.jose2" spec="Sequence" taxon="Rhodopis.vesper.jose2" totalcount="4" value="A"/>
+        <sequence id="seq_Sappho.sparganura.1195" spec="Sequence" taxon="Sappho.sparganura.1195" totalcount="4" value="A"/>
+        <sequence id="seq_Schistes.geoffroyi.6300" spec="Sequence" taxon="Schistes.geoffroyi.6300" totalcount="4" value="A"/>
+        <sequence id="seq_Selasphorus.flammula.28269" spec="Sequence" taxon="Selasphorus.flammula.28269" totalcount="4" value="A"/>
+        <sequence id="seq_Selasphorus.platycercus.23428" spec="Sequence" taxon="Selasphorus.platycercus.23428" totalcount="4" value="A"/>
+        <sequence id="seq_Selasphorus.rufus.MVZ180196" spec="Sequence" taxon="Selasphorus.rufus.MVZ180196" totalcount="4" value="A"/>
+        <sequence id="seq_Selasphorus.sasin.33988" spec="Sequence" taxon="Selasphorus.sasin.33988" totalcount="4" value="A"/>
+        <sequence id="seq_Selasphorus.scintilla.16266" spec="Sequence" taxon="Selasphorus.scintilla.16266" totalcount="4" value="A"/>
+        <sequence id="seq_Selasphorus.scintilla.B52913" spec="Sequence" taxon="Selasphorus.scintilla.B52913" totalcount="4" value="A"/>
+        <sequence id="seq_Sephanoides.fernandensis.mr620" spec="Sequence" taxon="Sephanoides.fernandensis.mr620" totalcount="4" value="A"/>
+        <sequence id="seq_Sephanoides.sephaniodes.amnh1126" spec="Sequence" taxon="Sephanoides.sephaniodes.amnh1126" totalcount="4" value="A"/>
+        <sequence id="seq_Stellula.calliope.B16854" spec="Sequence" taxon="Stellula.calliope.B16854" totalcount="4" value="A"/>
+        <sequence id="seq_Stephanoxis.lalandi.25958" spec="Sequence" taxon="Stephanoxis.lalandi.25958" totalcount="4" value="A"/>
+        <sequence id="seq_Taphrolesbia.griseivent.10388" spec="Sequence" taxon="Taphrolesbia.griseivent.10388" totalcount="4" value="A"/>
+        <sequence id="seq_Taphrospilus.hypostictus.5465" spec="Sequence" taxon="Taphrospilus.hypostictus.5465" totalcount="4" value="A"/>
+        <sequence id="seq_Thalur.glaucopus.fmnh395402" spec="Sequence" taxon="Thalur.glaucopus.fmnh395402" totalcount="4" value="A"/>
+        <sequence id="seq_Thalurania.colombica.11793" spec="Sequence" taxon="Thalurania.colombica.11793" totalcount="4" value="A"/>
+        <sequence id="seq_Thalurania.fannyi.11728" spec="Sequence" taxon="Thalurania.fannyi.11728" totalcount="4" value="A"/>
+        <sequence id="seq_Thalurania.furcata.2807" spec="Sequence" taxon="Thalurania.furcata.2807" totalcount="4" value="A"/>
+        <sequence id="seq_Thalurania.ridgwayi.FMNH_b225" spec="Sequence" taxon="Thalurania.ridgwayi.FMNH_b225" totalcount="4" value="A"/>
+        <sequence id="seq_Thalurania.watertoni.fmnh392348" spec="Sequence" taxon="Thalurania.watertoni.fmnh392348" totalcount="4" value="A"/>
+        <sequence id="seq_Thaumastura.cora.14278" spec="Sequence" taxon="Thaumastura.cora.14278" totalcount="4" value="A"/>
+        <sequence id="seq_Threnetes.leucurus.2673" spec="Sequence" taxon="Threnetes.leucurus.2673" totalcount="4" value="A"/>
+        <sequence id="seq_Threnetes.ruckeri.28170" spec="Sequence" taxon="Threnetes.ruckeri.28170" totalcount="4" value="A"/>
+        <sequence id="seq_Tilmatura.dupontii.KU8188" spec="Sequence" taxon="Tilmatura.dupontii.KU8188" totalcount="4" value="A"/>
+        <sequence id="seq_Topaza.pella.35362" spec="Sequence" taxon="Topaza.pella.35362" totalcount="4" value="A"/>
+        <sequence id="seq_Topaza.pyra.b42167" spec="Sequence" taxon="Topaza.pyra.b42167" totalcount="4" value="A"/>
+        <sequence id="seq_Troch.scitulus.fmnh331062" spec="Sequence" taxon="Troch.scitulus.fmnh331062" totalcount="4" value="A"/>
+        <sequence id="seq_Trochilus.polytmus.cjc31" spec="Sequence" taxon="Trochilus.polytmus.cjc31" totalcount="4" value="A"/>
+        <sequence id="seq_Urochroa.bougueri.zmc114654" spec="Sequence" taxon="Urochroa.bougueri.zmc114654" totalcount="4" value="A"/>
+        <sequence id="seq_Urosticte.benjamani.5546" spec="Sequence" taxon="Urosticte.benjamani.5546" totalcount="4" value="A"/>
+        <sequence id="seq_Urosticte.ruficrissa.Juan.i2325" spec="Sequence" taxon="Urosticte.ruficrissa.Juan.i2325" totalcount="4" value="A"/>
+        <sequence id="seq_chalco.olivaceum.103924" spec="Sequence" taxon="chalco.olivaceum.103924" totalcount="4" value="A"/>
+        <sequence id="seq_chalcostigma.herrani.6277" spec="Sequence" taxon="chalcostigma.herrani.6277" totalcount="4" value="A"/>
+        <sequence id="seq_chalcostigma.ruficeps.1293" spec="Sequence" taxon="chalcostigma.ruficeps.1293" totalcount="4" value="A"/>
+        <sequence id="seq_chlorostil.swains.amnhnkk1017" spec="Sequence" taxon="chlorostil.swains.amnhnkk1017" totalcount="4" value="A"/>
+        <sequence id="seq_heliodoxa.schreibersii.5440" spec="Sequence" taxon="heliodoxa.schreibersii.5440" totalcount="4" value="A"/>
+        <sequence id="seq_myrmia.micrura.5233" spec="Sequence" taxon="myrmia.micrura.5233" totalcount="4" value="A"/>
+        <sequence id="seq_oreotroch.chimborazo.zmc114549" spec="Sequence" taxon="oreotroch.chimborazo.zmc114549" totalcount="4" value="A"/>
+        <sequence id="seq_oreotroch.estella.103835" spec="Sequence" taxon="oreotroch.estella.103835" totalcount="4" value="A"/>
+        <sequence id="seq_oreotroch.melanogaster.2077" spec="Sequence" taxon="oreotroch.melanogaster.2077" totalcount="4" value="A"/>
+        <sequence id="seq_panterpe.insignis.16264" spec="Sequence" taxon="panterpe.insignis.16264" totalcount="4" value="A"/>
+    </data>
 
+    <map name="Uniform" >beast.base.inference.distribution.Uniform</map>
 
-    
+    <map name="Exponential" >beast.base.inference.distribution.Exponential</map>
 
+    <map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
 
-    
+    <map name="Normal" >beast.base.inference.distribution.Normal</map>
 
+    <map name="Beta" >beast.base.inference.distribution.Beta</map>
 
-    
-<map name="Uniform" >beast.math.distributions.Uniform</map>
-<map name="Exponential" >beast.math.distributions.Exponential</map>
-<map name="LogNormal" >beast.math.distributions.LogNormalDistributionModel</map>
-<map name="Normal" >beast.math.distributions.Normal</map>
-<map name="Beta" >beast.math.distributions.Beta</map>
-<map name="Gamma" >beast.math.distributions.Gamma</map>
-<map name="LaplaceDistribution" >beast.math.distributions.LaplaceDistribution</map>
-<map name="prior" >beast.math.distributions.Prior</map>
-<map name="InverseGamma" >beast.math.distributions.InverseGamma</map>
-<map name="OneOnX" >beast.math.distributions.OneOnX</map>
+    <map name="Gamma" >beast.base.inference.distribution.Gamma</map>
 
+    <map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
 
-<run id="mcmc" spec="MCMC" chainLength="10000000">
-    <state id="state" spec="State" storeEvery="5000">
-        <stateNode id="Tree.t:hummingbirds" spec="beast.evolution.tree.MultiRateTree" estimateTopology="false">
-            <initial id="NewTree.t:hummingbirds" spec="beast.evolution.tree.MultiRateTreeFromNewick" isLabelledNewick="true" newick="((((Florisuga.mellivora.9646:4.983058142,Florisuga.fusca.16936:4.983058142):13.81762842,(Topaza.pella.35362:2.987612158,Topaza.pyra.b42167:2.987612158):15.8130744):2.78182628,((Eutoxeres.aquila.2110:13.60374398,Eutoxeres.condamini.8094:13.60374398):5.988055471,(Ramphodon.naevius.zmc.115250:14.89407155,(((Threnetes.ruckeri.28170:4.520826203,Threnetes.leucurus.2673:4.520826203):3.072972949,(Glaucis.hirsuta.28468:3.83689172,Glaucis.aeneus.nmnhb368:3.83689172):3.756907432):5.458735986,((Phaethorn.syrmat.12138:7.040404114,((Phaeth.longirostris.28503:2.268687734,Phaethornis.mexicanus.JK07_108:2.268687734):2.98296727,((Phaethornis.yaruqui.7812:3.776143236,Phaethornis.guy.35966:3.776143236):0.7606019431,(Phaethornis.malaris.27511:3.771312668,Phaeth.supercil.b48308:3.771312668):0.7654325109):0.7149098249):1.78874911):0.7325615839,((((Phaethornis.augusti.um.t604:1.581598024,Phaethornis.pretrei.14702:1.581598024):3.445504643,(Phaethorn.eurynome.fmnh395410:4.448359371,Phaethornis.subochraceus.6544:4.448359371):0.5787432967):1.995422378,((Phaethornis.hispidus.10629:0.1912514909,Phaethornis.bourcieri.11017:0.1912514909):3.128678882,(Phaethorn.koepckeae.5398:2.071977655,Phaethornis.philippii.8868:2.071977655):1.247952717):3.702594672):0.5038875018,(Phaethornis.anthophilus.umt594:5.550250156,(((Phaethornis.nattereri.12859:0.6989011673,Phaeth.longuemareus.35952a:0.6989011673):0.07463324535,(Phaethorn.rupurumii.20240:0.1761642891,Phaethornis.rupurumii.iavhb4463:0.1761642891):0.5973701235):2.67737033,((Phaethornis.atrimentalis.1969:1.542718359,Phaethornis.ruber.9481:1.542718359):0.9332356554,(Phaethornis.griseo.5571:1.845689557,Phaethornis.striigularis.b28411:1.845689557):0.6302644574):0.974950728):2.099345414):1.976162391):0.2465531508):5.27956944):1.841536411):4.697727897):1.990713397):0.8030054618,((((Doryfera.johannae.1728:5.583194471,Doryfera.ludovicae.8000:5.583194471):7.204944485,(Schistes.geoffroyi.6300:11.77392866,(Colibri.serrirostris.14576:6.589396825,(Colibri.coruscans.6310:5.101920046,(Colibri.delphinae.5403:4.446809621,(Colibri.thalassinus.28263:2.556868353,Colibri.sp.b49711:2.556868353):1.889941268):0.6551104254):1.487476779):5.184531832):1.014210299):5.76138279,((Heliactin.bilopha.14845ak1.c1:15.27955571,(Androdon.aequatorialis.1402:13.9006761,(Heliothryx.barroti.12039:1.711631558,Heliothryx.aurita.6913:1.711631558):12.18904454):1.378879607):2.746891731,((Polytmus.guainumbi.6691:6.810609415,(Polytmus.milleri.amnh.prs476:3.444775822,Polytmus.theresiae.nmnh10307:3.444775822):3.365833593):4.954677336,(Avocettula.recurv.fmnh334368:9.838080985,(Chrysolamp.mosquitus.35902:6.46698554,(Anthrac.mango.cjc27:4.660601434,((Anthrac.nigricollis.9552:3.501005017,(Anthrac.viridigula.fmnh391258:1.379233158,(Anthrac.veraguensis.nmnhB1347:0.3719790513,Anthrac.prevostii.nmnhb360:0.3719790513):1.007254107):2.121771859):0.788979832,(Anthrac.dominicus.11318:3.647439497,(Anthrac.viridis.11519:2.526067187,(Eulampus.holosericeus.nmnh2121:1.063982013,Eulampus.jugularis.stridoej413:1.063982013):1.462085174):1.12137231):0.6425453523):0.3706165843):1.806384106):3.371095445):1.927205765):6.261160687):0.5230743081):1.5234818,(((((Haplophaedia.lugens.30032:1.26627614,Haplophaedia.aureliae.32971:1.26627614):10.21522276,((Eriocnemis.alinae.1805:7.215116008,(Eriocnemis.luciani.6337:3.766104194,(Eriocnemis.derbyi.ANSP15698:3.274435103,Eriocnem.cupreioventris.JPLV30:3.274435103):0.491669091):3.449011814):1.091813262,((Lodiggesia.mirabilis.44698:5.096872351,Eriocn.glaucopoides.uwbm77170:5.096872351):0.8677176089,(Eriocnemis.mosquera.6335:2.662977636,(Eriocnemis.vestitus.324:0.9784744877,Eriocnem.nigrivestis.zmc114629:0.9784744877):1.684503148):3.301612323):2.342339311):3.174569631):2.348433693,((Lafresnaya.lafresnayi.32576:11.83844458,(Aglaeactis.cupripennis.6304:1.288792513,(Aglaeactis.pamela.106743:0.5026909382,Aglaeactis.castelnaudii.8215:0.5026909382):0.7861015748):10.54965207):1.356892144,((((Ensifera.ensifera.8224:10.21230199,Pterophanes.cyanopterus.1296:10.21230199):1.625966458,((Boissonn.jardini.ANSP15805:3.741949145,(Boisson.mathewsii.8130:2.683018736,Boissonn.flavescens.12099:2.683018736):1.05893041):6.371992942,(Ocreatus.underwoodii.22594:6.239092136,(Urosticte.benjamani.5546:0.1800615324,Urosticte.ruficrissa.Juan.i2325:0.1800615324):6.059030604):3.874849951):1.724326357):0.5522489052,(Urochroa.bougueri.zmc114654:11.29493325,(heliodoxa.schreibersii.5440:10.58506303,((Heliodoxa.xanthogonys.7415:6.581378039,(Heliodoxa.gularis.5428:2.639919879,Heliodoxa.branickii.1996:2.639919879):3.94145816):3.306548408,((Clytolaema.rubr.fmnh395404:7.654451251,Heliodoxa.aurescens.6789:7.654451251):1.529775216,((Heliodoxa.imperatrix.12088:4.600810376,Heliodoxa.rubinoides.1651:4.600810376):0.4850432233,(Heliodoxa.leadbeateri.6036:2.868644888,Heliodoxa.jacula.11940:2.868644888):2.217208711):4.098372868):0.7036999795):0.6971365849):0.7098702186):1.095584099):0.4065088099,((Coelig.prunellei.Juan42:5.055596788,(Coeligena.wilsoni.7858:4.429089731,Coeligena.coeligena.8015:4.429089731):0.6265070577):4.599971678,((Coel.torquata.inca.AMNHDOT2598:1.930454994,Coeligena.torquata.6230:1.930454994):4.171989889,(Coeligena.violifer.8200:4.772037487,(Coeligena.iris.31770:3.203338608,(Coelig.phalerata.Juan.i485:2.3049782,((Coeligena.bonapartei.IAVHB.4188:0.2063775451,Coelig.helianthea.Juan.2504:0.2063775451):0.6453017428,(Coeligena.lutetia.340:0.5852141759,Coelig.orina.Juan.i5169:0.5852141759):0.266465112):1.453298913):0.8983604079):1.568698878):1.330407396):3.553123583):3.141457693):0.3983105689):0.6345958663):1.671283968,((((Lophornis.pavoninus.ku6045:2.898214356,(Lophornis.chalybeus.9399:2.267283906,Lophornis.delattrei.22644:2.267283906):0.6309304498):4.912831576,(Discosura.longic.nmnh5265:4.997402833,(Discosura.conversii.16064:2.94499952,(Discosura.langsdorfii.9633:0.4397391067,Discosura.popelairii.5950:0.4397391067):2.505260414):2.052403313):2.813643099):5.58372834,(Sephanoides.fernandensis.mr620:3.162029599,Sephanoides.sephaniodes.amnh1126:3.162029599):10.23274467):0.8195758973,(Phlogophilus.harteri.KU18424:13.21089492,((Heliangelus.regalis.5532:7.052427785,(Heliangelus.strophianus.6296:4.195084748,(Heliangelus.amethysticol.6246:3.530452247,(Heliangelus.viola.ANSP16990:3.261148903,(Heliangelus.exortis.JVLP40:1.064125911,Heliangelus.micraster.ANSP26261:1.064125911):2.197022992):0.269303344):0.6646325016):2.857343037):5.065517653,(((Adelomyia.melanogenys.8025:2.897762274,Adelomyia.sp.nov.Valqui.656:2.897762274):5.698620167,(Heliangelus.zusii:3.902790174,(Taphrolesbia.griseivent.10388:3.196777818,(Aglaiocercus.coelestis.7813:2.589587558,Agliocercus.kingi.8017:2.589587558):0.6071902596):0.7060123566):4.693592266):1.364615777,((Sappho.sparganura.1195:6.352652668,(Ramphomicron.microrhyn.8376:4.870856946,(Lesbia.victoriae.zmc.113657:3.468678607,Lesbia.nuna.3615:3.468678607):1.402178339):1.481795723):2.095868344,((oreotroch.estella.103835:1.211047725,(oreotroch.chimborazo.zmc114549:0.5079573764,(oreotroch.melanogaster.2077:0.04150193453,Oreotroch.stolzmani.ANSP19518:0.04150193453):0.4664554419):0.7030903491):6.627644559,(Polyonymus.caroli.15503:7.495200005,(Opisthopr.euryptera.zmc115166:7.112156257,((chalcostigma.herrani.6277:5.130842394,((Oreonympha.nobilis.fmnh324115:4.393757208,(Oxypogon.guerini.zmc115370:3.614654021,Chalco.stanleyi.nk195810:3.614654021):0.7791031865):0.417779163,(chalcostigma.ruficeps.1293:4.571696761,chalco.olivaceum.103924:4.571696761):0.23983961):0.3193060232):0.9657565811,(Metallura.phoebe.103876:4.476686487,(Metallura.tyrianthina.6272:4.076906445,(Metallura.aeneocauda.1236:2.50423023,((Metallura.theresiae.3534:0.1841549072,Metallura.eupogon.8293:0.1841549072):0.8327941404,(Metallura.odomae.353:0.7296757585,(Metallura.baroni.zmc113658:0.320177814,Metallura.williami.5939:0.320177814):0.4094979445):0.2872732892):1.487281182):1.572676215):0.399780042):1.619912488):1.015557283):0.383043748):0.3434922789):0.6098287276):1.512477206):2.15694722):1.092949481):1.003455251):1.286866392):0.8534145773,(Patagona.gigas.6303:14.38065922,(((((Lamprolaima.rhami.22001:8.107418877,Eugenes.fulgens.9964:8.107418877):1.377911539,(panterpe.insignis.16264:8.991356344,(Heliomaster.constan.burdab1903:5.108235833,(Heliomaster.longirostris.18268:4.577363774,(Heliomaster.squamos.fmnh392806:2.431954128,Heliomaster.furcifer.6709:2.431954128):2.145409646):0.530872059):3.883120511):0.493974072):0.6671358597,(Lampornis.hemileucus.16006:9.510511985,(Lampornis.clemenciae.10119:5.139887723,(Lamporn.ameth.fmnh.343217:4.236897513,((Lampornis.viridipallens.19268:2.366338208,Lamporn.sybillae.burkedab1362:2.366338208):0.3754764228,(Lampornis.cinereicauda.19791:0.09306465703,(Lampornis.calolaemus.28169:0.03547574137,Lamporn.castaneovent.28257:0.03547574137):0.05758891566):2.648749973):1.495082882):0.90299021):4.370624262):0.6419542914):1.371796727,((Tilmatura.dupontii.KU8188:3.635770244,(Calliphlox.amet.nmnhb10703:3.341953595,(((myrmia.micrura.5233:1.033939247,Thaumastura.cora.14278:1.033939247):0.6045164856,(Myrtis.fanny.3592:1.446524294,Rhodopis.vesper.jose2:1.446524294):0.191931438):0.1057849827,(Eulidia.yarrellii_Wouter:1.581028375,((Calliphlox.bryantae.28180:1.106341588,Calliphlox.mitchellii.12194:1.106341588):0.3926048721,(Chaetocercus.bombus.5225:0.8835128478,(Chaetocercus.mulsant.6301:0.787600999,Microstilbon.burmeist.zmc.114832:0.787600999):0.09591184886):0.6154336127):0.08208191446):0.16321234):1.59771288):0.2938166485):1.389724463,(((Calothorax.lucifer.43113:1.829557062,Doricha.eliza.ku4435:1.829557062):2.202910494,((Archilochus.colubris.5270:1.009824621,Arch.alexandri.21848:1.009824621):2.300259559,(Calliphlox.evelynae.b58890:3.074269621,Mellisuga.minima.cjc33:3.074269621):0.2358145586):0.7223833762):0.1530349673,((Calypte.anna.24864:1.625871095,Calypte.costae.21595:1.625871095):0.8106900489,((Selasphorus.platycercus.23428:1.298109071,(Selasphorus.rufus.MVZ180196:1.099812894,(Stellula.calliope.B16854:0.5713825241,Selasphorus.sasin.33988:0.5713825241):0.5284303701):0.1982961766):0.2320673325,(Atthis.heloisa.fmnh343218:1.043567308,((Selasphorus.scintilla.16266:0.1195982671,Selasphorus.scintilla.B52913:0.1195982671):0.2819104195,Selasphorus.flammula.28269:0.4015086866):0.6420586209):0.4866090957):0.9063847405):1.74894138):0.8399921831):6.498768296):2.336386548,((((Hylocharis.leucotis.22003:2.599550404,Hylocharis.xantusii.3794:2.599550404):8.334251475,((Campylopt.rufus.FMNH434025:4.384830465,Campylopt.excellens.fmnh343205:4.384830465):4.922080718,(((Abeillia.abeillei.22002:6.406787639,Klais.guimeti.6168:6.406787639):0.3291674946,(Orthorhyncus.cristatus.11526:5.656572667,(Stephanoxis.lalandi.25958:4.771955791,Anthoc.floriceps.Juan.i1253:4.771955791):0.8846168756):1.079382467):1.685925883,((Campylopt.largipennis.4474:5.381776475,(Campylopt.hemileucurus.26474:5.017871787,(Campylopt.hyperythrus.fmnh339628:0.3129437761,Campylopt.duidae.7443:0.3129437761):4.704928011):0.3639046875):0.254872269,(Campylopt.villaviscen.5588:5.22395027,(Campylopt.falcatus.IAVHP.77:3.298525128,Campylopterus.ensipennis.ce115:3.298525128):1.925425142):0.4126984743):2.785232272):0.8850301668):1.626890697):0.8388298849,(Cynanthus.sordidus.22004:6.996848429,((Chlorostil.ricordii.ansp5570:4.861336491,(Cyanophaia.bicol.stri.docb17:4.632822435,(Chlorostilb.maugaeus.11520:3.440052102,chlorostil.swains.amnhnkk1017:3.440052102):1.192770333):0.2285140557):1.52329237,((Cynanthus.latirostris.33304:2.878524006,(Cynanthus.doubledayi.JK04_339:1.128348833,(Chlorostil.canivetii.burkdab1591:0.2125048002,Chlorostilbon.salvini.JK00_048:0.2125048002):0.9158440331):1.750175172):1.37406003,((Chlorostilb.poortmani.Juan.i4198:2.867123144,(Chlorostilb.melanorhynch.6327:1.333325675,Chlorostilb.assim.b46483:1.333325675):1.533797469):0.3545416503,(Chlorostilbon.mellisugus.9450:1.9027794,(Chlorostilb.lucidus.18899:1.190063427,Chlorostilbon.pucherani.fmnh392810:1.190063427):0.7127159733):1.318885394):1.030919241):2.132044825):0.612219568):4.775783336):0.6604854953,((((Chalybura.buffonii.26911:3.665704143,Chalybura.urochrysia.28467:3.665704143):1.330698795,(Thalur.glaucopus.fmnh395402:2.66326354,(Thalurania.watertoni.fmnh392348:2.103568598,(Thalurania.furcata.2807:1.516189595,(Thalurania.colombica.11793:0.1899918694,Thalurania.fannyi.11728:0.1899918694):1.326197726):0.587379003):0.5596949425):2.333139398):0.6581860992,((Microchera.albocor.35764:0.7241869044,(Elvira.cupreiceps.16066:0.4587641553,Elvira.chionura.26446:0.4587641553):0.265422749):2.522442611,((Goldmania.violiceps.28405:2.369513892,Goethalsia.bella.2111:2.369513892):0.6612926995,(Thalurania.ridgwayi.FMNH_b225:2.291099739,((Eupherusa.nigriventris.16055:1.234782428,Eupherusa.eximia.21998:1.234782428):0.3804546493,(Eupherusa.cyanophrys.21997:0.8867970418,Eupherusa.poliocerca.21999:0.8867970418):0.7284400353):0.6758626616):0.7397068527):0.2158229235):2.407959522):5.679078645,((Phaeochroa.cuvierii.26913:5.288477229,Leucippus.fallax.striLFA6:5.288477229):4.770273854,(((Leucippus.baeri.5232:1.535217229,Leucippus.taczanowski.33447:1.535217229):5.215296843,(Taphrospilus.hypostictus.5465:5.85522339,(Aphantochr.cirrochl.fmnh399167:4.477679143,Eupetomena.macroura.15299:4.477679143):1.377544247):0.8952906824):2.105116134,(Leucippus.chlorocercus.7264:7.23284259,(((Trochilus.polytmus.cjc31:0.1835314698,Troch.scitulus.fmnh331062:0.1835314698):6.444858174,((Amazilia.vfrons.UNAM.OMVP684:0.1789667336,Amazilia.violiceps.unam.828:0.1789667336):4.837869858,((Amazilia.cyanocephala.19260:1.365989016,(Amazilia.saucer.hof.fmnh393025:0.5544400482,(Amazilia.cyanura.Burke.DAB1441:0.3397302722,Amazilia.berryllina.fmnh394217:0.3397302722):0.214709776):0.811548968):0.2156000997,(Amazilia.edward.2303:1.021107529,(Amazilia.saucerottia.JVLP34:0.7761055469,(Amazilia.castaneiventris.oc:0.3422854817,(Amazilia.tobacii.amnh.2796:0.1522523957,Amazilia.viridigaster.7490:0.1522523957):0.190033086):0.4338200653):0.2450019823):0.5604815867):3.435247475):1.611553052):0.2790736423,((Amazilia.rutila.burkedab1054:4.969350764,(Amazilia.yucatanensis.4090:2.863301193,Amazilia.tzacatl.16538:2.863301193):2.106049571):1.096490981,((Amazilia.amazilia.14263:4.105048477,(Amazilia.franciae.12063:3.254180628,((Amazilia.versicolor.15313:1.770125231,(Chrysuronia.oenone.5381:1.139317964,Lepidopyga.goudoti.jcc:1.139317964):0.6308072675):0.6481885421,(Lepidopyga.coeruleo.29053:1.715254482,(Hylocharis.grayi.ansp.5064:1.119300039,(Amazilia.chionopectus.35896:0.4801602437,(Amazilia.leucogaster.ansp8392:0.1002830659,Amazilia.brevirost.nmnhb11307:0.1002830659):0.3798771778):0.6391397949):0.5959544437):0.703059291):0.835866855):0.8508678483):1.242588118,((Leucochloris.albic.fmnh395730:4.152386181,((Amazilia.lactea.9484:0.4454303415,Amazilia.fimbriata.5956:0.4454303415):2.469406751,((Hylocharis.chrysura.1503:2.171249359,Hylocharis.sapphirina.12912:2.171249359):0.4987142247,(Amazilia.chionogaster.17165:1.796389023,Amazilia.viridicauda.8136:1.796389023):0.8735745605):0.2448735084):1.237549089):0.9649394828,((Amazilia.rosenbergi.zmc114807:1.887591412,(Amazilia.amabilis.28483:1.715042635,Amazilia.decora.B100024:1.715042635):0.1725487772):2.847392563,(Amazilia.candida.ku.mbr4474:3.367833512,(Hylocharis.eliciae.16074:2.88537176,(Hylocharis.cyanus.rostrata.9547:2.362240676,(Damophila.julie.16556:1.786436012,CHLORESTES.NOTATUS.4558:1.786436012):0.5758046638):0.5231310846):0.4824617514):1.367150463):0.3823416892):0.2303109314):0.7182051504):0.8416215406):0.3253793041):1.622787616):1.203120877):1.2749166):1.099449577):1.427532291):0.520009674):1.973971915):3.718372406):2.312514759); "/>
-            <taxonset id="TaxonSet.hummingbirds" spec="TaxonSet">
-                <alignment idref="hummingbirds"/>
-            </taxonset>
-        </stateNode>
-        <stateNode id="lambdas.t:hummingbirds" spec="parameter.ExtendableRealParameter" lower="0.0">1.5</stateNode>
-        <stateNode id="mus.t:hummingbirds" spec="parameter.ExtendableRealParameter" lower="0.0">0.25</stateNode>
-        <parameter id="gamma.t:hummingbirds" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.05</parameter>
-        <stateNode id="nstar.t:hummingbirds" spec="parameter.IntegerParameter" lower="2">5</stateNode>
-    </state>
+    <map name="prior" >beast.base.inference.distribution.Prior</map>
 
-    <distribution id="posterior" spec="util.CompoundDistribution">
-        <distribution id="prior" spec="util.CompoundDistribution">
-            <prior id="gammaPrior.t:hummingbirds" name="distribution" x="@gamma.t:hummingbirds">
-                <LogNormal id="LogNormalDistributionModel.2" name="distr">
-                    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="M">-4.0</parameter>
-                    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">1.0</parameter>
-                </LogNormal>
-            </prior>
-            <prior id="lambdasPrior.t:hummingbirds" name="distribution" x="@lambdas.t:hummingbirds">
-                <LogNormal id="LogNormalDistributionModel.l0" name="distr">
-                    <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="M">1.5</parameter>
-                    <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">2.0</parameter>
-                </LogNormal>
-            </prior>
-            <prior id="musPrior.t:hummingbirds" name="distribution" x="@mus.t:hummingbirds">
-                <LogNormal id="LogNormalDistributionModel.m0" name="distr">
-                    <parameter id="RealParameter.3" spec="parameter.RealParameter" estimate="false" name="M">1.5</parameter>
-                    <parameter id="RealParameter.4" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">2.0</parameter>
-                </LogNormal>
-            </prior>
-            <prior id="nstarPrior.t:hummingbirds" name="distribution" x="@nstar.t:hummingbirds">
-                <distr id="Poisson.0" spec="beast.math.distributions.Poisson">
-                    <parameter id="RealParameter.7" spec="parameter.RealParameter" estimate="false" name="lambda">4.0</parameter>
-                </distr>
-            </prior>
-            <distribution id="stdBDMRT.t:hummingbirds" spec="multiratetree.distributions.StdBirthDeathDensity" multiRateTree="@Tree.t:hummingbirds">
-                <stateChangeModel id="stdscModel.t:hummingbirds" spec="beast.evolution.tree.StateChangeModel" gamma="@gamma.t:hummingbirds" lambdas="@lambdas.t:hummingbirds" mus="@mus.t:hummingbirds" nstar="@nstar.t:hummingbirds" rho="0.86"/>
+    <map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+
+    <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+    <run id="mcmc" spec="MCMC" chainLength="10000000">
+        <state id="state" spec="State" storeEvery="5000">
+            <stateNode id="Tree.t:hummingbirds" spec="msbd.base.evolution.tree.MultiRateTree" estimateTopology="false">
+                <initial id="NewTree.t:hummingbirds" spec="msbd.base.evolution.tree.MultiRateTreeFromNewick" isLabelledNewick="true" newick="((((Florisuga.mellivora.9646:4.983058142,Florisuga.fusca.16936:4.983058142):13.81762842,(Topaza.pella.35362:2.987612158,Topaza.pyra.b42167:2.987612158):15.8130744):2.78182628,((Eutoxeres.aquila.2110:13.60374398,Eutoxeres.condamini.8094:13.60374398):5.988055471,(Ramphodon.naevius.zmc.115250:14.89407155,(((Threnetes.ruckeri.28170:4.520826203,Threnetes.leucurus.2673:4.520826203):3.072972949,(Glaucis.hirsuta.28468:3.83689172,Glaucis.aeneus.nmnhb368:3.83689172):3.756907432):5.458735986,((Phaethorn.syrmat.12138:7.040404114,((Phaeth.longirostris.28503:2.268687734,Phaethornis.mexicanus.JK07_108:2.268687734):2.98296727,((Phaethornis.yaruqui.7812:3.776143236,Phaethornis.guy.35966:3.776143236):0.7606019431,(Phaethornis.malaris.27511:3.771312668,Phaeth.supercil.b48308:3.771312668):0.7654325109):0.7149098249):1.78874911):0.7325615839,((((Phaethornis.augusti.um.t604:1.581598024,Phaethornis.pretrei.14702:1.581598024):3.445504643,(Phaethorn.eurynome.fmnh395410:4.448359371,Phaethornis.subochraceus.6544:4.448359371):0.5787432967):1.995422378,((Phaethornis.hispidus.10629:0.1912514909,Phaethornis.bourcieri.11017:0.1912514909):3.128678882,(Phaethorn.koepckeae.5398:2.071977655,Phaethornis.philippii.8868:2.071977655):1.247952717):3.702594672):0.5038875018,(Phaethornis.anthophilus.umt594:5.550250156,(((Phaethornis.nattereri.12859:0.6989011673,Phaeth.longuemareus.35952a:0.6989011673):0.07463324535,(Phaethorn.rupurumii.20240:0.1761642891,Phaethornis.rupurumii.iavhb4463:0.1761642891):0.5973701235):2.67737033,((Phaethornis.atrimentalis.1969:1.542718359,Phaethornis.ruber.9481:1.542718359):0.9332356554,(Phaethornis.griseo.5571:1.845689557,Phaethornis.striigularis.b28411:1.845689557):0.6302644574):0.974950728):2.099345414):1.976162391):0.2465531508):5.27956944):1.841536411):4.697727897):1.990713397):0.8030054618,((((Doryfera.johannae.1728:5.583194471,Doryfera.ludovicae.8000:5.583194471):7.204944485,(Schistes.geoffroyi.6300:11.77392866,(Colibri.serrirostris.14576:6.589396825,(Colibri.coruscans.6310:5.101920046,(Colibri.delphinae.5403:4.446809621,(Colibri.thalassinus.28263:2.556868353,Colibri.sp.b49711:2.556868353):1.889941268):0.6551104254):1.487476779):5.184531832):1.014210299):5.76138279,((Heliactin.bilopha.14845ak1.c1:15.27955571,(Androdon.aequatorialis.1402:13.9006761,(Heliothryx.barroti.12039:1.711631558,Heliothryx.aurita.6913:1.711631558):12.18904454):1.378879607):2.746891731,((Polytmus.guainumbi.6691:6.810609415,(Polytmus.milleri.amnh.prs476:3.444775822,Polytmus.theresiae.nmnh10307:3.444775822):3.365833593):4.954677336,(Avocettula.recurv.fmnh334368:9.838080985,(Chrysolamp.mosquitus.35902:6.46698554,(Anthrac.mango.cjc27:4.660601434,((Anthrac.nigricollis.9552:3.501005017,(Anthrac.viridigula.fmnh391258:1.379233158,(Anthrac.veraguensis.nmnhB1347:0.3719790513,Anthrac.prevostii.nmnhb360:0.3719790513):1.007254107):2.121771859):0.788979832,(Anthrac.dominicus.11318:3.647439497,(Anthrac.viridis.11519:2.526067187,(Eulampus.holosericeus.nmnh2121:1.063982013,Eulampus.jugularis.stridoej413:1.063982013):1.462085174):1.12137231):0.6425453523):0.3706165843):1.806384106):3.371095445):1.927205765):6.261160687):0.5230743081):1.5234818,(((((Haplophaedia.lugens.30032:1.26627614,Haplophaedia.aureliae.32971:1.26627614):10.21522276,((Eriocnemis.alinae.1805:7.215116008,(Eriocnemis.luciani.6337:3.766104194,(Eriocnemis.derbyi.ANSP15698:3.274435103,Eriocnem.cupreioventris.JPLV30:3.274435103):0.491669091):3.449011814):1.091813262,((Lodiggesia.mirabilis.44698:5.096872351,Eriocn.glaucopoides.uwbm77170:5.096872351):0.8677176089,(Eriocnemis.mosquera.6335:2.662977636,(Eriocnemis.vestitus.324:0.9784744877,Eriocnem.nigrivestis.zmc114629:0.9784744877):1.684503148):3.301612323):2.342339311):3.174569631):2.348433693,((Lafresnaya.lafresnayi.32576:11.83844458,(Aglaeactis.cupripennis.6304:1.288792513,(Aglaeactis.pamela.106743:0.5026909382,Aglaeactis.castelnaudii.8215:0.5026909382):0.7861015748):10.54965207):1.356892144,((((Ensifera.ensifera.8224:10.21230199,Pterophanes.cyanopterus.1296:10.21230199):1.625966458,((Boissonn.jardini.ANSP15805:3.741949145,(Boisson.mathewsii.8130:2.683018736,Boissonn.flavescens.12099:2.683018736):1.05893041):6.371992942,(Ocreatus.underwoodii.22594:6.239092136,(Urosticte.benjamani.5546:0.1800615324,Urosticte.ruficrissa.Juan.i2325:0.1800615324):6.059030604):3.874849951):1.724326357):0.5522489052,(Urochroa.bougueri.zmc114654:11.29493325,(heliodoxa.schreibersii.5440:10.58506303,((Heliodoxa.xanthogonys.7415:6.581378039,(Heliodoxa.gularis.5428:2.639919879,Heliodoxa.branickii.1996:2.639919879):3.94145816):3.306548408,((Clytolaema.rubr.fmnh395404:7.654451251,Heliodoxa.aurescens.6789:7.654451251):1.529775216,((Heliodoxa.imperatrix.12088:4.600810376,Heliodoxa.rubinoides.1651:4.600810376):0.4850432233,(Heliodoxa.leadbeateri.6036:2.868644888,Heliodoxa.jacula.11940:2.868644888):2.217208711):4.098372868):0.7036999795):0.6971365849):0.7098702186):1.095584099):0.4065088099,((Coelig.prunellei.Juan42:5.055596788,(Coeligena.wilsoni.7858:4.429089731,Coeligena.coeligena.8015:4.429089731):0.6265070577):4.599971678,((Coel.torquata.inca.AMNHDOT2598:1.930454994,Coeligena.torquata.6230:1.930454994):4.171989889,(Coeligena.violifer.8200:4.772037487,(Coeligena.iris.31770:3.203338608,(Coelig.phalerata.Juan.i485:2.3049782,((Coeligena.bonapartei.IAVHB.4188:0.2063775451,Coelig.helianthea.Juan.2504:0.2063775451):0.6453017428,(Coeligena.lutetia.340:0.5852141759,Coelig.orina.Juan.i5169:0.5852141759):0.266465112):1.453298913):0.8983604079):1.568698878):1.330407396):3.553123583):3.141457693):0.3983105689):0.6345958663):1.671283968,((((Lophornis.pavoninus.ku6045:2.898214356,(Lophornis.chalybeus.9399:2.267283906,Lophornis.delattrei.22644:2.267283906):0.6309304498):4.912831576,(Discosura.longic.nmnh5265:4.997402833,(Discosura.conversii.16064:2.94499952,(Discosura.langsdorfii.9633:0.4397391067,Discosura.popelairii.5950:0.4397391067):2.505260414):2.052403313):2.813643099):5.58372834,(Sephanoides.fernandensis.mr620:3.162029599,Sephanoides.sephaniodes.amnh1126:3.162029599):10.23274467):0.8195758973,(Phlogophilus.harteri.KU18424:13.21089492,((Heliangelus.regalis.5532:7.052427785,(Heliangelus.strophianus.6296:4.195084748,(Heliangelus.amethysticol.6246:3.530452247,(Heliangelus.viola.ANSP16990:3.261148903,(Heliangelus.exortis.JVLP40:1.064125911,Heliangelus.micraster.ANSP26261:1.064125911):2.197022992):0.269303344):0.6646325016):2.857343037):5.065517653,(((Adelomyia.melanogenys.8025:2.897762274,Adelomyia.sp.nov.Valqui.656:2.897762274):5.698620167,(Heliangelus.zusii:3.902790174,(Taphrolesbia.griseivent.10388:3.196777818,(Aglaiocercus.coelestis.7813:2.589587558,Agliocercus.kingi.8017:2.589587558):0.6071902596):0.7060123566):4.693592266):1.364615777,((Sappho.sparganura.1195:6.352652668,(Ramphomicron.microrhyn.8376:4.870856946,(Lesbia.victoriae.zmc.113657:3.468678607,Lesbia.nuna.3615:3.468678607):1.402178339):1.481795723):2.095868344,((oreotroch.estella.103835:1.211047725,(oreotroch.chimborazo.zmc114549:0.5079573764,(oreotroch.melanogaster.2077:0.04150193453,Oreotroch.stolzmani.ANSP19518:0.04150193453):0.4664554419):0.7030903491):6.627644559,(Polyonymus.caroli.15503:7.495200005,(Opisthopr.euryptera.zmc115166:7.112156257,((chalcostigma.herrani.6277:5.130842394,((Oreonympha.nobilis.fmnh324115:4.393757208,(Oxypogon.guerini.zmc115370:3.614654021,Chalco.stanleyi.nk195810:3.614654021):0.7791031865):0.417779163,(chalcostigma.ruficeps.1293:4.571696761,chalco.olivaceum.103924:4.571696761):0.23983961):0.3193060232):0.9657565811,(Metallura.phoebe.103876:4.476686487,(Metallura.tyrianthina.6272:4.076906445,(Metallura.aeneocauda.1236:2.50423023,((Metallura.theresiae.3534:0.1841549072,Metallura.eupogon.8293:0.1841549072):0.8327941404,(Metallura.odomae.353:0.7296757585,(Metallura.baroni.zmc113658:0.320177814,Metallura.williami.5939:0.320177814):0.4094979445):0.2872732892):1.487281182):1.572676215):0.399780042):1.619912488):1.015557283):0.383043748):0.3434922789):0.6098287276):1.512477206):2.15694722):1.092949481):1.003455251):1.286866392):0.8534145773,(Patagona.gigas.6303:14.38065922,(((((Lamprolaima.rhami.22001:8.107418877,Eugenes.fulgens.9964:8.107418877):1.377911539,(panterpe.insignis.16264:8.991356344,(Heliomaster.constan.burdab1903:5.108235833,(Heliomaster.longirostris.18268:4.577363774,(Heliomaster.squamos.fmnh392806:2.431954128,Heliomaster.furcifer.6709:2.431954128):2.145409646):0.530872059):3.883120511):0.493974072):0.6671358597,(Lampornis.hemileucus.16006:9.510511985,(Lampornis.clemenciae.10119:5.139887723,(Lamporn.ameth.fmnh.343217:4.236897513,((Lampornis.viridipallens.19268:2.366338208,Lamporn.sybillae.burkedab1362:2.366338208):0.3754764228,(Lampornis.cinereicauda.19791:0.09306465703,(Lampornis.calolaemus.28169:0.03547574137,Lamporn.castaneovent.28257:0.03547574137):0.05758891566):2.648749973):1.495082882):0.90299021):4.370624262):0.6419542914):1.371796727,((Tilmatura.dupontii.KU8188:3.635770244,(Calliphlox.amet.nmnhb10703:3.341953595,(((myrmia.micrura.5233:1.033939247,Thaumastura.cora.14278:1.033939247):0.6045164856,(Myrtis.fanny.3592:1.446524294,Rhodopis.vesper.jose2:1.446524294):0.191931438):0.1057849827,(Eulidia.yarrellii_Wouter:1.581028375,((Calliphlox.bryantae.28180:1.106341588,Calliphlox.mitchellii.12194:1.106341588):0.3926048721,(Chaetocercus.bombus.5225:0.8835128478,(Chaetocercus.mulsant.6301:0.787600999,Microstilbon.burmeist.zmc.114832:0.787600999):0.09591184886):0.6154336127):0.08208191446):0.16321234):1.59771288):0.2938166485):1.389724463,(((Calothorax.lucifer.43113:1.829557062,Doricha.eliza.ku4435:1.829557062):2.202910494,((Archilochus.colubris.5270:1.009824621,Arch.alexandri.21848:1.009824621):2.300259559,(Calliphlox.evelynae.b58890:3.074269621,Mellisuga.minima.cjc33:3.074269621):0.2358145586):0.7223833762):0.1530349673,((Calypte.anna.24864:1.625871095,Calypte.costae.21595:1.625871095):0.8106900489,((Selasphorus.platycercus.23428:1.298109071,(Selasphorus.rufus.MVZ180196:1.099812894,(Stellula.calliope.B16854:0.5713825241,Selasphorus.sasin.33988:0.5713825241):0.5284303701):0.1982961766):0.2320673325,(Atthis.heloisa.fmnh343218:1.043567308,((Selasphorus.scintilla.16266:0.1195982671,Selasphorus.scintilla.B52913:0.1195982671):0.2819104195,Selasphorus.flammula.28269:0.4015086866):0.6420586209):0.4866090957):0.9063847405):1.74894138):0.8399921831):6.498768296):2.336386548,((((Hylocharis.leucotis.22003:2.599550404,Hylocharis.xantusii.3794:2.599550404):8.334251475,((Campylopt.rufus.FMNH434025:4.384830465,Campylopt.excellens.fmnh343205:4.384830465):4.922080718,(((Abeillia.abeillei.22002:6.406787639,Klais.guimeti.6168:6.406787639):0.3291674946,(Orthorhyncus.cristatus.11526:5.656572667,(Stephanoxis.lalandi.25958:4.771955791,Anthoc.floriceps.Juan.i1253:4.771955791):0.8846168756):1.079382467):1.685925883,((Campylopt.largipennis.4474:5.381776475,(Campylopt.hemileucurus.26474:5.017871787,(Campylopt.hyperythrus.fmnh339628:0.3129437761,Campylopt.duidae.7443:0.3129437761):4.704928011):0.3639046875):0.254872269,(Campylopt.villaviscen.5588:5.22395027,(Campylopt.falcatus.IAVHP.77:3.298525128,Campylopterus.ensipennis.ce115:3.298525128):1.925425142):0.4126984743):2.785232272):0.8850301668):1.626890697):0.8388298849,(Cynanthus.sordidus.22004:6.996848429,((Chlorostil.ricordii.ansp5570:4.861336491,(Cyanophaia.bicol.stri.docb17:4.632822435,(Chlorostilb.maugaeus.11520:3.440052102,chlorostil.swains.amnhnkk1017:3.440052102):1.192770333):0.2285140557):1.52329237,((Cynanthus.latirostris.33304:2.878524006,(Cynanthus.doubledayi.JK04_339:1.128348833,(Chlorostil.canivetii.burkdab1591:0.2125048002,Chlorostilbon.salvini.JK00_048:0.2125048002):0.9158440331):1.750175172):1.37406003,((Chlorostilb.poortmani.Juan.i4198:2.867123144,(Chlorostilb.melanorhynch.6327:1.333325675,Chlorostilb.assim.b46483:1.333325675):1.533797469):0.3545416503,(Chlorostilbon.mellisugus.9450:1.9027794,(Chlorostilb.lucidus.18899:1.190063427,Chlorostilbon.pucherani.fmnh392810:1.190063427):0.7127159733):1.318885394):1.030919241):2.132044825):0.612219568):4.775783336):0.6604854953,((((Chalybura.buffonii.26911:3.665704143,Chalybura.urochrysia.28467:3.665704143):1.330698795,(Thalur.glaucopus.fmnh395402:2.66326354,(Thalurania.watertoni.fmnh392348:2.103568598,(Thalurania.furcata.2807:1.516189595,(Thalurania.colombica.11793:0.1899918694,Thalurania.fannyi.11728:0.1899918694):1.326197726):0.587379003):0.5596949425):2.333139398):0.6581860992,((Microchera.albocor.35764:0.7241869044,(Elvira.cupreiceps.16066:0.4587641553,Elvira.chionura.26446:0.4587641553):0.265422749):2.522442611,((Goldmania.violiceps.28405:2.369513892,Goethalsia.bella.2111:2.369513892):0.6612926995,(Thalurania.ridgwayi.FMNH_b225:2.291099739,((Eupherusa.nigriventris.16055:1.234782428,Eupherusa.eximia.21998:1.234782428):0.3804546493,(Eupherusa.cyanophrys.21997:0.8867970418,Eupherusa.poliocerca.21999:0.8867970418):0.7284400353):0.6758626616):0.7397068527):0.2158229235):2.407959522):5.679078645,((Phaeochroa.cuvierii.26913:5.288477229,Leucippus.fallax.striLFA6:5.288477229):4.770273854,(((Leucippus.baeri.5232:1.535217229,Leucippus.taczanowski.33447:1.535217229):5.215296843,(Taphrospilus.hypostictus.5465:5.85522339,(Aphantochr.cirrochl.fmnh399167:4.477679143,Eupetomena.macroura.15299:4.477679143):1.377544247):0.8952906824):2.105116134,(Leucippus.chlorocercus.7264:7.23284259,(((Trochilus.polytmus.cjc31:0.1835314698,Troch.scitulus.fmnh331062:0.1835314698):6.444858174,((Amazilia.vfrons.UNAM.OMVP684:0.1789667336,Amazilia.violiceps.unam.828:0.1789667336):4.837869858,((Amazilia.cyanocephala.19260:1.365989016,(Amazilia.saucer.hof.fmnh393025:0.5544400482,(Amazilia.cyanura.Burke.DAB1441:0.3397302722,Amazilia.berryllina.fmnh394217:0.3397302722):0.214709776):0.811548968):0.2156000997,(Amazilia.edward.2303:1.021107529,(Amazilia.saucerottia.JVLP34:0.7761055469,(Amazilia.castaneiventris.oc:0.3422854817,(Amazilia.tobacii.amnh.2796:0.1522523957,Amazilia.viridigaster.7490:0.1522523957):0.190033086):0.4338200653):0.2450019823):0.5604815867):3.435247475):1.611553052):0.2790736423,((Amazilia.rutila.burkedab1054:4.969350764,(Amazilia.yucatanensis.4090:2.863301193,Amazilia.tzacatl.16538:2.863301193):2.106049571):1.096490981,((Amazilia.amazilia.14263:4.105048477,(Amazilia.franciae.12063:3.254180628,((Amazilia.versicolor.15313:1.770125231,(Chrysuronia.oenone.5381:1.139317964,Lepidopyga.goudoti.jcc:1.139317964):0.6308072675):0.6481885421,(Lepidopyga.coeruleo.29053:1.715254482,(Hylocharis.grayi.ansp.5064:1.119300039,(Amazilia.chionopectus.35896:0.4801602437,(Amazilia.leucogaster.ansp8392:0.1002830659,Amazilia.brevirost.nmnhb11307:0.1002830659):0.3798771778):0.6391397949):0.5959544437):0.703059291):0.835866855):0.8508678483):1.242588118,((Leucochloris.albic.fmnh395730:4.152386181,((Amazilia.lactea.9484:0.4454303415,Amazilia.fimbriata.5956:0.4454303415):2.469406751,((Hylocharis.chrysura.1503:2.171249359,Hylocharis.sapphirina.12912:2.171249359):0.4987142247,(Amazilia.chionogaster.17165:1.796389023,Amazilia.viridicauda.8136:1.796389023):0.8735745605):0.2448735084):1.237549089):0.9649394828,((Amazilia.rosenbergi.zmc114807:1.887591412,(Amazilia.amabilis.28483:1.715042635,Amazilia.decora.B100024:1.715042635):0.1725487772):2.847392563,(Amazilia.candida.ku.mbr4474:3.367833512,(Hylocharis.eliciae.16074:2.88537176,(Hylocharis.cyanus.rostrata.9547:2.362240676,(Damophila.julie.16556:1.786436012,CHLORESTES.NOTATUS.4558:1.786436012):0.5758046638):0.5231310846):0.4824617514):1.367150463):0.3823416892):0.2303109314):0.7182051504):0.8416215406):0.3253793041):1.622787616):1.203120877):1.2749166):1.099449577):1.427532291):0.520009674):1.973971915):3.718372406):2.312514759);"/>
+                <taxonset id="TaxonSet.hummingbirds" spec="TaxonSet">
+                    <alignment idref="hummingbirds"/>
+                </taxonset>
+            </stateNode>
+            <stateNode id="lambdas.t:hummingbirds" spec="msbd.base.inference.parameter.ExtendableRealParameter" lower="0.0">1.5</stateNode>
+            <stateNode id="mus.t:hummingbirds" spec="msbd.base.inference.parameter.ExtendableRealParameter" lower="0.0">0.25</stateNode>
+            <parameter id="gamma.t:hummingbirds" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.05</parameter>
+            <stateNode id="nstar.t:hummingbirds" spec="parameter.IntegerParameter" lower="2">5</stateNode>
+        </state>
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="prior" spec="CompoundDistribution">
+                <prior id="gammaPrior.t:hummingbirds" name="distribution" x="@gamma.t:hummingbirds">
+                    <LogNormal id="LogNormalDistributionModel.3" name="distr">
+                        <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="M">-4.0</parameter>
+                        <parameter id="RealParameter.7" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">1.0</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="lambdasPrior.t:hummingbirds" name="distribution" x="@lambdas.t:hummingbirds">
+                    <LogNormal id="LogNormalDistributionModel.l0" name="distr">
+                        <parameter id="RealParameter.0" spec="parameter.RealParameter" estimate="false" name="M">1.5</parameter>
+                        <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">2.0</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="musPrior.t:hummingbirds" name="distribution" x="@mus.t:hummingbirds">
+                    <LogNormal id="LogNormalDistributionModel.m0" name="distr">
+                        <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="M">1.5</parameter>
+                        <parameter id="RealParameter.3" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">2.0</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="nstarPrior.t:hummingbirds" name="distribution" x="@nstar.t:hummingbirds">
+                    <distr id="Poisson.0" spec="distribution.Poisson">
+                        <parameter id="RealParameter.8" spec="parameter.RealParameter" estimate="false" name="lambda">4.0</parameter>
+                    </distr>
+                </prior>
+                <distribution id="stdBDMRT.t:hummingbirds" spec="msbd.distributions.StdBirthDeathDensity" multiRateTree="@Tree.t:hummingbirds">
+                    <stateChangeModel id="stdscModel.t:hummingbirds" spec="msbd.evolution.tree.StateChangeModel" gamma="@gamma.t:hummingbirds" lambdas="@lambdas.t:hummingbirds" mus="@mus.t:hummingbirds" nstar="@nstar.t:hummingbirds">
+                        <psis id="stdpsis.t:hummingbirds" spec="msbd.base.inference.parameter.ExtendableRealParameter" lower="0.0">0.5</psis>
+                        <parameter id="rho.t:hummingbirds" spec="parameter.RealParameter" estimate="false" lower="0.0" name="rho" upper="1.0">0.86</parameter>
+                        <parameter id="stdsigma.t:hummingbirds" spec="parameter.RealParameter" estimate="false" lower="0.0" name="sigma" upper="1.0">0.0</parameter>
+                    </stateChangeModel>
+                </distribution>
+            </distribution>
+            <distribution id="likelihood" spec="CompoundDistribution">
+                <distribution id="treeLikelihood.hummingbirds" spec="ThreadedTreeLikelihood" data="@hummingbirds" tree="@Tree.t:hummingbirds">
+                    <siteModel id="SiteModel.s:hummingbirds" spec="SiteModel">
+                        <parameter id="mutationRate.s:hummingbirds" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
+                        <parameter id="gammaShape.s:hummingbirds" spec="parameter.RealParameter" estimate="false" name="shape">1.0</parameter>
+                        <parameter id="proportionInvariant.s:hummingbirds" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                        <substModel id="JC69.s:hummingbirds" spec="JukesCantor"/>
+                    </siteModel>
+                    <branchRateModel id="StrictClock.c:hummingbirds" spec="beast.base.evolution.branchratemodel.StrictClockModel">
+                        <parameter id="clockRate.c:hummingbirds" spec="parameter.RealParameter" estimate="false" name="clock.rate">1.0</parameter>
+                    </branchRateModel>
+                </distribution>
             </distribution>
         </distribution>
-        <distribution id="likelihood" spec="util.CompoundDistribution">
-            <distribution id="treeLikelihood.hummingbirds" spec="ThreadedTreeLikelihood" data="@hummingbirds" tree="@Tree.t:hummingbirds">
-                <siteModel id="SiteModel.s:hummingbirds" spec="SiteModel">
-                    <parameter id="mutationRate.s:hummingbirds" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
-                    <parameter id="gammaShape.s:hummingbirds" spec="parameter.RealParameter" estimate="false" name="shape">1.0</parameter>
-                    <parameter id="proportionInvariant.s:hummingbirds" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
-                    <substModel id="JC69.s:hummingbirds" spec="JukesCantor"/>
-                </siteModel>
-                <branchRateModel id="StrictClock.c:hummingbirds" spec="beast.evolution.branchratemodel.StrictClockModel">
-                    <parameter id="clockRate.c:hummingbirds" spec="parameter.RealParameter" estimate="false" name="clock.rate">1.0</parameter>
-                </branchRateModel>
-            </distribution>
-        </distribution>
-    </distribution>
-
-    <operator id="lambdasScaler.t:hummingbirds" spec="ScaleOperator" parameter="@lambdas.t:hummingbirds" scaleFactor="0.8" weight="1.0"/>
-
-    <operator id="musScaler.t:hummingbirds" spec="ScaleOperator" parameter="@mus.t:hummingbirds" scaleFactor="0.8" weight="1.0"/>
-
-    <operator id="gammaScaler.t:hummingbirds" spec="ScaleOperator" parameter="@gamma.t:hummingbirds" scaleFactor="0.8" weight="1.0"/>
-
-    <operator id="nstarScaler.t:hummingbirds" spec="IntRandomWalkOperator" parameter="@nstar.t:hummingbirds" weight="1.0" windowSize="2"/>
-
-    <operator id="stdNR.t:hummingbirds" spec="multiratetree.operators.NodeRetype" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="10.0"/>
-
-    <operator id="stdAddRemoveStates.t:hummingbirds" spec="multiratetree.operators.AddRemoveColourWPropagation" lambdaDistribution="@LogNormalDistributionModel.l0" muDistribution="@LogNormalDistributionModel.m0" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="20.0">
-        <Exponential id="Exponential.lr0" name="lambdaRateDistribution">
-            <parameter id="RealParameter.47" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
-        </Exponential>
-        <Exponential id="Exponential.mr0" name="muRateDistribution">
-            <parameter id="RealParameter.48" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
-        </Exponential>
-    </operator>
-
-    <operator id="stdMoveShifts.t:hummingbirds" spec="multiratetree.operators.MoveColourChange" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="10.0"/>
-
-    <operator id="stdChangeColours.t:hummingbirds" spec="multiratetree.operators.AddRemoveConnectedWPropagation" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="20.0"/>
-
-    <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="10000">
-        <log idref="posterior"/>
-        <log idref="likelihood"/>
-        <log idref="prior"/>
-        <log id="totalStateChanges.t:hummingbirds" spec="multiratetree.util.StateChangesCountLogger" multiRateTree="@Tree.t:hummingbirds"/>
-    </logger>
-
-    <logger id="screenlog" spec="Logger" logEvery="10000">
-        <log idref="posterior"/>
-        <log id="ESS.0" spec="util.ESS" arg="@posterior"/>
-        <log idref="likelihood"/>
-        <log idref="prior"/>
-    </logger>
-
-    <logger id="stdratestreelog.t:hummingbirds" spec="Logger" fileName="$(filebase).hummingbirds.rates.trees" logEvery="10000" mode="tree">
-        <log id="TreeWithParameterValuesLogger.0" spec="multiratetree.util.TreeWithParameterValuesLogger" logChangeNodes="false" stateChangeModel="@stdscModel.t:hummingbirds" tree="@Tree.t:hummingbirds"/>
-    </logger>
-
-    <logger id="stdStateslog.t:hummingbirds" spec="Logger" fileName="$(filebase).hummingbirds.states.log" logEvery="10000">
-        <log id="StateChangeModelLogger.0" spec="multiratetree.util.StateChangeModelLogger" maxStates="10" stateChangeModel="@stdscModel.t:hummingbirds"/>
-    </logger>
-
-    <logger id="stdrateslog.t:hummingbirds" spec="Logger" fileName="$(filebase).hummingbirds.rates.log" logEvery="10000">
-        <log id="TipRatesLogger.0" spec="multiratetree.util.TipRatesLogger" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds"/>
-    </logger>
-
-</run>
+        <operator id="lambdasScaler.t:hummingbirds" spec="ScaleOperator" parameter="@lambdas.t:hummingbirds" scaleFactor="0.8" weight="1.0"/>
+        <operator id="musScaler.t:hummingbirds" spec="ScaleOperator" parameter="@mus.t:hummingbirds" scaleFactor="0.8" weight="1.0"/>
+        <operator id="gammaScaler.t:hummingbirds" spec="ScaleOperator" parameter="@gamma.t:hummingbirds" scaleFactor="0.8" weight="1.0"/>
+        <operator id="nstarScaler.t:hummingbirds" spec="operator.IntRandomWalkOperator" parameter="@nstar.t:hummingbirds" weight="1.0" windowSize="2"/>
+        <operator id="stdNR.t:hummingbirds" spec="msbd.evolution.operator.NodeRetype" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="10.0"/>
+        <operator id="stdAddRemoveStates.t:hummingbirds" spec="msbd.evolution.operator.AddRemoveColourWPropagation" lambdaDistribution="@LogNormalDistributionModel.l0" muDistribution="@LogNormalDistributionModel.m0" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="20.0">
+            <LogNormal id="LogNormalDistributionModel.p0" name="psiDistribution">
+                <parameter id="RealParameter.9" spec="parameter.RealParameter" estimate="false" name="M">1.5</parameter>
+                <parameter id="RealParameter.10" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">2.0</parameter>
+            </LogNormal>
+            <Exponential id="Exponential.lr0" name="lambdaRateDistribution">
+                <parameter id="RealParameter.55" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
+            </Exponential>
+            <Exponential id="Exponential.mr0" name="muRateDistribution">
+                <parameter id="RealParameter.56" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
+            </Exponential>
+        </operator>
+        <operator id="stdMoveShifts.t:hummingbirds" spec="msbd.evolution.operator.MoveColourChange" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="10.0"/>
+        <operator id="stdChangeColours.t:hummingbirds" spec="msbd.evolution.operator.AddRemoveConnectedWPropagation" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds" weight="20.0"/>
+        <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="10000">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+            <log id="totalStateChanges.t:hummingbirds" spec="msbd.util.StateChangesCountLogger" multiRateTree="@Tree.t:hummingbirds"/>
+        </logger>
+        <logger id="screenlog" spec="Logger" logEvery="10000">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+        </logger>
+        <logger id="stdratestreelog.t:hummingbirds" spec="Logger" fileName="$(filebase).hummingbirds.rates.trees" logEvery="10000" mode="tree">
+            <log id="TreeWithParameterValuesLogger.0" spec="msbd.util.TreeWithParameterValuesLogger" logChangeNodes="false" stateChangeModel="@stdscModel.t:hummingbirds" tree="@Tree.t:hummingbirds"/>
+        </logger>
+        <logger id="stdStateslog.t:hummingbirds" spec="Logger" fileName="$(filebase).hummingbirds.states.log" logEvery="10000">
+            <log id="StateChangeModelLogger.0" spec="msbd.util.StateChangeModelLogger" maxStates="10" stateChangeModel="@stdscModel.t:hummingbirds"/>
+        </logger>
+        <logger id="stdrateslog.t:hummingbirds" spec="Logger" fileName="$(filebase).hummingbirds.rates.log" logEvery="10000">
+            <log id="TipRatesLogger.0" spec="msbd.util.TipRatesLogger" multiRateTree="@Tree.t:hummingbirds" stateChangeModel="@stdscModel.t:hummingbirds"/>
+        </logger>
+    </run>
 
 </beast>
