@@ -3,12 +3,12 @@
 	<channel>
 		<title>Taming the BEAST - Tutorials</title>
 		<description>BEAST2 tutorials for the community, by the community! - Recently modified tutorials</description>
-		<link>https://taming-the-beast.org//tutorials</link>
-		<atom:link href="https://taming-the-beast.org/feed.tutorials.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000/tutorials</link>
+		<atom:link href="http://localhost:4000feed.tutorials.xml" rel="self" type="application/rss+xml" />
 		<image>
-			<url>https://taming-the-beast.org//images/logo_bw.svg</url>
+			<url>http://localhost:4000/images/logo_bw.svg</url>
 			<title>Taming the BEAST</title>
-			<link>https://taming-the-beast.org//tutorials</link>
+			<link>http://localhost:4000/tutorials</link>
 		</image>
 				
 			<item>
@@ -50,8 +50,8 @@ Update to BEAST 2.7
 				</description>
 				<pubDate>Tue, 15 Aug 2023 17:40:53 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/starbeast2-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/starbeast2-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -91,8 +91,8 @@ Update to BEAST 2.7
 				</description>
 				<pubDate>Fri, 11 Aug 2023 14:45:14 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/ClaDS-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/ClaDS-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/ClaDS-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/ClaDS-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -140,8 +140,8 @@ Update to BEAST 2.7
 				</description>
 				<pubDate>Fri, 11 Aug 2023 13:54:17 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -189,8 +189,8 @@ Update to BEAST 2.7
 				</description>
 				<pubDate>Wed, 09 Aug 2023 11:40:07 +0000</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
+				<link>http://localhost:4000/tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
@@ -230,8 +230,8 @@ Update to BEAST 2.7
 				</description>
 				<pubDate>Wed, 09 Aug 2023 09:55:26 +0000</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</guid>
+				<link>http://localhost:4000/tutorials/Troubleshooting-convergence-issues/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-convergence-issues/</guid>
 			</item>
 				
 			<item>
@@ -275,8 +275,8 @@ Update to BEAST 2.7
 				</description>
 				<pubDate>Wed, 09 Aug 2023 09:38:49 +0000</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
+				<link>http://localhost:4000/tutorials/Skyline-plots/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-plots/</guid>
 			</item>
 				
 			<item>
@@ -324,8 +324,8 @@ Update to BEAST 2.7
 				</description>
 				<pubDate>Wed, 09 Aug 2023 09:36:43 +0000</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
+				<link>http://localhost:4000/tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Introduction-to-BEAST2/</guid>
 			</item>
 				
 			<item>
@@ -375,8 +375,8 @@ updated for 2.7
 				</description>
 				<pubDate>Mon, 24 Jul 2023 12:37:34 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
+				<link>http://localhost:4000/tutorials/Substitution-model-averaging/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Substitution-model-averaging/</guid>
 			</item>
 				
 			<item>
@@ -416,8 +416,8 @@ updated for 2.7
 				</description>
 				<pubDate>Thu, 20 Jul 2023 17:05:44 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/MSBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MSBD-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/MSBD-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/MSBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -463,8 +463,8 @@ Updates based on comments (thanks Bethany)
 				</description>
 				<pubDate>Thu, 20 Jul 2023 14:23:53 +0000</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</guid>
+				<link>http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Troubleshooting-initialization-issues/</guid>
 			</item>
 				
 			<item>
@@ -504,8 +504,8 @@ Updates based on comments (thanks Bethany)
 				</description>
 				<pubDate>Fri, 09 Jun 2023 15:20:03 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Mascot-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -551,8 +551,8 @@ Update figures and precooked runs for BEAST2.7 compatibility
 				</description>
 				<pubDate>Thu, 08 Jun 2023 12:14:57 +0000</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
+				<link>http://localhost:4000/tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
@@ -592,8 +592,8 @@ Update figures and precooked runs for BEAST2.7 compatibility
 				</description>
 				<pubDate>Wed, 15 Mar 2023 11:17:43 +0000</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Skyline-analyses-for-macroevolution/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-analyses-for-macroevolution/</guid>
+				<link>http://localhost:4000/tutorials/Skyline-analyses-for-macroevolution/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Skyline-analyses-for-macroevolution/</guid>
 			</item>
 				
 			<item>
@@ -635,8 +635,8 @@ Removed non-matching HA and NA sequences (both from Helsinki)
 				</description>
 				<pubDate>Fri, 01 Apr 2022 12:50:24 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Reassortment-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Reassortment-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/Reassortment-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Reassortment-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -678,8 +678,8 @@ Removed references to tutorial template bib file.
 				</description>
 				<pubDate>Mon, 28 Feb 2022 14:15:49 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/PIQMEE-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/PIQMEE-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -731,8 +731,8 @@ Removed references to tutorial template bib file.
 				</description>
 				<pubDate>Mon, 10 May 2021 20:22:22 +0000</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/MEP-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/MEP-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -772,8 +772,8 @@ Removed references to tutorial template bib file.
 				</description>
 				<pubDate>Mon, 14 Sep 2020 17:51:32 +0000</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/AIM-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/AIM-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -813,8 +813,8 @@ Removed references to tutorial template bib file.
 				</description>
 				<pubDate>Fri, 06 Dec 2019 01:03:14 +0000</pubDate>
 				<category>Easy</category>
-				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/CoupledMCMC-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -858,8 +858,8 @@ Removed references to tutorial template bib file.
 				</description>
 				<pubDate>Mon, 29 Jul 2019 08:20:13 +0000</pubDate>
 				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
+				<link>http://localhost:4000/tutorials/LanguagePhylogenies/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/LanguagePhylogenies/</guid>
 			</item>
 				
 			<item>
@@ -899,8 +899,8 @@ Removed references to tutorial template bib file.
 				</description>
 				<pubDate>Sun, 24 Mar 2019 22:45:59 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
+				<link>http://localhost:4000/tutorials/NS-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/NS-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -941,8 +941,8 @@ Added local update describing species-tree specification with BEAUti.
 				</description>
 				<pubDate>Thu, 21 Feb 2019 22:43:45 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/CladeAge-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/CladeAge-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -990,8 +990,8 @@ Added local update describing species-tree specification with BEAUti.
 				</description>
 				<pubDate>Mon, 05 Nov 2018 15:43:08 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/Molecular-Dating-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Molecular-Dating-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -1031,8 +1031,8 @@ Added local update describing species-tree specification with BEAUti.
 				</description>
 				<pubDate>Thu, 21 Jun 2018 21:09:40 +0000</pubDate>
 				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/Bacter-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/Bacter-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -1072,8 +1072,8 @@ Added local update describing species-tree specification with BEAUti.
 				</description>
 				<pubDate>Thu, 21 Jun 2018 07:30:17 +0000</pubDate>
 				<category>Basic</category>
-				<link>https://taming-the-beast.org//tutorials/species-tree-clocks/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/species-tree-clocks/</guid>
+				<link>http://localhost:4000/tutorials/species-tree-clocks/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/species-tree-clocks/</guid>
 			</item>
 				
 			<item>
@@ -1117,8 +1117,8 @@ Added local update describing species-tree specification with BEAUti.
 				</description>
 				<pubDate>Mon, 24 Jul 2017 14:10:26 +0000</pubDate>
 				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</guid>
+				<link>http://localhost:4000/tutorials/SCOTTI-Tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/SCOTTI-Tutorial/</guid>
 			</item>
 		
 	</channel>
