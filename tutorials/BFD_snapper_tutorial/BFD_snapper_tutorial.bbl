@@ -1,0 +1,546 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{baele12}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BG}{%
+         family={Baele},
+         familyi={B\bibinitperiod},
+         given={Guy},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Lemey},
+         familyi={L\bibinitperiod},
+         given={Philippe},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Bedford},
+         familyi={B\bibinitperiod},
+         given={Trevor},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=AAV}{%
+         family={Alekseyenko},
+         familyi={A\bibinitperiod},
+         given={Alexander\bibnamedelima V},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SMBE}%
+    }
+    \strng{namehash}{BG+1}
+    \strng{fullhash}{BGLPBTRASMAAAV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{9}
+    \field{pages}{2157\bibrangedash 2167}
+    \field{title}{Improving the accuracy of demographic and molecular clock
+  model comparison while accommodating phylogenetic uncertainty}
+    \field{volume}{29}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Bouckaert2014}{article}{}
+    \name{author}{9}{}{%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Heled},
+         familyi={H\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={K{\"{u}}hnert},
+         familyi={K\bibinitperiod},
+         given={Denise},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vaughan},
+         familyi={V\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WCH}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chieh-Hsi},
+         giveni={C\bibinithyphendelim H\bibinitperiod},
+      }}%
+      {{hash=XD}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Suchard},
+         familyi={S\bibinitperiod},
+         given={Marc\bibnamedelima A},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={Rambaut},
+         familyi={R\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRHJKDVTWCHXDSMARADAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1371/journal.pcbi.1003537
+    \endverb
+    \field{issn}{1553-7358}
+    \field{number}{4}
+    \field{pages}{e1003537}
+    \field{title}{BEAST 2: a software platform for Bayesian evolutionary
+  analysis.}
+    \verb{url}
+    \verb http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
+    \verb .1003537
+    \endverb
+    \field{volume}{10}
+    \field{journaltitle}{PLoS computational biology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Bryant2012}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BD}{%
+         family={Bryant},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=FJ}{%
+         family={Felsenstein},
+         familyi={F\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RNA}{%
+         family={Rosenberg},
+         familyi={R\bibinitperiod},
+         given={Noah\bibnamedelima A},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RA}{%
+         family={RoyChoudhury},
+         familyi={R\bibinitperiod},
+         given={Arindam},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BD+1}
+    \strng{fullhash}{BDBRFJRNARA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{8}
+    \field{pages}{1917\bibrangedash 1932}
+    \field{title}{{Inferring species trees directly from biallelic genetic
+  markers: bypassing gene trees in a full coalescent analysis.}}
+    \field{volume}{29}
+    \field{journaltitle}{Molecular Biology and Evolution}
+    \field{month}{08}
+    \field{year}{2012}
+  \endentry
+
+  \entry{BEAST2book2014}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DAJ}{%
+         family={Drummond},
+         familyi={D\bibinitperiod},
+         given={Alexei\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BRR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{DAJBRR1}
+    \strng{fullhash}{DAJBRR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Bayesian evolutionary analysis with {BEAST} 2}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Fujita2012}{article}{}
+    \name{author}{5}{}{%
+      {{hash=FMK}{%
+         family={Fujita},
+         familyi={F\bibinitperiod},
+         given={Matthew\bibnamedelima K},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=LAD}{%
+         family={Leache},
+         familyi={L\bibinitperiod},
+         given={Adam\bibnamedelima D},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BFT}{%
+         family={Burbrink},
+         familyi={B\bibinitperiod},
+         given={Frank\bibnamedelima T},
+         giveni={F\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=MJA}{%
+         family={McGuire},
+         familyi={M\bibinitperiod},
+         given={Jimmy\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Moritz},
+         familyi={M\bibinitperiod},
+         given={Craig},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{FMK+1}
+    \strng{fullhash}{FMKLADBFTMJAMC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{9}
+    \field{pages}{480\bibrangedash 488}
+    \field{title}{Coalescent-based species delimitation in an integrative
+  taxonomy}
+    \field{volume}{27}
+    \field{journaltitle}{Trends in Ecology \& Evolution}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Grummer13}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GJA}{%
+         family={Grummer},
+         familyi={G\bibinitperiod},
+         given={Jared\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BRW}{%
+         family={Bryson},
+         familyi={B\bibinitperiod},
+         given={Robert\bibnamedelima W},
+         giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=RTW}{%
+         family={Reeder},
+         familyi={R\bibinitperiod},
+         given={Tod\bibnamedelima W},
+         giveni={T\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{GJA+1}
+    \strng{fullhash}{GJABRWRTW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{pages}{119\bibrangedash 133}
+    \field{title}{Species delimitation using {B}ayes factors: simulations and
+  application to the \textit{{S}celoporus scalaris} species group ({S}quamata:
+  {P}hrynosomatidae)}
+    \field{volume}{63}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2013}
+  \endentry
+
+  \entry{kass95}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KRE}{%
+         family={Kass},
+         familyi={K\bibinitperiod},
+         given={Robert\bibnamedelima E},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=RAE}{%
+         family={Raftery},
+         familyi={R\bibinitperiod},
+         given={Adrian\bibnamedelima E},
+         giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis Group}%
+    }
+    \strng{namehash}{KRERAE1}
+    \strng{fullhash}{KRERAE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{430}
+    \field{pages}{773\bibrangedash 795}
+    \field{title}{Bayes factors}
+    \field{volume}{90}
+    \field{journaltitle}{Journal of the American Statistical Association}
+    \field{year}{1995}
+  \endentry
+
+  \entry{Leache14}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LAD}{%
+         family={Leach{\'e}},
+         familyi={L\bibinitperiod},
+         given={Adam\bibnamedelima D},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=FMK}{%
+         family={Fujita},
+         familyi={F\bibinitperiod},
+         given={Matthew\bibnamedelima K},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MVN}{%
+         family={Minin},
+         familyi={M\bibinitperiod},
+         given={Vladimir\bibnamedelima N},
+         giveni={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{LAD+1}
+    \strng{fullhash}{LADFMKMVNBR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{534\bibrangedash 542}
+    \field{title}{Species delimitation using genome-wide {SNP} data}
+    \field{volume}{63}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{nielsen1998}{article}{}
+    \name{author}{1}{}{%
+      {{hash=NR}{%
+         family={Nielsen},
+         familyi={N\bibinitperiod},
+         given={Rasmus},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{NR1}
+    \strng{fullhash}{NR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{number}{2}
+    \field{pages}{143\bibrangedash 151}
+    \field{title}{Maximum likelihood estimation of population divergence times
+  and population phylogenies under the infinite sites model}
+    \field{volume}{53}
+    \field{journaltitle}{Theoretical Population Biology}
+    \field{year}{1998}
+  \endentry
+
+  \entry{roychoudhury2008}{article}{}
+    \name{author}{3}{}{%
+      {{hash=RA}{%
+         family={RoyChoudhury},
+         familyi={R\bibinitperiod},
+         given={Arindam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FJ}{%
+         family={Felsenstein},
+         familyi={F\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TEA}{%
+         family={Thompson},
+         familyi={T\bibinitperiod},
+         given={Elizabeth\bibnamedelima A},
+         giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Genetics Soc America}%
+    }
+    \strng{namehash}{RA+1}
+    \strng{fullhash}{RAFJTEA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{2}
+    \field{pages}{1095\bibrangedash 1105}
+    \field{title}{A two-stage pruning algorithm for likelihood computation for
+  a population tree}
+    \field{volume}{180}
+    \field{journaltitle}{Genetics}
+    \field{year}{2008}
+  \endentry
+
+  \entry{stoltz2021bayesian}{article}{}
+    \name{author}{6}{}{%
+      {{hash=SM}{%
+         family={Stoltz},
+         familyi={S\bibinitperiod},
+         given={Marnus},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BB}{%
+         family={Baeumer},
+         familyi={B\bibinitperiod},
+         given={Boris},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bouckaert},
+         familyi={B\bibinitperiod},
+         given={Remco},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=FC}{%
+         family={Fox},
+         familyi={F\bibinitperiod},
+         given={Colin},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HG}{%
+         family={Hiscott},
+         familyi={H\bibinitperiod},
+         given={Gordon},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bryant},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{SM+1}
+    \strng{fullhash}{SMBBBRFCHGBD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{1}
+    \field{pages}{145\bibrangedash 161}
+    \field{title}{Bayesian inference of species trees using diffusion models}
+    \field{volume}{70}
+    \field{journaltitle}{Systematic Biology}
+    \field{year}{2021}
+  \endentry
+\enddatalist
+\endinput
