@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
 
 	
     <!-- Favicon -->
@@ -287,6 +287,15 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/raw/master/precooked_runs/RSV2-cdd0.tree" target="_blank" download rel="nofollow">
+						RSV2-cdd0.tree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/walterxie/MEP-tutorial/raw/master/precooked_runs/out-long.txt" target="_blank" download rel="nofollow">
 						out-long.txt
 					</a>
@@ -370,40 +379,40 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/2f5bed481990c038f51e9456bd7f595f5b4713e0">
+					06 Jun 2024 - <span class="text-gray">add ccd0 tree</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/53e53a9a4b3c601179a76d10e9033741b674653a">
+					06 Jun 2024 - <span class="text-gray">update RM</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/8cb321b9485fdd6c113131c8653ddc820667eebb">
+					06 Jun 2024 - <span class="text-gray">update to CCD0</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/a66c003bd55aef4d376756958969f4c9e539eee1">
+					29 May 2024 - <span class="text-gray">use CCD to replace MCC</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/62754c0691ec1d4df9daee0b28e6379e864e3057">
 					10 May 2021 - <span class="text-gray">remove extra space</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/0dc38ad402d6e3077781399b3ef30af605d5ff0f">
-					10 May 2021 - <span class="text-gray">add Fabio</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/afd8d218324f5d5899f4025e0ec9018c0f3b94c3">
-					10 May 2021 - <span class="text-gray">better resolution</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/76419594f5d611cee2cc7089fa87337420883de1">
-					10 May 2021 - <span class="text-gray">use estimated freqs</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/fbcb466f5e1fe04876d794db329275a35ba5f3a2">
-					07 May 2021 - <span class="text-gray">More edits to README.md</span>
 					</a> 
 				</li>
 			
@@ -459,6 +468,14 @@ In this case, we recommend you to download BEAST with JRE.</p>
 DensiTree, TreeAnnotator and other utility programs. This tutorial
 is written for BEAST v<code class="language-plaintext highlighter-rouge">2.6.x</code>, which has support for multiple
 partitions. It is available for download from <a href="http://www.beast2.org">http://www.beast2.org</a>.</p>
+  </li>
+  <li>
+    <p><strong>BEAST <a href="https://github.com/CompEvol/CCD">CCD</a> package</strong> - this package 
+implements point estimators based on the conditional clade distribution (CCD),
+which allows TreeAnnotator to produce better summary trees than via MCC trees 
+(which is restricted to the sample).
+It offers different parameterizations, such as CCD1, which is based on clade split frequencies, 
+and CCD0, which is based on clade frequencies. It can be installed through Package Manager.</p>
   </li>
   <li>
     <p><strong>Tracer</strong> - this program is used to explore the output of BEAST
@@ -896,16 +913,34 @@ overlaid:</p>
 
 <h2 id="summarising-trees">Summarising trees</h2>
 
-<p>We will use the program <code class="language-plaintext highlighter-rouge">TreeAnnotator</code> to summarise the 
-maximum clade credibility (MCC) tree from the sampled trees (in
-the tree log file). 
-TreeAnnotator is an application that comes with BEAST.
-First of all, we need to set the burn-in percentage to <code class="language-plaintext highlighter-rouge">10</code>(%). 
-Then we select the <code class="language-plaintext highlighter-rouge">Node heights</code> to <code class="language-plaintext highlighter-rouge">Mean heights</code>,
-and provide input and output file names. 
-This will rescale the node height to reflect the posterior mean node heights 
-for the clades contained in the MCC tree.
-More details about settings are available from <a href="https://www.beast2.org/treeannotator/">here</a>.</p>
+<p>To summarise the trees logged during MCMC, 
+we will use the <a href="https://doi.org/10.1101/2024.02.20.581316">CCD methods</a> 
+implemented in the program TreeAnnotator to create the maximum a posteriori (MAP) tree. 
+The implementation of the conditional clade distribution (CCD) offers different parameterizations, 
+such as CCD1, which is based on clade split frequencies, and CCD0, which is based on clade frequencies. 
+The MAP tree topology represents the tree topology with the highest posterior probability, 
+averaged over all branch lengths and substitution parameter values.</p>
+
+<p>You need to install <a href="https://github.com/CompEvol/CCD">CCD package</a> to make the options 
+available in TreeAnnotator.</p>
+
+<p>Please follow these steps after launching TreeAnnotator:</p>
+
+<ol>
+  <li>Set 10% as the burn-in percentage;</li>
+  <li>Select “MAP (CCD0)” as the “Target tree type”;</li>
+  <li>For “Node heights”, choose “Mean heights”;</li>
+  <li>Load the tree log file that BEAST 2 generated (it will end in “.trees” by default) 
+as “Input Tree File”. For this tutorial, the tree log file is called “RSV2-long.trees”.
+If you select it from the file chooser, the parent path will automatically fill in and 
+“YOUR_PATH” in the screen shot will be that parent path.</li>
+  <li>Finally, for “Output File”, copy and paste the input file path but replace 
+the file name “RSV2-long.trees” with “RSV2-ccd0.tree”. 
+This will create the file containing the resulting MAP tree.</li>
+</ol>
+
+<p>The image below shows a screenshot of TreeAnnotator with the necessary settings to 
+create the summary tree. “YOUR_PATH” will be replaced to the corresponding path.</p>
 
 <figure>
 	<img style="max-width:60.0%;" src="figures/treeannotator.png" alt="treeannotator" />
@@ -913,14 +948,19 @@ More details about settings are available from <a href="https://www.beast2.org/t
 </figure>
 <p><br /></p>
 
+<p>If you see any <a href="https://www.beast2.org/summarizing-posterior-trees/">negative branch lengths</a> in the summarised tree, 
+you can change the “Node heights” option to use “Common Ancestor heights”. 
+If you’re concerned about the differences between these two options, 
+you can run both and compare the resulting trees.</p>
+
 <h2 id="visualising-trees">Visualising trees</h2>
 
 <p>Summary trees can be viewed by <code class="language-plaintext highlighter-rouge">FigTree</code> (a program separate from BEAST) 
 and <code class="language-plaintext highlighter-rouge">DensiTree</code> (distributed with BEAST). 
 FigTree can only see one tree at a time, 
-so we normally use it to visualise the MCC tree.</p>
+so we normally use it to visualise the summary tree.</p>
 
-<p>Let us open the MCC tree in <code class="language-plaintext highlighter-rouge">FigTree</code>. First, open the <code class="language-plaintext highlighter-rouge">Trees</code> tab on the left panel,
+<p>Let us open the summary tree in <code class="language-plaintext highlighter-rouge">FigTree</code>. First, open the <code class="language-plaintext highlighter-rouge">Trees</code> tab on the left panel,
 and tick the checkbox <code class="language-plaintext highlighter-rouge">Order nodes</code>.
 Tick the checkbox of the <code class="language-plaintext highlighter-rouge">Node Bars</code> tab and open it. 
 By selecting <code class="language-plaintext highlighter-rouge">height_95%_HPD</code>, you will be able to display the 95% HPD-intervals on
@@ -933,15 +973,15 @@ set is from 2002.
 We can thus convert our node heights to years by subtracting their heights from 2002.</p>
 
 <figure>
-	<img style="max-width:90%;" src="figures/RSV2_mcc_tree.png" alt="RSV2_mcc_tree" />
-	<figcaption>Figure 16: The Maximum clade credibility tree for the G gene of 129 RSVA-2 viral samples.</figcaption>
+	<img style="max-width:90%;" src="figures/RSV2_cdd0_tree.png" alt="RSV2 summary tree" />
+	<figcaption>Figure 16: The summary tree for the G gene of 129 RSVA-2 viral samples.</figcaption>
 </figure>
 <p><br /></p>
 
 <p>Now load all your posterior trees to <code class="language-plaintext highlighter-rouge">DensiTree</code>.
 Click the <code class="language-plaintext highlighter-rouge">show</code> tab and tick the <code class="language-plaintext highlighter-rouge">Root Canal</code> checkbox.
 The “root canal tree”, drawn in thick blue lines,
-represents the MCC tree.
+represents the summary tree.
 Open the <code class="language-plaintext highlighter-rouge">Grid</code> tab, choose <code class="language-plaintext highlighter-rouge">Short grid</code>, pick <code class="language-plaintext highlighter-rouge">Reverse</code> for the
 scale axis, and set the <code class="language-plaintext highlighter-rouge">Origin</code> to 2002. 
 Please be aware that the origin here means the date of the youngest tips.</p>

@@ -12,25 +12,8 @@
 		</image>
 		
 			<item>
-				<title>Next online Transmitting Science BEAST2 course</title>
-				<description>&lt;p&gt;Registration is now open for the next online BEAST2 course, organised by Joëlle Barido-Sottani and Bethany Allen, in collaboration with Transmitting Science.&lt;/p&gt;
-
-&lt;p&gt;The course will take place &lt;strong&gt;online&lt;/strong&gt;, 15:00-18:30 (European central time, Paris/Rome/Zürich) on &lt;strong&gt;March 11th, 13th, 15th, 18th, 20th and 22nd 2024&lt;/strong&gt;. In addition to the live lessons, participants will also be expected to work independently between sessions.&lt;/p&gt;
-
-&lt;p&gt;More information on the schedule and registration can be found &lt;a href=&quot;https://www.transmittingscience.com/courses/evolution/bayesian-phylogenetic-inference-with-beast2/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-				<pubDate>Fri, 03 Nov 2023 00:00:00 +0100</pubDate>
-				<link>http://localhost:4000/news/Next_Transmitting_Science/</link>
-				<guid isPermaLink="true">http://localhost:4000/news/Next_Transmitting_Science/</guid>
-			</item>
-		
-			<item>
 				<title>Squamish BEAST Tamers programme now available!</title>
 				<description>&lt;p&gt;The &lt;a href=&quot;/workshops/Taming-the-BEAST-SBT/&quot;&gt;programme&lt;/a&gt; for our upcoming Taming the BEAST workshop in Squamish, British Columbia, is now available!&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img style=&quot;width:25%&quot; src=&quot;/images/workshops/Taming-the-BEAST-SBT-Logo.png&quot; alt=&quot;&quot; /&gt;
-&lt;/figure&gt;
 
 &lt;p&gt;The workshop will take place from &lt;strong&gt;August 14 to 18, 2023.&lt;/strong&gt; For information on the venue, please visit the &lt;a href=&quot;https://ttbcanada.ca&quot;&gt;Squamish BEAST Tamers website&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -426,6 +409,20 @@ refer to the flyer below.&lt;/p&gt;
 				<pubDate>Fri, 04 Aug 2017 00:00:00 +0200</pubDate>
 				<link>http://localhost:4000/news/London-wrap-up/</link>
 				<guid isPermaLink="true">http://localhost:4000/news/London-wrap-up/</guid>
+			</item>
+		
+			<item>
+				<title>Taming the BEAST in Systematic Biology!</title>
+				<description>&lt;p&gt;Our paper is now available in &lt;a href=&quot;https://doi.org/10.1093/sysbio/syx060&quot;&gt;Systematic Biology&lt;/a&gt;!&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/images/website_structure.png&quot; alt=&quot;&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+				<pubDate>Wed, 12 Jul 2017 00:00:00 +0200</pubDate>
+				<link>http://localhost:4000/news/Taming-the-BEAST-in-Systematic-Biology!/</link>
+				<guid isPermaLink="true">http://localhost:4000/news/Taming-the-BEAST-in-Systematic-Biology!/</guid>
 			</item>
 		
 	</channel>

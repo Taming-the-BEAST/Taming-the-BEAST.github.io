@@ -12,6 +12,145 @@
 		</image>
 				
 			<item>
+				<title>Time stamped data</title>
+				<description>
+					Time-stamped data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Remco Bouckaert
+							
+					
+						
+								,  Walter Xie
+						
+					
+						
+								,  Fábio K. Mendes
+						
+					
+						
+								
+									and  and Alexei Drummond
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/walterxie/MEP-tutorial/commit/2f5bed481990c038f51e9456bd7f595f5b4713e0'
+					&gt;
+						6 Jun 2024
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/walterxie'
+					&gt;
+						walterxie
+					&lt;/a&gt;
+					: add ccd0 tree
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.6.4
+					
+				</description>
+				<pubDate>Thu, 06 Jun 2024 00:57:01 +0000</pubDate>
+				<category>Beginner</category>
+				<link>http://localhost:4000/tutorials/MEP-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/MEP-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Species Trees and Species Delimitation with SNAPPER</title>
+				<description>
+					Analyzing SNP or AFLP data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Adam Leaché
+							
+					
+						
+								
+									and  Remco Bouckaert
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/bjoelle/BFD_snapper_tutorial/commit/33095946a9ef9cc1f57f7f8441c15460dd3fab3b'
+					&gt;
+						15 Apr 2024
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						'https://github.com/bjoelle'
+					&gt;
+						bjoelle
+					&lt;/a&gt;
+					: added converged run
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Mon, 15 Apr 2024 09:35:04 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/BFD_snapper_tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/BFD_snapper_tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>The ClaDS package</title>
+				<description>
+					Inferring progressive changes in birth and death rates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class='off' href=
+						'https://github.com/bjoelle/ClaDS-tutorial/commit/34a6d9d6adc89744aee243002d61cf32fae40eaa'
+					&gt;
+						18 Dec 2023
+					&lt;/a&gt;
+					by
+					&lt;a class='off' href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: updated XML
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Mon, 18 Dec 2023 09:23:52 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>http://localhost:4000/tutorials/ClaDS-tutorial/</link>
+				<guid isPermaLink="true">http://localhost:4000/tutorials/ClaDS-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>StarBEAST2 v1.0.0 tutorial</title>
 				<description>
 					Estimating species trees using StarBEAST2
@@ -34,9 +173,9 @@
 					&lt;/a&gt;
 					by
 					&lt;a class='off' href=
-						'https://github.com/genomescale'
+						''
 					&gt;
-						genomescale
+						Unknown
 					&lt;/a&gt;
 					: Merge pull request #1 from laduplessis/master
 
@@ -52,47 +191,6 @@ Update to BEAST 2.7
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/starbeast2-tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/starbeast2-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>The ClaDS package</title>
-				<description>
-					Inferring progressive changes in birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/bjoelle/ClaDS-tutorial/commit/fe9b15d3d69258920d42f6e4d8d65134b53a2d9e'
-					&gt;
-						11 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: Merge branch 'master' of https://github.com/bjoelle/ClaDS-tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 11 Aug 2023 14:45:14 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>http://localhost:4000/tutorials/ClaDS-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/ClaDS-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -683,59 +781,6 @@ Removed references to tutorial template bib file.
 			</item>
 				
 			<item>
-				<title>Time stamped data</title>
-				<description>
-					Time-stamped data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Remco Bouckaert
-							
-					
-						
-								,  Walter Xie
-						
-					
-						
-								,  Fábio K. Mendes
-						
-					
-						
-								
-									and  and Alexei Drummond
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/walterxie/MEP-tutorial/commit/62754c0691ec1d4df9daee0b28e6379e864e3057'
-					&gt;
-						10 May 2021
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						'https://github.com/walterxie'
-					&gt;
-						walterxie
-					&lt;/a&gt;
-					: remove extra space
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.4
-					
-				</description>
-				<pubDate>Mon, 10 May 2021 20:22:22 +0000</pubDate>
-				<category>Beginner</category>
-				<link>http://localhost:4000/tutorials/MEP-tutorial/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/MEP-tutorial/</guid>
-			</item>
-				
-			<item>
 				<title>AIM in StarBeast2 v0.15.2 Tutorial</title>
 				<description>
 					Inferring species trees and gene flow from multiple loci
@@ -1033,47 +1078,6 @@ Added local update describing species-tree specification with BEAUti.
 				<category>Intermediate</category>
 				<link>http://localhost:4000/tutorials/Bacter-Tutorial/</link>
 				<guid isPermaLink="true">http://localhost:4000/tutorials/Bacter-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Species Trees with Relaxed Molecular Clocks</title>
-				<description>
-					Estimating per-species substitution rates using StarBEAST2
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Huw A. Ogilvie
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class='off' href=
-						'https://github.com/genomescale/species-tree-clocks/commit/0dac8eede4f7fd4c170464d1ca63e8027632da1f'
-					&gt;
-						21 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class='off' href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: refined latex to md conversion
-					&lt;br&gt;&lt;br&gt;
-					Level: Basic
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5
-					
-				</description>
-				<pubDate>Thu, 21 Jun 2018 07:30:17 +0000</pubDate>
-				<category>Basic</category>
-				<link>http://localhost:4000/tutorials/species-tree-clocks/</link>
-				<guid isPermaLink="true">http://localhost:4000/tutorials/species-tree-clocks/</guid>
 			</item>
 				
 			<item>

@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: BFD_snapper_tutorial.aux
 The style file: biblatex.bst
@@ -19,13 +19,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: BFD_snapper_tutorial-blx.bib
 Database file #2: refs.bib
-Biblatex version: 3.13
+Biblatex version: 3.16
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 12 entries,
-            6365 wiz_defined-function locations,
-            1275 strings with 11458 characters,
-and the built_in function-call counts, 111756 in all, are:
+            6393 wiz_defined-function locations,
+            1283 strings with 11528 characters,
+and the built_in function-call counts, 111661 in all, are:
 = -- 8714
 > -- 1855
 < -- 580
@@ -39,9 +39,9 @@ change.case$ -- 311
 chr.to.int$ -- 50
 cite$ -- 22
 duplicate$ -- 10397
-empty$ -- 9620
+empty$ -- 9631
 format.name$ -- 1062
-if$ -- 23071
+if$ -- 22965
 int.to.chr$ -- 0
 int.to.str$ -- 32
 missing$ -- 0
