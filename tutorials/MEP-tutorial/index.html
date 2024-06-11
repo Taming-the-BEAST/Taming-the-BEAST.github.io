@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
     <!-- Favicon -->
@@ -379,6 +379,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/ed17f5b1c7cadd109b2cd8af9ae17e83e6f5112a">
+					10 Jun 2024 - <span class="text-gray">update ccd0 tree</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/2f5bed481990c038f51e9456bd7f595f5b4713e0">
 					06 Jun 2024 - <span class="text-gray">add ccd0 tree</span>
 					</a> 
@@ -405,14 +413,6 @@
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/a66c003bd55aef4d376756958969f4c9e539eee1">
 					29 May 2024 - <span class="text-gray">use CCD to replace MCC</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/62754c0691ec1d4df9daee0b28e6379e864e3057">
-					10 May 2021 - <span class="text-gray">remove extra space</span>
 					</a> 
 				</li>
 			
@@ -929,7 +929,7 @@ available in TreeAnnotator.</p>
 <ol>
   <li>Set 10% as the burn-in percentage;</li>
   <li>Select “MAP (CCD0)” as the “Target tree type”;</li>
-  <li>For “Node heights”, choose “Mean heights”;</li>
+  <li>For “Node heights”, choose “Common Ancestor heights”;</li>
   <li>Load the tree log file that BEAST 2 generated (it will end in “.trees” by default) 
 as “Input Tree File”. For this tutorial, the tree log file is called “RSV2-long.trees”.
 If you select it from the file chooser, the parent path will automatically fill in and 
@@ -948,10 +948,7 @@ create the summary tree. “YOUR_PATH” will be replaced to the corresponding p
 </figure>
 <p><br /></p>
 
-<p>If you see any <a href="https://www.beast2.org/summarizing-posterior-trees/">negative branch lengths</a> in the summarised tree, 
-you can change the “Node heights” option to use “Common Ancestor heights”. 
-If you’re concerned about the differences between these two options, 
-you can run both and compare the resulting trees.</p>
+<p>More details can be found on <a href="https://www.beast2.org/summarizing-posterior-trees/">summarising trees</a></p>
 
 <h2 id="visualising-trees">Visualising trees</h2>
 

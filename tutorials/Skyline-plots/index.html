@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.news.xml">
-	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="http://localhost:4000/feed.tutorials.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
 
 	
     <!-- Favicon -->
@@ -395,6 +395,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/88760582fc27518227916e3115b57fd7cd2bff9c">
+					11 Jun 2024 - <span class="text-gray">Corrected typo.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/e789a6dfd7077f9a2a3fc9182a0fdab906578139">
+					11 Jun 2024 - <span class="text-gray">Minor correction to tree log file name.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/1688b3cbb21924ae57a69ca756fdf46f8ca20515">
 					09 Aug 2023 - <span class="text-gray">Update LaTeX tutorial</span>
 					</a> 
@@ -413,24 +429,6 @@
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/b54a7dc6646a4f4e4e533012232d18250163b78b">
 					09 Aug 2023 - <span class="text-gray">Small changes to text (remove ambiguities, fix some errors) and update one figure</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/de071786380ef36cdf589fb78c3e567a6ed97eff">
-					11 Jun 2023 - <span class="text-gray">Merge pull request #11 from Taming-the-BEAST/edits2023
-
-Update LaTex tutorial, R-scripts and one figure</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/f1b38ea19cf2b4fb1086d118fb0fdfabe8752687">
-					11 Jun 2023 - <span class="text-gray">Update Re choose dimension figure</span>
 					</a> 
 				</li>
 			
@@ -636,15 +634,13 @@ Additionally, we allow for rate heterogeneity among sites. We do this by changin
 
   <p>Change the <strong>Chain Length</strong> from 10’000’000 to 3’000’000.</p>
 
-  <p>Click on the arrow next to the <strong>tracelog</strong> and change the <strong>File Name</strong> to <code class="language-plaintext highlighter-rouge">$(filebase).log</code> and set the 
+  <p>Click on the arrow next to the <strong>tracelog</strong> and ensure the <strong>File Name</strong> is set to <code class="language-plaintext highlighter-rouge">$(filebase).log</code> and set the 
 <strong>Log Every</strong> to 3’000.</p>
 
-  <p>Click on the arrow next to the <strong>treelog</strong> and change the <strong>File Name</strong> to <code class="language-plaintext highlighter-rouge">$(filebase)-$(tree).log</code> and set the 
+  <p>Click on the arrow next to the <strong>treelog</strong> and ensure the <strong>File Name</strong> is set to <code class="language-plaintext highlighter-rouge">$(filebase)-$(tree).trees</code> and set the 
 <strong>Log Every</strong> to 3’000.</p>
 
   <p>Leave all other settings at their default values and save the file as <code class="language-plaintext highlighter-rouge">hcv_coal.xml</code>.</p>
-
-  <p>(Note that since BEAST 2.7 the filenames used here are the default filenames and should not need to be changed!)</p>
 </blockquote>
 
 <p>When we run the analysis <code class="language-plaintext highlighter-rouge">$(filebase)</code> in the name of the <code class="language-plaintext highlighter-rouge">*.log</code> and <code class="language-plaintext highlighter-rouge">*.trees</code> files will be replaced by the name of the XML file. This is a good idea, since it makes it easy to keep track of which XML files produced which output files.</p>
