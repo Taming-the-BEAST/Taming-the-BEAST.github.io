@@ -1,0 +1,60 @@
+name: Publish TTB website
+
+on:
+  workflow_dispatch:
+
+  
+
+jobs:
+
+  build_web_site:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    container: 
+      image: ghcr.io/taming-the-beast/ttb-web-build-env:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
+      volumes: 
+        - ${{ github.workspace }}:/app
+    steps:
+      - name: Check out the blotter repo
+        uses: actions/checkout@v3
+        with:
+          repository: Taming-the-BEAST/blotter
+          token: ${{secrets.GITHUB_TOKEN}}
+          path: blotter
+      - name: Check out the web repo
+        uses: actions/checkout@v3
+        with:
+          path: website
+      - name: Update and preprocess
+        run: |
+          cd blotter
+          ruby _scripts/update-and-preprocess.rb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build the site
+        run: |
+          cd blotter
+          bundle exec jekyll build
+      - name: Check if _site was created
+        run: |
+          if [[ ${{ hashFiles('_site/') == '' }} ]];
+          then
+            exit 1
+          fi
+      - name: Push changes to site
+        run: |
+          cp -RT blotter/_site/ website/
+          cd website
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A
+          git commit -m "updated for gh action"
+          git push
+          
+      
+          
+        
+      
