@@ -4,21 +4,62 @@ Taming the BEAST is a platform for collating a comprehensive and cohesive set of
 
 ## Build site
 
-To build the website locally, clone the repo with:
+You can choose to set up a build environment locally or use a container image. Building and publishing with a container image can also be done directly on GitHub. 
+
+### Build and publish site within GitHub
+
+If you would like to build the website for testing purposes:
+  - go to the https://github.com/Taming-the-BEAST/web-testing repository
+  - select `Actions` tab
+  - select `Publish TTB website` action
+  - click `Run workflow` and wait for it to finish.
+
+Hopefully, you can see your changes now on the [taming-the-beast.org/web-testing/](taming-the-beast.org/web-testing/)     
+
+If you are ready to publish the public version of the website, repeat the same steps as above but from the https://github.com/Taming-the-BEAST/Taming-the-BEAST.github.io repository. You should see the changes on the https://taming-the-beast.org website.
+
+### Build site locally
+
+#### Using a container
+
+You will have to authenticate to GitHub container registry using your personal access token (YOUR_PA). 
+You need to have repo and read/write packages permissions for the token.
+```
+export CR_PAT=YOUR_PA
+echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+```
+Then you can pull the docker image: 
+```
+docker pull ghcr.io/taming-the-beast/ttb-web-build-env:latest
+```
+Using this image you can start a new container. To complete all steps successfully you may need to use the run options:
+```
+docker run -it --env  GITHUB_TOKEN=YOUR_PA -p 4000:4000 ghcr.io/taming-the-beast/ttb-web-build-env sh
+```
+
+The first option is required to avoid API request limits and the second one allows you to view the built site on your local machine (the port 4000 on the container is exposed to port 4000 on your local machine).
+
+Withing the container you can build as you would on your local machine (see below), but you should skip step 2 as all required dependencies are installed.
+At step 4 you may need to supply the option `--host=0.0.0.0` to be able to view the site.
+
+#### Build directly on locally machine
+
+1. To build the website locally, clone the repo with:
 
 ```
 git clone https://github.com/Taming-the-BEAST/blotter.git
 ```
 
-Then install necessary Ruby dependencies by running `bundle install` from within the `blotter` directory.  After this, the site can be be built with:
-
+2. Then install necessary Ruby dependencies by running `bundle install` from within the `blotter` directory.
+   
+3.After this, the site can be be built with:
 ```
 bundle exec jekyll build
 ```
 
-To view the site, run `bundle exec jekyll serve` and point a browser to `http://localhost:4000/`.  More information on Jekyll can be found [here](http://jekyllrb.com/).
+4. To view the site, run `bundle exec jekyll serve --host=0.0.0.0` and point a browser to `http://localhost:4000/`. Option `--host=0.0.0.0` may not be needed, depending on your setup.  More information on Jekyll can be found [here](http://jekyllrb.com/).
 
-To include the tutorials, preprocessing scripts are necessary to clone tutorial repos and update Jekyll metadata. This can be accomplished with:
+5. To include the tutorials, preprocessing scripts are necessary to clone tutorial repos and update Jekyll metadata. This can be accomplished with:
 
 ```
 ruby _scripts/update-and-preprocess.rb
