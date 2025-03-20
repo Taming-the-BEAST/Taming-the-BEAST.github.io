@@ -12,6 +12,22 @@
 		</image>
 		
 			<item>
+				<title>Applications Open for Taming the BEAST in Beijing, 2025!</title>
+				<description>&lt;p&gt;We are very happy to announce that applications for the next Taming
+the BEAST workshop, to be held at the &lt;a href=&quot;http://www.ivpp.ac.cn/&quot;&gt;IVPP&lt;/a&gt; in &lt;strong&gt;Bejing, China&lt;/strong&gt; are
+&lt;a href=&quot;/forms/Taming-the-BEAST-Beijing/&quot;&gt;now open&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;The workshop will take place from &lt;strong&gt;July 14 to 18, 2025&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;For further information visit the &lt;a href=&quot;/workshops/Taming-the-BEAST-Beijing&quot;&gt;Taming the BEAST Beijing homepage&lt;/a&gt; or contact the organizing committee at &lt;a href=&quot;mailto:ttb.beijing@ivpp.ac.cn&quot;&gt;ttb.beijing@ivpp.ac.cn&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+				<pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+				<link>https://taming-the-beast.org//news/Beijing-applications-open/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Beijing-applications-open/</guid>
+			</item>
+		
+			<item>
 				<title>Taming the BEAST in Beijing, China, 2025!</title>
 				<description>&lt;p&gt;It is our great pleasure to announce the first &lt;strong&gt;Taming the BEAST in China!&lt;/strong&gt; It will take place in &lt;strong&gt;Beijing, July 14-18, 2025&lt;/strong&gt;.&lt;/p&gt;
 
@@ -397,38 +413,6 @@ refer to the flyer below.&lt;/p&gt;
 				<pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
 				<link>https://taming-the-beast.org//news/Taming-the-BEAST-returns-to-Switzerland!/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-returns-to-Switzerland!/</guid>
-			</item>
-		
-			<item>
-				<title>London wrap up</title>
-				<description>&lt;figure&gt;
-	&lt;img src=&quot;/images/workshops/Taming-the-BEAST-London.jpg&quot; alt=&quot;&quot; /&gt;
-	&lt;figcaption&gt;The workshop organisers and participants outside of the London School of Hygiene and Tropical Medicine.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;The third edition of Taming the BEAST took place last week at the London School of Hygiene and Tropical Medicine. I had a lot of fun at the workshop in London and also learned a lot. Thanks to a great bunch of participants who came out to learn about BEAST2 with us, I hope you enjoyed the workshop!&lt;/p&gt;
-
-&lt;p&gt;A lot of thanks goes to Stéphane Hué for organising and hosting the workshop at the London School of Hygiene and Tropical Medicine. Thanks also to Stéphane Hué, Sebastian Funk and Tanja Stadler for contributing to the cost of the workshop. Many thanks for the great talks from the invited speakers: Oliver Pybus, Alexei Drummond, Tim Vaughan, Huw Ogilvie, Tanja Stadler, Erik Volz, Nuno Faria and Nicola de Maio. All of their slides, as well as the lecture slides are available &lt;a href=&quot;https://github.com/Taming-the-BEAST/Taming-the-BEAST-2017-London-Lectures&quot;&gt;online&lt;/a&gt;. Thanks also to Remco Bouckaert and Walter Xie for their support all the way from New Zealand.&lt;/p&gt;
-
-&lt;p&gt;This was the first time the workshop was organised by a group not directly involved in developing BEAST2 packages. I think it went really well and I’m looking forward to the next edition! It was also the first time we ran the BEAST clinic - two 2-hour sessions specifically designed for participants to come to us with their own datasets and problems. I really enjoyed learning about what everyone is doing in BEAST2 and trying to help them improve analyses and get their runs mixing. Unfortunately the workshop was too short to get to everyone and solve all of the problems. I hope everyone got some pointers and got at least their most urgent issues resolved!&lt;/p&gt;
-
-&lt;p&gt;Before the workshop we also made a few tweaks to the website, added two new tutorials and updated several of the older tutorials:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/tutorials/Mascot-Tutorial/&quot;&gt;MASCOT Tutorial&lt;/a&gt;: &lt;strong&gt;NEW&lt;/strong&gt; Use an approximation to the structured coalescent to quickly infer unbiased estimates of the migration rates between regions for bigger datasets than is possible with the full structured coalescent.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/tutorials/SCOTTI-Tutorial/&quot;&gt;SCOTTI Tutorial&lt;/a&gt;: &lt;strong&gt;NEW&lt;/strong&gt; Reconstruct transmission trees using within-host data with an approximate structured coalescent.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/tutorials/Prior-selection/&quot;&gt;Prior selection&lt;/a&gt;: &lt;strong&gt;UPDATED&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/tutorials/Substitution-model-averaging/&quot;&gt;Substitution model averaging&lt;/a&gt;: &lt;strong&gt;UPDATED&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/tutorials/Structured-birth-death-model/&quot;&gt;Structured birth-death model&lt;/a&gt;: &lt;strong&gt;UPDATED&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Finally, it is now also possible to read the news feed and see tutorial updates by subscribing to the RSS feeds.&lt;/p&gt;
-
-</description>
-				<pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
-				<link>https://taming-the-beast.org//news/London-wrap-up/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/London-wrap-up/</guid>
 			</item>
 		
 	</channel>
