@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>Troubleshooting convergence issues</title>
+				<description>
+					Post-processing and improving performance
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/a621ed29724bd638b6e3b8b12778e8f6cc291162'
+					&gt;
+						14 Apr 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bjoelle'
+					&gt;
+						bjoelle
+					&lt;/a&gt;
+					: added figures and files for starting tree section
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Mon, 14 Apr 2025 11:27:22 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</guid>
+			</item>
+				
+			<item>
 				<title>Skyline plots</title>
 				<description>
 					Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.
@@ -334,47 +375,6 @@ Update to BEAST 2.7
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
-				<title>Troubleshooting convergence issues</title>
-				<description>
-					Post-processing and improving performance
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/f9f59809f0a13226d360ee096e728fb940f14ff7'
-					&gt;
-						9 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update title too
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Wed, 09 Aug 2023 09:55:26 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</guid>
 			</item>
 				
 			<item>

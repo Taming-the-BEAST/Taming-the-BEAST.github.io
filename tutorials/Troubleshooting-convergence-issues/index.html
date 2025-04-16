@@ -162,6 +162,15 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-convergence-issues/raw/master/data/primates_tree.tre" target="_blank" rel="nofollow">
+						primates_tree.tre
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-convergence-issues/raw/master/data/seqs.nex" target="_blank" rel="nofollow">
 						seqs.nex
 					</a>
@@ -177,6 +186,33 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-convergence-issues/raw/master/xml/primates_run.xml" target="_blank" download rel="nofollow">
+						primates_run.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-convergence-issues/raw/master/xml/primates_run_newick_2calib.xml" target="_blank" download rel="nofollow">
+						primates_run_newick_2calib.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-convergence-issues/raw/master/xml/primates_run_newick_root.xml" target="_blank" download rel="nofollow">
+						primates_run_newick_root.xml
+					</a>
+				</li>
 			
 				
 				<div class="smallspacer"></div>
@@ -225,6 +261,15 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Troubleshooting-convergence-issues/raw/master/precooked_runs/primates_runs.tar.gz" target="_blank" download rel="nofollow">
+						primates_runs.tar.gz
+					</a>
+				</li>
 			
 				
 				<div class="smallspacer"></div>
@@ -336,6 +381,16 @@
     			</div>
  				</a>
  			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/bjoelle">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/14575423?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				bjoelle
+    			</div>
+ 				</a>
+ 			</div>			
  			
 		</div>
 		<div class="bigspacer"></div>
@@ -344,6 +399,22 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/a621ed29724bd638b6e3b8b12778e8f6cc291162">
+					14 Apr 2025 - <span class="text-gray">added figures and files for starting tree section</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/feb7aad9ed6aa84e28204c6e030b89f5ff8d9af7">
+					09 Apr 2025 - <span class="text-gray">added starting tree section</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -366,22 +437,6 @@
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/abe0fdc99d03d367bf7632a7d9000b6b84a12f16">
 					09 Jun 2023 - <span class="text-gray">Actually update LaTeX tutorial</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/c1aedbefb7d0372d22eda6765348ae7ba7155dbb">
-					09 Jun 2023 - <span class="text-gray">Update LaTeX tutorial</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/c847328c26cd8ace4224b46ece5615bcf7e7afe2">
-					09 Jun 2023 - <span class="text-gray">Minor updates to the text</span>
 					</a> 
 				</li>
 			
@@ -598,6 +653,159 @@
   <li>In this tutorial we only considered MCMC performance with respect to exploring parameter space, but we also need to consider tree space. One simple diagnostic for checking convergence and mixing in tree space is to look at the trace plot for the tree likelihood. Poor mixing in the tree likelihood can indicate problems exploring tree space.</li>
   <li>It is always a good idea to check your posterior estimates against sampling from the prior.</li>
 </ul>
+
+<h1 id="practical-using-a-starting-tree">Practical: Using a starting tree</h1>
+
+<p>By default, BEAST2 generates a random starting tree for you at the beginning of the analysis. While this is helpful, the random starting tree can be quite far from the phylogenies with high posterior values. Using a good initial tree, for instance a phylogeny which was generated during a previous analysis of the dataset, can be a good way to make the burn-in phase shorter and accelerate the convergence of our analysis. Here we use a primates dataset with only 12 sequences as an example, but providing a starting tree will generally be more effective for larger phylogenies and more complex analyses.</p>
+
+<h2 id="the-data-1">The Data</h2>
+
+<p>As in the previous section, we have already generated an XML file containing all the details of our analysis.</p>
+
+<blockquote>
+  <p>Download the first <strong>BEAST2</strong> input file <code class="language-plaintext highlighter-rouge">primates_run.xml</code>.</p>
+
+</blockquote>
+
+<h2 id="inspecting-the-xml-file-in-beauti-1">Inspecting the XML file in BEAUti</h2>
+
+<p>While we can open the XML file in any standard text editor, BEAUTi offers an easy way to inspect the different elements of the analysis:</p>
+
+<blockquote>
+  <p>Open <strong>BEAUti</strong> and load in the <code class="language-plaintext highlighter-rouge">primates_run.xml</code> file by navigating to <strong>File &gt; Load</strong>.</p>
+
+</blockquote>
+
+<p>By default, the initial value for the tree does not appear in BEAUti, so our first step is to make this initial tree visible.</p>
+
+<blockquote>
+  <p>In <strong>BEAUti</strong>, navigate to <strong>View &gt; Show Starting tree panel</strong>.
+A new tab appears in the interface, which should look like <a href="#fig:tree_panel">Figure 10</a>.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:tree_panel"></a>
+	<img style="width:80.0%;" src="figures/beauti_tree_panel.png" alt="" />
+	<figcaption>Figure 10: The Starting tree panel showing the default random tree.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="setting-an-initial-tree">Setting an initial tree</h2>
+
+<p>Our first step is to select a newick tree as our starting tree, which will allow us to input directly our initial tree.</p>
+
+<blockquote>
+  <p>Click on the dropdown menu indicating <strong>Random Tree</strong> and select the option <strong>Newick Tree</strong>.</p>
+
+</blockquote>
+
+<p>We now need to provide our initial tree in Newick format.</p>
+
+<blockquote>
+  <p>Download the first initial tree file <code class="language-plaintext highlighter-rouge">primates_tree.tre</code>.
+Copy and paste the tree from the file into the <strong>Newick</strong> input field.</p>
+
+</blockquote>
+
+<p>Note that there are several important options in this menu, which you need to consider carefully as they can modify your input tree:</p>
+<ul>
+  <li><strong>Adjust Tip Heights</strong>: if tip dates are not provided for your sequences and this option is checked, the ages of all the tips in your tree will be adjusted to 0 (i.e. the present). If you have a tree with heterochronous samples or fossils and you did not provide the tip ages (in the <strong>Tip ages</strong> panel), you need to <strong>uncheck</strong> this option, otherwise your tree will be changed to an ultrametric phylogeny.</li>
+  <li><strong>Binarize Multifurcations</strong>: this option will remove any polytomies present in your initial tree and resolve them as a series of random bifurcations. Since most tree models implemented in BEAST2 cannot handle polytomies, this option is set to <strong>true</strong> by default.</li>
+  <li><strong>Adjust Tree Node Heights</strong>: this option will adjust branch lengths which are negative or zero to small positive values. <strong>Sampled ancestors</strong> are generally encoded as tips at the end of branches with length zero, so you need to <strong>uncheck</strong> this option if you want to provide an initial tree with sampled ancestors.</li>
+</ul>
+
+<p>Our analysis only contains extant species, and our tree has no polytomies so we will leave all options to their default. The final setup looks like <a href="#fig:newick_tree_panel">Figure 11</a>.</p>
+
+<figure>
+	<a id="fig:newick_tree_panel"></a>
+	<img style="width:80.0%;" src="figures/beauti_newick_tree_panel.png" alt="" />
+	<figcaption>Figure 11: The Starting tree panel showing our Newick initial tree.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="running-with-an-initial-tree">Running with an initial tree</h2>
+
+<p>We can now run our updated analysis.</p>
+
+<blockquote>
+  <p>Save the analysis as <code class="language-plaintext highlighter-rouge">primates_run_newick.xml</code>.
+Open <strong>BEAST2</strong> and choose <code class="language-plaintext highlighter-rouge">primates_run_newick.xml</code> as the Input file. Then click <strong>Run</strong>.</p>
+
+</blockquote>
+
+<p>We can load the log files <code class="language-plaintext highlighter-rouge">primates_run.log</code> and <code class="language-plaintext highlighter-rouge">primates_run_newick.log</code> (found in the <code class="language-plaintext highlighter-rouge">Output</code> section of the tutorial) into <strong>Tracer</strong> to compare both runs. On this small example, the ESS of the run with an initial tree are slightly higher on most parameters than with the random tree, but both runs have converged and we do not see a strong difference in performance from adding an initial tree. However, initial trees can be very helpful for larger and more complex inferences to converge.</p>
+
+<h2 id="common-issues-with-initial-trees">Common issues with initial trees</h2>
+
+<p>A frequent issue with using an initial tree is that <strong>BEAST2</strong> expects a dated tree, i.e. a tree with branch lengths in units of time, whereas initial trees are often generated using a maximum likelihood software such as <strong>IQ-TREE</strong>, which will output a tree with branch lengths in units of number of substitutions. This is exactly the case in our example, and if we plot the primates tree provided above we will notice this very easily. For instance, all our samples come from the present, but our primates initial tree is not ultrametric.</p>
+
+<p>This was not an issue in our earlier inference because <strong>BEAST2</strong> was able to correct the tip ages (with the <strong>Adjust Tip Heights</strong> option) and we had no other time calibration points. However, in a real analysis we will likely have several calibrations to help calibrate our molecular clock. Let us check what happens when we add a root calibration at the root of the tree.</p>
+
+<blockquote>
+  <p>Download the second <strong>BEAST2</strong> input file <code class="language-plaintext highlighter-rouge">primates_run_newick_root.xml</code>.
+Open <strong>BEAUti</strong> and load in the <code class="language-plaintext highlighter-rouge">primates_run_newick_root.xml</code> file by navigating to <strong>File &gt; Load</strong>.
+Check the added root calibration in the <strong>Priors</strong> panel.</p>
+
+</blockquote>
+
+<p>We can see here that we have added a distribution on the root node in order to infer a dated tree. Now we can run this analysis.</p>
+
+<blockquote>
+  <p>Open <strong>BEAST2</strong> and choose <code class="language-plaintext highlighter-rouge">primates_run_newick_root.xml</code> as the Input file. Then click <strong>Run</strong>.</p>
+
+</blockquote>
+
+<p>Our analysis does not start, and by looking at the error message in <a href="#fig:error_root">Figure 12</a> we can see that our root calibration has probability <strong>-Infinity</strong>. This is because the root calibration that we have set has an <strong>offset</strong> of <strong>20 My</strong>, meaning that the root age has to be above that value. On the other hand, the initial tree we have provided has a root age of 0.887, which is completely incompatible with the calibration.</p>
+
+<figure>
+	<a id="fig:error_root"></a>
+	<img style="width:80.0%;" src="figures/beast_error_root.png" alt="" />
+	<figcaption>Figure 12: The error obtained when running an analysis with a root calibration.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We can solve this issue by scaling our initial tree so that the root age is increased. Since our root age has to be greater than 20, we need a scaling factor of at least 20/0.887 = 22.55 to have a tree which is compatible with the calibration.</p>
+
+<blockquote>
+  <p>Open <strong>BEAUti</strong> and load in the <code class="language-plaintext highlighter-rouge">primates_run_newick_root.xml</code> file by navigating to <strong>File &gt; Load</strong>.
+As before, navigate to <strong>View &gt; Show Starting tree panel</strong>.
+Set the <strong>Scale</strong> to <strong>25.0</strong>.</p>
+
+</blockquote>
+
+<p>We can now test that our updated analysis runs correctly.</p>
+
+<blockquote>
+  <p>Save the analysis as <code class="language-plaintext highlighter-rouge">primates_run_newick_root_scaled.xml</code>.
+Open <strong>BEAST2</strong> and choose <code class="language-plaintext highlighter-rouge">primates_run_newick_root_scaled.xml</code> as the Input file. Then click <strong>Run</strong>.</p>
+
+</blockquote>
+
+<p>Unfortunately, the <strong>Scale</strong> parameter is applied to the whole tree, and in analyses with many different calibration points it is not always possible to find a scale factor which is compatible with all calibrations, especially if some calibrations have both a minimum and a maximum age. For instance, let us see what happens if we add a second calibration point to our analysis.</p>
+
+<blockquote>
+  <p>Download the third <strong>BEAST2</strong> input file <code class="language-plaintext highlighter-rouge">primates_run_newick_2calib.xml</code>.
+Open <strong>BEAUti</strong> and load in the <code class="language-plaintext highlighter-rouge">primates_run_newick_2calib.xml</code> file by navigating to <strong>File &gt; Load</strong>.
+Check the two calibrations in the <strong>Priors</strong> panel.</p>
+
+</blockquote>
+
+<p>We can see two calibrations in our analysis, one at the root of the tree and one on the human-chimpanzee clade. Now we can run this analysis.</p>
+
+<blockquote>
+  <p>Open <strong>BEAST2</strong> and choose <code class="language-plaintext highlighter-rouge">primates_run_newick_2calib.xml</code> as the Input file. Then click <strong>Run</strong>.</p>
+
+</blockquote>
+
+<p>Again our analysis does not start, and by looking at the error message in <a href="#fig:error_calib">Figure 13</a> we can see that our second calibration <strong>human_pan</strong> has probability <strong>-Infinity</strong>, which indicates that it is incompatible with the initial tree. In this situation, we would need to either use a dated tree as our starting value for the inference, or manually adjust the tree so that all calibration nodes have an age which is compatible with the calibrations set in the analysis.</p>
+
+<figure>
+	<a id="fig:error_calib"></a>
+	<img style="width:80.0%;" src="figures/beast_error_calib.png" alt="" />
+	<figcaption>Figure 13: The error obtained when running an analysis with two calibration points.</figcaption>
+</figure>
+<p><br /></p>
 
 <h1 id="useful-links">Useful Links</h1>
 
