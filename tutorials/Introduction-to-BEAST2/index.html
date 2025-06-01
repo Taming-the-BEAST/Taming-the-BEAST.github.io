@@ -211,6 +211,15 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Introduction-to-BEAST2/raw/master/precooked_runs/Primates.CCD0_MAP.tree" target="_blank" download rel="nofollow">
+						Primates.CCD0_MAP.tree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/Introduction-to-BEAST2/raw/master/precooked_runs/Primates.MCC.tree" target="_blank" download rel="nofollow">
 						Primates.MCC.tree
 					</a>
@@ -273,6 +282,16 @@
  				
 			<div class="smallspacer"></div>				
 			<div>
+				<a class="off" href="https://github.com/jugne">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/26361891?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				jugne
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
 				<a class="off" href="https://github.com/tgvaughan">
     			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/512538?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
@@ -292,42 +311,42 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/740027bdadad3782da86e53f257163c6abca137c">
-					09 Aug 2023 - <span class="text-gray">Update LaTeX tutorial</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/9e077ee36a8d82aa89327b6e1f3f7255183d6168">
-					09 Aug 2023 - <span class="text-gray">Update two figures (after bug in BEAUti was fixed)</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/101012a339c023db07f24764fcf9f7c48f20084f">
-					09 Jun 2023 - <span class="text-gray">Merge pull request #4 from Taming-the-BEAST/edits2023
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/2d54785807c4bb775aa6b7ba7b7c5545c949934c">
+					23 May 2025 - <span class="text-gray">Merge pull request #6 from jugne/master
 
-Fully update tutorial to BEAST 2.7.4</span>
+Adding CCD0 summary tree</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/60d5abac01dddbed685313668356fcba17dce795">
-					09 Jun 2023 - <span class="text-gray">Update LaTeX tutorial</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/d84ed74cbc13a7187fe5ade604017499aa143e7a">
+					19 May 2025 - <span class="text-gray">Update README.md</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/00f2b02ec073dee9ee90388042824d70ca5275ec">
-					09 Jun 2023 - <span class="text-gray">Small tweaks</span>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/40786c274551b3a79ccb7367f9849496178c7234">
+					19 May 2025 - <span class="text-gray">Chapter heading fix</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/e5e147797767128d057730a0d16fa7d678872846">
+					19 May 2025 - <span class="text-gray">small final (?) tutorial text update</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/3514738cc66a9fbd84390037c477e02cc2b1fb24">
+					16 May 2025 - <span class="text-gray">LaTeX update</span>
 					</a> 
 				</li>
 			
@@ -362,7 +381,7 @@ Fully update tutorial to BEAST 2.7.4</span>
 
 <h3 id="treeannotator">TreeAnnotator</h3>
 
-<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+<p>TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
 
 <p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
@@ -942,7 +961,9 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
 
 <p>Besides producing a sample of parameter estimates, BEAST2 also produces a posterior sample of phylogenetic time-trees. These need to be summarised too before any conclusions about the quality of the posterior estimate can be made.</p>
 
-<p>One way to summarise the trees is by using the program TreeAnnotator. This will take the set of trees and find the best supported tree. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges. It will also calculate the posterior clade probability for each node. Such a tree is called the <em>maximum clade credibility</em> tree.</p>
+<p>One way to summarise the trees is by using the program TreeAnnotator. Until recently the <em>maximum clade credibility</em> tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a <em>conditional clade distribution</em> tree (CCD) has been proposed <a class="citation" href="#berling2025">(Berling et al., 2025)</a>. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. <strong>To save time, you may run just one method and compare it to the other using the example below.</strong></p>
+
+<h4 id="producing-mcc-tree">Producing MCC tree</h4>
 
 <blockquote>
   <p>Open <strong>TreeAnnotator</strong>.</p>
@@ -981,13 +1002,56 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
 <figure>
 	<a id="fig:treeannot"></a>
 	<img style="width:80%;" src="figures/treeannot.png" />
-	<figcaption>Figure 18: TreeAnnotator setup</figcaption>
+	<figcaption>Figure 18: TreeAnnotator MCC tree setup</figcaption>
+</figure>
+<p><br /></p>
+
+<h4 id="producing-ccd0-tree">Producing CCD0 tree</h4>
+
+<p>To produce CCD0 summary tree, you will first need to install the CCD package.</p>
+<blockquote>
+  <p>Open BEAUTi</p>
+
+  <p>Select <strong>File -&gt; Manage packages</strong></p>
+
+  <p>Select <strong>CCD</strong> package in the list and select <strong>Install/Upgrade</strong> <a href="#fig:installCCD">Figure 19</a></p>
+
+  <p>Close BEAUTi</p>
+</blockquote>
+
+<figure>
+	<a id="fig:installCCD"></a>
+	<img style="width:80%;" src="figures/installCCD0.png" />
+	<figcaption>Figure 19: Install CCD package</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Now you can proceed to make CCD0 tree:</p>
+
+<blockquote>
+  <p>Open TreeAnotator</p>
+
+  <p>Repeat all the steps in TreeAnotator as when making the MCC tree, except for <strong>Target tree type</strong> and <strong>Output File</strong>.</p>
+
+  <p>For <strong>Target tree type</strong> select <strong>MAP(CCD0)</strong> from drop down list.</p>
+
+  <p>Set the <strong>Output File</strong> to <code class="language-plaintext highlighter-rouge">Primates.CCD0_MAP.tree</code>.</p>
+</blockquote>
+
+<p>The setup should look as shown in <a href="#fig:treeannot_CCD">Figure 20</a>. You can now run the program.</p>
+
+<figure>
+	<a id="fig:treeannot_CCD"></a>
+	<img style="width:80%;" src="figures/treeannot_CCD0.png" />
+	<figcaption>Figure 20: TreeAnnotator CCD0 tree setup</figcaption>
 </figure>
 <p><br /></p>
 
 <h3 id="visualising-the-tree-estimate">Visualising the tree estimate</h3>
 
-<p>Finally, we can visualize the tree with one of the available pieces of software, such as FigTree.</p>
+<p>Finally, we can visualise the tree with one of the available pieces of software, such as FigTree.</p>
+
+<h4 id="visualising-the-mcc-tree">Visualising the MCC tree</h4>
 
 <blockquote>
   <p>Open <strong>FigTree</strong>. Use <strong>File &gt; Open</strong> then locate and click on <code class="language-plaintext highlighter-rouge">Primates.MCC.tree</code>.</p>
@@ -1005,13 +1069,24 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
 </blockquote>
 
 <figure>
-	<a id="fig:figtree"></a>
+	<a id="fig:figtree_MCC"></a>
 	<img src="figures/figtree.png" />
-	<figcaption>Figure 19: FigTree visualisation of the estimated tree.</figcaption>
+	<figcaption>Figure 21: FigTree visualisation of the estimated MCC tree.</figcaption>
 </figure>
 <p><br /></p>
 
-<p>Your tree should now look something like <a href="#fig:figtree">Figure 19</a>. We first ordered the tree nodes. Because there are many ways to draw the same tree ordering nodes makes it easier for us to compare different trees to each other. The scale bars we added represent the 95% HPD interval for the age of each node in the tree, as estimated by the BEAST2 analysis. The node labels we added gives the posterior probability for a node in the posterior set of trees (that is, the trees logged in the tree log file, after discarding the burn-in). We can also use FigTree to display other statistics, such as the branch lengths, the 95% HPD interval of a node etc. The exact statistics available will depend on the model used.</p>
+<p>Your tree should now look something like <a href="#fig:figtree_MCC">Figure 21</a>. We first ordered the tree nodes. Because there are many ways to draw the same tree ordering nodes makes it easier for us to compare different trees to each other. The scale bars we added represent the 95% HPD interval for the age of each node in the tree, as estimated by the BEAST2 analysis. The node labels we added gives the posterior probability for a node in the posterior set of trees (that is, the trees logged in the tree log file, after discarding the burn-in). We can also use FigTree to display other statistics, such as the branch lengths, the 95% HPD interval of a node etc. The exact statistics available will depend on the model used.</p>
+
+<h4 id="visualising-ccd0-tree">Visualising CCD0 tree</h4>
+
+<p>To visualise CCD0 tree, follow the same steps as above, but open the <code class="language-plaintext highlighter-rouge">Primates.CCD0_MAP.tree</code> at the first step. <a href="#fig:figtree_CCD">Figure 22</a> shows the resulting tree.</p>
+
+<figure>
+	<a id="fig:figtree_CCD"></a>
+	<img src="figures/figTree_CCD.png" />
+	<figcaption>Figure 22: FigTree visualisation of the estimated CCD0 tree.</figcaption>
+</figure>
+<p><br /></p>
 
 <blockquote>
   <p><strong>Topics for discussion:</strong> The posterior probabilities tell us which clades are highly supported and the scale bars tell us how confident we are about their divergence times.</p>
@@ -1020,6 +1095,7 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
     <li>Are all clades well-supported? How about their ages?</li>
     <li>Look at the 95% HPD interval for the age of the apes (<em>Hylobates, Pongo, Gorilla, Pan</em> and <em>Homo sapiens</em>). Does the estimated age agree with your prior knowledge?</li>
     <li>What about the divergence time between old-world and new-world monkeys? (<em>Saimiri sciureus</em> is the only new-world monkey in this dataset).</li>
+    <li>One of the CCD0 summary method advantages is that it can evaluate tree topologies that were not sampled during the MCMC. In which scenario MCC and CCD0 trees would be (almost) the same? Does it then make sense that our dataset MCC and CCD0 summary tree topologies and clade posterior supports are practically identical?</li>
   </ul>
 </blockquote>
 
@@ -1044,12 +1120,12 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
   <p>Now expand the <strong>Clades</strong> menu, check the <strong>Show clades</strong> checkbox and the <strong>text</strong> checkbox for the <strong>Support</strong>.</p>
 </blockquote>
 
-<p>The tree should look as shown in <a href="#fig:densitree">Figure 20</a>.</p>
+<p>The tree should look as shown in <a href="#fig:densitree">Figure 23</a>.</p>
 
 <figure>
 	<a id="fig:densitree"></a>
 	<img src="figures/densitree.png" />
-	<figcaption>Figure 20: DensiTree visualisation of the tree sample.</figcaption>
+	<figcaption>Figure 23: DensiTree visualisation of the tree sample.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1087,6 +1163,7 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
 
 <ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
 <li><span id="Bouckaert2019">Bouckaert, R., Vaughan, T. G., Barido-Sottani, J., Duchêne, S., Fourment, M., Gavryushkina, A., Heled, J., Jones, G., Kühnert, D., Maio, N. D., Matschiner, M., Mendes, F. K., Müller, N. F., Ogilvie, H. A., Plessis, L. du, Popinga, A., Rambaut, A., Rasmussen, D., Siveroni, I., … Drummond, A. J. (2019). BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. <i>PLOS Computational Biology</i>, <i>15</i>(4).</span></li>
+<li><span id="berling2025">Berling, L., Klawitter, J., Bouckaert, R., Xie, D., Gavryushkin, A., &amp; Drummond, A. J. (2025). Accurate Bayesian phylogenetic point estimation using a tree distribution parameterized by clade probabilities. <i>PLOS Computational Biology</i>, <i>21</i>(2), e1012789.</span></li>
 <li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
 
 

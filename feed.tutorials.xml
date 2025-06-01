@@ -12,6 +12,241 @@
 		</image>
 				
 			<item>
+				<title>Visualizing BEAST2 results in R</title>
+				<description>
+					Tutorial on visualising results from BEAST2 analyses.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Cecilia Valenzuela Agüí
+							
+					
+						
+								
+									and  Ugnė Stolz
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/commit/cd24ed430e6e6663a32ea49288bee98ed7052c83'
+					&gt;
+						23 May 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Update master-refs.bib
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 23 May 2025 15:59:22 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</guid>
+			</item>
+				
+			<item>
+				<title>Structured birth death model</title>
+				<description>
+					Population structure using the multi-type birth-death model
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Denise Kühnert
+							
+					
+						
+								
+									and  Jūlija Pečerska
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/beb0bf8648bc83ed7d4fa97c22f486315ad107a1'
+					&gt;
+						23 May 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Fix figure links
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.4
+					
+				</description>
+				<pubDate>Fri, 23 May 2025 15:24:36 +0000</pubDate>
+				<category>Professional</category>
+				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
+			</item>
+				
+			<item>
+				<title>Introduction to BEAST2</title>
+				<description>
+					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Jūlija Pečerska
+							
+					
+						
+								, Veronika Bošková
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/2d54785807c4bb775aa6b7ba7b7c5545c949934c'
+					&gt;
+						23 May 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Merge pull request #6 from jugne/master
+
+Adding CCD0 summary tree
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 23 May 2025 15:00:28 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
+			</item>
+				
+			<item>
+				<title>MASCOT v3.0.0 Tutorial</title>
+				<description>
+					Parameter and State inference using the approximate structured coalescent
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Mascot-Tutorial/commit/a009dcbebb0eb3a3f73a454e7d2eb8a363b59ede'
+					&gt;
+						23 May 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Merge pull request #2 from jugne/master
+
+Adding CCD0 summary trees
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 23 May 2025 14:59:32 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Prior selection</title>
+				<description>
+					Prior selection and clock calibration using Influenza A data.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+					
+						
+								, Venelin Mitov
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/fed974800ca60d779db3274a60ebc58a41d92015'
+					&gt;
+						23 May 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Merge pull request #4 from jugne/master
+
+Small summary tree update
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 23 May 2025 14:58:17 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
+			</item>
+				
+			<item>
 				<title>Troubleshooting convergence issues</title>
 				<description>
 					Post-processing and improving performance
@@ -329,104 +564,6 @@ Update to BEAST 2.7
 			</item>
 				
 			<item>
-				<title>Prior selection</title>
-				<description>
-					Prior selection and clock calibration using Influenza A data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-					
-						
-								, Venelin Mitov
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/5934f31124dd8be5cff72005d1dd9f35b9727816'
-					&gt;
-						9 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update figures and figure widths
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Wed, 09 Aug 2023 11:40:07 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
-				<title>Introduction to BEAST2</title>
-				<description>
-					This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Jūlija Pečerska
-							
-					
-						
-								, Veronika Bošková
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/740027bdadad3782da86e53f257163c6abca137c'
-					&gt;
-						9 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update LaTeX tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Wed, 09 Aug 2023 09:36:43 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Introduction-to-BEAST2/</guid>
-			</item>
-				
-			<item>
 				<title>Substitution model averaging</title>
 				<description>
 					A tutorial using bModelTest
@@ -563,94 +700,6 @@ Updates based on comments (thanks Bethany)
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</guid>
-			</item>
-				
-			<item>
-				<title>MASCOT v3.0.0 Tutorial</title>
-				<description>
-					Parameter and State inference using the approximate structured coalescent
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Mascot-Tutorial/commit/f2064d454a621ad213507ec2344e7e6cc15a9da8'
-					&gt;
-						9 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Escaped some characters.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 09 Jun 2023 15:20:03 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Mascot-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Mascot-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Structured birth death model</title>
-				<description>
-					Population structure using the multi-type birth-death model
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Denise Kühnert
-							
-					
-						
-								
-									and  Jūlija Pečerska
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/a45898e69d5c274792e8962db07bb1851b32cf3b'
-					&gt;
-						8 Jun 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Merge pull request #4 from EtthelWindels/master
-
-Update figures and precooked runs for BEAST2.7 compatibility
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.4
-					
-				</description>
-				<pubDate>Thu, 08 Jun 2023 12:14:57 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
@@ -1078,51 +1127,6 @@ Added local update describing species-tree specification with BEAUti.
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>SCOTTI Tutorial</title>
-				<description>
-					Transmission tree reconstruction with the structured coalescent
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Louis du Plessis
-							
-					
-						
-								
-									and Nicola de Maio
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/SCOTTI-Tutorial/commit/12254bfaf2ca38f8db7d8673b8eab744031b77d1'
-					&gt;
-						24 Jul 2017
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update LaTeX tutorial
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.4.7
-					
-				</description>
-				<pubDate>Mon, 24 Jul 2017 14:10:26 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/SCOTTI-Tutorial/</guid>
 			</item>
 		
 	</channel>

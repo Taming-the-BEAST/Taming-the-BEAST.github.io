@@ -92,10 +92,7 @@ to install it separately.
 
 \subsubsection{TreeAnnotator}\label{treeannotator}
 
-TreeAnnotator is used to summarise the posterior sample of trees to
-produce a maximum clade credibility tree. It can also be used to
-summarise and visualise the posterior estimates of other tree parameters
-(e.g.~node height).
+TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).
 
 TreeAnnotator is provided as a part of the BEAST2 package so you do not
 need to install it separately.
@@ -366,15 +363,18 @@ New York are inferred to be from the Hong Kong backwards.
     \label{fig:example1}
 \end{figure}
 
-\subsubsection{Make the MCC tree using
-TreeAnnotator}\label{make-the-mcc-tree-using-treeannotator}
+\subsubsection{Make the summary tree using TreeAnnotator}\label{make-the-summary-tree}
 
-Next, we want to summarize the trees. This we can do using
-treeAnnotator. Open the programm and then set the options as below. You
-have to specify the \emph{Burnin precentage}, the \emph{Node heights},
-\emph{Input Tree File} and the \emph{Output File}. Use the typed trees 
-in the file \emph{H3N2.H32.trees} as \emph{Input Tree File}. After clicking
-\emph{Run} the programm should summarize the trees.
+Next, we want to summarize the trees. This we can do using TreeAnnotator. Until recently the \textit{maximum clade credibility} tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95\% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a \textit{conditional clade distribution} tree (CCD) has been proposed  \citep{berling2025}. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. \textbf{To save time, you may run just one method and compare it to the other using the example below.}
+
+
+\textbf{Producing MCC tree}
+
+\begin{framed}
+Open \textbf{TreeAnnotator} and then set the options as in the Figure \ref{fig:example1} below. You have to specify the \textbf{Burnin percentage}, \textbf{Target tree type},  \textbf{Node heights}, \textbf{Input Tree File} and the \textbf{Output File}.
+Use the typed trees in the file  \lstinline!H3N2.H3N2.trees! as \textbf{Input Tree File}. Name output file \lstinline!H3N2.mcc.tree!.
+After clicking \textbf{Run} the program should summarize the trees.
+\end{framed}
 
 \begin{figure}
     \centering
@@ -383,20 +383,66 @@ in the file \emph{H3N2.H32.trees} as \emph{Input Tree File}. After clicking
     \label{fig:example1}
 \end{figure}
 
-\subsubsection{Check the MCC tree using
-FigTree}\label{check-the-mcc-tree-using-figtree}
+\textbf{Producing CCD0 tree}
 
-In each logging step of the tree during the MCMC, MASCOT logs several different things. It logs the inferred probability of each node being in any possible location. In this example, these would be the inferred probabilities of being in Hong Kong, New York and New Zealand. Additonally, it logs the most likely location of each node.
+To produce CCD0 summary tree, you will first need to install the CCD package.
 
-After opening the MCC tree in FigTree, we can visualize several things.
-To color branches, you can go to \emph{Appearance} \textgreater{}\textgreater{}  \emph{Colour by} and select \textbf{max}. 
-This is the location that was inferred to be most often the most likely location of the node.
+\begin{framed}
+	Open BEAUTi and select \textbf{File} >> \textbf{Manage packages}
+	
+	Select \textbf{CCD} package in the list and select \textbf{Install/Upgrade} (see Figure \ref{fig:installCCD})
+	
+	Close BEAUTi
+\end{framed}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.600000\textwidth]{figures/installCCD0.png}
+	\caption{Install CCD package.}
+	\label{fig:installCCD}
+\end{figure}
+
+Now you can proceed to make CCD0 tree:
+
+\begin{framed}
+	Open \textbf{TreeAnnotator} and then set the options as in the Figure \ref{fig:ccd0} below. You have to specify the \textbf{Burnin percentage}, \textbf{Target tree type}, \textbf{Node heights}, \textbf{Input Tree File} and the \textbf{Output File}.
+	Use the typed trees in the file  \lstinline!H3N2.H3N2.trees! as \textbf{Input Tree File}. Name output file \lstinline!H3N2.ccd0.tree!.
+	After clicking \textbf{Run} the program should summarize the trees.
+\end{framed}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.600000\textwidth]{figures/treeannotator.ccd0.png}
+	\caption{Make the conditional clade credibility tree.}
+	\label{fig:ccd0}
+\end{figure}
+
+\subsubsection{Analyse and compare the MCC and CCD0 summary trees}\label{analyse-and-compare-summary-tree}
+
+In each logging step of the tree during the MCMC, MASCOT logs several different things. It logs the inferred probability of each node being in any possible location. In this example, these would be the inferred probabilities of being in Hong Kong, New York and New Zealand. Additionally, it logs the most likely location of each node.
+
+\begin{framed}
+	Open \textbf{FigTree} and load your chosen summary tree (\lstinline!H3N2.mcc.tree or H3N2.ccd0.tree!).
+	On the left hand menu, select \textbf{Appearance} >> \textbf{Colour by} and select \textbf{max}. This is the location that was inferred to be most often the most likely location of the node.
+	Select \textbf{Trees} >> \textbf{Order nodes} >> \textbf{increasing}. The sorting step is only needed so we can compare trees better.
+
+	You may optionally increase line weight (\textbf{Appearance} >> \textbf{Line weight}) and tip label font (\textbf{Tip Labels} >> \textbf{Font size}).
+\end{framed}
+
+Figures \ref{fig:mcc_tree} and \ref{fig:ccd0_tree} show the MCC and CCD0 trees respectively. First analyse tree for the method you followed.
 
 \begin{figure}
     \centering
-    \includegraphics[width=1.000000\textwidth]{figures/ColorsTree.png}
-    \caption{Compare the inferred node probabilities.}
-    \label{fig:example1}
+    \includegraphics[width=1.000000\textwidth]{figures/figtree.mcc.png}
+    \caption{MCC tree, inferred node locations.}
+    \label{fig:mcc_tree}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.000000\textwidth]{figures/figtree.ccd0.png}
+	\caption{CCD0 tree, inferred node locations.}
+	\label{fig:ccd0_tree}
 \end{figure}
 
 We can now determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations.
@@ -406,6 +452,12 @@ To get the actual inferred probabilities of each node being in any of the 3 loca
 It should however be mentioned that the inference of nodes being in a particular location makes some simplifying assumptions, such as that there are no other locations (i.e. apart from the sampled locations) where lineages could have been.
 
 Another important thing to know is that currently, we assume rates to be constant. This means that we assume that the population size of the different locations does not change over time. We also make the same assumption about the migration rates through time.
+
+
+Now, compare the figures for MCC and CCD0 summary trees. 
+\begin{framed}
+	One of the CCD0 summary method advantages is that it can evaluate tree topologies that were not sampled during the MCMC. This is why it usually performs better on high-entropy (uncertain, spread out) tree posterior. Knowing this, what observations can you make about our sample? Can you see some differences?
+\end{framed}
 
 \subsubsection{Errors that can occur (Work in progress)}\label{errors-that-can-occur}
 

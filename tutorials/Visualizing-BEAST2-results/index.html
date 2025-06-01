@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Visualizing BEAST2 results in R</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Visualizing-BEAST2-results/">Visualizing BEAST2 results in R</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Tutorial on visualising results from BEAST2 analyses.
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Cecilia Valenzuela Agüí
+					
+			
+				
+						
+							and  Ugnė Stolz
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Visualizing-BEAST2-results" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Visualizing-BEAST2-results/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Visualizing-BEAST2-results/raw/master/precooked_runs/Primates.MCC.tree" target="_blank" download rel="nofollow">
+						Primates.MCC.tree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Visualizing-BEAST2-results/raw/master/precooked_runs/hcv_bdsky.log" target="_blank" download rel="nofollow">
+						hcv_bdsky.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/Visualizing-BEAST2-results/raw/master/precooked_runs/primate-mtDNA_long.log" target="_blank" download rel="nofollow">
+						primate-mtDNA_long.log
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/jugne">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/26361891?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				jugne
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/commit/cd24ed430e6e6663a32ea49288bee98ed7052c83">
+					23 May 2025 - <span class="text-gray">Update master-refs.bib</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/commit/d99c5f319b005babc9c96ddbe767916bc6b9107a">
+					23 May 2025 - <span class="text-gray">Update master-refs.bib</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/commit/a5c304e5bd75d03fc8d6f7d6c6cc832c334d14d1">
+					23 May 2025 - <span class="text-gray">Update references</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/commit/91896574110f5a690415dbf0a8368201b80f89b6">
+					23 May 2025 - <span class="text-gray">Fix references</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/commit/14fe314a78ad890a37836b002f57a4285333fb4e">
+					23 May 2025 - <span class="text-gray">remove some more LaTeX stuff</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>Analyzing and interpreting the extensive output generated in Bayesian phylodynamic analyses can sometimes be a challenging task. This tutorial aims to provide insights into scientific figure design techniques and resources in R that can effectively visualize BEAST2 results.</p>
+
+<p>By employing appropriate visualizations, we can enhance our understanding of the evolutionary processes and facilitate the effective communication of findings.</p>
+
+<p>In most BEAST2 analyses, the results consist of two files: the posterior sample of phylogenetic trees (.trees file) and the parameters (.log file). These are long files containing MCMC samples and we will need to summarise them to be able to understand the results.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (http://www.beast2.org) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial assumes that the files came from analyses using the BEAST2 version v2.7.x <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014; Bouckaert et al., 2019)</a>.</p>
+
+<h3 id="r-and-rstudio">R and RStudio</h3>
+<p>R (<a href="https://www.r-project.org">https://www.r-project.org</a>) is a programming language and software environment designed for statistical computing, data analysis, and graphical visualization. It is widely used in bioinformatics, data science, and statistical modeling due to its extensive package ecosystem and flexibility.</p>
+
+<p>RStudio (<a href="https://www.rstudio.com">https://www.rstudio.com</a>) is an integrated development environment (IDE) for R that provides a user-friendly interface to write, run, and debug R code. It simplifies data analysis workflows by offering features like script editors, project management, and built-in plotting tools. It is optional but will provide better user experience.</p>
+
+<p>We will install R packages for data processing and visualisation along the way.</p>
+
+<hr />
+
+<h1 id="motivation-and-tips-for-beast2-results-visualization">Motivation and Tips for BEAST2 results visualization</h1>
+
+<p>When generating scientific figures based on abundant Bayesian MCMC results, there are several important considerations to keep in mind.</p>
+<ul>
+  <li><strong>Display Uncertainty</strong>: Bayesian analysis provides posterior distributions that capture the uncertainty of parameter estimates, including tree topology, branch lengths, and evolutionary rates. Displaying this uncertainty is important for robust interpretation. This can be done by showing the 95% HPD interval around key parameters, like node heights with error bars, or visualizations such as boxplots or density plots for the posterior probability of the parameters. Avoid presenting point estimates without any indication of the associated uncertainty.</li>
+</ul>
+
+<figure align="center">
+	<a id="Fig1"></a>
+	<img style="width:70.0%;" src="figures/Fig1_pnas.1319091111fig04.jpeg" alt="" />
+	<figcaption>Figure 1: Divergence times of extant bears estimated under the FBD model in BEAST2. Grey horizontal bars show their uncertainty inytervals. <a class="citation" href="#Heath2014">(Heath et al., 2014)</a> </figcaption>
+</figure>
+<p><br /></p>
+
+<ul>
+  <li><strong>Clarity of Tree Representations</strong>: Trees are complex objects depicting numerous relationships between samples. Extracting valuable insights from trees heavily relies on a clear representation. Avoid cluttering the tree with too many branches or overlapping labels. Use annotations to highlight key clades or important nodes in the tree. Don’t forget to include the scale or axis in your tree.</li>
+  <li><strong>Tell a story</strong>: With the abundance of information in BEAST2 results, it is important to have a clear objective for the main result you wish to communicate. Otherwise, the figure may become excessively complex and lose its meaning. Utilize color, shape, and size variations to emphasize significant patterns. Incorporate the temporal and geographical information present in the parameters, such as utilizing skyline plots or geographical maps instead of visualizing individual parameters. Prior to plotting, summarize or transform the results if needed.</li>
+</ul>
+
+<figure align="center">
+	<a id="Fig2"></a>
+	<img style="width:70.0%;" src="figures/Fig2.png" alt="" />
+	<figcaption>Figure 2: Tell a story: [Nextrain](https://nextstrain.org) provides interactive visualization of pathogen genome data </figcaption>
+</figure>
+<p><br /></p>
+
+<ul>
+  <li><strong>Experiment</strong>. There is not just one way of visualizing a set of results, so do not be afraid of experimenting with different type of plots. Interactive visualization tools can also be useful to interpret and communicate complex data. These tools enable exploration and manipulation of the results in real time, so they will work well for online and interactive presentations (but not for in a PDF document).</li>
+</ul>
+
+<p>Remember, figures should be self-explanatory and provide sufficient context to be understood. Seek feedback from colleagues or mentors to improve the clarity and effectiveness of your figures.</p>
+
+<p>Next, you will find a few code snippets with examples to visualize the most common type of plots from BEAST2 results. It is not an extensive tutorial (you can find a lot of good resources on that at the end of each section). We assume that you have a working knowledge of R and ggplot.</p>
+
+<h1 id="how-to-visualize-beast2-summary-tree-in-r-with-ggtree">How to visualize BEAST2 summary tree in R with ggtree</h1>
+
+<p>To visualize trees there are multiple tools and packages available: <a href="http://beast.community/figtree">FigTree</a>, <a href="https://www.cs.auckland.ac.nz/~remco/DensiTree/DensiTree.html">Densitree</a>, <a href="https://bioconductor.org/packages/release/bioc/html/ggtree.htmltidytreeicytree.org">IcyTree</a>, R packages: <a href="https://bioconductor.org/packages/release/bioc/html/ggtree.htmltidytree">ggtree</a>, <a href="https://cran.r-project.org/web/packages/phytools/index.html">phytools</a>, <a href="https://cran.r-project.org/web/packages/ape/index.html">ape</a>, python packages: <a href="https://biopython.org/wiki/Phylo">Biopython Phylo</a>, <a href="http://etetoolkit.org/">ETE toolkits</a> and many more. 
+<strong>IcyTree</strong> is great for quick visualization and exploration of trees. For publication-ready figures, you can use <strong>FigTree</strong> and <strong>ggtree</strong> or other R and python packages. <strong>Densitree</strong> is a program for qualitative analysis of set of trees. In this tutorial we will focus in R and the ggtree package.</p>
+
+<h3 id="1-install-and-load-the-required-packages">1. Install and load the required packages</h3>
+
+<p>The R code below will install the metapackage <code class="language-plaintext highlighter-rouge">treedataverse</code> <a class="citation" href="#treedataverse2025">(Yu, 2025)</a>  that includes several useful packages for processing and visualizing trees in R: <code class="language-plaintext highlighter-rouge">treeio</code> <a class="citation" href="#treeio2020">(Wang et al., 2020)</a>, <code class="language-plaintext highlighter-rouge">ggtree</code> <a class="citation" href="#ggtree2017">(Yu et al., 2017)</a>, <code class="language-plaintext highlighter-rouge">ggtreeExtra</code> (missing reference) and <code class="language-plaintext highlighter-rouge">tidytree</code> <a class="citation" href="#tidytree2022">(Yu, 2022)</a>. We will also use library <code class="language-plaintext highlighter-rouge">ggsci</code> which has nice color palettes <a class="citation" href="#ggsci2024">(Xiao, 2024)</a>.</p>
+
+<pre><code class="language-{r}">	# Install packages
+	install.packages("BiocManager")
+	install.packages("ggsci")
+	BiocManager::install("YuLab-SMU/treedataverse")
+
+	# Load packages
+	library(treedataverse)
+	library(ggsci)
+</code></pre>
+
+<h3 id="2-read-the-beast-summary-tree-and-metadata">2. Read the BEAST summary tree and metadata</h3>
+
+<p>In general, we will visualize a summary tree from the posterior samples of trees, e.g. we can create a Maximum Clade Credibility (MCC) tree with TreeAnnotator.</p>
+
+<pre><code class="language-{r}">	tree_file &lt;- "https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/raw/refs/heads/main/precooked_runs/Primates.MCC.tree" 
+	tree &lt;- read.beast(tree_file)
+</code></pre>
+
+<h3 id="3-plot-the-tree-with-backward-in-time-axis">3. Plot the tree with backward in time axis</h3>
+
+<pre><code class="language-{r}">	p &lt;- ggtree(tree,  mrsd = NULL) + 
+  		theme_tree2() + # This ggtree theme will add a forward in time x-axis
+  		labs(caption="million of years")
+	p &lt;- revts(p) # This will reverse the time in the axis 
+	p
+</code></pre>
+
+<figure align="center">
+	<a id="Fig3"></a>
+	<img style="width:70.0%;" src="figures/Fig3.png" alt="" />
+	<figcaption>Figure 3: Tree with backward in time axis. </figcaption>
+</figure>
+<p><br /></p>
+
+<p>Usually, with epidemiological datasets, you will want a forward in time x-axis in calendar time. In this case, use <code class="language-plaintext highlighter-rouge">theme_tree2()</code> and the parameter <code class="language-plaintext highlighter-rouge">mrsd</code> in the in <code class="language-plaintext highlighter-rouge">ggtree()</code> function equal to the most recent sample date.</p>
+
+<h3 id="4-customize-tree-labels">4. Customize tree labels</h3>
+
+<pre><code class="language-{r}">	p1 &lt;- p +
+  		geom_tiplab(size = 3, hjust = -0.1) + # add the tip labels
+  		geom_nodelab(aes(label = round(posterior, 3)), 
+               		hjust = 1.5, vjust = -0.5, size = 3) + # add posterior value to internal nodes
+  		xlim_tree(20) # adjust x axis to show full tip names
+
+	p1
+</code></pre>
+
+<figure align="center">
+	<a id="Fig4"></a>
+	<img style="width:70.0%;" src="figures/Fig4.png" alt="" />
+	<figcaption>Figure 4: Tree with custom labels. </figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="5-add-error-bars">5. Add error bars</h3>
+
+<pre><code class="language-{r}">	p1 &lt;- p1 +
+  		geom_range(range = 'height_0.95_HPD',
+             	color = pal_jco("default")(1), alpha = 0.2, size = 2) 
+	p1
+</code></pre>
+<figure align="center">
+	<a id="Fig5"></a>
+	<img style="width:70.0%;" src="figures/Fig5.png" alt="" />
+	<figcaption>Figure 5: Tree with error bars. </figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="6-customize-tips-and-color">6. Customize tips and color</h3>
+
+<pre><code class="language-{r}">	p1 &lt;- p1 +
+  		geom_point(aes(color = isTip)) + # add tip points and color by tip/internal node
+  		theme(legend.position = "none") + # hide the legend
+  		scale_color_jco() # select color palette
+	p1
+
+</code></pre>
+
+<figure align="center">
+	<a id="Fig6"></a>
+	<img style="width:70.0%;" src="figures/Fig6.png" alt="" />
+	<figcaption>Figure 6: Tree with custom tips and color. </figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="7-annotate-the-tree-with-external-data">7. Annotate the tree with external data</h3>
+
+<p>If you have external data you can add it to your ggtree object and use it to highlight specific branches or clades.</p>
+
+<pre><code class="language-{r}">
+	# Data with cleaned label and classification
+	# Usually you will have this information in a file that you can directly load:
+	# metadata &lt;- read_csv(metadata_file)
+
+	metadata &lt;- as_tibble(tree) %&gt;%
+  		filter(!is.na(label)) %&gt;%
+  		mutate(new_label = gsub("M.", "Macaca", gsub("_", " ", tree@phylo$tip.label)),
+         		group = c("Apes", "Apes", "Apes", "Lemurs", 
+                   	"Old World monkey", "Old World monkey", "Old World monkey", "Old World monkey",
+                   	"Apes", "Apes", "New World monkey", "Tarsiers")) %&gt;%
+  		group_by(group) %&gt;%
+  		mutate(clade = MRCA(tree, node)) %&gt;%
+  		ungroup %&gt;%
+  		select(node, label, new_label, clade, group)
+
+
+	# Highlight clades
+	p2 &lt;- p +
+   		geom_hilight(data = metadata, 
+                	mapping = aes(node = clade, fill = group),
+                	type = "gradient", gradient.direction = 'rt',alpha = 0.8) +
+  	geom_tree() +
+  		scale_fill_npg(name = "") 
+
+	# Add previous layers on top of highlighted clades
+	p2 &lt;- p2 %&lt;+% metadata + # you can also left join external data to use it
+ 		 geom_tiplab(aes(label = new_label),
+              		size = 3, hjust = -0.1) + # add the tip labels
+  		xlim_tree(30) +
+  		geom_nodelab(aes(label = round(posterior, 3)), 
+               		hjust = 1.5, vjust = -0.5, size = 3) + # add posterior value to internal nodes
+  		geom_range(range = 'height_0.95_HPD',
+             		color = "grey30", alpha = 0.2, size = 2) +
+  		theme(legend.position = "top") + # This ggtree theme will add a forward in time x-axis
+  		labs(caption="million of years") # This will reverse the time in the axis 
+	p2
+
+</code></pre>
+
+<figure align="center">
+	<a id="Fig7"></a>
+	<img style="width:70.0%;" src="figures/Fig7.png" alt="" />
+	<figcaption>Figure 7: Tree with external data. </figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="much-more-in-ggtree">Much more in ggtree</h2>
+
+<p>The book <a href="http://yulab-smu.top/treedata-book/">“Data Integration, Manipulation and Visualization of Phylogenetic Trees”</a> by Guangchuang Yu (author of <code class="language-plaintext highlighter-rouge">ggtree</code>) is a great guide to visualization of phylogenetic trees with ggtree. It has a lot of examples and a clear structure to navigate it. There are many more things you can do, like adding heatmaps as annotations for your tips, or including images. Go and check it out!</p>
+
+<h1 id="how-to-visualize-parameter-posterior-samples-in-r-with-beastio-and-ggplot2">How to visualize parameter posterior samples in R with beastio and ggplot2</h1>
+
+<p>The posterior samples of the model parameters are in the <code class="language-plaintext highlighter-rouge">.log</code> file. This file is a text file that we can read into R and manipulate as a dataframe. However, there are packages that facilitate the data manipulation and processing of log files. In the following examples we will use the <code class="language-plaintext highlighter-rouge">beastio</code> <a class="citation" href="#beastio2023">(du Plessis, 2023)</a> package to this purpose, and <code class="language-plaintext highlighter-rouge">ggplot2</code> <a class="citation" href="#ggplot22016">(Wickham, 2016)</a> for data visualization. We will also make use from <code class="language-plaintext highlighter-rouge">tidyr</code> <a class="citation" href="#tidyr2023">(Wickham et al., 2023)</a> and <code class="language-plaintext highlighter-rouge">tibble</code> <a class="citation" href="#tibble2023">(M&lt;U+00FC&gt;ller &amp; Wickham, 2023)</a> packages for data manipulation.</p>
+
+<h3 id="1-install-and-load-the-required-packages-1">1. Install and load the required packages</h3>
+
+<pre><code class="language-{r}">	BiocManager::install("laduplessis/beastio")
+
+	library(tidyr)
+	library(tibble) # for data frame manipulation
+	library(beastio)
+
+</code></pre>
+
+<h3 id="2-read-the-log-file">2. Read the .log file</h3>
+
+<pre><code class="language-{r}">	file &lt;- "https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/raw/refs/heads/main/precooked_runs/primate-mtDNA_long.log"
+
+	# Read log file with 10% burnin
+	trace_mcmc &lt;- beastio::readLog(file, burnin = 0.1, as.mcmc = TRUE) # as mcmc object
+	trace &lt;- beastio::readLog(file, burnin = 0.1, as.mcmc = FALSE) # as dataframe for ggplot
+
+	# Get 95% HPDs for all parameters
+	hpds &lt;- beastio::getHPDMedian(trace_mcmc)
+
+</code></pre>
+
+<h3 id="3-tidy-the-data-and-plot-the-posterior-distribution">3. Tidy the data and plot the posterior distribution</h3>
+
+<p>Depending on the figure you would like to create, you may need to tidy the data to make it suitable for <code class="language-plaintext highlighter-rouge">ggplot</code> (<a href="https://r4ds.had.co.nz/tidy-data.html">more on tidy data</a>).</p>
+
+<pre><code class="language-{r}">	# Select mutation rates parameters and prepare the data for plotting
+	mut_rates &lt;- beastio::getLogFileSubset(trace, pattern = "mutationRate") %&gt;%
+  		pivot_longer(everything(), names_to = "mutationRate", values_to = "value") %&gt;%
+ 		 mutate(mutationRate = gsub("mutationRate.", "", mutationRate))
+
+	hpds_mut_rates &lt;- beastio::getHPDMedian(getLogFileSubset(trace_mcmc, pattern = "mutationRate")) %&gt;%
+  		as_tibble(rownames = "mutationRate") %&gt;%
+		mutate(mutationRate = gsub("mutationRate.", "", mutationRate))
+</code></pre>
+
+<h3 id="4-choose-the-plot-type">4. Choose the Plot Type</h3>
+
+<p>Select the appropriate type of plot for visualizing the posterior distribution. Histograms, density plots, boxplots, violins, and ridgeline plots are commonly used to visualize Bayesian posterior distributions.</p>
+
+<ul>
+  <li><strong>Density Plot</strong>: Use the <code class="language-plaintext highlighter-rouge">geom_density</code> function to create a density plot. This will estimate and display the probability density function of the parameter values.</li>
+</ul>
+
+<pre><code class="language-{r}">	# Density plot
+	ggplot() +
+		geom_density(data = mut_rates,
+               		aes(x = value, color = mutationRate, fill = mutationRate), 
+               		alpha = 0.5) +
+  		geom_vline(data = hpds_mut_rates, # Add median line
+             		aes(xintercept = med, color = mutationRate), size = 0.4, linetype = 2) +
+  		theme_minimal() +
+  		theme(legend.position = c(0.92, 0.8)) +
+  		scale_color_jco(name = "") +
+  		scale_fill_jco(name = "") +
+  		labs(title = "Primate mitochondrial genome estimated mutation rate") +
+  		xlab("Mutation rate")
+</code></pre>
+
+<figure align="center">
+	<a id="Fig8"></a>
+	<img style="width:70.0%;" src="figures/Fig8.png" alt="" />
+	<figcaption>Figure 8: Density plot. </figcaption>
+</figure>
+<p><br /></p>
+
+<ul>
+  <li><strong>Boxplot and Violin Plot</strong>: Use <code class="language-plaintext highlighter-rouge">geom_boxplot</code> and <code class="language-plaintext highlighter-rouge">geom_violi</code>n functions to create boxplots and violin plots.</li>
+</ul>
+
+<pre><code class="language-{r}">	p_mut_rates &lt;- ggplot(data = mut_rates,
+			aes(x = mutationRate, y = value, color = mutationRate, fill = mutationRate)) +
+  		geom_violin(alpha = 0.2) +
+  		geom_boxplot(width = 0.1, outlier.shape = NA, alpha = 0.2) +
+  		theme_minimal() +
+  		theme(legend.position = "none") +
+  		scale_color_jco(name = "") +
+  		scale_fill_jco(name = "") +
+  		xlab("Mutation rate")
+	p_mut_rates + labs(title = "Primate mitochondrial genome estimated mutation rate") 
+</code></pre>
+
+<figure align="center">
+	<a id="Fig9"></a>
+	<img style="width:70.0%;" src="figures/Fig9.png" alt="" />
+	<figcaption>Figure 9: Violin plot. </figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="skyline-plots">Skyline plots</h2>
+
+<p>In a skyline analysis, we are interested in visualizing the estimated rates over time. Follow the steps on the Skyline Plots Tutorial for a more detailed explanation on how to create a skyline plot in R with the <code class="language-plaintext highlighter-rouge">bdskytools</code> <a class="citation" href="#bdskytools2016">(du Plessis, 2016)</a> package. You can find the code from that tutorial in the next code snippet:</p>
+
+<pre><code class="language-{r}">	BiocManager::install("laduplessis/bdskytools")
+	library(bdskytools)
+</code></pre>
+
+<pre><code class="language-{r}">	file_bdsky &lt;- "https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/raw/refs/heads/main/precooked_runs/hcv_bdsky.log"   
+	trace_bdsky  &lt;- readLogfile(file_bdsky, burnin = 0.1)
+
+	Re_sky &lt;- getSkylineSubset(trace_bdsky, "reproductiveNumber")
+	Re_hpd &lt;- getMatrixHPD(Re_sky)
+	delta_hpd &lt;- getHPD(trace_bdsky$becomeUninfectiousRate)
+
+	timegrid &lt;- seq(0, 400, length.out = 101)
+	Re_gridded  &lt;- gridSkyline(Re_sky, trace_bdsky$origin, timegrid)
+	Re_gridded_hpd &lt;- getMatrixHPD(Re_gridded)
+
+	times &lt;- 1993 - timegrid
+
+	par(mar=c(5,4,4,4)+0.1)
+	plotSkylinePretty(range(times), as.matrix(delta_hpd), type='step', axispadding=0.0, 
+                  col=pal.dark(cblue), fill=pal.dark(cblue, 0.5), col.axis=pal.dark(cblue), 
+                  ylab=expression(delta), side=4, yline=2, ylims=c(0,1), xaxis=FALSE)
+
+	plotSkylinePretty(times, Re_gridded_hpd, type='smooth', axispadding=0.0, 
+                  col=pal.dark(corange), fill=pal.dark(corange, 0.5), col.axis=pal.dark(corange), 
+                  xlab="Time", ylab=expression("R"[e]), side=2, yline=2.5, xline=2, xgrid=TRUE, 
+                  ygrid=TRUE, gridcol=pal.dark(cgray), ylims=c(0,3), new=TRUE, add=TRUE)
+	title("Hepatitis C in Egypt", adj = 0)
+</code></pre>
+
+<figure align="center">
+	<a id="Fig10"></a>
+	<img style="width:70.0%;" src="figures/Fig10.png" alt="" />
+	<figcaption>Figure 10: Skyline plot. </figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="arranging-plots">Arranging plots</h2>
+
+<p>In the previous example of skyline plot, we combined the visualizations of <code class="language-plaintext highlighter-rouge">Re</code> and the <code class="language-plaintext highlighter-rouge">becoming uninfectious rate</code> estimates. Grouping plots together can be useful to have a comprehensive understanding of the data or in identifying patterns and emphasizing key findings.</p>
+
+<p>In R, there are various methods to arrange plots together. You can plot several parameters within a single figure, as shown in the previous example, or use the <code class="language-plaintext highlighter-rouge">geom_facet()</code> function in <code class="language-plaintext highlighter-rouge">ggplot</code>. Alternatively, you can use a package to arrange several independent plots such as <code class="language-plaintext highlighter-rouge">gridExtra</code>, <code class="language-plaintext highlighter-rouge">cowplot</code>, <code class="language-plaintext highlighter-rouge">patchwork</code> or <code class="language-plaintext highlighter-rouge">ggpubr</code>.</p>
+
+<p>In the following example we will show how to use <code class="language-plaintext highlighter-rouge">patchwork</code> (<a href="https://patchwork.data-imaginist.com/">https://patchwork.data-imaginist.com/</a>).</p>
+
+<pre><code class="language-{r}">	install.packages("patchwork")
+</code></pre>
+
+<p>You can arrange plots with the operator <code class="language-plaintext highlighter-rouge">+</code>. With the operator <code class="language-plaintext highlighter-rouge">|</code> the plots will be next to each other and with <code class="language-plaintext highlighter-rouge">/</code> they will be placed on top of each other. You can adjust the number of columns, widths and more with <code class="language-plaintext highlighter-rouge">plot_layout()</code>.</p>
+
+<pre><code class="language-{r}">
+	library(patchwork)
+
+	p_clock_rate &lt;- ggplot(trace) +
+  		geom_density(aes(x = clockRate)) +
+  		geom_vline(xintercept = getHPD(trace$clockRate)[[2]], linetype = 2) +
+  		xlab("Clock rate") +
+  		theme_minimal() 
+
+	p2 + ggtitle("Primates evolution") + 
+  		p_clock_rate / p_mut_rates + 
+  		plot_layout(widths = c(0.7, 0.3)) 
+
+</code></pre>
+
+<figure align="center">
+	<a id="Fig11"></a>
+	<img style="width:70.0%;" src="figures/Fig11.png" alt="" />
+	<figcaption>Figure 11: Arranged plots. </figcaption>
+</figure>
+<p><br /></p>
+
+<h1 id="about-color-palettes">About color palettes</h1>
+
+<p>When choosing color palettes in R, there are several resources available that can help you select visually appealing and effective color schemes. Here are some popular resources:</p>
+<ul>
+  <li>Color palettes in R: <code class="language-plaintext highlighter-rouge">RColorBrewer</code>, <code class="language-plaintext highlighter-rouge">ggsci</code>, <code class="language-plaintext highlighter-rouge">paleteer</code>, <code class="language-plaintext highlighter-rouge">viridis</code>, <code class="language-plaintext highlighter-rouge">wesanderson</code>.</li>
+  <li>You can also create your own color palettes. Online tools like <a href="https://gka.github.io/palettes/">Chroma.js</a> and <a href="https://projects.susielu.com/viz-palette">Viz Palette</a> can help you to select better combinations and make your palette colorblind safe.</li>
+</ul>
+
+<p>And here is a useful article about the topic: <a href="https://www.simplifiedsciencepublishing.com/resources/best-color-palettes-for-scientific-figures-and-data-visualizations">best color palettes for scientific figures and data visualizations</a>.</p>
+
+<h1 id="general-tips-for-scientific-figures">General tips for scientific figures</h1>
+<ol>
+  <li>
+    <p><strong>Clear and Concise Communication</strong>: Figures should effectively convey the main findings or message of your research. Ensure that the figure’s content is clear, concise, and easily understandable to your target audience. Avoid clutter or unnecessary details that may confuse or distract from the main point.</p>
+  </li>
+  <li>
+    <p><strong>Proper Data Representation</strong>: Select the most appropriate visualization type for your data (e.g., bar chart, line plot, scatter plot, heat map) to accurately represent the relationships, patterns, or trends you want to highlight.</p>
+  </li>
+  <li>
+    <p><strong>Adequate Labels and Annotations</strong>: Provide clear and informative labels for axes, data points, and other elements within the figure. Use descriptive titles, axis labels, and legends to provide context and help viewers understand the information presented.</p>
+  </li>
+  <li>
+    <p><strong>Consistency and Reproducibility</strong>: Maintain consistency in terms of scale, symbols, colors, and formatting across multiple figures within your study. This consistency ensures that comparisons can be made easily and accurately. Additionally, provide sufficient details, such as data sources or statistical methods used, to allow others to reproduce or validate your results.</p>
+  </li>
+  <li>
+    <p><strong>Aesthetics and Readability</strong>: Pay attention to the overall visual appeal of your figures. Use appropriate colors, fonts, and sizes to enhance readability and ensure that the figure is visually appealing. Choose colors that are easily distinguishable and consider accessibility guidelines to ensure that your figures can be understood by individuals with color vision deficiencies. Use high-resolution images or scalable vector graphics (SVG) to ensure figures are clear and legible when printed or zoomed.</p>
+  </li>
+</ol>
+
+<h1 id="resources-data-visualization-in-r">Resources data visualization in R</h1>
+
+<p>There are very good resources for data visualization in R. Here some of our favorites:</p>
+
+<ul>
+  <li><a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a> <a class="citation" href="#wilke2019">(Wilke, 2019)</a> A guide to making visualizations that “accurately reflect the data, tell a story, and look professional.” Amazing resource to understand the best way to visualize each type of data and with useful advice on how to communicate a message with it.</li>
+  <li><a href="https://r-graph-gallery.com/">The R Graph Gallery</a>: A comprehensive online collection of diverse and visually appealing data visualizations created using R. Great for inspiration!</li>
+  <li><a href="https://ggplot2.tidyverse.org/">ggplot2 Package Documentation</a>: The official documentation for the ggplot2 package provides detailed explanations and examples for each function and feature. It also includes a Cheatsheet!</li>
+  <li><a href="https://r-graphics.org/">The R Graphics Cookbook</a> <a class="citation" href="#chang2018">(Chang, 2018)</a> offers practical recipes and examples for creating a wide range of plots using ggplot2.</li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Bouckaert2019">Bouckaert, R., Vaughan, T. G., Barido-Sottani, J., Duchêne, S., Fourment, M., Gavryushkina, A., Heled, J., Jones, G., Kühnert, D., Maio, N. D., Matschiner, M., Mendes, F. K., Müller, N. F., Ogilvie, H. A., Plessis, L. du, Popinga, A., Rambaut, A., Rasmussen, D., Siveroni, I., … Drummond, A. J. (2019). BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. <i>PLOS Computational Biology</i>, <i>15</i>(4).</span></li>
+<li><span id="Heath2014">Heath, T. A., Huelsenbeck, J. P., &amp; Stadler, T. (2014). The fossilized birth-death process for coherent calibration of divergence-time
+	estimates. <i>Proceedings of the National Academy of Sciences, USA</i>, <i>111</i>, E2957–E2966.</span></li>
+<li><span id="treedataverse2025">Yu, G. (2025). <i>treedataverse: Easily Install and Load the ’treedataverse.’</i></span></li>
+<li><span id="treeio2020">Wang, L.-G., Lam, T. T.-Y., Xu, S., Dai, Z., Zhou, L., Feng, T., Guo, P., Dunn, C. W., Jones, B. R., Bradley, T., Zhu, H., Guan, Y., Jiang, Y., &amp; Yu, G. (2020). treeio: an R package for phylogenetic tree input and output with richly annotated and associated data. <i>Molecular Biology and Evolution</i>, <i>37</i>(2), 599–603. https://doi.org/10.1093/molbev/msz240</span></li>
+<li><span id="ggtree2017">Yu, G., Smith, D., Zhu, H., Guan, Y., &amp; Lam, T. T.-Y. (2017). ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data. <i>Methods in Ecology and Evolution</i>, <i>8</i>(1), 28–36. https://doi.org/10.1111/2041-210X.12628</span></li>
+<li><span id="tidytree2022">Yu, G. (2022). <i>Data Integration, Manipulation and Visualization of Phylogenetic Treess</i> (1st edition). Chapman and Hall/CRC. https://doi.org/10.1201/9781003279242</span></li>
+<li><span id="ggsci2024">Xiao, N. (2024). <i>ggsci: Scientific Journal and Sci-Fi Themed Color Palettes for
+’ggplot2.’</i> https://CRAN.R-project.org/package=ggsci</span></li>
+<li><span id="beastio2023">du Plessis, L. (2023). <i>beastio: Functions for pre- and post-processing of BEAST and BEAST2
+files.</i></span></li>
+<li><span id="ggplot22016">Wickham, H. (2016). <i>ggplot2: Elegant Graphics for Data Analysis</i>. Springer-Verlag New York. https://ggplot2.tidyverse.org</span></li>
+<li><span id="tidyr2023">Wickham, H., Vaughan, D., &amp; Girlich, M. (2023). <i>tidyr: Tidy Messy Data</i>. https://CRAN.R-project.org/package=tidyr</span></li>
+<li><span id="tibble2023">M&lt;U+00FC&gt;ller, K., &amp; Wickham, H. (2023). <i>tibble: Simple Data Frames</i>. https://CRAN.R-project.org/package=tibble</span></li>
+<li><span id="bdskytools2016">du Plessis, L. (2016). <i>bdskytools: BDSKY Tools</i>.</span></li>
+<li><span id="wilke2019">Wilke, C. O. (2019). <i>Fundamentals of data visualization: a primer on making informative and compelling figures</i>. O’Reilly Media.</span></li>
+<li><span id="chang2018">Chang, W. (2018). <i>R graphics cookbook: practical recipes for visualizing data</i>. O’Reilly Media.</span></li></ol>
+
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

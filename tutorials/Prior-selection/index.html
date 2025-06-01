@@ -370,6 +370,16 @@
     			</div>
  				</a>
  			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/jugne">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/26361891?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				jugne
+    			</div>
+ 				</a>
+ 			</div>			
  			
 		</div>
 		<div class="bigspacer"></div>
@@ -378,6 +388,24 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/fed974800ca60d779db3274a60ebc58a41d92015">
+					23 May 2025 - <span class="text-gray">Merge pull request #4 from jugne/master
+
+Small summary tree update</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/cb40725e454fd4cd193524d8ced28a2541718190">
+					23 May 2025 - <span class="text-gray">Small summary tree update</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -400,22 +428,6 @@
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/ceac63b7bc7acce267d0d124d7576f847b978bc4">
 					11 Jun 2023 - <span class="text-gray">Resize figure and merge citations</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/fb52ef3fdbd3ffb98bcf2c2ebc66bd9bbcb5e4bd">
-					11 Jun 2023 - <span class="text-gray">Update figures to BEAST 2.7.4</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/24825da7a5e491edab553d67d5f2f6fc236e2df8">
-					11 Jun 2023 - <span class="text-gray">Minor updates to the text</span>
 					</a> 
 				</li>
 			
@@ -450,7 +462,7 @@
 
 <h3 id="treeannotator">TreeAnnotator</h3>
 
-<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+<p>TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
 
 <p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
@@ -1052,7 +1064,7 @@ Are they different from the priors we set and if so, how?</p>
 
 <h3 id="creating-taxon-sets">Creating Taxon Sets</h3>
 
-<p>We will use the results from the heterochronous data to find out what a good estimate for the tree height of these homochronous samples is. For this aim, we first create an MCC (maximum clade credibility) tree in <strong>TreeAnnotator</strong> and then check with <strong>FigTree</strong> what the estimate of the tMRCA (time to the most recent common ancestor) of the samples from April 28, 2009 is.</p>
+<p>We will use the results from the heterochronous data to find out what a good estimate for the tree height of these homochronous samples is. For this aim, we first create a summary tree in <strong>TreeAnnotator</strong>. In this case we will use the default MCC (maximum clade credibility) tree, but the steps below would be the same if we chose another summary tree (e.g. conditional clade credibility tree). Then we will check with <strong>FigTree</strong> what the estimate of the tMRCA (time to the most recent common ancestor) of the samples from April 28, 2009 is.</p>
 
 <p>Note, however, that we do this for illustrative purposes only. In good practice, one should avoid re-using the data or using the results of an analysis to inform any further analyses containing the same data. Let’s pretend therefore that the heterochronous dataset is an independent dataset from the homochronous one.</p>
 
