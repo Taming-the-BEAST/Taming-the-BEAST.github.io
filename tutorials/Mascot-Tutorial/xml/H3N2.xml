@@ -185,10 +185,10 @@ name="alignment">
             <log idref="likelihood"/>
             <log idref="prior"/>
         </logger>
-        <logger id="treelog.t:H3N2" spec="Logger" fileName="$(filebase)-$(tree).trees" logEvery="5000" mode="tree" sanitiseHeaders="true">
+        <logger id="treelog.t:H3N2" spec="Logger" fileName="$(filebase).trees" logEvery="5000" mode="tree" sanitiseHeaders="true">
             <log id="TreeWithMetaDataLogger.t:H3N2" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:H3N2"/>
         </logger>
-        <logger id="typedTreelogger.t:H3N2" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+        <logger id="typedTreelogger.t:H3N2" spec="Logger" fileName="$(filebase)-typed.trees" logEvery="1000" mode="tree">
             <log id="structuredTreelog.t:H3N2" spec="mascot.logger.StructuredTreeLogger" mascot="@Mascot.t:H3N2"/>
         </logger>
         <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
