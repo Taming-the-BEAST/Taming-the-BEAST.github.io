@@ -12,6 +12,51 @@
 		</image>
 				
 			<item>
+				<title>Structured birth death model</title>
+				<description>
+					Population structure using the multi-type birth-death model
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Denise Kühnert
+							
+					
+						
+								
+									and  Jūlija Pečerska
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/b5283ce7a416820c2edde1ca19e4182b47a20e05'
+					&gt;
+						4 Jun 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Update README.md
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.4
+					
+				</description>
+				<pubDate>Wed, 04 Jun 2025 08:59:54 +0000</pubDate>
+				<category>Professional</category>
+				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
+			</item>
+				
+			<item>
 				<title>MASCOT v3.0.0 Tutorial</title>
 				<description>
 					Parameter and State inference using the approximate structured coalescent
@@ -95,51 +140,6 @@
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</guid>
-			</item>
-				
-			<item>
-				<title>Structured birth death model</title>
-				<description>
-					Population structure using the multi-type birth-death model
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Denise Kühnert
-							
-					
-						
-								
-									and  Jūlija Pečerska
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/beb0bf8648bc83ed7d4fa97c22f486315ad107a1'
-					&gt;
-						23 May 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/jugne'
-					&gt;
-						jugne
-					&lt;/a&gt;
-					: Fix figure links
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.4
-					
-				</description>
-				<pubDate>Fri, 23 May 2025 15:24:36 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
 			</item>
 				
 			<item>
