@@ -285,6 +285,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/7b587f6008e2584a48427ebff0866274565537f4">
+					19 Jun 2025 - <span class="text-gray">updated XML and priors</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/34a6d9d6adc89744aee243002d61cf32fae40eaa">
 					18 Dec 2023 - <span class="text-gray">updated XML</span>
 					</a> 
@@ -313,14 +321,6 @@
 					17 Jul 2023 - <span class="text-gray">Merge pull request #1 from laduplessis/master
 
 Updates for website</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/77edeec78e230501ed01a0b436a39e60cb3e8fd2">
-					17 Jul 2023 - <span class="text-gray">Fix math formatting, escape & in references, fix latex tutorial</span>
 					</a> 
 				</li>
 			
@@ -480,7 +480,7 @@ Optionally, rename the tree and clock model to <strong>primates</strong> by clic
   <p>In the <strong>Site Model</strong> panel, set the <strong>Gamma Category Count</strong> to <strong>4</strong>.
 Click on the arrow next to <strong>JC69</strong>, and select the <strong>HKY</strong> model.
 Select the remaining three partitions (use <strong>shift+click</strong>). 
-Select <code class="language-plaintext highlighter-rouge">noncoding</code> and click <strong>OK</strong> to to clone the site model for the other three partitions from <code class="language-plaintext highlighter-rouge">noncoding</code>.</p>
+Select <code class="language-plaintext highlighter-rouge">noncoding</code> in the <strong>Clone from</strong> dropdown menu and click <strong>OK</strong> to to clone the site model for the other three partitions from <code class="language-plaintext highlighter-rouge">noncoding</code>.</p>
 
 </blockquote>
 
@@ -554,7 +554,7 @@ Select <code class="language-plaintext highlighter-rouge">noncoding</code> and c
 
 <h3 id="the-parameter-priors">The parameter priors</h3>
 
-<p>Most of the default parameter priors are reasonable, so we will not change them. However, the default prior for the mean clock rate is a uniform distribution from 0 to Infinity, which allows values which are too large for most datasets. A reasonable value for the global substitution rate of primates is on the order of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> substitution/site/My, so we will set a exponential prior around this value.</p>
+<p>Most of the default parameter priors are reasonable, so we will not change them. However, the default prior for the mean clock rate is a gamma distribution with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0.01</mn></mrow><annotation encoding="application/x-tex">\alpha = 0.01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.01</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">\beta = 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span>. This distribution is very wide and does not correspond to our actual knowldege about the substitution process. A reasonable value for the global substitution rate of primates is on the order of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> substitution/site/My, so we will set a exponential prior around this value.</p>
 
 <blockquote>
   <p>Use the dropdown menu on the right of <strong>clockRate.c:primates</strong> to select a <strong>Exponential</strong> distribution for this prior.

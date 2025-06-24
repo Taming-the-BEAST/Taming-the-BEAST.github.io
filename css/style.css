@@ -9418,12 +9418,13 @@ img.avatar {
 }
 
 blockquote {
-  padding: 0.3;
+  /* padding: calc(($line-height-base - 1) / 2); */
+  padding: 10px 10px 10px 10px;
   margin: 0 0 0.8;
   font-size: 1rem;
   line-height: 1.6;
   border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   background-color: #eeeef8;
 }
 blockquote p {
@@ -9566,6 +9567,8 @@ table td.padding {
 }
 
 /** Base **/
+/** These two break bullet/list padding **/
+/**
 *,
 ::before,
 ::after {
@@ -9578,6 +9581,7 @@ table td.padding {
   padding: 0;
 }
 
+**/
 body {
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-family-body);

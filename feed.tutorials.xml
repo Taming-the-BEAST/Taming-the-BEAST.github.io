@@ -12,6 +12,88 @@
 		</image>
 				
 			<item>
+				<title>The ClaDS package</title>
+				<description>
+					Inferring progressive changes in birth and death rates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bjoelle/ClaDS-tutorial/commit/7b587f6008e2584a48427ebff0866274565537f4'
+					&gt;
+						19 Jun 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: updated XML and priors
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 19 Jun 2025 13:10:53 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/ClaDS-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/ClaDS-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>The MSBD package</title>
+				<description>
+					Inferring lineage-dependent birth and death rates
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bjoelle/MSBD-tutorial/commit/11da13c2068c8423255f8f2315d38fbf6a5fe3b4'
+					&gt;
+						19 Jun 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: modified starting tree setup
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 19 Jun 2025 12:00:54 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/MSBD-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MSBD-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Structured birth death model</title>
 				<description>
 					Population structure using the multi-type birth-death model
@@ -32,17 +114,17 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/b5283ce7a416820c2edde1ca19e4182b47a20e05'
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/2b1076bd8f0a118453c06e2df64f4e91efd5d86f'
 					&gt;
 						4 Jun 2025
 					&lt;/a&gt;
 					by
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/jugne'
+						'https://github.com/tgvaughan'
 					&gt;
-						jugne
+						tgvaughan
 					&lt;/a&gt;
-					: Update README.md
+					: Fixed typo.
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
 					
@@ -50,7 +132,7 @@
 						Requires: BEAST v2.7.4
 					
 				</description>
-				<pubDate>Wed, 04 Jun 2025 08:59:54 +0000</pubDate>
+				<pubDate>Wed, 04 Jun 2025 09:23:45 +0000</pubDate>
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-model/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-model/</guid>
@@ -429,47 +511,6 @@ Small summary tree update
 			</item>
 				
 			<item>
-				<title>The ClaDS package</title>
-				<description>
-					Inferring progressive changes in birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bjoelle/ClaDS-tutorial/commit/34a6d9d6adc89744aee243002d61cf32fae40eaa'
-					&gt;
-						18 Dec 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: updated XML
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Mon, 18 Dec 2023 09:23:52 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/ClaDS-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/ClaDS-tutorial/</guid>
-			</item>
-				
-			<item>
 				<title>StarBEAST2 v1.0.0 tutorial</title>
 				<description>
 					Estimating species trees using StarBEAST2
@@ -610,47 +651,6 @@ updated for 2.7
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
-			</item>
-				
-			<item>
-				<title>The MSBD package</title>
-				<description>
-					Inferring lineage-dependent birth and death rates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bjoelle/MSBD-tutorial/commit/5b122c76ba22c019d5e79c688edfcfc73c5f7d12'
-					&gt;
-						20 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: renamed data file to avoid confusion
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Thu, 20 Jul 2023 17:05:44 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/MSBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MSBD-tutorial/</guid>
 			</item>
 				
 			<item>
