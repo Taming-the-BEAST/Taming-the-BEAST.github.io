@@ -113,7 +113,7 @@
 			
 				
 						
-							and  and Alexei Drummond
+							and  Eva Li and Alexei Drummond
 						
 					
 			
@@ -242,8 +242,8 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-file-text"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/raw/master/precooked_runs/RSV2-cdd0.tree" target="_blank" download rel="nofollow">
-						RSV2-cdd0.tree
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/raw/master/precooked_runs/RSV2-ccd0.tree" target="_blank" download rel="nofollow">
+						RSV2-ccd0.tree
 					</a>
 				</li>
 			
@@ -350,6 +350,16 @@
  				
 			<div class="smallspacer"></div>				
 			<div>
+				<a class="off" href="https://github.com/EvaLiyt">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/109565275?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				EvaLiyt
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
 				<a class="off" href="https://github.com/fkmendes">
     			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/10715960?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
@@ -379,40 +389,40 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/ed17f5b1c7cadd109b2cd8af9ae17e83e6f5112a">
-					09 Jun 2024 - <span class="text-gray">update ccd0 tree</span>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/e91e4763e48eb2db4a58a70240b18bcdedbd1e21">
+					03 Jul 2025 - <span class="text-gray">relative rates</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/2f5bed481990c038f51e9456bd7f595f5b4713e0">
-					06 Jun 2024 - <span class="text-gray">add ccd0 tree</span>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/a196440ffedea9af468702cd2305ade8b1eeff88">
+					02 Jul 2025 - <span class="text-gray">sync relative rate word using</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/53e53a9a4b3c601179a76d10e9033741b674653a">
-					06 Jun 2024 - <span class="text-gray">update RM</span>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/c51065a437eea5be70426aab0a75a78779712586">
+					02 Jul 2025 - <span class="text-gray">update figure for init</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/8cb321b9485fdd6c113131c8653ddc820667eebb">
-					06 Jun 2024 - <span class="text-gray">update to CCD0</span>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/5e7e5fd4730fa69980dc1f7826215499d07c16ef">
+					02 Jul 2025 - <span class="text-gray">redo figures</span>
 					</a> 
 				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/a66c003bd55aef4d376756958969f4c9e539eee1">
-					29 May 2024 - <span class="text-gray">use CCD to replace MCC</span>
+					<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/01a46db23dd14b1d3417ac1d4f75535c413464fb">
+					02 Jul 2025 - <span class="text-gray">update Java required and relative rates</span>
 					</a> 
 				</li>
 			
@@ -453,20 +463,17 @@ a more serious inflammation of the bronchioles requiring hospitalisation.</p>
   </li>
 </ul>
 
+<p>BEAST 2 requires <a href="https://www.azul.com/downloads/?version=java-17-lts&amp;package=jdk-fx#zulu">Zulu Java 17</a>.
+However, if you download the official BEAST 2 release, it already includes Zulu Java 17. 
+No separate installation is needed. However, Tracer and FigTree require Java to be installed.</p>
+
 <p>The following software will be used in this tutorial:</p>
 
 <ul>
   <li>
-    <p><strong>Java 1.8</strong> - either <a href="http://www.oracle.com/java/technologies/javase-downloads.html">Oracle Java</a> 
-or <a href="https://openjdk.java.net/install/">OpenJDK</a>.
-If you are using a more recent version of Java than 1.8, 
-it may affect BEAUti and some GUIs. 
-In this case, we recommend you to download BEAST with JRE.</p>
-  </li>
-  <li>
     <p><strong>BEAST</strong> - this package contains the BEAST program, BEAUti,
 DensiTree, TreeAnnotator and other utility programs. This tutorial
-is written for BEAST v<code class="language-plaintext highlighter-rouge">2.6.x</code>, which has support for multiple
+is written for BEAST v<code class="language-plaintext highlighter-rouge">2.7.x</code>, which has support for multiple
 partitions. It is available for download from <a href="http://www.beast2.org">http://www.beast2.org</a>.</p>
   </li>
   <li>
@@ -482,13 +489,13 @@ and CCD0, which is based on clade frequencies. It can be installed through Packa
 (and other Bayesian MCMC programs). It graphically and quantitively
 summarises the distributions of continuous parameters and provides
 diagnostic information. At the time of writing, the current version
-is v<code class="language-plaintext highlighter-rouge">1.7.2</code>. It is available for download from
+is v<code class="language-plaintext highlighter-rouge">1.7.3</code>, which requires Java 1.8 or higher. It is available for download from
 <a href="http://beast.community/tracer">http://beast.community/tracer</a>.</p>
   </li>
   <li>
     <p><strong>FigTree</strong> - this is an application for displaying and printing
 molecular phylogenies, in particular those obtained using BEAST. At
-the time of writing, the current version is v<code class="language-plaintext highlighter-rouge">1.4.4</code>. It is
+the time of writing, the current version is v<code class="language-plaintext highlighter-rouge">1.4.4</code>, which requires Java 9 or higher. It is
 available for download from <a href="http://beast.community/figtree">http://beast.community/figtree</a>.</p>
   </li>
   <li>
@@ -543,7 +550,7 @@ translated into an amino acid (remember the central dogma of molecular
 biology!). A string of aminoacids then constitutes a protein.</p>
 
 <p>For our purposes, what matters is that we have now known for a while that
-different positions in each codon evolve at different rates, which has to do
+different positions in each codon evolve at different relative rates, which has to do
 with what we call the “genetic code” (look up “genetic code redundancy” online). 
 In knowing this, we can incorporate this difference in evolutionary rates
 by splitting the alignment into three partitions, each representing one 
@@ -566,8 +573,7 @@ in the sequence), and creates three rows in the partitions panel.</p>
 
 <p>For the reasons mentioned above, we want to allow each partition to have its own
 substitution model.
-This will make it possible for each codon position to have a different relative evolutionary
-rates.
+This will make it possible for each codon position to have a different relative rates.
 But we want to still have all codon positions (i) evolving along the same phylogenetic
 tree, and (ii) keeping their evolutionary rates proportionally the same along that tree.</p>
 
@@ -586,10 +592,10 @@ The partition panel should now look something like this:</p>
 
 <h3 id="tip-dates">Tip dates</h3>
 
-<p>By default all the taxa are assumed to have a date of zero (i.e., the
+<p>By default, all the taxa are assumed to have a date of zero (i.e., the
 sequences are assumed to be sampled at the same time). In our case, the
 RSVA sequences have been sampled at various dates going back to the
-1950s. The actual year of sampling is given in the name of each taxon
+1950s. The actual year of sampling is given in the name of each taxon,
 and we could simply edit the value in the <code class="language-plaintext highlighter-rouge">Date</code> column of the table to
 reflect these.</p>
 
@@ -650,9 +656,24 @@ those of later (recent) samples.</p>
 To do this, first switch to the <code class="language-plaintext highlighter-rouge">Site Model</code> panel, 
 and then choose <code class="language-plaintext highlighter-rouge">HKY</code> from the <code class="language-plaintext highlighter-rouge">Subst Model</code> drop-boxes,
 and <code class="language-plaintext highlighter-rouge">Estimated</code> from the <code class="language-plaintext highlighter-rouge">Frequencies</code> drop-boxes. 
-Also remember to check the <code class="language-plaintext highlighter-rouge">estimate</code> checkbox for the <code class="language-plaintext highlighter-rouge">Mutation Rate</code>.
-After three mutation rates are all set to estimate, 
-it will eventually trigger to check the <code class="language-plaintext highlighter-rouge">Fix mean mutation rate</code> box.</p>
+Also remember to check the <code class="language-plaintext highlighter-rouge">estimate</code> checkbox for the <code class="language-plaintext highlighter-rouge">Substitution Rate</code>.
+After three <a href="https://beast2-dev.github.io/hmc/hmc/SiteModel/mutationRate/">relative rates</a> 
+are all set to estimate, 
+it will eventually trigger to check the <code class="language-plaintext highlighter-rouge">Fix mean substitution rate</code> box.</p>
+
+<p><strong>Note on terminology:</strong> In <code class="language-plaintext highlighter-rouge">Site Model</code> panel, the <code class="language-plaintext highlighter-rouge">Substitution Rate</code> can be confusing 
+compared to common usage in the literature. 
+It should really be called a relative rate (or partition relative rate).
+In the broader context, terms like mutation rate, substitution rate, 
+and molecular clock rate are often used interchangeably, 
+though they can differ in nuance: mutation rate is usually applied to population-level processes, 
+while substitution rate is preferred for deeper timescales involving fixation events 
+and assuming a single sequence for each species. 
+Under neutral theory, these rates are expected to be equal, but in practice, 
+they often differ because selection prevents many mutations from fixing. 
+To avoid making strong assumptions about neutrality, it is often clearer to refer simply to molecular clock rates. 
+Keep in mind that this BEAUti’s terminology is out of sync, 
+and future versions may adopt more standard naming conventions and explicitly distinguish relative rates to reduce confusion.</p>
 
 <figure>
 	<img style="max-width:80.0%;" src="figures/BEAUti_Site_Model.png" alt="BEAUti_Site_Model" />
@@ -672,13 +693,13 @@ configurations are same now.</p>
 </figure>
 <p><br /></p>
 
-<p>The main objective here is to set up the analysis to estimate the relative mutation rates
+<p>The main objective here is to set up the analysis to estimate the relative rates
 of codons, which are relative to a general rate defined in the molecular clock model.</p>
 
 <h3 id="molecular-clock-model">Molecular clock model</h3>
 
 <p>We are going to use a strict clock model in our analyses.
-This is the simplest clock model that one can use, and it assumes that rates
+This is the simplest clock model that one can use, and it assumes that relative rates
 remain constant throughout the whole tree.
 The strict clock model is also the default clock model in BEAUti, so no changes are
 necessary in the clock model panel.
@@ -729,13 +750,20 @@ panel.</p>
 </figure>
 <p><br /></p>
 
+<p>Then, select menu <code class="language-plaintext highlighter-rouge">View =&gt; Show Operators panel</code>, change all three <code class="language-plaintext highlighter-rouge">freqParameter.s</code> weight to 0.1 for faster mixing.</p>
+<figure>
+	<img style="max-width:80.0%;" src="figures/BEAUti_operator.png" alt="BEAUti_operator" />
+	<figcaption>Figure 10: MCMC operator options</figcaption>
+</figure>
+<p><br /></p>
+
 <h2 id="running-beast">Running BEAST</h2>
 
 <p>Save the BEAST <code class="language-plaintext highlighter-rouge">.xml</code> specification file (e.g., <code class="language-plaintext highlighter-rouge">RSV2.xml</code>).</p>
 
 <figure>
 	<img style="max-width:60%;" src="figures/BEAST.png" alt="BEAST" />
-	<figcaption>Figure 10: A screenshot of BEAST.</figcaption>
+	<figcaption>Figure 11: A screenshot of BEAST.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -747,14 +775,14 @@ BEAST will then run until it has finished reporting information to the
 screen. The actual results files are saved to disk in the same location
 as your input file. The output to the screen will look something like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                        BEAST v2.6.4, 2002-2021
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                        BEAST v2.7.8, 2002-2025
              Bayesian Evolutionary Analysis Sampling Trees
                        Designed and developed by
  Remco Bouckaert, Alexei J. Drummond, Andrew Rambaut &amp; Marc A. Suchard
                                     
-                     Department of Computer Science
+                   Centre for Computational Evolution
                          University of Auckland
-                        remco@cs.auckland.ac.nz
+                       r.bouckaert@auckland.ac.nz
                         alexei@cs.auckland.ac.nz
                                     
                    Institute of Evolutionary Biology
@@ -782,27 +810,29 @@ Gerton Lunter, Sidney Markowitz, Vladimir Minin, Michael Defoin Platel,
     ...
     
     ...
-         990000     -6059.7592     -5474.8288      -584.9303 1m58s/Msamples
-        1000000     -6072.4343     -5468.5631      -603.8711 1m57s/Msamples
+        990000     -6074.2887     -5479.0850      -595.2037 40s/Msamples
+        1000000     -6061.4821     -5480.6611      -580.8210 40s/Msamples
 
-Operator                                                   Tuning    #accept    #reject      Pr(m)  Pr(acc|m)
-ScaleOperator(StrictClockRateScaler.c:clock)              0.79081       9087      26702    0.03589    0.25390 
-UpDownOperator(strictClockUpDownOperator.c:clock)         0.81735        462      35232    0.03589    0.01294 Try setting scaleFactor to about 0.904
-ScaleOperator(KappaScaler.s:RSV2_1)                       0.37574        290        885    0.00120    0.24681 
-DeltaExchangeOperator(FixMeanMutationRatesOperator)       0.33349       4839      19026    0.02392    0.20277 
-ScaleOperator(KappaScaler.s:RSV2_2)                       0.43759        362        849    0.00120    0.29893 
-ScaleOperator(KappaScaler.s:RSV2_3)                       0.45654        287        905    0.00120    0.24077 
-ScaleOperator(CoalescentConstantTreeScaler.t:tree)        0.73805        287      35575    0.03589    0.00800 Try setting scaleFactor to about 0.859
-ScaleOperator(CoalescentConstantTreeRootScaler.t:tree)    0.55544       2111      33800    0.03589    0.05878 Try setting scaleFactor to about 0.745
-Uniform(CoalescentConstantUniformOperator.t:tree)               -     192969     166503    0.35885    0.53681 
-SubtreeSlide(CoalescentConstantSubtreeSlide.t:tree)       3.65244      30871     148436    0.17943    0.17217 
-Exchange(CoalescentConstantNarrow.t:tree)                       -      43760     135429    0.17943    0.24421 
-Exchange(CoalescentConstantWide.t:tree)                         -         99      35864    0.03589    0.00275 
-WilsonBalding(CoalescentConstantWilsonBalding.t:tree)           -        198      35573    0.03589    0.00554 
-ScaleOperator(PopSizeScaler.t:tree)                       0.57008       8862      27174    0.03589    0.24592 
-DeltaExchangeOperator(FrequenciesExchanger.s:RSV2_2)      0.06824        434        760    0.00120    0.36348 
-DeltaExchangeOperator(FrequenciesExchanger.s:RSV2_1)      0.07452        391        766    0.00120    0.33794 
-DeltaExchangeOperator(FrequenciesExchanger.s:RSV2_3)      0.06210        452        761    0.00120    0.37263 
+Operator                                                                                             Tuning    #accept    #reject      Pr(m)  Pr(acc|m)
+AdaptableOperatorSampler(StrictClockRateScaler.c:clock)                                                   -       3409      14691    0.01797    0.18834 
+AdaptableOperatorSampler(strictClockUpDownOperator.c:clock)                                               -         72      17875    0.01797    0.00401 
+AdaptableOperatorSampler(KappaScaler.s:RSV2_1)                                                            -        107        504    0.00060    0.17512 
+AdaptableOperatorSampler(FrequenciesExchanger.s:RSV2_1)                                                   -        247        983    0.00120    0.20081 
+beast.base.inference.operator.kernel.BactrianDeltaExchangeOperator(FixMeanMutationRatesOperator)    0.20734       6555      17595    0.02397    0.27143 
+AdaptableOperatorSampler(FrequenciesExchanger.s:RSV2_2)                                                   -        257        928    0.00120    0.21688 
+AdaptableOperatorSampler(KappaScaler.s:RSV2_2)                                                            -        158        434    0.00060    0.26689 
+AdaptableOperatorSampler(FrequenciesExchanger.s:RSV2_3)                                                   -        323        858    0.00120    0.27350 
+AdaptableOperatorSampler(KappaScaler.s:RSV2_3)                                                            -        101        485    0.00060    0.17235 
+EpochFlexOperator(CoalescentConstantBICEPSEpochTop.t:tree)                                          0.03374       4705      19543    0.02397    0.19404 
+EpochFlexOperator(CoalescentConstantBICEPSEpochAll.t:tree)                                          0.03538       4451      19420    0.02397    0.18646 
+TreeStretchOperator(CoalescentConstantBICEPSTreeFlex.t:tree)                                        0.02322       6056      18136    0.02397    0.25033 
+kernel.BactrianScaleOperator(CoalescentConstantTreeRootScaler.t:tree)                               0.07369       6918      28840    0.03595    0.19347 
+kernel.BactrianNodeOperator(CoalescentConstantUniformOperator.t:tree)                               2.28981     122186     237157    0.35950    0.34003 
+kernel.BactrianSubtreeSlide(CoalescentConstantSubtreeSlide.t:tree)                                  1.75417      27766     151901    0.17975    0.15454 
+Exchange(CoalescentConstantNarrow.t:tree)                                                                 -      44685     134901    0.17975    0.24882 
+Exchange(CoalescentConstantWide.t:tree)                                                                   -         81      35977    0.03595    0.00225 
+WilsonBalding(CoalescentConstantWilsonBalding.t:tree)                                                     -        240      35551    0.03595    0.00671 
+kernel.BactrianScaleOperator(PopSizeScaler.t:tree)                                                  0.21351       9519      26386    0.03595    0.26512 
 
      Tuning: The value of the operator's tuning parameter, or '-' if the operator can't be optimized.
     #accept: The total number of times a proposal by this operator has been accepted.
@@ -811,8 +841,8 @@ DeltaExchangeOperator(FrequenciesExchanger.s:RSV2_3)      0.06210        452    
   Pr(acc|m): The acceptance probability (#accept as a fraction of the total proposals for this operator).
 
 
-Total calculation time: 120.762 seconds
-End likelihood: -6072.434319012309
+Total calculation time: 41.908 seconds
+End likelihood: -6061.482176048203
 </code></pre></div></div>
 
 <h2 id="analysing-the-beast-output">Analysing the BEAST output</h2>
@@ -832,23 +862,23 @@ chain.</p>
 
 <figure>
 	<img style="max-width:80.0%;" src="figures/Tracer1.png" alt="Tracer1" />
-	<figcaption>Figure 11: A screenshot of Tracer for a short chain length.</figcaption>
+	<figcaption>Figure 12: A screenshot of Tracer for a short chain length.</figcaption>
 </figure>
 <p><br /></p>
 
 <p>Here you can see how the samples are correlated. There are 2000 samples
 in the trace (we ran the MCMC for steps sampling every 500) but adjacent
 samples often tend to have similar values. 
-The ESS for the <code class="language-plaintext highlighter-rouge">clockRate</code> is about <code class="language-plaintext highlighter-rouge">18</code>, after removing the first 10% of 
+The ESS for the <code class="language-plaintext highlighter-rouge">clockRate</code> is about <code class="language-plaintext highlighter-rouge">89</code>, after removing the first 10% of 
 the samples as burn-in.
-So we are only getting 1 independent sample to every <code class="language-plaintext highlighter-rouge">100 ~ 1800/18</code> actual samples). 
+So we are only getting 1 independent sample to every <code class="language-plaintext highlighter-rouge">20 ~ 1800/89</code> actual samples). 
 With a short run such as this one, it may also be the case that 
 the default burn-in (10%) of the chain length is inadequate. 
 Not excluding enough of the start of the chain as burn-in will render estimates of ESS unreliable.</p>
 
 <p>The simple response to this situation is that we need to run the chain for longer. 
-Given the lowest ESS (e.g., for the constant coalescent parameter) is <code class="language-plaintext highlighter-rouge">11</code>, 
-it would suggest that we have to run a much longer chain (e.g. 18 times of the current length). 
+Given the lowest ESS (e.g., for the constant coalescent parameter) is <code class="language-plaintext highlighter-rouge">13</code>, 
+it would suggest that we have to run a much longer chain (e.g. 16 times of the current length). 
 But this is a simple dataset, the length of 8 million would generate samples 
 providing the reasonable ESSs that are <code class="language-plaintext highlighter-rouge">&gt;200</code>.</p>
 
@@ -865,7 +895,7 @@ so you have to close the previous run before you can start a new one.</p>
 
 <figure>
 	<img style="max-width:80.0%;" src="figures/Tracer2.png" alt="Tracer2" />
-	<figcaption>Figure 12: A screenshot of Tracer for a long chain length.</figcaption>
+	<figcaption>Figure 13: A screenshot of Tracer for a long chain length.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -879,8 +909,8 @@ there are no significant long range fluctuations in the trace which
 would suggest poor mixing.</p>
 
 <p>As we are satisfied with the mixing, we can now move on to one of the
-parameters of interest: the substitution rate. Select <code class="language-plaintext highlighter-rouge">clockRate</code> in the
-left-hand table. This is the average substitution rate across all sites
+parameters of interest: the molecular clock rate. Select <code class="language-plaintext highlighter-rouge">clockRate</code> in the
+left-hand table. This is the average clock rate across all sites
 in the alignment. Now choose the density plot by selecting the tab
 labeled <code class="language-plaintext highlighter-rouge">Marginal Density</code>. This shows a plot of the marginal
 posterior probability density of this parameter. You should see a plot
@@ -889,7 +919,7 @@ similar to this:</p>
 <figure>
 	<a name="fig:Tracer\_density"></a>
 	<img style="max-width:80.0%;" src="figures/Tracer_density.png" alt="Tracer_density" />
-	<figcaption>Figure 13: marginal density in tracer</figcaption>
+	<figcaption>Figure 14: marginal density in tracer</figcaption>
 </figure>
 <p><br /></p>
 
@@ -898,16 +928,15 @@ There is some sampling noise that would be reduced if we ran the chain
 for longer or sampled more often, but we already have a good estimate of
 the mean and HPD interval. You can overlay the density plots of multiple
 traces in order to compare them (it is up to the user to determine
-whether they are comparable on the the same axis or not). Select the
-relative substitution rates for all three codon positions in the table
+whether they are comparable on the same axis or not). Select the
+relative rates for all three codon positions in the table
 to the left (labelled <code class="language-plaintext highlighter-rouge">mutationRate.1</code>, <code class="language-plaintext highlighter-rouge">mutationRate.2</code> and
 <code class="language-plaintext highlighter-rouge">mutationRate.3</code>). You will now see the posterior probability densities
-for the relative substitution rate at all three codon positions
-overlaid:</p>
+for the relative rates at all three codon positions overlaid:</p>
 
 <figure>
 	<img style="max-width:80.0%;" src="figures/Tracer_relativeRates.png" alt="Tracer_relativeRates" />
-	<figcaption>Figure 14: The posterior probability densities for the relative substitution rates</figcaption>
+	<figcaption>Figure 15: The posterior probability densities for the relative rates</figcaption>
 </figure>
 <p><br /></p>
 
@@ -933,7 +962,7 @@ available in TreeAnnotator.</p>
   <li>Load the tree log file that BEAST 2 generated (it will end in “.trees” by default) 
 as “Input Tree File”. For this tutorial, the tree log file is called “RSV2-long.trees”.
 If you select it from the file chooser, the parent path will automatically fill in and 
-“YOUR_PATH” in the screen shot will be that parent path.</li>
+“YOUR_PATH” in the screenshot will be that parent path.</li>
   <li>Finally, for “Output File”, copy and paste the input file path but replace 
 the file name “RSV2-long.trees” with “RSV2-ccd0.tree”. 
 This will create the file containing the resulting MAP tree.</li>
@@ -944,7 +973,7 @@ create the summary tree. “YOUR_PATH” will be replaced to the corresponding p
 
 <figure>
 	<img style="max-width:60.0%;" src="figures/treeannotator.png" alt="treeannotator" />
-	<figcaption>Figure 15: TreeAnnotator for creating a summary tree from a posterior tree set.</figcaption>
+	<figcaption>Figure 16: TreeAnnotator for creating a summary tree from a posterior tree set.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -970,8 +999,8 @@ set is from 2002.
 We can thus convert our node heights to years by subtracting their heights from 2002.</p>
 
 <figure>
-	<img style="max-width:90%;" src="figures/RSV2_cdd0_tree.png" alt="RSV2 summary tree" />
-	<figcaption>Figure 16: The summary tree for the G gene of 129 RSVA-2 viral samples.</figcaption>
+	<img style="max-width:90%;" src="figures/RSV2_ccd0_tree.png" alt="RSV2 summary tree" />
+	<figcaption>Figure 17: The summary tree for the G gene of 129 RSVA-2 viral samples.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -994,7 +1023,7 @@ you can tick the <code class="language-plaintext highlighter-rouge">Select only<
 
 <figure>
 	<img style="max-width:90%;" src="figures/DensiTree.png" alt="DensiTree" />
-	<figcaption>Figure 17: The posterior tree set visualised in DensiTree.</figcaption>
+	<figcaption>Figure 18: The posterior tree set visualised in DensiTree.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1024,26 +1053,23 @@ which is a prior that ensures dependence between population sizes.</p>
 
 <figure>
 	<img style="max-width:80.0%;" src="figures/BEAUti_priors2.png" alt="" />
-	<figcaption>Figure 18: Priors</figcaption>
+	<figcaption>Figure 19: Priors</figcaption>
 </figure>
 <p><br /></p>
 
-<p>By default the number of groups used in the skyline analysis is set to</p>
-<ol>
-  <li>To change this, select menu <code class="language-plaintext highlighter-rouge">View</code> =&gt; <code class="language-plaintext highlighter-rouge">Show Initialization panel</code>, 
+<p>By default, the number of groups used in the skyline analysis is set to
+<code class="language-plaintext highlighter-rouge">5</code>. To change this, select menu <code class="language-plaintext highlighter-rouge">View</code> =&gt; <code class="language-plaintext highlighter-rouge">Show Initialization panel</code>, 
 and then a list of parameters is shown in the <code class="language-plaintext highlighter-rouge">Initialization</code> panel. 
-Select <code class="language-plaintext highlighter-rouge">bPopSizes.t:tree</code> and change the dimension to 3. 
-Likewise, select <code class="language-plaintext highlighter-rouge">bGroupSizes.t:tree</code> and change
-its dimension to 3. The dimensions of the two parameters should be the
-same. More groups mean more population changes can be detected, but it
-also means more parameters need to be estimated, and that the MCMC chain must
+Select <code class="language-plaintext highlighter-rouge">bPopSizes.t:tree</code>, change the dimension to 3 and upper to <code class="language-plaintext highlighter-rouge">100000</code>. 
+Likewise, select <code class="language-plaintext highlighter-rouge">bGroupSizes.t:tree</code> and change its dimension to <code class="language-plaintext highlighter-rouge">3</code>. 
+The dimensions of the two parameters should be the same. More groups mean more population changes can be detected, 
+but it also means more parameters need to be estimated, and that the MCMC chain must
 run longer. The extended Bayesian skyline plot automatically detects the
-number of changes, so it could be used as an alternative tree prior.</li>
-</ol>
+number of changes, so it could be used as an alternative tree prior.</p>
 
 <figure>
 	<img style="max-width:80.0%;" src="figures/BEAUti_init.png" alt="BEAUti_init" />
-	<figcaption>Figure 19: Initialization panel</figcaption>
+	<figcaption>Figure 20: Initialization panel</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1058,17 +1084,17 @@ the menu <code class="language-plaintext highlighter-rouge">Analysis</code> =&gt
 
 <figure>
 	<img style="max-width:50.0%;" src="figures/tracerBSP1.png" alt="tracerBSP1" />
-	<figcaption>Figure 20: Bayesian Skyline Reconstruction in Tracer</figcaption>
+	<figcaption>Figure 21: Bayesian Skyline Reconstruction in Tracer</figcaption>
 </figure>
 <p><br /></p>
 
 <p>A dialog is shown where you can specify the tree file associated with
-the log file. Also, since the youngest sample is from 2002, change the
-entry for age of youngest tip to 2002.</p>
+the log file. Set <code class="language-plaintext highlighter-rouge">Maximum time is the root height's</code> to <code class="language-plaintext highlighter-rouge">Median</code>. Also, since the youngest sample is from 2002, 
+change the entry for age of youngest tip to 2002.</p>
 
 <figure>
 	<img style="max-width:80.0%;" src="figures/tracerBSP2.png" alt="tracerBSP2" />
-	<figcaption>Figure 21: Bayesian Skyline Reconstruction dialog in Tracer</figcaption>
+	<figcaption>Figure 22: Bayesian Skyline Reconstruction dialog in Tracer</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1078,7 +1104,7 @@ the median and 95% HPD intervals are plotted. After selecting the
 
 <figure>
 	<img style="max-width:75.0%;" src="figures/tracerBSP3.png" alt="tracerBSP3" />
-	<figcaption>Figure 22: Bayesian Skyline Reconstruction</figcaption>
+	<figcaption>Figure 23: Bayesian Skyline Reconstruction</figcaption>
 </figure>
 <p><br /></p>
 

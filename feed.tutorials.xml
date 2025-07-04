@@ -12,6 +12,110 @@
 		</image>
 				
 			<item>
+				<title>Time stamped data</title>
+				<description>
+					Time-stamped data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Remco Bouckaert
+							
+					
+						
+								,  Walter Xie
+						
+					
+						
+								,  Fábio K. Mendes
+						
+					
+						
+								
+									and  Eva Li and Alexei Drummond
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/walterxie/MEP-tutorial/commit/e91e4763e48eb2db4a58a70240b18bcdedbd1e21'
+					&gt;
+						3 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/walterxie'
+					&gt;
+						walterxie
+					&lt;/a&gt;
+					: relative rates
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.8
+					
+				</description>
+				<pubDate>Thu, 03 Jul 2025 05:11:41 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Divergence Time Estimation</title>
+				<description>
+					Dating Species Divergences with the Fossilized Birth-Death Process
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Tracy A. Heath
+							
+					
+						
+								, Rachel Warnock
+						
+					
+						
+								
+									and Bethany J. Allen
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/9d5474a067f131679b607e6c79542641913be106'
+					&gt;
+						2 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Update README.md
+
+Closes #11
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.4
+					
+				</description>
+				<pubDate>Wed, 02 Jul 2025 11:55:39 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>The ClaDS package</title>
 				<description>
 					Inferring progressive changes in birth and death rates
@@ -413,59 +517,6 @@ Small summary tree update
 			</item>
 				
 			<item>
-				<title>Time stamped data</title>
-				<description>
-					Time-stamped data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Remco Bouckaert
-							
-					
-						
-								,  Walter Xie
-						
-					
-						
-								,  Fábio K. Mendes
-						
-					
-						
-								
-									and  and Alexei Drummond
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/walterxie/MEP-tutorial/commit/ed17f5b1c7cadd109b2cd8af9ae17e83e6f5112a'
-					&gt;
-						9 Jun 2024
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/walterxie'
-					&gt;
-						walterxie
-					&lt;/a&gt;
-					: update ccd0 tree
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.4
-					
-				</description>
-				<pubDate>Sun, 09 Jun 2024 23:59:36 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
-			</item>
-				
-			<item>
 				<title>Species Trees and Species Delimitation with SNAPPER</title>
 				<description>
 					Analyzing SNP or AFLP data
@@ -551,55 +602,6 @@ Update to BEAST 2.7
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/starbeast2-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/starbeast2-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Divergence Time Estimation</title>
-				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tracy A. Heath
-							
-					
-						
-								, Rachel Warnock
-						
-					
-						
-								
-									and Bethany J. Allen
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/bbde865fc2eaa606eb85df932ec8b5a8789c27a3'
-					&gt;
-						11 Aug 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update figures (drop shadows, no backgrounds) and figure widths
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.4
-					
-				</description>
-				<pubDate>Fri, 11 Aug 2023 13:54:17 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>

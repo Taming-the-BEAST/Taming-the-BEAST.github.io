@@ -307,6 +307,24 @@
 					</a>
 				</li>
 			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/FBD-tutorial/raw/master/precooked_runs/bearsTree.MCC_summary.tre" target="_blank" download rel="nofollow">
+						bearsTree.MCC_summary.tre
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/FBD-tutorial/raw/master/precooked_runs/bearsTree_ext.MCC_summary.tree" target="_blank" download rel="nofollow">
+						bearsTree_ext.MCC_summary.tree
+					</a>
+				</li>
+			
 			</ul>
 		</div>		
 		
@@ -377,6 +395,32 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/9d5474a067f131679b607e6c79542641913be106">
+					02 Jul 2025 - <span class="text-gray">Update README.md
+
+Closes #11</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/26449d4e0b84b8fd054eec9305ecd16380ad3998">
+					02 Jul 2025 - <span class="text-gray">Needed a png not pdf</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/21c5bfb898e842c090a76de9ac8a55cc27f72dec">
+					02 Jul 2025 - <span class="text-gray">Updated script for last figure</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/bbde865fc2eaa606eb85df932ec8b5a8789c27a3">
 					11 Aug 2023 - <span class="text-gray">Update figures (drop shadows, no backgrounds) and figure widths</span>
 					</a> 
@@ -387,32 +431,6 @@
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/c76c9c35869f95476faad5910fb2a6c16eab56ae">
 					11 Aug 2023 - <span class="text-gray">Update author list</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/435da0920cd4bb9ed93f397d933a4d0c43837711">
-					11 Aug 2023 - <span class="text-gray">Update text style and formatting, correct a few errors</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/dafa02911d300a1790d5bb36b788658dfd72f32c">
-					11 Aug 2023 - <span class="text-gray">Merge pull request #7 from bethany-j-allen/master
-
-Updated website version</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/aa6aece817454b07fbcc3cca5af142e303e4dc39">
-					18 Jul 2023 - <span class="text-gray">Update tex for SAMRCA prior</span>
 					</a> 
 				</li>
 			
@@ -445,13 +463,21 @@ Updated website version</span>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs, and the interface will be the same, on all computing platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
+<h3 id="logcombiner">LogCombiner</h3>
+
+<p>This program helps to combine the output of several MCMC chains. It can discard the initial burn-in and resample the log files at lower frequency.</p>
+
+<p>LogCombiner is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
 <h3 id="treeannotator">TreeAnnotator</h3>
 
-<p>TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis.</p>
+<p>TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
 <h3 id="tracer">Tracer</h3>
 
-<p><a href="http://beast.community/tracer">Tracer</a> is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95\% credible intervals (which approximate the 95\% highest posterior density intervals) and effective sample sizes (ESS) of parameters. We will be using Tracer v.</p>
+<p><a href="http://beast.community/tracer">Tracer</a> is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95\% credible intervals (which approximate the 95\% highest posterior density intervals) and effective sample sizes (ESS) of parameters. We will be using Tracer v1.7.x.</p>
 
 <h3 id="figtree">FigTree</h3>
 
@@ -600,7 +626,9 @@ Updated website version</span>
  <figcaption>Figure 8: The Priors window with default (unmodified) site model priors.</figcaption>
 </figure>
 
-<p>We will keep the default priors for the HKY model on the evolution of <code class="language-plaintext highlighter-rouge">irbp</code>. The default gamma priors on the GTR exchangeability rates for the <code class="language-plaintext highlighter-rouge">cytb</code> gene place a lot of prior density on very small values. For some datasets, the sequences might not be informative for some of the rates, consequentially the MCMC may propose values very close to zero and this can induce long mixing times. Because of this problem, we will alter the gamma priors on the exchangeability rates. For each one, we will keep the expected values as in the default priors. The default priors assume that transitions (A &lt;-&gt; G or C &lt;-&gt; T) have an expected rate of 1.0. Note that BEAUti automatically fixes the parameter <strong>rateCT</strong> to be equal 1.0 in the <strong>Site Model</strong> window, thus this parameter isn’t present in the Priors window. For all other rates, transversions, the expected value of the priors is lower: 0.5. In BEAST2, the gamma distribution is parameterized by a shape parameter (<strong>Alpha</strong>) and a scale parameter (<strong>Beta</strong>). Under this parameterization, the expected value for any gamma distribution is: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">E</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>α</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\mathbb{E}(x) = \alpha\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathbb">E</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>. To reduce the prior density on very low values, we can increase the shape parameter and then we have to adjust the scale parameter accordingly.</p>
+<p>We will keep the default priors for the HKY model on the evolution of <code class="language-plaintext highlighter-rouge">irbp</code>. The default gamma priors on the GTR exchangeability rates for the <code class="language-plaintext highlighter-rouge">cytb</code> gene place a lot of prior density on very small values. For some datasets, the sequences might not be informative for some of the rates, consequentially the MCMC may propose values very close to zero and this can induce long mixing times. Because of this problem, we will alter the gamma priors on the exchangeability rates. For each one, we will keep the expected values as in the default priors. The default priors assume that transitions (A &lt;-&gt; G or C &lt;-&gt; T) have an expected rate of 1.0. Note that BEAUti automatically fixes the parameter <strong>rateCT</strong> to be equal 1.0 in the <strong>Site Model</strong> window, thus this parameter isn’t present in the Priors window. For all other rates, the expected value of the priors is lower: 0.5. This is ok for transversions, but we may want to increase the rate for <strong>rateAG</strong> as transitions, especially in animal mitochondrial genes such as cytb, occur several-fold more often than transversions.</p>
+
+<p>In BEAST2, the gamma distribution is parameterized by a shape parameter (<strong>Alpha</strong>) and a scale parameter (<strong>Beta</strong>). Under this parameterization, the expected value for any gamma distribution is: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">E</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>α</mi><mi>β</mi></mrow><annotation encoding="application/x-tex">\mathbb{E}(x) = \alpha\beta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathbb">E</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span></span></span></span>. To reduce the prior density on very low values, we can increase the shape parameter and then we have to adjust the scale parameter accordingly.</p>
 
 <blockquote>
   <p>Navigate to the <strong>Priors</strong> window. Begin by changing the gamma prior on the transition rate <code class="language-plaintext highlighter-rouge">rateAG.s:cytb</code>. Clicking on the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>▶</mo></mrow><annotation encoding="application/x-tex">\blacktriangleright</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.585em;vertical-align:-0.0352em;"></span><span class="mrel amsrm">▶</span></span></span></span> next to this parameter name to reveal the prior options. Change the parameters: <code class="language-plaintext highlighter-rouge">Alpha</code> = 2 and <code class="language-plaintext highlighter-rouge">Beta</code> = 0.5. Then change all of the other rates, for <code class="language-plaintext highlighter-rouge">rateAC.s</code>, <code class="language-plaintext highlighter-rouge">rateAT.s</code>, <code class="language-plaintext highlighter-rouge">rateCG.s</code>, and <code class="language-plaintext highlighter-rouge">rateGT.s</code>, to  <code class="language-plaintext highlighter-rouge">Alpha</code> = 2 and <code class="language-plaintext highlighter-rouge">Beta</code> = 0.25.</p>
@@ -865,6 +893,8 @@ Updated website version</span>
   <p>Repeat for each of the 14 fossils in our dataset using the information in the table.</p>
 </blockquote>
 
+<p>Above option <strong>Tipsonly</strong> indicates that a prior on the age of a specific tip (taxon) is being applied, and that this prior should only affect that single tip, not MRCA of any other related taxa.</p>
+
 <figure>
  <a id="fig:23"></a>
  <img src="figures/prior_tip.png" alt="" />
@@ -1021,7 +1051,7 @@ Updated website version</span>
 
 <figure>
  <a id="fig:29"></a>
- <img style="width:75%;" src="figures/geoscaled_bears_ext.png" alt="" />
+ <img style="width:75%;" src="figures/geoscaled_bears_ext_MCC.png" alt="" />
  <figcaption>Figure 29: The maximum clade credibility tree of extant bears summarized by TreeAnnotator and plotted against stratigraphy using the strap package in R. The internal nodes of the tree are indicated with circles, where circles mark nodes with posterior probability. The 95% credible intervals for node ages are shown with transparent blue bars.</figcaption>
 </figure>
 
