@@ -12,6 +12,92 @@
 		</image>
 				
 			<item>
+				<title>Total Evidence Tutorial</title>
+				<description>
+					Inferring phylogenies using genetic sequences and morphological characters
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Bethany J. Allen
+							
+					
+						
+								
+									and Joëlle Barido-Sottani
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/a10bea9a390989837130fcb4651732d1d1391c09'
+					&gt;
+						7 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen'
+					&gt;
+						bethany-j-allen
+					&lt;/a&gt;
+					: Polish README
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Mon, 07 Jul 2025 12:18:54 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>StarBeast3 Tutorial</title>
+				<description>
+					Estimating species trees using StarBeast3
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Ugne Stolz
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/StarBEAST3-Tutorial/commit/b67c63fa6c34087e4d8746789af3315d9c19bb5d'
+					&gt;
+						6 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: fix figures
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.4
+					
+				</description>
+				<pubDate>Sun, 06 Jul 2025 01:10:27 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/StarBEAST3-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBEAST3-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Time stamped data</title>
 				<description>
 					Time-stamped data
@@ -1037,96 +1123,6 @@ Added local update describing species-tree specification with BEAUti.
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Molecular dating using heterochronous data and substitution model averaging</title>
-				<description>
-					Estimating the time of origin of the 2009 H1N1 pandemic in North America
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Sebastian Duchene
-							
-					
-						
-								,  Tim Vaughan
-						
-					
-						
-								
-									and  Veronika Boskova
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/7962c1fb07bed1e415bc732ecf75c1df0e3acf54'
-					&gt;
-						5 Nov 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Fixed broken figure link.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5
-					
-				</description>
-				<pubDate>Mon, 05 Nov 2018 15:43:08 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-Dating-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Bacter Tutorial</title>
-				<description>
-					Inferring ARGs from bacterial sequence data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tim Vaughan
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/ac12bf7ade609ef59c60a426035ae5021aceaf39'
-					&gt;
-						21 Jun 2018
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/tgvaughan'
-					&gt;
-						tgvaughan
-					&lt;/a&gt;
-					: Removed tex file, updated tutorial text.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Thu, 21 Jun 2018 21:09:40 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Bacter-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Bacter-Tutorial/</guid>
 			</item>
 		
 	</channel>

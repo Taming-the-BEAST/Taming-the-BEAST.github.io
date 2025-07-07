@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Total Evidence Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Total-Evidence-Tutorial/">Total Evidence Tutorial</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Inferring phylogenies using genetic sequences and morphological characters
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Bethany J. Allen
+					
+			
+				
+						
+							and Joëlle Barido-Sottani
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/raw/main/data/Osmundaceae_dna.nex" target="_blank" rel="nofollow">
+						Osmundaceae_dna.nex
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/raw/main/data/Osmundaceae_morph.nex" target="_blank" rel="nofollow">
+						Osmundaceae_morph.nex
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/raw/main/data/penguins_charstatelabels.nex" target="_blank" rel="nofollow">
+						penguins_charstatelabels.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/raw/main/xml/Osmundaceae.xml" target="_blank" download rel="nofollow">
+						Osmundaceae.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/raw/main/xml/Osmundaceae_sfp.xml" target="_blank" download rel="nofollow">
+						Osmundaceae_sfp.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/raw/main/xml/Penguins_ordered.xml" target="_blank" download rel="nofollow">
+						Penguins_ordered.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			Scripts
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-gear"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/raw/main/scripts/add_age_uncertainty.R" target="_blank" download rel="nofollow">
+						add_age_uncertainty.R
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/bethany-j-allen">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/39991015?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				bethany-j-allen
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/bjoelle">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/14575423?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				bjoelle
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/a10bea9a390989837130fcb4651732d1d1391c09">
+					07 Jul 2025 - <span class="text-gray">Polish README</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/4a5368f535b1299071dd74c2ad39943a49a0d5e7">
+					04 Jul 2025 - <span class="text-gray">Fix table display issue</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/7564d01623bc8b99ec8f43f4a26815f73cec44cf">
+					04 Jul 2025 - <span class="text-gray">Fix table display issue</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/f3238cd5020c5994bc46980b5bc65f6df45eb8f8">
+					02 Jul 2025 - <span class="text-gray">Add post-processing screenshots and tree</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/77cda43284e960b1c83ecefbee2d28f15fc523ee">
+					02 Jul 2025 - <span class="text-gray">typo hunting and splitting instruction boxes</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>In macroevolution, phylogenies provide a hypothesised roadmap describing the relationships between species (or higher taxa) and the timing of their divergences. Typically we aim to infer the most complete and accurate phylogeny possible, to obtain a reliable picture of the tempo and mode of evolution in that clade. Genetic sequences have become relatively easy to obtain for living species, particularly through openly accessible databases such as <a href="https://www.ncbi.nlm.nih.gov/genbank/">NCBI Genbank</a>. While the fossil record can provide us with valuable insights into species in deeper time, we cannot obtain genetic sequences for these species, and to integrate them into phylogenies we must instead rely on their morphological characteristics. Phylogenetic approaches which combine both genetic and morphological data (and typically both extant and extinct species) are known as <strong>total-evidence</strong> methods <a class="citation" href="#Ronquist2012">(Ronquist et al., 2012; Zhang et al., 2016)</a>. Here we will demonstrate how to infer a total-evidence phylogeny using the fossilized birth death (FBD) model in BEAST2.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p><a href="http://www.beast2.org">BEAST2</a> is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST v2.7.7.</p>
+
+<h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs, and the interface will be the same, on all computing platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="any-programmer-friendly-text-editor">Any programmer-friendly text editor</h3>
+
+<p>We will need to view our data input files to understand their format, for which we’ll need a text editor. It’s best to use one designed for programmers as these include nice features such as syntax highlighting, which makes the code more reader-friendly. <a href="https://www.sublimetext.com">Sublime Text</a> is a good option which is available for MacOS, Windows and Linux.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p><a href="http://beast.community/tracer">Tracer</a> is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.x.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis.</p>
+
+<hr />
+
+<h1 id="practical-total-evidence-tutorial">Practical: Total Evidence Tutorial</h1>
+
+<p>In this tutorial we will infer a phylogeny for the Osmundaceae, or “Royal Fern”, family of plants, using a combination of both morphological and genetic data. We will discuss the most important model elements and choices, but recommend <a class="citation" href="#Mulvey2025a">(Mulvey et al., 2025)</a> as a recent review which explains these choices in more detail, and provides practical advice on compiling the necessary data.</p>
+
+<p>The aim of this tutorial is to:</p>
+<ul>
+  <li>Learn how to read morphological data into BEAST2;</li>
+  <li>Understand the differences between how BEAST2 treats morphological and genetic data;</li>
+  <li>Practice visualising total-evidence phylogenies.</li>
+</ul>
+
+<h2 id="the-data">The data</h2>
+
+<p>The dataset we are using was published by <a class="citation" href="#Grimm2015">(Grimm et al., 2015)</a>. They used the dataset to investigate the impact of clock model choices on phylogenetic inference, between analyses conducted via “node dating” in BEAST2, “total-evidence dating” in MrBayes and “fossilised birth-death dating” in FDPPDiv. The genetic sequences comprise a concatenation of seven plastid DNA sites, collated by <a class="citation" href="#Metzgar2008">(Metzgar et al., 2008)</a>. The morphological data describe characteristics of the plants’ rhizomes, or underground stems, and are taken from <a class="citation" href="#Bomfleur2015">(Bomfleur et al., 2015)</a>.</p>
+
+<p>The dataset describes 33 “operational taxonomic units”, or biological entities which lie at the tips of our phylogeny. These include four species of <em>Leptopteris</em>, and three species of <em>Todea</em>, with the remaining tips belonging to the genus <em>Osmunda</em>. Most are independent species, while four are individuals which all belong to <em>Osmunda cinnamomea</em>: fossils from the Cretaceous of Canada and the Neogene of Japan and the USA, alongside a genetic sequence for living <em>Osmunda cinnamomea</em>, each of which are represented as separate tips.</p>
+
+<p>We will now explore the nuances of our two data input files: these are <em>Osmundaceae dna.nex</em> for our genetic sequences, and <em>Osmundaceae morph.nex</em> for our morphological data.</p>
+
+<h3 id="genetic-sequences">Genetic sequences</h3>
+
+<p>First we will open the <code class="language-plaintext highlighter-rouge">nexus</code> file containing the genetic sequences in our text editor, to take a look at what the file contains.</p>
+
+<blockquote>
+  <p>Open <code class="language-plaintext highlighter-rouge">Osmundaceae_dna.nex</code> in your preferred text editor.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:1"></a>
+	<img style="width:75%;" src="figures/dna_nexus.png" alt="" />
+	<figcaption>Figure 1: The nexus file containing the genetic sequences.</figcaption>
+</figure>
+
+<p>On the first line, we see a tag denoting that our file is of the <code class="language-plaintext highlighter-rouge">nexus</code> type. We then begin a <code class="language-plaintext highlighter-rouge">block</code> which is called <code class="language-plaintext highlighter-rouge">data</code>. The data dimensions are described, stating that <code class="language-plaintext highlighter-rouge">ntax = 33</code> and <code class="language-plaintext highlighter-rouge">nchar = 8628</code>, denoting that we have sequences with a length of 8628 base pairs for each of 33 OTUs, or tips. We are then given some information about the formatting of the sequences. The type of data is stated to be “dna”. “Gaps” in the data are denoted using <code class="language-plaintext highlighter-rouge">-</code>, while “missing” values are denoted using <code class="language-plaintext highlighter-rouge">?</code>.</p>
+
+<p>Following this header, the data itself is presented, following the tag <code class="language-plaintext highlighter-rouge">matrix</code>. Each tip label is stated, giving the name of the tip and a number (more on this later), followed by the genetic sequence associated with the OTU. The first is <code class="language-plaintext highlighter-rouge">Leptopteris_fraseri_0</code>. For this tip, we can see values of G, C, A and T corresponding to our DNA base reads, interspersed with blocks of question marks corresponding to sections of the DNA strand which could not be sequenced.</p>
+
+<p>Scrolling down to the bottom, we see that <code class="language-plaintext highlighter-rouge">Osmunda_plumites_160</code> has a sequence which only consists of question marks. This is because <em>Osmunda plumites</em> is one of our fossil tips. While we do not have a genetic sequence for this species, it must still be included in our <code class="language-plaintext highlighter-rouge">nexus</code> file containing the genetic sequences, but in a way which informs our model that we do not know the DNA bases that a sample from this species would contain.</p>
+
+<figure>
+	<a id="fig:2"></a>
+	<img style="width:75%;" src="figures/Osmunda_plumites.png" alt="" />
+	<figcaption>Figure 2: Extinct OTUs with no genetic data are represented with a sequence of question marks.</figcaption>
+</figure>
+
+<p>To complete the file, the phrase <code class="language-plaintext highlighter-rouge">end;</code> is used to denote the end of the <code class="language-plaintext highlighter-rouge">data</code> block. No other blocks are needed. This example file shows one of the simplest ways of formatting a <code class="language-plaintext highlighter-rouge">nexus</code> file for input into BEAST2; if issues are encountered when reading your own sequence data into BEAST2, it is recommended to use the simplest possible formatting which still encodes the data.</p>
+
+<h3 id="morphological-data">Morphological data</h3>
+
+<p>We will now look at the <code class="language-plaintext highlighter-rouge">nexus</code> file containing the morphological data for comparison.</p>
+
+<blockquote>
+  <p>Open <code class="language-plaintext highlighter-rouge">Osmundaceae_morph.nex</code> in your preferred text editor.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:3"></a>
+	<img style="width:75%;" src="figures/morph_nexus.png" alt="" />
+	<figcaption>Figure 3: The nexus file containing the morphological data.</figcaption>
+</figure>
+
+<p>The first thing to note is that the overall format of the <code class="language-plaintext highlighter-rouge">nexus</code> file is very similar to that for our DNA sequences. We see a header, followed by a matrix. However, it is immediately clear that this file is much shorter. For each of our DNA sequences we had a total of 8628 characters, but here we can see that <code class="language-plaintext highlighter-rouge">nchar = 25</code>. This means that our morphological data encodes 25 different traits possessed by each of our tips.</p>
+
+<p>This time, the data format is described as “standard” rather than “dna”. When using a “dna” format, we automatically indicate that our sequences will consist of the letters G, C, A and T. But for this “standard” format, there is no clear character convention, and so we must describe which characters are contained within the matrix. This is done here using <code class="language-plaintext highlighter-rouge">symbols = "012"</code>. This means that the digits 0, 1 and 2 are used to denote the different character states, with no other characters present in the matrix. We therefore know that in this dataset, any single character can only have a maximum of three possible states. As with the DNA sequences, gaps and missing data are denoted using <code class="language-plaintext highlighter-rouge">-</code> and <code class="language-plaintext highlighter-rouge">?</code> respectively.</p>
+
+<p>Beneath this, again, we see the name of each OTU followed by its character states for each trait. This time, no tip has only question marks, so we have at least some morphological data for every tip. But overall, there are still a high number of question marks spread across the dataset, with unknown states making up a larger proportion of the data compared to the DNA. For example, we can see that for <code class="language-plaintext highlighter-rouge">Todea_papuana_0</code>, only five of the characters are coded, with all other states unknown.</p>
+
+<p>Another thing to note is that not all of our morphological “sequences” are the same length. This is because some contain bracketed pairs of values. For example, we see that <code class="language-plaintext highlighter-rouge">Osmunda_cinnamomea_0</code> contains two, the first being <code class="language-plaintext highlighter-rouge">{1 2}</code>, and the second being <code class="language-plaintext highlighter-rouge">{0 1}</code>. Here, we are denoting <em>ambiguity</em>. For these particular characters, we are telling the model that the value could be either of these two states. It is important to note that the model will interpret this information to mean that the state could be <em>either one</em> of these values, <em>not both</em>. If the morphological character in question was not coded with this information in mind, you risk violating BEAST2’s model of morphological evolution.</p>
+
+<p>Here we have highlighted a handful of ways in which morphological data must be carefully formatted to be compatible with BEAST2. Different phylogenetic inference software use different models for morphological character evolution, and it is important to bear in mind the relationship between the morphological dataset design and the assumptions made by the model in your software of choice.</p>
+
+<h2 id="creating-the-analysis-files-with-beauti">Creating the Analysis Files with BEAUti</h2>
+
+<p>We will now start creating our BEAST2 model in BEAUti.</p>
+
+<h3 id="importing-the-data">Importing the data</h3>
+
+<p>First, we will load in our genetic data. This should be familiar to you if you have completed any of the other tutorials.</p>
+
+<blockquote>
+  <p>Navigate to <strong>File &gt; Import Alignment</strong>. 
+Select <code class="language-plaintext highlighter-rouge">Osmundaceae_dna.nex</code> and select <strong>Open</strong>.</p>
+</blockquote>
+
+<p>We can now see this dataset listed in our <strong>Partitions</strong> tab. We can see that the dataset contains 33 <strong>Taxa</strong> and 8628 <strong>Sites</strong>, and has the <strong>Data Type</strong> “nucleotide”: this corresponds to the information we saw in the <code class="language-plaintext highlighter-rouge">nexus</code> header, so it seems the data have been read in correctly.</p>
+
+<figure>
+	<a id="fig:4"></a>
+	<img style="width:75%;" src="figures/gen_sum.png" alt="" />
+	<figcaption>Figure 4: The summary of the genetic data displayed in BEAUti.</figcaption>
+</figure>
+
+<p>Next, we will read in our morphological data.</p>
+
+<blockquote>
+  <p>Navigate to <strong>File &gt; Add Morphological Data</strong>. 
+Select <code class="language-plaintext highlighter-rouge">Osmundaceae_morph.nex</code> and select <strong>Open</strong>.</p>
+</blockquote>
+
+<p>We now see a window asking whether we would like to “condition on recording variable characters only (Mkv)”. This choice determines how the model treats the data with respect to <strong>invariant sites</strong>.</p>
+
+<figure>
+	<a id="fig:5"></a>
+	<img style="width:50%;" src="figures/variable_chars.png" alt="" />
+	<figcaption>Figure 5: The window asking whether to condition on recording only variable characters.</figcaption>
+</figure>
+
+<p>What does this mean? We will start by considering our DNA sequences. Here, our data represent a complete sequence for each OTU, telling us which DNA base has been read at each position in the sequence (except for where we have missing values, but these are also included in the matrix, with a “?”). Imagine that for the first base in our sequences, all of the OTUs have the value “A”. To use the technical term, this site is <strong>invariant</strong>. If all of the OTUs have the same value, we cannot use this particular position in the sequences to place the tips into two or more subgroups, and therefore to put our tips into clusters to inform the phylogenetic topology: it is <strong>phylogenetically uninformative</strong>. However, invariant sites can be very important with regards to <strong>time</strong>. We know that invariant sites have probably never changed state across any of our branches throughout the course of the evolutionary process we are modelling. When we infer a per-site rate of substitution across our sequences, invariant sites make up an important part of this calculation.</p>
+
+<p>Now let’s translate this thinking to morphological data. What do these data represent? Each character describes a specific trait, with the values given to each tip denoting the state in which that character exists at the tip of that OTU. The meaning of our morphological characters and states are much less rigid than for our genetic data <a class="citation" href="#Goloboff2019">(Goloboff et al., 2019)</a>. The most relevant manifestation of this point here is that it is much easier to describe and code characters which differ between our OTUs, in comparison with characteristics that are shared by all of them. This means that morphological datasets are typically biased towards morphological characters which vary, with many datasets not containing <strong>any</strong> invariant characters. This is known as <strong>ascertainment bias</strong>. As we mentioned for the genetic data, invariant characters form an important part of the calculation of per-character rates of change, but these are not captured in our dataset. Because of this, phylogenetic models have been adapted to correct for the non-sampling of invariant sites in morphological data. This is the ‘variable’, or <strong>v</strong>, part of the <strong>MKv</strong> model of morphological character evolution <a class="citation" href="#Lewis2001">(Lewis, 2001)</a>; we will discuss what <strong>Mk</strong> means later.</p>
+
+<p>The original Osmundaceae dataset used by <a class="citation" href="#Grimm2015">(Grimm et al., 2015)</a> actually contained 33 morphological characters, with eight of these being <strong>invariant</strong>. However, BEAST2 currently will not accept morphological data containing invariant sites unless character descriptions are provided; if you attempt to read a basic morphological dataset containing invariant sites into BEAUti, you will get an error stating that this is not possible. For the purposes of this tutorial, we removed these invariant characters from the dataset for you. In your own dataset, you will need to either remove the invariant characters or provide character descriptions (see section <strong>Advanced topics</strong> below for more information on how to do that).</p>
+
+<p>To put this knowledge into action, we now know that our dataset does not include invariant sites, and so we would like to use the <strong>Mkv</strong> model to correct for ascertainment bias.</p>
+
+<blockquote>
+  <p>Select <strong>Yes</strong> to conditioning on variable characters.</p>
+</blockquote>
+
+<p>We can see that we now have three data partitions in the <strong>Partitions</strong> tab. Beneath our genetic data, our morphological dataset has been split into two. <code class="language-plaintext highlighter-rouge">Osmundaceae_morph2</code> contains 21 sites, and <code class="language-plaintext highlighter-rouge">Osmundaceae_morph3</code> contains 9 sites. You will notice that the sum of these two values is 30, higher than the 25 characters we saw in the raw morphological data: this is because five additional characters have been added to compensate for the ascertainment bias. Each partition has its own site model, and we will leave this setting to the default. We will discuss what this means when we set up the <strong>Site model</strong> tab.</p>
+
+<figure>
+	<a id="fig:6"></a>
+	<img style="width:75%;" src="figures/all_dat_sum.png" alt="" />
+	<figcaption>Figure 6: The summary of the genetic and morphological data displayed in BEAUti.</figcaption>
+</figure>
+
+<p>Next we will take a look at the clock models. For now, we can see that we have one clock for the DNA sequences, named <code class="language-plaintext highlighter-rouge">Osmundaceae_dna</code>, and a second which is used for both of the morphological partitions, named <code class="language-plaintext highlighter-rouge">Osmundaceae_morph</code>. This means that we consider all of our morphological data to have evolved under the same clock, with a unified rate. This seems a reasonable assumption, so we will leave this setting to the default.</p>
+
+<p>The following column defines the tree settings. We want to infer a single tree which is informed by both the genetic and morphological data, so we will link all three trees.</p>
+
+<blockquote>
+  <p>In the <strong>Tree</strong> column, click on the name <strong>Osmundaceae_dna</strong>. 
+Type in <strong>tree</strong> and hit enter. 
+Using the drop-down menus, change the tree to <strong>tree</strong> for both of the morphological partitions.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:7"></a>
+	<img style="width:75%;" src="figures/linked_trees.png" alt="" />
+	<figcaption>Figure 7: The summary of the genetic and morphological data displayed in BEAUti, with trees now linked.</figcaption>
+</figure>
+
+<p>We are now ready to move onto our tip date settings.</p>
+
+<h3 id="setting-initial-tip-ages">Setting initial tip ages</h3>
+
+<p>We know that our dataset contains both living and extinct species, which means that we have tips which were sampled through time. As a result, we need to give the model this information.</p>
+
+<blockquote>
+  <p>Select the <strong>Tip Dates</strong> tab, and check the box to <strong>Use tip dates</strong>.</p>
+</blockquote>
+
+<p>We now see a table which lists the tip names, along with <strong>Date</strong> and <strong>Age/Height</strong> values. At present these latter two columns are currently all zero values. These values correspond to the <strong>initial</strong> ages these tips will have: for some they will be sampled and inferred over the course of the MCMC, but we will come back to this point later.</p>
+
+<figure>
+	<a id="fig:8"></a>
+	<img style="width:75%;" src="figures/default_tips.png" alt="" />
+	<figcaption>Figure 8: The default settings for the tip dates.</figcaption>
+</figure>
+
+<p>While it is possible to enter these age values manually, it is easier to specify them within our <code class="language-plaintext highlighter-rouge">nexus</code> file, which is what we have done here. Each tip label ends with an underscore followed by a number, and this number is the age, in millions of years, which we would like to set as the initial age of that tip. We will now read these into the table.</p>
+
+<blockquote>
+  <p>Ensure that the switch at the top for <strong>Dates specified</strong> is set to <strong>numerically as… year</strong>. 
+Change the second drop-down menu from <strong>Since some time in the past</strong> to <strong>Before the present</strong>. 
+Then select <strong>Auto-configure</strong>.</p>
+
+  <p>Ensure that the switch is set to <strong>use everything</strong>. 
+Change the drop-down to <strong>after last</strong>, and ensure that the text box contains a single underscore, <code class="language-plaintext highlighter-rouge">_</code>. 
+Select <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:9"></a>
+	<img style="width:75%;" src="figures/configuring_auto_tips.png" alt="" />
+	<figcaption>Figure 9: The window for setting the tip dates to autoconfigure from the tip labels.</figcaption>
+</figure>
+
+<p>The <strong>Date</strong> and <strong>Age/Height</strong> values should now be repopulated using the numbers in the tip labels.</p>
+
+<figure>
+	<a id="fig:10"></a>
+	<img style="width:75%;" src="figures/configured_tips.png" alt="" />
+	<figcaption>Figure 10: The correctly configured tip dates.</figcaption>
+</figure>
+
+<h3 id="site-models">Site models</h3>
+
+<p>We will now set up the site models. These models describe the evolutionary processes which we think govern the changing of states in both our molecular and morphological datasets, so it is particularly important to understand the choices we are making in this tab when setting up a total-evidence analysis.</p>
+
+<blockquote>
+  <p>Select the <strong>Site Model</strong> tab.</p>
+</blockquote>
+
+<p>We can see that our three partitions are listed in the table on the left, with the genetic data listed first. Here we will keep this model simple, but we recommend dipping into the other tutorials for more advice on how to set up site models for genetic sequence data.</p>
+
+<blockquote>
+  <p>Set the <strong>Gamma Category Count</strong> to <strong>4</strong>, leaving the settings for the shape of the gamma distribution to the defaults. 
+Change the substitution model to <strong>HKY</strong>, leaving the initial <strong>Kappa</strong> value at <strong>2.0</strong>.
+Set the <strong>Kappa</strong> and the <strong>Frequencies</strong> parameters to <strong>estimated</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:11"></a>
+	<img style="width:75%;" src="figures/dna_site_model.png" alt="" />
+	<figcaption>Figure 11: The settings for the site model for the genetic sequence data.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Select <strong>Osmundaceae_morph2</strong> in the left-hand table.</p>
+</blockquote>
+
+<p>We can now begin thinking about our model(s) of morphological evolution. We can see that the default <strong>Subst Model</strong> is the <strong>Lewis Mk</strong>. At present this is the only model of morphological evolution available in BEAST2. (If you check the drop-down for this box, there is also the option of a <strong>Mutation Death Model</strong>. This is a <strong>Dollo model</strong>, which handles exclusively binary character states. It is configured specifically for word matrices used in language evolution, so we will not discuss this model further here.)</p>
+
+<figure>
+	<a id="fig:12"></a>
+	<img style="width:75%;" src="figures/morph_site_model.png" alt="" />
+	<figcaption>Figure 12: The settings for the site model for the morphological data.</figcaption>
+</figure>
+
+<p>In brief, what is the Lewis Mk model? It is the <strong>Markov <em>k</em>-states model</strong> described by <a class="citation" href="#Lewis2001">(Lewis, 2001)</a>. For those who are familiar with genetic substitution models, it is the morphological equivalent of the Jukes-Cantor 69 model. The model assumes that all character state transitions are just as likely as each other. For genetic sequences, this means that an A base is equally likely to transition to a G, C, or T.</p>
+
+<p>In morphological evolution, this means several important things. Our Lewis MK model assumes that the transition from 0 to 1 is just as likely as the transition from 1 to 0 <a class="citation" href="#Lewis2001">(Lewis, 2001)</a>. If a character represents whether a complex evolutionary feature is present or absent, our transitions therefore represent acquisition and loss. We might think it is much harder to lose such a character than to gain it: that would be a violation of this model. Further, the model assumes that, for example, the transition from 0 to 1 is just as likely as the transition from 0 to 2. This means that we assume character states have been coded as independent entities, but if these states are actually ordered (0 must transition to 1, then 1 must transition to 2), this is also a violation of the model. (Note: see section <strong>Advanced topics</strong> below for more information on how to set up ordered characters). Understanding how the morphological characters have been coded, and whether any violations exist between these thought processes and the way in which the site model operates, is therefore fundamental to determining how well the site model will perform, and potentially how accurate our inferred phylogeny is <a class="citation" href="#Goloboff2019">(Goloboff et al., 2019; Mulvey et al., 2025)</a>.</p>
+
+<p>Now we can return to our earlier question: why was the morphological data split into two partitions? Under the Lewis Mk model, we know that for each morphological character, our transition matrix is dependent on the number of states, <em>k</em>, which that character can take. As a result, <code class="language-plaintext highlighter-rouge">Osmundaceae_morph2</code> contains all characters with two possible states, and <code class="language-plaintext highlighter-rouge">Osmundaceae_morph3</code> contains all characters with three possible states. In order to determine these partitions, BEAST2 automatically uses the number of character states present in the dataset for each character. This means that if a character is only represented by 0 or 1 in the dataset, BEAST2 assumes that there is no “secret” state 2.</p>
+
+<p>We now need to check our morphological site model parameters. When we read in the dataset, we already told the model that there are no invariant sites, so we can leave the <strong>Proportion invariant</strong> blank.</p>
+
+<p>We also need to choose a value for the <strong>Gamma Category Count</strong>. This value determines how many transition rate categories we have, allowing for differences in transition rates between different morphological characters in the matrix. BEAST2 uses the recommended implementation for models that condition on only sampling variable sites, but also permit for among-character variation in evolutionary rates, so we can use gamma categories in combination with the Mk model if we wish to <a class="citation" href="#Capobianco2025">(Capobianco &amp; Höhna, 2025)</a>. We just set this value to 4 for our molecular data. But as we mentioned before, the nature of morphological data means that we have much more variation in what different morphological characters actually describe than between different sites in a genetic sequence; this might lead us to think that we should allow for more different rate categories for our morphological data. However, we also have a much smaller total number of characters, giving us much less statistical power to actually infer these rate values compared to genetic data. To keep our analysis simple, we will leave the Gamma Category Count values for the morphological data at 0. This means we will calculate a single transition rate for each of the morphological partitions.</p>
+
+<h3 id="clock-models">Clock models</h3>
+
+<p>The next tab describes our clock models.</p>
+
+<blockquote>
+  <p>Select the <strong>Clock model</strong> tab.</p>
+</blockquote>
+
+<p>In the left-hand table, we see our two clocks, one for the genetic data and one for the morphological data. Clicking between them, we can see that for both, the default settings are for a <strong>Strict Clock</strong> with a <strong>Mean clock rate</strong> starting at 1.0, but which is <strong>estimated</strong> during the MCMC. We are dealing with a small phylogeny and a small number of characters, particularly for our morphological data, which are unlikely to provide us with enough information to fit a more complex clock model. We will therefore retain these defaults and use strict clocks.</p>
+
+<figure>
+	<a id="fig:13"></a>
+	<img style="width:75%;" src="figures/clock.png" alt="" />
+	<figcaption>Figure 13: The default settings for the molecular clock model.</figcaption>
+</figure>
+
+<h3 id="priors">Priors</h3>
+
+<p>Now it’s time to set up our priors.</p>
+
+<blockquote>
+  <p>Select the <strong>Priors</strong> tab.</p>
+</blockquote>
+
+<p>Our first task is to choose our tree prior, which determines the type of evolutionary model we will use, and therefore the type of tree we will infer. We know that our phylogeny contains both extant and extinct tips, and because our datasets are small, we will keep things simple and assume constant evolutionary rates through time. This means that we need to use the <strong>Fossilized Birth-Death Model</strong>.</p>
+
+<blockquote>
+  <p>In the drop-down box next to <strong>Tree</strong>, select <strong>Fossilized Birth-Death Model</strong>.</p>
+
+  <p>Click the triangle next to <strong>Tree</strong> to view the additional tree prior options.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:14"></a>
+	<img style="width:75%;" src="figures/FBD_options.png" alt="" />
+	<figcaption>Figure 14: The tree prior options for the fossilized birth-death model.</figcaption>
+</figure>
+
+<p>Here we see many different options for our model. We can see that the FBD model will be parameterised with a diversification rate, turnover rate, and fossil sampling proportion, each of which will be estimated. We also have a value for <strong>rho</strong>, the proportion of extant tips which are included within the dataset, which is currently fixed at 1.0 (complete extant sampling). At time of writing, <a href="https://wfoplantlist.org/taxon/wfo-7000000433-2024-12?page=1">World Flora Online</a> considers there to be 28 accepted living species in Osmundaceae. Our dataset contains 15 species dated to the present day (check the number with an age of “0” in the <strong>Tip Dates</strong> tab): we will therefore set the rho value to 15/28 = 0.536.</p>
+
+<blockquote>
+  <p>Set the <strong>rho</strong> value to <strong>0.536</strong>.</p>
+</blockquote>
+
+<p>We will leave the remaining tree parameter priors to their defaults.</p>
+
+<p>The next two priors describe the clock rate parameters for the molecular and morphological data. We expect these values to be fairly low, so we will change both to exponential priors with a mean of 1.0.</p>
+
+<blockquote>
+  <p>In the drop-down box next to <strong>clockRate.c:Osmundaceae_dna</strong>, select an <strong>Exponential</strong> distribution. By default, this should have a mean of 1.0; you can check this using the triangle on the left to see the extended options. 
+Repeat this for <strong>clockRate.c:Osmundaceae_morph</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:15"></a>
+	<img style="width:75%;" src="figures/exp_clock_rate.png" alt="" />
+	<figcaption>Figure 15: Setting the molecular clock rate to have an exponential prior distribution.</figcaption>
+</figure>
+
+<p>We also have three parameters for our molecular site model: <strong>freqParameter</strong>, <strong>gammaShape</strong> and <strong>kappa</strong>. We will leave these at their default values.</p>
+
+<p>We can now move on to our FBD parameters. First, we will consider the origin time, which describes how old the root of our phylogeny should be.</p>
+
+<blockquote>
+  <p>Click the triangle to the left of <strong>OriginFBD</strong> to view the default prior.</p>
+</blockquote>
+
+<p>Here we can see that the default prior is a <strong>uniform distribution</strong> between 0 and infinity, with a starting value of 100. Practically, this means that the only constraint being placed on our phylogeny is that the root has to be older than the age of our oldest fossil tip - our <strong>Tip Dates</strong> tab tells us that the oldest initial tip age is 184 million years ago.</p>
+
+<p>It is important for us to choose a more meaningful prior here, to ensure that the timescale of our phylogeny fits our prior knowledge. For example, we can check the <a href="https://paleobiodb.org/#/">Paleobiology Database</a>, a large open-access database of fossil occurrences. At time of writing, a search for the family <strong>Osmundaceae</strong> tells us that the oldest fossils in the database are from the <a href="https://paleobiodb.org/classic/basicTaxonInfo?taxon_no=54780">Carboniferous</a>, which corresponds to an age of around 360 to 300 million years ago. This is substantially older than the oldest fossil in our phylogeny. It is also older than the root age inferred in the original paper by <a class="citation" href="#Grimm2015">(Grimm et al., 2015)</a>, which corresponds to the Permian-Triassic boundary, 250 million years ago. To permit all of these options but exclude more extreme values, we will change the limits on our <strong>uniform distribution</strong> to correspond to the start of the Carboniferous, and the middle of the Triassic.</p>
+
+<blockquote>
+  <p>Change the <strong>Upper</strong> limit of the uniform distribution to <strong>360</strong>, and the <strong>Lower</strong> limit to <strong>230</strong>. 
+Click the <strong>initial =</strong> button to view the starting values, and change the <strong>Value</strong> to <strong>250</strong>, then click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:16"></a>
+	<img style="width:75%;" src="figures/origin_prior.png" alt="" />
+	<figcaption>Figure 16: The settings for the prior distribution on the origin.</figcaption>
+</figure>
+
+<p>Finally, we also have the three priors on our diversification and turnover rates, and fossil sampling proportion. We expect our diversification rate to be small, and our sampling proportion to be even smaller, so we will change these to exponential priors, while leaving the turnover parameter with the default uniform prior.</p>
+
+<blockquote>
+  <p>In the drop-down box next to <strong>diversificationRateFBD</strong>, select an <strong>Exponential</strong> distribution. 
+Check that this distribution has a <strong>mean</strong> of <strong>1.0</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:17"></a>
+	<img style="width:75%;" src="figures/diversification_prior.png" alt="" />
+	<figcaption>Figure 17: The settings for the prior distribution on the diversification rate.</figcaption>
+</figure>
+
+<blockquote>
+  <p>In the drop-down box next to <strong>samplingProportionFBD</strong>, select an <strong>Exponential</strong> distribution. 
+Use the triangle on the left to open the extended options. 
+Give the distribution a <strong>mean</strong> of <strong>0.1</strong>. 
+Click the <strong>initial =</strong> button to view the starting values, and change the <strong>Value</strong> to <strong>0.1</strong>, then click <strong>Ok</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:18"></a>
+	<img style="width:75%;" src="figures/sampling_prior.png" alt="" />
+	<figcaption>Figure 18: The settings for the prior distribution on the sampling proportion.</figcaption>
+</figure>
+
+<h3 id="adding-tip-age-priors">Adding tip age priors</h3>
+
+<p>As well as the priors which are already described in the <strong>Priors</strong> tab, we also need to set priors on the tip ages of our extinct OTUs. This will allow the ages of these tips to be sampled over the course of the MCMC. To do this, we need to give the model our uncertainty range for the age of each fossil tip. If you have previously completed the <strong>Divergence Time Estimation</strong> tutorial, this will be familiar to you, but we will walk this through with <em>Todea tidwellii</em> as an example, which we consider to be between 140 and 129 million years old.</p>
+
+<blockquote>
+  <p>Click the <strong>+ Add Prior</strong> button at the bottom of the <strong>Priors</strong> tab page. 
+When asked about the type of prior, select the <strong>Sampled Ancestors MRCA Prior</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:19"></a>
+	<img style="width:50%;" src="figures/sa_mrca_prior.png" alt="" />
+	<figcaption>Figure 19: The window giving the option of adding a Sampled Ancestors MRCA Prior.</figcaption>
+</figure>
+
+<blockquote>
+  <p>In the <strong>Taxon set label</strong> box, enter <strong>tidwellii</strong>. 
+In the left-hand box, find <strong>Todea_tidwellii_135</strong>, select it, and click the <strong>»</strong> button to move it into the right-hand table. 
+Click <strong>Ok</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:20"></a>
+	<img style="width:75%;" src="figures/add_tidwellii.png" alt="" />
+	<figcaption>Figure 20: The taxon set editor window for adding a tip prior for _Todea tidwellii_.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Using the drop-down box next to the newly-created prior, select a <strong>Uniform</strong> distribution. 
+Click the left-hand triangle to view the additional options. 
+Set the <strong>Lower</strong> value to <strong>129</strong> and the <strong>Upper</strong> value to <strong>140</strong>. 
+Check the box at the bottom for <strong>Tipsonly</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:21"></a>
+	<img style="width:75%;" src="figures/modify_tidwellii.png" alt="" />
+	<figcaption>Figure 21: The settings for the tip prior on _Todea tidwellii_.</figcaption>
+</figure>
+
+<p>Using this process, you can now enter the tip priors for each of the extinct tips, using the age uncertainties given in the box below. We have included the tips which have a set age for the sake of completeness, but it is not necessary to add a prior for these tips, as their initial ages are set to this date and if no prior is added, they will remain fixed at this age throughout the MCMC.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fossil tip</th>
+      <th>Age uncertainty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Todea tidwelli</em></td>
+      <td>129–140</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda cinnamomea</em> Neogene USA</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda cinnamomea</em> Neogene Japan</td>
+      <td>12–14</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda cinnamomea</em> Cretaceous Canada</td>
+      <td>72–83</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda precinnamomea</em></td>
+      <td>56–66</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda chengii</em></td>
+      <td>145–160</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda bromeliaefolia</em></td>
+      <td>11–14</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda arnoldii</em></td>
+      <td>56–66</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda dowkeri</em></td>
+      <td>56–59</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda ilianensis</em></td>
+      <td>4–6</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda oregonensis</em></td>
+      <td>34–40</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda pluma</em></td>
+      <td>56–66</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda shimokawaensis</em></td>
+      <td>12–14</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda wehrii</em></td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda pulchella</em></td>
+      <td>183–185</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda liaoningensis</em></td>
+      <td>153–165</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda wangii</em></td>
+      <td>153–165</td>
+    </tr>
+    <tr>
+      <td><em>Osmunda plumites</em></td>
+      <td>153–165</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<blockquote>
+  <p>Create a tip age prior for each extinct tip.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:22"></a>
+	<img style="width:75%;" src="figures/tip_priors.png" alt="" />
+	<figcaption>Figure 22: The tip priors.</figcaption>
+</figure>
+
+<p>Note that this is a time-consuming process, especially for large phylogenies. In order to automate this process, we have also provided the R script <code class="language-plaintext highlighter-rouge">scripts/add_age_uncertainty.R</code>, which can automatically add age uncertainty priors to tips in a BEAST2 XML file. To use this script, first create an XML file with your complete analysis setup, containing all the elements except for the tip age priors. Then, create an R table similar to the one shown above, containing a column <code class="language-plaintext highlighter-rouge">taxa</code> with the name of each tip and columns <code class="language-plaintext highlighter-rouge">min_age</code> and <code class="language-plaintext highlighter-rouge">max_age</code> for the lower and upper bounds of each age interval. You can then run the script to produce an XML file containing the age uncertainty for each tip.</p>
+
+<h3 id="setting-up-mcmc">Setting up MCMC</h3>
+
+<p>The last step is to set up our MCMC options.</p>
+
+<blockquote>
+  <p>Select the <strong>MCMC</strong> tab.</p>
+</blockquote>
+
+<p>The only setting we will change here is the chain length, which we will increase. If you are short on time, you can leave this value to the default and compare your results to those from the precooked runs.</p>
+
+<blockquote>
+  <p>Increase the chain length to <strong>30000000</strong> iterations.</p>
+
+  <p>Leave all other settings at their default values and save the file as <code class="language-plaintext highlighter-rouge">Osmundaceae.xml</code>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:23"></a>
+	<img style="width:75%;" src="figures/mcmc_options.png" alt="" />
+	<figcaption>Figure 23: The MCMC settings.</figcaption>
+</figure>
+
+<p>In one final step before we close BEAUti, we will also run an analysis which <strong>samples from the prior</strong>, to allow easier comparison between the shape of our priors and posteriors.</p>
+
+<blockquote>
+  <p>Check the box to <strong>Sample from prior</strong>.</p>
+
+  <p>Leave all other settings at their default values and save the file as <code class="language-plaintext highlighter-rouge">Osmundaceae_sfp.xml</code>.</p>
+</blockquote>
+
+<p>We are now ready to run our analyses.</p>
+
+<blockquote>
+  <p>Open BEAST2 and select <code class="language-plaintext highlighter-rouge">Osmundaceae.xml</code>. Hit <strong>Run</strong> to start the analysis.</p>
+
+  <p>Once this is complete, reopen BEAST2 and select <code class="language-plaintext highlighter-rouge">Osmundaceae_sfp.xml</code>. Hit <strong>Run</strong> to start the analysis.</p>
+</blockquote>
+
+<h2 id="checking-the-logs">Checking the logs</h2>
+
+<p>Once the BEAST2 analyses have finished running, we can take a cursory look at them using <strong>Tracer</strong>.</p>
+
+<blockquote>
+  <p>Open <strong>Tracer</strong> and load both <code class="language-plaintext highlighter-rouge">Osmundaceae.log</code> and <code class="language-plaintext highlighter-rouge">Osmundaceae_sfp.log</code>.</p>
+</blockquote>
+
+<p>First, we will check whether our empirical chain has converged. Once you have selected <code class="language-plaintext highlighter-rouge">Osmundaceae.log</code> in the top-left table, you will see alongside each of the parameter names are their <code class="language-plaintext highlighter-rouge">mean</code> and <code class="language-plaintext highlighter-rouge">ESS</code> values. <code class="language-plaintext highlighter-rouge">ESS</code> stands for <strong>effective sample size</strong>, and is a metric commonly used to determine whether a Bayesian analysis has converged. Values over 200 are typically taken to denote convergence; if any of the parameter values are below this, then the chain should be run for more iterations prior to analysis of the results. You can (and should) also confirm this visually: select any parameter which has an ESS over 200, then click the <code class="language-plaintext highlighter-rouge">Trace</code> button at the top of the window, and you should see the characteristic “caterpillar” of a well-mixed chain, but select any parameter with an ESS below this value, and the trace will appear more undulating. It is likely that given our chain length, some but not all of the parameters will have converged. For scientific study we should ensure complete convergence of all parameters, but for our purposes here we will examine the results as if they were converged.</p>
+
+<figure>
+	<a id="fig:24"></a>
+	<img style="width:75%;" src="figures/tracer_chain.png" alt="" />
+	<figcaption>Figure 24: A well-mixed chain trace, here for the parameter **treeLength**.</figcaption>
+</figure>
+
+<p>To investigate the differences between our prior and posterior distributions, we will compare the empirical chain to the one which we sampled from the prior.</p>
+
+<blockquote>
+  <p>Select both <code class="language-plaintext highlighter-rouge">Osmundaceae.log</code> and <code class="language-plaintext highlighter-rouge">Osmundaceae_sfp.log</code> in the top-left table.
+Switch to the <strong>Marginal Density</strong> tab on the right to view the distributions from both chains on the same plot. 
+The <strong>Legend</strong> drop-down at the bottom can be used to add a legend, indicating which distribution is from which chain.</p>
+</blockquote>
+
+<p>Exploring the different parameters, we can see that for some, the prior and posterior are highly similar. For example, this is the case for most of the fossil tip heights given at the bottom of the table. This means that our prior is highly influential on the values we see in the posterior. However, for some other parameters, this is not the case, such as for parameters linked to the molecular data (e.g. <code class="language-plaintext highlighter-rouge">gammaShape</code>, <code class="language-plaintext highlighter-rouge">kappa</code>, <code class="language-plaintext highlighter-rouge">freqParameter</code>). This means that the shape of the posterior is being driven by the data rather than just the prior.</p>
+
+<figure>
+	<a id="fig:25"></a>
+	<img style="width:75%;" src="figures/gamma_shape.png" alt="" />
+	<figcaption>Figure 25: Comparison of the sampled-from-prior and posterior gamma shape estimates.</figcaption>
+</figure>
+
+<p>What about for our morphological data? If we select <code class="language-plaintext highlighter-rouge">clockRate.morph</code>, we see a blank graph. At first this seems highly concerning, but actually we can work out why: if we select the two logs individually, we see that the prior distribution ranges between 0 and around 7, while the posterior distribution consists of a highly concentrated spike at a value of around 0.001. Tracer is simply failing to plot these two very different distributions on the same set of axes - which might be unhelpful for now, but does tell us that our posterior distribution for this parameter is being heavily influenced by the data.</p>
+
+<h2 id="checking-the-trees">Checking the trees</h2>
+
+<p>Next we will create a summary tree, as a way to investigate the phylogenies we have inferred. We will do this using <code class="language-plaintext highlighter-rouge">TreeAnnotator</code>.</p>
+
+<blockquote>
+  <p>Open <code class="language-plaintext highlighter-rouge">TreeAnnotator</code>, from within the BEAST2.7.x folder.</p>
+
+  <p>Keep the default summary settings (10% burn in, posterior probability limit of 0, <strong>Maximum clade credibility tree</strong>) except for the node heights, for which we will use <strong>Median heights</strong>.</p>
+
+  <p>For the input tree file, use <strong>Choose file…</strong> to navigate to <strong>Osmundaceae-tree.trees</strong>. Change the name of the output file to <strong>Osmundaceae-MCC.tree</strong>.</p>
+
+  <p>Click <strong>Run</strong>.</p>
+</blockquote>
+
+<p>This process should be rapid. You may see a warning which flags that the trees contain <strong>sampled ancestors</strong>. This is an integral part of the fossilised birth-death model, whereby some fossils are placed directly onto the branches of later descendants. We will visualise this shortly.</p>
+
+<blockquote>
+  <p>Using a web browser, open <a href="https://icytree.org">Icytree</a>. Drag and drop <strong>Osmundaceae-MCC.tree</strong> into the browser screen.</p>
+</blockquote>
+
+<p>You should now be able to see your maximum clade credibility tree visualised. We can change some of the settings to better see the features of trees containing fossils.</p>
+
+<blockquote>
+  <p>Using the top menu, select <strong>Style &gt; Axis &gt; Age</strong> to add a time axis to the phylogeny.</p>
+
+  <p>In the <strong>Style</strong> menu, uncheck the <strong>Collapse zero-length edges</strong> option. Now our sampled ancestors are visualised in the tree, on zero-length branches.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:26"></a>
+	<img style="width:75%;" src="figures/MCC_tree.png" alt="" />
+	<figcaption>Figure 26: The visualised MCC tree.</figcaption>
+</figure>
+
+<p>A quick count shows us that in our MCC tree (in the precooked run), five of our fossils are sampled ancestors. We can consider this in more detail by looking at the <em>Osmunda cinnamomea</em> clade. Remember that our dataset was set up to include four tips pertaining to this species, three being fossils and one being the living (genetic) sample. We might expect that our three fossils should be inferred as sampled ancestors of our living branch. How did our analysis do? We can see that our <em>Osmunda cinnamomea</em> fossil from the Cretaceous of Canada is indeed retrieved as a sampled ancestor of the living species. However, the other two fossils, from the Neogene of the USA and Japan, cluster together in a neighbouring cherry. <em>Osmunda precinnamomea</em> branches off between our Cretaceous fossil and the rest of the species.</p>
+
+<p>Our MCC tree represents the single tree which contains the clades which are most supported within our MCMC chain. But it’s important to look at uncertainty around this topology, to get a sense of how certain it really is. First we will look at uncertainty in the timescale of our tree.</p>
+
+<blockquote>
+  <p>Using the top menu, select <strong>Style &gt; Node height error bars &gt; height_95%_HPD</strong>.</p>
+</blockquote>
+
+<p>We can now see error bars attached to each node and tip, showing us the 95% highest posterior density for the age of that node or tip. Mousing over any branch also brings up a table which shows us the numbers attached to that bar.</p>
+
+<p>Another way to investigate uncertainty in the tree topology is to quantify the proportion of the posterior containing each subtree within the MCC tree.</p>
+
+<blockquote>
+  <p>Using the top menu, select <strong>Style &gt; Node height error bars &gt; None</strong> to remove these bars.</p>
+
+  <p>Now select <strong>Style &gt; Internal node text &gt; posterior</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:27"></a>
+	<img style="width:75%;" src="figures/MCC_tree_uncertainty.png" alt="" />
+	<figcaption>Figure 27: The MCC tree annotated with the proportion of the posterior containing each subtree.</figcaption>
+</figure>
+
+<p>We can see that these values vary drastically across the tree. For example, we can see that relationships within <em>Leptopteris</em>, and between <em>Leptopteris</em> and the extant species of <em>Todea</em>, are very certain, with almost all being very close to 1. By contrast, those relationships we looked at earlier within <em>Osmunda cinnamomea</em> are much less certain.</p>
+
+<p>It is commonplace within the phylogenetics literature to only present the MCC topology for which node support is at or above 50%. Nodes with support beneath this value are deemed too poorly supported to be reasonably interpreted, and so instead are generally collapsed into polytomies.</p>
+
+<p>It is also worth remembering that while we have investigated the convergence of our parameters in Tracer, we have not verified the convergence of our tree topology, which can take much longer to converge. The R package <a href="https://cran.r-project.org/web/packages/rwty/index.html">RWTY</a> contains a variety of tools for assessing the convergence of tree topologies. This is a particularly relevant step if obtaining the tree topology is the main goal of the phylogenetic analysis.</p>
+
+<h1 id="advanced-topic-specifying-the-number-of-states">Advanced topic: Specifying the number of states</h1>
+
+<p>As mentioned in the <strong>Site model</strong> section of the tutorial, BEAUti can automatically estimate the number of possible states a character has from the alignment. Note that this is based on the number of different states present in the alignment and not on numerical values: for instance, if a character has states 0, 1, and 3, this character will be counted as having <strong>3</strong> states, not 4.</p>
+
+<p>However, it is also possible to provide the number of possible states for each character in the alignment <code class="language-plaintext highlighter-rouge">nexus</code> by writing a <strong>CHARSTATELABELS</strong> block. This block needs to contain a description for each character (one character per line), and is of the form</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X LABEL / STATES,
+</code></pre></div></div>
+<p>where X is the index of the character, LABEL is the character description, and STATES is a list of all possible states, separated by spaces. The number of states for each character is then calculated by BEAUti based on the provided STATES list.</p>
+
+<p>As mentioned earlier, by default BEAUti does not allow invariant characters in morphological character matrices, because there is no way for the software to automatically calculate how many states an invariant character is supposed to have, and so it cannot generate a transition matrix for these characters. However, invariant characters can be included in the alignment if the number of possible states for these characters is specified.</p>
+
+<p>An example <code class="language-plaintext highlighter-rouge">nexus</code> file with character descriptions (including some invariant characters) is provided in <code class="language-plaintext highlighter-rouge">Penguins_charstatelabels.nex</code>.</p>
+
+<h1 id="advanced-topic-ordered-characters">Advanced topic: Ordered characters</h1>
+
+<p>As mentioned in the <strong>Site model</strong> section of the tutorial, the <strong>Mk Lewis</strong> model assumes that transitions between all character states are equally likely for a given character. However, some characters are <strong>ordered</strong>, meaning that a lineage cannot directly transition from state <strong>0</strong> to state <strong>2</strong>, but needs to go through state <strong>1</strong> first. This can happen when a character is discretized from a continuous trait, for instance body size: in this situation it is very unlikely that a lineage can go from the “small” category to the “large” category without going first through the “medium” category.</p>
+
+<p>So can we account for ordered characters in our analysis? This cannot be done through BEAUti, but it is possible via manual editing of the XML file. Note that manually edited XML files generally cannot be loaded into BEAUti again. When specifying such an analysis, it is thus a good idea to specify as much of the analysis as possible in BEAUti, and leave the manual changes for last.</p>
+
+<p>The first step is to specify which characters should be considered as ordered. If all characters with the same number of states (for instance all ternary characters) are ordered, then we can use the default partition created by BEAUti, otherwise we will need to specify our own partition which contains only the ordered characters.</p>
+
+<p>The second step is to define a rate matrix for our ordered characters, which will have a value of <strong>1.0</strong> for <strong>possible</strong> transitions, and <strong>0.0</strong> for <strong>impossible</strong> transitions. Note that this matrix will also depend on the number of states for the character, but we show here an example for a character with 3 states.</p>
+
+<div style="text-align: center; margin-top: 0.5em; margin-bottom: 0.5em;"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1.0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1.0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0.0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1.0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>2.0</mn></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1.0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0.0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1.0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mn>1.0</mn></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \left( \begin{array}{ccc}
+      -1.0 &amp; 1.0 &amp; 0.0 \\
+      1.0 &amp; -2.0 &amp; 1.0 \\
+       0.0 &amp; 1.0 &amp; -1.0
+    \end{array} \right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.6em;vertical-align:-1.55em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-2.25em;"><span class="pstrut" style="height:3.155em;"></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-3.397em;"><span class="pstrut" style="height:3.155em;"></span><span style="height:0.016em;width:0.875em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.016em" style="width:0.875em" viewBox="0 0 875 16" preserveAspectRatio="xMinYMin"><path d="M291 0 H417 V16 H291z M291 0 H417 V16 H291z" /></svg></span></span><span style="top:-4.05em;"><span class="pstrut" style="height:3.155em;"></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">1.0</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.0</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">2.0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-4.21em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.0</span></span></span><span style="top:-3.01em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.0</span></span></span><span style="top:-1.81em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord">1.0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05em;"><span style="top:-2.25em;"><span class="pstrut" style="height:3.155em;"></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-3.397em;"><span class="pstrut" style="height:3.155em;"></span><span style="height:0.016em;width:0.875em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.016em" style="width:0.875em" viewBox="0 0 875 16" preserveAspectRatio="xMinYMin"><path d="M457 0 H583 V16 H457z M457 0 H583 V16 H457z" /></svg></span></span><span style="top:-4.05em;"><span class="pstrut" style="height:3.155em;"></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55em;"><span></span></span></span></span></span></span></span></span></span></span></span></div>
+
+<p>We then need to convert this matrix into a BEAST2 object, by simply listing all elements in order (by row, left to right). Note that the diagonal elements are fully defined by the rest of the matrix (since all rows must sum to 0) and so do not need to be written. This results in the following XML code, which can be placed after the alignment (between the <code class="language-plaintext highlighter-rouge">&lt;/data&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;run&gt;</code> elements):</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">"3ordered_ratematrix"</span> <span class="na">dimension=</span><span class="s">"6"</span> <span class="na">name=</span><span class="s">"rates"</span><span class="nt">&gt;</span>1.0 0.0 1.0 1.0 0.0 1.0 <span class="nt">&lt;/parameter&gt;</span>
+</code></pre></div></div>
+
+<p>The last step is to specify which likelihood calculation should use our ordered transition matrix. For this, we should first find the likelihood associated with our ordered partition. If we are using the default partition, it should look like this (where “penguins” is the name of the alignment and “3” the number of states for ordered characters):</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;distribution</span> <span class="na">branchRateModel=</span><span class="s">"@RelaxedClockModel.c:penguins"</span> <span class="na">id=</span><span class="s">"morphTreeLikelihood.penguins4"</span> <span class="na">spec=</span><span class="s">"TreeLikelihood"</span> <span class="na">useAmbiguities=</span><span class="s">"true"</span> <span class="na">tree=</span><span class="s">"@tree"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;data</span> <span class="na">id=</span><span class="s">"penguins3"</span> <span class="na">spec=</span><span class="s">"FilteredAlignment"</span> <span class="na">ascertained=</span><span class="s">"true"</span> <span class="na">data=</span><span class="s">"@penguins"</span> <span class="na">excludefrom=</span><span class="s">"50"</span> <span class="na">excludeto=</span><span class="s">"53"</span>
+        <span class="na">filter=</span><span class="s">"5,8,12,15,31-32,34,44,56,58,71-74,76,83,88,96-97,104,109,117-118,120,122,126-127,137,140,143,151,156,158,160,167,169,171,186,194,199-200,206,209-210,214,218,222,227,235,238,246-248"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;userDataType</span> <span class="na">id=</span><span class="s">"morphDataType.penguins3"</span> <span class="na">spec=</span><span class="s">"beast.base.evolution.datatype.StandardData"</span> <span class="na">ambiguities=</span><span class="s">"01 12 45"</span> <span class="na">nrOfStates=</span><span class="s">"3"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;siteModel</span> <span class="na">gammaCategoryCount=</span><span class="s">"4"</span> <span class="na">id=</span><span class="s">"morphSiteModel.s:penguins3"</span> <span class="na">shape=</span><span class="s">"@gammaShape.s:penguins"</span> <span class="na">spec=</span><span class="s">"SiteModel"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;parameter</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">id=</span><span class="s">"mutationRate.s:penguins3"</span> <span class="na">name=</span><span class="s">"mutationRate"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/parameter&gt;</span>
+        <span class="nt">&lt;parameter</span> <span class="na">estimate=</span><span class="s">"false"</span> <span class="na">id=</span><span class="s">"proportionInvariant.s:penguins3"</span> <span class="na">lower=</span><span class="s">"0.0"</span> <span class="na">name=</span><span class="s">"proportionInvariant"</span> <span class="na">upper=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/parameter&gt;</span>
+        <span class="nt">&lt;substModel</span> <span class="na">datatype=</span><span class="s">"@morphDataType.penguins3"</span> <span class="na">id=</span><span class="s">"LewisMK.s:penguins3"</span> <span class="na">spec=</span><span class="s">"morphmodels.evolution.substitutionmodel.LewisMK"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/siteModel&gt;</span>
+<span class="nt">&lt;/distribution&gt;</span>
+</code></pre></div></div>
+
+<p>We then need to replace the default Mk Lewis substitution model with one using the transition matrix we just defined, i.e. replace this element:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nt">&lt;substModel</span> <span class="na">datatype=</span><span class="s">"@morphDataType.penguins3"</span> <span class="na">id=</span><span class="s">"LewisMK.s:penguins3"</span> <span class="na">spec=</span><span class="s">"morphmodels.evolution.substitutionmodel.LewisMK"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+<p>with this one:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nt">&lt;substModel</span> <span class="na">id=</span><span class="s">"morph3.substmodel"</span> <span class="na">spec=</span><span class="s">"GeneralSubstitutionModel"</span> <span class="na">rates=</span><span class="s">"@3ordered_ratematrix"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;frequencies</span> <span class="na">id=</span><span class="s">"morph3_freqs"</span> <span class="na">frequencies=</span><span class="s">"0.333 0.333 0.334"</span> <span class="na">spec=</span><span class="s">"Frequencies"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/substModel&gt;</span>
+</code></pre></div></div>
+<p>Note that we need to specify the frequencies for all states as well. Here we have chosen to leave them all equal (just as in the Mk Lewis model).</p>
+
+<p>An example XML file with ordered characters is shown in <code class="language-plaintext highlighter-rouge">Penguins_ordered.xml</code>.</p>
+
+<hr />
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Ronquist2012">Ronquist, F., Klopfstein, S., Vilhelmsen, L., Schulmeister, S., Murray, D. L., &amp; Rasnitsyn, A. P. (2012). A Total-Evidence Approach to Dating with Fossils, Applied to the Early Radiation of the Hymenoptera. <i>Systematic Biology</i>, <i>61</i>(6), 973–999. https://doi.org/10.1093/sysbio/sys058</span></li>
+<li><span id="Zhang2016">Zhang, C., Stadler, T., Klopfstein, S., Heath, T. A., &amp; Ronquist, F. (2016). Total-Evidence Dating under the Fossilized Birth–Death Process. <i>Systematic Biology</i>, <i>65</i>(2), 228–249. https://doi.org/10.1093/sysbio/syv080</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Mulvey2025a">Mulvey, L. P. A., Nikolic, M. C., Allen, B. J., Heath, T. A., &amp; Warnock, R. C. M. (2025). From fossils to phylogenies: exploring the integration of paleontological data into Bayesian phylogenetic inference. <i>Paleobiology</i>, <i>51</i>(1), 214–236. https://doi.org/10.1017/pab.2024.47</span></li>
+<li><span id="Grimm2015">Grimm, G. W., Kapli, P., Bomfleur, B., McLoughlin, S., &amp; Renner, S. S. (2015). Using more than the oldest fossils: Dating Osmundaceae with three Bayesian clock approaches. <i>Systematic Biology</i>, <i>64</i>(3), 396–405. https://doi.org/10.1093/sysbio/syu108</span></li>
+<li><span id="Metzgar2008">Metzgar, J. S., Skog, J. E., Zimmer, E. A., &amp; Pryer, K. M. (2008). The paraphyly of _Osmunda_ is confirmed by phylogenetic analyses of seven plastid loci. <i>Systematic Biology</i>, <i>33</i>(1), 31–36. https://doi.org/10.1600/036364408783887528</span></li>
+<li><span id="Bomfleur2015">Bomfleur, B., Grimm, G. W., &amp; McLoughlin, S. (2015). _Osmunda pulchella_ sp. nov. from the Jurassic of Sweden – reconciling molecular and fossil evidence in the phylogeny of modern royal ferns (Osmundaceae). <i>BMC Evolutionary Biology</i>, <i>15</i>, 1–25. https://doi.org/10.1186/s12862-015-0400-7</span></li>
+<li><span id="Goloboff2019">Goloboff, P. A., Pittman, M., Pol, D., &amp; Xu, X. (2019). Morphological data sets fit a common mechanism much more poorly than DNA sequences and call into question the Mkv model. <i>Systematic Biology</i>, <i>68</i>(3), 494–504. https://doi.org/10.1093/sysbio/syy077</span></li>
+<li><span id="Lewis2001">Lewis, P. O. (2001). A likelihood approach to estimating phylogeny from discrete morphological character data. <i>Systematic Biology</i>, <i>50</i>(6), 913–925. https://doi.org/10.1080/106351501753462876</span></li>
+<li><span id="Mulvey2025b">Mulvey, L. P. A., May, M. R., Brown, J. M., Höhna, S., Wright, A. M., &amp; Warnock, R. C. M. (2025). Assessing the adequacy of morphological models using posterior predictive simulations. <i>Systematic Biology</i>, <i>74</i>(1), 34–52. https://doi.org/10.1093/sysbio/syae055</span></li>
+<li><span id="Capobianco2025">Capobianco, A., &amp; Höhna, S. (2025). On the Mkv model with among-character rate variation. <i>Systematic Biology</i>, syaf038. https://doi.org/10.1093/sysbio/syaf038</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+
