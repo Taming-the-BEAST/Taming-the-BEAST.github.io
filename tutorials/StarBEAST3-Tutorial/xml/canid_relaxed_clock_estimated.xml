@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='StarBeast3' beautistatus='noAutoSetClockRate|noAutoUpdateFixMeanSubstRate' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.7:starbeast3 v1.1.9:BEASTLabs v2.0.2:ORC v1.2.0" version="2.7">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='StarBeast3' beautistatus='noAutoSetClockRate|noAutoUpdateFixMeanSubstRate' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.8:starbeast3 v1.2.0:BEASTLabs v2.0.3:ORC v1.2.0" version="2.7">
 
     <data
 id="VANGL2"
@@ -372,7 +372,7 @@ name="alignment">
 
     <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
 
-    <run id="mcmc" spec="MCMC" chainLength="20000000" storeEvery="50000">
+    <run id="mcmc" spec="MCMC" chainLength="100000000" storeEvery="50000">
         <state id="state" spec="State" storeEvery="50000">
             <stateNode id="Tree.t:Species" spec="starbeast3.tree.SpeciesTree">
                 <taxonset id="taxonsuperset" spec="starbeast3.tree.StarBeast3TaxonSet">
@@ -526,21 +526,6 @@ name="alignment">
             <parameter id="kappa.s:VWF" spec="parameter.RealParameter" lower="0.0" name="stateNode">2.0</parameter>
             <parameter id="netDiversificationRate.t:Species" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">1.0</parameter>
             <parameter id="ExtinctionFraction.t:Species" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
-            <parameter id="mutationRate.s:APOBS2" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:BDNF" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:BRCA1S1" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:BRCA1S2" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:Ch14" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:Ch21" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:Ch24" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:CHST12" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:CMKOR1" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:FGFR3" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:GHRex09" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:RAG1" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:TMEM20" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:VANGL2" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
-            <parameter id="mutationRate.s:VWF" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
             <parameter id="BranchRates.Species" spec="parameter.RealParameter" dimension="15" lower="0.0" name="stateNode">1.0</parameter>
             <parameter id="SpeciesTreeRelaxedClockSD.Species" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.1</parameter>
             <parameter id="SpeciesTreeRelaxedClockRate.Species" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.001</parameter>
@@ -594,8 +579,8 @@ name="alignment">
                 <distribution idref="BirthDeathModel.t:Species"/>
                 <prior id="ExtinctionFractionPrior.t:Species" name="distribution" x="@ExtinctionFraction.t:Species">
                     <Beta id="Beta.0" name="distr">
-                        <parameter id="RealParameter.2" spec="parameter.RealParameter" lower="0.0" name="alpha">5.0</parameter>
-                        <parameter id="RealParameter.3" spec="parameter.RealParameter" lower="0.0" name="beta">1.0</parameter>
+                        <parameter id="parameter.hyperBeta-alpha-ExtinctionFractionPrior.t:Species" spec="parameter.RealParameter" estimate="false" lower="0.0" name="alpha">5.0</parameter>
+                        <parameter id="parameter.hyperBeta-beta-ExtinctionFractionPrior.t:Species" spec="parameter.RealParameter" estimate="false" lower="0.0" name="beta">1.0</parameter>
                     </Beta>
                 </prior>
                 <prior id="SB3RelaxedClockPrior.Species" name="distribution" x="@SpeciesTreeRelaxedClockRate.Species">
@@ -802,96 +787,6 @@ name="alignment">
                         <parameter id="RealParameter.1.VWF" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
                     </LogNormal>
                 </prior>
-                <prior id="MutationRatePrior.s:APOBS2" name="distribution" x="@mutationRate.s:APOBS2">
-                    <LogNormal id="LogNormalDistributionModel.0.APOBS2" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.APOBS2" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.APOBS2" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:BDNF" name="distribution" x="@mutationRate.s:BDNF">
-                    <LogNormal id="LogNormalDistributionModel.0.BDNF" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.BDNF" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.BDNF" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:BRCA1S1" name="distribution" x="@mutationRate.s:BRCA1S1">
-                    <LogNormal id="LogNormalDistributionModel.0.BRCA1S1" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.BRCA1S1" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.BRCA1S1" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:BRCA1S2" name="distribution" x="@mutationRate.s:BRCA1S2">
-                    <LogNormal id="LogNormalDistributionModel.0.BRCA1S2" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.BRCA1S2" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.BRCA1S2" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:CHST12" name="distribution" x="@mutationRate.s:CHST12">
-                    <LogNormal id="LogNormalDistributionModel.0.CHST12" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.CHST12" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.CHST12" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:CMKOR1" name="distribution" x="@mutationRate.s:CMKOR1">
-                    <LogNormal id="LogNormalDistributionModel.0.CMKOR1" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.CMKOR1" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.CMKOR1" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:Ch14" name="distribution" x="@mutationRate.s:Ch14">
-                    <LogNormal id="LogNormalDistributionModel.0.Ch14" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.Ch14" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.Ch14" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:Ch21" name="distribution" x="@mutationRate.s:Ch21">
-                    <LogNormal id="LogNormalDistributionModel.0.Ch21" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.Ch21" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.Ch21" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:Ch24" name="distribution" x="@mutationRate.s:Ch24">
-                    <LogNormal id="LogNormalDistributionModel.0.Ch24" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.Ch24" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.Ch24" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:FGFR3" name="distribution" x="@mutationRate.s:FGFR3">
-                    <LogNormal id="LogNormalDistributionModel.0.FGFR3" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.FGFR3" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.FGFR3" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:GHRex09" name="distribution" x="@mutationRate.s:GHRex09">
-                    <LogNormal id="LogNormalDistributionModel.0.GHRex09" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.GHRex09" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.GHRex09" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:RAG1" name="distribution" x="@mutationRate.s:RAG1">
-                    <LogNormal id="LogNormalDistributionModel.0.RAG1" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.RAG1" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.RAG1" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:TMEM20" name="distribution" x="@mutationRate.s:TMEM20">
-                    <LogNormal id="LogNormalDistributionModel.0.TMEM20" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.TMEM20" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.TMEM20" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:VANGL2" name="distribution" x="@mutationRate.s:VANGL2">
-                    <LogNormal id="LogNormalDistributionModel.0.VANGL2" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.VANGL2" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.VANGL2" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
-                <prior id="MutationRatePrior.s:VWF" name="distribution" x="@mutationRate.s:VWF">
-                    <LogNormal id="LogNormalDistributionModel.0.VWF" meanInRealSpace="true" name="distr">
-                        <M id="Function$Constant.3.VWF" spec="Function$Constant" value="1.0"/>
-                        <S id="Function$Constant.4.VWF" spec="Function$Constant" value="0.6"/>
-                    </LogNormal>
-                </prior>
                 <prior id="netDiversificationRatePrior.t:Species" name="distribution" x="@netDiversificationRate.t:Species">
                     <Uniform id="Uniform.18" name="distr" upper="10000.0"/>
                 </prior>
@@ -924,7 +819,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:APOBS1" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:APOBS1" geneTree="@treePrior.t:APOBS1" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:APOBS1"/>
                 </distribution>
                 <distribution id="treeLikelihood.APOBS2" spec="TreeLikelihood" data="@APOBS2" tree="@Tree.t:APOBS2">
-                    <siteModel id="SiteModel.s:APOBS2" spec="SiteModel" mutationRate="@mutationRate.s:APOBS2">
+                    <siteModel id="SiteModel.s:APOBS2" spec="SiteModel">
+                        <parameter id="mutationRate.s:APOBS2" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:APOBS2" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:APOBS2" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:APOBS2" spec="HKY" kappa="@kappa.s:APOBS2">
@@ -934,7 +830,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:APOBS2" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:APOBS2" geneTree="@treePrior.t:APOBS2" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:APOBS2"/>
                 </distribution>
                 <distribution id="treeLikelihood.BDNF" spec="TreeLikelihood" data="@BDNF" tree="@Tree.t:BDNF">
-                    <siteModel id="SiteModel.s:BDNF" spec="SiteModel" mutationRate="@mutationRate.s:BDNF">
+                    <siteModel id="SiteModel.s:BDNF" spec="SiteModel">
+                        <parameter id="mutationRate.s:BDNF" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:BDNF" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:BDNF" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:BDNF" spec="HKY" kappa="@kappa.s:BDNF">
@@ -944,7 +841,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:BDNF" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:BDNF" geneTree="@treePrior.t:BDNF" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:BDNF"/>
                 </distribution>
                 <distribution id="treeLikelihood.BRCA1S1" spec="TreeLikelihood" data="@BRCA1S1" tree="@Tree.t:BRCA1S1">
-                    <siteModel id="SiteModel.s:BRCA1S1" spec="SiteModel" mutationRate="@mutationRate.s:BRCA1S1">
+                    <siteModel id="SiteModel.s:BRCA1S1" spec="SiteModel">
+                        <parameter id="mutationRate.s:BRCA1S1" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:BRCA1S1" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:BRCA1S1" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:BRCA1S1" spec="HKY" kappa="@kappa.s:BRCA1S1">
@@ -954,7 +852,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:BRCA1S1" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:BRCA1S1" geneTree="@treePrior.t:BRCA1S1" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:BRCA1S1"/>
                 </distribution>
                 <distribution id="treeLikelihood.BRCA1S2" spec="TreeLikelihood" data="@BRCA1S2" tree="@Tree.t:BRCA1S2">
-                    <siteModel id="SiteModel.s:BRCA1S2" spec="SiteModel" mutationRate="@mutationRate.s:BRCA1S2">
+                    <siteModel id="SiteModel.s:BRCA1S2" spec="SiteModel">
+                        <parameter id="mutationRate.s:BRCA1S2" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:BRCA1S2" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:BRCA1S2" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:BRCA1S2" spec="HKY" kappa="@kappa.s:BRCA1S2">
@@ -964,7 +863,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:BRCA1S2" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:BRCA1S2" geneTree="@treePrior.t:BRCA1S2" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:BRCA1S2"/>
                 </distribution>
                 <distribution id="treeLikelihood.Ch14" spec="TreeLikelihood" data="@Ch14" tree="@Tree.t:Ch14">
-                    <siteModel id="SiteModel.s:Ch14" spec="SiteModel" mutationRate="@mutationRate.s:Ch14">
+                    <siteModel id="SiteModel.s:Ch14" spec="SiteModel">
+                        <parameter id="mutationRate.s:Ch14" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:Ch14" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:Ch14" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:Ch14" spec="HKY" kappa="@kappa.s:Ch14">
@@ -974,7 +874,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:Ch14" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:Ch14" geneTree="@treePrior.t:Ch14" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:Ch14"/>
                 </distribution>
                 <distribution id="treeLikelihood.Ch21" spec="TreeLikelihood" data="@Ch21" tree="@Tree.t:Ch21">
-                    <siteModel id="SiteModel.s:Ch21" spec="SiteModel" mutationRate="@mutationRate.s:Ch21">
+                    <siteModel id="SiteModel.s:Ch21" spec="SiteModel">
+                        <parameter id="mutationRate.s:Ch21" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:Ch21" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:Ch21" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:Ch21" spec="HKY" kappa="@kappa.s:Ch21">
@@ -984,7 +885,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:Ch21" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:Ch21" geneTree="@treePrior.t:Ch21" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:Ch21"/>
                 </distribution>
                 <distribution id="treeLikelihood.Ch24" spec="TreeLikelihood" data="@Ch24" tree="@Tree.t:Ch24">
-                    <siteModel id="SiteModel.s:Ch24" spec="SiteModel" mutationRate="@mutationRate.s:Ch24">
+                    <siteModel id="SiteModel.s:Ch24" spec="SiteModel">
+                        <parameter id="mutationRate.s:Ch24" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:Ch24" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:Ch24" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:Ch24" spec="HKY" kappa="@kappa.s:Ch24">
@@ -994,7 +896,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:Ch24" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:Ch24" geneTree="@treePrior.t:Ch24" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:Ch24"/>
                 </distribution>
                 <distribution id="treeLikelihood.CHST12" spec="TreeLikelihood" data="@CHST12" tree="@Tree.t:CHST12">
-                    <siteModel id="SiteModel.s:CHST12" spec="SiteModel" mutationRate="@mutationRate.s:CHST12">
+                    <siteModel id="SiteModel.s:CHST12" spec="SiteModel">
+                        <parameter id="mutationRate.s:CHST12" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:CHST12" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:CHST12" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:CHST12" spec="HKY" kappa="@kappa.s:CHST12">
@@ -1004,7 +907,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:CHST12" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:CHST12" geneTree="@treePrior.t:CHST12" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:CHST12"/>
                 </distribution>
                 <distribution id="treeLikelihood.CMKOR1" spec="TreeLikelihood" data="@CMKOR1" tree="@Tree.t:CMKOR1">
-                    <siteModel id="SiteModel.s:CMKOR1" spec="SiteModel" mutationRate="@mutationRate.s:CMKOR1">
+                    <siteModel id="SiteModel.s:CMKOR1" spec="SiteModel">
+                        <parameter id="mutationRate.s:CMKOR1" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:CMKOR1" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:CMKOR1" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:CMKOR1" spec="HKY" kappa="@kappa.s:CMKOR1">
@@ -1014,7 +918,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:CMKOR1" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:CMKOR1" geneTree="@treePrior.t:CMKOR1" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:CMKOR1"/>
                 </distribution>
                 <distribution id="treeLikelihood.FGFR3" spec="TreeLikelihood" data="@FGFR3" tree="@Tree.t:FGFR3">
-                    <siteModel id="SiteModel.s:FGFR3" spec="SiteModel" mutationRate="@mutationRate.s:FGFR3">
+                    <siteModel id="SiteModel.s:FGFR3" spec="SiteModel">
+                        <parameter id="mutationRate.s:FGFR3" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:FGFR3" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:FGFR3" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:FGFR3" spec="HKY" kappa="@kappa.s:FGFR3">
@@ -1024,7 +929,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:FGFR3" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:FGFR3" geneTree="@treePrior.t:FGFR3" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:FGFR3"/>
                 </distribution>
                 <distribution id="treeLikelihood.GHRex09" spec="TreeLikelihood" data="@GHRex09" tree="@Tree.t:GHRex09">
-                    <siteModel id="SiteModel.s:GHRex09" spec="SiteModel" mutationRate="@mutationRate.s:GHRex09">
+                    <siteModel id="SiteModel.s:GHRex09" spec="SiteModel">
+                        <parameter id="mutationRate.s:GHRex09" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:GHRex09" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:GHRex09" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:GHRex09" spec="HKY" kappa="@kappa.s:GHRex09">
@@ -1034,7 +940,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:GHRex09" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:GHRex09" geneTree="@treePrior.t:GHRex09" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:GHRex09"/>
                 </distribution>
                 <distribution id="treeLikelihood.RAG1" spec="TreeLikelihood" data="@RAG1" tree="@Tree.t:RAG1">
-                    <siteModel id="SiteModel.s:RAG1" spec="SiteModel" mutationRate="@mutationRate.s:RAG1">
+                    <siteModel id="SiteModel.s:RAG1" spec="SiteModel">
+                        <parameter id="mutationRate.s:RAG1" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:RAG1" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:RAG1" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:RAG1" spec="HKY" kappa="@kappa.s:RAG1">
@@ -1044,7 +951,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:RAG1" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:RAG1" geneTree="@treePrior.t:RAG1" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:RAG1"/>
                 </distribution>
                 <distribution id="treeLikelihood.TMEM20" spec="TreeLikelihood" data="@TMEM20" tree="@Tree.t:TMEM20">
-                    <siteModel id="SiteModel.s:TMEM20" spec="SiteModel" mutationRate="@mutationRate.s:TMEM20">
+                    <siteModel id="SiteModel.s:TMEM20" spec="SiteModel">
+                        <parameter id="mutationRate.s:TMEM20" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:TMEM20" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:TMEM20" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:TMEM20" spec="HKY" kappa="@kappa.s:TMEM20">
@@ -1054,7 +962,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:TMEM20" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:TMEM20" geneTree="@treePrior.t:TMEM20" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:TMEM20"/>
                 </distribution>
                 <distribution id="treeLikelihood.VANGL2" spec="TreeLikelihood" data="@VANGL2" tree="@Tree.t:VANGL2">
-                    <siteModel id="SiteModel.s:VANGL2" spec="SiteModel" mutationRate="@mutationRate.s:VANGL2">
+                    <siteModel id="SiteModel.s:VANGL2" spec="SiteModel">
+                        <parameter id="mutationRate.s:VANGL2" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:VANGL2" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:VANGL2" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:VANGL2" spec="HKY" kappa="@kappa.s:VANGL2">
@@ -1064,7 +973,8 @@ name="alignment">
                     <branchRateModel id="GeneTreeClock.c:VANGL2" spec="starbeast3.evolution.branchratemodel.StarBeast3Clock" clock.rate="@clockRate.c:VANGL2" geneTree="@treePrior.t:VANGL2" sharedRateModel="@branchRatesModel.Species" tree="@Tree.t:VANGL2"/>
                 </distribution>
                 <distribution id="treeLikelihood.VWF" spec="TreeLikelihood" data="@VWF" tree="@Tree.t:VWF">
-                    <siteModel id="SiteModel.s:VWF" spec="SiteModel" mutationRate="@mutationRate.s:VWF">
+                    <siteModel id="SiteModel.s:VWF" spec="SiteModel">
+                        <parameter id="mutationRate.s:VWF" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
                         <parameter id="gammaShape.s:VWF" spec="parameter.RealParameter" estimate="false" lower="0.0" name="shape">1.0</parameter>
                         <parameter id="proportionInvariant.s:VWF" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                         <substModel id="hky.s:VWF" spec="HKY" kappa="@kappa.s:VWF">
@@ -1282,23 +1192,6 @@ name="alignment">
         <operator id="bdWide.t:Species" spec="Exchange" isNarrow="false" tree="@Tree.t:Species" weight="15.0"/>
         <operator id="bdNarrow.t:Species" spec="Exchange" tree="@Tree.t:Species" weight="1.0"/>
         <operator id="bdBactrianSubtreeSlide.t:Species" spec="kernel.BactrianSubtreeSlide" size="0.002" tree="@Tree.t:Species" weight="15.0"/>
-        <operator id="mutationRateScaler.s:APOBS2" spec="kernel.BactrianScaleOperator" parameter="@mutationRate.s:APOBS2" upper="10.0" weight="0.1">
-            <kernelDistribution id="KernelDistribution$Bactrian.11" spec="operator.kernel.KernelDistribution$Bactrian"/>
-        </operator>
-        <operator id="mutationRateScaler.s:BDNF" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:BDNF" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:BRCA1S1" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:BRCA1S1" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:BRCA1S2" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:BRCA1S2" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:Ch14" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:Ch14" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:Ch21" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:Ch21" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:Ch24" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:Ch24" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:CHST12" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:CHST12" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:CMKOR1" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:CMKOR1" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:FGFR3" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:FGFR3" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:GHRex09" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:GHRex09" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:RAG1" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:RAG1" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:TMEM20" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:TMEM20" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:VANGL2" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:VANGL2" upper="10.0" weight="0.1"/>
-        <operator id="mutationRateScaler.s:VWF" spec="kernel.BactrianScaleOperator" kernelDistribution="@KernelDistribution$Bactrian.11" parameter="@mutationRate.s:VWF" upper="10.0" weight="0.1"/>
         <operator id="AdaptableOperatorSampler.rates:Species" spec="AdaptableOperatorSampler" weight="20.0">
             <parameter idref="BranchRates.Species"/>
             <operator id="Scale.branchRates.Species" spec="kernel.BactrianScaleOperator" parameter="@BranchRates.Species" upper="10.0" weight="1.0"/>
@@ -1311,7 +1204,7 @@ name="alignment">
             <operator id="SampleFromPriorOperator.c:ucldStdev.Species" spec="orc.operators.SampleFromPriorOperator" parameter="@SpeciesTreeRelaxedClockSD.Species" prior2="@ucldStdevPrior.clock.Species" weight="1.0"/>
         </operator>
         <operator id="relaxedClockRateScaler.c:Species" spec="kernel.BactrianScaleOperator" parameter="@SpeciesTreeRelaxedClockRate.Species" rootOnly="true" scaleFactor="0.7" upper="10.0" weight="3.0"/>
-        <logger id="tracelog" spec="Logger" fileName="canid_strict_clock.log" logEvery="10000" model="@posterior" sort="smart">
+        <logger id="tracelog" spec="Logger" fileName="canid_relaxed_clock_estimated.log" logEvery="50000" model="@posterior" sort="smart">
             <log idref="posterior"/>
             <log idref="likelihood"/>
             <log idref="prior"/>
@@ -1503,26 +1396,11 @@ name="alignment">
             <log idref="BirthDeathModel.t:Species"/>
             <log idref="netDiversificationRate.t:Species"/>
             <log idref="ExtinctionFraction.t:Species"/>
-            <log idref="mutationRate.s:APOBS2"/>
-            <log idref="mutationRate.s:BDNF"/>
-            <log idref="mutationRate.s:BRCA1S1"/>
-            <log idref="mutationRate.s:BRCA1S2"/>
-            <log idref="mutationRate.s:Ch14"/>
-            <log idref="mutationRate.s:Ch21"/>
-            <log idref="mutationRate.s:Ch24"/>
-            <log idref="mutationRate.s:CHST12"/>
-            <log idref="mutationRate.s:CMKOR1"/>
-            <log idref="mutationRate.s:FGFR3"/>
-            <log idref="mutationRate.s:GHRex09"/>
-            <log idref="mutationRate.s:RAG1"/>
-            <log idref="mutationRate.s:TMEM20"/>
-            <log idref="mutationRate.s:VANGL2"/>
-            <log idref="mutationRate.s:VWF"/>
             <log id="RateStatLogger.Species" spec="beast.base.evolution.RateStatistic" branchratemodel="@relaxedClockModel.Species" tree="@Tree.t:Species"/>
             <log idref="SpeciesTreeRelaxedClockSD.Species"/>
             <log idref="SpeciesTreeRelaxedClockRate.Species"/>
         </logger>
-        <logger id="speciesTreeLogger" spec="Logger" fileName="canid_strict_clock.trees" logEvery="10000" mode="tree">
+        <logger id="speciesTreeLogger" spec="Logger" fileName="canid_relaxed_clock_estimated.trees" logEvery="50000" mode="tree">
             <log id="SpeciesTreeLoggerX" spec="starbeast3.core.SpeciesTreeLogger" popSize="@popSize" speciesTreePrior="@SpeciesTreePopSize.Species" tree="@Tree.t:Species">
                 <treetop id="treeTopFinder" spec="beast.base.evolution.speciation.TreeTopFinder">
                     <tree idref="Tree.t:VANGL2"/>
@@ -1545,58 +1423,58 @@ name="alignment">
                 <metadata idref="BranchRates.Species"/>
             </log>
         </logger>
-        <logger id="screenlog" spec="Logger" logEvery="10000">
+        <logger id="screenlog" spec="Logger" logEvery="50000">
             <log idref="posterior"/>
             <log id="ESS.0" spec="util.ESS" arg="@posterior"/>
             <log idref="likelihood"/>
             <log idref="prior"/>
         </logger>
-        <logger id="treelog.t:VANGL2" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:VANGL2" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:VANGL2" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:VANGL2"/>
         </logger>
-        <logger id="treelog.t:RAG1" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:RAG1" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:RAG1" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:RAG1"/>
         </logger>
-        <logger id="treelog.t:Ch21" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:Ch21" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:Ch21" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:Ch21"/>
         </logger>
-        <logger id="treelog.t:TMEM20" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:TMEM20" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:TMEM20" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:TMEM20"/>
         </logger>
-        <logger id="treelog.t:VWF" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:VWF" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:VWF" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:VWF"/>
         </logger>
-        <logger id="treelog.t:BRCA1S2" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:BRCA1S2" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:BRCA1S2" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:BRCA1S2"/>
         </logger>
-        <logger id="treelog.t:CHST12" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:CHST12" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:CHST12" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:CHST12"/>
         </logger>
-        <logger id="treelog.t:FGFR3" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:FGFR3" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:FGFR3" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:FGFR3"/>
         </logger>
-        <logger id="treelog.t:APOBS1" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:APOBS1" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:APOBS1" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:APOBS1"/>
         </logger>
-        <logger id="treelog.t:GHRex09" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:GHRex09" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:GHRex09" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:GHRex09"/>
         </logger>
-        <logger id="treelog.t:BRCA1S1" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:BRCA1S1" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:BRCA1S1" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:BRCA1S1"/>
         </logger>
-        <logger id="treelog.t:Ch24" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:Ch24" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:Ch24" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:Ch24"/>
         </logger>
-        <logger id="treelog.t:BDNF" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:BDNF" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:BDNF" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:BDNF"/>
         </logger>
-        <logger id="treelog.t:CMKOR1" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:CMKOR1" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:CMKOR1" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:CMKOR1"/>
         </logger>
-        <logger id="treelog.t:APOBS2" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:APOBS2" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:APOBS2" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:APOBS2"/>
         </logger>
-        <logger id="treelog.t:Ch14" spec="Logger" fileName="$(tree).trees" logEvery="10000" mode="tree">
+        <logger id="treelog.t:Ch14" spec="Logger" fileName="$(tree).trees" logEvery="50000" mode="tree">
             <log id="TreeWithMetaDataLogger.t:Ch14" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:Ch14"/>
         </logger>
         <operatorschedule idref="operatorSchedule"/>

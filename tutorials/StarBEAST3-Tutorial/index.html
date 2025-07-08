@@ -239,6 +239,15 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-file-text"></i>
+					<a class="off" href="https://github.com/taming-the-beast/StarBEAST3-Tutorial/raw/main/precooked_runs/canid_relaxed_clock_estimate" target="_blank" download rel="nofollow">
+						canid_relaxed_clock_estimate
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
 					<a class="off" href="https://github.com/taming-the-beast/StarBEAST3-Tutorial/raw/main/precooked_runs/canid_strict_clock" target="_blank" download rel="nofollow">
 						canid_strict_clock
 					</a>
@@ -274,6 +283,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/StarBEAST3-Tutorial/commit/f61711b9c50fd34ca2d1faa1389aef1c95a1249c">
+					08 Jul 2025 - <span class="text-gray">Update for Chi's comments</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/StarBEAST3-Tutorial/commit/b67c63fa6c34087e4d8746789af3315d9c19bb5d">
 					06 Jul 2025 - <span class="text-gray">fix figures</span>
 					</a> 
@@ -303,14 +320,6 @@
 					</a> 
 				</li>
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/StarBEAST3-Tutorial/commit/078d731df3c1dde952426b64fcd15d228c91c345">
-					06 Jul 2025 - <span class="text-gray">morph clock figure</span>
-					</a> 
-				</li>
-			
 			</ul>
 		</div>		
 		<div class="spacer"></div>	
@@ -322,7 +331,7 @@
 			<p>
 			<h1 id="background">Background</h1>
 
-<p>StarBeast3 is a Bayesian implementation of the multispecies coalescent (MSC) that jointly infers gene and species trees directly from multiple sequence alignments. Trees inferred using this method contain not only topological relationships, but also estimates of species divergences times and gene coalescence times.</p>
+<p>StarBeast3 is a Bayesian implementation of the multispecies coalescent (MSC) that jointly infers gene and species trees directly from multiple sequence alignments. Trees inferred using this method contain not only topological relationships, but also estimates of species divergence times and gene coalescence times.</p>
 
 <p>This tutorial will walk you through the set up three kinds of species tree analyses using StarBEAST3:</p>
 
@@ -340,7 +349,7 @@
 
 <h1 id="dataset">Dataset</h1>
 
-<p>In this tutorial we will reconstruct species tree of <strong>Canis</strong> genus. We will analyse 24 species, 8 out which are extant. We will use 16 nuclear loci (<a class="citation" href="#lindblad2005genome">(Lindblad-Toh et al., 2005)</a>) for extant taxa in the first two analyses. We will add 50 morphological character data for all 24 taxa for the total evidence analysis. Before starting download all the data for this tutorial. You may browse these data using your preferred alignment viewer before proceeding with the tutorial.</p>
+<p>In this tutorial we will reconstruct species tree of <strong>Canis</strong> genus. We will analyse 24 species, 8 out of which are extant. We will use 16 nuclear loci (<a class="citation" href="#lindblad2005genome">(Lindblad-Toh et al., 2005)</a>) for extant taxa in the first two analyses. We will add 50 morphological characters data for all 24 taxa for the total evidence analysis. Before starting download all the data for this tutorial. You may browse these data using your preferred alignment viewer before proceeding with the tutorial.</p>
 
 <hr />
 
@@ -352,7 +361,7 @@
 
 <h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
 
-<p>BEAUti2 is a utility program with a graphical user interface for creating BEAST2 input files which must be written in the XML. This application provides a clear way to specify priors, partition data, calibrate internal nodes, etc.</p>
+<p>BEAUti2 is a utility program with a graphical user interface for creating BEAST2 input files which must be written in the XML file. This application provides a clear way to specify priors, partition data, calibrate internal nodes, etc.</p>
 
 <p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs, and the interface will be the same, on all computing platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
 
@@ -535,7 +544,7 @@
 
   <p>Make sure the <strong>Species Tree Strict Clock</strong> is selected from the drop down menu.</p>
 
-  <p>For <strong>Clock.rate</strong> set value of <strong>0.001</strong>. Do not check the <strong>estimate</strong> checkbox.</p>
+  <p>For <strong>Clock.rate</strong> set value of <strong>0.001</strong>. Leave the <strong>estimate</strong> checkbox unchecked.</p>
 </blockquote>
 
 <h2 id="17-priors">1.7 Priors</h2>
@@ -546,8 +555,6 @@
   <p>Switch to <strong>Priors</strong> tab.</p>
 
   <p>For <strong>Tree.t:Species</strong> select <strong>Birth Death Model</strong> (<a href="#fig7">Figure 7</a>).</p>
-
-  <p>Leave other priors to their default values.</p>
 </blockquote>
 
 <figure align="center">
@@ -558,18 +565,33 @@
 
 </figure>
 
+<blockquote>
+  <p>For ExtinctionFraction, expand the prior and uncheck the <strong>estimate</strong> checkbox for alpha and beta parameters (<a href="#fig8">Figure 8</a>).
+We do this since the default prior is good enough and analysis can run faster.</p>
+
+  <p>Leave other priors to their default values.</p>
+</blockquote>
+
+<figure align="center">
+
+<a id="fig8"></a> <img src="figures/extinction_fraction_prior.png" style="width:70.0%;" />
+
+<figcaption>Figure 8: Extinction fraction prior.</figcaption>
+
+</figure>
+
 <p>Scrolling down through the prior list you can set priors for the different parts of the model:</p>
 
 <ul>
   <li>Birth-death model as species tree prior: net diversification rate and extinction fraction.</li>
-  <li>Coalescent model as gene trees prior: effective population size is gamma distributed with shape parameter fixed at 2 and sale is <strong>popMean</strong> parameter. We usually set a hyperprior on the <em>popMean</em>. Currently only constant population sizes are available and true effective poplation size mean is actually 2* <em>popMean</em> parameter in BEAUti.</li>
+  <li>Coalescent model as gene trees prior: effective population size is gamma distributed with shape parameter fixed at 2 and sale is <strong>popMean</strong> parameter. We usually set a hyperprior on the <em>popMean</em>. Currently only constant population sizes are available and true effective population size mean is actually 2* <em>popMean</em> parameter in BEAUti.</li>
   <li>Clock rate: relative clock rate for each loci and overall species tree clock rate. Here, we do not estimate species clock rate therefore you do not see a prior for that rate in the list.</li>
   <li>Substitution model: substitution model parameters (here, kappa parameter for HKY model) and mutation rate for each loci.</li>
 </ul>
 
 <h2 id="18-mcmc-chain">1.8 MCMC Chain</h2>
 
-<p>The length of MCMC chain and frequency of logging will deopend on the complexity of your analysis and you should set it by hand. Sometimes a short run of your xml is needed to understand how much time is spent per million iterations and how quickly your analysis converges. Based on that, you can then adjust the chain length and logging frequency. We already know the reasonable values here. We will also change the names of the log files to match our XML.</p>
+<p>The length of MCMC chain and frequency of logging will depend on the complexity of your analysis and you should set it by hand. Sometimes a short run of your xml is needed to understand how much time is spent per million iterations and how quickly your analysis converges. Based on that, you can then adjust the chain length and logging frequency. We already know the reasonable values here. We will also change the names of the log files to match our XML.</p>
 
 <blockquote>
   <p>Switch to <strong>MCMC</strong> tab</p>
@@ -583,21 +605,21 @@
 
 <figure align="center">
 
-<a id="fig8"></a> <img src="figures/strict_MCMC.png" style="width:70.0%;" />
+<a id="fig9"></a> <img src="figures/strict_MCMC.png" style="width:70.0%;" />
 
-<figcaption>Figure 8: MCMC setup.</figcaption>
+<figcaption>Figure 9: MCMC setup.</figcaption>
 
 </figure>
 
 <h2 id="19-save-and-run-the-analysis">1.9 Save and Run The Analysis</h2>
 
-<p>You are now done setting up the XML.</p>
+<p>You are now done setting up the XML file.</p>
 
 <blockquote>
   <p>From the top menu select <strong>File =&gt; Save</strong> and save the xml file <strong>in a dedicated folder</strong>.</p>
 </blockquote>
 
-<p>Now, we will run the XMl with BEAST2. It may take around 20-25 minutes, you can choose to proceed with so-called precooked runs we provide to analyse the results while you analysis is running. But make sure to verify that your resulting log files are similar to ones we provide at the end of the run.</p>
+<p>Now, we will run the XML with BEAST2. It may take around 20-25 minutes, you can choose to proceed with so-called precooked runs we provide to analyse the results while you analysis is running. But make sure to verify that your resulting log files are similar to ones we provide at the end of the run.</p>
 
 <blockquote>
   <p>Launch <strong>BEAST2</strong></p>
@@ -609,20 +631,20 @@
 
 <figure align="center">
 
-<a id="fig9"></a> <img src="figures/strict_run_beast.png" style="width:70.0%;" />
+<a id="fig10"></a> <img src="figures/strict_run_beast.png" style="width:70.0%;" />
 
-<figcaption>Figure 9: Run BEAST2.</figcaption>
+<figcaption>Figure 10: Run BEAST2.</figcaption>
 
 </figure>
 
 <h2 id="110-explore-the-results-in-tracer">1.10 Explore The Results in Tracer</h2>
 
-<p>The <em>.log</em> file produced by BEAST2 can be viewed in <strong>Tracer</strong>. It help you to verify convergence or explore convergence related issues and explore parameter posterior values. You should find your .log and .trees file in the same folder where you saved the XML.</p>
+<p>The <em>.log</em> file produced by BEAST2 can be viewed in <strong>Tracer</strong>. It helps you verify convergence or explore convergence related issues and explore parameter posterior values. You should find your .log and .trees file in the same folder where you saved the XML.</p>
 
 <blockquote>
   <p>Launch <strong>Tracer</strong></p>
 
-  <p>Drag and drop <em>canid_strict_clock.log</em> on the <strong>Tracer</strong> window (<a href="#fig10">Figure 10</a>).</p>
+  <p>Drag and drop <em>canid_strict_clock.log</em> on the <strong>Tracer</strong> window (<a href="#fig11">Figure 11</a>).</p>
 </blockquote>
 
 <p>Now you should see the posterior values for:</p>
@@ -647,9 +669,9 @@
 
 <figure align="center">
 
-<a id="fig10"></a> <img src="figures/strict_trace.png" style="width:70.0%;" />
+<a id="fig11"></a> <img src="figures/strict_trace.png" style="width:70.0%;" />
 
-<figcaption>Figure 10: Strict clock run log in Tracer.</figcaption>
+<figcaption>Figure 11: Strict clock run log in Tracer.</figcaption>
 
 </figure>
 
@@ -679,23 +701,23 @@
 
 <figure align="center">
 
-<a id="fig11"></a> <img src="figures/strict_ugly.png" style="width:70.0%;" />
+<a id="fig12"></a> <img src="figures/strict_ugly.png" style="width:70.0%;" />
 
-<figcaption>Figure 11: Explore the tree posterior in UglyTrees.</figcaption>
+<figcaption>Figure 12: Explore the tree posterior in UglyTrees.</figcaption>
 
 </figure>
 
 <p>Note that by default, the width of each species tree node is proportional to the effective population size.</p>
 
 <blockquote>
-  <p><strong>Question</strong>. Choose to display one or two gene trees. Ralating to the location in the species tree, where do most coalescent events happen for gene trees? Do you spot many/few incomplete lineage sorting events? How would this be influenced by <strong>popMean</strong> parameter prior?</p>
+  <p><strong>Question</strong>. Choose to display one or two gene trees. Relating to the location in the species tree, where do most coalescent events happen for gene trees? Do you spot many/few incomplete lineage sorting events? How would this be influenced by <strong>popMean</strong> parameter prior?</p>
 </blockquote>
 
 <h2 id="113-generating-summary-species-tree">1.13 Generating Summary Species Tree</h2>
 
-<p>We can combine the posterior species trees into a single tree that tells a a lot about the distribution but is much easier to visualise and comprehend.</p>
+<p>We can combine the posterior species trees into a single tree that tells a lot about the distribution but is much easier to visualise and comprehend.</p>
 
-<p>One way to summarise the trees is by using the program <strong>TreeAnnotator</strong>. Until recently the <em>maximum clade credibility</em> tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a <em>conditional clade distribution</em> tree (CCD) has been proposed <a class="citation" href="#berling2025accurate">(Berling et al., 2025)</a>. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution.</p>
+<p>One way to summarise the trees is by using the program <strong>TreeAnnotator</strong>. Until recently the <em>maximum clade credibility</em> tree (MCC) has been the default summary method in TreeAnnotator. To produce MCC trees TreeAnotator takes the set of trees and finds the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a <em>conditional clade distribution</em> tree (CCD) has been proposed <a class="citation" href="#berling2025accurate">(Berling et al., 2025)</a>. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution.</p>
 
 <blockquote>
   <p>Importantly, currently we <strong>can not</strong> produce CCD trees reliably for trees including direct sampled ancestor fossils. Therefore, do not use it when <strong>FBD</strong> prior is selected for species tree!</p>
@@ -705,25 +727,25 @@
 
 <h3 id="produce-mcc-tree">Produce MCC Tree</h3>
 
-<p>Use settings as in <a href="#fig12">Figure 12</a> to produce MCC tree. If you are confused about the set up, please refer to <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a> tutorial.</p>
+<p>Use settings as in <a href="#fig13">Figure 13</a> to produce MCC tree. If you are confused about the set up, please refer to <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a> tutorial.</p>
 
 <figure align="center">
 
-<a id="fig12"></a> <img src="figures/strict_mcc.png" style="width:70.0%;" />
+<a id="fig13"></a> <img src="figures/strict_mcc.png" style="width:70.0%;" />
 
-<figcaption>Figure 12: Producing MCC summary tree.</figcaption>
+<figcaption>Figure 13: Producing MCC summary tree.</figcaption>
 
 </figure>
 
 <h3 id="produce-ccd-tree">Produce CCD Tree</h3>
 
-<p>Use settings as in <a href="#fig13">Figure 13</a> to produce CCD tree. If you are confused about the set up, please refer to <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a> tutorial.</p>
+<p>Use settings as in <a href="#fig14">Figure 14</a> to produce CCD tree. If you are confused about the set up, please refer to <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a> tutorial.</p>
 
 <figure align="center">
 
-<a id="fig13"></a> <img src="figures/strict_ccd0.png" style="width:70.0%;" />
+<a id="fig14"></a> <img src="figures/strict_ccd0.png" style="width:70.0%;" />
 
-<figcaption>Figure 13: Producing CCD0 summary tree.</figcaption>
+<figcaption>Figure 14: Producing CCD0 summary tree.</figcaption>
 
 </figure>
 
@@ -747,13 +769,13 @@
   <p>Select <strong>Style =&gt; Label precision limit =&gt; 3 sig. figures</strong></p>
 </blockquote>
 
-<p>Now your figure should look similar to <a href="#fig14">Figure 14</a>.</p>
+<p>Now your figure should look similar to <a href="#fig15">Figure 15</a>.</p>
 
 <figure align="center">
 
-<a id="fig14"></a> <img src="figures/strict_icytree_mcc.png" style="width:70.0%;" />
+<a id="fig15"></a> <img src="figures/strict_icytree_mcc.png" style="width:70.0%;" />
 
-<figcaption>Figure 14: Visualising summary tree in IcyTree.</figcaption>
+<figcaption>Figure 15: Visualising summary tree in IcyTree.</figcaption>
 
 </figure>
 
@@ -763,13 +785,13 @@
 
 <h1 id="2-relaxed-clock-species-tree-reconstruction">2. Relaxed Clock Species Tree Reconstruction</h1>
 
-<p>Now we will execute the same analysis as above, except we will use relaxed clock model that is allowing clock rate to vary accross lineages.</p>
+<p>Now we will execute the same analysis as above, except we will use relaxed clock model that is allowing clock rate to vary across lineages.</p>
 
 <h2 id="21-edit-xml-to-relax-the-clock">2.1 Edit xml to relax the clock</h2>
 <blockquote>
   <p>Open BEAUti</p>
 
-  <p>At the top menu select <strong>File =&gt; Load</strong> and select the XML we previously created: <em>canid_strick_clock.xml</em>.</p>
+  <p>At the top menu select <strong>File =&gt; Load</strong> and select the XML file we previously created: <em>canid_strick_clock.xml</em>.</p>
 </blockquote>
 
 <p>We will change the species tree clock model</p>
@@ -779,14 +801,14 @@
 
   <p>Select <strong>Species Tree Relaxed Clock</strong> from the dropdown menu</p>
 
-  <p>Set <strong>Clock.rate</strong> to 0.001 (<a href="#fig15">Figure 15</a>)</p>
+  <p>Set <strong>Clock.rate</strong> to 0.001 (<a href="#fig16">Figure 16</a>)</p>
 </blockquote>
 
 <figure align="center">
 
-<a id="fig15"></a> <img src="figures/relaxed_clock.png" style="width:70.0%;" />
+<a id="fig16"></a> <img src="figures/relaxed_clock.png" style="width:70.0%;" />
 
-<figcaption>Figure 15: Setting fixed mean for relaxed clock.</figcaption>
+<figcaption>Figure 16: Setting fixed mean for relaxed clock.</figcaption>
 
 </figure>
 
@@ -797,7 +819,7 @@
 
   <p>Set 20 million for <strong>Chain Length</strong></p>
 
-  <p>Expant <strong>tracelog</strong> and change <strong>File Name</strong> to <em>canid_relaxed_clock.log</em>.</p>
+  <p>Expand <strong>tracelog</strong> and change <strong>File Name</strong> to <em>canid_relaxed_clock.log</em>.</p>
 
   <p>Expand <strong>speciesTreeLogger</strong> and change <strong>File Name</strong> to <em>canid_relaxed_clock.species.trees</em></p>
 
@@ -813,14 +835,14 @@
 
   <p>Switch to the <strong>Priors</strong></p>
 
-  <p>Assign a <em>LogNormal(M=0.001, S=1)</em> prior to <strong>SpeciesTreeRelaxedClockRate.Species</strong>. Ensure that <strong>Mean in Real Space</strong> is cheked (<a href="#fig16">Figure 16</a>).</p>
+  <p>Assign a <em>LogNormal(M=0.001, S=1)</em> prior to <strong>SpeciesTreeRelaxedClockRate.Species</strong>. Ensure that <strong>Mean in Real Space</strong> is checked (<a href="#fig17">Figure 17</a>).</p>
 </blockquote>
 
 <figure align="center">
 
-<a id="fig16"></a> <img src="figures/relaxed_clock_prior.png" style="width:70.0%;" />
+<a id="fig17"></a> <img src="figures/relaxed_clock_prior.png" style="width:70.0%;" />
 
-<figcaption>Figure 16: Relaxed clock mean prior.</figcaption>
+<figcaption>Figure 17: Relaxed clock mean prior.</figcaption>
 
 </figure>
 
@@ -840,7 +862,7 @@
 
 <h2 id="23-run-the-analysis">2.3 Run The Analysis</h2>
 
-<p>Now, we will run the XMl with BEAST2. This analysis may take a bit longer than the previous one. To analyse the results while you analysis is running, you can choose to proceed with so-called <em>precooked</em> runs we provide. However, make sure to verify that your resulting log files are similar to ones we provide at the end of the run.</p>
+<p>Now, we will run the XML with BEAST2. This analysis may take a bit longer than the previous one. To analyse the results while your analysis is running, you can choose to proceed with so-called <em>precooked</em> runs we provide. However, make sure to verify that your resulting log files are similar to ones we provide at the end of the run.</p>
 
 <blockquote>
   <p>Launch <strong>BEAST2</strong></p>
@@ -860,13 +882,13 @@
   <p>Drag and drop <em>canid_relaxed_clock.log</em> on the <strong>Tracer</strong> window.</p>
 </blockquote>
 
-<p>Scroll down in the parameter list, you should notice new parameters describing the empirical mean, variance, coefficient of variation of the estimated per-branch rates as well as the standard deviation parameter to the uncorrelated relaxed clock of the species tree (<a href="#fig17">Figure 17</a>).</p>
+<p>Scroll down in the parameter list, you should notice new parameters describing the empirical mean, variance, coefficient of variation of the estimated per-branch rates as well as the standard deviation parameter to the uncorrelated relaxed clock of the species tree (<a href="#fig18">Figure 18</a>).</p>
 
 <figure align="center">
 
-<a id="fig17"></a> <img src="figures/relaxed_tracer.png" style="width:70.0%;" />
+<a id="fig18"></a> <img src="figures/relaxed_tracer.png" style="width:70.0%;" />
 
-<figcaption>Figure 17: View log for relaxed clock analysis in Tracer.</figcaption>
+<figcaption>Figure 18: View log for relaxed clock analysis in Tracer.</figcaption>
 
 </figure>
 
@@ -874,7 +896,7 @@
 
 <h1 id="3-total-evidence-dating">3. Total Evidence Dating</h1>
 
-<p>Finally, StarBeast3 is capable of leveraging the fossil record and associated morphological data for <strong>total-evidence analysys</strong>. In this case we will use fossilized birth-death (FBD) model (<a class="citation" href="#heath2014fossilized">(Heath et al., 2014; Gavryushkina et al., 2014)</a>) as species tree prior in the MSC process. Since adding both morphological and molecular data can be complicated within BEAUti, you must follow the steps in order they are given.</p>
+<p>Finally, StarBeast3 is capable of leveraging the fossil record and associated morphological data for <strong>total-evidence analysis</strong>. In this case we will use fossilized birth-death (FBD) model (<a class="citation" href="#heath2014fossilized">(Heath et al., 2014; Gavryushkina et al., 2014)</a>) as species tree prior in the MSC process. Since adding both morphological and molecular data can be complicated within BEAUti, you must follow the steps in order they are given.</p>
 
 <h2 id="31-adding-fossils-and-morphological-data">3.1 Adding Fossils and Morphological Data</h2>
 
@@ -898,14 +920,14 @@ The taxon set is set up the same way as before (<a href="#fig4">Figure 4</a>).</
 
   <p>Switch to <strong>Priors</strong> tab</p>
 
-  <p>From drop down list, select <strong>FBDModel</strong> (<a href="#fig18">Figure 18</a>)</p>
+  <p>From drop down list, select <strong>FBDModel</strong> (<a href="#fig19">Figure 19</a>)</p>
 </blockquote>
 
 <figure align="center">
 
-<a id="fig18"></a> <img src="figures/fbd_tree_prior.png" style="width:70.0%;" />
+<a id="fig19"></a> <img src="figures/fbd_tree_prior.png" style="width:70.0%;" />
 
-<figcaption>Figure 18: Set FBDModel as Tree Prior.</figcaption>
+<figcaption>Figure 19: Set FBDModel as Tree Prior.</figcaption>
 
 </figure>
 
@@ -915,28 +937,28 @@ Our data contains only variable characters, therefore we will use MKv model. If 
 <blockquote>
   <p>Switch back to <strong>Partitions</strong> tab</p>
 
-  <p>Slect <strong>+</strong> symbol at the bottom left menu</p>
+  <p>Select <strong>+</strong> symbol at the bottom left menu</p>
 
-  <p>Slect <strong>Add Morphology to Species Tree</strong></p>
+  <p>Select <strong>Add Morphology to Species Tree</strong></p>
 
   <p>Navigate to the provided data file <em>morphology_canis.nex</em></p>
 
   <p>Now, you are promted to use MKv model. Click <strong>Yes</strong>.</p>
 </blockquote>
 
-<p>Morphological data should now appear within the <strong>Partitions</strong> tab, <a href="#fig19">Figure 19</a>.</p>
+<p>The morphological data should now appear within the <strong>Partitions</strong> tab, <a href="#fig20">Figure 20</a>.</p>
 
 <figure align="center">
 
-<a id="fig18"></a> <img src="figures/fbd_morph_partition.png" style="width:70.0%;" />
+<a id="fig20"></a> <img src="figures/fbd_morph_partition.png" style="width:70.0%;" />
 
-<figcaption>Figure 18: Add morphological data.</figcaption>
+<figcaption>Figure 20: Add morphological data.</figcaption>
 
 </figure>
 
 <h2 id="32-setting-up-taxon-sets">3.2 Setting Up Taxon Sets</h2>
 
-<p>Even though we already visited this tab after adding molecular data, we need to repeat this step in order to refresh taxon set and include fossil taxa that only contains morphological data.</p>
+<p>Even though we already visited this tab after adding molecular data, we need to repeat this step in order to refresh taxon set and include fossil taxa that only contain morphological data.</p>
 
 <blockquote>
   <p>Switch to <strong>Taxon Sets</strong> tab</p>
@@ -962,13 +984,13 @@ Our data contains only variable characters, therefore we will use MKv model. If 
   <p>Click <strong>OK</strong></p>
 </blockquote>
 
-<p>The tab should now look like <a href="#fig20">Figure 20</a>.</p>
+<p>The tab should now look like <a href="#fig21">Figure 21</a>.</p>
 
 <figure align="center">
 
-<a id="fig20"></a> <img src="figures/fbd_tip_dates.png" style="width:70.0%;" />
+<a id="fig21"></a> <img src="figures/fbd_tip_dates.png" style="width:70.0%;" />
 
-<figcaption>Figure 20: Set tip dates.</figcaption>
+<figcaption>Figure 21: Set tip dates.</figcaption>
 
 </figure>
 
@@ -988,13 +1010,13 @@ Our data contains only variable characters, therefore we will use MKv model. If 
   <p>Now, select the other molecular partitions and copy the model from the first one</p>
 </blockquote>
 
-<p>For morphological data, we will not change the default model. Select one of the morphological partitions and verify that the <strong>Subst Model</strong> is <strong>Lewis MK</strong> (ascertainment correction will not be shown here) and it looks like <a href="#fig21">figure 21</a>.</p>
+<p>For morphological data, we will not change the default model. Select one of the morphological partitions and verify that the <strong>Subst Model</strong> is <strong>Lewis MK</strong> (ascertainment correction will not be shown here) and it looks like <a href="#fig22">figure 22</a>.</p>
 
 <figure align="center">
 
-<a id="fig21"></a> <img src="figures/fbd_tip_dates.png" style="width:70.0%;" />
+<a id="fig22"></a> <img src="figures/fbd_site_model.png" style="width:70.0%;" />
 
-<figcaption>Figure 21: Set tip dates.</figcaption>
+<figcaption>Figure 22: Morphological data site model.</figcaption>
 
 </figure>
 
@@ -1008,7 +1030,7 @@ Our data contains only variable characters, therefore we will use MKv model. If 
   <p>Verify that the <strong>estimate</strong> check box is selected</p>
 </blockquote>
 
-<p>Only strict clock is available thruough BEAUti for morphological data. We will set it up in the <strong>Priors</strong> tab.</p>
+<p>Only strict clock is available through BEAUti for morphological data. We will set it up in the <strong>Priors</strong> tab.</p>
 
 <h2 id="36-setting-up-the-priors">3.6 Setting Up the Priors</h2>
 
@@ -1021,28 +1043,30 @@ Our data contains only variable characters, therefore we will use MKv model. If 
 
   <p>Select <strong>LogNormal</strong> from the drop down list and expand the section</p>
 
-  <p>Set M=0.001 and S=1.0 and check the <strong>Mean In Real Space</strong> checkmark (<a href="#fig21">Figure 21</a>).</p>
+  <p>Set M=0.001 and S=1.0 and check the <strong>Mean In Real Space</strong> checkmark (<a href="#fig23">Figure 23</a>).</p>
 </blockquote>
 
-<p><a id="fig21"></a> <img src="figures/fbd_species_clock_prior.png" style="width:70.0%;" /></p>
+<figure align="center">
 
-<figcaption>Figure 21: Set species clock prior.</figcaption>
+<a id="fig23"></a> <img src="figures/fbd_species_clock_prior.png" style="width:70.0%;" />
 
-<p>&lt;/figure&gt;</p>
+<figcaption>Figure 23: Set species clock prior.</figcaption>
+
+</figure>
 
 <p>Now we will set the prior for strict clock rate of morphological data:</p>
 
 <blockquote>
   <p>Navigate to <strong>clockRate.c:morphology_canis</strong> parameter</p>
 
-  <p>Select <strong>1/X</strong> from the drop down list (<a href="#fig23">Figure 23</a>).</p>
+  <p>Select <strong>1/X</strong> from the drop down list (<a href="#fig24">Figure 24</a>).</p>
 </blockquote>
 
 <figure align="center">
 
-<a id="fig23"></a> <img src="figures/fbd_morph_clock_prior.png" style="width:70.0%;" />
+<a id="fig24"></a> <img src="figures/fbd_morph_clock_prior.png" style="width:70.0%;" />
 
-<figcaption>Figure 23: Set morphological clock prior.</figcaption>
+<figcaption>Figure 24: Set morphological clock prior.</figcaption>
 
 </figure>
 
@@ -1058,13 +1082,13 @@ We used name <em>canid_FBD</em> for all log and tree files. The analysis which r
 <p>Finally, load the trees from section 1 and section 3 in FBD and compare.</p>
 
 <blockquote>
-  <p>Question: Can you identify any diferences in clade support?</p>
+  <p>Question: Can you identify any differences in clade support?</p>
 </blockquote>
 
-<p>You should find that the tree topology is largely similar. However, the species <em>Cuon alpinus</em> and <em>Lycaon pictus</em> are now completely supported in by the FBD analysis, while it is not the case when we use only molecular data in section 1. This discrepancy has been previously reported (<a class="citation" href="#zrzavy2004phylogeny">(Zrzavỳ &amp; ŘIčánková, 2004)</a>).</p>
+<p>You should find that the tree topology is largely similar. However, the species <em>Cuon alpinus</em> and <em>Lycaon pictus</em> are now completely supported by the FBD analysis, while it is not the case when we use only molecular data in section 1. This discrepancy has been previously reported (<a class="citation" href="#zrzavy2004phylogeny">(Zrzavỳ &amp; ŘIčánková, 2004)</a>).</p>
 
 <blockquote>
-  <p>Question: Can you identify any diferences in clade height?</p>
+  <p>Question: Can you identify any differences in clade height?</p>
 </blockquote>
 
 <p>We can only compare the clades comprised of extant taxa. However, we do see differences in the MRCA of the extant taxa and, for example, the divergence time between <em>Canis lupus</em> and <em>Canis latrans</em>.</p>
@@ -1072,9 +1096,9 @@ We used name <em>canid_FBD</em> for all log and tree files. The analysis which r
 <h1 id="good-to-know">Good To Know</h1>
 
 <ul>
-  <li>To facilitate easy use of uglytrees, the species and individual names should have a similar pattern so that uglytrees can guess the matching automatically, e.g., individual names should contain the species name as a substring, or before the first _ etc.</li>
+  <li>To facilitate easy use of uglytrees, the species and individual names should follow a similar pattern so that uglytrees can guess the matching automatically, e.g., individual names should contain the species name as a substring, or before the first _ etc.</li>
   <li>StarBeast3 does allow you to sample tip dates. You can find more information on how to set it up through BEAUti here: <a href="https://github.com/rbouckaert/starbeast3/tree/master/workshop">https://github.com/rbouckaert/starbeast3/tree/master/workshop</a>.</li>
-  <li>You may also use relaxed clock for morhological data, instead of a strict one. However, at the moment this requires to edit the XML by hand. Make sure you are using appropriate <em>species</em> tree clock from the StarBeast3 package. Also, be careful to not include any operators that would break the dependence between species and gene trees.</li>
+  <li>You may also use relaxed clock for morphological data, instead of a strict one. However, at the moment this requires to edit the XML file by hand. Make sure you are using appropriate <em>species</em> tree clock from the StarBeast3 package. Also, be careful to not include any operators that would break the dependence between species and gene trees.</li>
   <li>If you are comparing StarBEAST2 and 3 for your analyses you may notice that StarBeast3 is slower per-iteration, but in many cases reaches convergence faster when measured in wall-clock time.</li>
 </ul>
 

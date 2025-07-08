@@ -311,6 +311,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/4388a674bdbba62f927a94d1a6212723bee66d41">
+					08 Jul 2025 - <span class="text-gray">Update README.md</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/74103e224edcc42815f32b10fe20da1020b8735c">
+					08 Jul 2025 - <span class="text-gray">Add info on tree ESS tutorial</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/2d54785807c4bb775aa6b7ba7b7c5545c949934c">
 					23 May 2025 - <span class="text-gray">Merge pull request #6 from jugne/master
 
@@ -331,22 +347,6 @@ Adding CCD0 summary tree</span>
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/40786c274551b3a79ccb7367f9849496178c7234">
 					19 May 2025 - <span class="text-gray">Chapter heading fix</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/e5e147797767128d057730a0d16fa7d678872846">
-					19 May 2025 - <span class="text-gray">small final (?) tutorial text update</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/3514738cc66a9fbd84390037c477e02cc2b1fb24">
-					16 May 2025 - <span class="text-gray">LaTeX update</span>
 					</a> 
 				</li>
 			
@@ -959,9 +959,9 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
 
 <h3 id="analysing-tree-estimates">Analysing tree estimates</h3>
 
-<p>Besides producing a sample of parameter estimates, BEAST2 also produces a posterior sample of phylogenetic time-trees. These need to be summarised too before any conclusions about the quality of the posterior estimate can be made.</p>
+<p>In addition to generating a sample of parameter estimates, BEAST2 also produces a posterior sample of phylogenetic time-trees. It’s important to verify that these trees have also converged. However, this is a complex topic that requires a more detailed explanation. To keep things concise, we will skip it here. For more information, please refer to the <a href="https://linguaphylo.github.io/tutorials/tree-ess/">Tree ESS Tutorial</a>.</p>
 
-<p>One way to summarise the trees is by using the program TreeAnnotator. Until recently the <em>maximum clade credibility</em> tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a <em>conditional clade distribution</em> tree (CCD) has been proposed <a class="citation" href="#berling2025">(Berling et al., 2025)</a>. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. <strong>To save time, you may run just one method and compare it to the other using the example below.</strong></p>
+<p>The trees we obtained from the analysis need to be summarised too before any conclusions about the quality of the posterior estimate can be made. One way to summarise them is by using the program TreeAnnotator. Until recently the <em>maximum clade credibility</em> tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a <em>conditional clade distribution</em> tree (CCD) has been proposed <a class="citation" href="#berling2025">(Berling et al., 2025)</a>. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. <strong>To save time, you may run just one method and compare it to the other using the example below.</strong></p>
 
 <h4 id="producing-mcc-tree">Producing MCC tree</h4>
 
@@ -1155,6 +1155,7 @@ then locate and click on <code class="language-plaintext highlighter-rouge">prim
   <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
   <li>BEAST 1 website and documentation: <a href="http://beast.community">http://beast.bio.ed.ac.uk</a></li>
   <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+  <li><a href="https://linguaphylo.github.io/tutorials/tree-ess/">Tree ESS Tutorial</a></li>
 </ul>
 
 <hr />
