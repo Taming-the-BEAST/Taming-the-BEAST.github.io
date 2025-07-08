@@ -28,7 +28,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/StarBEAST3-Tutorial/commit/f61711b9c50fd34ca2d1faa1389aef1c95a1249c'
+						'https://github.com/Taming-the-BEAST/StarBEAST3-Tutorial/commit/54ae62e4892c20aef7722ec099da356c597ec193'
 					&gt;
 						8 Jul 2025
 					&lt;/a&gt;
@@ -38,7 +38,7 @@
 					&gt;
 						jugne
 					&lt;/a&gt;
-					: Update for Chi's comments
+					: Small typo fixes, increase figs
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -46,7 +46,7 @@
 						Requires: BEAST v2.7.4
 					
 				</description>
-				<pubDate>Tue, 08 Jul 2025 14:44:10 +0000</pubDate>
+				<pubDate>Tue, 08 Jul 2025 16:47:46 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/StarBEAST3-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBEAST3-Tutorial/</guid>
