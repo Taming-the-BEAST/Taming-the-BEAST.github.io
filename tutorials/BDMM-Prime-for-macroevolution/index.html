@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>BDMM-Prime for Macroevolution</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/BDMM-Prime-for-macroevolution/">BDMM Prime for Macroevolution</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				The fossilized birth-death process and extensions
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Rachel C. M. Warnock
+					
+			
+				
+						
+							and  Timothy G Vaughan
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/raw/master/data/amniotes.nex" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/rachelwarnock/BDMM-Prime-for-macroevolution/master/data/amniotes.nex" target="_blank" rel="nofollow">
+						amniotes.nex
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		
+		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/rachelwarnock">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/2503583?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				rachelwarnock
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/0ad549aa2cc2ac1aff9b0f2c487af2db2152e398">
+					10 Jul 2025 - <span class="text-gray">Merge pull request #1 from laduplessis/master
+
+Fix link to bibtex file</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/e1b3f2f4fb9c0f5ec66116d788c984d23e6cde71">
+					09 Jul 2025 - <span class="text-gray">Fix link to bibtex file</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/a56a74bb2a3dec066df5a6bddc6d912003cb4942">
+					09 Jul 2025 - <span class="text-gray">part 2</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/25013fa92a7e8298bdbacfaa3407d416fb45614e">
+					09 Jul 2025 - <span class="text-gray">Initial draft</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/dfea12dda911bbc0b7ea44811230edc4ec668f55">
+					08 Jul 2025 - <span class="text-gray">Initial commit</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>The fossilized birth-death (FBD) process is a phylodynamic model that incorporates sampling through time and allows us infer trees with sampled ancestors <a class="citation" href="#Stadler2010">(Stadler, 2010; Heath et al., 2014)</a>. This is important for phylogenies that incorporate fossils. In the original formulation of the model, the birth (speciation), death (extinction), and fossil sampling rates were treated as constant over time and across the tree. Since then, many models extentions have been published that relax the asummption of constant rates or uniform sampling. The BEAST2 package BDMM-Prime (missing reference) incorporates several of these new models, including those that allow rates to vary across time or across different parts of the tree <a class="citation" href="#Gavryushkina2014">(Gavryushkina et al., 2014; Kühnert et al., 2016; Scire et al., 2022)</a>.</p>
+
+<p>This tutorial will provide an introduction of how BDMM-Prime package can be applied in macroevolution. For an example in epidemiology see the <a href="https://tgvaughan.github.io/BDMM-Prime/#id-1-Introduction">BDMM-Prime package website</a>.</p>
+
+<h2 id="pre-requisits">Pre-requisits</h2>
+
+<p>This tutorial assumes that you have already gained some experience using BEAST2. If you have not already done so, we recommend first completing the following tutorials:</p>
+
+<ul>
+  <li><a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a></li>
+  <li><a href="https://taming-the-beast.org/tutorials/FBD-tutorial/">Dating species divergences with the fossilized birth-death process</a> or <a href="https://taming-the-beast.org/tutorials/Total-Evidence-Tutorial/">Total-evidence dating using BEAST2</a></li>
+</ul>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST v2.7.7.</p>
+
+<h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs, and the interface will be the same, on all computing platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="any-programmer-friendly-text-editor">Any programmer-friendly text editor</h3>
+
+<p>We will need to view our data input files to understand their format, for which we’ll need a text editor. It’s best to use one designed for programmers as these include nice features such as syntax highlighting, which makes the code more reader-friendly. <a href="https://www.sublimetext.com">Sublime Text</a> is a good option which is available for MacOS, Windows and Linux.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p><a href="http://beast.community/tracer">Tracer</a> is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis.</p>
+
+<hr />
+
+<h1 id="practical-bdmm-prime-for-macroevolution">Practical: BDMM-Prime for Macroevolution</h1>
+
+<p>BDMM-Prime is a package written for flexible phylodynamic inference. It combines the functionality of multiple other BEAST2 packages, including the BDMM, BDSKY and SA packages, and can be applied to a wide range of scenarios in epidemiology and macroevolution. Due to the flexibility and the large variety of ways in which model parameters can be combined using BDMM-Prime there’s more options to consider when setting up your analysis.</p>
+
+<h2 id="the-data">The data</h2>
+
+<p>We’ll use a published dataset of <a href="https://en.wikipedia.org/wiki/Amniote">aminotes</a> that has been used previously to explore the early evolution of this group.</p>
+
+<p>The data comprises 294 binary and multi-state characters for 70 fossils, as well as their age and locality information, spanning ~70 myr from the late Carboniferous to the mid Triassic. The specimens can be categorised into three broad geographic areas associated with the northern, mid, and southern areas of the supercontinent <a href="https://en.wikipedia.org/wiki/Pangaea">Pangea</a>,  corresponding approximately to what would be known today as Eurasia, North America, and South Africa.</p>
+
+<blockquote>
+  <p>Download the data file <code class="language-plaintext highlighter-rouge">amniotes.nex</code> and open it in a text editor of your choice.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:1"></a>
+	<img style="width:75%;" src="figures/0_data_file.png" alt="" />
+	<figcaption>Figure 1: The nexus file containing the morphological data.</figcaption>
+</figure>
+
+<p>Note that the taxon labels contain information about the age of our samples (after the last underscore) and their geographic provenance (after the second underscore).</p>
+
+<h2 id="installing-the-bdmm-prime-and-mm-packages">Installing the BDMM-Prime and MM packages</h2>
+
+<p>The first thing we need to do is install the BDMM-Prime package. This package is not yet listed in the Package Manager in BEAUTi, so we need to install it using the package URL.</p>
+
+<blockquote>
+  <ol>
+    <li>Open BEAUTi and go to <strong>File &gt; Manage Packages</strong>.</li>
+    <li>Select <strong>Package repositories</strong> at the bottom of this window. This will open the <strong>Package Repository Manager</strong>.</li>
+    <li>
+      <p>At the bottom click <strong>Add URL</strong> and enter the following address: https://tgvaughan.github.io/BDMM-Prime/package.xml</p>
+
+      <p>After you click ‘OK’ your window should look like this:</p>
+    </li>
+  </ol>
+</blockquote>
+
+<figure>
+	<a id="fig:2"></a>
+	<img style="width:70%;" src="figures/01-BDMMP-URL.png" alt="" />
+	<figcaption>Figure 2: The Package Repository Manager window.</figcaption>
+</figure>
+
+<blockquote>
+  <ol>
+    <li>Click <strong>Close</strong>. The BDMM-Prime package should now appear in your list of available packages.</li>
+    <li>Select the BDMM-Prime package and click <strong>Install/Upgrade</strong> at the bottom of the window. This should bring up a message that confirms the package has been successfully installed.</li>
+  </ol>
+</blockquote>
+
+<figure>
+	<a id="fig:3"></a>
+	<img style="width:80%;" src="figures/01b-BDMMP-install.png" alt="" />
+	<figcaption>Figure 3: The Package Manager window.</figcaption>
+</figure>
+
+<blockquote>
+  <ol>
+    <li>If you haven’t done so already, you will also need to install the MM package for models of morphological evolution. This package should already appear on the same list in the <strong>Package Manager</strong>. You just need to click <strong>Install/Upgrade</strong>.</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>Restart BEAUTi to set up an analysis using BDMM-Prime.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="part-1-the-constant-rate-fbd-process">Part 1: The constant rate FBD process</h1>
+
+<h2 id="the-partitions-panel">The Partitions panel</h2>
+
+<p>Make sure you have downloaded the nexus file associated with this tutorial <code class="language-plaintext highlighter-rouge">amniotes.nex</code>.</p>
+
+<blockquote>
+  <p>To input your data into BEAUTi, either drag and drop the file into the <strong>Partitions</strong> panel and select <strong>Add Morphological Data</strong> and then <strong>OK</strong> or go to <strong>File &gt; Add Morphological Data</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:4"></a>
+	<img style="width:40%;" src="figures/02a-BDMMP-Partitions.png" alt="" />
+	<figcaption>Figure 4: Options for importing data.</figcaption>
+</figure>
+
+<p>This will bring up a window that asks, “Would you like to condition of recording variable characters only (Mkv)?” Since we typically don’t collect non-variable morphological characters this option makes sense for our dataset.</p>
+
+<blockquote>
+  <p>Click ‘Yes’.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:5"></a>
+	<img style="width:50%;" src="figures/02b-BDMMP-Partitions.png" alt="" />
+	<figcaption>Figure 5: Options for importing morphological data.</figcaption>
+</figure>
+
+<p>Your Partitions panel should now look like this:</p>
+
+<figure>
+	<a id="fig:6"></a>
+	<img style="width:80%;" src="figures/02c-BDMMP-Partitions.png" alt="" />
+	<figcaption>Figure 6: The **Partitions** panel.</figcaption>
+</figure>
+
+<p>By default the characters are separated into four partitions. This means that characters will be assigned to a substitution rate matrix where the number of possible states corresponds to the maximum observed state for each character. Our dataset contains characters with a maximum observed state of one, two, three and four, hence we have four data partitions. The number of characters in each partition is listed under <strong>Sites</strong>.</p>
+
+<p>Note that the <strong>Site Model</strong> is <em>unlinked</em> across partitions, while the <strong>Clock Model</strong> and <strong>Tree</strong> are <em>linked</em> by default. This means that we will allow each partition to evolve under an separate substitution process, but we will assume that the underlying tree is the same and that the same clock model is shared across partitions.</p>
+
+<h2 id="the-tip-dates-panel">The Tip Dates panel</h2>
+
+<blockquote>
+  <p>Navigate to the Tip Dates panel and select <strong>Use tip dates</strong>.</p>
+</blockquote>
+
+<p>Here we can extract information about the age of our samples from the tip labels. For our analysis, the time units are in millions of years, so we’ll leave ‘year’ selected in the first drop down menu.</p>
+
+<blockquote>
+  <p>From the second drop down menu change <strong>Since some time in the past</strong> to <strong>Before the present</strong>.</p>
+
+  <p>Next select <strong>Auto-configure</strong>. Leave <strong>use everything</strong> selected and from the drop down menu select <strong>after last</strong>, leaving the delimiter as “_”. This will extract age information from the end of your taxon labels.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:7"></a>
+	<img style="width:70%;" src="figures/03_Tip_Dates.png" alt="" />
+	<figcaption>Figure 7: Options for extracting age information from taxon labels.</figcaption>
+</figure>
+
+<p>Note that although our samples span an interval in the past, internally BEAST rescales the tree such that the youngest sample in the tree is at t = 0. The rescaled values are shown under the <strong>Age/Height</strong> column.</p>
+
+<p>To make sure everything is set up correctly, if you scroll down, the youngest fossil, <code class="language-plaintext highlighter-rouge">Candelaria_barbouri_NAm_239.5</code>, should have a “0.0” next to it under the <strong>Age/Height</strong> column.</p>
+
+<figure>
+	<a id="fig:8"></a>
+	<img style="width:80%;" src="figures/02c-BDMMP-Partitions.png" alt="" />
+	<figcaption>Figure 8: The **Tip Dates** panel.</figcaption>
+</figure>
+
+<h2 id="the-site-model-panel">The Site Model panel</h2>
+
+<p>Under the Site Model panel we can specify the model of morphological evolution. For this exercise we’ll use the simple MkV Lewis model for each of our partitions and leave everything as it is.</p>
+
+<figure>
+	<a id="fig:9"></a>
+	<img style="width:80%;" src="figures/04_Site_model.png" alt="" />
+	<figcaption>Figure 9: The **Site Model** panel.</figcaption>
+</figure>
+
+<h2 id="the-clock-model-panel">The Clock Model panel</h2>
+
+<blockquote>
+  <p>Navigate to the <strong>Clock Model</strong> panel and select <strong>Relaxed Clock Log Normal</strong> from the drop down menu. This will allow rates of evolution to vary across branches in the our tree.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:10"></a>
+	<img style="width:80%;" src="figures/05_Clock_model.png" alt="" />
+	<figcaption>Figure 10: The **Clock Model** panel.</figcaption>
+</figure>
+
+<h2 id="the-priors-panel">The Priors panel</h2>
+
+<p>Here we will set up the tree model and all the prior parameters associated with our analysis.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>Priors</strong> panel.</p>
+</blockquote>
+
+<h3 id="clock-model-parameters">Clock model parameters</h3>
+
+<p>Let’s start with clock model parameters, <strong>ucldMean</strong> and <strong>ucldStdev</strong>, which you should already see listed here.</p>
+
+<blockquote>
+  <p>Expand the options for <strong>ucldMean</strong> by clicking the triangle to the left of this parameter.</p>
+
+  <p>For the mean on the overall clock rate we will use a <strong>normal prior</strong>, following the original study, with a mean of 0.001 and a variance of 0.01. Note that rates cannot be negative so the distribution is truncated at zero.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:11"></a>
+	<img style="width:80%;" src="figures/06a_Clock_priors.png" alt="" />
+	<figcaption>Figure 11: The prior on the overall clock rate **ucldMean**.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Select the <strong>initial</strong> value option next to the distribution and change <strong>Value</strong> to 0.001. This ensures our analysis starts in a reasonable part of the parameter space. Click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:12"></a>
+	<img style="width:70%;" src="figures/06b_Clock_priors.png" alt="" />
+	<figcaption>Figure 12: Setting the initial value for the overall clock rate **ucldMean**.</figcaption>
+</figure>
+
+<blockquote>
+  <p>For the standard deviation of the distribution of clock rates, <strong>ucldStdev</strong>, we’ll use an exponential prior with a mean of 0.1.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:13"></a>
+	<img style="width:80%;" src="figures/06a_Clock_priors.png" alt="" />
+	<figcaption>Figure 13: The prior on the standard deviation of clock rates **ucldStdev**.</figcaption>
+</figure>
+
+<p>These prior choices match our expectations about rates of morphological evolution estimated in previous analyses of terrestrial vertebrates, i.e., the rates tend to be relatively low, with some degree of variation across branches.</p>
+
+<h3 id="bdmm-prime">BDMM-Prime</h3>
+
+<p>Next let’s set up the phylodynamic model.</p>
+
+<blockquote>
+  <p>Select <strong>BDMMPrime</strong> from drop down menu at the top of the <strong>Priors</strong> panel next to <strong>Tree.t:amniotes</strong>.</p>
+</blockquote>
+
+<p>There are a lot of options for combining parameters using BDMM-Prime, so we need to be careful to select parameter combinations that make sense for our dataset. There are three options for parameterising the birth-death model using BDMM-Prime. For macroevolution we can choose from two options:</p>
+
+<ul>
+  <li>The <strong>Canonical Parameterization</strong>, which is parameterized using the birth ($\lambda$), death ($\mu$), and sampling rates ($\psi$)</li>
+  <li>The <strong>Fossilized Birth Death Parameterization</strong>, which is parameterized using diversification rate ($d$), turnover rate ($v$), and sampling proportion ($s$)</li>
+</ul>
+
+<p>The relationship between these parameters is shown in Table 1. Both are useful in macroevolution and your choice might depend on which parameters are of most interest to you or what prior information you have available. Note that after your analysis is complete, you can always go from one set of parameters to the other via the transformations shown in the table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: center">Transformation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Speciation ($\lambda$)</td>
+      <td style="text-align: center">$\lambda = d / (1 - v)$</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Extinction ($\mu$)</td>
+      <td style="text-align: center">$\mu = (vd)(1-v)$</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Sampling ($\psi$)</td>
+      <td style="text-align: center">$\psi = (s/ (1-s))((vd)/(1-v))$</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Net diversification ($d$)</td>
+      <td style="text-align: center">$d = \lambda - \mu$</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Turnover ($v$)</td>
+      <td style="text-align: center">$v = \mu/\lambda$</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Sampling proportion ($s$)</td>
+      <td style="text-align: center">$s = \psi/(\mu + \psi)$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>: Table 1 Alternative model parametrizations</p>
+
+<blockquote>
+  <p>In this tutorial we’ll use the <strong>Canonical Parameterization</strong>, which you can select from the drop down menu next to <strong>Parameterization</strong>. This option can be applied to scenarios in both epidemiology and macroevolution.</p>
+</blockquote>
+
+<p>Later in Part 2 we will assign taxa to “types” based on their geographic provenance but for the first analysis in this tutorial we’ll assume that birth, death, and sampling are all constant through time and across our tree. Thus we’ll leave <strong>Number of change times</strong> for each of these parameters as 0 (but see below).</p>
+
+<blockquote>
+  <p>The only change we’ll make here is to the value listed next to <strong>Birth Rate</strong> and <strong>Death Rate</strong> in Epoch 1, from 1.0 to 0.1 - these are the starting values for these parameters. Double click on each value to edit it and make sure to press enter. Notice that <strong>Estimate values</strong> is checked for all three of these parameters, which means they will be estimated and not fixed during inference.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:14"></a>
+	<img style="width:80%;" src="figures/07a_tree-priors.png" alt="" />
+	<figcaption>Figure 14: Options for the birth, death, and sampling rates.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Scroll down to the next set of parameters of interest.</p>
+</blockquote>
+
+<p><strong>Rho Sampling</strong> is the probability of sampling a lineage at a given time. In macroevolution this is usually associated with the extant sampling probability at t = 0. In our case study, we have no sampling beyond the period of interest, i.e., the youngest sample included in our dataset is from the Triassic and is therefore $\psi$-sampled. There are many amniotes that persisted beyond this interval until the present but these are not included in our dataset. This means we have no rho-sampled taxa and it makes sense to leave Rho = 0.0. The next parameter of note is the <strong>Removal Prob</strong> - this is the probability that a lineage is removed from the population upon sampling and makes more sense in an epidemiological context. We need to change this to 0.0.</p>
+
+<blockquote>
+  <p>Select the value listed next to Epoch 1 for <strong>Removal Prob</strong> and change it to 0.0.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:15"></a>
+	<img style="width:80%;" src="figures/07b_tree-priors.png" alt="" />
+	<figcaption>Figure 15: Options for the rho sampling and removal probability parameters.</figcaption>
+</figure>
+
+<p>For now you can leave everything else under this tab as it is. If you close this tab and scroll down you should now be able to see an additional set of parameters listed in the <strong>Priors</strong> panel for the birth, death, sampling rates and the origin time parameter.</p>
+
+<p>For the birth, death, and sampling rate parameters we’ll use an exponential prior with a mean = 0.1. This matches values that are typically estimated for these parameters in paleobiology.</p>
+
+<blockquote>
+  <p>From the drop down menu next to <strong>birthRateCanonical</strong> select <strong>Exponential</strong> and expand this selection. Change the mean of this distribution to 0.1.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:16"></a>
+	<img style="width:80%;" src="figures/07c_tree-priors.png" alt="" />
+	<figcaption>Figure 16: Prior options for the birth rate parameter.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Go ahead and do the same for the death and sampling rate parameters.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:17"></a>
+	<img style="width:80%;" src="figures/07d_tree-priors.png" alt="" />
+	<figcaption>Figure 17: Prior options for the death rate parameter.</figcaption>
+</figure>
+
+<figure>
+	<a id="fig:18"></a>
+	<img style="width:80%;" src="figures/07e_tree-priors.png" alt="" />
+	<figcaption>Figure 18: Prior options for the death rate parameter.</figcaption>
+</figure>
+
+<p>For the origin time parameter, we’ll also use an exponential distribution following the original study, with an offset = 318.1 Ma and a mean = 327.5 Ma. However, recall that BEAST scales the tree such the youngest sample is always zero, so these values need to be defined relative to t = 0.</p>
+
+<blockquote>
+  <p>Select <strong>Exponential</strong> from the drop down menu next to <strong>originBDMMPrime</strong> and expand this selection. Change the offset to 81.1, which is 318.1 minus the youngest age of our sampling interval = 237, and change the mean to 10.0.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:19"></a>
+	<img style="width:80%;" src="figures/07f_tree-priors.png" alt="" />
+	<figcaption>Figure 19: Prior options for the origin time parameter.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Finally, select the <strong>initial</strong> value box and change <strong>Value</strong> to 100.0. The origin time of the process needs to be older than all our fossils. Click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:20"></a>
+	<img style="width:70%;" src="figures/07g_tree-priors.png" alt="" />
+	<figcaption>Figure 20: Setting the initial value for the origin time parameter.</figcaption>
+</figure>
+
+<h3 id="adding-taxonomic-constraints">Adding taxonomic constraints</h3>
+
+<p>We’re going to use two taxonomic constraints for this analysis.</p>
+
+<blockquote>
+  <p>Scroll down to the bottom of the Priors panel and click <strong>+Add Prior</strong>. From the drop down menu select <strong>MRCA prior</strong>. Click <strong>OK</strong>. This will open a box where you can define groups of taxa.</p>
+
+  <p>For the first constraint, type ‘ingroup1’ into the box next to <strong>Taxon set label</strong>. From the list of taxa on the left click on any taxa and use select all (e.g., cmd + A) to highlight all of them. Scroll down to <em>Gephyrostegus bohemicus</em> and deselect this taxon using cmd + shift. Click the <strong>»</strong> button. Now all taxa except <em>Gephyrostegus</em> should appear on the right. Alternatively, you can select all of them, move them to the right and simply move Gephyrostegus back to the left using the <strong>«</strong> button.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:21"></a>
+	<img style="width:50%;" src="figures/08a_tcons.png" alt="" />
+	<figcaption>Figure 21: Creating the first taxonomic constraint.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Click <strong>OK</strong> and then select the checkbox that says <strong>monophyletic</strong> that appears next to this constraint.</p>
+</blockquote>
+
+<blockquote>
+  <p>To add the next constraint, click <strong>+Add Prior</strong>. From the drop down menu select <strong>MRCA prior</strong>. Click <strong>OK</strong>.</p>
+
+  <p>For the second constraint, type ‘ingroup2’ into the box next to <strong>Taxon set label</strong>. This next constraint will include all taxa except <em>Gephyrostegus bohemicus</em> and <em>Seymouria_spp</em>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:22"></a>
+	<img style="width:50%;" src="figures/08b_tcons.png" alt="" />
+	<figcaption>Figure 22: Creating the second taxonomic constraint.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Click <strong>OK</strong> and then select the checkbox that says <strong>monophyletic</strong> that appears next to this constraint.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:23"></a>
+	<img style="width:80%;" src="figures/08c_tcons.png" alt="" />
+	<figcaption>Figure 23: The final set of options for the **Priors** panel.</figcaption>
+</figure>
+
+<p>Use this screen shot to ensure all your prior distributions and initial values have been set up as described.</p>
+
+<h2 id="the-mcmc-panel">The MCMC panel</h2>
+
+<blockquote>
+  <p>Navigate to the MCMC panel and change the <strong>Chain Length</strong> to 1,000,000 (just delete one of the zeros).</p>
+</blockquote>
+
+<figure>
+	<a id="fig:24"></a>
+	<img style="width:80%;" src="figures/09_MCMC.png" alt="" />
+	<figcaption>Figure 24: The MCMC panel.</figcaption>
+</figure>
+
+<p>BDMM-Prime allows us to output additional tree files using the <strong>typedTree</strong> and <strong>nodeTypedTree</strong> loggers - these are not useful for our initial analysis and make the analysis more computationally expensive so we will disable these options for now (but see Part 2 below).</p>
+
+<blockquote>
+  <p>Uncheck the boxes next to <strong>Enable Logger</strong> for <strong>typedTreeLogger</strong> and <strong>nodeTypedTreeLogger</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:25"></a>
+	<img style="width:80%;" src="figures/09b_MCMC.png" alt="" />
+	<figcaption>Figure 25: Switching off the **typedTree** and **nodeTypedTree** loggers.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Go to <strong>File &gt; Save as</strong> to save your xml input file. Call it something like ‘amniotes_constant_rates_FBD.xml’ or anything you like.</p>
+</blockquote>
+
+<blockquote>
+  <p>You can leave BEAUti open for the next part of the exercise! However, if you do close BEAUTi you can simply go to <strong>File &gt; Load</strong> and select your xml file - all the BDMM-Prime specifications should be reloaded.</p>
+</blockquote>
+
+<h2 id="running-beast">Running BEAST</h2>
+
+<p>To run your analysis open the BEAST application and navigate to the right working directory. Select your xml file and click <strong>Run</strong>.</p>
+
+<p>This analysis should only take about a minute to run.</p>
+
+<h2 id="examining-the-output">Examining the output</h2>
+
+<p>This analysis should have generated the following results files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">amniotes_constant_rates_FBD.log</code> - this file contains all the numerical parameters sampled during MCMC</li>
+  <li><code class="language-plaintext highlighter-rouge">amniotes.trees</code> - this file contains the trees sampled during MCMC</li>
+</ul>
+
+<blockquote>
+  <p>First open the .log file in Tracer and explore the output. It should look something like this.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:26"></a>
+	<img style="width:70%;" src="figures/tracer.png" alt="" />
+	<figcaption>Figure 26: The tracer window for the constant rates FBD model.</figcaption>
+</figure>
+
+<p>Of particular interest are the parameters <strong>birthRateSPCanonical</strong>, <strong>deathRateSPCanonical</strong>, and <strong>samplingRateSPCanonical</strong>. The speciation and extinction rates are both ~0.35, while the sampling rate is ~0.01. This suggests that sampling is low relative to the overall diversity of the group.</p>
+
+<p>Note that this analysis hasn’t fully converged but you can download the pre-cooked output for the same analysis that’s been run a bit longer.</p>
+
+<blockquote>
+  <p>If you want you can also generate a consensus tree using the standard <strong>.trees</strong> file (<code class="language-plaintext highlighter-rouge">amniotes.trees</code>) as the input and the approach described in <a href="https://taming-the-beast.org/tutorials/Total-Evidence-Tutorial/">previous tutorials</a> for trees with sampled ancestors. For the <strong>Target tree type</strong> stick with the default <strong>Maximum clade credibility tree</strong> and for the <strong>Node Heights</strong> select <strong>Median heights</strong> from the drop down menu.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:27"></a>
+	<img style="width:70%;" src="figures/treeann.png" alt="" />
+	<figcaption>Figure 27: The TreeAnnotator window.</figcaption>
+</figure>
+
+<blockquote>
+  <p>You can open the resulting summary tree in FigTree or IcyTree and it should look very similar to the published version of this tree.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="part-2-the-multi-type-birth-death-process">Part 2: The multi-type birth-death process</h1>
+
+<p>In the second part of this tutorial we will take geographic provenance into account and allow birth, death, and sampling rate to vary across geographic areas. To achieve this we will incorporate a migration rate parameter into the model and in addition, we will allow migration rate to vary through time, to acknowledge the observation that the interconnectedness of the geographic areas changes considerably over the course of our sampling interval.</p>
+
+<blockquote>
+  <p>Create a new folder to run this next analysis.</p>
+</blockquote>
+
+<h2 id="the-priors-panel-1">The Priors Panel</h2>
+
+<blockquote>
+  <p>Return to the Priors panel in BEAUti. Next we’re going to add information to the analysis about geographic area. Expand the tree model options  and scroll down to <strong>Type Trait Set</strong>. Click <strong>Auto-configure</strong>. Select <strong>split on character</strong> and from the drop down menu next to <strong>and take group(s):</strong> select 3.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:28"></a>
+	<img style="width:50%;" src="figures/10a_types.png" alt="" />
+	<figcaption>Figure 28: Options for extracting type information from taxon labels.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Click <strong>OK</strong>. You should now be able to see the geographic area associated with each fossil in the <strong>Type</strong> column, corresponding to Eurasia, North America, and South Africa.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:29"></a>
+	<img style="width:80%;" src="figures/10b_types.png" alt="" />
+	<figcaption>Figure 29: Type information associated with each sample.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Scroll up and you should see some additional options have been added for the tree model. In particular, options will have been added for the <strong>Migration Rate</strong> and <strong>Birth Rate Among Demes</strong> parameters.</p>
+</blockquote>
+
+<p>The migration rate can be interpreted as the rate of change between types (in our case, the migration between geographic areas). We’ll estimate this parameter and allow it to vary over time (see below). The birth rate among demes can be interpreted as the rate of “spontaneous” change between types - in epidemiology this might be used together with types that are associated with specific mutations. This parameter doesn’t have an analogous meaning in our macroevolutionary context, so we’ll simply fix this parameter to zero.</p>
+
+<blockquote>
+  <p>Double click on the box for <strong>Birth Rate Among Demes</strong> next to <strong>ALL</strong> and enter 0.0.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:30"></a>
+	<img style="width:80%;" src="figures/10c_types.png" alt="" />
+	<figcaption>Figure 30: The migration rate and birth rate among demes parameters.</figcaption>
+</figure>
+
+<p>In this analysis we want to allow birth, death, and sampling to vary across geographic areas.</p>
+
+<blockquote>
+  <p>Scroll back up. You’ll see that next to each of these parameters is a checked box called <strong>Scalar values</strong> - this indicates that a single rate applies to all types. Starting with <strong>Birth Rate</strong>, if you uncheck this box, a separate rate will appear next to each type. You can select <strong>Display epoch visualisation</strong> to make sure things are set up correctly.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:31"></a>
+	<img style="width:80%;" src="figures/10d_types.png" alt="" />
+	<figcaption>Figure 31: Type specific birth rates.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Do the same for the <strong>Death Rate</strong> and <strong>Sampling Rate</strong> parameters.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:32"></a>
+	<img style="width:80%;" src="figures/10e_types.png" alt="" />
+	<figcaption>Figure 32: Type specific death and sampling rates.</figcaption>
+</figure>
+
+<p>Over the course of our sampling interval, the late Carboniferous to the mid Triassic, we see major changes in continental configuration and the relative connectedness of geographic areas - to quantify the impact this has on migration we’re going to allow the overall migration rate to change through time, assuming piece-wise constant variation in rate.</p>
+
+<blockquote>
+  <p>Return to the options associated with ‘Migration Rate’.
+ First double click the the initial value for this parameter and change it to 0.1 and make sure the box next to <strong>Estimate values</strong> is checked. Next change <strong>Number of change times:</strong> to 2. Check the box that says <strong>Relative to process length</strong> and click <strong>Distribute evenly</strong> - this means that the time between the origin of the process and the end will be divided into 3 equal intervals and each one will be assigned an independent rate parameter. Select <strong>Display epoch visualisation</strong> to make sure things are set up correctly.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:33"></a>
+	<img style="width:80%;" src="figures/10f_types.png" alt="" />
+	<figcaption>Figure 33: Time varying mirgration rates.</figcaption>
+</figure>
+
+<p>Note that we can specify the probability of each type at the beginning of the process, i.e., at the origin or root. By default these are set to equal but you can change these in the box next to <strong>Start Type Prior Probs</strong>. This probability can be estimated or you might have strong evidence for the type at the root but we’ll leave this for now.</p>
+
+<blockquote>
+  <p>Finally, scroll down and assign an exponential prior to the migration rate parameter. Note BEAUTi will assign the same prior to all rates of the same parameter, meaning that in this case, for each interval the migration rate will be drawn from a separate exponential prior distribution.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:34"></a>
+	<img style="width:80%;" src="figures/10g_types.png" alt="" />
+	<figcaption>Figure 34: Prior options for mirgration rate.</figcaption>
+</figure>
+
+<h2 id="the-mcmc-panel-1">The MCMC panel</h2>
+
+<blockquote>
+  <p>Navigate to the MCMC panel. We’ll leave all the MCMC chain settings as above, i.e., we’ll use a chain length of 1,000,000 steps.</p>
+</blockquote>
+
+<p>Now that we’ve added information about types, we can take advantage of some other output options. In particular, BDMM-Prime can use a stocastic mapping appraoch to generate <em>edge-typed trees</em>. These are trees that include information about the phylogenetic history of type. We can generate both <em>typed trees</em>, which show where along internal branches type changes (migration events) have occurred or <em>node typed trees</em>, which includes type information at internal nodes only.
+This can done using the <strong>typedTreeLogger</strong> and  <strong>nodeTypedTreeLogger</strong>, respectively. In this analysis, we’re going to use the latter, as shown below, because <em>node type trees</em> are more computational efficient to generate and easier to summarise.</p>
+
+<blockquote>
+  <p>Expand the selection next to <strong>nodeTypedTreeLogger</strong> and check the box next to <strong>Enable logger</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:35"></a>
+	<img style="width:80%;" src="figures/11b_MCMC.png" alt="" />
+	<figcaption>Figure 35: Options for the **nodeTypedTree** logger.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Go to <strong>File &gt; Save as</strong> to save your xml input file in your new folder. Call it something like <code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.xml</code>.</p>
+</blockquote>
+
+<h2 id="running-beast-1">Running BEAST</h2>
+
+<p>As above, run your analysis in the BEAST application and navigate to the right working directory. Select your xml file and click Run.</p>
+
+<p>This analysis will take ~20 minutes to run. Ideally this analysis would be run for much longer, e.g., 10,000,000+ generations.</p>
+
+<h2 id="examining-the-output-1">Examining the output</h2>
+
+<p>This analysis should have generated the following results files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.log</code> - this file contains all the numerical parameters sampled during MCMC</li>
+  <li><code class="language-plaintext highlighter-rouge">amniotes.trees</code> - this file contains the trees sampled during MCMC</li>
+  <li><code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.typed.node.trees</code> - this file contains the trees XXX</li>
+</ul>
+
+<blockquote>
+  <p>Open the .log file in Tracer and explore the output. It should look something like this.</p>
+
+  <p>You might need to expand and adjust the Tracer window so you can see parameter names.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:36"></a>
+	<img style="width:70%;" src="figures/12a_tracer.png" alt="" />
+	<figcaption>Figure 36: The tracer window for the multi-type FBD model.</figcaption>
+</figure>
+
+<p>Now we have some additional parameters of interest. In particular, we have three estimates for birth, death, and sampling rates, associated with each type or geographic region.</p>
+
+<blockquote>
+  <p>Select the <strong>birthRateSPCanonical</strong>, <strong>deathRateSPCanonical</strong>, and <strong>samplingRateSPCanonical</strong> parameters for all three types simultaneously using the shift key. You should be able to higher relative rates of birth and death associated with North America.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:37"></a>
+	<img style="width:70%;" src="figures/12b_tracer.png" alt="" />
+	<figcaption>Figure 37: The tracer window for the multi-type FBD model showing the birth rates associated with each type.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Scroll down and explore the estimates for the migration rate associated with different interval. The intervals are labelled from youngest to oldest, ‘i0’, ‘i1’, and ‘i2s’.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:38"></a>
+	<img style="width:70%;" src="figures/12c_tracer.png" alt="" />
+	<figcaption>Figure 38: The tracer window for the multi-type FBD model showing the migration rates associated with each interval.</figcaption>
+</figure>
+
+<p>You should be able to see a larger estimate for migration in the final time bin, which we might expect based on the increase in connectivity between these regions in the Triassic. Recall that we defined 3 equal intervals relative to the origin time of the process. The variables appended <strong>_endtime</strong> will tell the end point of each interval relative to the origin age.</p>
+
+<p>We can summarise information about ancestral types across our posterior distribution of trees using TreeAnnotor.</p>
+
+<blockquote>
+  <p>Open TreeAnnotator and select <code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.typed.node.trees</code> as your **Input Tree File.</p>
+
+  <p>For the <strong>Target tree type</strong> stick with the default <strong>Maximum clade credibility tree</strong> and for the <strong>Node Heights</strong> select <strong>Median heights</strong> from the drop down menu. Call your <strong>Output File</strong> something like <code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.typed.node.con.tre</code>. See <a href="#fig:27">Figure 27</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Open the program <a href="https://icytree.org">IcyTree</a> in your internet browser. Drag and drop your summary tree file onto the page or go to <strong>File &gt; Load from file…</strong>.</p>
+</blockquote>
+
+<blockquote>
+  <p>To generate an image like the one below you can select the following options:</p>
+
+  <ul>
+    <li><strong>Style &gt; Mark singletons</strong> (to show any sampled ancestors)</li>
+    <li><strong>Style &gt; Colour nodes by &gt; type</strong></li>
+    <li><strong>Style &gt; Internal node text &gt; type.prob</strong></li>
+    <li><strong>Style &gt; Label precision limit &gt; 2 sig. figures</strong></li>
+    <li><strong>Style &gt; Display legend</strong></li>
+    <li><strong>Style &gt; Axis &gt; Age</strong></li>
+    <li><strong>Style &gt; Set axis offset…</strong> and enter 237 in the box, which is end of our sampling window. Click <strong>Ok</strong>.</li>
+  </ul>
+</blockquote>
+
+<figure>
+	<a id="fig:39"></a>
+	<img style="width:70%;" src="figures/icytree.png" alt="" />
+	<figcaption>Figure 39: Summary tree plotted in IcyTree showing the ancestral types.</figcaption>
+</figure>
+
+<p>We can use this tree to explore hypotheses about the geographic origins of different lingeages. Note that based on node typed trees, it is not possible to make any statement about where and when along a given branch a type change may have occurred. To learn more about options for exploring migration history check out the <a href="https://tgvaughan.github.io/BDMM-Prime/">BDMM-Prime package website</a>.</p>
+
+<hr />
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li><a href="https://tgvaughan.github.io/BDMM-Prime/">BDMM-Prime package website</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Stadler2010">Stadler, T. (2010). Sampling-through-time in birth–death trees. <i>Journal of Theoretical Biology</i>, <i>267</i>(3), 396–404. https://doi.org/10.1016/j.jtbi.2010.09.010</span></li>
+<li><span id="Heath2014">Heath, T. A., Huelsenbeck, J. P., &amp; Stadler, T. (2014). The fossilized birth–death process for coherent calibration of divergence-time estimates. <i>Proceedings of the National Academy of Sciences</i>, <i>111</i>(29), E2957–E2966.</span></li>
+<li><span id="Gavryushkina2014">Gavryushkina, A., Welch, D., Stadler, T., &amp; Drummond, A. J. (2014). Bayesian Inference of Sampled Ancestor Trees for Epidemiology and Fossil Calibration. <i>PLoS Computational Biology</i>, <i>10</i>(12), e1003919. https://doi.org/10.1371/journal.pcbi.1003919</span></li>
+<li><span id="Kuhnert2016">Kühnert, D., Stadler, T., Vaughan, T. G., &amp; Drummond, A. J. (2016). Phylodynamics with migration: a computational framework to quantify population structure from genomic data. <i>Molecular Biology and Evolution</i>, <i>33</i>(8), 2102–2116.</span></li>
+<li><span id="Scire2022">Scire, J., Barido-Sottani, J., Kühnert, D., Vaughan, T. G., &amp; Stadler, T. (2022). Robust phylodynamic analysis of genetic sequencing data from structured populations. <i>Viruses</i>, <i>14</i>(8), 1648.</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

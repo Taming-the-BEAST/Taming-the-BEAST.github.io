@@ -12,6 +12,237 @@
 		</image>
 				
 			<item>
+				<title>BDMM Prime for Macroevolution</title>
+				<description>
+					The fossilized birth-death process and extensions
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Rachel C. M. Warnock
+							
+					
+						
+								
+									and  Timothy G Vaughan
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/0ad549aa2cc2ac1aff9b0f2c487af2db2152e398'
+					&gt;
+						10 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/rachelwarnock'
+					&gt;
+						rachelwarnock
+					&lt;/a&gt;
+					: Merge pull request #1 from laduplessis/master
+
+Fix link to bibtex file
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Thu, 10 Jul 2025 18:18:47 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</guid>
+			</item>
+				
+			<item>
+				<title>Model selection</title>
+				<description>
+					Model selection with nested sampling
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Remco Bouckaert
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/sgtRoberty/NS-tutorial/commit/a481162683bf0af2d39798d13780bee2808849b4'
+					&gt;
+						10 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Fixed some typos
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 10 Jul 2025 15:22:33 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Total Evidence Tutorial</title>
+				<description>
+					Inferring phylogenies using genetic sequences and morphological characters
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Bethany J. Allen
+							
+					
+						
+								
+									and Joëlle Barido-Sottani
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/4414b7a8f4c5eb0f94a76d6508eb597399097e22'
+					&gt;
+						10 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bjoelle'
+					&gt;
+						bjoelle
+					&lt;/a&gt;
+					: Merge pull request #3 from NicoNeureiter/main
+
+Two small contributions after checking the tutorial
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Thu, 10 Jul 2025 15:04:57 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Divergence Time Estimation</title>
+				<description>
+					Dating Species Divergences with the Fossilized Birth-Death Process
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Tracy A. Heath
+							
+					
+						
+								, Rachel Warnock
+						
+					
+						
+								
+									and Bethany J. Allen
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/f521686936e4e55d7d72dbc743ebddf40d143ca0'
+					&gt;
+						10 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Merge pull request #12 from sgtRoberty/main
+
+FBD tutorial update for ttb2025
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 10 Jul 2025 14:03:24 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Molecular clock dating and modelling rate variation</title>
+				<description>
+					Accounting for evolutionary rate variation in passerine birds
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Simon Ho
+							
+					
+						
+								
+									and Jacqueline Nguyen
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Molecular-clock-dating-and-modelling-rate-variation/commit/a1ac9f8566976ca524640451ba9664d8beb597e6'
+					&gt;
+						10 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Figure width
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Thu, 10 Jul 2025 13:15:42 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</guid>
+			</item>
+				
+			<item>
 				<title>StarBeast3 Tutorial</title>
 				<description>
 					Estimating species trees using StarBeast3
@@ -106,51 +337,6 @@
 			</item>
 				
 			<item>
-				<title>Total Evidence Tutorial</title>
-				<description>
-					Inferring phylogenies using genetic sequences and morphological characters
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Bethany J. Allen
-							
-					
-						
-								
-									and Joëlle Barido-Sottani
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/43240f231eaf25aec67577c85340012d4dd462a6'
-					&gt;
-						8 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bethany-j-allen'
-					&gt;
-						bethany-j-allen
-					&lt;/a&gt;
-					: Miscounted sampled ancestors
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
-				</description>
-				<pubDate>Tue, 08 Jul 2025 07:27:55 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
-			</item>
-				
-			<item>
 				<title>Time stamped data</title>
 				<description>
 					Time-stamped data
@@ -201,57 +387,6 @@
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/MEP-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/MEP-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Divergence Time Estimation</title>
-				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tracy A. Heath
-							
-					
-						
-								, Rachel Warnock
-						
-					
-						
-								
-									and Bethany J. Allen
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/9d5474a067f131679b607e6c79542641913be106'
-					&gt;
-						2 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/jugne'
-					&gt;
-						jugne
-					&lt;/a&gt;
-					: Update README.md
-
-Closes #11
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.4
-					
-				</description>
-				<pubDate>Wed, 02 Jul 2025 11:55:39 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -997,134 +1132,6 @@ Removed references to tutorial template bib file.
 				<category>Easy</category>
 				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Language Phylogenies</title>
-				<description>
-					Using Babel to analyse linguistic data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Simon J. Greenhill
-							
-					
-						
-								
-									and  Konstantin Hoffmann
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/04c6a4a164e03bd24886625f33191e334ed9207e'
-					&gt;
-						29 Jul 2019
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/KonstantinHoffmann'
-					&gt;
-						KonstantinHoffmann
-					&lt;/a&gt;
-					: Densitree paragraph
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Mon, 29 Jul 2019 08:20:13 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
-			</item>
-				
-			<item>
-				<title>Model selection</title>
-				<description>
-					Model selection with nested sampling
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Remco Bouckaert
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rbouckaert/NS-tutorial/commit/fe86ed9962d589af316e897bdf6d8b3122a4dd00'
-					&gt;
-						24 Mar 2019
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rbouckaert'
-					&gt;
-						rbouckaert
-					&lt;/a&gt;
-					: update tutorial to use MCMC2NS utility
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Sun, 24 Mar 2019 22:45:59 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/NS-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/NS-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>CladeAge Tutorial</title>
-				<description>
-					Fossil-based divergence-time estimation with CladeAge
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Michael Matschiner
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/mmatschiner/CladeAge-Tutorial/commit/64dee2c3e902340cec82edfbfc6c77cf794e4335'
-					&gt;
-						21 Feb 2019
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/mmatschiner'
-					&gt;
-						mmatschiner
-					&lt;/a&gt;
-					: Merge branch 'master' of https://github.com/mmatschiner/CladeAge-Tutorial
-Added local update describing species-tree specification with BEAUti.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.0
-					
-				</description>
-				<pubDate>Thu, 21 Feb 2019 22:43:45 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CladeAge-Tutorial/</guid>
 			</item>
 		
 	</channel>

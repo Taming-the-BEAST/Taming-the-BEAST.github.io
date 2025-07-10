@@ -55,7 +55,7 @@ You can choose to set up a build environment locally or use a container image. B
   Withing the container you can build as you would on your local machine (see below), but you should skip step 2 as all required dependencies are installed.
   At step 4 you may need to supply the option `--host=0.0.0.0` to be able to view the site.
 
-#### Build directly on locally machine
+#### Build directly on local machine
 
   1. To build the website locally, clone the repo with:
   

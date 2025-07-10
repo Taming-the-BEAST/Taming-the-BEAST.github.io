@@ -266,14 +266,14 @@ name="taxa">
                     </taxonset>
                     <Uniform id="Uniform.11" lower="4.9" name="distr" upper="7.75"/>
                 </distribution>
-                <distribution id="Ailuractos_lufengensis_7.7.prior" spec="beast.base.evolution.tree.MRCAPrior" tipsonly="true" tree="@Tree.t:bearsTree">
-                    <taxonset id="Ailuractos_lufengensis_7.7" spec="TaxonSet">
+                <distribution id="Ailurarctos_lufengensis.prior" spec="beast.base.evolution.tree.MRCAPrior" tipsonly="true" tree="@Tree.t:bearsTree">
+                    <taxonset id="Ailurarctos_lufengensis" spec="TaxonSet">
                         <taxon idref="Ailurarctos_lufengensis_7.7"/>
                     </taxonset>
                     <Uniform id="Uniform.12" lower="5.8" name="distr" upper="8.2"/>
                 </distribution>
-                <distribution id="Arctodus_simus_0.51.prior" spec="beast.base.evolution.tree.MRCAPrior" tipsonly="true" tree="@Tree.t:bearsTree">
-                    <taxonset id="Arctodus_simus_0.51" spec="TaxonSet">
+                <distribution id="Arctodus_simus.prior" spec="beast.base.evolution.tree.MRCAPrior" tipsonly="true" tree="@Tree.t:bearsTree">
+                    <taxonset id="Arctodus_simus" spec="TaxonSet">
                         <taxon idref="Arctodus_simus_0.5"/>
                     </taxonset>
                     <Uniform id="Uniform.13" lower="0.012" name="distr" upper="2.588"/>
@@ -510,8 +510,8 @@ name="taxa">
         <operator id="SATreeRootScalerFBD.t:bearsTree" spec="sa.evolution.operators.SAScaleOperator" rootOnly="true" scaleFactor="0.95" tree="@Tree.t:bearsTree" weight="1.0"/>
         <operator id="SATreeScalerFBD.t:bearsTree" spec="sa.evolution.operators.SAScaleOperator" scaleFactor="0.95" tree="@Tree.t:bearsTree" weight="3.0"/>
         <operator id="tipDatesSampler.Agriarctos_spp" spec="SampledNodeDateRandomWalker" taxonset="@Agriarctos_spp" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
-        <operator id="tipDatesSampler.Ailuractos_lufengensis_7.7" spec="SampledNodeDateRandomWalker" taxonset="@Ailuractos_lufengensis_7.7" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
-        <operator id="tipDatesSampler.Arctodus_simus_0.51" spec="SampledNodeDateRandomWalker" taxonset="@Arctodus_simus_0.51" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
+        <operator id="tipDatesSampler.Ailurarctos_lufengensis" spec="SampledNodeDateRandomWalker" taxonset="@Ailurarctos_lufengensis" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
+        <operator id="tipDatesSampler.Arctodus_simus" spec="SampledNodeDateRandomWalker" taxonset="@Arctodus_simus" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
         <operator id="tipDatesSampler.Ballusia_elmensis" spec="SampledNodeDateRandomWalker" taxonset="@Ballusia_elmensis" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
         <operator id="tipDatesSampler.Indarctos_arctoides" spec="SampledNodeDateRandomWalker" taxonset="@Indarctos_arctoides" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
         <operator id="tipDatesSampler.Indarctos_punjabiensis_spp" spec="SampledNodeDateRandomWalker" taxonset="@Indarctos_punjabiensis_spp" tree="@Tree.t:bearsTree" weight="1.0" windowSize="1.0"/>
@@ -556,8 +556,8 @@ name="taxa">
             <log id="SACountFBD.t:bearsTree" spec="sa.evolution.tree.SampledAncestorLogger" tree="@Tree.t:bearsTree"/>
             <log idref="5_BrownBears.prior"/>
             <log idref="Agriarctos_spp.prior"/>
-            <log idref="Ailuractos_lufengensis_7.7.prior"/>
-            <log idref="Arctodus_simus_0.51.prior"/>
+            <log idref="Ailurarctos_lufengensis.prior"/>
+            <log idref="Arctodus_simus.prior"/>
             <log idref="Ballusia_elmensis.prior"/>
             <log idref="Indarctos_arctoides.prior"/>
             <log idref="Indarctos_punjabiensis_spp.prior"/>

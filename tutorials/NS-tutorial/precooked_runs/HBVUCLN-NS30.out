@@ -1,0 +1,38 @@
+Loading package BICEPS v1.1.2 SSM v1.2.1 remaster v2.7.2 feast v10.5.0 NS v1.2.2 bModelTest v1.3.3 starbeast3 v1.2.1 CCD v1.0.3 Mascot v3.0.7 BDMM-Prime v2.4.0 SA v2.1.1 BEAST.base v2.7.8 MultiTypeTree v8.2.0 BDMM v2.0.0 MASTER v7.0.0 BEASTLabs v2.0.3 BEAST.app v2.7.8 BEAST_CLASSIC v1.6.4 MM v1.2.1 CoupledMCMC v1.2.2 BDSKY v1.5.1 OBAMA v1.1.1 bdtree v0.0.1 gammaspike v1.1.0 ORC v1.2.0 MODEL_SELECTION v1.6.2 lphybeast v1.3.0    
+About to invoke nestedsampling.util.NSLogAnalyser public static void nestedsampling.util.NSLogAnalyser.main(java.lang.String[])
+Args:[-noposterior, -N, 30, -log, HBVUCLN-NS30.log]
+
+Loading HBVUCLN-NS30.log, burnin 0%, skipping 0 log lines
+
+|---------|---------|---------|---------|---------|---------|---------|---------|
+*********************************************************************************
+
+Marginal likelihood: -12417.941209427103 sqrt(H/N)=(2.037101812671995)=?=SD=(2.0736988078248095) Information: 124.49351385574582
+Max ESS: 521.5439118937253
+
+Calculating statistics
+
+|---------|---------|---------|---------|---------|---------|---------|---------|
+********************************************************************************
+
+#Particles = 30
+item                        mean     stddev   
+posterior                   -12488.7 4.623016
+likelihood                  -12293.3 4.259341
+prior                       -195.323 2.411189
+treeLikelihood              -12293.3 4.259341
+Tree.height                 3538.716 358.8309
+Tree.treeLength             20491.08 1343.621
+kappa                       2.700413 0.157589
+freqParameter.1             0.241424 0.005082
+freqParameter.2             0.264869 0.005751
+freqParameter.3             0.218817 0.005065
+freqParameter.4             0.27489  0.005625
+popSize                     2247.348 304.3088
+CoalescentConstant          -162.348 3.461591
+ucldStdev                   0.286036 0.071161
+rate.mean                   2.03E-5  1.18E-6 
+rate.variance               3.65E-11 1.89E-11
+rate.coefficientOfVariation 0.277031 0.064818
+Done!
+Done invoking nestedsampling.util.NSLogAnalyser

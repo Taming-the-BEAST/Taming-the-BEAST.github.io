@@ -1,0 +1,34 @@
+Loading package BICEPS v1.1.2 SSM v1.2.1 remaster v2.7.2 feast v10.5.0 NS v1.2.2 bModelTest v1.3.3 starbeast3 v1.2.1 CCD v1.0.3 Mascot v3.0.7 BDMM-Prime v2.4.0 SA v2.1.1 BEAST.base v2.7.8 MultiTypeTree v8.2.0 BDMM v2.0.0 MASTER v7.0.0 BEASTLabs v2.0.3 BEAST.app v2.7.8 BEAST_CLASSIC v1.6.4 MM v1.2.1 CoupledMCMC v1.2.2 BDSKY v1.5.1 OBAMA v1.1.1 bdtree v0.0.1 gammaspike v1.1.0 ORC v1.2.0 MODEL_SELECTION v1.6.2 lphybeast v1.3.0    
+About to invoke nestedsampling.util.NSLogAnalyser public static void nestedsampling.util.NSLogAnalyser.main(java.lang.String[])
+Args:[-noposterior, -N, 30, -log, HBVStrict-NS30.log]
+
+Loading HBVStrict-NS30.log, burnin 0%, skipping 0 log lines
+
+|---------|---------|---------|---------|---------|---------|---------|---------|
+*********************************************************************************
+
+Marginal likelihood: -12426.424659219112 sqrt(H/N)=(1.9487197469883364)=?=SD=(1.8689265005123525) Information: 113.92525956906857
+Max ESS: 415.691078202295
+
+Calculating statistics
+
+|---------|---------|---------|---------|---------|---------|---------|---------|
+********************************************************************************
+
+#Particles = 30
+item               mean     stddev   
+posterior          -12509.4 3.380924
+likelihood         -12312.4 3.312481
+prior              -196.985 1.44903 
+treeLikelihood     -12312.4 3.312481
+Tree.height        3470.464 130.0832
+Tree.treeLength    20696.58 559.9497
+kappa              2.698771 0.1626  
+freqParameter.1    0.240524 0.006909
+freqParameter.2    0.270687 0.00763 
+freqParameter.3    0.219939 0.006023
+freqParameter.4    0.268849 0.007123
+popSize            2325.738 298.5557
+CoalescentConstant -163.330 2.961035
+Done!
+Done invoking nestedsampling.util.NSLogAnalyser
