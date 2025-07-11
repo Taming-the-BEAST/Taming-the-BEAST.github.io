@@ -12,50 +12,48 @@
 		</image>
 				
 			<item>
-				<title>BDMM Prime for Macroevolution</title>
+				<title>Molecular clock dating and modelling rate variation</title>
 				<description>
-					The fossilized birth-death process and extensions
+					Accounting for evolutionary rate variation in passerine birds
 					&lt;br&gt;
 					By 
 					
 					
 						
-								Rachel C. M. Warnock
+								Simon Ho
 							
 					
 						
 								
-									and  Timothy G Vaughan
+									and Jacqueline Nguyen
 								
 							
 					
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/0ad549aa2cc2ac1aff9b0f2c487af2db2152e398'
+						'https://github.com/Taming-the-BEAST/Molecular-clock-dating-and-modelling-rate-variation/commit/033c16e6fa048ab618e5464f8e2d7fe107d3ac81'
 					&gt;
-						10 Jul 2025
+						11 Jul 2025
 					&lt;/a&gt;
 					by
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rachelwarnock'
+						'https://github.com/laduplessis'
 					&gt;
-						rachelwarnock
+						laduplessis
 					&lt;/a&gt;
-					: Merge pull request #1 from laduplessis/master
-
-Fix link to bibtex file
+					: Add precooked runs
 					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
+					Level: Beginner
 					
 						&lt;br&gt;
 						Requires: BEAST v2.7.7
 					
 				</description>
-				<pubDate>Thu, 10 Jul 2025 18:18:47 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</guid>
+				<pubDate>Fri, 11 Jul 2025 08:58:48 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</guid>
 			</item>
 				
 			<item>
@@ -195,51 +193,6 @@ FBD tutorial update for ttb2025
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Molecular clock dating and modelling rate variation</title>
-				<description>
-					Accounting for evolutionary rate variation in passerine birds
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Simon Ho
-							
-					
-						
-								
-									and Jacqueline Nguyen
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Molecular-clock-dating-and-modelling-rate-variation/commit/a1ac9f8566976ca524640451ba9664d8beb597e6'
-					&gt;
-						10 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Figure width
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
-				</description>
-				<pubDate>Thu, 10 Jul 2025 13:15:42 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</guid>
 			</item>
 				
 			<item>
@@ -1132,6 +1085,51 @@ Removed references to tutorial template bib file.
 				<category>Easy</category>
 				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Language Phylogenies</title>
+				<description>
+					Using Babel to analyse linguistic data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Simon J. Greenhill
+							
+					
+						
+								
+									and  Konstantin Hoffmann
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/04c6a4a164e03bd24886625f33191e334ed9207e'
+					&gt;
+						29 Jul 2019
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/KonstantinHoffmann'
+					&gt;
+						KonstantinHoffmann
+					&lt;/a&gt;
+					: Densitree paragraph
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.5.2
+					
+				</description>
+				<pubDate>Mon, 29 Jul 2019 08:20:13 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
 			</item>
 		
 	</channel>
