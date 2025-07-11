@@ -580,7 +580,7 @@ filter="1-62,63-64">
                     
             <tree idref="Tree.t:bears"/>
                     
-            <operator id="ORCNER_null.c:bears_irbp_fossils" spec="Exchange" tree="@Tree.t:bears" weight="0.0"/>
+            <operator id="ORCNER_null.c:bears_irbp_fossils" spec="orc.operators.MetaNEROperator" rates="@ORCRates.c:bears_irbp_fossils" tree="@Tree.t:bears" weight="0.0"/>
                     
             <operator id="ORCNER_dAE_dBE_dCE.c:bears_irbp_fossils" spec="orc.ner.NEROperator_dAE_dBE_dCE" rates="@ORCRates.c:bears_irbp_fossils" tree="@Tree.t:bears" weight="1.0"/>
                     
@@ -676,7 +676,7 @@ filter="1-62,63-64">
                     
             <tree idref="Tree.t:bears"/>
                     
-            <operator id="ORCNER_null.c:bears_morphology" spec="Exchange" tree="@Tree.t:bears" weight="0.0"/>
+            <operator id="ORCNER_null.c:bears_morphology" spec="orc.operators.MetaNEROperator" rates="@ORCRates.c:bears_morphology" tree="@Tree.t:bears" weight="0.0"/>
                     
             <operator id="ORCNER_dAE_dBE_dCE.c:bears_morphology" spec="orc.ner.NEROperator_dAE_dBE_dCE" rates="@ORCRates.c:bears_morphology" tree="@Tree.t:bears" weight="1.0"/>
                     

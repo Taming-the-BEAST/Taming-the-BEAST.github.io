@@ -12,6 +12,98 @@
 		</image>
 				
 			<item>
+				<title>BDMM Prime for Macroevolution</title>
+				<description>
+					The fossilized birth-death process and extensions
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Rachel C. M. Warnock
+							
+					
+						
+								
+									and  Timothy G Vaughan
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/4c7db81f537fa290e2b0e29f41c87690c05994ee'
+					&gt;
+						11 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/rachelwarnock'
+					&gt;
+						rachelwarnock
+					&lt;/a&gt;
+					: Merge pull request #2 from laduplessis/master
+
+Remove $
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Fri, 11 Jul 2025 10:42:56 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</guid>
+			</item>
+				
+			<item>
+				<title>Troubleshooting initialization issues</title>
+				<description>
+					Getting BEAST2 to start
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/780653a417d4f8f7ccaf03b4a79c782bd0ba0bef'
+					&gt;
+						11 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Merge remote-tracking branch 'refs/remotes/github/master'
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 11 Jul 2025 10:30:25 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</guid>
+			</item>
+				
+			<item>
 				<title>Molecular clock dating and modelling rate variation</title>
 				<description>
 					Accounting for evolutionary rate variation in passerine birds
@@ -32,7 +124,7 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Molecular-clock-dating-and-modelling-rate-variation/commit/033c16e6fa048ab618e5464f8e2d7fe107d3ac81'
+						'https://github.com/Taming-the-BEAST/Molecular-clock-dating-and-modelling-rate-variation/commit/4839559db294ea6aa746e062757e456a4186d1a2'
 					&gt;
 						11 Jul 2025
 					&lt;/a&gt;
@@ -42,7 +134,7 @@
 					&gt;
 						laduplessis
 					&lt;/a&gt;
-					: Add precooked runs
+					: Fix typo Logcomineeeeer
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
@@ -50,7 +142,7 @@
 						Requires: BEAST v2.7.7
 					
 				</description>
-				<pubDate>Fri, 11 Jul 2025 08:58:48 +0000</pubDate>
+				<pubDate>Fri, 11 Jul 2025 09:59:40 +0000</pubDate>
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Molecular-clock-dating-and-modelling-rate-variation/</guid>
@@ -832,53 +924,6 @@ updated for 2.7
 			</item>
 				
 			<item>
-				<title>Troubleshooting initialization issues</title>
-				<description>
-					Getting BEAST2 to start
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/85f899d198c99b7069e0670ae9887958af99112a'
-					&gt;
-						20 Jul 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Merge pull request #2 from Taming-the-BEAST/louis-edits
-
-Updates based on comments (thanks Bethany)
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Thu, 20 Jul 2023 14:23:53 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</guid>
-			</item>
-				
-			<item>
 				<title>Skyline analyses for macroevolution</title>
 				<description>
 					Estimating evolutionary parameters from species phylogenies
@@ -1085,51 +1130,6 @@ Removed references to tutorial template bib file.
 				<category>Easy</category>
 				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Language Phylogenies</title>
-				<description>
-					Using Babel to analyse linguistic data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Simon J. Greenhill
-							
-					
-						
-								
-									and  Konstantin Hoffmann
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/04c6a4a164e03bd24886625f33191e334ed9207e'
-					&gt;
-						29 Jul 2019
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/KonstantinHoffmann'
-					&gt;
-						KonstantinHoffmann
-					&lt;/a&gt;
-					: Densitree paragraph
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Mon, 29 Jul 2019 08:20:13 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/LanguagePhylogenies/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/LanguagePhylogenies/</guid>
 			</item>
 		
 	</channel>

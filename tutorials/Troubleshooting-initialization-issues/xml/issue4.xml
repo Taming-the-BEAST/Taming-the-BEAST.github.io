@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:SA v2.1.1:MM v1.2.1:ORC v1.1.1:BEASTLabs v2.0.0" version="2.7">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:SA v2.1.1:MM v1.2.1:ORC v1.2.1:BEASTLabs v2.0.0" version="2.7">
         
 
     <data
@@ -624,7 +624,7 @@ filter="1-62,63-64">
                     
             <tree idref="Tree.t:bears"/>
                     
-            <operator id="ORCNER_null.c:bears_morphology" spec="Exchange" tree="@Tree.t:bears" weight="0.0"/>
+            <operator id="ORCNER_null.c:bears_morphology" spec="orc.operators.MetaNEROperator" rates="@ORCRates.c:bears_morphology" tree="@Tree.t:bears" weight="0.0"/>
                     
             <operator id="ORCNER_dAE_dBE_dCE.c:bears_morphology" spec="orc.ner.NEROperator_dAE_dBE_dCE" rates="@ORCRates.c:bears_morphology" tree="@Tree.t:bears" weight="1.0"/>
                     
@@ -724,7 +724,7 @@ filter="1-62,63-64">
                     
             <tree idref="Tree.t:bears"/>
                     
-            <operator id="ORCNER_null.c:bears_irbp_fossils" spec="Exchange" tree="@Tree.t:bears" weight="0.0"/>
+            <operator id="ORCNER_null.c:bears_irbp_fossils" spec="orc.operators.MetaNEROperator" tree="@Tree.t:bears" rates="@ORCRates.c:bears_irbp_fossils" weight="0.0"/>
                     
             <operator id="ORCNER_dAE_dBE_dCE.c:bears_irbp_fossils" spec="orc.ner.NEROperator_dAE_dBE_dCE" rates="@ORCRates.c:bears_irbp_fossils" tree="@Tree.t:bears" weight="1.0"/>
                     
