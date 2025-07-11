@@ -12,6 +12,47 @@
 		</image>
 				
 			<item>
+				<title>TiDeTree Tutorial</title>
+				<description>
+					Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Sophie Seidel
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis/TiDeTree-Tutorial/commit/6de8c12b44e6aa5054cc76a28e0605db037b2ee6'
+					&gt;
+						11 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Bad figure filename
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v>= 2.7
+					
+				</description>
+				<pubDate>Fri, 11 Jul 2025 20:20:31 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>BDMM Prime for Macroevolution</title>
 				<description>
 					The fossilized birth-death process and extensions
@@ -1089,47 +1130,6 @@ Removed references to tutorial template bib file.
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial</title>
-				<description>
-					Adaptive parallel Tempering
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/nicfel/CoupledMCMC-Tutorial/commit/63a0145c1ada7717aa2117b0b1da91bb0248dac3'
-					&gt;
-						6 Dec 2019
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/nicfel'
-					&gt;
-						nicfel
-					&lt;/a&gt;
-					: adds app description
-					&lt;br&gt;&lt;br&gt;
-					Level: Easy
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.0
-					
-				</description>
-				<pubDate>Fri, 06 Dec 2019 01:03:14 +0000</pubDate>
-				<category>Easy</category>
-				<link>https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/CoupledMCMC-Tutorial/</guid>
 			</item>
 		
 	</channel>

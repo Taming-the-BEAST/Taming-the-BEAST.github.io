@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='tidetree' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.7:tidetree v1.0.1" version="2.7">
+
+    <data
+id="alignment_4"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_013" spec="Sequence" taxon="0" totalcount="-1" value="0,0,0,0,1,0,0,0,1,0"/>
+        <sequence id="seq_123" spec="Sequence" taxon="1" totalcount="-1" value="0,0,0,0,1,0,0,0,1,0"/>
+        <sequence id="seq_104" spec="Sequence" taxon="10" totalcount="-1" value="0,0,0,0,0,0,0,0,1,0"/>
+        <sequence id="seq_1111" spec="Sequence" taxon="11" totalcount="-1" value="0,0,0,0,0,0,0,0,1,0"/>
+        <sequence id="seq_124" spec="Sequence" taxon="12" totalcount="-1" value="0,0,0,0,1,0,0,2,1,0"/>
+        <sequence id="seq_133" spec="Sequence" taxon="13" totalcount="-1" value="0,0,0,0,1,0,0,0,1,0"/>
+        <sequence id="seq_142" spec="Sequence" taxon="14" totalcount="-1" value="0,0,0,0,2,0,0,2,2,0"/>
+        <sequence id="seq_152" spec="Sequence" taxon="15" totalcount="-1" value="1,0,0,2,1,0,1,2,0,0"/>
+        <sequence id="seq_162" spec="Sequence" taxon="16" totalcount="-1" value="1,0,0,2,0,0,0,2,0,0"/>
+        <sequence id="seq_172" spec="Sequence" taxon="17" totalcount="-1" value="0,0,0,2,2,0,0,1,1,0"/>
+        <sequence id="seq_182" spec="Sequence" taxon="18" totalcount="-1" value="0,0,1,2,1,0,0,1,1,0"/>
+        <sequence id="seq_213" spec="Sequence" taxon="2" totalcount="-1" value="0,0,0,1,0,0,0,0,1,0"/>
+        <sequence id="seq_313" spec="Sequence" taxon="3" totalcount="-1" value="0,0,0,1,0,0,0,2,1,0"/>
+        <sequence id="seq_410" spec="Sequence" taxon="4" totalcount="-1" value="2,0,0,2,1,0,1,2,1,0"/>
+        <sequence id="seq_510" spec="Sequence" taxon="5" totalcount="-1" value="2,0,0,2,1,0,1,2,1,0"/>
+        <sequence id="seq_69" spec="Sequence" taxon="6" totalcount="-1" value="2,0,0,2,1,0,1,0,0,0"/>
+        <sequence id="seq_79" spec="Sequence" taxon="7" totalcount="-1" value="2,0,0,2,1,0,1,0,2,0"/>
+        <sequence id="seq_88" spec="Sequence" taxon="8" totalcount="-1" value="0,0,0,0,0,0,0,0,0,0"/>
+        <sequence id="seq_96" spec="Sequence" taxon="9" totalcount="-1" value="0,0,0,0,0,0,0,0,0,0"/>
+    </data>
+
+    <data
+id="alignment_9"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_018" spec="Sequence" taxon="0" totalcount="-1" value="2,0,2,0,2,2,0,2,2,0"/>
+        <sequence id="seq_130" spec="Sequence" taxon="1" totalcount="-1" value="1,0,2,0,0,2,0,2,2,2"/>
+        <sequence id="seq_218" spec="Sequence" taxon="2" totalcount="-1" value="1,0,2,2,0,2,0,2,2,2"/>
+        <sequence id="seq_318" spec="Sequence" taxon="3" totalcount="-1" value="1,0,2,2,0,2,0,2,2,2"/>
+        <sequence id="seq_415" spec="Sequence" taxon="4" totalcount="-1" value="0,0,2,0,1,2,0,1,1,0"/>
+        <sequence id="seq_515" spec="Sequence" taxon="5" totalcount="-1" value="1,0,2,0,2,2,0,2,2,2"/>
+        <sequence id="seq_613" spec="Sequence" taxon="6" totalcount="-1" value="0,0,0,0,2,2,0,2,2,0"/>
+        <sequence id="seq_713" spec="Sequence" taxon="7" totalcount="-1" value="0,0,0,0,2,2,0,2,1,0"/>
+    </data>
+
+    <data
+id="alignment_1"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_010" spec="Sequence" taxon="0" totalcount="-1" value="1,2,0,1,1,0,1,2,1,0"/>
+        <sequence id="seq_118" spec="Sequence" taxon="1" totalcount="-1" value="1,0,0,1,1,0,1,2,1,0"/>
+        <sequence id="seq_210" spec="Sequence" taxon="2" totalcount="-1" value="1,0,0,1,1,0,1,2,1,0"/>
+        <sequence id="seq_310" spec="Sequence" taxon="3" totalcount="-1" value="1,0,0,1,1,0,1,2,1,0"/>
+        <sequence id="seq_48" spec="Sequence" taxon="4" totalcount="-1" value="2,2,0,1,1,0,1,1,1,0"/>
+        <sequence id="seq_58" spec="Sequence" taxon="5" totalcount="-1" value="2,2,0,1,2,0,1,1,1,0"/>
+        <sequence id="seq_67" spec="Sequence" taxon="6" totalcount="-1" value="1,0,1,2,2,0,2,2,1,0"/>
+        <sequence id="seq_77" spec="Sequence" taxon="7" totalcount="-1" value="1,0,1,2,2,0,2,2,1,0"/>
+        <sequence id="seq_86" spec="Sequence" taxon="8" totalcount="-1" value="2,0,0,1,1,0,1,1,1,0"/>
+    </data>
+
+    <data
+id="alignment_5"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_014" spec="Sequence" taxon="0" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_125" spec="Sequence" taxon="1" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_105" spec="Sequence" taxon="10" totalcount="-1" value="1,0,0,2,1,0,0,0,0,0"/>
+        <sequence id="seq_1112" spec="Sequence" taxon="11" totalcount="-1" value="1,0,0,0,1,0,0,0,1,0"/>
+        <sequence id="seq_126" spec="Sequence" taxon="12" totalcount="-1" value="1,0,0,0,1,0,0,0,1,0"/>
+        <sequence id="seq_134" spec="Sequence" taxon="13" totalcount="-1" value="2,2,0,0,2,0,0,1,1,0"/>
+        <sequence id="seq_143" spec="Sequence" taxon="14" totalcount="-1" value="0,0,0,0,2,0,0,1,1,0"/>
+        <sequence id="seq_153" spec="Sequence" taxon="15" totalcount="-1" value="0,0,0,1,2,0,0,1,1,0"/>
+        <sequence id="seq_163" spec="Sequence" taxon="16" totalcount="-1" value="0,0,0,1,2,0,0,1,1,0"/>
+        <sequence id="seq_173" spec="Sequence" taxon="17" totalcount="-1" value="0,0,0,2,0,0,0,0,1,0"/>
+        <sequence id="seq_183" spec="Sequence" taxon="18" totalcount="-1" value="1,0,2,2,1,0,0,1,1,0"/>
+        <sequence id="seq_192" spec="Sequence" taxon="19" totalcount="-1" value="1,0,0,1,1,0,2,2,1,0"/>
+        <sequence id="seq_214" spec="Sequence" taxon="2" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_314" spec="Sequence" taxon="3" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_411" spec="Sequence" taxon="4" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_511" spec="Sequence" taxon="5" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_610" spec="Sequence" taxon="6" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_710" spec="Sequence" taxon="7" totalcount="-1" value="1,0,0,1,1,0,0,2,1,0"/>
+        <sequence id="seq_89" spec="Sequence" taxon="8" totalcount="-1" value="0,0,0,0,0,0,0,0,0,0"/>
+        <sequence id="seq_97" spec="Sequence" taxon="9" totalcount="-1" value="1,0,0,2,1,0,0,0,0,0"/>
+    </data>
+
+    <data
+id="alignment_7"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_016" spec="Sequence" taxon="0" totalcount="-1" value="1,0,2,1,0,0,0,1,1,0"/>
+        <sequence id="seq_128" spec="Sequence" taxon="1" totalcount="-1" value="1,0,2,1,0,0,0,1,1,0"/>
+        <sequence id="seq_216" spec="Sequence" taxon="2" totalcount="-1" value="1,0,2,1,2,0,2,1,1,0"/>
+        <sequence id="seq_316" spec="Sequence" taxon="3" totalcount="-1" value="1,0,2,1,2,0,2,1,1,0"/>
+        <sequence id="seq_413" spec="Sequence" taxon="4" totalcount="-1" value="0,0,0,1,2,0,0,0,1,0"/>
+        <sequence id="seq_513" spec="Sequence" taxon="5" totalcount="-1" value="0,0,0,1,2,0,0,0,1,0"/>
+        <sequence id="seq_612" spec="Sequence" taxon="6" totalcount="-1" value="0,0,0,1,2,0,2,2,1,0"/>
+        <sequence id="seq_712" spec="Sequence" taxon="7" totalcount="-1" value="0,0,0,1,2,0,0,2,1,0"/>
+        <sequence id="seq_811" spec="Sequence" taxon="8" totalcount="-1" value="2,1,0,2,2,0,1,1,2,0"/>
+        <sequence id="seq_99" spec="Sequence" taxon="9" totalcount="-1" value="2,1,0,2,2,0,1,1,2,0"/>
+    </data>
+
+    <data
+id="alignment_3"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_012" spec="Sequence" taxon="0" totalcount="-1" value="0,0,0,1,1,0,1,2,2,0"/>
+        <sequence id="seq_120" spec="Sequence" taxon="1" totalcount="-1" value="0,0,0,1,1,0,1,2,2,0"/>
+        <sequence id="seq_103" spec="Sequence" taxon="10" totalcount="-1" value="0,0,0,0,0,0,0,0,1,0"/>
+        <sequence id="seq_1110" spec="Sequence" taxon="11" totalcount="-1" value="0,0,0,0,0,0,0,0,1,0"/>
+        <sequence id="seq_212" spec="Sequence" taxon="2" totalcount="-1" value="0,0,0,1,1,0,1,2,2,0"/>
+        <sequence id="seq_312" spec="Sequence" taxon="3" totalcount="-1" value="0,0,0,1,1,0,1,2,2,0"/>
+        <sequence id="seq_49" spec="Sequence" taxon="4" totalcount="-1" value="0,0,2,1,2,2,2,2,2,0"/>
+        <sequence id="seq_59" spec="Sequence" taxon="5" totalcount="-1" value="1,0,2,2,2,0,1,2,2,0"/>
+        <sequence id="seq_68" spec="Sequence" taxon="6" totalcount="-1" value="0,0,0,0,0,0,0,2,1,0"/>
+        <sequence id="seq_78" spec="Sequence" taxon="7" totalcount="-1" value="0,0,0,0,0,0,0,2,1,0"/>
+        <sequence id="seq_87" spec="Sequence" taxon="8" totalcount="-1" value="0,0,0,0,0,0,0,0,1,0"/>
+        <sequence id="seq_95" spec="Sequence" taxon="9" totalcount="-1" value="0,0,0,0,0,0,0,0,1,0"/>
+    </data>
+
+    <data
+id="alignment_8"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_017" spec="Sequence" taxon="0" totalcount="-1" value="1,1,2,1,1,0,2,2,2,0"/>
+        <sequence id="seq_129" spec="Sequence" taxon="1" totalcount="-1" value="1,1,2,1,2,2,2,2,2,0"/>
+        <sequence id="seq_217" spec="Sequence" taxon="2" totalcount="-1" value="1,1,1,0,2,0,1,1,2,2"/>
+        <sequence id="seq_317" spec="Sequence" taxon="3" totalcount="-1" value="1,1,1,0,2,0,1,1,1,0"/>
+        <sequence id="seq_414" spec="Sequence" taxon="4" totalcount="-1" value="1,0,2,2,2,2,2,2,0,1"/>
+        <sequence id="seq_514" spec="Sequence" taxon="5" totalcount="-1" value="1,2,1,2,2,2,2,2,2,0"/>
+    </data>
+
+    <data
+id="alignment_6"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_015" spec="Sequence" taxon="0" totalcount="-1" value="1,0,1,2,1,0,0,1,1,0"/>
+        <sequence id="seq_127" spec="Sequence" taxon="1" totalcount="-1" value="1,0,1,2,1,0,1,1,1,0"/>
+        <sequence id="seq_215" spec="Sequence" taxon="2" totalcount="-1" value="1,0,0,2,0,2,2,2,1,0"/>
+        <sequence id="seq_315" spec="Sequence" taxon="3" totalcount="-1" value="1,0,0,2,0,2,2,2,1,0"/>
+        <sequence id="seq_412" spec="Sequence" taxon="4" totalcount="-1" value="0,0,0,2,0,0,1,1,1,0"/>
+        <sequence id="seq_512" spec="Sequence" taxon="5" totalcount="-1" value="0,0,0,2,0,0,1,1,1,0"/>
+        <sequence id="seq_611" spec="Sequence" taxon="6" totalcount="-1" value="0,0,0,2,0,0,0,1,1,0"/>
+        <sequence id="seq_711" spec="Sequence" taxon="7" totalcount="-1" value="0,0,0,2,0,0,0,1,1,0"/>
+        <sequence id="seq_810" spec="Sequence" taxon="8" totalcount="-1" value="2,0,0,0,0,0,0,1,1,0"/>
+        <sequence id="seq_98" spec="Sequence" taxon="9" totalcount="-1" value="0,0,0,0,0,0,0,1,1,0"/>
+    </data>
+
+    <data
+id="alignment_2"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_011" spec="Sequence" taxon="0" totalcount="-1" value="1,2,0,1,1,0,2,2,2,0"/>
+        <sequence id="seq_119" spec="Sequence" taxon="1" totalcount="-1" value="1,2,0,1,1,0,2,2,2,0"/>
+        <sequence id="seq_211" spec="Sequence" taxon="2" totalcount="-1" value="1,1,0,1,1,0,2,2,2,0"/>
+        <sequence id="seq_311" spec="Sequence" taxon="3" totalcount="-1" value="1,0,0,1,1,0,2,2,2,0"/>
+    </data>
+
+    <data
+id="alignment_10"
+spec="Alignment"
+dataType="integer"
+name="taxa">
+        <sequence id="seq_019" spec="Sequence" taxon="0" totalcount="-1" value="1,0,2,1,0,0,0,2,2,2"/>
+        <sequence id="seq_135" spec="Sequence" taxon="1" totalcount="-1" value="1,0,2,2,0,0,0,2,2,2"/>
+        <sequence id="seq_219" spec="Sequence" taxon="2" totalcount="-1" value="1,0,2,2,0,2,0,2,2,2"/>
+        <sequence id="seq_319" spec="Sequence" taxon="3" totalcount="-1" value="1,0,2,2,2,2,0,2,2,2"/>
+    </data>
+
+    <map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+
+    <map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+
+    <map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+
+    <map name="Normal" >beast.base.inference.distribution.Normal</map>
+
+    <map name="Beta" >beast.base.inference.distribution.Beta</map>
+
+    <map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+
+    <map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+
+    <map name="prior" >beast.base.inference.distribution.Prior</map>
+
+    <map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+
+    <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+    <run id="mcmc" spec="MCMC" chainLength="5000000">
+        <state id="state" spec="State" storeEvery="5000">
+            <stateNode id="Tree.t:alignment_4" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_4"/>
+                <parameter id="RealParameter.0.alignment_4" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_4" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_4" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_4" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_4" spec="TaxonSet" alignment="@alignment_4"/>
+                </trait>
+                <trait id="dateTrait.t:alignment_41" spec="beast.base.evolution.tree.TraitSet" taxa="@TaxonSet.alignment_4" traitname="date" value=""/>
+                <taxonset idref="TaxonSet.alignment_4"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_9" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_9"/>
+                <parameter id="RealParameter.0.alignment_9" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_9" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_9" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_9" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_9" spec="TaxonSet" alignment="@alignment_9"/>
+                </trait>
+                <taxonset idref="TaxonSet.alignment_9"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_1" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_1"/>
+                <parameter id="RealParameter.0" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_1" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_1" spec="TaxonSet" alignment="@alignment_1"/>
+                </trait>
+                <taxonset idref="TaxonSet.alignment_1"/>
+            </stateNode>
+            <parameter id="editProbabilities.s:sitemodel" spec="parameter.RealParameter" dimension="2" name="stateNode">0.9 0.1</parameter>
+            <stateNode id="Tree.t:alignment_5" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_5"/>
+                <parameter id="RealParameter.0.alignment_5" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_5" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_5" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_5" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_5" spec="TaxonSet" alignment="@alignment_5"/>
+                </trait>
+                <taxonset idref="TaxonSet.alignment_5"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_7" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_7"/>
+                <parameter id="RealParameter.0.alignment_7" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_7" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_7" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_7" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_7" spec="TaxonSet" alignment="@alignment_7"/>
+                </trait>
+                <taxonset idref="TaxonSet.alignment_7"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_3" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_3"/>
+                <parameter id="RealParameter.0.alignment_3" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_3" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_3" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_3" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_3" spec="TaxonSet" alignment="@alignment_3"/>
+                </trait>
+                <trait id="dateTrait.t:alignment_31" spec="beast.base.evolution.tree.TraitSet" taxa="@TaxonSet.alignment_3" traitname="date" value=""/>
+                <taxonset idref="TaxonSet.alignment_3"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_8" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_8"/>
+                <parameter id="RealParameter.0.alignment_8" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_8" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_8" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_8" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_8" spec="TaxonSet" alignment="@alignment_8"/>
+                </trait>
+                <taxonset idref="TaxonSet.alignment_8"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_6" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_6"/>
+                <parameter id="RealParameter.0.alignment_6" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_6" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_6" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_6" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_6" spec="TaxonSet" alignment="@alignment_6"/>
+                </trait>
+                <taxonset idref="TaxonSet.alignment_6"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_2" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_2"/>
+                <parameter id="RealParameter.0.alignment_2" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_2" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_2" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_2" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_2" spec="TaxonSet" alignment="@alignment_2"/>
+                </trait>
+                <trait id="dateTrait.t:alignment_21" spec="beast.base.evolution.tree.TraitSet" taxa="@TaxonSet.alignment_2" traitname="date" value=""/>
+                <taxonset idref="TaxonSet.alignment_2"/>
+            </stateNode>
+            <stateNode id="Tree.t:alignment_10" spec="tidetree.tree.StartingTree" sequencesAreClustered="false">
+                <taxa idref="alignment_10"/>
+                <parameter id="RealParameter.0.alignment_10" spec="parameter.RealParameter" lower="0.0" name="rootHeight" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.1.alignment_10" spec="parameter.RealParameter" lower="0.0" name="editDuration" upper="0.0">53.0</parameter>
+                <parameter id="RealParameter.2.alignment_10" spec="parameter.RealParameter" lower="0.0" name="editHeight" upper="0.0">53.0</parameter>
+                <trait id="dateTrait.t:alignment_10" spec="beast.base.evolution.tree.TraitSet" traitname="date" value="">
+                    <taxa id="TaxonSet.alignment_10" spec="TaxonSet" alignment="@alignment_10"/>
+                </trait>
+                <taxonset idref="TaxonSet.alignment_10"/>
+            </stateNode>
+            <parameter id="clockRate.c:clockmodel" spec="parameter.RealParameter" name="stateNode">1.0</parameter>
+            <parameter id="BDBirthRate.t:alignment_1" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_1" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_10" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_10" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_2" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_2" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_3" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_3" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_4" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_4" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_5" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_5" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_6" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_6" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_7" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_7" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_8" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_8" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+            <parameter id="BDBirthRate.t:alignment_9" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="10000.0">0.05</parameter>
+            <parameter id="BDDeathRate.t:alignment_9" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.5</parameter>
+        </state>
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution id="BirthDeath.t:alignment_1" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_1" relativeDeathRate="@BDDeathRate.t:alignment_1" tree="@Tree.t:alignment_1"/>
+                <distribution id="BirthDeath.t:alignment_10" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_10" relativeDeathRate="@BDDeathRate.t:alignment_10" tree="@Tree.t:alignment_10"/>
+                <distribution id="BirthDeath.t:alignment_2" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_2" relativeDeathRate="@BDDeathRate.t:alignment_2" tree="@Tree.t:alignment_2"/>
+                <distribution id="BirthDeath.t:alignment_3" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_3" relativeDeathRate="@BDDeathRate.t:alignment_3" tree="@Tree.t:alignment_3"/>
+                <distribution id="BirthDeath.t:alignment_4" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_4" relativeDeathRate="@BDDeathRate.t:alignment_4" tree="@Tree.t:alignment_4"/>
+                <distribution id="BirthDeath.t:alignment_5" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_5" relativeDeathRate="@BDDeathRate.t:alignment_5" tree="@Tree.t:alignment_5"/>
+                <distribution id="BirthDeath.t:alignment_6" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_6" relativeDeathRate="@BDDeathRate.t:alignment_6" tree="@Tree.t:alignment_6"/>
+                <distribution id="BirthDeath.t:alignment_7" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_7" relativeDeathRate="@BDDeathRate.t:alignment_7" tree="@Tree.t:alignment_7"/>
+                <distribution id="BirthDeath.t:alignment_8" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_8" relativeDeathRate="@BDDeathRate.t:alignment_8" tree="@Tree.t:alignment_8"/>
+                <distribution id="BirthDeath.t:alignment_9" spec="beast.base.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:alignment_9" relativeDeathRate="@BDDeathRate.t:alignment_9" tree="@Tree.t:alignment_9"/>
+                <prior id="BirthRatePrior.t:alignment_1" name="distribution" x="@BDBirthRate.t:alignment_1">
+                    <Uniform id="Uniform.40" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_10" name="distribution" x="@BDBirthRate.t:alignment_10">
+                    <Uniform id="Uniform.42" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_2" name="distribution" x="@BDBirthRate.t:alignment_2">
+                    <Uniform id="Uniform.44" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_3" name="distribution" x="@BDBirthRate.t:alignment_3">
+                    <Uniform id="Uniform.46" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_4" name="distribution" x="@BDBirthRate.t:alignment_4">
+                    <Uniform id="Uniform.48" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_5" name="distribution" x="@BDBirthRate.t:alignment_5">
+                    <Uniform id="Uniform.50" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_6" name="distribution" x="@BDBirthRate.t:alignment_6">
+                    <Uniform id="Uniform.52" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_7" name="distribution" x="@BDBirthRate.t:alignment_7">
+                    <Uniform id="Uniform.54" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_8" name="distribution" x="@BDBirthRate.t:alignment_8">
+                    <Uniform id="Uniform.56" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="BirthRatePrior.t:alignment_9" name="distribution" x="@BDBirthRate.t:alignment_9">
+                    <Uniform id="Uniform.58" name="distr" upper="0.1"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_1" name="distribution" x="@BDDeathRate.t:alignment_1">
+                    <Uniform id="Uniform.41" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_10" name="distribution" x="@BDDeathRate.t:alignment_10">
+                    <Uniform id="Uniform.43" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_2" name="distribution" x="@BDDeathRate.t:alignment_2">
+                    <Uniform id="Uniform.45" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_3" name="distribution" x="@BDDeathRate.t:alignment_3">
+                    <Uniform id="Uniform.47" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_4" name="distribution" x="@BDDeathRate.t:alignment_4">
+                    <Uniform id="Uniform.49" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_5" name="distribution" x="@BDDeathRate.t:alignment_5">
+                    <Uniform id="Uniform.51" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_6" name="distribution" x="@BDDeathRate.t:alignment_6">
+                    <Uniform id="Uniform.53" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_7" name="distribution" x="@BDDeathRate.t:alignment_7">
+                    <Uniform id="Uniform.55" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_8" name="distribution" x="@BDDeathRate.t:alignment_8">
+                    <Uniform id="Uniform.57" name="distr"/>
+                </prior>
+                <prior id="DeathRatePrior.t:alignment_9" name="distribution" x="@BDDeathRate.t:alignment_9">
+                    <Uniform id="Uniform.59" name="distr"/>
+                </prior>
+                <prior id="ClockPrior.c:clockmodel" name="distribution" x="@clockRate.c:clockmodel">
+                    <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                        <parameter id="RealParameter.31" spec="parameter.RealParameter" estimate="false" name="M">-5.0</parameter>
+                        <parameter id="RealParameter.32" spec="parameter.RealParameter" estimate="false" lower="0.0" name="S" upper="5.0">1.0</parameter>
+                    </LogNormal>
+                </prior>
+                <prior id="EditProbabilitiesPrior.s:sitemodel" name="distribution" x="@editProbabilities.s:sitemodel">
+                    <distr id="Dirichlet.0" spec="distribution.Dirichlet">
+                        <parameter id="alpha.s:sitemodel" spec="parameter.RealParameter" dimension="2" name="alpha">1.5 1.5</parameter>
+                    </distr>
+                </prior>
+            </distribution>
+            <distribution id="likelihood" spec="CompoundDistribution" useThreads="true">
+                <distribution id="TiDeTreeTreeLikelihood.alignment_1" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" data="@alignment_1" tree="@Tree.t:alignment_1">
+                    <parameter id="experimentLength.alignment_1" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                    <siteModel id="SiteModel.s:sitemodel" spec="SiteModel">
+                        <parameter id="mutationRate.s:sitemodel" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
+                        <parameter id="gammaShape.s:sitemodel" spec="parameter.RealParameter" estimate="false" name="shape">1.0</parameter>
+                        <parameter id="proportionInvariant.s:sitemodel" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                        <substModel id="TideTreeSubstmodel.s:sitemodel" spec="tidetree.substitutionmodel.EditAndSilencingModel" editRates="@editProbabilities.s:sitemodel">
+                            <parameter id="silencingRate.s:sitemodel" spec="parameter.RealParameter" estimate="false" name="silencingRate">0.0</parameter>
+                            <parameter id="editHeight.s:sitemodel" spec="parameter.RealParameter" estimate="false" name="editHeight">54.0</parameter>
+                            <parameter id="editDuration.s:sitemodel" spec="parameter.RealParameter" estimate="false" name="editDuration">54.0</parameter>
+                            <frequencies id="freq" spec="Frequencies" estimate="false">
+                                <parameter id="RealParameter.3" spec="parameter.RealParameter" dimension="3" lower="0.0" name="frequencies" upper="0.0">1.0 0.0 0.0</parameter>
+                            </frequencies>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel id="StrictClock.c:clockmodel" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c:clockmodel"/>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_2" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_2" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_2">
+                    <parameter id="experimentLength.alignment_2" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_3" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_3" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_3">
+                    <parameter id="experimentLength.alignment_3" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_4" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_4" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_4">
+                    <parameter id="experimentLength.alignment_4" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_5" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_5" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_5">
+                    <parameter id="experimentLength.alignment_5" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_6" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_6" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_6">
+                    <parameter id="experimentLength.alignment_6" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_7" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_7" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_7">
+                    <parameter id="experimentLength.alignment_7" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_8" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_8" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_8">
+                    <parameter id="experimentLength.alignment_8" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_9" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_9" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_9">
+                    <parameter id="experimentLength.alignment_9" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+                <distribution id="TiDeTreeTreeLikelihood.alignment_10" spec="tidetree.distributions.TreeLikelihoodWithEditWindow" branchRateModel="@StrictClock.c:clockmodel" data="@alignment_10" siteModel="@SiteModel.s:sitemodel" tree="@Tree.t:alignment_10">
+                    <parameter id="experimentLength.alignment_10" spec="parameter.RealParameter" estimate="false" name="origin">54.0</parameter>
+                </distribution>
+            </distribution>
+        </distribution>
+        <operator id="editProbabilitiesScaler.s:sitemodel" spec="operator.DeltaExchangeOperator" delta="0.1" weight="4.0">
+            <parameter idref="editProbabilities.s:sitemodel"/>
+        </operator>
+        <operator id="StrictClockRateScaler.c:clockmodel" spec="ScaleOperator" parameter="@clockRate.c:clockmodel" weight="3.0"/>
+        <operator id="strictClockUpDownOperator.c:clockmodel" spec="operator.UpDownOperator" scaleFactor="0.75" weight="3.0">
+            <up idref="clockRate.c:clockmodel"/>
+            <down idref="Tree.t:alignment_1"/>
+        </operator>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_1" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_1" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_1" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_1" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_1" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_1" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_1" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_1" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_1" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_1" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_1" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_1" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_1" spec="Exchange" tree="@Tree.t:alignment_1" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_1" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_1" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_1" spec="WilsonBalding" tree="@Tree.t:alignment_1" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_1" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_1" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_1" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_1" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_10" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_10" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_10" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_10" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_10" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_10" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_10" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_10" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_10" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_10" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_10" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_10" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_10" spec="Exchange" tree="@Tree.t:alignment_10" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_10" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_10" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_10" spec="WilsonBalding" tree="@Tree.t:alignment_10" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_10" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_10" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_10" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_10" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_2" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_2" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_2" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_2" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_2" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_2" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_2" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_2" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_2" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_2" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_2" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_2" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_2" spec="Exchange" tree="@Tree.t:alignment_2" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_2" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_2" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_2" spec="WilsonBalding" tree="@Tree.t:alignment_2" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_2" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_2" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_2" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_2" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_3" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_3" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_3" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_3" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_3" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_3" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_3" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_3" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_3" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_3" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_3" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_3" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_3" spec="Exchange" tree="@Tree.t:alignment_3" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_3" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_3" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_3" spec="WilsonBalding" tree="@Tree.t:alignment_3" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_3" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_3" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_3" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_3" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_4" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_4" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_4" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_4" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_4" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_4" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_4" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_4" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_4" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_4" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_4" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_4" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_4" spec="Exchange" tree="@Tree.t:alignment_4" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_4" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_4" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_4" spec="WilsonBalding" tree="@Tree.t:alignment_4" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_4" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_4" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_4" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_4" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_5" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_5" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_5" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_5" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_5" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_5" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_5" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_5" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_5" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_5" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_5" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_5" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_5" spec="Exchange" tree="@Tree.t:alignment_5" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_5" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_5" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_5" spec="WilsonBalding" tree="@Tree.t:alignment_5" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_5" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_5" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_5" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_5" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_6" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_6" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_6" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_6" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_6" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_6" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_6" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_6" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_6" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_6" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_6" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_6" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_6" spec="Exchange" tree="@Tree.t:alignment_6" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_6" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_6" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_6" spec="WilsonBalding" tree="@Tree.t:alignment_6" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_6" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_6" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_6" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_6" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_7" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_7" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_7" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_7" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_7" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_7" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_7" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_7" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_7" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_7" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_7" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_7" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_7" spec="Exchange" tree="@Tree.t:alignment_7" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_7" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_7" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_7" spec="WilsonBalding" tree="@Tree.t:alignment_7" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_7" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_7" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_7" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_7" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_8" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_8" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_8" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_8" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_8" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_8" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_8" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_8" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_8" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_8" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_8" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_8" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_8" spec="Exchange" tree="@Tree.t:alignment_8" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_8" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_8" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_8" spec="WilsonBalding" tree="@Tree.t:alignment_8" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_8" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_8" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_8" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_8" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathBICEPSEpochTop.t:alignment_9" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:alignment_9" weight="2.0"/>
+        <operator id="BirthDeathBICEPSEpochAll.t:alignment_9" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:alignment_9" weight="2.0"/>
+        <operator id="BirthDeathBICEPSTreeFlex.t:alignment_9" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:alignment_9" weight="2.0"/>
+        <operator id="BirthDeathTreeRootScaler.t:alignment_9" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:alignment_9" upper="10.0" weight="3.0"/>
+        <operator id="BirthDeathUniformOperator.t:alignment_9" spec="kernel.BactrianNodeOperator" tree="@Tree.t:alignment_9" weight="30.0"/>
+        <operator id="BirthDeathSubtreeSlide.t:alignment_9" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:alignment_9" weight="15.0"/>
+        <operator id="BirthDeathNarrow.t:alignment_9" spec="Exchange" tree="@Tree.t:alignment_9" weight="15.0"/>
+        <operator id="BirthDeathWide.t:alignment_9" spec="Exchange" isNarrow="false" tree="@Tree.t:alignment_9" weight="3.0"/>
+        <operator id="BirthDeathWilsonBalding.t:alignment_9" spec="WilsonBalding" tree="@Tree.t:alignment_9" weight="3.0"/>
+        <operator id="BirthRateScaler.t:alignment_9" spec="kernel.BactrianScaleOperator" parameter="@BDBirthRate.t:alignment_9" upper="10.0" weight="3.0"/>
+        <operator id="DeathRateScaler.t:alignment_9" spec="kernel.BactrianScaleOperator" parameter="@BDDeathRate.t:alignment_9" upper="10.0" weight="3.0"/>
+        <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="1000" model="@posterior" sort="smart">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_4"/>
+            <log id="TreeHeight.t:alignment_4" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_4"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_9"/>
+            <log id="TreeHeight.t:alignment_9" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_9"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_1"/>
+            <log id="TreeHeight.t:alignment_1" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_1"/>
+            <log idref="editProbabilities.s:sitemodel"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_5"/>
+            <log id="TreeHeight.t:alignment_5" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_5"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_7"/>
+            <log id="TreeHeight.t:alignment_7" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_7"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_3"/>
+            <log id="TreeHeight.t:alignment_3" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_3"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_8"/>
+            <log id="TreeHeight.t:alignment_8" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_8"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_6"/>
+            <log id="TreeHeight.t:alignment_6" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_6"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_2"/>
+            <log id="TreeHeight.t:alignment_2" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_2"/>
+            <log idref="TiDeTreeTreeLikelihood.alignment_10"/>
+            <log id="TreeHeight.t:alignment_10" spec="beast.base.evolution.tree.TreeHeightLogger" tree="@Tree.t:alignment_10"/>
+            <log idref="clockRate.c:clockmodel"/>
+            <log idref="BirthDeath.t:alignment_1"/>
+            <log idref="BDBirthRate.t:alignment_1"/>
+            <log idref="BDDeathRate.t:alignment_1"/>
+            <log idref="BirthDeath.t:alignment_10"/>
+            <log idref="BDBirthRate.t:alignment_10"/>
+            <log idref="BDDeathRate.t:alignment_10"/>
+            <log idref="BirthDeath.t:alignment_2"/>
+            <log idref="BDBirthRate.t:alignment_2"/>
+            <log idref="BDDeathRate.t:alignment_2"/>
+            <log idref="BirthDeath.t:alignment_3"/>
+            <log idref="BDBirthRate.t:alignment_3"/>
+            <log idref="BDDeathRate.t:alignment_3"/>
+            <log idref="BirthDeath.t:alignment_4"/>
+            <log idref="BDBirthRate.t:alignment_4"/>
+            <log idref="BDDeathRate.t:alignment_4"/>
+            <log idref="BirthDeath.t:alignment_5"/>
+            <log idref="BDBirthRate.t:alignment_5"/>
+            <log idref="BDDeathRate.t:alignment_5"/>
+            <log idref="BirthDeath.t:alignment_6"/>
+            <log idref="BDBirthRate.t:alignment_6"/>
+            <log idref="BDDeathRate.t:alignment_6"/>
+            <log idref="BirthDeath.t:alignment_7"/>
+            <log idref="BDBirthRate.t:alignment_7"/>
+            <log idref="BDDeathRate.t:alignment_7"/>
+            <log idref="BirthDeath.t:alignment_8"/>
+            <log idref="BDBirthRate.t:alignment_8"/>
+            <log idref="BDDeathRate.t:alignment_8"/>
+            <log idref="BirthDeath.t:alignment_9"/>
+            <log idref="BDBirthRate.t:alignment_9"/>
+            <log idref="BDDeathRate.t:alignment_9"/>
+        </logger>
+        <logger id="screenlog" spec="Logger" logEvery="1000">
+            <log idref="posterior"/>
+            <log id="ESS.0" spec="util.ESS" arg="@posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+        </logger>
+        <logger id="treelog.t:alignment_4" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_4" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_4"/>
+        </logger>
+        <logger id="treelog.t:alignment_9" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_9" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_9"/>
+        </logger>
+        <logger id="treelog.t:alignment_1" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_1" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_1"/>
+        </logger>
+        <logger id="treelog.t:alignment_5" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_5" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_5"/>
+        </logger>
+        <logger id="treelog.t:alignment_7" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_7" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_7"/>
+        </logger>
+        <logger id="treelog.t:alignment_3" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_3" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_3"/>
+        </logger>
+        <logger id="treelog.t:alignment_8" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_8" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_8"/>
+        </logger>
+        <logger id="treelog.t:alignment_6" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_6" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_6"/>
+        </logger>
+        <logger id="treelog.t:alignment_2" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_2" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_2"/>
+        </logger>
+        <logger id="treelog.t:alignment_10" spec="Logger" fileName="$(filebase).$(tree).trees" logEvery="1000" mode="tree">
+            <log id="TreeWithMetaDataLogger.t:alignment_10" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:alignment_10"/>
+        </logger>
+    </run>
+
+</beast>

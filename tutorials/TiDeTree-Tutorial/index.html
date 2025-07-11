@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>TiDeTree Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/TiDeTree-Tutorial/">TiDeTree Tutorial</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Sophie Seidel
+					
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_1.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_1.tidetree" target="_blank" rel="nofollow">
+						alignment_1.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_10.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_10.tidetree" target="_blank" rel="nofollow">
+						alignment_10.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_2.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_2.tidetree" target="_blank" rel="nofollow">
+						alignment_2.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_3.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_3.tidetree" target="_blank" rel="nofollow">
+						alignment_3.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_4.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_4.tidetree" target="_blank" rel="nofollow">
+						alignment_4.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_5.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_5.tidetree" target="_blank" rel="nofollow">
+						alignment_5.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_6.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_6.tidetree" target="_blank" rel="nofollow">
+						alignment_6.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_7.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_7.tidetree" target="_blank" rel="nofollow">
+						alignment_7.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_8.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_8.tidetree" target="_blank" rel="nofollow">
+						alignment_8.tidetree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/data/alignment_9.tidetree" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/data/alignment_9.tidetree" target="_blank" rel="nofollow">
+						alignment_9.tidetree
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/xml/tutorial-linked-birth-death.xml" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/xml/tutorial-linked-birth-death.xml" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/xml/tutorial-unlinked-birth-death.xml" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/xml/tutorial-unlinked-birth-death.xml" target="_blank" rel="nofollow">
+						tutorial-unlinked-birth-dea...
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.1.ccd.tree" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.1.ccd.tree" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.1.mcc.tree" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.1.mcc.tree" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.1.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.1.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.10.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.10.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.2.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.2.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.3.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.3.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.4.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.4.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.5.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.5.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.6.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.6.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.7.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.7.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.8.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.8.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.9.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.9.trees" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.log" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.log" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-linked-birth-death.xml.state" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-linked-birth-death.xml.state" target="_blank" rel="nofollow">
+						tutorial-linked-birth-death...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/raw/main/precooked_runs/tutorial-unlinked-birth-death.log" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/TiDeTree-Tutorial/main/precooked_runs/tutorial-unlinked-birth-death.log" target="_blank" rel="nofollow">
+						tutorial-unlinked-birth-dea...
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/seidels">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/13159214?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				seidels
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/commit/6de8c12b44e6aa5054cc76a28e0605db037b2ee6">
+					11 Jul 2025 - <span class="text-gray">Bad figure filename</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/commit/3260584d8f48153de8ee7be72b63e41e40cf39a4">
+					11 Jul 2025 - <span class="text-gray">Add some text about the substitution model</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/commit/8cb04f21fad30caff9b0630876093d81d33ff83f">
+					11 Jul 2025 - <span class="text-gray">Update Tracer figures</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/commit/40cb1336bb6e4fc3e7c1969db681d845bf214db1">
+					11 Jul 2025 - <span class="text-gray">Update tutorial files</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/commit/89be928bd8da5d1ea38ed579a1963fd337f3ef44">
+					11 Jul 2025 - <span class="text-gray">Update BEAUti figures</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="background">Background</h1>
+
+<p>Understanding how cells divide, differentiate, and die over time is central to developmental biology and cancer research. Recent advances in single-cell lineage recording allow us to track cell histories —but inferring developmental dynamics from these data requires statistical tools <a class="citation" href="#Askary2024">(Askary et al., 2024)</a>.</p>
+
+<p>TiDeTree <a class="citation" href="#Seidel2022">(Seidel &amp; Stadler, 2022)</a> is a BEAST 2 package designed for statistical inference from such single-cell recording data. It jointly infers time-scaled single-cell phylogenies and editing model parameters, including editing rates (analogous to molecular clock rates) and the probabilities of different editing outcomes. Beyond tree reconstruction, TiDeTree enables the inference of cell population dynamics, such as cell division, death and differentiation rates.</p>
+
+<p>This tutorial will guide you through the setup and application of TiDeTree using an example dataset. You will learn how to model the editing process, reconstruct timed cell phylogenies, and estimate parameters describing the underlying cellular dynamics.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v&gt;= 2.7 <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014; Bouckaert et al., 2019)</a>.</p>
+
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.x.</p>
+
+<h3 id="figtree">FigTree</h3>
+
+<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.x.</p>
+
+<hr />
+
+<h1 id="practical-tidetree-tutorial">Practical: TiDeTree Tutorial</h1>
+
+<p>In this tutorial, we will estimate editing rates and edit outcome probabilities, as well as effective net growth rates using TiDeTree.</p>
+
+<p>The aim is to:</p>
+<ul>
+  <li>Learn how to infer time-scaled trees from single-cell lineage recording data</li>
+  <li>Get to know how to choose the set-up of such an analysis</li>
+  <li>Learn how to read the output of a TiDeTree analysis</li>
+</ul>
+
+<h2 id="tidetree-installation">TiDeTree Installation</h2>
+
+<p>TiDeTree can be easily installed via the BEAUti package manager.</p>
+
+<blockquote>
+  <p>Start <strong>BEAUti</strong> then open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>.</p>
+
+  <p>Then scroll down, highlight the <strong>TiDeTree package</strong> and click on the <strong>Install/Upgrade</strong> button (<a href="#fig:download">Figure 1</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:download"></a>
+    <img style="width:100%;" src="figures/download.png" />
+    <figcaption>Figure 1:  Installing TiDeTree via the Package Manager</figcaption>
+</figure>
+
+<blockquote>
+  <p>Close the <strong>BEAST2 Package Manager</strong> and <em><strong>restart</strong></em> BEAUti to fully load the <strong>TiDeTree</strong> package.</p>
+</blockquote>
+
+<p>That’s it—TiDeTree is now ready to use!</p>
+
+<h2 id="the-data">The Data</h2>
+
+<p>In this tutorial, we’ll work with a dataset where a single mouse embryonic stem cell was grown in vitro for 54 hours to form a colony <a class="citation" href="#Chow2021">(Chow et al., 2021)</a>. Actually, we have data from 106 such colonies! At the end of the experiment, a colony contains between 3 and 39 cells, and we have alignments for all of them. However, in this tutorial we will work with a subset of 10 colonies to keep our analysis manageable.</p>
+
+<p>To understand how the cells divide over time, each colony was lineage traced using the intMEMOIR system. This system uses a barcode made up of 10 target sites that are all unedited (state 0) at the start of the experiment. Each target site can be independently edited by a recombinase. The recombinase can either invert (state 1) or delete (state 2) a site. Thus, over the course of the experiment, cells can acquire editing patterns that allow us to reconstruct their phylogeny (<a href="#fig:intMEMOIR">Figure 2</a>).</p>
+
+<figure>
+    <a id="fig:intMEMOIR"></a>
+    <img style="width:80%;" src="figures/data_crop.png" />
+    <figcaption> Figure 2: Setup of intMEMOIR for lineage tracing in stem cells. Adapted from <a class="citation" href="#GONG2021">(Gong et al., 2021)</a>.</figcaption>
+</figure>
+
+<h3 id="creating-tidetree-input-files">Creating <code class="language-plaintext highlighter-rouge">.tidetree</code> input files</h3>
+<p>Usually BEAST 2 expects an alignment of nucleotides as input. However, our alignment consists of integers, encoding the different editing outcomes (e.g. 0, 1 or 2). To still enable BEAUti to load our data, we have to create <code class="language-plaintext highlighter-rouge">.tidetree</code> files (which under the hood make BEAUti use an <code class="language-plaintext highlighter-rouge">AlignmentFromNexus</code> importer class that accepts integer values separated by commas).</p>
+
+<p>We provide <a href="https://github.com/seidels/tidetree/tree/main/scripts">a script</a> to convert standard <code class="language-plaintext highlighter-rouge">.csv</code> files into <code class="language-plaintext highlighter-rouge">.tidetree</code> files (in NEXUS format). For this tutorial, we will work directly with the <code class="language-plaintext highlighter-rouge">.tidetree</code> files.</p>
+
+<figure>
+    <a id="fig:download"></a>
+    <img style="width:80%;" src="figures/4-alignment.png" />
+    <figcaption>Figure 3: Example data input file in .csv format, where every cell in the table shows the editing outcome at a specific target site (column) for a given cell (row).</figcaption>
+</figure>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>What does the entry “0” in cell 1 at site 3 stand for?</p>
+</blockquote>
+
+<h2 id="setting-up-the-analysis-in-beauti">Setting up the analysis in BEAUti</h2>
+
+<p>We will use BEAUti2 to select the priors and starting values for our analysis and save these settings into a BEAST2 XML file.</p>
+
+<blockquote>
+  <p>Starting <strong>BEAUti2</strong> and load the TiDeTree template by selecting <strong>File &gt; Template &gt; tidetree</strong>.</p>
+</blockquote>
+
+<h3 id="loading-the-sequencing-data">Loading the sequencing data</h3>
+
+<p>Next we will load the <code class="language-plaintext highlighter-rouge">.tidetree</code> input files from the mouse embryonic stem cell experiment.</p>
+
+<blockquote>
+  <p>To load the data, select <strong>File &gt; Add Alignment</strong> and navigate to the directory containing the tutorial data. This directory contains 10 <code class="language-plaintext highlighter-rouge">.tidetree</code> files, each containing the data for a colony. Since the directory contains only these files and nothing else, we can select them all simply using <strong>Ctrl+A</strong> (or <strong>Command+A</strong> on a Mac) and then click on <strong>Open</strong>.</p>
+
+  <p>If you are short on time, feel free to only load the first 3 alignments for the purpose of going through the tutorial, because we will have to repeat some steps for each alignment.</p>
+</blockquote>
+
+<p>Now you should see 10 new records—one for each alignment—listed in BEAUti (<a href="#fig:partitions">Figure 4</a>).</p>
+
+<figure>
+    <a id="fig:partitions"></a>
+    <img style="width:100%;" src="figures/dat-in-beauti.png" />
+    <figcaption>Figure 4: Importing the alignments into BEAUTI. </figcaption>
+</figure>
+
+<blockquote>
+  <p>Double click on one of the alignments to display its contents (<a href="#fig:alignment-beauti">Figure 5</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:alignment-beauti"></a>
+    <img style="width:50%;" src="figures/alignment-beauti.png" />
+    <figcaption>Figure 5: One of the alignments as displayed in BEAUTI. </figcaption>
+</figure>
+
+<p>By default, BEAUti treats each dataset independently, assigning separate site, clock, and tree models to each one. However, since all our data was generated under the same experimental conditions, it makes sense to assume that the editing process was governed by the same parameters across datasets.</p>
+
+<p>To reflect this, we’ll link the Clock Models and Site Models across the datasets. This means that instead of estimating separate parameters for each alignment, BEAST 2 will infer a single, shared set of parameters for the editing process.</p>
+
+<blockquote>
+  <p>Click on one row and then press <strong>Ctrl+A</strong>, (or <strong>Command+A</strong> on a Mac) to select all alignments. Then, click on <strong>Link Site Models</strong> and <strong>Link Clock Models</strong> (<a href="#fig:linkedmodels">Figure 6</a>).</p>
+
+  <p>Double click on the site model for the first alignment and rename it to <strong>sitemodel</strong>.</p>
+
+  <p>Double click on the clock model for the first alignment and rename it to <strong>clockmodel</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:linkedmodels"></a>
+    <img style="width:100%;" src="figures/linked-models.png" />
+    <figcaption>Figure 6: Linked clock and site models.</figcaption>
+</figure>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>When we link models like this, we’re essentially pooling information to estimate shared parameters. Can you identify which specific parameters are estimated jointly when we link the Clock Models and the Site Models, respectively?</p>
+
+</blockquote>
+
+<h3 id="specifying-the-sampling-times">Specifying the sampling times</h3>
+<p>The data that we’ve loaded was sampled contemporaneously and we do not need to specify the sampling times per se. However, in order to estimate the clock rate, we have to tell BEAST to use the tip dates and to measure them as some time in the past.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>Tip Dates</strong> tab. Check the <strong>Use tip dates</strong> box and make sure since <strong>Since some time in the past</strong> is selected in the drop-down list (<a href="#fig:tip-dates">Figure 7</a>).</p>
+
+  <p>Now select all of the other alignments using <strong>Ctrl+A</strong>, (or <strong>Command+A</strong> on a Mac) and clone the tip dates from <strong>alignment_1</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:tip-dates"></a>
+    <img style="width:100%;" src="figures/tip-dates.png" />
+    <figcaption>Figure 7: Tip dates panel setup</figcaption>
+</figure>
+
+<h3 id="specifying-the-site-model">Specifying the site model</h3>
+
+<p>Because a standard reversible substitution model (like a GTR or HKY model) is a poor description of the process that the lineage recorder uses to modify the target sites over time, TiDeTree uses a custom substitution model that is tailored to the lineage recording process <a class="citation" href="#Seidel2022">(Seidel &amp; Stadler, 2022)</a>.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>Site Model</strong> tab. As you have loaded the TiDeTree template, BEAUti automatically provides you with the <strong>TiDeTree Substitution Model</strong>.</p>
+
+  <p>We keep the <strong>Gamma Category Count</strong> set at <strong>0</strong>, which means that we are not modelling site heterogeneity. Further below, you can see the parameters of the substition model. The <strong>Edit Rates</strong> are initialised and set to be estimated. Based on the <code class="language-plaintext highlighter-rouge">.tidetree</code> files, BEAUti correctly detected that there are 2 edit outcomes and therefore initialised a vector with 2 elements.</p>
+
+  <p>You’ll also see the <strong>Silencing Rate</strong> parameter, which models the possibility that certain barcode targets become progressively and irreversibly silenced—preventing their detection through single-cell RNA sequencing. In our dataset, no silencing was observed, so we set the value to <strong>0.0</strong> and uncheck the <strong>estimate</strong> box. Lastly, we set the <strong>Edit Height</strong> and <strong>Edit Duration</strong> to <strong>54</strong>, since editing was active for the entire duration of the experiment (54 hours).</p>
+</blockquote>
+
+<p>Your site model tab should now look as in <a href="#fig:substmodel">Figure 8</a>.</p>
+
+<figure>
+    <a id="fig:substmodel"></a>
+    <img style="width:100%;" src="figures/substmodel.png" />
+    <figcaption>Figure 8: Specifying the substitution model.</figcaption>
+</figure>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>Do we want to allow for variable edit rates? Why or why not?</p>
+</blockquote>
+
+<h3 id="setting-the-clock-model">Setting the clock model</h3>
+
+<p>Now, we have to set the clock model. For this relatively short experiment, we assume that the rate of editing did not change. Thus, we keep the default strict clock model that assumes no branch rate variation. Since we linked clock models among trees all branches in all trees will have the same substitution rate.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>Clock Model</strong> tab. Verify that the <strong>estimate</strong> box is checked (<a href="#fig:clock">Figure 9</a>)</p>
+</blockquote>
+
+<figure>
+    <a id="fig:clock"></a>
+    <img style="width:100%;" src="figures/clock.png" />
+    <figcaption>Figure 9: Specifying the clock model.</figcaption>
+</figure>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>All our tips are sampled contemporaneously here. Why can we still estimate the clock rate?</p>
+</blockquote>
+
+<h3 id="setting-initial-values">Setting initial values</h3>
+
+<p>Next, we come to the parameter initialization tab. Here, we will initialise the tree and experiment length for every alignment. This is also a great example of a step that’s much easier to edit directly in the XML file—consider this your gentle nudge to get comfortable with a bit of XML hacking! <i class="bi bi-emoji-wink"></i></p>
+
+<p>We’ll initialise the tree using a custom starting tree class implemented within the TiDeTree package. The key idea is to ensure that the tree fits within the timeframe of the experiment and does not have a 0 likelihood. By setting the root height close to the total duration (e.g., 53 hours for a 54-hour experiment), and matching the editing height and editing duration, we ensure that the tree has a positive likelihood.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>Initialization</strong> tab. Now set the <strong>Root Height</strong>, <strong>Edit Duration</strong> and <strong>Edit Height</strong> to <strong>53</strong> for each of the 10 <strong>Tree.t</strong> parameters, representing the 10 alignments (<a href="#fig:init-tree">Figure 10</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:init-tree"></a>
+    <img style="width:100%;" src="figures/init-tree.png" />
+    <figcaption>Figure 10: Initialising the starting trees.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Further, we will set every <strong>experimentLength</strong> parameter to <strong>54</strong> hours and uncheck the <strong>Estimate</strong> box, because know <em>a priori</em> how long each experiment was run and we do not want to estimate it (<a href="#fig:init-experiment-length">Figure 11</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:init-experiment-length"></a>
+    <img style="width:100%;" src="figures/init-experiment-length.png" />
+    <figcaption>Figure 11: Setting the experiment duration.</figcaption>
+</figure>
+
+<h3 id="setting-priors">Setting priors</h3>
+<p>Now, we want to set the priors for the parameters of our model.</p>
+
+<p>We’ll start by choosing the phylodynamic model that describes how the trees were generated. Given the small size of the cell population (4 − 40 cells), we expect the population growth process to be highly stochastic. The birth-death-sampling model can account for these stochastic fluctuations.</p>
+
+<p>In BEAUti, you’ll notice that a separate prior is defined for every tree. Since all colonies were grown under the same experimental conditions, we want them to share the same birth and death rate parameters. Unfortunately, BEAUti doesn’t currently support linking these priors directly through the interface. So we will first create an XML file with separate parameters for each colony, and in a second step link the parameters by editing the XML file and see how the runs compare.</p>
+
+<!--figure>
+    <a id="fig:download"></a>
+    <img style="width:80%;" src="figures/9-trees.png">
+    <figcaption>Figure 12:</figcaption>
+</figure-->
+
+<blockquote>
+  <p>Navigate to the <strong>Priors</strong> tab. For each alignment, select <strong>Birth-death model</strong> from the drop-down menu.</p>
+
+  <p>Then, we specify the prior for the effective birth rate of the birth-death model (<strong>BDBirthRate.t</strong> for each of the alignments), which is the cell division rate minus the cell death rate. We select a <strong>Uniform</strong> prior over [0, 0.1]. This reflects our expectation that the total number of cells remain below 220 at the end of the experiment (after 54 h).</p>
+
+  <p>For each <strong>BDBirthRate.t</strong> parameter ensure that the selected prior distribution is <strong>Uniform</strong> and set <strong>Upper</strong> to <strong>0.1</strong> (<a href="#fig:birth-rate">Figure 12</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:birth-rate"></a>
+    <img style="width:100%;" src="figures/birth-rate.png" />
+    <figcaption>Figure 12: Specifying the prior on the effective birth rate. </figcaption>
+</figure>
+
+<p>Additionally, we also want to set the initial value of the effective birth rate to 0.05, such that it is contained within the prior distribution just set.</p>
+
+<blockquote>
+  <p>For each <strong>BDBirthRate.t</strong> parameter click on the initial value box and set <strong>Value</strong> to <strong>0.05</strong> (<a href="#fig:init-birth-rate">Figure 13</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:init-birth-rate"></a>
+    <img style="width:80%;" src="figures/init-birth-rate.png" />
+    <figcaption>Figure 13: Setting the initial value for the effective birth rate.</figcaption>
+</figure>
+
+<p>Additionally, we place a Uniform prior over [0, 1] on the relative death rate or cell turnover (death rate / birth rate), stating that we expect the birth rate to be larger than the death rate. This should be the default prior, so we don’t need to do anything (<a href="#fig:death-rate">Figure 14</a>).</p>
+
+<figure>
+    <a id="fig:death-rate"></a>
+    <img style="width:100%;" src="figures/death-rate.png" />
+    <figcaption>Figure 14: The default prior on the relative death rate.</figcaption>
+</figure>
+
+<p>Finally, we set a prior on the clock rate.</p>
+
+<blockquote>
+  <p>Find the <strong>clockRate.c</strong> parameter and select <strong>Log Normal</strong> from the drop-down menu. Set the mean <strong>M</strong> to <strong>-5</strong> and the standard deviation <strong>S</strong> to <strong>1</strong> (<a href="#fig:prior-clock">Figure 15</a>).</p>
+</blockquote>
+
+<p>This prior translates to us expecting between 1 to 10 edits to occur over 54 hours. We keep the default Dirichlet prior on the edit probabilities.</p>
+
+<figure>
+    <a id="fig:prior-clock"></a>
+    <img style="width:100%;" src="figures/prior-clock.png" />
+    <figcaption>Figure 15: Specifying the prior on the clock rate.</figcaption>
+</figure>
+
+<!--figure>
+    Here's a snapshot of how your overall prior tab should now look like.
+
+    <a id="fig:download"></a>
+    <img style="width:80%;" src="figures/12-overall-priors.png">
+    <figcaption>Figure 13: Specify the prior on the edit probabilities.</figcaption>
+</figure-->
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>How do you expect the results to differ when birth and death rates are shared amonog alignments?</p>
+
+</blockquote>
+
+<h3 id="mcmc">MCMC</h3>
+
+<p>Before we can save our XML file we need to set up the MCMC chain and the output files.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>MCMC</strong> tab. Set the <strong>Chain Length</strong> to <strong>5E6</strong> (5 million). Reveal the options for <strong>tracelog</strong> and set <strong>Log Every</strong> to <strong>1000</strong>. Now do the same for each of the 10 <strong>treelogs</strong>. Additionally, make sure the tree logs are being written to separate files by renaming the <strong>FileName</strong> for each tree to <code class="language-plaintext highlighter-rouge">$(filebase).$(tree).trees</code> if that is not already the filename (<a href="#fig:mcmc">Figure 16</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:mcmc"></a>
+    <img style="width:100%;" src="figures/log-trees-separate.png" />
+    <figcaption>Figure 16: Specifying distinct tree log file names.</figcaption>
+</figure>
+
+<p>Now we are ready to save the XML file!</p>
+
+<blockquote>
+  <p>Once your analysis is fully set up, go to <strong>File &gt; Save</strong>, navigate to your desired directory, and save the BEAST input file with a clear and descriptive name—e.g., <code class="language-plaintext highlighter-rouge">tidetree_tutorial.xml</code>.</p>
+</blockquote>
+
+<!--figure>
+    <a id="fig:download"></a>
+    <img style="width:80%;" src="figures/15-MCMC.png">
+    <figcaption>Figure 14: MCMC setup.</figcaption>
+</figure-->
+
+<blockquote>
+  <p><strong>Tip:</strong></p>
+
+  <p>If BEAUti gives you trouble when generating the XML file and you’d like to proceed with the analysis right away, you can also download and use a pre-made XML file <code class="language-plaintext highlighter-rouge">tutorial-unlinked-birth-death.xml</code> from the left-hand panel.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="running-beast2">Running BEAST2</h2>
+
+<p>Now you are ready to start your BEAST2 analyses.</p>
+
+<blockquote>
+  <p>Execute your XML file in <strong>BEAST2</strong>. You should see the screen output every 1000 steps, reporting the likelihood and various other statistics.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="analysing-the-data">Analysing the data</h2>
+
+<h3 id="unlinked-analysis">Unlinked analysis</h3>
+
+<p>We will use Tracer to examine convergence and look at parameter estimates. For this section you can either use the log file output from your BEAST2 run, or the <em>pre-cooked</em> output files on the left-hand panel.</p>
+
+<blockquote>
+  <p>Load the file <code class="language-plaintext highlighter-rouge">tutorial-unlinked-birth-death.log</code> into <strong>Tracer</strong> to assess mixing and the parameter estimates. (Note that your own log file may be called something else).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:tracer"></a>
+    <img style="width:100%;" src="figures/tracer.png" />
+    <figcaption>Figure 17: Checking convergence for the unlinked analysis.</figcaption>
+</figure>
+
+<p>All parameters, including the posterior and likelihood, show effective sample sizes (ESS) above 200, indicating good mixing (<a href="#fig:tracer">Figure 17</a>).</p>
+
+<p>Let’s inspect the estimated clock rate, representing the rate of introducing an edit at any site in the barcode.</p>
+
+<blockquote>
+  <p>In <strong>Tracer</strong>, select <strong>clockRate</strong> and then click on <strong>Marginal Density</strong> (<a href="#fig:log-clock">Figure 18</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:log-clock"></a>
+    <img style="width:100%;" src="figures/log-clock.png" />
+    <figcaption>Figure 18: Estimated clock rate (edit rate) marginal posterior.</figcaption>
+</figure>
+
+<p>We see that the estimated median posterior rate is about 0.015 edits per site per hour. Over the 54-hour experiment, this corresponds to 0.8 expected edits per site.</p>
+
+<p>Now, let’s examine the net growth rates (corresponding to the effective birth rates of the birth-death models) of each dataset.</p>
+
+<blockquote>
+  <p>Select <strong>BDBirthRate[1-10]</strong> (select all 10 relative birth rates using <strong>Shift+Click</strong>) and then click on <strong>Estimates</strong>.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:unlinked-net-growth"></a>
+    <img style="width:100%;" src="figures/unlinked-net-growth.png" />
+    <figcaption>Figure 19: Estimated net growth marginal posteriors.</figcaption>
+</figure>
+
+<p>Most median estimates fluctuate around 0.04/hour (<a href="#fig:unlinked-net-growth">Figure 19</a>), but the uncertainty is high—for example, the 95% highest posterior density (HPD) interval for alignment 1 ranges from [0.007 to 0.07].</p>
+
+<h2 id="linked-analysis">Linked analysis</h2>
+
+<p>Next, we compare the <strong>unlinked</strong> analysis to a <strong>linked</strong> analysis, where birth and death rates are shared across datasets. We have already prepared the XML file and its output for you (available on the left-hand panel).</p>
+
+<p>The key difference is that in our <em>unlinked</em> analysis, we estimated a separate birth and death rate for every dataset in every tree prior. In the <em>linked analysis</em>, we reference the same birth and death rates across tree priors, essentially pooling them across datasets which we show in the image below.</p>
+
+<blockquote>
+  <p><strong>Note</strong></p>
+
+  <p>To create the XML file for the unlinked analysis requires additional manual changes to the XML file, e.g., removing now-unnecessary parameter states, which we will not detail here. You’re welcome to explore the differences between the linked and unlinked XML files (<a href="#fig:xml">Figure 20</a>).</p>
+</blockquote>
+
+<figure>
+    <a id="fig:xml"></a>
+    <img style="width:100%;" src="figures/24-create-linked-xml.png" />
+    <figcaption>Figure 20: XML hacking to pool birth and death rates across datasets.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Load the file <code class="language-plaintext highlighter-rouge">tutorial-linked-birth-death.log</code> into <strong>Tracer</strong>. 
+(Feel free to also run <code class="language-plaintext highlighter-rouge">tutorial-linked-birth-death.xml</code> and produce your own log and trees files).</p>
+</blockquote>
+
+<p>We can see that all ESS values are above 200 and that the Traces look well mixed, indicating convergence (<a href="#fig:linked-traces">Figure 21</a>).</p>
+
+<figure>
+    <a id="fig:linked-traces"></a>
+    <img style="width:100%;" src="figures/linked-traces.png" />
+    <figcaption>Figure 21: Checking convergence for the linked analysis.</figcaption>
+</figure>
+
+<p>Let us now check how the estimated net growth rates compare to the unlinked analysis.</p>
+
+<blockquote>
+  <p>Select on <strong>BDBirthRate.t:alignment_1</strong> and and then click on <strong>Estimates</strong>. Note that because the relative birth rates are linked we only have one parameter in the log file.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:linked-net-growth"></a>
+    <img style="width:100%;" src="figures/linked-net-growth.png" />
+    <figcaption>Figure 22: Estimated net growth marginal posteriors pooled across alignments.</figcaption>
+</figure>
+
+<p>We observe that the uncertainty is reduced, and the 95% HPD interval for the pooled <strong>effective birth rate</strong> is now <strong>[0.02, 0.06]</strong>, which corresponds to <strong>at least 1–4 cell divisions</strong> over the course of the experiment (<a href="#fig:linked-net-growth">Figure 22</a>). The <em>“at least”</em> reflects that the effective birth rate equals the birth rate minus the death rate, providing a <strong>lower bound</strong> on the total number of cell divisions. This estimate aligns well with the original publication’s reported range of <strong>3–5 divisions</strong>.</p>
+
+<p>In summary, even though the individual dataset carried limited signal, pooling parameters across alignments allows us to  extract biologically meaningful estimates with reduced uncertainty.</p>
+
+<hr />
+
+<h2 id="tree-log-visualisation">Tree log visualisation</h2>
+
+<p>Next, we want to visualise the trees. Be aware that how much sense it makes to look at the trees depends on the dataset and very much on the number of sites that are used to trace lineages and how large the tree is that you are trying to estimate (the general data points vs number of parameters question). Remember, in every dataset here we have <em>only</em> 10 sites, which is a much smaller signal compared to the thousands of sites commonly used in applications in epidemiology or macroevolution.</p>
+
+<p>Let us pick dataset 1, which has 9 cells, to visualise. To appreciate how much uncertainty there is in the tree structure, lets plot the tree posterior in Densitree.</p>
+
+<blockquote>
+  <p>Open <strong>DensiTree</strong> and load the file <code class="language-plaintext highlighter-rouge">tutorial-linked-birth-death.1.trees</code></p>
+</blockquote>
+
+<figure>
+    <!--a id="fig:download"></a-->
+    <img style="width:100%;" src="figures/23-linked-trees-1-densitree.png" />
+    <figcaption>Figure 23: Posterior distribution of trees for dataset 1 in the linked analysis.</figcaption>
+</figure>
+
+<p>You can see that the cherry for cells 6 and 7 is well supported whereas the hierarchy among cells 0-3 has multiple consensus trees that can explain the data.</p>
+
+<p>To summarise the posterior trees, we will use TreeAnnotator and generate two point estimates, as you have seen in other tutorials, the maximum clade credibility tree (MCC) and a tree based on the conditional clade distribution (CCD). <strong>To save time, you may run just one method and compare it to the other using the example below.</strong></p>
+
+<h3 id="generating-the-mcc-tree">Generating the MCC tree</h3>
+
+<blockquote>
+  <p>Open <strong>TreeAnnotator</strong> and then set the options as in <a href="#fig:ta-mcc">Figure 24</a> below. You have to specify the <strong>Burn in percentage</strong>, <strong>Target tree type, Node heights, Input Tree File</strong> and the <strong>Output File</strong>.</p>
+
+  <p>Click <strong>Run</strong> to start the program.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:ta-mcc"></a>
+    <img style="width:80%;" src="figures/25-ta-mcc.png" />
+    <figcaption>Figure 24: TreeAnnotator settings for generating the MCC tree.</figcaption>
+</figure>
+
+<h3 id="generating-the-ccd-tree">Generating the CCD tree</h3>
+
+<blockquote>
+  <p>Open <strong>TreeAnnotator</strong> and then set the options as in <a href="#fig:ta-ccd">Figure 25</a> below. Compared to generting the MCC tree you only have to change the <strong>Target tree type</strong> and the name of the  <strong>Output file</strong>. All other options remain the same.</p>
+
+  <p>Click <strong>Run</strong> to start the program.</p>
+</blockquote>
+
+<figure>
+    <a id="fig:ta-ccd"></a>
+    <img style="width:80%;" src="figures/26-ta-ccd.png" />
+    <figcaption>Figure 25: TreeAnnotator settings for generating the CCD tree.</figcaption>
+</figure>
+
+<h3 id="analysing-the-summary-trees">Analysing the summary trees</h3>
+
+<blockquote>
+  <p>Open <strong>FigTree</strong> and load your chosen summary tree.</p>
+
+  <p>On the left hand menu, select <strong>Node Labels</strong> and choose to display the <strong>posterior</strong> support at the internal nodes. Increase the font size until the labels are clearly visible.</p>
+
+  <p>Further, select <strong>Node Bars</strong> and display <strong>height_95%_HPD</strong> to display the 95% HPD for the node heights.</p>
+
+</blockquote>
+
+<figure>
+    <!--a id="fig:ta-ccd"></a-->
+    <img style="width:80%;" src="figures/27-figtree-ccd.png" />
+    <figcaption>Figure 26: The CCD tree displayed in FigTree.</figcaption>
+</figure>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>How do the posterior node labels compare to the observations we made when analysing the tree posterior in DensiTree?</p>
+</blockquote>
+
+<hr />
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Askary2024">Askary, A., Chen, W., Choi, J., Du, L. Y., Elowitz, M. B., Gagnon, J. A., Schier, A. F., Seidel, S., Shendure, J., Stadler, T., &amp; Tran, M. (2024). The lives of cells, recorded. <i>Nature Reviews Genetics 2024</i>, <i>6</i>, 1–20. https://doi.org/10.1038/s41576-024-00788-w</span></li>
+<li><span id="Seidel2022">Seidel, S., &amp; Stadler, T. (2022). TiDeTree: a Bayesian phylogenetic framework to estimate single-cell trees and population dynamic parameters from genetic lineage tracing data. <i>Proceedings of the Royal Society B</i>, <i>289</i>(1986). https://doi.org/10.1098/RSPB.2022.1844</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Bouckaert2019">Bouckaert, R., Vaughan, T. G., Barido-Sottani, J., Duchêne, S., Fourment, M., Gavryushkina, A., Heled, J., Jones, G., Kühnert, D., Maio, N. D., Matschiner, M., Mendes, F. K., Müller, N. F., Ogilvie, H. A., Plessis, L. du, Popinga, A., Rambaut, A., Rasmussen, D., Siveroni, I., … Drummond, A. J. (2019). BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. <i>PLOS Computational Biology</i>, <i>15</i>(4).</span></li>
+<li><span id="Chow2021">Chow, K.-H. K., Budde, M. W., Granados, A. A., Cabrera, M., Yoon, S., Cho, S., Huang, T.-hao, Koulena, N., Frieda, K. L., Cai, L., Lois, C., &amp; Elowitz, M. B. (2021). Imaging cell lineage with a synthetic digital recording system. <i>Science</i>, <i>372</i>(6538), eabb3099. https://doi.org/10.1126/science.abb3099</span></li>
+<li><span id="GONG2021">Gong, W., Granados, A. A., Hu, J., Jones, M. G., Raz, O., Salvador-Martínez, I., Zhang, H., Chow, K.-H. K., Kwak, I.-Y., Retkute, R., Prusokiene, A., Prusokas, A., Khodaverdian, A., Zhang, R., Rao, S., Wang, R., Rennert, P., Saipradeep, V. G., Sivadasan, N., … Meyer, P. (2021). Benchmarked approaches for reconstruction of in vitro cell lineages and in silico models of C. elegans and M. musculus developmental trees. <i>Cell Systems</i>, <i>12</i>(8), 810–826.e4. https://doi.org/https://doi.org/10.1016/j.cels.2021.05.008</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+
