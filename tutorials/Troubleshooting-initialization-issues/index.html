@@ -317,6 +317,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/a8e3e18488636573110585c549099a8613231b11">
+					13 Jul 2025 - <span class="text-gray">Update to reflect that online docs are updated to BEAST 2.7.8 and also some other small edits</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/780653a417d4f8f7ccaf03b4a79c782bd0ba0bef">
 					11 Jul 2025 - <span class="text-gray">Merge remote-tracking branch 'refs/remotes/github/master'</span>
 					</a> 
@@ -345,14 +353,6 @@
 					20 Jul 2023 - <span class="text-gray">Merge pull request #2 from Taming-the-BEAST/louis-edits
 
 Updates based on comments (thanks Bethany)</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/370e0fe3964bc4e53996a9e6091b5d2362d6cbc7">
-					20 Jul 2023 - <span class="text-gray">Updates based on comments (thanks Bethany)</span>
 					</a> 
 				</li>
 			
@@ -399,7 +399,7 @@ Updates based on comments (thanks Bethany)</span>
 
 <h2 id="packages">Packages</h2>
 
-<p>Examples in this tutorial require the <strong>SA</strong> (Sampled Ancestors) package to be installed.</p>
+<p>Examples in this tutorial require the <strong>SA</strong> (Sampled Ancestors) and ORC (optimised relaxed clock) packages to be installed.</p>
 
 <blockquote>
   <p>Launch <strong>BEAUti</strong>, then open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong> (<a href="#packageManage1">Figure 1</a>).</p>
@@ -427,9 +427,13 @@ Updates based on comments (thanks Bethany)</span>
 </figure>
 <p><br /></p>
 
-<blockquote>
-  <p>Similarly, <strong>ORC</strong> package may be already installed. If not, install the <strong>ORC</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button.</p>
+<p>Similarly, the <strong>ORC</strong> package may already be installed. If not, follow the instruction below.</p>
 
+<blockquote>
+  <p>Install the <strong>ORC</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button.</p>
+</blockquote>
+
+<blockquote>
   <p>Next, uninstall the <strong>MM</strong> package by selecting it and clicking the <strong>Uninstall</strong> button (<a href="#packageMM">Figure 3</a>).</p>
 
 </blockquote>
@@ -471,7 +475,7 @@ Updates based on comments (thanks Bethany)</span>
 </figure>
 <p><br /></p>
 
-<p>This error means that BEAST2 could not identify one of the components of the analysis in the XML file. We have helpfully highlighted the important part of the error message in <a href="#errorPackage">Figure 4</a>. It shows which component is unidentified, in this example the class <em>morphmodels.evolution.substitutionmodel.LewisMK</em>, as well as the program’s closest guess for what the component could be, here <em>beastlabs.inference.ML</em>. BEAST2 also shows you roughly where the reference to the missing component was found within the hierarchical structure of the XML file (here it is the substitution model, inside the site model, inside the tree likelihood, and so on).</p>
+<p>This error means that BEAST2 could not identify one of the components of the analysis in the XML file. We have helpfully highlighted the important part of the error message in <a href="#errorPackage">Figure 4</a>. It shows which component is unidentified, in this example the class <em>morphmodels.evolution.substitutionmodel.LewisMK</em>, as well as the program’s closest guess for what the component could be, here <em>beastlabs.inference.ML</em> (what class exactly BEAST2 guesses here will depend on which packages you have installed). BEAST2 also shows you roughly where the reference to the missing component was found within the hierarchical structure of the XML file (here it is the substitution model, inside the site model, inside the tree likelihood, and so on).</p>
 
 <p>There are two main causes for this error:</p>
 
@@ -985,7 +989,7 @@ Yes, it still makes a difference! Although each analysis will start from the exa
 </figure>
 <p><br /></p>
 
-<p>Here the run failed to start because the XML file could not be parsed, as explained by the error message <em>Error 110 parsing the xml input file</em>. Thankfully the error message tells us exactly where the error happened (<em>&lt;log id=’ORCRatesStat.c:bears_morphology’ spec=’beast.base.evolution.RateStatistic’&gt;</em>) and what the issue is (<em>Input ‘tree’ must be specified.</em>). If we open the <code class="language-plaintext highlighter-rouge">issue4.xml</code> file and look for <strong>ORCRatesStat.c:bears_morphology</strong>, we can see that line 771 corresponds to the error message and reads as follows:</p>
+<p>Here the run failed to start because the XML file could not be parsed, as explained by the error message <em>Error 110 parsing the xml input file</em>. Thankfully the error message tells us exactly where the error happened (<code class="language-plaintext highlighter-rouge">\&lt;log id='ORCRatesStat.c:bears_morphology' spec='beast.base.evolution.RateStatistic'&gt;</code>) and what the issue is (<em>Input ‘tree’ must be specified.</em>). If we open the <code class="language-plaintext highlighter-rouge">issue4.xml</code> file and look for <strong>ORCRatesStat.c:bears_morphology</strong>, we can see that line 771 corresponds to the error message and reads as follows:</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;log</span> <span class="na">id=</span><span class="s">"ORCRatesStat.c:bears_morphology"</span> <span class="na">spec=</span><span class="s">"beast.base.evolution.RateStatistic"</span> <span class="na">branchratemodel=</span><span class="s">"@OptimisedRelaxedClock.c:bears_morphology"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
@@ -1015,12 +1019,12 @@ Yes, it still makes a difference! Although each analysis will start from the exa
 
 <figure>
 	<a id="beastdoc"></a>
-	<img style="width:100.0%;" src="figures/beastdoc.png" alt="" />
+	<img style="width:100.0%;" src="figures/beastdoc278.png" alt="" />
 	<figcaption>Figure 18: The XML documentation for rate statistic.</figcaption>
 </figure>
 <p><br /></p>
 
-<p>However, there is a problem. The online manual is for BEAST v2.6.7 and may be outdated for some components. More importantly, the online documentation only contains components in the BEAST2 core and nothing in any of the packages we installed. Luckily we can easily generate the documenation for the version of BEAST2 and all packages we have installed using the <strong>DocMaker</strong> utility, which comes with BEAST2.</p>
+<p>However, there is a potential problem. The online manual may not correspond exactly to the version of BEAST2 that you are using. Normally this should not be a problem, as the specifications for most components are relatively stable. However, there is a small chance that the online manual’s specification is different. This is much more likely between major releases (e.g. BEAST v2.6.x vs BEAST v2.7.x). More importantly, the online documentation only contains components within the BEAST2 core and nothing from any of the packages we installed. Luckily we can easily generate the documenation for the version of BEAST2 and all packages we have installed using the <strong>DocMaker</strong> utility, which comes with BEAST2.</p>
 
 <blockquote>
   <p>Open a terminal and navigate to the directory where you want to save the BEAST2 XML manual</p>
@@ -1033,7 +1037,9 @@ Yes, it still makes a difference! Although each analysis will start from the exa
   <p>This is also documented <a href="http://www.beast2.org/2023/06/01/docmaker.html">here</a></p>
 </blockquote>
 
-<p>The generated documentation should be for the version of BEAST2 that is installed and contain XML documentation for all packages that are installed. Note that while this documentation is extremely useful, it can still be very sparse for most components since most developers don’t invest a lot of time in documentation. Most BEAST2 packages come with some example XML files and these can also be very useful for figuring out how to specify models that cannot be specified in BEAUti. You can locate the directory where a package (and its example XML files) is installed from BEAUti by navigating to <strong>File &gt; Set working dir</strong> and selecting a package. If you then try to open a file BEAUti will open in the directory where that package is installed.</p>
+<p>The generated documentation should be for the version of BEAST2 that is installed and contain XML documentation for all packages that are installed. Note that while this documentation is extremely useful, it can still be very sparse for many components since not all developers invest a lot of time in documentation.</p>
+
+<p>Most BEAST2 packages also come with some example XML files and these can also be very useful for figuring out how to specify models that cannot be specified in BEAUti. You can locate the directory where a package (and its example XML files) is installed from BEAUti by navigating to <strong>File &gt; Set working dir</strong> and selecting a package. If you then try to open a file, BEAUti will open in the directory where that package is installed.</p>
 
 <h2 id="error-messages-not-covered-in-this-tutorial">Error messages not covered in this tutorial</h2>
 
@@ -1041,7 +1047,7 @@ Yes, it still makes a difference! Although each analysis will start from the exa
 
 <p>For the issues that cannot be easily debugged it is recommended to contact the package developers, or to make a post on <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a>. If it is a common issue it is likely that someone else has encountered it before you!</p>
 
-<p>In the rare case where BEAST2 initializes an analysis without any problems and then subsequently crashes it is likely that there are issues with the code (contact the developers) or with your setup (try running it on a different machine).</p>
+<p>In the rare case where BEAST2 initializes an analysis without any problems and then subsequently crashes, it is likely that there are issues with the code (contact the developers) or with your setup (try running it on a different machine).</p>
 
 <hr />
 
