@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:SA v2.1.1:ORC v1.1.1:BEASTLabs v2.0.0" version="2.7">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.4:SA v2.1.1:ORC v1.2.1:BEASTLabs v2.0.0" version="2.7">
 
     <data
 id="bears_cytb_fossils"
@@ -494,7 +494,7 @@ name="taxa">
         </operator>
         <operator id="ORCAdaptableOperatorSampler_NER.c:bearsClock" spec="AdaptableOperatorSampler" weight="15.0">
             <tree idref="Tree.t:bearsTree"/>
-            <operator id="ORCNER_null.c:bearsClock" spec="Exchange" tree="@Tree.t:bearsTree" weight="0.0"/>
+            <operator id="ORCNER_null.c:clock" spec="orc.operators.MetaNEROperator" rates="@ORCRates.c:bearsClock" tree="@Tree.t:bearsTree" weight="1.0"/>
             <operator id="ORCNER_dAE_dBE_dCE.c:bearsClock" spec="orc.ner.NEROperator_dAE_dBE_dCE" rates="@ORCRates.c:bearsClock" tree="@Tree.t:bearsTree" weight="1.0"/>
             <metric id="RNNIMetric.0" spec="beastlabs.evolution.tree.RNNIMetric" taxonset="@TaxonSet.bears_cytb_fossils"/>
         </operator>

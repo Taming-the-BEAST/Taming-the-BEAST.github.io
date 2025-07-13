@@ -410,6 +410,22 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/69fce6df09bc8f6db3b0dece071da9a4da823f55">
+					11 Jul 2025 - <span class="text-gray">Figure update</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/6c828a19711d59dd2282f8ff7fd6e35e39b8cbd2">
+					11 Jul 2025 - <span class="text-gray">Tracer fig update</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/fed974800ca60d779db3274a60ebc58a41d92015">
 					23 May 2025 - <span class="text-gray">Merge pull request #4 from jugne/master
 
@@ -430,22 +446,6 @@ Small summary tree update</span>
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/5934f31124dd8be5cff72005d1dd9f35b9727816">
 					09 Aug 2023 - <span class="text-gray">Update figures and figure widths</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/5ef94e9e2b4fcea8af621951b1f82cfe5679a7ee">
-					11 Jun 2023 - <span class="text-gray">Merged Louis' updates.</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/ceac63b7bc7acce267d0d124d7576f847b978bc4">
-					11 Jun 2023 - <span class="text-gray">Resize figure and merge citations</span>
 					</a> 
 				</li>
 			
@@ -972,7 +972,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 <p>If you like, you can compare your results with the example results we obtained with identical settings and a chain of 30,000,000.</p>
 
 <blockquote>
-  <p>Load the file <code class="language-plaintext highlighter-rouge">InfluenzaAH3N2_HAgene_2009_California_heterochronous_30M.log</code>.</p>
+  <p>Load the file <code class="language-plaintext highlighter-rouge">Heterochronous_30M.log</code>.</p>
 
   <p>Do the parameter traces look better?</p>
 
@@ -982,7 +982,7 @@ Are they different from the priors we set and if so, how?</p>
 
 </blockquote>
 
-<p>The estimated posterior distribution for the <strong>becomeUninfectiousRate</strong> has a median of 58.0557 and a 95% HPD between 44.0016 and 75.3019 (<a href="#tracerdelta">Figure 20</a>). This is between <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span></span></span></span> 4.8 and 8.3 days, thus, roughly one week. This is a lot more specific than the prior we set, which allowed for a much longer infectious period. The estimates also agree with what we know about Influenza A. In this case there was enough information in the sequencing data to estimate a more specific becoming uninfectious rate. If we had relied more on our prior knowledge we could have set a tighter prior on the <strong>becomeUninfectiousRate</strong> parameter, which may have helped the run to converge faster, by preventing it from sampling unrealistic parameter values. However, if you are unsure about a parameter it is always better to set more diffuse priors.</p>
+<p>The estimated posterior distribution for the <strong>becomeUninfectiousRate</strong> has a median of 58.0556 and a 95% HPD between 44.0016 and 75.3019 (<a href="#tracerdelta">Figure 20</a>). This is between <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span></span></span></span> 4.8 and 8.3 days, thus, roughly one week. This is a lot more specific than the prior we set, which allowed for a much longer infectious period. The estimates also agree with what we know about Influenza A. In this case there was enough information in the sequencing data to estimate a more specific becoming uninfectious rate. If we had relied more on our prior knowledge we could have set a tighter prior on the <strong>becomeUninfectiousRate</strong> parameter, which may have helped the run to converge faster, by preventing it from sampling unrealistic parameter values. However, if you are unsure about a parameter it is always better to set more diffuse priors.</p>
 
 <figure>
 	<a id="tracerdelta"></a>
@@ -1042,7 +1042,7 @@ Are they different from the priors we set and if so, how?</p>
 <figure>
 	<a id="tracerclocktrace2"></a>
 	<img src="figures/tracer_clockTrace2.png" alt="" />
-	<figcaption>Figure 23: The trace of the clock rate parameter.</figcaption>
+	<figcaption>Figure 24: The trace of the clock rate parameter.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1062,14 +1062,14 @@ Are they different from the priors we set and if so, how?</p>
 <p>Another way to see that the homochronous sampling does not allow for the estimation of the clock rate is to observe a very strong negative correlation of the clock rate with the tree height.</p>
 
 <blockquote>
-  <p>In <strong>Tracer</strong> click on the <strong>Joint Marginal</strong> panel, select the <strong>TreeHeight</strong> and the <strong>clockRate</strong> simultaneously, and uncheck the <strong>Sample only</strong> box below the graphics (<a href="#clockRatetreeHeightCorrelation">Figure 24</a>).</p>
+  <p>In <strong>Tracer</strong> click on the <strong>Joint Marginal</strong> panel, select the <strong>TreeHeight</strong> and the <strong>clockRate</strong> simultaneously, and uncheck the <strong>Sample only</strong> box below the graphics (<a href="#clockRatetreeHeightCorrelation">Figure 25</a>).</p>
 
 </blockquote>
 
 <figure>
 	<a id="clockRatetreeHeightCorrelation"></a>
 	<img src="figures/tracer_homochronous_treeHeightclockRatecorrelation.png" alt="" />
-	<figcaption>Figure 24: Clock rate and tree height correlation in homochronous data.</figcaption>
+	<figcaption>Figure 25: Clock rate and tree height correlation in homochronous data.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1089,14 +1089,14 @@ Are they different from the priors we set and if so, how?</p>
 <blockquote>
   <p>Open <strong>TreeAnnotator</strong> and set <strong>Burnin percentage</strong> to 10, <strong>Posterior probability limit</strong> to 0.5. Leave the other options unchanged.</p>
 
-  <p>Set the <strong>Input Tree File</strong> to <code class="language-plaintext highlighter-rouge">InfluenzaAH3N2_HAgene_2009_California_heterochronous.trees</code> (or drag it across) and the <strong>Output File</strong> to <code class="language-plaintext highlighter-rouge">InfluenzaAH3N2_HAgene_2009_California_heterochronous.tree</code>. (<a href="#treeAnnotator">Figure 25</a>)</p>
+  <p>Set the <strong>Input Tree File</strong> to <code class="language-plaintext highlighter-rouge">InfluenzaAH3N2_HAgene_2009_California_heterochronous.trees</code> (or drag it across) and the <strong>Output File</strong> to <code class="language-plaintext highlighter-rouge">InfluenzaAH3N2_HAgene_2009_California_heterochronous.tree</code>. (<a href="#treeAnnotator">Figure 26</a>)</p>
 
 </blockquote>
 
 <figure>
 	<a id="treeAnnotator"></a>
 	<img style="width:50.0%;" src="figures/treeAnnotator.png" alt="" />
-	<figcaption>Figure 25: Creating the MCC tree.</figcaption>
+	<figcaption>Figure 26: Creating the MCC tree.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1105,26 +1105,26 @@ Are they different from the priors we set and if so, how?</p>
 <blockquote>
   <p>Now open <strong>FigTree</strong> and load <code class="language-plaintext highlighter-rouge">InfluenzaAH3N2_HAgene_2009_California_heterochronous.tree</code>.</p>
 
-  <p>In the upper right corner, next to the magnifier glass sign, type <strong>2009/04/28</strong> to highlight all the sequences from April 28, 2009. (<a href="#tMRCAmedian">Figure 26</a>)</p>
+  <p>In the upper right corner, next to the magnifier glass sign, type <strong>2009/04/28</strong> to highlight all the sequences from April 28, 2009. (<a href="#tMRCAmedian">Figure 27</a>)</p>
 
 </blockquote>
 
 <figure>
 	<a id="tMRCAmedian"></a>
 	<img src="figures/FigTree_tMRCA_median.png" alt="" />
-	<figcaption>Figure 26: Displaying median estimates of the node height in the MCC tree.</figcaption>
+	<figcaption>Figure 27: Displaying median estimates of the node height in the MCC tree.</figcaption>
 </figure>
 <p><br /></p>
 
 <blockquote>
-  <p>Tick the <strong>Node Labels</strong> in the left menu, and click the arrow next to it to open the full options. Change the <strong>Display</strong> from <strong>age</strong> to <strong>height_median</strong> (<a href="#tMRCAmedian">Figure 25</a>) and then to <strong>height_95%_HPD</strong> (<a href="#tMRCA95HPD">Figure 27</a>).</p>
+  <p>Tick the <strong>Node Labels</strong> in the left menu, and click the arrow next to it to open the full options. Change the <strong>Display</strong> from <strong>age</strong> to <strong>height_median</strong> (<a href="#tMRCAmedian">Figure 25</a>) and then to <strong>height_95%_HPD</strong> (<a href="#tMRCA95HPD">Figure 28</a>).</p>
 
 </blockquote>
 
 <figure>
 	<a id="tMRCA95HPD"></a>
 	<img src="figures/FigTree_tMRCA_HPD.png" alt="" />
-	<figcaption>Figure 27: Displaying 95% HPD estimates of the node height in the MCC tree.</figcaption>
+	<figcaption>Figure 28: Displaying 95% HPD estimates of the node height in the MCC tree.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1137,14 +1137,14 @@ Are they different from the priors we set and if so, how?</p>
 
   <p>Change the <strong>Taxon set</strong> label to <strong>allseq</strong>.</p>
 
-  <p>Select the sequences belonging to this clade, i.e. all the tips, and move them from the left column to the right column using the <strong>&gt; &gt;</strong> button and click <strong>OK</strong>. (<a href="#tMRCAPrior">Figure 28</a>)</p>
+  <p>Select the sequences belonging to this clade, i.e. all the tips, and move them from the left column to the right column using the <strong>&gt; &gt;</strong> button and click <strong>OK</strong>. (<a href="#tMRCAPrior">Figure 29</a>)</p>
 
 </blockquote>
 
 <figure>
 	<a id="tMRCAPrior"></a>
 	<img style="width:75.0%;" src="figures/beast2_homochronous_tMRCA.png" alt="" />
-	<figcaption>Figure 28: Specifying the root height prior.</figcaption>
+	<figcaption>Figure 29: Specifying the root height prior.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1153,7 +1153,7 @@ Are they different from the priors we set and if so, how?</p>
 <blockquote>
   <p>Back in the <strong>Priors</strong> window, check the box labeled <strong>monophyletic</strong> for the <strong>allseq.prior</strong>.</p>
 
-  <p>Click on the arrow next to the <strong>allseq.prior</strong>. Change the prior distribution on the time of the MRCA of selected sequences from <strong>[none]</strong> to <strong>Laplace Distribution</strong> and set the <strong>Mu</strong> to 2008.7745 and the <strong>Scale</strong> to 0.01 (<a href="#tMRCAPrior2">Figure 29</a>).</p>
+  <p>Click on the arrow next to the <strong>allseq.prior</strong>. Change the prior distribution on the time of the MRCA of selected sequences from <strong>[none]</strong> to <strong>Laplace Distribution</strong> and set the <strong>Mu</strong> to 2008.7745 and the <strong>Scale</strong> to 0.01 (<a href="#tMRCAPrior2">Figure 30</a>).</p>
 
   <p>You can check that these settings correspond to the height of tMRCA from the MCC tree by setting <strong>Mu</strong> to 0.5488 and observing the distribution to the right. When you are done, do not forget to set <strong>Mu</strong> back to 2008.7745.</p>
 
@@ -1162,7 +1162,7 @@ Are they different from the priors we set and if so, how?</p>
 <figure>
 	<a id="tMRCAPrior2"></a>
 	<img src="figures/beast2_homochronous_tMRCA_prior.png" alt="" />
-	<figcaption>Figure 29: Specifying the root height prior.</figcaption>
+	<figcaption>Figure 30: Specifying the root height prior.</figcaption>
 </figure>
 <p><br /></p>
 
@@ -1178,9 +1178,9 @@ Are they different from the priors we set and if so, how?</p>
 <blockquote>
   <p>Load the log files for all three analyses into Tracer.</p>
 
-  <p>Select <strong>clockRate</strong> and then press <code class="language-plaintext highlighter-rouge">shift</code> to select all three trace files.</p>
+  <p>Press <code class="language-plaintext highlighter-rouge">shift</code> to select all three trace files and select <strong>clockRate</strong>.</p>
 
-  <p>Click on <strong>Marginal Prob Distribution</strong>, selected <strong>Top-Right</strong> for the legend and colour by <strong>Trace File</strong>.</p>
+  <p>On the right panel you can see box plots for all three loaded analyses.</p>
 
   <p>How do the estimates for the three analyses compare to each other?</p>
 
@@ -1191,14 +1191,14 @@ Are they different from the priors we set and if so, how?</p>
 <figure>
 	<a id="tracerclockcompare"></a>
 	<img src="figures/tracer_clockcomparison.png" alt="" />
-	<figcaption>Figure 30: Comparing the marginal posteriors of the clock rate.</figcaption>
+	<figcaption>Figure 31: Comparing the marginal posteriors of the clock rate.</figcaption>
 </figure>
 <p><br /></p>
 
 <figure>
 	<a id="tracertmrcacompare"></a>
 	<img src="figures/tracer_tmrcacomparison.png" alt="" />
-	<figcaption>Figure 31: Comparing the marginal posteriors of the tMRCA.</figcaption>
+	<figcaption>Figure 32: Comparing the marginal posteriors of the tMRCA.</figcaption>
 </figure>
 <p><br /></p>
 

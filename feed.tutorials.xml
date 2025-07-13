@@ -12,6 +12,149 @@
 		</image>
 				
 			<item>
+				<title>BDMM Prime for Macroevolution</title>
+				<description>
+					The fossilized birth-death process and extensions
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Rachel C. M. Warnock
+							
+					
+						
+								
+									and  Timothy G Vaughan
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/a7ca9c9d7787062bd28f2eefc14c85a82fd53b1e'
+					&gt;
+						12 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/rachelwarnock'
+					&gt;
+						rachelwarnock
+					&lt;/a&gt;
+					: Merge etc
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Sat, 12 Jul 2025 12:31:47 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</guid>
+			</item>
+				
+			<item>
+				<title>Prior selection</title>
+				<description>
+					Prior selection and clock calibration using Influenza A data.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+					
+						
+								, Venelin Mitov
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/69fce6df09bc8f6db3b0dece071da9a4da823f55'
+					&gt;
+						11 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Figure update
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 11 Jul 2025 22:10:24 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
+			</item>
+				
+			<item>
+				<title>Divergence Time Estimation</title>
+				<description>
+					Dating Species Divergences with the Fossilized Birth-Death Process
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Tracy A. Heath
+							
+					
+						
+								, Rachel Warnock
+						
+					
+						
+								
+									and Bethany J. Allen
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/74447b0a70c6555a78ca86550a0efecb65b66854'
+					&gt;
+						11 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: XML update and rerun after ORC release
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Fri, 11 Jul 2025 21:04:37 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>TiDeTree Tutorial</title>
 				<description>
 					Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data
@@ -50,53 +193,6 @@
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>BDMM Prime for Macroevolution</title>
-				<description>
-					The fossilized birth-death process and extensions
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Rachel C. M. Warnock
-							
-					
-						
-								
-									and  Timothy G Vaughan
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/4c7db81f537fa290e2b0e29f41c87690c05994ee'
-					&gt;
-						11 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rachelwarnock'
-					&gt;
-						rachelwarnock
-					&lt;/a&gt;
-					: Merge pull request #2 from laduplessis/master
-
-Remove $
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
-				</description>
-				<pubDate>Fri, 11 Jul 2025 10:42:56 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</guid>
 			</item>
 				
 			<item>
@@ -275,57 +371,6 @@ Two small contributions after checking the tutorial
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Divergence Time Estimation</title>
-				<description>
-					Dating Species Divergences with the Fossilized Birth-Death Process
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Tracy A. Heath
-							
-					
-						
-								, Rachel Warnock
-						
-					
-						
-								
-									and Bethany J. Allen
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/FBD-tutorial/commit/f521686936e4e55d7d72dbc743ebddf40d143ca0'
-					&gt;
-						10 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/jugne'
-					&gt;
-						jugne
-					&lt;/a&gt;
-					: Merge pull request #12 from sgtRoberty/main
-
-FBD tutorial update for ttb2025
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Thu, 10 Jul 2025 14:03:24 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
 			</item>
 				
 			<item>
@@ -686,57 +731,6 @@ FBD tutorial update for ttb2025
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</guid>
-			</item>
-				
-			<item>
-				<title>Prior selection</title>
-				<description>
-					Prior selection and clock calibration using Influenza A data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-					
-						
-								, Venelin Mitov
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/fed974800ca60d779db3274a60ebc58a41d92015'
-					&gt;
-						23 May 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/jugne'
-					&gt;
-						jugne
-					&lt;/a&gt;
-					: Merge pull request #4 from jugne/master
-
-Small summary tree update
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 23 May 2025 14:58:17 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
