@@ -12,6 +12,49 @@
 		</image>
 				
 			<item>
+				<title>TiDeTree Tutorial</title>
+				<description>
+					Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Sophie Seidel
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/seidels/TiDeTree-Tutorial/commit/523419e11376f7af6edee4c588ca3e6fe93a4c4c'
+					&gt;
+						14 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/seidels'
+					&gt;
+						seidels
+					&lt;/a&gt;
+					: Merge pull request #2 from laduplessis/main
+
+Updates before the workshop
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v>= 2.7
+					
+				</description>
+				<pubDate>Mon, 14 Jul 2025 08:01:40 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Divergence Time Estimation</title>
 				<description>
 					Dating Species Divergences with the Fossilized Birth-Death Process
@@ -197,47 +240,6 @@
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
-			</item>
-				
-			<item>
-				<title>TiDeTree Tutorial</title>
-				<description>
-					Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Sophie Seidel
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis/TiDeTree-Tutorial/commit/6de8c12b44e6aa5054cc76a28e0605db037b2ee6'
-					&gt;
-						11 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Bad figure filename
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v>= 2.7
-					
-				</description>
-				<pubDate>Fri, 11 Jul 2025 20:20:31 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</guid>
 			</item>
 				
 			<item>
