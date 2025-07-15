@@ -12,6 +12,51 @@
 		</image>
 				
 			<item>
+				<title>Contraband tutorial</title>
+				<description>
+					Total-evidence dating and trait-evolution evolutionary inference using phylogenetic multivariate Brownian motion models
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Rong Zhang
+							
+					
+						
+								
+									and Fábio K. Mendes
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis/contraband-tutorial/commit/3ad589cb358988af4102e222754a8155a229cc71'
+					&gt;
+						15 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Add license
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Tue, 15 Jul 2025 14:31:56 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/contraband-tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/contraband-tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>TiDeTree Tutorial</title>
 				<description>
 					Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data
@@ -28,19 +73,17 @@
 					&lt;br&gt;&lt;br&gt;
 					Updated on 
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/seidels/TiDeTree-Tutorial/commit/523419e11376f7af6edee4c588ca3e6fe93a4c4c'
+						'https://github.com/laduplessis/TiDeTree-Tutorial/commit/e141b2fb13bd1b67675487e5b87241e73820638c'
 					&gt;
-						14 Jul 2025
+						15 Jul 2025
 					&lt;/a&gt;
 					by
 					&lt;a class=&apos;off&apos; href=
-						'https://github.com/seidels'
+						'https://github.com/laduplessis'
 					&gt;
-						seidels
+						laduplessis
 					&lt;/a&gt;
-					: Merge pull request #2 from laduplessis/main
-
-Updates before the workshop
+					: Update figure file names
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
@@ -48,7 +91,7 @@ Updates before the workshop
 						Requires: BEAST v>= 2.7
 					
 				</description>
-				<pubDate>Mon, 14 Jul 2025 08:01:40 +0000</pubDate>
+				<pubDate>Tue, 15 Jul 2025 12:58:09 +0000</pubDate>
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/TiDeTree-Tutorial/</guid>
@@ -1085,47 +1128,6 @@ Removed references to tutorial template bib file.
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>AIM in StarBeast2 v0.15.2 Tutorial</title>
-				<description>
-					Inferring species trees and gene flow from multiple loci
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/nicfel/AIM-Tutorial/commit/f8c88590e02d789143541f4c1b5fcd54e9bcc425'
-					&gt;
-						14 Sep 2020
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/nicfel'
-					&gt;
-						nicfel
-					&lt;/a&gt;
-					: switch to bf
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Mon, 14 Sep 2020 17:51:32 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
 			</item>
 		
 	</channel>

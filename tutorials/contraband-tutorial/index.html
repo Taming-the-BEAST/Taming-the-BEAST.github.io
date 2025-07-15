@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Contraband tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/contraband-tutorial/">Contraband tutorial</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Total-evidence dating and trait-evolution evolutionary inference using phylogenetic multivariate Brownian motion models
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Rong Zhang
+					
+			
+				
+						
+							and Fábio K. Mendes
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<a class="off" href="/tutorials/contraband-tutorial/main.pdf">main.pdf</a>	
+				</li>
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/laduplessis/contraband-tutorial" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/laduplessis/contraband-tutorial/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/data/carnivora_continuous_27.nex" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/data/carnivora_continuous_27.nex" target="_blank" rel="nofollow">
+						carnivora_continuous_27.nex
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/data/carnivora_discrete_27.nex" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/data/carnivora_discrete_27.nex" target="_blank" rel="nofollow">
+						carnivora_discrete_27.nex
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/data/carnivora_dna_27.fasta" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/data/carnivora_dna_27.fasta" target="_blank" rel="nofollow">
+						carnivora_dna_27.fasta
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/data/vulpes_continuous_data.txt" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/data/vulpes_continuous_data.txt" target="_blank" rel="nofollow">
+						vulpes_continuous_data.txt
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/data/vulpes_continuous_data_oneline.txt" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/data/vulpes_continuous_data_oneline.txt" target="_blank" rel="nofollow">
+						vulpes_continuous_data_onel...
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/xml/BM.xml" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/xml/BM.xml" target="_blank" rel="nofollow">
+						BM.xml
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/xml/ShrinkageBM.xml" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/xml/ShrinkageBM.xml" target="_blank" rel="nofollow">
+						ShrinkageBM.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/precooked_runs/BM.log" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/precooked_runs/BM.log" target="_blank" rel="nofollow">
+						BM.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/precooked_runs/ShrinkageBM.log" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/precooked_runs/ShrinkageBM.log" target="_blank" rel="nofollow">
+						ShrinkageBM.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/precooked_runs/carnivora_27_mcc.tree" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/precooked_runs/carnivora_27_mcc.tree" target="_blank" rel="nofollow">
+						carnivora_27_mcc.tree
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/precooked_runs/carnivora_27_tree.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/precooked_runs/carnivora_27_tree.trees" target="_blank" rel="nofollow">
+						carnivora_27_tree.trees
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/precooked_runs/carnivora_continuous_27_bm_mcc.tree" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/precooked_runs/carnivora_continuous_27_bm_mcc.tree" target="_blank" rel="nofollow">
+						carnivora_continuous_27_bm_...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/laduplessis/contraband-tutorial/raw/new-edits/precooked_runs/carnivora_continuous_27_tree_bm.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/laduplessis/contraband-tutorial/new-edits/precooked_runs/carnivora_continuous_27_tree_bm.trees" target="_blank" rel="nofollow">
+						carnivora_continuous_27_tre...
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/Rong419">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/36062528?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				Rong419
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/fkmendes">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/10715960?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				fkmendes
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/contraband-tutorial/commit/3ad589cb358988af4102e222754a8155a229cc71">
+					15 Jul 2025 - <span class="text-gray">Add license</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/contraband-tutorial/commit/32671855c37f4abdc61c102033c30c5924c7abc1">
+					15 Jul 2025 - <span class="text-gray">Rename folders so they will show up on the website</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/contraband-tutorial/commit/f1b5e0b399c4088bc6a8bf4872cdb6edb45d15b3">
+					15 Jul 2025 - <span class="text-gray">Add a little explanation to README.md</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/contraband-tutorial/commit/d27a81820df914267b8f760ff0568e8996552a59">
+					15 Jul 2025 - <span class="text-gray">Suggested edits to main.tex</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/laduplessis/contraband-tutorial/commit/49244f8d516fd71c7ff6e06571facdd2c59c7535">
+					15 Jul 2025 - <span class="text-gray">update with figures</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="contraband-tutorial">Contraband tutorial</h1>
+
+<p>This tutorial shows how to use the <strong>contraband</strong> package in <strong>BEAST2</strong> to model continuous trait evolution along a phylogeny with Brownian motion.
+Unlike methods that assume a “known”, fixed tree, <strong>contraband</strong> lets you estimate the tempo and mode of trait evolution simultaneously with both species relationships and divergence times.</p>
+
+<p>This tutorial is currently only available as a <a href="/tutorials/contraband-tutorial/main.pdf">PDF</a>.</p>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+
