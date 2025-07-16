@@ -12,6 +12,100 @@
 		</image>
 				
 			<item>
+				<title>StarBeast3 Tutorial</title>
+				<description>
+					Estimating species trees using StarBeast3
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Ugne Stolz
+							
+					
+						
+								
+									and  Jordan Douglas
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/StarBeast3-Tutorial/commit/80ed599f8d385ef9a6f09c5e06dddf5dea3eda27'
+					&gt;
+						16 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Move files in precooked_runs so they appear on website
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.8
+					
+				</description>
+				<pubDate>Wed, 16 Jul 2025 19:07:47 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/StarBeast3-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBeast3-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>BDMM Prime for Macroevolution</title>
+				<description>
+					The fossilized birth-death process and extensions
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Rachel C. M. Warnock
+							
+					
+						
+								, Timothy G. Vaughan
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis/BDMM-Prime-for-macroevolution/commit/af877572fa01031e97c545e54816e22a06ad2e1f'
+					&gt;
+						16 Jul 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: Fix liquid error and two other tiny changes
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Wed, 16 Jul 2025 18:55:50 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</guid>
+			</item>
+				
+			<item>
 				<title>Contraband tutorial</title>
 				<description>
 					Total-evidence dating and trait-evolution evolutionary inference using phylogenetic multivariate Brownian motion models
@@ -189,51 +283,6 @@
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</guid>
-			</item>
-				
-			<item>
-				<title>BDMM Prime for Macroevolution</title>
-				<description>
-					The fossilized birth-death process and extensions
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Rachel C. M. Warnock
-							
-					
-						
-								
-									and  Timothy G Vaughan
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/a7ca9c9d7787062bd28f2eefc14c85a82fd53b1e'
-					&gt;
-						12 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/rachelwarnock'
-					&gt;
-						rachelwarnock
-					&lt;/a&gt;
-					: Merge etc
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
-				</description>
-				<pubDate>Sat, 12 Jul 2025 12:31:47 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BDMM-Prime-for-macroevolution/</guid>
 			</item>
 				
 			<item>
@@ -416,51 +465,6 @@ Two small contributions after checking the tutorial
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>StarBeast3 Tutorial</title>
-				<description>
-					Estimating species trees using StarBeast3
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Ugne Stolz
-							
-					
-						
-								
-									and  Jordan Douglas
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/StarBeast3-Tutorial/commit/b9a9ba366bbda6638f940c01015c621104136208'
-					&gt;
-						9 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/jugne'
-					&gt;
-						jugne
-					&lt;/a&gt;
-					: Jordan's and Chi's comments
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.8
-					
-				</description>
-				<pubDate>Wed, 09 Jul 2025 12:07:30 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/StarBeast3-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/StarBeast3-Tutorial/</guid>
 			</item>
 				
 			<item>

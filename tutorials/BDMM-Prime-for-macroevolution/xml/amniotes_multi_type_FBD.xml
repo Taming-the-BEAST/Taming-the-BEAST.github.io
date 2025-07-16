@@ -117,10 +117,11 @@ dataType="standard">
             <parameter id="ucldMean.c:amniotes" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.001</parameter>
             <parameter id="ucldStdev.c:amniotes" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.1</parameter>
             <stateNode id="rateCategories.c:amniotes" spec="parameter.IntegerParameter" dimension="138">1</stateNode>
-            <parameter id="birthRateCanonical.t:amniotes" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.1</parameter>
-            <parameter id="deathRateCanonical.t:amniotes" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.1</parameter>
-            <parameter id="samplingRateCanonical.t:amniotes" spec="parameter.RealParameter" lower="0.0" name="stateNode">0.1</parameter>
+            <parameter id="birthRateCanonical.t:amniotes" spec="parameter.RealParameter" dimension="3" lower="0.0" name="stateNode">0.1 0.1 0.1</parameter>
+            <parameter id="deathRateCanonical.t:amniotes" spec="parameter.RealParameter" dimension="3" lower="0.0" name="stateNode">0.1 0.1 0.1</parameter>
+            <parameter id="samplingRateCanonical.t:amniotes" spec="parameter.RealParameter" dimension="3" lower="0.0" name="stateNode">0.1 0.1 0.1</parameter>
             <parameter id="originBDMMPrime.t:amniotes" spec="parameter.RealParameter" name="stateNode">100.0</parameter>
+            <parameter id="migrationRateCanonical.t:amniotes" spec="parameter.RealParameter" dimension="3" lower="0.0" name="stateNode">1.0 1.0 1.0</parameter>
         </state>
         <init id="RandomTree.t:amniotes" spec="RandomTree" estimate="false" initial="@Tree.t:amniotes" taxa="@amniotes2">
             <populationModel id="ConstantPopulation0.t:amniotes" spec="ConstantPopulation">
@@ -131,28 +132,28 @@ dataType="standard">
             <distribution id="prior" spec="CompoundDistribution">
                 <distribution id="BDMMPrime.t:amniotes" spec="bdmmprime.distribution.BirthDeathMigrationDistribution" conditionOnSurvival="false" tree="@Tree.t:amniotes">
                     <parameterization id="CanonicalBDMMPrimeParameterization.t:amniotes" spec="bdmmprime.parameterization.CanonicalParameterization" processLength="@originBDMMPrime.t:amniotes">
-                        <birthRate id="birthRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineVectorParameter" processLength="@originBDMMPrime.t:amniotes" skylineValues="@birthRateCanonical.t:amniotes" timesAreAges="true">
+                        <birthRate id="birthRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineVectorParameter" isScalar="false" processLength="@originBDMMPrime.t:amniotes" skylineValues="@birthRateCanonical.t:amniotes" timesAreAges="true">
                             <typeSet id="typeSetBDMMPrime.t:amniotes" spec="bdmmprime.parameterization.TypeSet">
-                                <typeTraitSet id="typeTraitSet.t:amniotes" spec="bdmmprime.util.InitializedTraitSet" traitname="type" value="Acerosodontosaurus_piveteaui_SA_260.35=NOT_SET,Acleistorhinus_pteroticus_NAm_284.75=NOT_SET,Aerosaurus_wellesi_NAm_296.21=NOT_SET,Anthracodromeus_longipes_NAm_309=NOT_SET,Apsisaurus_witteri_NAm_294.5=NOT_SET,Araeoscelis_spp_NAm_286.8=NOT_SET,Archaeothyris_florensis_NAm_309=NOT_SET,Archaeovenator_hamiltonensis_NAm_300.45=NOT_SET,Ascendonanus_nestleri_Eu_290=NOT_SET,Belebey_vegrandis_Eu_270.875=NOT_SET,Candelaria_barbouri_NAm_239.5=NOT_SET,Captorhinus_aguti_NAm_286.8=NOT_SET,Captorhinus_laticeps_NAm_286.8=NOT_SET,Casea_broilii_NAm_283=NOT_SET,Claudiosaurus_germaini_SA_263.95=NOT_SET,Colobomycter_pholeter_NAm_289=NOT_SET,Cutleria_wilmarthi_NAm_296.21=NOT_SET,Deltavjatia_rossicus_Eu_258.5=NOT_SET,Dimetrodon_spp_NAm_286.8=NOT_SET,Echinerpeton_intermedium_NAm_309=NOT_SET,Edaphosaurus_boanerges_NAm_286.8=NOT_SET,Elliotsmithia_longiceps_SA_260.55=NOT_SET,Emeroleter_levis_Eu_258.5=NOT_SET,Ennatosaurus_tecton_Eu_269.025=NOT_SET,Eocasea_martini_NAm_300.45=NOT_SET,Eothyris_parkeyi_NAm_285.05=NOT_SET,Erpetonyx_arsenaultorum_NAm_301.15=NOT_SET,Euconcordia_cunninghami_NAm_300.45=NOT_SET,Eudibamus_cursoris_Eu_286.8=NOT_SET,Euromycter_rutena_Eu_288.51=NOT_SET,Gephyrostegus_bohemicus_Eu_309=NOT_SET,Haptodus_garnettensis_NAm_305.35=NOT_SET,Heleosaurus_scholtzi_SA_260.55=NOT_SET,Hylonomus_lyelli_NAm_316.65=NOT_SET,Ianthasaurus_hardestiorum_NAm_305.35=NOT_SET,Labidosaurikos_meachami_NAm_278.225=NOT_SET,Labidosaurus_hamatus_NAm_278.225=NOT_SET,Lanthanolania_ivakhnenkoi_Eu_269.025=NOT_SET,Limnoscelis_paludis_NAm_298.61=NOT_SET,Macroleter_poezicus_Eu_269.025=NOT_SET,Mesenosaurus_romeri_Eu_267.025=NOT_SET,Mesosaurus_tenuidens_SA_280.25=NOT_SET,Milleretta_rubidgei_SA_256.62=NOT_SET,Mycterosaurus_longiceps_NAm_286.8=NOT_SET,Nyctiphruretus_acudens_Eu_258.5=NOT_SET,Oedaleops_campi_NAm_296.21=NOT_SET,Ophiacodon_spp_NAm_294.5=NOT_SET,Orovenator_mayorum_NAm_289=NOT_SET,Owenetta_kitchingorum_SA_253.15=NOT_SET,Paleothyris_acadiana_NAm_309=NOT_SET,Pantelosaurus_saxonicus_Eu_296.21=NOT_SET,Petrolacosaurus_kansensis_NAm_305.35=NOT_SET,Procolophon_trigoniceps_SA_249.55=NOT_SET,Prolacerta_broomi_SA_249.55=NOT_SET,Proterosuchus_spp_SA_249.55=NOT_SET,Protocaptorhinus_pricei_NAm_286.8=NOT_SET,Protorothyris_archeri_NAm_294.5=NOT_SET,Reiszorhinus_olsoni_NAm_286.8=NOT_SET,Romeria_spp_NAm_294.5=NOT_SET,Secodontosaurus_obtusidens_NAm_286.8=NOT_SET,Seymouria_spp_NAm_288.51=NOT_SET,Stereosternum_tumidum_SA_280.25=NOT_SET,Thuringothyris_mahlendorffae_Eu_286.8=NOT_SET,Tseajaia_campi_NAm_296.9=NOT_SET,Varanodon_agilis_NAm_272.5=NOT_SET,Varanops_brevirostris_NAm_285.05=NOT_SET,Varanosaurus_acutirostris_NAm_286.8=NOT_SET,Vaughnictis_smithae_NAm_294.5=NOT_SET,Watongia_meieri_NAm_272.5=NOT_SET,Youngina_capensis_SA_256.62=NOT_SET">
+                                <typeTraitSet id="typeTraitSet.t:amniotes" spec="bdmmprime.util.InitializedTraitSet" traitname="type" value="Gephyrostegus_bohemicus_Eu_309=Eu,Seymouria_spp_NAm_288.51=NAm,Tseajaia_campi_NAm_296.9=NAm,Limnoscelis_paludis_NAm_298.61=NAm,Oedaleops_campi_NAm_296.21=NAm,Eothyris_parkeyi_NAm_285.05=NAm,Vaughnictis_smithae_NAm_294.5=NAm,Eocasea_martini_NAm_300.45=NAm,Euromycter_rutena_Eu_288.51=Eu,Casea_broilii_NAm_283=NAm,Ennatosaurus_tecton_Eu_269.025=Eu,Echinerpeton_intermedium_NAm_309=NAm,Archaeothyris_florensis_NAm_309=NAm,Varanosaurus_acutirostris_NAm_286.8=NAm,Ophiacodon_spp_NAm_294.5=NAm,Cutleria_wilmarthi_NAm_296.21=NAm,Pantelosaurus_saxonicus_Eu_296.21=Eu,Haptodus_garnettensis_NAm_305.35=NAm,Secodontosaurus_obtusidens_NAm_286.8=NAm,Dimetrodon_spp_NAm_286.8=NAm,Ianthasaurus_hardestiorum_NAm_305.35=NAm,Edaphosaurus_boanerges_NAm_286.8=NAm,Hylonomus_lyelli_NAm_316.65=NAm,Anthracodromeus_longipes_NAm_309=NAm,Paleothyris_acadiana_NAm_309=NAm,Protorothyris_archeri_NAm_294.5=NAm,Petrolacosaurus_kansensis_NAm_305.35=NAm,Araeoscelis_spp_NAm_286.8=NAm,Orovenator_mayorum_NAm_289=NAm,Archaeovenator_hamiltonensis_NAm_300.45=NAm,Ascendonanus_nestleri_Eu_290=Eu,Aerosaurus_wellesi_NAm_296.21=NAm,Apsisaurus_witteri_NAm_294.5=NAm,Heleosaurus_scholtzi_SA_260.55=SA,Mesenosaurus_romeri_Eu_267.025=Eu,Mycterosaurus_longiceps_NAm_286.8=NAm,Elliotsmithia_longiceps_SA_260.55=SA,Varanops_brevirostris_NAm_285.05=NAm,Varanodon_agilis_NAm_272.5=NAm,Watongia_meieri_NAm_272.5=NAm,Youngina_capensis_SA_256.62=SA,Acerosodontosaurus_piveteaui_SA_260.35=SA,Lanthanolania_ivakhnenkoi_Eu_269.025=Eu,Claudiosaurus_germaini_SA_263.95=SA,Prolacerta_broomi_SA_249.55=SA,Proterosuchus_spp_SA_249.55=SA,Thuringothyris_mahlendorffae_Eu_286.8=Eu,Captorhinus_aguti_NAm_286.8=NAm,Captorhinus_laticeps_NAm_286.8=NAm,Labidosaurikos_meachami_NAm_278.225=NAm,Labidosaurus_hamatus_NAm_278.225=NAm,Protocaptorhinus_pricei_NAm_286.8=NAm,Romeria_spp_NAm_294.5=NAm,Euconcordia_cunninghami_NAm_300.45=NAm,Reiszorhinus_olsoni_NAm_286.8=NAm,Eudibamus_cursoris_Eu_286.8=Eu,Mesosaurus_tenuidens_SA_280.25=SA,Stereosternum_tumidum_SA_280.25=SA,Erpetonyx_arsenaultorum_NAm_301.15=NAm,Belebey_vegrandis_Eu_270.875=Eu,Macroleter_poezicus_Eu_269.025=Eu,Milleretta_rubidgei_SA_256.62=SA,Acleistorhinus_pteroticus_NAm_284.75=NAm,Colobomycter_pholeter_NAm_289=NAm,Nyctiphruretus_acudens_Eu_258.5=Eu,Emeroleter_levis_Eu_258.5=Eu,Deltavjatia_rossicus_Eu_258.5=Eu,Procolophon_trigoniceps_SA_249.55=SA,Candelaria_barbouri_NAm_239.5=NAm,Owenetta_kitchingorum_SA_253.15=SA">
                                     <taxa id="TaxonSet.5" spec="TaxonSet" alignment="@amniotes2"/>
                                 </typeTraitSet>
                             </typeSet>
                         </birthRate>
-                        <deathRate id="deathRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineVectorParameter" processLength="@originBDMMPrime.t:amniotes" skylineValues="@deathRateCanonical.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes"/>
-                        <samplingRate id="samplingRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineVectorParameter" processLength="@originBDMMPrime.t:amniotes" skylineValues="@samplingRateCanonical.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes"/>
+                        <deathRate id="deathRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineVectorParameter" isScalar="false" processLength="@originBDMMPrime.t:amniotes" skylineValues="@deathRateCanonical.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes"/>
+                        <samplingRate id="samplingRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineVectorParameter" isScalar="false" processLength="@originBDMMPrime.t:amniotes" skylineValues="@samplingRateCanonical.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes"/>
                         <rhoSampling id="rhoSamplingProbSPCanonical.t:amniotes" spec="bdmmprime.parameterization.TimedParameter" processLength="@originBDMMPrime.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes"/>
                         <removalProb id="removalProbSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineVectorParameter" processLength="@originBDMMPrime.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes">
                             <parameter id="removalProbCanonical.t:amniotes" spec="parameter.RealParameter" estimate="false" lower="0.0" name="skylineValues" upper="1.0">0.0</parameter>
                         </removalProb>
-                        <migrationRate id="migrationRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineMatrixParameter" processLength="@originBDMMPrime.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes">
-                            <parameter id="migrationRateCanonical.t:amniotes" spec="parameter.RealParameter" estimate="false" lower="0.0" name="skylineValues">1.0</parameter>
+                        <migrationRate id="migrationRateSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineMatrixParameter" processLength="@originBDMMPrime.t:amniotes" skylineValues="@migrationRateCanonical.t:amniotes" timesAreAges="true" timesAreRelative="true" typeSet="@typeSetBDMMPrime.t:amniotes">
+                            <parameter id="migrationRateChangeTimesCanonical.t:amniotes" spec="parameter.RealParameter" dimension="2" estimate="false" lower="0.0" name="changeTimes">0.3333333333333333 0.6666666666666666</parameter>
                         </migrationRate>
                         <birthRateAmongDemes id="birthRateAmongDemesSPCanonical.t:amniotes" spec="bdmmprime.parameterization.SkylineMatrixParameter" processLength="@originBDMMPrime.t:amniotes" timesAreAges="true" typeSet="@typeSetBDMMPrime.t:amniotes">
-                            <parameter id="birthRateAmongDemesCanonical.t:amniotes" spec="parameter.RealParameter" estimate="false" lower="0.0" name="skylineValues">1.0</parameter>
+                            <parameter id="birthRateAmongDemesCanonical.t:amniotes" spec="parameter.RealParameter" estimate="false" lower="0.0" name="skylineValues">0.0</parameter>
                         </birthRateAmongDemes>
                         <typeSet idref="typeSetBDMMPrime.t:amniotes"/>
                     </parameterization>
-                    <parameter id="startTypePriorProbs.t:amniotes" spec="parameter.RealParameter" estimate="false" lower="0.0" name="startTypePriorProbs" upper="1.0">1.0</parameter>
+                    <parameter id="startTypePriorProbs.t:amniotes" spec="parameter.RealParameter" dimension="3" estimate="false" lower="0.0" name="startTypePriorProbs" upper="1.0">0.3333333333333333 0.3333333333333333 0.3333333333333333</parameter>
                     <typeTraitSet idref="typeTraitSet.t:amniotes"/>
                 </distribution>
                 <distribution id="birthRateCanonicalPrior.t:amniotes" spec="bdmmprime.util.priors.ZeroExcludingPrior" x="@birthRateCanonical.t:amniotes">
@@ -163,6 +164,11 @@ dataType="standard">
                 <distribution id="deathRateCanonicalPrior.t:amniotes" spec="bdmmprime.util.priors.ZeroExcludingPrior" x="@deathRateCanonical.t:amniotes">
                     <Exponential id="Exponential.6" name="distr">
                         <parameter id="RealParameter.16" spec="parameter.RealParameter" estimate="false" name="mean">0.1</parameter>
+                    </Exponential>
+                </distribution>
+                <distribution id="migrationRateCanonicalPrior.t:amniotes" spec="bdmmprime.util.priors.ZeroExcludingPrior" x="@migrationRateCanonical.t:amniotes">
+                    <Exponential id="Exponential.9" name="distr">
+                        <parameter id="RealParameter.19" spec="parameter.RealParameter" estimate="false" name="mean">0.1</parameter>
                     </Exponential>
                 </distribution>
                 <prior id="originBDMMPrimePrior.t:amniotes" name="distribution" x="@originBDMMPrime.t:amniotes">
@@ -280,7 +286,9 @@ filter="18,295-299">
             <skylineParameter idref="birthRateSPCanonical.t:amniotes"/>
             <skylineParameter idref="deathRateSPCanonical.t:amniotes"/>
             <skylineParameter idref="samplingRateSPCanonical.t:amniotes"/>
+            <skylineParameter idref="migrationRateSPCanonical.t:amniotes"/>
         </operator>
+        <operator id="migrationRateCanonicalScaler.t:amniotes" spec="ScaleOperator" parameter="@migrationRateCanonical.t:amniotes" weight="3.0"/>
         <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
             <log idref="posterior"/>
             <log idref="likelihood"/>
@@ -302,6 +310,7 @@ filter="18,295-299">
             <log idref="samplingRateSPCanonical.t:amniotes"/>
             <log idref="originBDMMPrime.t:amniotes"/>
             <log id="startTypePosteriorProbsLogger.t:amniotes" spec="bdmmprime.util.StartTypePosteriorProbsLogger" bdmmTreePrior="@BDMMPrime.t:amniotes"/>
+            <log idref="migrationRateSPCanonical.t:amniotes"/>
         </logger>
         <logger id="screenlog" spec="Logger" logEvery="1000">
             <log idref="posterior"/>
@@ -314,7 +323,7 @@ filter="18,295-299">
         <logger id="typedTreeLogger.t:amniotes" spec="bdmmprime.util.OptionalLogger" fileName="$(filebase).$(tree).typed.trees" logEvery="1000" mode="tree">
             <log id="typeMappedTree.t:amniotes" spec="bdmmprime.mapping.TypeMappedTree" bdmmDistrib="@BDMMPrime.t:amniotes" mapOnInit="false" remapOnLog="true" startTypePriorProbs="@startTypePriorProbs.t:amniotes" typeLabel="type" typeTraitSet="@typeTraitSet.t:amniotes" untypedTree="@Tree.t:amniotes"/>
         </logger>
-        <logger id="nodeTypedTreeLogger.t:amniotes" spec="bdmmprime.util.OptionalLogger" fileName="$(filebase).$(tree).typed.node.trees" logEvery="1000" mode="tree">
+        <logger id="nodeTypedTreeLogger.t:amniotes" spec="bdmmprime.util.OptionalLogger" enableLogger="true" fileName="$(filebase).$(tree).typed.node.trees" logEvery="1000" mode="tree">
             <log id="nodeTypedTree.t:amniotes" spec="bdmmprime.mapping.TypedNodeTreeLogger" typedTree="@typeMappedTree.t:amniotes"/>
         </logger>
         <logger id="trajLogger.t:amniotes" spec="bdmmprime.util.OptionalLogger" fileName="$(filebase).$(tree).traj" logEvery="1000">
