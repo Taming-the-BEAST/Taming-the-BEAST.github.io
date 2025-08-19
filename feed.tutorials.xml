@@ -12,6 +12,53 @@
 		</image>
 				
 			<item>
+				<title>Structured coalescent</title>
+				<description>
+					Population structure using MultiTypeTree
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Nicola F. Müller
+							
+					
+						
+								
+									and Tim Vaughan
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Structured-coalescent/commit/27ed57077fe9d37618634c890f1ccd60abd86fec'
+					&gt;
+						11 Aug 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/jugne'
+					&gt;
+						jugne
+					&lt;/a&gt;
+					: Merge pull request #3 from jugne/master
+
+Updated TtB tutorial to work with BEAUti template upgrade
+					&lt;br&gt;&lt;br&gt;
+					Level: Professional
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Mon, 11 Aug 2025 10:06:34 +0000</pubDate>
+				<category>Professional</category>
+				<link>https://taming-the-beast.org//tutorials/Structured-coalescent/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-coalescent/</guid>
+			</item>
+				
+			<item>
 				<title>Total Evidence Tutorial</title>
 				<description>
 					Inferring phylogenies using genetic sequences and morphological characters
@@ -1089,47 +1136,6 @@ Removed references to tutorial template bib file.
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>AIM in StarBeast2 v0.15.2 Tutorial</title>
-				<description>
-					Inferring species trees and gene flow from multiple loci
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Nicola F. Müller
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/nicfel/AIM-Tutorial/commit/f8c88590e02d789143541f4c1b5fcd54e9bcc425'
-					&gt;
-						14 Sep 2020
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/nicfel'
-					&gt;
-						nicfel
-					&lt;/a&gt;
-					: switch to bf
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.5.2
-					
-				</description>
-				<pubDate>Mon, 14 Sep 2020 17:51:32 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/AIM-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/AIM-Tutorial/</guid>
 			</item>
 		
 	</channel>
