@@ -12,6 +12,20 @@
 		</image>
 		
 			<item>
+				<title>Next online Transmitting Science BEAST2 course</title>
+				<description>&lt;p&gt;Registration is now open for the next Transmitting Science course on BEAST2, taught by Joëlle Barido-Sottani and Bethany Allen. 
+Inspired by the Taming the BEAST format, this course covers the principles of Bayesian phylogenetic inference, details of many of the models available in BEAST2, and practical advice for running your own analyses.&lt;/p&gt;
+
+&lt;p&gt;The course will take place &lt;strong&gt;online&lt;/strong&gt;, from 15:00 til 18:30 European time, on &lt;strong&gt;October 27th, 29th, and 31st &amp;amp; November 3rd, 5th, and 7th, 2025.&lt;/strong&gt; In addition to the Zoom lectures, participants will be expected to complete practical sessions on their own time.&lt;/p&gt;
+
+&lt;p&gt;For more information on the course and to register, visit the &lt;a href=&quot;https://www.transmittingscience.com/courses/evolution/bayesian-phylogenetic-inference-with-beast2/&quot;&gt;Transmitting Science website&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
+				<link>https://taming-the-beast.org//news/Transmitting_Science_2/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Transmitting_Science_2/</guid>
+			</item>
+		
+			<item>
 				<title>Beijing Wrap-up</title>
 				<description>&lt;figure&gt;
    &lt;a id=&quot;fig:venue&quot;&gt;&lt;/a&gt;
@@ -384,32 +398,6 @@ available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Down-Under/&quot;&
 				<pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
 				<link>https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-programme/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-programme/</guid>
-			</item>
-		
-			<item>
-				<title>Taming the BEAST Down Under!</title>
-				<description>&lt;p&gt;We are delighted to announce that the next Taming the BEAST workshop
-will be in Sydney, Australia!&lt;/p&gt;
-
-&lt;p&gt;The workshop will take place from &lt;strong&gt;17-22 February&lt;/strong&gt; next year, and is being organized
-by the
-&lt;a href=&quot;https://sydney.edu.au/science/biology/meep/index.shtml&quot;&gt;Molecular Ecology, Evolution and Phylogenetics&lt;/a&gt;
-lab at the University of Sydney.&lt;/p&gt;
-
-&lt;p&gt;For further information visit
-&lt;a href=&quot;https://sydney.edu.au/science/biology/meep/workshops/&quot;&gt;this page&lt;/a&gt;
-or refer to the flyer below.&lt;/p&gt;
-
-&lt;p&gt;Check back often for updates!&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/workshops/Taming-the-BEAST-Down-Under-Flyer.jpg&quot; alt=&quot;Flyer&quot; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-				<pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under/</guid>
 			</item>
 		
 	</channel>

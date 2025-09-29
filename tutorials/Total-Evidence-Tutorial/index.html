@@ -366,6 +366,14 @@
 				<div class="smallspacer"></div>
 				<li> 
 					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/e76886160a6f5b5b3eeae6ad047af1c7750443a2">
+					27 Aug 2025 - <span class="text-gray">fixes</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/fccd4c78122b2ff9baaa314d192047d86977e7b8">
 					17 Jul 2025 - <span class="text-gray">Merge pull request #4 from laduplessis/main
 
@@ -396,14 +404,6 @@ Two small contributions after checking the tutorial</span>
 					<i class="bi bi-check-square"></i>
 					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/0038dd7a410e08829c0fa46c1e2b606642f58909">
 					10 Jul 2025 - <span class="text-gray">Fixed two "Useful Links"</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/1b05ea01d136e7daf0f551eb4cf404ad965a39aa">
-					10 Jul 2025 - <span class="text-gray">Added package manager screenshot</span>
 					</a> 
 				</li>
 			
@@ -515,7 +515,7 @@ Two small contributions after checking the tutorial</span>
 
 <p>Beneath this, again, we see the name of each OTU followed by its character states for each trait. This time, no tip has only question marks, so we have at least some morphological data for every tip. But overall, there are still a high number of question marks spread across the dataset, with unknown states making up a larger proportion of the data compared to the DNA. For example, we can see that for <code class="language-plaintext highlighter-rouge">Todea_papuana_0</code>, only five of the characters are coded, with all other states unknown.</p>
 
-<p>Another thing to note is that not all of our morphological “sequences” are the same length. This is because some contain bracketed pairs of values. For example, we see that <code class="language-plaintext highlighter-rouge">Osmunda_cinnamomea_0</code> contains two, the first being <code class="language-plaintext highlighter-rouge">{1 2}</code>, and the second being <code class="language-plaintext highlighter-rouge">{0 1}</code>. Here, we are denoting <em>ambiguity</em>. For these particular characters, we are telling the model that the value could be either of these two states. It is important to note that the model will interpret this information to mean that the state could be <em>either one</em> of these values, <em>not both</em>. If the morphological character in question was not coded with this information in mind, you risk violating BEAST2’s model of morphological evolution.</p>
+<p>Another thing to note is that not all of our morphological “sequences” are the same length. This is because some contain bracketed pairs of values. For example, we see that <code class="language-plaintext highlighter-rouge">Osmunda_cinnamomea_0</code> contains two, the first being <code class="language-plaintext highlighter-rouge">{12}</code>, and the second being <code class="language-plaintext highlighter-rouge">{01}</code>. Here, we are denoting <em>ambiguity</em>. For these particular characters, we are telling the model that the value could be either of these two states. It is important to note that the model will interpret this information to mean that the state could be <em>either one</em> of these values, <em>not both</em>. If the morphological character in question was not coded with this information in mind, you risk violating BEAST2’s model of morphological evolution.</p>
 
 <p>Here we have highlighted a handful of ways in which morphological data must be carefully formatted to be compatible with BEAST2. Different phylogenetic inference software use different models for morphological character evolution, and it is important to bear in mind the relationship between the morphological dataset design and the assumptions made by the model in your software of choice.</p>
 
@@ -840,7 +840,7 @@ Check the box at the bottom for <strong>Tipsonly</strong>.</p>
 	<figcaption>Figure 21: The settings for the tip prior on _Todea tidwellii_.</figcaption>
 </figure>
 
-<p>Using this process, you can now enter the tip priors for each of the extinct tips, using the age uncertainties given in the box below. We have included the tips which have a set age for the sake of completeness, but it is not necessary to add a prior for these tips, as their initial ages are set to this date and if no prior is added, they will remain fixed at this age throughout the MCMC.</p>
+<p>Using this process, you can now enter the tip priors for each of the extinct tips, using the age uncertainties given in the box below. We have included the tips which have a set age (single point estimate, <em>Osmunda cinnamomea</em> for instance)  for the sake of completeness, but it is not necessary to add a prior for these tips. Their initial ages are set to this date and if no prior is added, they will remain fixed at this age throughout the MCMC.</p>
 
 <table>
   <thead>
@@ -1185,6 +1185,12 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
 	<div class="footerspacer"></div>
 
 <div class="footer">
+  
+  <div style="text-align: center">
+    <a href="https://www.sib.swiss/services/open-software-and-databases">
+      <img src="./images/sib_logo2023.png" width="150">
+    </a>
+    <p style="margin-top:0.5em;">BEAST 2 is part of <a href="https://www.sib.swiss/services/open-software-and-databases">SIB's portfolio</a> of open databases and software tools.</p></div>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -1193,6 +1199,13 @@ Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, C
         <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
         <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
         </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="footer-logo">
+          <a href="https://www.sib.swiss/services/open-software-and-databases">
+            <img src="./images/sib_logo2023.png" width="150">
+          </a>
+        </div>
       </div>
     </div>
   </div>

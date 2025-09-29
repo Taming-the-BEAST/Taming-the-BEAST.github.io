@@ -12,6 +12,51 @@
 		</image>
 				
 			<item>
+				<title>Total Evidence Tutorial</title>
+				<description>
+					Inferring phylogenies using genetic sequences and morphological characters
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Bethany J. Allen
+							
+					
+						
+								
+									and Joëlle Barido-Sottani
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/e76886160a6f5b5b3eeae6ad047af1c7750443a2'
+					&gt;
+						27 Aug 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						''
+					&gt;
+						Unknown
+					&lt;/a&gt;
+					: fixes
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Wed, 27 Aug 2025 12:34:33 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Structured coalescent</title>
 				<description>
 					Population structure using MultiTypeTree
@@ -56,53 +101,6 @@ Updated TtB tutorial to work with BEAUti template upgrade
 				<category>Professional</category>
 				<link>https://taming-the-beast.org//tutorials/Structured-coalescent/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-coalescent/</guid>
-			</item>
-				
-			<item>
-				<title>Total Evidence Tutorial</title>
-				<description>
-					Inferring phylogenies using genetic sequences and morphological characters
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Bethany J. Allen
-							
-					
-						
-								
-									and Joëlle Barido-Sottani
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/fccd4c78122b2ff9baaa314d192047d86977e7b8'
-					&gt;
-						17 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bethany-j-allen'
-					&gt;
-						bethany-j-allen
-					&lt;/a&gt;
-					: Merge pull request #4 from laduplessis/main
-
-Rename folder so output files will appear on website
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
-				</description>
-				<pubDate>Thu, 17 Jul 2025 06:56:47 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
 			</item>
 				
 			<item>

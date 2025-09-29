@@ -423,7 +423,7 @@
                 </distr>
             </distribution>
             <distribution spec="sa.evolution.speciation.SABirthDeathModel" id="birthDeath" tree="@tree" conditionOnRhoSampling="true">
-                <parameter name="origin" id='origin' value="150."/>
+                <parameter name="origin" id='origin' value="250."/>
                 <parameter name="diversificationRate" id='diversificationRate' value="1."/>
                 <parameter name="turnover" id='turnover' value=".5"/>
                 <parameter name="samplingProportion" id='samplingProportion' value="0.7"/>
