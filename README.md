@@ -65,20 +65,22 @@ You can choose to set up a build environment locally or use a container image. B
   
   2. Then install necessary Ruby dependencies by running `bundle install` from within the `blotter` directory.
      
-  3.After this, the site can be be built with:
+  3. After this, the site can be be built with:
   ```
   bundle exec jekyll build
   ```
   
+  - If you wish to build with tutorials, preprocessing scripts are necessary to clone tutorial repos and update Jekyll metadata. To do this, execute the following before the build command:
+    
+    ```
+    ruby _scripts/update-and-preprocess.rb
+    ```
+  - If you wish to skip tutorials (much faster), export the following env variable, before the build command:
+    ```
+    export JEKYLL_ENV=skip_tuts
+    ```
+  
   4. To view the site, run `bundle exec jekyll serve --host=0.0.0.0` and point a browser to `http://localhost:4000/`. Option `--host=0.0.0.0` may not be needed, depending on your setup.  More information on Jekyll can be found [here](http://jekyllrb.com/).
-  
-  5. To include the tutorials, preprocessing scripts are necessary to clone tutorial repos and update Jekyll metadata. This can be accomplished with:
-  
-  ```
-  ruby _scripts/update-and-preprocess.rb
-  ```
-  
-  Then `bundle exec jekyll build` works as normal.
   
   See [Building a local copy of the site](https://taming-the-beast.github.io/contribute/Building-a-local-copy-of-the-site/) for more information.
 

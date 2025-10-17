@@ -9373,7 +9373,7 @@ b, strong {
 }
 
 .footerspacer {
-  height: 70px;
+  height: 120px;
 }
 
 a.off {
@@ -9506,7 +9506,8 @@ figcaption {
   position: fixed;
   bottom: 0%;
   width: 100%;
-  height: 60px;
+  height: 95px;
+  padding-top: 10px;
   border: 1px solid transparent;
   border-color: #e7e7e7;
   background-color: #f8f8f8;
