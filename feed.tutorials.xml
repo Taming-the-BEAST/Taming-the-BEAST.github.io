@@ -12,6 +12,51 @@
 		</image>
 				
 			<item>
+				<title>Species Trees and Species Delimitation with SNAPPER</title>
+				<description>
+					Analyzing SNP or AFLP data
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Adam Leaché
+							
+					
+						
+								
+									and  Remco Bouckaert
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bjoelle/BFD_snapper_tutorial/commit/0d8e9bed18b64d5c21aafef4aedf79db2f3b8ab6'
+					&gt;
+						6 Nov 2025
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bjoelle'
+					&gt;
+						bjoelle
+					&lt;/a&gt;
+					: added PDF
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Thu, 06 Nov 2025 10:58:31 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/BFD_snapper_tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BFD_snapper_tutorial/</guid>
+			</item>
+				
+			<item>
 				<title>Total Evidence Tutorial</title>
 				<description>
 					Inferring phylogenies using genetic sequences and morphological characters
@@ -868,51 +913,6 @@ Fix liquid error and two other tiny changes
 				<category>Beginner</category>
 				<link>https://taming-the-beast.org//tutorials/Skyline-plots/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-plots/</guid>
-			</item>
-				
-			<item>
-				<title>Species Trees and Species Delimitation with SNAPPER</title>
-				<description>
-					Analyzing SNP or AFLP data
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Adam Leaché
-							
-					
-						
-								
-									and  Remco Bouckaert
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bjoelle/BFD_snapper_tutorial/commit/33095946a9ef9cc1f57f7f8441c15460dd3fab3b'
-					&gt;
-						15 Apr 2024
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: added converged run
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Mon, 15 Apr 2024 09:35:04 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/BFD_snapper_tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BFD_snapper_tutorial/</guid>
 			</item>
 				
 			<item>
