@@ -9317,7 +9317,7 @@ a.nav-link {
   /* Museo */
 }
 
-.note, .footernav {
+.note, .footernav, .footer-acknowledgement {
   font-size: 15px;
   font-weight: 300;
   line-height: 18px;
@@ -9331,7 +9331,7 @@ a.nav-link {
   /* Museo */
 }
 
-.text-gray, .footernav {
+.text-gray, .footernav, .footer-acknowledgement {
   color: #777777;
 }
 
@@ -9506,11 +9506,24 @@ figcaption {
   position: fixed;
   bottom: 0%;
   width: 100%;
-  height: 95px;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border: 1px solid transparent;
   border-color: #e7e7e7;
   background-color: #f8f8f8;
+}
+
+.footer-acknowledgement {
+  font-size: 0.65em;
+  line-height: 1.35;
+  text-align: justify;
+}
+.footer-acknowledgement p {
+  margin-bottom: 0;
+}
+
+.footer-logo {
+  text-align: center;
 }
 
 .footernav {
