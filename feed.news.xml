@@ -13,6 +13,20 @@
 		
 			<item>
 				<title>Next online Transmitting Science BEAST2 course</title>
+				<description>&lt;p&gt;Registration is now open for the next Transmitting Science course on BEAST2, taught by Joëlle Barido-Sottani (ENS-PSL, France) and Robert Haobo Yuan (ETH Zürich, Switzerland).
+Inspired by the Taming the BEAST format, this online course covers the principles of Bayesian phylogenetic inference, details of many of the models available in BEAST2, and practical advice for running your own analyses. Topics include advanced analyses such as phylogenetic inferences using morphological data and fossil samples, model selection, and structured population models.&lt;/p&gt;
+
+&lt;p&gt;The course will take place &lt;strong&gt;online&lt;/strong&gt;, from 15:00 until 18:30 European time, on &lt;strong&gt;November 30th &amp;amp; December 2nd, 4th, 7th, 9th and 11th 2026&lt;/strong&gt;. In addition to the Zoom lectures held at these time slots, participants will be expected to complete tutorials on their own time between sessions (expected time commitment: approx &lt;strong&gt;3h&lt;/strong&gt; per session).&lt;/p&gt;
+
+&lt;p&gt;For more information on the course and to register, visit the &lt;a href=&quot;https://www.transmittingscience.com/courses/evolution/bayesian-phylogenetic-inference-with-beast2/&quot;&gt;Transmitting Science website&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+				<link>https://taming-the-beast.org//news/Transmitting_Science_3/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//news/Transmitting_Science_3/</guid>
+			</item>
+		
+			<item>
+				<title>Next online Transmitting Science BEAST2 course</title>
 				<description>&lt;p&gt;Registration is now open for the next Transmitting Science course on BEAST2, taught by Joëlle Barido-Sottani and Bethany Allen. 
 Inspired by the Taming the BEAST format, this course covers the principles of Bayesian phylogenetic inference, details of many of the models available in BEAST2, and practical advice for running your own analyses.&lt;/p&gt;
 
@@ -388,16 +402,6 @@ available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Down-Under/&quot;&
 				<pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
 				<link>https://taming-the-beast.org//news/TTBDU_Programme_Final/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//news/TTBDU_Programme_Final/</guid>
-			</item>
-		
-			<item>
-				<title>Preliminary Programme for TTB Down Under</title>
-				<description>&lt;p&gt;A preliminary programme for Taming the BEAST Down Under is now
-available on the &lt;a href=&quot;/workshops/Taming-the-BEAST-Down-Under/&quot;&gt;TTB Down Under workshop page&lt;/a&gt;.&lt;/p&gt;
-</description>
-				<pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
-				<link>https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-programme/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//news/Taming-the-BEAST-Down-Under-programme/</guid>
 			</item>
 		
 	</channel>
