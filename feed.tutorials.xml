@@ -12,6 +12,141 @@
 		</image>
 				
 			<item>
+				<title>Troubleshooting initialization issues</title>
+				<description>
+					Getting BEAST2 to start
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Joëlle Barido-Sottani
+							
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/478c7675eeda0144520cce4cbbe3b20c50debbc3'
+					&gt;
+						3 Jun 2026
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/NicoNeureiter'
+					&gt;
+						NicoNeureiter
+					&lt;/a&gt;
+					: removed $ from equation
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Wed, 03 Jun 2026 09:42:08 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</guid>
+			</item>
+				
+			<item>
+				<title>Troubleshooting convergence issues</title>
+				<description>
+					Post-processing and improving performance
+					&lt;br&gt;
+					By 
+					
+					
+						
+								David A. Rasmussen
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/350fce17b19beab198550009ddf2fa5bc65d2638'
+					&gt;
+						1 Jun 2026
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/laduplessis'
+					&gt;
+						laduplessis
+					&lt;/a&gt;
+					: MCMC doesn't need to be this long, remove archive and just add shorter log and trees files
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Mon, 01 Jun 2026 14:24:51 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</guid>
+			</item>
+				
+			<item>
+				<title>Prior selection</title>
+				<description>
+					Prior selection and clock calibration using Influenza A data.
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Veronika Bošková
+							
+					
+						
+								, Venelin Mitov
+						
+					
+						
+								
+									and Louis du Plessis
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Prior-selection/commit/38fd94b5eaee0fb56ad80d3e1b0fe028aa9a12db'
+					&gt;
+						1 Jun 2026
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/sgtRoberty'
+					&gt;
+						sgtRoberty
+					&lt;/a&gt;
+					: Update figure and text
+					&lt;br&gt;&lt;br&gt;
+					Level: Beginner
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.x
+					
+				</description>
+				<pubDate>Mon, 01 Jun 2026 09:07:54 +0000</pubDate>
+				<category>Beginner</category>
+				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
+			</item>
+				
+			<item>
 				<title>Species Trees and Species Delimitation with SNAPPER</title>
 				<description>
 					Analyzing SNP or AFLP data
@@ -332,100 +467,6 @@ Fix liquid error and two other tiny changes
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/FBD-tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/FBD-tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Troubleshooting initialization issues</title>
-				<description>
-					Getting BEAST2 to start
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Joëlle Barido-Sottani
-							
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/a8e3e18488636573110585c549099a8613231b11'
-					&gt;
-						13 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/laduplessis'
-					&gt;
-						laduplessis
-					&lt;/a&gt;
-					: Update to reflect that online docs are updated to BEAST 2.7.8 and also some other small edits
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Sun, 13 Jul 2025 14:24:30 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-initialization-issues/</guid>
-			</item>
-				
-			<item>
-				<title>Prior selection</title>
-				<description>
-					Prior selection and clock calibration using Influenza A data.
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-					
-						
-								, Venelin Mitov
-						
-					
-						
-								
-									and Louis du Plessis
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Prior-selection/commit/69fce6df09bc8f6db3b0dece071da9a4da823f55'
-					&gt;
-						11 Jul 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/jugne'
-					&gt;
-						jugne
-					&lt;/a&gt;
-					: Figure update
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Fri, 11 Jul 2025 22:10:24 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Prior-selection/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Prior-selection/</guid>
 			</item>
 				
 			<item>
@@ -827,47 +868,6 @@ Fix liquid error and two other tiny changes
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Visualizing-BEAST2-results/</guid>
-			</item>
-				
-			<item>
-				<title>Troubleshooting convergence issues</title>
-				<description>
-					Post-processing and improving performance
-					&lt;br&gt;
-					By 
-					
-					
-						
-								David A. Rasmussen
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/a621ed29724bd638b6e3b8b12778e8f6cc291162'
-					&gt;
-						14 Apr 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bjoelle'
-					&gt;
-						bjoelle
-					&lt;/a&gt;
-					: added figures and files for starting tree section
-					&lt;br&gt;&lt;br&gt;
-					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
-				</description>
-				<pubDate>Mon, 14 Apr 2025 11:27:22 +0000</pubDate>
-				<category>Beginner</category>
-				<link>https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Troubleshooting-convergence-issues/</guid>
 			</item>
 				
 			<item>

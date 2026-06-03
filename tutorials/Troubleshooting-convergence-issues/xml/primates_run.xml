@@ -37,7 +37,7 @@ spec="Alignment">
 
     <map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
 
-    <run id="mcmc" spec="MCMC" chainLength="10000000">
+    <run id="mcmc" spec="MCMC" chainLength="1000000">
         <state id="state" spec="State" storeEvery="5000">
             <tree id="Tree.t:coding" spec="beast.base.evolution.tree.Tree" name="stateNode">
                 <taxonset id="TaxonSet.coding" spec="TaxonSet">

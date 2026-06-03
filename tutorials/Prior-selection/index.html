@@ -398,6 +398,16 @@
     			</div>
  				</a>
  			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/sgtRoberty">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/101582763?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				sgtRoberty
+    			</div>
+ 				</a>
+ 			</div>			
  			
 		</div>
 		<div class="bigspacer"></div>
@@ -406,6 +416,22 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/38fd94b5eaee0fb56ad80d3e1b0fe028aa9a12db">
+					01 Jun 2026 - <span class="text-gray">Update figure and text</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/6bb32294fedd113ae601d8c6af611e1e9e7bf1b6">
+					31 May 2026 - <span class="text-gray">Fix typo and update to the text</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -430,22 +456,6 @@
 					23 May 2025 - <span class="text-gray">Merge pull request #4 from jugne/master
 
 Small summary tree update</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/cb40725e454fd4cd193524d8ced28a2541718190">
-					23 May 2025 - <span class="text-gray">Small summary tree update</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/5934f31124dd8be5cff72005d1dd9f35b9727816">
-					09 Aug 2023 - <span class="text-gray">Update figures and figure widths</span>
 					</a> 
 				</li>
 			
@@ -784,7 +794,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 
 <p>Looking at the 2.5% and 97.5% quantiles for the distribution we see that 95% of the weight of our becoming uninfectious rate prior falls between 4.44 and 224, i.e. our prior on the period of infectiousness is between <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span></span></span></span> 1.63 and 82.2 days. Thus, our prior is quite diffuse. If we wanted to use a more specific prior we could decrease the standard deviation of the distribution (the <strong>S</strong> parameter).</p>
 
-<p>For the next parameter, the sampling proportion, we know that we certainly did not sample every single infected individual. Therefore, setting a prior close to 1 would not be reasonable. Actually, it is more reasonable to usually expect only a proportion of less than 0.1 of all flu cases to be sampled. Here, we specify something on the order of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span>. The default prior for the sampling proportion is a Beta distribution, which is only defined between 0 and 1, making it a natural choice for proportions. However, this is not the only prior that can be used, and here we specify a log-normal distribution, while ensuring that an appropriate upper limit is set, to prevent a sampling proportion higher than 1, which is not defined.</p>
+<p>For the next parameter, the sampling proportion, we know that we certainly did not sample every single infected individual. Therefore, setting a prior close to 1 would not be reasonable. Actually, it is more reasonable to usually expect only a proportion of less than one in every 1,000 flu cases to be sampled. Here, we specify something on the order of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span>. The default prior for the sampling proportion is a Beta distribution, which is only defined between 0 and 1, making it a natural choice for proportions. However, this is not the only prior that can be used, and here we specify a log-normal distribution, while ensuring that an appropriate upper limit is set, to prevent a sampling proportion higher than 1, which is not defined.</p>
 
 <blockquote>
   <p>Click on the arrow next to the <strong>samplingProportion</strong> and change the distribution from <strong>Beta</strong> to <strong>Log Normal</strong>.</p>
@@ -867,7 +877,7 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 
 <p><em>(The default priors for site models perform well in most scenarios and in practice rarely have to be changed. However, it is important not to forgot about them!)</em></p>
 
-<p>The Gamma shape parameter governs the shape of the Gamma distribution of the rates across different sites. The default setting of the Gamma shape parameter of <strong>alpha=beta=1.0</strong> reflects our belief that on average, the rate scaler is equal to 1, i.e. on average all the sites mutate with the same substitution rate. The distribution on the gamma shape parameter allows us to deviate from this assumption. The default exponential distribution with <strong>M</strong> (mean) of 1.0 and 95%HPD of [0.0253,3.69] covers a wide range of possible shape parameters. This looks fine for our analysis, and thus, we leave the Gamma shape settings at its defaults (<a href="#gammaShapeprior">Figure 14</a>).</p>
+<p>By default, the Gamma distribution of rates across different sites has a mean of one, reflecting our belief that <strong><em>on average</em></strong> all sites evolve with the same substitution rate. The Gamma shape parameter governs the shape of the Gamma distribution, with lower values indicating greater across-site rate variation. It allows us to control how substitution rates vary between sites. The default exponential distribution with <strong>M</strong> (mean) of 1.0 and 95%HPD of [0.0253,3.69] covers a wide range of possible shape parameters. This looks fine for our analysis, and thus, we leave the Gamma shape settings at its defaults (<a href="#gammaShapeprior">Figure 14</a>).</p>
 
 <figure>
 	<a id="gammaShapeprior"></a>
@@ -937,7 +947,9 @@ Notice also, that we leave the substitution rate fixed to 1.0 and do not estimat
 
 </blockquote>
 
-<p>The run should take about 15-20 minutes. While waiting for your results, you can start preparing the XML file for the <a href="#homochronous">homochronous</a> data.</p>
+<p>The run should take about 15-20 minutes.</p>
+
+<p><strong>While waiting for your results, you can start preparing the XML file for the <a href="#homochronous">homochronous</a> data.</strong></p>
 
 <h2 id="analysing-the-results">Analysing the results</h2>
 
@@ -991,7 +1003,7 @@ Are they different from the priors we set and if so, how?</p>
 </figure>
 <p><br /></p>
 
-<p>We see that the sampling proportion (<a href="#tracersampling">Figure 21</a>) is estimated to be below <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">5 \times 10^{-5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span>. This a lot lower than the mean we set for the prior on the sampling proportion (0.001). Therefore our prior estimate of the sampling proportion was much too high. Consequently, we see that the number of cases was also much higher than we initially thought. We assumed that there were around 1,000 cases when we set the prior, however our posterior indicates that the epidemic had on the order of tens of thousands of cases.</p>
+<p>We see that the sampling proportion (<a href="#tracersampling">Figure 21</a>) is estimated to be below <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">5 \times 10^{-5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span>. This a lot lower than the mean we set for the prior on the sampling proportion (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span>). Therefore our prior estimate of the sampling proportion was much too high. Consequently, we see that the number of cases was also much higher than we initially thought. When we set the prior, we assumed that we sampled around one in every 1,000 cases, and the total number of cases is 139 * 1,000. However, our posterior indicates that the epidemic had on the order of millions of cases.</p>
 
 <figure>
 	<a id="tracersampling"></a>
@@ -1084,7 +1096,7 @@ Are they different from the priors we set and if so, how?</p>
 
 <p>We will use the results from the heterochronous data to find out what a good estimate for the tree height of these homochronous samples is. For this aim, we first create a summary tree in <strong>TreeAnnotator</strong>. In this case we will use the default MCC (maximum clade credibility) tree, but the steps below would be the same if we chose another summary tree (e.g. conditional clade credibility tree). Then we will check with <strong>FigTree</strong> what the estimate of the tMRCA (time to the most recent common ancestor) of the samples from April 28, 2009 is.</p>
 
-<p>Note, however, that we do this for illustrative purposes only. In good practice, one should avoid re-using the data or using the results of an analysis to inform any further analyses containing the same data. Let’s pretend therefore that the heterochronous dataset is an independent dataset from the homochronous one.</p>
+<p>Note, however, that we do this for illustrative purposes only. <strong><em>In good practice, one should avoid re-using the data or using the results of an analysis to inform any further analyses containing the same data.</em></strong> Let’s pretend therefore that the heterochronous dataset is an independent dataset from the homochronous one.</p>
 
 <blockquote>
   <p>Open <strong>TreeAnnotator</strong> and set <strong>Burnin percentage</strong> to 10, <strong>Posterior probability limit</strong> to 0.5. Leave the other options unchanged.</p>

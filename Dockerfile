@@ -7,6 +7,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends  \
     git \
     libaio-dev \
     nodejs \
+    npm \
     texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
 ENV PAGE_HOME /page
