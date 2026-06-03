@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Structured birth-death model with BDMM-Prime</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.news.xml">
+	<link rel="alternate" type="application/rss+xml" title="Taming the BEAST" href="https://taming-the-beast.org//feed.tutorials.xml">
+
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">	
+
+    <!-- Our style -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/icons/bootstrap-icons.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="/css/katex.css">
+    <script src="/js/katex.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
+    </a>
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link " aria-current="page" href="/news/">news</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/workshops/">workshops</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/tutorials/">tutorials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/contribute/">contribute</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" type="application/rss+xml" href="/feed.news.xml">
+          <i class="bi bi-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+	
+	<div class="container">	
+		
+	
+
+<div class="row">
+	<div class="hidden-xs hidden-sm col-md-12">
+		<div class="bigtitle titlebox">
+			<ol class="breadcrumb">
+			
+			
+				
+				
+				
+				<li><a class="off" href="/tutorials/Structured-birth-death-BDMM-Prime/">Structured birth death model with BDMM Prime</a></li>
+				
+			
+			</ol>
+		</div>
+		<p>
+		<div class="head">
+			
+				Population structure using the multi-type birth-death model
+			
+		</div>
+		
+		<div class="smallhead">
+			by
+			
+			
+				
+						Denise Kühnert
+					
+			
+				
+						,  Jūlija Pečerska
+				
+			
+				
+						,  Ugnė Stolz
+				
+			
+				
+						
+							and  Tim Vaughan
+						
+					
+			
+		</div>
+		
+	</div>				
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+	<div id="sidebar">
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Tutorial
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-github"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime" target="_blank">Github repository</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>
+				<i class="bi bi-star"></i>
+				<a class="off" href="LICENSE.html">
+				License</a>
+			</li>
+			<div class="smallspacer"></div>
+			<li>			
+				<i class="bi bi-bar-chart"></i>
+				<a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/graphs/traffic" target="_blank">
+				Statistics</a>
+			</li>
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		 	
+		<div class="smallhead">
+			Data
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-justify"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/data/h3n2_2deme.fa" target="_blank" rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/data/h3n2_2deme.fa" target="_blank" rel="nofollow">
+						h3n2_2deme.fa
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>
+		
+		 	
+		<div class="smallhead">
+			XML
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-code-slash"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/xml/h3n2-bdmmprime.xml" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/xml/h3n2-bdmmprime.xml" target="_blank" rel="nofollow">
+						h3n2-bdmmprime.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>	
+		<div class="spacer"></div>
+		
+		
+		 
+		<div class="smallhead">
+			Output
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/precooked_runs/h3n2-bdmmprime-h3n2_2deme.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/precooked_runs/h3n2-bdmmprime-h3n2_2deme.trees" target="_blank" rel="nofollow">
+						h3n2-bdmmprime-h3n2_2deme.t...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.ccd0_summary.tree" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.ccd0_summary.tree" target="_blank" rel="nofollow">
+						h3n2-bdmmprime.h3n2_2deme.c...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.summary.tree" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.summary.tree" target="_blank" rel="nofollow">
+						h3n2-bdmmprime.h3n2_2deme.s...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.typed.node.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.typed.node.trees" target="_blank" rel="nofollow">
+						h3n2-bdmmprime.h3n2_2deme.t...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.typed.trees" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/precooked_runs/h3n2-bdmmprime.h3n2_2deme.typed.trees" target="_blank" rel="nofollow">
+						h3n2-bdmmprime.h3n2_2deme.t...
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/precooked_runs/h3n2-bdmmprime.log" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/precooked_runs/h3n2-bdmmprime.log" target="_blank" rel="nofollow">
+						h3n2-bdmmprime.log
+					</a>
+				</li>
+			
+				
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-file-text"></i>
+					<!--a class="off" href="https://github.com/taming-the-beast/Structured-birth-death-BDMM-Prime/raw/master/precooked_runs/h3n2-bdmmprime.xml" target="_blank" download rel="nofollow"-->
+					<a class="off" href="https://raw.githubusercontent.com/taming-the-beast/Structured-birth-death-BDMM-Prime/master/precooked_runs/h3n2-bdmmprime.xml" target="_blank" rel="nofollow">
+						h3n2-bdmmprime.xml
+					</a>
+				</li>
+			
+			</ul>
+		</div>		
+		
+		<div class="spacer"></div>
+		<div class="smallhead">
+			Contributors
+		</div>	
+		<div class="pad-left note">
+				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/laduplessis">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/8872277?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				laduplessis
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/tgvaughan">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/512538?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				tgvaughan
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/denisekuehnert">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/3991573?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				denisekuehnert
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/jugne">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/26361891?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				jugne
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
+				<a class="off" href="https://github.com/pilarskj">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/92982760?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				pilarskj
+    			</div>
+ 				</a>
+ 			</div>			
+ 			
+		</div>
+		<div class="bigspacer"></div>
+		<div class="smallhead">
+			Latest commits
+		</div>		
+		<div class="pad-left smallnote">
+			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-BDMM-Prime/commit/451ac3bdd4fc4036db6dc3929a88f2e41a4a9db8">
+					18 May 2026 - <span class="text-gray">Merged in Julia's changes, updated figure.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-BDMM-Prime/commit/727791ceb15ef822dd7a8e31c5e2b1914785e4db">
+					18 May 2026 - <span class="text-gray">some typos and minor changes from review</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-BDMM-Prime/commit/2e3e1f290bf982fe285d4062f9dec01e12077d7a">
+					16 May 2026 - <span class="text-gray">Syntax error fixed.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-BDMM-Prime/commit/377f860c77aeb249bed6dbea9f7b3a4f1a300768">
+					16 May 2026 - <span class="text-gray">More ref problems fixed.</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-BDMM-Prime/commit/c6b9527f8d29c69e613748ebb4a51be2ef685e50">
+					16 May 2026 - <span class="text-gray">Fixed some reference problems.</span>
+					</a> 
+				</li>
+			
+			</ul>
+		</div>		
+		<div class="spacer"></div>	
+	</div>
+	</div>
+
+	<div class="col-md-8">				
+		<div class="post">
+			<p>
+			<h1 id="introduction">Introduction</h1>
+
+<p>In this tutorial we will use the <a href="http://www.beast2.org/">BEAST2</a> package
+<a href="https://tgvaughan.github.io/BDMM-Prime">BDMM-Prime</a> to perform a Bayesian
+phylogenetic analysis of an influenza data set using the multi-type birth-death
+model <a class="citation" href="#Kuhnert2016">(Kühnert et al., 2016)</a>.</p>
+
+<p>The multi-type birth-death model can be used to explain sequence data which have
+evolved within a population that is clearly divided into separate compartments, demes, or types.
+(We will use the terms deme, partition and type interchangeably here.)</p>
+
+<p>The types can be geographical locations, as in our example, but the sequences can also be separated through other means than that, e.g. by a specific drug resistance mutation (strains can develop/lose drug resistance and thus move between types, but can not transfer between types otherwise), or location in the body (for example, for localised infections caused by the same agent).</p>
+
+<p>In this tutorial you will learn how to apply this model to H3N2
+sequences sampled from human hosts in two different geographical
+locations.  These two locations will be our two types in the analysis.</p>
+
+<p>The data set used in this tutorial is a thinned 60 sequence subset of the
+980 sequence H3N2 influenza data set used in the publication <a class="citation" href="#Vaughan2014">(Vaughan et al., 2014)</a>, which in turn was
+assembled from publicly-available data sets provided by various authors on
+<a href="http://www.ncbi.nlm.nih.gov/genbank/">GenBank</a>.</p>
+
+<p>(The BDMM-Prime package can be used for a wide range of single- and multi-type birth-death-skyline (BDSKY) model analyses, including birth-death population trajectory inference
+<a class="citation" href="#Vaughan2025">(Vaughan &amp; Stadler, 2025)</a>.  See the full documentation at the <a href="https://tgvaughan.github.io/BDMM-Prime">package website</a> for more details.)</p>
+
+<h2 id="software-requirements">Software Requirements</h2>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.7.7 <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p>Tracer (<a href="https://github.com/beast-dev/tracer/releases/">https://github.com/beast-dev/tracer/releases/</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.3.</p>
+
+<h3 id="icytree">IcyTree</h3>
+
+<p>IcyTree (<a href="https://icytree.org">https://icytree.org</a>) is a browser-based phylogenetic tree viewer. It is intended for rapid visualisation of phylogenetic tree files. It can also render phylogenetic networks provided in extended Newick format. IcyTree is compatible with current versions of Mozilla Firefox and Google Chrome.</p>
+
+<h2 id="installing-the-bdmm-prime-package">Installing the BDMM-Prime package</h2>
+
+<p>You can install the <code class="language-plaintext highlighter-rouge">BDMM-Prime</code> package via BEAUti’s package manager.  To do this, follow these steps:</p>
+
+<blockquote>
+  <p>Start BEAUti;</p>
+
+  <p>In the application menu, <strong>File</strong> &gt; <strong>Manage Packages</strong>.</p>
+
+  <p>Find <strong>BDMM-Prime</strong> in the list of packages shown, select it and then click <strong>Install/Upgrade</strong>.</p>
+</blockquote>
+
+<p>The BEAUTi window should look similar to what is shown below.
+Note the actual version of <code class="language-plaintext highlighter-rouge">BDMM-Prime</code> may differ from the version shown in the figure, which is perfectly normal.</p>
+
+<figure>
+	<a id="fig:install-bdmm-prime"></a>
+	<img style="width:75%;" src="figures/1-install-bdmm-prime.png" alt="" />
+	<figcaption>Install `BDMM-Prime`.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Finally, <strong>restart BEAUti.</strong>  The restart is necessary for the packages to be successfully installed.</p>
+
+<p>If you get an error message stating that you are missing a package on which <code class="language-plaintext highlighter-rouge">BDMM-Prime</code> depends, install that package manually using the package manager as done above, and <strong>restart BEAUti</strong> again.</p>
+
+<h1 id="setting-up-the-analysis-using-beauti">Setting up the analysis using BEAUti</h1>
+
+<h2 id="loading-the-data">Loading the data</h2>
+
+<p>We will first load in our example sequence data.  In our case, these data are stored in a FASTA file, the first few lines of which look like this (the sequences have been truncated for better readability):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; EU856841_HongKong_2005.34246575
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+&gt; EU856989_HongKong_2002.58356164
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+&gt; CY039495_HongKong_2004.5890411
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+&gt; EU856853_HongKong_2001.17808219
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTTTATGTCTGGTTTTCGCTC...
+&gt; EU857026_HongKong_2003.51232877
+-----------ATGAAGGCTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+</code></pre></div></div>
+
+<p>The lines beginning with “&gt;” are labels for the sequences immediately
+following.  In general, these labels have no special format, but in this file
+each label is an underscore-delimited triple.  The first element of each triple
+is the GenBank accession number of the sequence, the second is the geographical
+region from which it was sampled, and the third is the time at which it was
+sampled measured in calendar years or fractions thereof.</p>
+
+<p>In this tutorial we will be using the influenza sequence data which can be found in the <code class="language-plaintext highlighter-rouge">examples</code> folder of the <code class="language-plaintext highlighter-rouge">BDMM-Prime</code> package.
+To make it easier to find when loading the alignment, you can optionally set the working directory of BEAST2 to <code class="language-plaintext highlighter-rouge">BDMM-Prime</code>.
+This will make BEAUTi open the appropriate package folder when you look for the alignment.
+To set the working directory, select <code class="language-plaintext highlighter-rouge">File &gt; Set working dir &gt; BDMM-Prime</code>, as shown below.</p>
+
+<figure>
+	<a id="fig:working-dir"></a>
+	<img style="width:100%;" src="figures/3-set-working-dir.png" alt="" />
+	<figcaption>Optional step: set the working directory to BDMM-Prime.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>To load the file, select <code class="language-plaintext highlighter-rouge">File &gt; Import Alignment</code>.</p>
+
+<p>This will open a file selection dialog box.  The example influenza sequence data
+file is named <code class="language-plaintext highlighter-rouge">h3n2_2deme.fna</code>.
+Assuming you have followed the previous step to set the working directory, this can be found in the <code class="language-plaintext highlighter-rouge">examples/</code> directory shown when the file selection dialog box appears.
+In case you have not followed the previous step you will have to locate the folder containing the <code class="language-plaintext highlighter-rouge">BDMM-Prime</code> package and look for the <code class="language-plaintext highlighter-rouge">examples/</code> folder there.</p>
+
+<p>Once the sequence file is loaded, your BEAUti screen should look similar to that shown below:</p>
+
+<figure>
+	<a id="fig:alignment"></a>
+	<img style="width:100%;" src="figures/4-alignment-loaded.png" alt="" />
+	<figcaption>The alignment loaded into BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="setting-up-dates">Setting up dates</h2>
+
+<p>Once the data is loaded, the next step is to specify the times at which the sequences were sampled:</p>
+
+<blockquote>
+  <p>Select the <strong>Tip Dates</strong> panel.</p>
+
+  <p>Check the <strong>Use tip dates</strong> checkbox.</p>
+
+  <p>Click the <strong>Auto-configure</strong> button at the top-right of the panel.
+This opens a dialog that allows sample times to be loaded from a file or inferred (guessed) from the sequence labels.</p>
+
+  <p>Because the times are included as the last element of the underscore-delimited sequence names, choose the <strong>use everything</strong> radio button and select <strong>after last</strong> from the drop-down menu. The default delimiter is already the underscore, so there is no need to change that.</p>
+</blockquote>
+
+<p>The date parsing setup will look as shown in below.</p>
+
+<figure>
+	<a id="fig:tip-dates"></a>
+	<img style="width:75%;" src="figures/5-tip-dates.png" alt="" />
+	<figcaption>Assigning the tip dates.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>After clicking <code class="language-plaintext highlighter-rouge">OK</code> you should find that the tip date table is filled with
+times that match those in the sequence headers, and that the last column of the
+table contains heights, i.e. times before most recent sample, calculated from the times.
+The BEAUTi panel should look as shown below.</p>
+
+<figure>
+	<a id="fig:tip-dates-set"></a>
+	<img style="width:100%;" src="figures/6-tip-dates-set.png" alt="" />
+	<figcaption>Sampling dates as seen in BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="setting-the-substitution-model">Setting the substitution model</h2>
+
+<p>For this analysis, we will use the HKY substitution model, with Gamma-distributed site to site rate heterogeneity to account for variations in substitution rate across the genome.
+To approximate the continuous gamma rate distribution BEAST2 uses the discrete gamma distribution, where sites are divided into k equally probable rate categories.
+In general, 4-6 categories work well for most datasets, while having more categories involve a lot of computation at little precision gain, so we set the <code class="language-plaintext highlighter-rouge">Gamma Category Count</code> to 4.
+We would also like to estimate the <code class="language-plaintext highlighter-rouge">Shape</code> parameter, which describes the shape of the continuous gamma distribution we approximate.</p>
+
+<p>The HKY substitution model is parameterized by a set of equlibrium base frequences and
+the transition/transversion rate ratio, $\kappa$.  It is usually safe to estimate $\kappa$
+as the sequence data usually contain relatively strong signal for the value.  It is also
+common to estimate the equilibrium frequencies, although here we will fix them to their
+empirical values (averages computed directly from the sequence alignment) to speed things
+up slightly for this tutorial analysis.</p>
+
+<blockquote>
+
+  <p>Switch to the <strong>Site Model</strong> panel.</p>
+
+  <p>Set up the <strong>Gamma Category Count</strong> to 4.</p>
+
+  <p>Leave the <strong>Shape</strong> parameter initialised to 1.0, with its <strong>estimate</strong> box checked.</p>
+
+  <p>Select <strong>HKY</strong> from the Subst Model drop-down menu.</p>
+
+  <p>Set <strong>Frequencies</strong> to <strong>Empirical</strong>.</p>
+
+</blockquote>
+
+<p>The BEAUti panel should now look as shown below:</p>
+
+<figure>
+	<a id="fig:site-model"></a>
+	<img style="width:100%;" src="figures/9-sitemodel.png" alt="" />
+	<figcaption>Setup of the site model.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">Substitution rate</code> defined on this panel should not be estimated - we use the <code class="language-plaintext highlighter-rouge">Clock rate</code> defined in the <code class="language-plaintext highlighter-rouge">Clock Model</code> panel to
+determine the average per unit time rate of sequence evolution.
+This way, the <code class="language-plaintext highlighter-rouge">Substitution rate</code> is not actually a rate, but rather a rate multiplier that we fix to 1 to allow parameter identifiability.</p>
+
+<h2 id="setting-the-clock-model">Setting the clock model</h2>
+
+<p>To speed up the analysis we will assume a strict clock for this small
+dataset.  However, the selection of a clock model for a different,
+real analysis should not be taken lightly.  Since our alignment
+contains sequences sampled at different times and those times are
+measured in years, we must use a clock rate expressed in units of
+expected substitutions per site per year.  Usually the precise value
+is unknown and so the default behaviour of BEAUti is to assume this
+rate has to be estimated.</p>
+
+<p>We won’t change this default setup here, but to speed up mixing we will
+choose starting value for the clock rate inference which we know from
+other research to be much closer to the true substitution rate than
+the default value.</p>
+
+<blockquote>
+
+  <p>Switch to the <strong>Clock Model</strong> panel.</p>
+
+  <p>Set the starting value of the <code class="language-plaintext highlighter-rouge">Clock rate</code> to 0.005. (Implicit units are substitutions per
+site per year.)</p>
+
+  <p>The <code class="language-plaintext highlighter-rouge">Clock Model</code> panel should now look as shown below.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:strict-clock"></a>
+	<img style="width:100%;" src="figures/10-strict-clock.png" alt="" />
+	<figcaption>Fix the clock rate to speed up mixing.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="adjusting-priors">Adjusting priors</h2>
+
+<h3 id="selecting-the-tree-prior">Selecting the tree prior.</h3>
+
+<p>The primary functionality that <code class="language-plaintext highlighter-rouge">BDMM-Prime</code> provides is a prior probability distribution
+over phylogenetic trees under a multi-type birth-death-sampling model.  Here we configure
+the particular birth-death model we will use to relate the tree to the various population-level
+parameters we’d like to learn about.</p>
+
+<blockquote>
+
+  <p>Select the <strong>Priors</strong> panel.</p>
+
+  <p>To choose the BDMM-Prime tree prior, find the drop-down menu next to Tree.t:h3n2_2deme
+and select <strong>BDMMPrime</strong>.</p>
+
+</blockquote>
+
+<h3 id="defining-the-tip-types">Defining the tip types</h3>
+
+<p>The next thing we want to do is to specify the locations associated with each of the
+samples included in our analysis.</p>
+
+<blockquote>
+
+  <p>Expand the BDMM-Prime tree prior by clicking the arrow to the left of Tree.t:h3n2_2deme.</p>
+
+  <p>Scroll down to end of the tree prior section and find the table associating tree leaves
+with locations. Notice that the sample names have the form ID_Location_Date.</p>
+
+  <p>To extract the locations from the sample names, click the <strong>Auto-configure</strong> button,
+select <strong>split on character</strong>, ensure “_” is specified as the delimiter, and select
+“2” from the <strong>take group(s)</strong> drop-down menu.  Once this is complete, press “Ok”.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:tip-types"></a>
+	<img style="width:100%;" src="figures/7-tip-types.png" alt="" />
+	<figcaption>Setting the tip types using Auto-configure.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The table should now be populated with types extracted from the sample names.</p>
+
+<figure>
+	<a id="fig:tip-types-set"></a>
+	<img style="width:100%;" src="figures/8-tip-types-set.png" alt="" />
+	<figcaption>Setting the tip types.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="configuring-the-multi-type-model">Configuring the multi-type model</h3>
+
+<p>Now we get to the main part of the analysis setup, where we decide exactly how
+to model the generation of our data. In our case, we want to model a small part
+of the global transmission dynamics of H3N2.</p>
+
+<p>The first thing to do is to is to select our desired parameterization
+of the birth-death model. In our case, as we’re analysing pathogen
+sequences in an attempt to reconstruct transmission dynamics, we’ll
+use the epidemiological parameterization.</p>
+
+<blockquote>
+
+  <p>Scroll to the top of the tree prior and select <strong>Epi Parameterization</strong> from the
+drop-down menu at the top of the expanded section.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:parameterization"></a>
+	<img style="width:100%;" src="figures/parameterization.png" alt="" />
+	<figcaption>Setting the parameterization types.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>With this done, the next task is to define the dimensionality and
+initial values of the multi-type birth-death parameters. In BDMM-Prime,
+each of these parameters is considered a “skyline parameter” which can
+change in a piecewise-constant fashion through time.</p>
+
+<p>The first skyline parameter to consider is the Re parameter, representing
+the effective reproductive number.  By default parameter values are
+assumed to be the same across all types, however we want to allow the
+reproductive number to take location-specific values.</p>
+
+<blockquote>
+
+  <p>For the Re skyline parameter, uncheck the <strong>Scalar values</strong> check box to
+allow this parameter to take type-dependent values.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:Re"></a>
+	<img style="width:100%;" src="figures/Re.png" alt="" />
+	<figcaption>Allowing type-specific Re values.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The next parameter is the “become uninfectious rate” parameter,
+representing the rate at which infected individuals become
+uninfectious. This parameter includes the rate at which individuals
+are recovering on their own, together with the rate at which they are
+removed from the population due to the sampling process.  Since it is
+dictated by disease progression, this parameter is sometimes assumed
+to be a function of the pathogen itself rather than location.  That
+said, there are many reasons that it may be location-dependent in
+reality. (Can you think of any?)</p>
+
+<p>In any case, for the sake of this tutorial we will assume here that it
+takes a single value which is shared among types. Furthermore, as
+influenza infections often take a relatively short time to pass, we
+will initialise this value to correspond to an infectious period of 1
+week.</p>
+
+<blockquote>
+
+  <p>Find the <strong>Become Uninfectious Rate</strong> parameter, double-click the starting value and
+change it to 52 (per year).  <strong>Be sure to press “Enter” to cause BEAUti to accept
+the new value.</strong></p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:buRate"></a>
+	<img style="width:100%;" src="figures/buRate.png" alt="" />
+	<figcaption>Setting the starting value of the shared "become uninfectious rate".</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Now let’s consider the Sampling Proportion parameter. This parameter requires
+special care, as the sampling assumptions of the model can dramatically influence
+inference results.  In our case we want (a) to allow for type-dependent sampling proportions
+and (b) to fix the sampling proportion to zero for all times earlier than the first
+sample. Allowing for type-dependent sampling proportions prevents us from having to
+assume that the number of samples we have in each location are proportional to the
+infected population in each of these individuals.  On the other hand, setting the
+sampling proportion to zero prevents the model from interpreting the lack of samples
+prior to a specific date as evidence for the absence of infected hosts in these earlier
+times.</p>
+
+<p>In BDMM-Prime, this configuration is reasonably simple to configure.</p>
+<blockquote>
+
+  <p>Find the Sampling Proportion parameter, then follow these steps:</p>
+  <ol>
+    <li>Uncheck the <strong>Scalar value</strong> checkbox to allow for type-dependent values.</li>
+    <li>Check <strong>Display visualization</strong> to see the distribution of sample times relative
+to the most recent sample.</li>
+    <li>Set the <strong>Number of change times</strong> value to 1.  (Notice the appearance of the epoch
+boundary marker on the visualisation.)</li>
+    <li>Set the change time for the boundary between epoch 1 and 2 to 5.6. (Notice that this
+value ensures the oldest sample remains in epoch 1.)</li>
+    <li>In the <strong>Values</strong> table, double-click the entries corresponding to
+the sampling proportion values for Epoch 2 and change each to 0.0,
+<strong>remembering to press “enter” after each change.</strong></li>
+  </ol>
+
+</blockquote>
+
+<p>Note: <strong>skyline parameter values of 0 are always fixed in the analysis</strong>, regardless of
+whether or not the “estimate values” option is checked.</p>
+
+<figure>
+	<a id="fig:sampSetup"></a>
+	<img style="width:100%;" src="figures/sampSetup.png" alt="" />
+	<figcaption>Configuring the sampling proportion parameter.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Finally, we need to define how lineages change type in our multi-type
+model.  Like BDMM, BDMM-Prime allows both direct “migration” as well
+as “birth to a new type” styles of multi-type models.  Given we are
+modelling the movement of infected influenza hosts, migration suits
+our situation best.  We also acknowledge that migration rates between
+different pairs of types/locations may be different from one another.</p>
+
+<p>To incorporate these decisions, follow these instructions:</p>
+<blockquote>
+
+  <p>Find the <strong>Migration Rate</strong> parameter, then:</p>
+  <ol>
+    <li>Double-click on the <strong>Value</strong> and change it from it’s default to the smaller
+rate of 0.1 (any infected individual has a roughly 10% chance of moving between
+the two locations in any given year).</li>
+    <li>Uncheck the <strong>Scalar values</strong> checkbox to allow rates to vary between pairs of
+locations.</li>
+    <li>Check the <strong>Estimate values</strong> checkbox to ensure these migration
+rates are estimated.</li>
+  </ol>
+
+</blockquote>
+<figure>
+	<a id="fig:migRate"></a>
+	<img style="width:100%;" src="figures/migRate.png" alt="" />
+	<figcaption>Configuring the migration rate parameter.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="setting-up-other-priors">Setting up other priors</h3>
+
+<p>BEAST2 provides a default prior distribution for each of the
+parameters of your model which you’ve chosen to estimate.  These
+priors are often very broad, and are “improper” - so broad that the
+area under the distribution cannot be computed.  Thus it is important
+to go through the parameters and set priors according to the
+information we have about our dataset.</p>
+
+<p>The first important parameter is the effective reproductive number, Re. In epidemiology, the reproductive number of an epidemic is the number of secondary cases one case generates on average over the course of its infectious period.  (A more fundamental quantity, the basic reproductive number R0, is the same but applied to a naive host population.) Values greater than 1 indicate expansion of the infected host population, while smaller values indicate contraction.</p>
+
+<p>In practice, Re values tend to be within an order of magnitude of 1.0.  Thus we will apply
+a Log Normal prior distribution to this parameter, centred on 1.0.</p>
+
+<blockquote>
+
+  <p>Collapse the tree prior by again clicking the arrow head to the left of Tree.t:h3n2_2deme.</p>
+
+  <p>Expand the Re prior by clicking the arrow head to the left of ReEpi.t:h3n2_2deme.</p>
+
+  <p>Select <strong>LogNormal</strong> from the drop-down list of distributions.</p>
+
+  <p>Set the <strong>M</strong> value to 0.0 and the <strong>S</strong> value to 0.5.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:R0-prior"></a>
+	<img style="width:100%;" src="figures/RePrior.png" alt="" />
+	<figcaption>Set the prior for the Re.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Next, we consider the prior on the “become uninfectious rate”. As mentioned above, this rate describes how quickly individual infected individuals become uninfectious <em>to the rest of the population</em>, be that through recovery, quarantine, or some other process.</p>
+
+<p>We know that for influenza an average infection lasts around a week.
+What rate value does this correspond to?  To determine this, consider
+that our rates describe the probability per unit time that the
+corresponding event happens on a single lineage. The time unit in this
+case is “year”, since our tip dates were specified in fractional
+years.  Thus the become uninfectious rate value specifies the
+probability per year (calculated instantaneously) that an individual
+becomes uninfectious. An average infectious interval of one week (1/52 years)
+corresponds to an average become uninfectious rate of 1/(1/52)=52 in units
+of inverse years.</p>
+
+<p>For our analysis we will therefore place a Log Normal prior on the become
+uninfectious parameter with a mean of 52 and an S parameter to allow for
+some variation around this mean.</p>
+
+<blockquote>
+
+  <p>Expand the become uninfectious prior by clicking the arrow to the left of
+becomeUninfectiousRateEpi.t:h3n2_2deme.</p>
+
+  <p>Select <strong>Log Normal</strong> from the drop-down list of distributions.</p>
+
+  <p>Set the <strong>M</strong> value to 52.0 and the <strong>S</strong> value to 0.5.</p>
+
+  <p>Ensure the <strong>Mean in Real Space</strong> checkbox is checked.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:buRatePrior"></a>
+	<img style="width:100%;" src="figures/buRatePrior.png" alt="" />
+	<figcaption>Set the prior for the become uninfectious rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We now consider the sampling proportion prior. We will set this prior
+to a narrow distribution peaked around the very low values, as
+influenza spreads easily, but only few people actually get sampled.
+Taking into account that we are also using a thinned-down version of
+the dataset, we can use a diffuse prior with the mean around
+10<sup>-3</sup>.
+Again we will use a truncated <code class="language-plaintext highlighter-rouge">Log Normal</code> prior, with the mean at 10<sup>-3</sup>.</p>
+
+<blockquote>
+
+  <p>Expand the sampling proportion prior by clicking the arrow to the left of
+samplingProportionEpi.t:h3n2_2deme.</p>
+
+  <p>Select <strong>Log Normal</strong> from the drop-down list of distributions.</p>
+
+  <p>Set the <strong>M</strong> value to 0.001 and the <strong>S</strong> value to 1.25.</p>
+
+  <p>Ensure the <strong>Mean in Real Space</strong> checkbox is checked.</p>
+
+</blockquote>
+
+<p>Note that this prior will be automatically truncated to the unit interval [0,1],
+and will be applied only to the non-zero sampling proportions.</p>
+
+<figure>
+	<a id="fig:sampPropPrior"></a>
+	<img style="width:100%;" src="figures/sampPropPrior.png" alt="" />
+	<figcaption>Set the prior for sampling proportion.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>In setting the migration rate prior, consider that the migration rate governs the speed of
+movement of infected individuals between the locations in question: Hong Kong and New Zealand.
+For the purpose of the tutorial, we will assume that a given infected individual has only a
+10% chance of visiting the other country in any given year.</p>
+
+<blockquote>
+
+  <p>Expand the migration rate prior by clicking the arrow to the left of
+migrationRateEpi.t:h3n2_2deme.</p>
+
+  <p>Select <strong>Exponential</strong> from the drop-down list of distributions.</p>
+
+  <p>Set the <strong>mean</strong> value to 0.1.</p>
+
+</blockquote>
+
+<p>Our use of an Exponential distribution rather than a Log Normal distribution here
+is a practical consideration to improve mixing of this tutorial analysis. In a
+real analysis one should think carefully about how to set a prior for this parameter.</p>
+
+<figure>
+	<a id="fig:mig-rate-prior"></a>
+	<img style="width:100%;" src="figures/migRatePrior.png" alt="" />
+	<figcaption>Set the prior for the migration rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We will also set the prior for the clock rate to a distribution that is in accordance with what we know about seasonal influenza, i.e. it’s mean substitution rate is around $5\times 10^{-3}$ substitutions per site per year.</p>
+
+<blockquote>
+
+  <p>Expand the clock rate prior by clicking the arrow to the left of clockRate.c:h3n2_2deme</p>
+
+  <p>Select <strong>Log Normal</strong> from the drop-down list of distributions.</p>
+
+  <p>Set the <strong>M</strong> value to 0.005 and the <strong>S</strong> value to 0.5.</p>
+
+  <p>Make sure to check the <strong>Mean in Real Space</strong> checkbox.</p>
+
+</blockquote>
+
+<figure>
+	<a id="fig:clock-rate-prior"></a>
+	<img style="width:100%;" src="figures/clockRatePrior.png" alt="" />
+	<figcaption>Set the prior for the clock rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="saving-the-configuration">Saving the configuration</h2>
+
+<p>We will leave the <code class="language-plaintext highlighter-rouge">MCMC</code> panel settings to their default values.</p>
+
+<blockquote>
+
+  <p>Save the configuration file as h3n2-bdmmprime.xml. (Be sure to note
+where you have saved it!)</p>
+
+</blockquote>
+
+<h1 id="running-the-analysis-using-beast">Running the analysis using BEAST</h1>
+
+<p>To run the analysis, simply start BEAST 2 in the manner appropriate
+for your platform, then select the configuration file you generated in
+the last section as the input.</p>
+
+<p>Note that this particular analysis can take quite some time to run to
+completion.  (On a MacBook Pro with 3.1 GHz Intel Core i5 processor it
+takes about 3 hours for 10’000’000 samples.)  Try to run it and
+observe the results, but for the purpose of finishing the tutorial in
+a reasonable time, check out the provided log file to see the results.</p>
+
+<h1 id="analyzing-the-results">Analyzing the results</h1>
+
+<p>The results of the analysis primarily consist of two parts:</p>
+
+<ol>
+  <li>The parameter log, which is written to the file <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.log</code>.</li>
+  <li>The multi-type tree log, which is written to <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.typed.trees</code>.</li>
+</ol>
+
+<p>The additional file <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.typed.node.trees</code> is the
+TreeAnnotator-compatible file we’ll use to assemble a summary tree.
+(The <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.trees</code> file is a tree log containing the
+trees without any type information.  It is safe to ignore this for now.)</p>
+
+<h2 id="parameter-log-file-analysis">Parameter log file analysis</h2>
+
+<p>We can use the program <a href="https://github.com/beast-dev/tracer/releases/">Tracer</a> to view the parameter log file.</p>
+
+<blockquote>
+  <p>Start Tracer and then press the <code class="language-plaintext highlighter-rouge">+</code> button in the top-left hand corner of the window
+(under <code class="language-plaintext highlighter-rouge">Trace File</code>).</p>
+
+  <p>Select the log file for this analysis (<code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.log</code>) from the file selection
+dialog box. (You can also simply drag your log file from the file browser to the
+Tracer window.</p>
+</blockquote>
+
+<p>The <code class="language-plaintext highlighter-rouge">Traces</code> table will now be populated with parameters and summary
+statistics corresponding to our multitype birth-death analysis.</p>
+
+<p>Important traces are:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ReSPEpi.HongKong</code> and <code class="language-plaintext highlighter-rouge">ReSPEpi.NewZealand</code>: These give the effective reproduction numbers Hong Kong and New Zealand, respectively.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">becomeUninfectiousRateSPEpi</code>: This is the overall become uninfectious rate.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">migrationRateSPEpi.HongKong_to_NewZealand</code> and <code class="language-plaintext highlighter-rouge">migrationRateSPEpi.NewZealand_to_HongKong</code>: These give the (per lineage per year) migration rates from Hong Kong to New Zealand and vice versa.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">typeMappedTree.count_HongKong_to_NewZealand</code> and <code class="language-plaintext highlighter-rouge">typeMappedTree.count_NewZealand_to_HongKong</code> : this gives the number of ancestral migrations from Hong Kong to New Zealand and vice versa on the inferred tree.</p>
+  </li>
+</ul>
+
+<p>The tabs at the top-right of the window can be used to display one or more selected traces in various ways. We first look at the become uninfectious rate.</p>
+
+<blockquote>
+  <p>Select the <code class="language-plaintext highlighter-rouge">becomeUninfectiousRateSPEpi</code> trace.</p>
+</blockquote>
+
+<p>You should now see something similar to the figure below.</p>
+
+<figure>
+	<a id="fig:tracer-bUR"></a>
+	<img style="width:100%;" src="figures/tracer-buRate.png" alt="" />
+	<figcaption>Become uninfectious rate marginal posterior.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>The 95% HPD for the parameter is fairly broad ([24, 101]), which is perhaps unsurprising given that we’re only using 60 sequences here. The mean value is 59 events per host per year, which gives us an expected infectious period of just over 6 days.</p>
+
+<p>Next, we consider the reproductive number.</p>
+
+<blockquote>
+  <p>Select the two Re traces (<code class="language-plaintext highlighter-rouge">ReSPEpi.HongKong</code> and <code class="language-plaintext highlighter-rouge">ReSPEpi.NewZealand</code>) and choosing the <code class="language-plaintext highlighter-rouge">Marginal Density</code> panel.</p>
+
+  <p>From the “Legend” drop-down list under the plot, select “Top-Left”.</p>
+</blockquote>
+
+<p>Tracer now displays a comparison between the sampled population size marginal posterior distributions (see below).</p>
+
+<figure>
+	<a id="fig:tracer-R0"></a>
+	<img style="width:100%;" src="figures/tracer-Re.png" alt="" />
+	<figcaption>Estimated R<sub>0</sub> marginal posteriors.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Looking at the posterior distributions we can not see any significant difference in R<sub>0</sub> between the two demes.
+While the distributions are visibly different, they cover the same parameter range (deme 1 95% HPD interval [0.9922, 1.0258], deme 2 95% HPD interval [0.9057, 1.038]), so the values are indistinguishable through such analysis.</p>
+
+<p>In the case of our pre-cooked analysis all the ESS values are greater
+than 200, the arbitrary threshold for acceptability.  However, it
+might happen that some values have not yet reached the appropriate ESS
+in your own analysis.</p>
+
+<p>If this is the case and your analysis was part of a serious study you would want to run the chain for another few million iterations to improve the ESS values.
+(In BEAST 2, analyses can be resumed – the samples you already have need not be wasted.)</p>
+
+<h2 id="tree-log-visualization">Tree log visualization</h2>
+
+<p>The popular phylogenetic tree visualizer <a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a> can be used to visualize the sampled trees.
+However, Figtree can be quite slow with MultiTypeTree log files, so for this tutorial we suggest using <a href="https://icytree.org/">IcyTree</a> to view tree log files.
+IcyTree is a tree viewer that runs in your web browser.</p>
+
+<blockquote>
+
+  <p>Open the IcyTree web page in your web browser.</p>
+
+  <p>Select <code class="language-plaintext highlighter-rouge">Load from file</code> from the <code class="language-plaintext highlighter-rouge">File</code> menu, then select the
+<code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.typed.trees</code> tree log file using the file
+selection dialog. (Alternatively, you can simply drag the log file
+into your browser window.)</p>
+
+</blockquote>
+
+<p>Once the file is loaded you will see the first tree it contains.
+In order to select a different tree, hover the mouse pointer over the box in the lower-left corner of the window.
+This box will expand to a small dialog containing buttons allowing you to navigate between trees.
+The <code class="language-plaintext highlighter-rouge">&lt;</code> and <code class="language-plaintext highlighter-rouge">&gt;</code> buttons move in steps of 1 tree, while <code class="language-plaintext highlighter-rouge">&lt;&lt;</code> and <code class="language-plaintext highlighter-rouge">&gt;&gt;</code> move 10% of the tree file.
+You can also directly enter the index of a tree.</p>
+
+<p>Initially the tree edges will be uncoloured.
+To colour the edges according to the edge type (this is the strain location in our case), navigate to <code class="language-plaintext highlighter-rouge">Style &gt; Colour edges by</code> and select <code class="language-plaintext highlighter-rouge">type</code>.
+A legend and axis can be added by choosing <code class="language-plaintext highlighter-rouge">Display legend</code> and <code class="language-plaintext highlighter-rouge">Axis &gt; Age</code> from the same menu.
+You can browse the trees from your posterior sample (as in the figure below) to look at the traits they share, however in general we need some sort of a summary to be able to draw conclusions from our tree sample.</p>
+
+<figure>
+	<a id="fig:icyTree-trees"></a>
+	<img style="width:100%;" src="figures/icytree-trees.png" alt="" />
+	<figcaption>An example of a sampled multi-type tree in IcyTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="producing-a-summary-tree-using-treeannotator">Producing a summary tree using <code class="language-plaintext highlighter-rouge">TreeAnnotator</code></h2>
+
+<p>We can make better use of our analysis results by using the
+<code class="language-plaintext highlighter-rouge">TreeAnnotator</code> program which is distributed with BEAST2 to analyze
+the sample of trees which was produced by our MCMC run. Until recently
+the <em>maximum clade credibility</em> tree (MCC) has been the default
+summary method in TreeAnotator.</p>
+
+<p>To produce MCC trees, TreeAnotator takes the set of trees and find the
+best supported tree by maximising the product of the posterior clade
+probabilities. It will then annotate this representative summary tree
+with the mean ages of all the nodes and the corresponding 95% HPD
+ranges as well as the posterior clade probability for each node.</p>
+
+<p>Another point estimate, called a <em>conditional clade distribution</em> tree (CCD)
+has been proposed <a class="citation" href="#berling2025">(Berling et al., 2025)</a>.
+This has been shown to outperform MCC in terms of accuracy (based on
+Robinson-Foulds distance to the true tree) and precision (how
+different are the point estimates calculated for replicate MCMC
+chains). CCD methods may produce a tree that would be well supported
+but has not been sampled during MCMC. This is beneficial for large
+trees and complex parameter regimes. Since both methods are still
+widely used, we show how to use them to summarise the posterior tree
+distribution.</p>
+
+<p><strong>To save time, you may run just one method and compare it to the other using the example below.</strong></p>
+
+<h3 id="producing-an-mcc-summary-tree">Producing an MCC summary tree</h3>
+
+<blockquote>
+  <p>Start <strong>TreeAnnotator</strong>.</p>
+
+  <p>Set the <strong>Burnin percentage</strong> to <strong>10%</strong> to discard the first 10% of trees in the log file.</p>
+
+  <p>Set the <strong>Target tree type</strong> to the <strong>Maximum clade credibility tree</strong> and set <strong>Node heights</strong> to <strong>Mean heights</strong>.</p>
+
+  <p>Select the <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.typed.node.trees</code> tree file as the input file and <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.mcc_summary.tree</code> as the output file.</p>
+
+  <p>Pressing the <strong>Run</strong> button will produce an annotated summary tree.</p>
+</blockquote>
+
+<p>The setup can be seen in the figure below.</p>
+
+<figure>
+	<a id="fig:TreeAnnotator-setup"></a>
+	<img style="width:75%;" src="figures/treeAnnotator-setup.png" alt="" />
+	<figcaption>Use TreeAnnotator to produce a MCC summary tree.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="producing-ccd0-summary-tree">Producing CCD0 summary tree</h3>
+
+<p>To produce CCD0 summary tree, you will first need to install the CCD package.</p>
+<blockquote>
+  <p>Open BEAUTi.</p>
+
+  <p>Select <strong>File</strong> &gt; <strong>Manage packages</strong>.</p>
+
+  <p>Select <strong>CCD</strong> package in the list and select <strong>Install/Upgrade</strong>.</p>
+
+  <p>Close BEAUTi.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:installCCD"></a>
+	<img style="width:80%;" src="figures/installCCD.png" />
+	<figcaption>Install CCD package</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Now you can proceed to make CCD0 tree. Use the exactly same set up as for MCC tree but select <strong>MAP (CCD0)</strong> as <strong>Target tree type</strong> and <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.ccd0_summary.tree</code> as the output file.</p>
+
+<h2 id="visualising-the-summary-tree">Visualising the summary tree</h2>
+
+<p>We now visualise the summary trees.</p>
+
+<blockquote>
+  <p>Open IcyTree once more (maybe open it in a new browser tab).</p>
+
+  <p>Choose <code class="language-plaintext highlighter-rouge">File &gt; Load from file</code>, then use file selection dialog and select either <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.mcc_summary.tree</code> or <code class="language-plaintext highlighter-rouge">h3n2-bdmmprime.h3n2_2deme.ccd0_summary.tree</code> to load MCC or CCD0 summary tree, respectively.</p>
+
+  <p>Select <code class="language-plaintext highlighter-rouge">Style &gt; Colour nodes by &gt; type</code> and display the legend and time axis as above.</p>
+
+  <p>Open the <code class="language-plaintext highlighter-rouge">Style</code> menu and select <code class="language-plaintext highlighter-rouge">Node height error bars &gt; height_95%_HPD</code> to add error bars to the internal node heights.</p>
+
+  <p>Open the <code class="language-plaintext highlighter-rouge">Style</code> menu and select <code class="language-plaintext highlighter-rouge">Relative edge width &gt; type.prob</code>.</p>
+</blockquote>
+
+<p>Our choice to colour the <em>nodes</em> rather than the <em>branches</em> is due to the summary methods only summarizing the type at internal nodes: colouring the branches with these values would produce a misleading representation.</p>
+
+<p>Once these style preferences have been set, you should see something similar to the MCC or CCD0 trees shown in the figures below.</p>
+
+<figure>
+	<a id="fig:icyTree-mcc"></a>
+	<img style="width:100%;" src="figures/icytree_mcc.png" alt="" />
+	<figcaption>The MCC summary tree in IcyTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<figure>
+	<a id="fig:icyTree-ccd0"></a>
+	<img style="width:100%;" src="figures/icytree_ccd0.png" alt="" />
+	<figcaption>The CCD0 summary tree in IcyTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Here we have a full consensus tree annotated by the locations at coalescence nodes and showing node height uncertainty.</p>
+
+<p>This is a much more comprehensive summary of the phylogenetic side of our analysis.
+One thing to pay attention to here is that the most probable root location in the summary tree is Hong Kong .
+Hovering the mouse cursor over the tiny edge above the root will bring up a table in which posterior probability of the displayed root location (<code class="language-plaintext highlighter-rouge">type.prob</code>) can be seen.
+In this analysis we see that it is well over 95%.
+The analysis therefore strongly supports a Hong Kong origin over a New Zealand origin for this flu sample.</p>
+
+<p>When interpreting these results however, it is crucial to revisit the assumptions which we’ve made through our modelling choices.  Most importantly, we have conducted this analysis under a two-deme model which assumes that only Hong Kong and New Zealand exist as possible locations for infected individuals.  In reality of course, while the samples themselves originated from these two locations, the lineages ancestral to these samples were not subject to this constraint.  Thus, if anything can be drawn at all from this analysis, it is only that the likely location of the common ancestor may have been more closely connected to Hong Kong than New zealand.</p>
+
+<h3 id="mcc-and-ccd0-summary-tree-comparison-optional">MCC and CCD0 summary tree comparison (Optional)</h3>
+
+<p>Now, compare the figures for MCC and CCD0 summary trees. Can you see some differences?</p>
+
+<p>One of the advantages of the CCD0 summary method is that it can produce a likely summary tree topology even when that exact topology does not include in the set produced by the MCMC. This capabiility makes it more suitable than MCC, particularly for analyses in which the tree topology is not well resolved. Knowing this, what observations can you make about our sample?</p>
+
+<hr />
+
+<h1 id="acknowledgment">Acknowledgment</h1>
+
+<p>The content of this tutorial is based on the <a href="https://taming-the-beast.org/tutorials/Structured-birth-death-model/">Structured birth-death model tutorial</a> by Denise Kühnert and Jūlija Pečerska.</p>
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li>Multi-type birth-death process package: https://tgvaughan.github.io/BDMM-Prime</li>
+  <li>BEAST 2 website and documentation: http://www.beast2.org/</li>
+  <li>BEAST 2 book: <a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Kuhnert2016">Kühnert, D., Stadler, T., Vaughan, T. G., &amp; Drummond, A. J. (2016). Phylodynamics with Migration: A Computational Framework to Quantify Population Structure from Genomic Data. <i>Molecular Biology and Evolution</i>. https://doi.org/10.1093/molbev/msw064</span></li>
+<li><span id="Vaughan2014">Vaughan, T. G., Kühnert, D., Popinga, A., Welch, D., &amp; Drummond, A. J. (2014). Efficient Bayesian inference under the structured coalescent. <i>Bioinformatics</i>, <i>30</i>(16), 2272–2279. https://doi.org/10.1093/bioinformatics/btu201</span></li>
+<li><span id="Vaughan2025">Vaughan, T. G., &amp; Stadler, T. (2025). Bayesian Phylodynamic Inference of Multitype Population Trajectories Using Genomic Data. <i>Molecular Biology and Evolution</i>, <i>42</i>(6). https://doi.org/10.1093/molbev/msaf130</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="berling2025">Berling, L., Klawitter, J., Bouckaert, R., Xie, D., Gavryushkin, A., &amp; Drummond, A. J. (2025). Accurate Bayesian phylogenetic point estimation using a tree distribution parameterized by clade probabilities. <i>PLOS Computational Biology</i>, <i>21</i>(2), e1012789.</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+
+			<hr>
+			<h1>Citation</h1>
+
+			
+<p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
+
+<p style="margin-left: 40px">
+Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
+</p> 
+		</div>
+	</div>			
+	<div class="col-md-1"></div>
+</div>
+
+
+	
+	</div>
+
+	<div class="footerspacer"></div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 d-flex align-items-center">
+        <ul class="list-group list-group-horizontal">
+        <li class="footernav list-group-item"><a class="foot" href="/about/">about</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/contact/">contact</a></li>
+        <li class="footernav list-group-item"><a class="foot" href="/license/">license</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-logo">
+          <a href="https://www.sib.swiss/services/open-software-and-databases">
+            <img src="/images/sib_logo2023.png" width="100">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-5 footer-acknowledgement d-flex align-items-center">
+        <p>
+          This resource is supported as a whole or in part by the <em>National Institute Of Allergy And Infectious Diseases</em> of the <em>National
+          Institutes of Health</em> under grant <a class="foot" href="https://reporter.nih.gov/search/JHbtQB-XeUu8wvs3vUlFFw/project-details/10913643">
+          n&deg;U24AI183840</a> - <a class="foot" href="https://pathogendatanetwork.org/">Pathogen Data Network</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<!--div id="footer"><span style="display:none">foo</span></div-->
+		
+</body>
+</html>
+

@@ -147,6 +147,59 @@
 			</item>
 				
 			<item>
+				<title>Structured birth death model with BDMM Prime</title>
+				<description>
+					Population structure using the multi-type birth-death model
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Denise Kühnert
+							
+					
+						
+								,  Jūlija Pečerska
+						
+					
+						
+								,  Ugnė Stolz
+						
+					
+						
+								
+									and  Tim Vaughan
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/Taming-the-BEAST/Structured-birth-death-BDMM-Prime/commit/451ac3bdd4fc4036db6dc3929a88f2e41a4a9db8'
+					&gt;
+						18 May 2026
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/tgvaughan'
+					&gt;
+						tgvaughan
+					&lt;/a&gt;
+					: Merged in Julia's changes, updated figure.
+					&lt;br&gt;&lt;br&gt;
+					Level: Intermediate
+					
+						&lt;br&gt;
+						Requires: BEAST v2.7.7
+					
+				</description>
+				<pubDate>Mon, 18 May 2026 08:35:20 +0000</pubDate>
+				<category>Intermediate</category>
+				<link>https://taming-the-beast.org//tutorials/Structured-birth-death-BDMM-Prime/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Structured-birth-death-BDMM-Prime/</guid>
+			</item>
+				
+			<item>
 				<title>Species Trees and Species Delimitation with SNAPPER</title>
 				<description>
 					Analyzing SNP or AFLP data
@@ -1091,49 +1144,6 @@ Removed non-matching HA and NA sequences (both from Helsinki)
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Reassortment-Tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Reassortment-Tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>PIQMEE Tutorial</title>
-				<description>
-					How to efficiently analyze large data sets containing duplicates
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Veronika Bošková
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/boskovav/PIQMEE-Tutorial/commit/b6051e191da19b952fd9eba445a4d895d5d499c5'
-					&gt;
-						28 Feb 2022
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/boskovav'
-					&gt;
-						boskovav
-					&lt;/a&gt;
-					: Merge pull request #1 from tgvaughan/patch-1
-
-Removed references to tutorial template bib file.
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.3
-					
-				</description>
-				<pubDate>Mon, 28 Feb 2022 14:15:49 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/PIQMEE-Tutorial/</guid>
 			</item>
 		
 	</channel>
