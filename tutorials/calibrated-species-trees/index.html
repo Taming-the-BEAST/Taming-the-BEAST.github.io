@@ -16,6 +16,7 @@
 
     <!-- Our style -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/tutorial-styles.css">
 
     <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -41,7 +42,7 @@
       <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
     </a>
     
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -89,6 +90,29 @@
 			</ol>
 		</div>
 		<p>
+		<!-- Tutorial metadata badges -->
+		<!-- Read from `tutorial.*` (enriched _data/tutorials.yml, incl. the
+		     tutorials_metadata.yml fallback) rather than `page.*` (raw README
+		     frontmatter), so badges show even before a tutorial migrates its
+		     own frontmatter upstream. -->
+		<div class="tutorial-badges" style="margin-bottom: 15px;">
+			
+			
+			<span class="tag badge-workflow">Basic workflow</span>
+			
+			
+			<span class="tag badge-domain">Macroevolution</span>
+			
+			<span class="tag badge-domain">Population genetics</span>
+			
+			
+			<span class="tag badge-package">StarBEAST2</span>
+			
+		</div>
+
+		<!-- Deprecated warning -->
+		
+
 		<div class="head">
 			
 				Estimating species divergence times using StarBEAST2
@@ -107,14 +131,17 @@
 			
 		</div>
 		
-	</div>				
+
+		<!-- Keywords -->
+		
+	</div>
 </div>
 
 <div class="bigspacer"></div>
 
 <div class="row">
 	<div class="col-md-3">
-	<div id="sidebar">
+	<div id="sidebar" data-pagefind-ignore>
 		<div class="bigspacer"></div>
 		<div class="smallhead">
 			Tutorial
@@ -357,8 +384,29 @@ Add input data</span>
 	</div>
 	</div>
 
-	<div class="col-md-8">				
-		<div class="post">
+	<div class="col-md-8">
+		<div class="post" data-pagefind-body>
+			<!-- Pagefind meta and filter tags -->
+			<!-- Weighted so a title/keyword/subtitle hit outranks a body-text hit.
+			     Pagefind default weight is 1; headings inside <h1 id="background">Background</h1>
+
+<p>This tutorial walks through through how to set up a calibrated species tree
+analysis in StarBEAST2. It follows on from <strong>Species Trees with Relaxed
+Molecular Clocks</strong>, which should be attempted first. Calibrated species trees
+enable researchers to estimate divergence times for pairs of species, crown
+and stem groups, <em>et cetera</em>.</p>
+ are
+			     auto-weighted by level (h1 highest), so only these need boosting. -->
+			<h1 data-pagefind-meta="title" data-pagefind-weight="10" style="display:none;">Calibrated Species Trees</h1>
+			
+			
+			
+			<div data-pagefind-weight="5" style="display:none;">Estimating species divergence times using StarBEAST2</div>
+			
+			
+			
+			
+
 			<p>
 			<h1 id="background">Background</h1>
 

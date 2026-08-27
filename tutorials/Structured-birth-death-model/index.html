@@ -16,6 +16,7 @@
 
     <!-- Our style -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/tutorial-styles.css">
 
     <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -41,7 +42,7 @@
       <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
     </a>
     
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -89,6 +90,29 @@
 			</ol>
 		</div>
 		<p>
+		<!-- Tutorial metadata badges -->
+		<!-- Read from `tutorial.*` (enriched _data/tutorials.yml, incl. the
+		     tutorials_metadata.yml fallback) rather than `page.*` (raw README
+		     frontmatter), so badges show even before a tutorial migrates its
+		     own frontmatter upstream. -->
+		<div class="tutorial-badges" style="margin-bottom: 15px;">
+			
+			
+			<span class="tag badge-workflow">Advanced analysis</span>
+			
+			
+			<span class="tag badge-domain">Phylogeography</span>
+			
+			<span class="tag badge-domain">Epidemiology</span>
+			
+			
+			<span class="tag badge-package">bdmm</span>
+			
+		</div>
+
+		<!-- Deprecated warning -->
+		
+
 		<div class="head">
 			
 				Population structure using the multi-type birth-death model
@@ -111,14 +135,17 @@
 			
 		</div>
 		
-	</div>				
+
+		<!-- Keywords -->
+		
+	</div>
 </div>
 
 <div class="bigspacer"></div>
 
 <div class="row">
 	<div class="col-md-3">
-	<div id="sidebar">
+	<div id="sidebar" data-pagefind-ignore>
 		<div class="bigspacer"></div>
 		<div class="smallhead">
 			Tutorial
@@ -371,8 +398,624 @@ Adding CCD summary tree</span>
 	</div>
 	</div>
 
-	<div class="col-md-8">				
-		<div class="post">
+	<div class="col-md-8">
+		<div class="post" data-pagefind-body>
+			<!-- Pagefind meta and filter tags -->
+			<!-- Weighted so a title/keyword/subtitle hit outranks a body-text hit.
+			     Pagefind default weight is 1; headings inside <h1 id="introduction">Introduction</h1>
+
+<p>In this tutorial we will use the <a href="http://www.beast2.org/">BEAST2</a>
+<a href="https://github.com/denisekuehnert/bdmm">bdmm</a> package to perform a Bayesian
+phylogenetic analysis of an influenza data set using the multi-type birth-death
+model <a class="citation" href="#Kuhnert2016">(Kühnert et al., 2016)</a>.</p>
+
+<!--(Note that both the structured coalescent and the multi-type birth-death model are tree priors implemented in BEAST2. Both of them utilize the multi-type tree structure of the MultiTypeTree package. While the structured coalescent is part of the MultiTypeTree package, the multi-type birth-death model has its own package bdmm (aka birth-death migration model).)-->
+
+<p>The data set used in this tutorial is a thinned 60 sequence subset of the
+980 sequence H3N2 influenza data set used in the publication <a class="citation" href="#Vaughan2014">(Vaughan et al., 2014)</a>, which in turn was
+assembled from publicly-available data sets provided by various authors on
+<a href="http://www.ncbi.nlm.nih.gov/genbank/">GenBank</a>.</p>
+
+<h2 id="software-requirements">Software Requirements</h2>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.7.4 <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p>Tracer (<a href="https://github.com/beast-dev/tracer/releases/tag/v1.7.2">https://github.com/beast-dev/tracer/releases/tag/v1.7.2</a>) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.2.</p>
+
+<h3 id="icytree">IcyTree</h3>
+
+<p>IcyTree (<a href="https://icytree.org">https://icytree.org</a>) is a browser-based phylogenetic tree viewer. It is intended for rapid visualisation of phylogenetic tree files. It can also render phylogenetic networks provided in extended Newick format. IcyTree is compatible with current versions of Mozilla Firefox and Google Chrome.</p>
+
+<!-- and an up-to-date version of
+[Google Chrome](http://www.google.com/chrome) or
+[Mozilla Firefox](https://www.mozilla.org/en-US/firefox/).-->
+
+<h2 id="installing-the-bdmm-package">Installing the <code class="language-plaintext highlighter-rouge">bdmm</code> package</h2>
+
+<p>You can easily install the <code class="language-plaintext highlighter-rouge">bdmm</code> package via BEAUti’s package manager.  To do this, follow these steps:</p>
+
+<blockquote>
+  <p>Start BEAUti;</p>
+
+  <p>In the application menu, <strong>File</strong> &gt; <strong>Manage Packages</strong>.</p>
+
+  <p>Find <strong>bdmm</strong> in the list of packages shown, select it and then click <strong>Install/Upgrade</strong>.</p>
+</blockquote>
+
+<p>The BEAUTi window should look similar to what is shown in <a href="#fig:install-bdmm">Figure 1</a>.
+Note the actual version of <code class="language-plaintext highlighter-rouge">bdmm</code> may differ from the version shown in the figure, which is perfectly normal.
+Also note that <code class="language-plaintext highlighter-rouge">bdmm</code> depends on the <code class="language-plaintext highlighter-rouge">MultiTypeTree</code> package. And on <code class="language-plaintext highlighter-rouge">MASTER</code> from version v0.3.0 upward. BEAUTi will install the dependencies automatically once you select to install <code class="language-plaintext highlighter-rouge">bdmm</code>.</p>
+
+<figure>
+	<a id="fig:install-bdmm"></a>
+	<img style="width:75%;" src="figures/1-install-bdmm.png" alt="" />
+	<figcaption>Figure 1: Install bdmm.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Finally, <strong>restart BEAUti.</strong>  The restart is necessary for the packages to be successfully installed.</p>
+
+<p>If you get an error message stating that you are missing a package on which <code class="language-plaintext highlighter-rouge">bdmm</code> depends, install that package manually using the package manager as done above, and <strong>restart BEAUti</strong> again.</p>
+
+<h1 id="setting-up-the-analysis-using-beauti">Setting up the analysis using BEAUti</h1>
+
+<h2 id="loading-the-template">Loading the template</h2>
+
+<p>A BEAUTi template defines the basic structure and contents of your XML configuration file.
+By default BEAUTi will construct an XML file with standard uncoloured BEAST trees, however <code class="language-plaintext highlighter-rouge">bdmm</code> uses coloured trees which are defined in the <code class="language-plaintext highlighter-rouge">MultiTypeTree</code> package.
+To use the appropriate template for the configuration file, select <code class="language-plaintext highlighter-rouge">File &gt; Template &gt; MultiTypeBirthDeath</code>, as shown in <a href="#fig:choose-bdmm">Figure 2</a>.</p>
+
+<figure>
+	<a id="fig:choose-bdmm"></a>
+	<img style="width:100%;" src="figures/2-choose-bdmm-template.png" alt="" />
+	<figcaption>Figure 2: Load the MultiTypeBirthDeath template.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="loading-the-data">Loading the data</h2>
+
+<p>Once the template is loaded, we can load in our example sequence data.  In our case, these data are stored in a FASTA file, the first few lines of which look like this (the sequences have been truncated for better readability):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; EU856841_HongKong_2005.34246575
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+&gt; EU856989_HongKong_2002.58356164
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+&gt; CY039495_HongKong_2004.5890411
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+&gt; EU856853_HongKong_2001.17808219
+-----------ATGAAGACTATCATTGCTTTGAGCTACATTTTATGTCTGGTTTTCGCTC...
+&gt; EU857026_HongKong_2003.51232877
+-----------ATGAAGGCTATCATTGCTTTGAGCTACATTCTATGTCTGGTTTTCGCTC...
+</code></pre></div></div>
+
+<p>The lines beginning with “&gt;” are labels for the sequences immediately
+following.  In general, these labels have no special format, but in this file
+each label is an underscore-delimited triple.  The first element of each triple
+is the GenBank accession number of the sequence, the second is the geographical
+region from which it was sampled, and the third is the time at which it was
+sampled measured in calendar years or fractions thereof.</p>
+
+<p>In this tutorial we will be using the influenza sequence data which can be found in the <code class="language-plaintext highlighter-rouge">examples</code> folder of the <code class="language-plaintext highlighter-rouge">MultiTypeTree</code> package.
+To make it easier to find when loading the alignment, you can optionally set the working directory of BEAST2 to <code class="language-plaintext highlighter-rouge">MultiTypeTree</code>.
+This will make BEAUTi open the appropriate package folder when you look for the alignment.
+To set the working directory, select <code class="language-plaintext highlighter-rouge">File &gt; Set working dir &gt; MultiTypeTree</code>, as shown in <a href="#fig:working-dir">Figure 3</a>.</p>
+
+<figure>
+	<a id="fig:working-dir"></a>
+	<img style="width:100%;" src="figures/3-set-working-dir.png" alt="" />
+	<figcaption>Figure 3: Optional step: set the working directory to MultiTypeTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>To load the file, select <code class="language-plaintext highlighter-rouge">File &gt; Add Alignment</code>.</p>
+
+<p>This will open a file selection dialog box.  The example influenza sequence data
+file is named <code class="language-plaintext highlighter-rouge">h3n2_2deme.fna</code>.
+Assuming you have followed the previous step to set the working directory, this can be found in the <code class="language-plaintext highlighter-rouge">examples/</code> directory shown when the file selection dialog box appears.
+In case you have not followed the previous step you will have to locate the folder containing the <code class="language-plaintext highlighter-rouge">MultiTypeTree</code> package and look for the <code class="language-plaintext highlighter-rouge">examples/</code> folder there.</p>
+
+<p>Once the sequence file is loaded, your BEAUti screen should look similar to what is shown in <a href="#fig:alignment">Figure 4</a>.</p>
+
+<figure>
+	<a id="fig:alignment"></a>
+	<img style="width:100%;" src="figures/4-alignment-loaded.png" alt="" />
+	<figcaption>Figure 4: The alignment loaded into BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="setting-up-dates">Setting up dates</h2>
+
+<p>Once the data is loaded, the next step is to specify the times at which the sequences were sampled:</p>
+
+<blockquote>
+  <p>Select the <strong>Tip Dates</strong> panel.</p>
+
+  <p>Check the <strong>Use tip dates</strong> checkbox.</p>
+
+  <p>Click the <strong>Auto-configure</strong> button at the top-right of the panel.
+This opens a dialog that allows sample times to be loaded from a file or inferred (guessed) from the sequence labels.</p>
+
+  <p>Because the times are included as the last element of the underscore-delimited sequence names, choose the <strong>use everything</strong> radio button and select <strong>after last</strong> from the drop-down menu. The default delimiter is already the underscore, so there is no need to change that.</p>
+</blockquote>
+
+<p>The date parsing setup will look as shown in <a href="#fig:tip-dates">Figure 5</a>.</p>
+
+<figure>
+	<a id="fig:tip-dates"></a>
+	<img style="width:75%;" src="figures/5-tip-dates.png" alt="" />
+	<figcaption>Figure 5: Guessing the tip dates.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>After clicking <code class="language-plaintext highlighter-rouge">OK</code> you should find that the tip date table is filled with
+times that match those in the sequence headers, and that the last column of the
+table contains heights, i.e. times before most recent sample, calculated from the times.
+The BEAUTi panel should look as shown in <a href="#fig:tip-dates">Figure 6</a>.</p>
+
+<figure>
+	<a id="fig:tip-dates-set"></a>
+	<img style="width:100%;" src="figures/6-tip-dates-set.png" alt="" />
+	<figcaption>Figure 6: Sampling dates as seen in BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="setting-up-locations">Setting up locations</h2>
+
+<p>Now that we’ve specified the sampling times, we move on to specifying the sampling locations.
+To do this, we follow a very similar set of steps to those we used to set the sample times:</p>
+
+<blockquote>
+  <p>Select the <strong>Tip Locations</strong> panel. You’ll find that the locations are already filled with a single default value – <strong>NOT_SET</strong>.</p>
+
+  <p>Click the <strong>Guess</strong> button at the top-left of the panel. This opens the same dialog that we saw in the previous section when setting up the dates.</p>
+
+  <p>The locations are included as the second element of the underscore-delimited sequence names.
+Therefore we choose the <strong>split on character</strong> radio button and select group <strong>2</strong> from the drop-down menu.
+Note again that the underscore character is already chosen as the delimiter.</p>
+</blockquote>
+
+<p>The location parsing setup will look as shown in <a href="#fig:tip-types">Figure 7</a>.</p>
+
+<figure>
+	<a id="fig:tip-types"></a>
+	<img style="width:75%;" src="figures/7-tip-types.png" alt="" />
+	<figcaption>Figure 7: Guessing the locations.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>After clicking <code class="language-plaintext highlighter-rouge">OK</code> you should find that the tip location table is filled with locations that match those in the sequence titles.
+The BEAUTi panel should look as shown in <a href="#fig:tip-types-set">Figure 8</a>.</p>
+
+<figure>
+	<a id="fig:tip-types-set"></a>
+	<img style="width:100%;" src="figures/8-tip-types-set.png" alt="" />
+	<figcaption>Figure 8: The locations in BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="setting-the-substitution-model">Setting the substitution model</h2>
+
+<p>For this analysis, we will use the JC69 substitution model with 4 gamma categories.
+To configure this in BEAUti, switch to the <code class="language-plaintext highlighter-rouge">Site Model</code> panel.
+First, we need to set up the rate category count.
+To approximate the continuous gamma rate distribution BEAST2 uses the discrete gamma distribution, where sites are divided into k equally probable rate categories.
+In general, 4-6 categories work well for most datasets, while having more categories involve a lot of computation at little precision gain, so we set the <code class="language-plaintext highlighter-rouge">Gamma Category Count</code> to 4.
+We would also like to estimate the <code class="language-plaintext highlighter-rouge">Shape</code> parameter, which describes the shape of the continuous gamma distribution we approximate.
+To do so, we need to set it to a non-zero value (e.g. the default 1.0) and tick the <code class="language-plaintext highlighter-rouge">estimate</code> checkbox.
+While the gamma categories account for rate variation, allowing some sites to have an evolutionary rate of 0 can improve fit to real data.
+To speed up the analysis we will fix this to the actual proportion of invariant sites we have in our alignment, which is 0.867.
+We leave the substitution model to the default option <code class="language-plaintext highlighter-rouge">JC69</code>.
+The BEAUti panel should now look as shown in <a href="#fig:site-model">Figure 9</a>.</p>
+
+<figure>
+	<a id="fig:site-model"></a>
+	<img style="width:100%;" src="figures/9-sitemodel.png" alt="" />
+	<figcaption>Figure 9: Setup of the site model.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">Substitution rate</code> defined on this panel should not be estimated - we use the <code class="language-plaintext highlighter-rouge">Clock rate</code> defined in the <code class="language-plaintext highlighter-rouge">Clock Model</code> panel to
+determine the average per unit time rate of sequence evolution.
+This way, the <code class="language-plaintext highlighter-rouge">Substitution rate</code> is not actually a rate, but rather a rate multiplier that we fix to 1 to allow parameter identifiability.</p>
+
+<h2 id="setting-the-clock-model">Setting the clock model</h2>
+
+<p>To speed up the analysis we will assume a strict clock for this small dataset.
+However, the selection of a clock model for a different, real analysis should not be taken lightly.
+Since our alignment contains sequences sampled at different times and those times are measured in years, we must use a clock rate expressed in units of expected substitutions per site per year.
+Usually the precise value is unknown and so the default behaviour of BEAUti is to assume this rate has to be estimated.
+To speed up mixing we set the starting value of the <code class="language-plaintext highlighter-rouge">Clock rate</code> to 0.005, which we know from research to be much closer to the truth than the default value of 1.
+The <code class="language-plaintext highlighter-rouge">Clock Model</code> panel should now look as shown in <a href="#fig:strict-clock">Figure 10</a>.</p>
+
+<figure>
+	<a id="fig:strict-clock"></a>
+	<img style="width:100%;" src="figures/10-strict-clock.png" alt="" />
+	<figcaption>Figure 10: Fix the clock rate to speed up mixing.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="adjusting-priors">Adjusting priors</h2>
+
+<h3 id="setting-up-the-bdmm-tree-prior">Setting up the <code class="language-plaintext highlighter-rouge">bdmm</code> tree prior</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bdmm</code> defines a prior on the multi-type tree distribution.
+Thus it is particularly important for the analysis that we properly set up the priors.
+First, let’s talk about the values that need to be set on the <code class="language-plaintext highlighter-rouge">Priors</code> panel.
+The first panel that you see at the top is the tree prior.</p>
+
+<p><code class="language-plaintext highlighter-rouge">bdmm</code> is a model that can be used to explain data that is clearly divided into separate partitions, or demes.
+(We will use the terms deme, partition and type interchangeably here.)
+The demes can be geographical locations, as in our example, but the sequences can also be separated through other means than that, e.g. by a specific drug resistance mutation (strains can develop/lose drug resistance and thus move between demes, but can not transfer between demes otherwise), or location in the body (for example, for localised infections caused by the same agent).
+In this dataset we have strains from 2 different locations, New Zealand and Hong Kong, so the <code class="language-plaintext highlighter-rouge">Number of demes</code> should be set to 2, which also is the default value.
+Next, <code class="language-plaintext highlighter-rouge">bdmm</code> lets you estimate the <code class="language-plaintext highlighter-rouge">Reproduction number per type</code> and the <code class="language-plaintext highlighter-rouge">BecomeUninfectiousRate per type</code>.
+This will let us see the differences in reproduction fitness and speed of recovery between the two locations, so we leave the <code class="language-plaintext highlighter-rouge">estimate</code> checkboxes checked.
+We can leave the starting values at default as it will not influence the inference a lot.</p>
+
+<p>The next important thing one should take care of is setting the sampling proportions appropriately.
+In general, the trees that we build go back in time much further than the first sample that we have.
+If we set the same sampling proportion for the whole time period from our estimated tree origin to the time of the last sample, we will most likely run into trouble, as <code class="language-plaintext highlighter-rouge">bdmm</code> will try to produce a tree that has the same sampling proportion for the whole time, but no samples in the past and a lot of samples towards the present.
+In order to remove that bias from the trees, we need to make sure that we only have non-zero sampling starting from the first sample date (unless we know that there really weren’t
+any related cases before the first sampled case).
+To do so, let’s look at the <code class="language-plaintext highlighter-rouge">SamplingProportion per type</code> field.
+You will see that it has 4 values, which correspond to two values per type, lets call them [v1,v2,v3,v4].
+v1 and v2 are the values for the first and second time interval for the first deme, and v3 and v4 are the values for the second deme.
+Thus, to do what we want we need to set the values v1 and v3 to zero.
+Because BEAST2 will use scalers to sample new values for the sampling proportions, the values which we set to 0 will remain so.
+Next, we also need to set the <code class="language-plaintext highlighter-rouge">Sampling change time</code> to the time slightly before the first sample.
+If we look back at the <code class="language-plaintext highlighter-rouge">Tip dates</code> panel, we can see that our oldest sample is the one labelled as <code class="language-plaintext highlighter-rouge">EU856904_HongKong_2000.09863014</code>, for which the height, or the length of time from the first sample and the last, is 5.569863.
+We set the sampling change time in time units from the most recent sample and we need to make sure we include the first sample, thus we set the <code class="language-plaintext highlighter-rouge">Sampling change time</code> to 5.57, which is the height of the first sample rounded slightly up (and confirm the change with ENTER).
+The final setup of the tree prior can be seen in <a href="#fig:tree-prior">Figure 11</a>.</p>
+
+<figure>
+	<a id="fig:tree-prior"></a>
+	<img style="width:100%;" src="figures/11-tree-prior.png" alt="" />
+	<figcaption>Figure 11: Set the change time for the sampling proportion so it is zero before the time of the first sample.</figcaption>
+</figure>
+<p><br /></p>
+
+<!--When you expand the tree prior element, you can change the condition on survival setting. We'll leave the box checked.
+
+<figure>
+	<a id="fig:"></a>
+	<img src="figures/9b-condition.png" alt="">
+	<figcaption>Figure 11: Condition on survival.</figcaption>
+</figure>
+<br>-->
+
+<h4 id="what-if-you-have-more-demes">What if you have more demes?</h4>
+
+<p>First things first, for an analysis with more demes you need to set the <code class="language-plaintext highlighter-rouge">Number of demes</code> to the appropriate value, e.g. N, that actually corresponds to the number of demes in the dataset.
+When you do that, the dimensions of the parameters <code class="language-plaintext highlighter-rouge">Reproduction number</code>, <code class="language-plaintext highlighter-rouge">BecomeUninfectiousRate</code>, <code class="language-plaintext highlighter-rouge">SamplingProportion</code> and <code class="language-plaintext highlighter-rouge">Migration rates</code> will change.
+The <code class="language-plaintext highlighter-rouge">Reproduction number</code> and the <code class="language-plaintext highlighter-rouge">BecomeUninfectiousRate</code> will have as many values as you have demes.
+The dimensionality of the <code class="language-plaintext highlighter-rouge">SamplingProportion</code> will be the number of demes times 2, so in case you have 4 demes your sampling proportion will need 8 values.
+You can view this parameter as a matrix of 2 x N values, which is flattened by row.
+The first column reflects the sampling rate before first sample and all of the values in it should be set to 0.
+The <code class="language-plaintext highlighter-rouge">Sampling change time</code> obviously does not change dimensionality, but has to be set to the appropriate time for your dataset.
+Finally, the <code class="language-plaintext highlighter-rouge">Migration rates</code> will have N * (N - 1) entries.
+As one can imagine, the matrix should have the dimensions of N * N, however since there is no migration from a deme to itself (values on the diagonal of the matrix), we subtract N values from the dimensionality, getting N * (N - 1).</p>
+
+<h3 id="setting-up-other-priors">Setting up other priors</h3>
+
+<p>By default, BEAST2 provides you with a prior distribution for each of the parameters of your model.
+This is done because otherwise BEAUTi will have a hard time displaying all of the parameters without any settings provided.
+Unfortunately, this means that some priors are very generic, and, moreover, some priors are in fact, improper – the distribution does not integrate to one.
+This means that while the default setup might work and the runs will eventually mix, it can happen that the values are meaningless.</p>
+
+<p>So, let us go through the important parameters and set priors according to the information we have about our dataset.
+The first important parameter is R<sub>0</sub>.
+In epidemiology, the basic reproduction number, R<sub>0</sub>, of an infection is the number of secondary cases one case generates on average over the course of its infectious period, in an otherwise uninfected population.
+The default prior sets the median value of the distribution to e<sup>0</sup> = 1, which will fit the endemic case of influenza.</p>
+
+<!-- todo: (ideally) adjust analysis files to remove the upper bound of 10, it shouldn't be necessary -->
+
+<figure>
+	<a id="fig:R0-prior"></a>
+	<img style="width:100%;" src="figures/12-R0-prior.png" alt="" />
+	<figcaption>Figure 12: Set the prior for the R<sub>0</sub>.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Next, we should adjust the prior for the rate of clearing the infection, which is labelled as <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme</code>.
+The value of the rate, say x, is the reciprocal of the average time a person with influenza is infectious, 1/x.
+From what we know about influenza we can say that an average infection lasts for about a week, however we would not want to impose too strong of a prior on this parameter.
+Let us change the distribution for this parameter to a <code class="language-plaintext highlighter-rouge">LogNormal</code> and tick the <code class="language-plaintext highlighter-rouge">Mean in Real Space</code> checkbox to make the setting easier.
+So, for a mean time of recovery of 7 days we need to set the mean of our distribution to 365/7 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span></span></span></span> 52.14 (or to 52 for simplicity).
+Bear in mind that our time units are years, so we can not just set the rate to 1/7.
+This prior will ensure that we mainly sample realistic parameter values, but still gives BEAST2 quite a lot of freedom to go to extreme values if need be, as the 95% highest density interval for the prior is [4.44, 224], or [1.63, 82.21] infectious days.
+You can see the setup in <a href="#fig:bUR-prior">Figure 13</a>.</p>
+
+<figure>
+	<a id="fig:bUR-prior"></a>
+	<img style="width:100%;" src="figures/13-bUR-prior.png" alt="" />
+	<figcaption>Figure 13: Set the prior for the rate of recovery.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We will also set the prior for the clock rate to a distribution that is in accordance with what we know about RNA viruses, which is that in general their mean substitution rate is around <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span></span></span></span> 10^(-3).
+We shall set the distribution for <code class="language-plaintext highlighter-rouge">clockRate.c:h3n2_2deme</code> to <code class="language-plaintext highlighter-rouge">Log Normal</code> with the mean of 0.001, with the <code class="language-plaintext highlighter-rouge">Mean in Real Space</code> checkbox checked.
+We will leave the <code class="language-plaintext highlighter-rouge">S</code> parameter (standard deviation) at the default value of 1.25 to allow BEAST2 a lot of freedom in case it is necessary.
+The appropriate prior setup can be seen in <a href="#fig:clock-rate-prior">Figure 14</a>.</p>
+
+<figure>
+	<a id="fig:clock-rate-prior"></a>
+	<img style="width:100%;" src="figures/14-clock-rate-prior.png" alt="" />
+	<figcaption>Figure 14: Set the prior for the clock rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Lastly, we will set the sampling proportion prior to a more narrow distribution peaked around the very low values, as influenza spreads easily, but only few people actually get sampled.
+Taking into account that we are also using a thinned-down version of the dataset, we can use a diffuse prior with the mean around 10<sup>-3</sup>.
+The default prior for the sampling proportion is a <code class="language-plaintext highlighter-rouge">Beta</code> distribution, which is only defined between 0 and 1, making it a natural choice for proportions.
+Here, however, we will use a <code class="language-plaintext highlighter-rouge">Log Normal</code> prior, with the mean <code class="language-plaintext highlighter-rouge">M</code> at 10<sup>-3</sup> and the standard deviation <code class="language-plaintext highlighter-rouge">S</code> at 1.25 to allow a lot of variance.
+Once again we need to check that the <code class="language-plaintext highlighter-rouge">Mean in Real Space</code> checkbox is checked, and since the <code class="language-plaintext highlighter-rouge">Log Normal</code> distribution is defined outside the range of [0, 1] we also need to check that the <code class="language-plaintext highlighter-rouge">Lower</code> and <code class="language-plaintext highlighter-rouge">Upper</code> limits are set accordingly. Do so by clicking on the button showing the initial values, next to the distribution type.
+You can see the sampling prior setup in <a href="#fig:samplingProportion-prior">Figure 15</a></p>
+
+<figure>
+	<a id="fig:samplingProportion-prior"></a>
+	<img style="width:100%;" src="figures/15-samplingProportion-prior.png" alt="" />
+	<figcaption>Figure 15: Set the prior for sampling proportion.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>For the purpose of this tutorial and given that we know little about the outbreak in question to set strict priors on the <code class="language-plaintext highlighter-rouge">rateMatrix</code>, we will leave the other priors on the default values, but feel free to go through them yourself and verify their sensibility.</p>
+
+<h2 id="saving-the-configuration">Saving the configuration</h2>
+
+<p>Once you are done with setting all the appropriate parameters, you can save the configuration file.
+We will leave the <code class="language-plaintext highlighter-rouge">MCMC</code> panel parameters as they are by default.</p>
+
+<h1 id="running-the-analysis-using-beast">Running the analysis using BEAST</h1>
+
+<p>To run the analysis, simply start BEAST 2 in the manner appropriate for your platform, then select the configuration file you generated in the last section as the input.
+Unfortunately, this particular run will take quite some time to mix, e.g. on a MacBook Pro with 3.1 GHz Intel Core i5 processor it takes about 3 hours for 10’000’000 samples.
+Feel free to run it and observe the results, but for the purpose of finishing the tutorial in a reasonable time, check out the provided log file to see the results.</p>
+
+<h1 id="analyzing-the-results">Analyzing the results</h1>
+
+<p>The results of the analysis primarily consist of two parts:</p>
+
+<ol>
+  <li>The parameter log, which is written to the file <code class="language-plaintext highlighter-rouge">h3n2-bdmm.log</code>.</li>
+  <li>The tree log, which is written to <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.trees</code>.</li>
+</ol>
+
+<p>In addition, the file <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.map.trees</code> contains the running
+estimate of the MAP tree as a function of MCMC step number, while the file
+<code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.typedNode.trees</code> is the TreeAnnotator-compatible file
+we’ll use to assemble a summary tree.</p>
+
+<h2 id="parameter-log-file-analysis">Parameter log file analysis</h2>
+
+<p>We can use the program <a href="https://github.com/beast-dev/tracer/releases/tag/v1.7.2">Tracer</a> to view the parameter log file.
+To do this, start Tracer and then press the <code class="language-plaintext highlighter-rouge">+</code> button in the top-left hand corner of the window (under <code class="language-plaintext highlighter-rouge">Trace File</code>).
+Select the log file for this analysis (<code class="language-plaintext highlighter-rouge">h3n2-bdmm.log</code>) from the file selection dialog box.
+You can also simply drag your log file from the file browser to the Tracer window.
+The <code class="language-plaintext highlighter-rouge">Traces</code> table will then be populated with parameters and summary
+statistics corresponding to our multitype birth-death analysis.</p>
+
+<p>Important traces are:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.2</code>: These give the effective reproduction numbers for deme 1 (Hong Kong) and 2 (New Zealand), respectively.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme.2</code>: These are the rates of recovery for someone with flu in either of the locations.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">rateMatrix.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">rateMatrix.t:h3n2_2deme.2</code>: These give the (per lineage per year) migration rates from deme 1 to 2 and vice versa.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Tree.t:h3n2_2deme.count_HongKong_to_NewZealand</code>: these give the number of ancestral migrations from Hong Kong to New Zealand on the inferred tree, <strong>backwards in time</strong>.</p>
+  </li>
+</ul>
+
+<p>The tabs at the top-right of the window can be used to display one or more selected traces in various ways.
+We can look at the become uninfectious rate by selecting the <code class="language-plaintext highlighter-rouge">becomeUninfectiousRate.t:h3n2_2deme.1</code> trace (see <a href="#fig:tracer-bUR">Figure 16</a>).
+The 95% HPD for the parameter is quite wide ([18.699, 88.5431]), which is most likely due to the fact that we have very little data, however the mean value is 49.3247, which gives us an infectious period of 7.4 days.
+Next, selecting the two R<sub>0</sub> traces (<code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.1</code> and <code class="language-plaintext highlighter-rouge">R0.t:h3n2_2deme.2</code>) and choosing the <code class="language-plaintext highlighter-rouge">Marginal Density</code> panel results in useful comparison between the sampled population size marginal posterior distributions (see <a href="#fig:tracer-R0">Figure 17</a>).
+Looking at the posterior distributions we can not see any significant difference in R<sub>0</sub> between the two demes.
+While the distributions are visibly different, they cover the same parameter range (deme 1 95% HPD interval [0.9922, 1.0258], deme 2 95% HPD interval [0.9057, 1.038]), so the values are indistinguishable through such analysis.</p>
+
+<figure>
+	<a id="fig:tracer-bUR"></a>
+	<img style="width:100%;" src="figures/16-tracer-bUR.png" alt="" />
+	<figcaption>Figure 16: Estimated become uninfectious rate marginal posterior.</figcaption>
+</figure>
+<p><br /></p>
+
+<figure>
+	<a id="fig:tracer-R0"></a>
+	<img style="width:100%;" src="figures/17-tracer-R0.png" alt="" />
+	<figcaption>Figure 17: Estimated R<sub>0</sub> marginal posteriors.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>In the case of our pre-cooked analysis all the ESS values are greater than 200 – the arbitrary threshold for acceptability.
+However, it might happen that some values have not yet reached the appropriate ESS in the runs that you did on your own.
+If this analysis were part of a serious study you would want to run the chain for another few million iterations to improve the ESS values.
+In BEAST 2, analyses can be resumed – the samples you already have will not be wasted.</p>
+
+<h2 id="tree-log-visualization">Tree log visualization</h2>
+
+<p>The popular phylogenetic tree visualizer <a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a> can be used to visualize the sampled trees.
+However, Figtree can be quite slow with MultiTypeTree log files, so for this tutorial we suggest using <a href="https://icytree.org/">IcyTree</a> to view tree log files.
+IcyTree is a tree viewer that runs in a web browser, which runs best under recent versions of <a href="http://www.google.com/chrome">Google Chrome</a> and <a href="https://www.mozilla.org/en-US/firefox/">Mozilla Firefox</a> (in that order).</p>
+
+<p>To view MultiTypeTree log files using IcyTree, simply navigate to the IcyTree web page, select <code class="language-plaintext highlighter-rouge">Load from file</code> from the <code class="language-plaintext highlighter-rouge">File</code> menu, then select the <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.trees</code> tree log file using the file selection dialog.
+Alternatively, you can simply drag the log file into your browser window.
+Once the file is loaded you will see the first tree it contains.
+In order to select a different tree, hover the mouse pointer over the box in the lower-left corner of the window.
+This box will expand to a small dialog containing buttons allowing you to navigate between trees.
+The <code class="language-plaintext highlighter-rouge">&lt;</code> and <code class="language-plaintext highlighter-rouge">&gt;</code> buttons move in steps of 1 tree, while <code class="language-plaintext highlighter-rouge">&lt;&lt;</code> and <code class="language-plaintext highlighter-rouge">&gt;&gt;</code> move 10% of the tree file.
+You can also directly enter the index of a tree.</p>
+
+<p>Initially the tree edges will be uncoloured.
+To colour the edges according to the edge type (this is the strain location in our case), navigate to <code class="language-plaintext highlighter-rouge">Style &gt; Colour edges by</code> and select <code class="language-plaintext highlighter-rouge">type</code>.
+A legend and axis can be added by choosing <code class="language-plaintext highlighter-rouge">Display legend</code> and <code class="language-plaintext highlighter-rouge">Axis &gt; Age</code> from the same menu.
+You can browse the trees from your posterior sample (example of the trees you can see in <a href="#fig:icyTree-trees">Figure 18</a>) to look at the traits they share, however in general we need some sort of a summary to be able to draw conclusions from our tree sample.</p>
+
+<figure>
+	<a id="fig:icyTree-trees"></a>
+	<img style="width:100%;" src="figures/18-icyTree-trees.png" alt="" />
+	<figcaption>Figure 18: An example of a sampled multi-type tree in IcyTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>One way of summarising is done by the special <code class="language-plaintext highlighter-rouge">MultiTypeTree</code> log, which logs the running estimates of the <i>maximum a posteriori</i> multi-type tree over the course of the analysis.
+In our case it is the <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.map.trees</code> file.
+You can see the last tree from this file, which represents our sampled estimate of the MAP multi-type tree, in <a href="#fig:icyTree-MAP">Figure 19</a>.</p>
+
+<figure>
+	<a id="fig:icyTree-MAP"></a>
+	<img style="width:100%;" src="figures/19-icyTree-MAP.png" alt="" />
+	<figcaption>Figure 19: The final MAP multi-type tree in IcyTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<h2 id="producing-a-summary-tree-using-treeannotator">Producing a summary tree using <code class="language-plaintext highlighter-rouge">TreeAnnotator</code></h2>
+
+<p>While it is tempting to view the MAP tree shown above as the primary result of the phylogenetic side of our analysis it is very important to remember that this is only a point estimate and says nothing about the uncertainty present in the result.
+This is an important drawback, as we have done a full Bayesian analysis and have access to a large number of samples from the full posterior in the tree log files.
+The MAP tree discards almost all of this information.</p>
+
+<p>We can make better use of our raw analysis results by using the <code class="language-plaintext highlighter-rouge">TreeAnnotator</code> program which is distributed with BEAST2 to analyze the sample of trees which was produced by our MCMC run. Until recently the <em>maximum clade credibility</em> tree (MCC) has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node. A new point estimate, called a <em>conditional clade distribution</em> tree (CCD) has been proposed <a class="citation" href="#berling2025">(Berling et al., 2025)</a>. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different are the point estimates calculated for replicate MCMC chains). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. <strong>To save time, you may run just one method and compare it to the other using the example below.</strong></p>
+
+<h3 id="producing-mcc-tree">Producing MCC tree</h3>
+
+<blockquote>
+  <p>Start <strong>TreeAnnotator</strong></p>
+
+  <p>Set the <strong>Burnin percentage</strong> to <strong>10%</strong> to discard the first 10% of trees in the log file.</p>
+
+  <p>Set the <strong>Target tree type</strong> to the <strong>Maximum clade credibility tree</strong> and set <strong>Node heights</strong> to <strong>Mean heights</strong>.</p>
+
+  <p>Select the <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.typedNode.trees</code> tree file as the input file and <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.mcc_summary.trees</code> as the output file</p>
+
+  <p>Pressing the <strong>Run</strong> button will produce an annotated summary tree.</p>
+</blockquote>
+
+<p>The setup can be seen in <a href="#fig:TreeAnnotator-setup">Figure 20</a>.</p>
+
+<figure>
+	<a id="fig:TreeAnnotator-setup"></a>
+	<img style="width:75%;" src="figures/20-TreeAnnotator-setup.png" alt="" />
+	<figcaption>Figure 20: Use TreeAnnotator to produce a MCC summary tree.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="producing-ccd0-tree">Producing CCD0 tree</h3>
+
+<p>To produce CCD0 summary tree, you will first need to install the CCD package.</p>
+<blockquote>
+  <p>Open BEAUTi</p>
+
+  <p>Select <strong>File</strong> » <strong>Manage packages</strong></p>
+
+  <p>Select <strong>CCD</strong> package in the list and select <strong>Install/Upgrade</strong></p>
+
+  <p>Close BEAUTi</p>
+</blockquote>
+
+<figure>
+	<a id="fig:installCCD"></a>
+	<img style="width:80%;" src="figures/installCCD0.png" />
+	<figcaption>Figure 21: Install CCD package</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Now you can proceed to make CCD0 tree. Use the exactly same set up as for MCC tree but select <strong>MAP (CCD0)</strong> as <strong>Target tree type</strong> and <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.ccd0_summary.trees</code> as the output file.</p>
+
+<h2 id="visualising-the-summary-tree">Visualising the summary tree</h2>
+
+<p>To visualize this tree, open IcyTree once more (maybe open it in a new browser tab), choose <code class="language-plaintext highlighter-rouge">File &gt; Load from file</code>, then use file selection dialog and select either select either <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.mcc_summary.trees</code> or <code class="language-plaintext highlighter-rouge">h3n2-bdmm.h3n2_2deme.ccd0_summary.trees</code> to load MCC or CCD0 summary tree respectivelly.
+Follow the instructions provided above to colour the tree by the <code class="language-plaintext highlighter-rouge">type</code> attribute and add the legend and time axis.
+In addition, open the <code class="language-plaintext highlighter-rouge">Style</code> menu and select <code class="language-plaintext highlighter-rouge">Node height error bars &gt; height_95%_HPD</code> to add error bars to the internal node heights.
+Finally, open the <code class="language-plaintext highlighter-rouge">Style</code> menu and select <code class="language-plaintext highlighter-rouge">Relative edge width &gt; type.prob</code>.
+This makes the edges become increasingly thinner as the posterior probability for the displayed branch decreases.</p>
+
+<p>Once these style preferences have been set, you should see something similar to the MCC tree shown in <a href="#fig:icyTree-mcc">Figure 22</a> or CCD0 tree shown in <a href="#fig:icyTree-ccd0">Figure 23</a>.</p>
+
+<figure>
+	<a id="fig:icyTree-mcc"></a>
+	<img style="width:100%;" src="figures/icytree_mcc.png" alt="" />
+	<figcaption>Figure 22: The MCC summary tree in IcyTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<figure>
+	<a id="fig:icyTree-ccd0"></a>
+	<img style="width:100%;" src="figures/icytree_ccd0.png" alt="" />
+	<figcaption>Figure 23: The CCD0 summary tree in IcyTree.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Here we have a full consensus tree annotated by the locations at coalescence nodes and showing node height uncertainty, with the width of the edges representing how certain we can be of the location estimate at each point on the tree.
+This is a much more comprehensive summary of the phylogenetic side of our analysis.
+One thing to pay attention to here is that the most probable root location in the summary tree is Hong Kong (under our model which assumes that only Hong Kong and New Zealand exist).
+Hovering the mouse cursor over the tiny edge above the root will bring up a table in which posterior probability of the displayed root location (<code class="language-plaintext highlighter-rouge">type.prob</code>) can be seen.
+In this analysis we see that it is about 91%.
+The analysis therefore strongly supports a Hong Kong origin over a New Zealand origin for this flu sample.</p>
+
+<h3 id="mcc-and-ccd0-summary-tree-comparison-optional">MCC and CCD0 summary tree comparison (Optional)</h3>
+
+<p>Now, compare the figures for MCC and CCD0 summary trees. Can you see some differences?</p>
+
+<p>One of the CCD0 summary method advantages is that it can evaluate tree topologies that were not sampled during the MCMC. This is why it usually performs better on high-entropy (uncertain, spread out) tree posterior. Knowing this, what observations can you make about our sample?</p>
+
+<!--[Very useful final notes from Tim](https://github.com/CompEvol/MultiTypeTree/wiki/Beginner%27s-Tutorial-%28short-version%29#final-notes)-->
+
+<hr />
+
+<h1 id="acknowledgment">Acknowledgment</h1>
+
+<p>The content of this tutorial is based on the <a href="https://github.com/CompEvol/MultiTypeTree/wiki/Beginner's-Tutorial-(short-version)">Structured Coalescent tutorial</a> by Tim Vaughan.</p>
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li><a href="https://github.com/denisekuehnert/bdmm">Multi-type birth-death process package</a> <a class="citation" href="#Kuhnert2016">(Kühnert et al., 2016)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Kuhnert2016">Kühnert, D., Stadler, T., Vaughan, T. G., &amp; Drummond, A. J. (2016). Phylodynamics with Migration: A Computational Framework to Quantify Population Structure from Genomic Data. <i>Molecular Biology and Evolution</i>. https://doi.org/10.1093/molbev/msw064</span></li>
+<li><span id="Vaughan2014">Vaughan, T. G., Kühnert, D., Popinga, A., Welch, D., &amp; Drummond, A. J. (2014). Efficient Bayesian inference under the structured coalescent. <i>Bioinformatics</i>, <i>30</i>(16), 2272–2279. https://doi.org/10.1093/bioinformatics/btu201</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="berling2025">Berling, L., Klawitter, J., Bouckaert, R., Xie, D., Gavryushkin, A., &amp; Drummond, A. J. (2025). Accurate Bayesian phylogenetic point estimation using a tree distribution parameterized by clade probabilities. <i>PLOS Computational Biology</i>, <i>21</i>(2), e1012789.</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+ are
+			     auto-weighted by level (h1 highest), so only these need boosting. -->
+			<h1 data-pagefind-meta="title" data-pagefind-weight="10" style="display:none;">Structured birth-death model</h1>
+			
+			
+			
+			<div data-pagefind-weight="5" style="display:none;">Population structure using the multi-type birth-death model</div>
+			
+			
+			
+			
+
 			<p>
 			<h1 id="introduction">Introduction</h1>
 

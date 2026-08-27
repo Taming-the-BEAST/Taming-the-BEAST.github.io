@@ -6,6 +6,8 @@ Taming the BEAST is a platform for collating a comprehensive and cohesive set of
 
 You can choose to set up a build environment locally or use a container image. Building and publishing with a container image can also be done directly on GitHub. You may also first use the testing set up to check any changes.
 
+Repositoeries from which tutorials will be included in the build can be found at `_config.yaml` file. Edit this file if you would like to include/remove tutorials.
+
 ### Build and test within GitHub
 
 #### Build and publish TESTING version of the site within GitHub
@@ -13,18 +15,20 @@ You can choose to set up a build environment locally or use a container image. B
   All changes should be made to [blotter_test](https://github.com/Taming-the-BEAST/blotter_test) repository first:
   - sync [blotter_test](https://github.com/Taming-the-BEAST/blotter_test) with [blotter](https://github.com/Taming-the-BEAST/blotter)
   - push changes to [blotter_test](https://github.com/Taming-the-BEAST/blotter_test)
-  - publish testing version of the website:
+  - publish testing version of the website (this also tests that current container can build it):
     - go to the https://github.com/Taming-the-BEAST/web-testing repository
     - select `Actions` tab
     - select `Publish TTB website` action
     - click `Run workflow` and wait for it to finish.
+  - Alternativelly, directly edit this repository and it will generate new file. But no changes will be saved to [blotter_test](https://github.com/Taming-the-BEAST/blotter_test), so you may loose them the next time you use `Publish TTB website` action to build and publish the site. 
+  - On [web_testing](https://github.com/Taming-the-BEAST/web-testing) you can edit _config.yaml to have `baseurl: /web-testing` at the top, right after `url` line. This will make so you can avoid always adding `/web-testing/` to the url while testing your changes locally. **NEVER** commit and push this change to [blotter](https://github.com/Taming-the-BEAST/blotter)!!!s
   
-  Hopefully, you can see your changes now on the [taming-the-beast.org/web-testing/](taming-the-beast.org/web-testing/)  
+  Hopefully, you can see your changes now on the [taming-the-beast.org/web-testing/](https://taming-the-beast.org/web-testing/)  
 
 #### Build and publish PRODUCTION version of the site within GitHub   
 
   If you are ready to publish the public version of the website, repeat the same steps as above but from the https://github.com/Taming-the-BEAST/Taming-the-BEAST.github.io repository:
-  - go to the [https://github.com/Taming-the-BEAST/web-testing](https://github.com/Taming-the-BEAST/Taming-the-BEAST.github.io) repository
+  - go to the [https://github.com/Taming-the-BEAST/web-testing](https://github.com/Taming-the-BEAST/web-testing) repository
   - select `Actions` tab
   - select `Publish TTB website` action
   - click `Run workflow` and wait for it to finish. 
@@ -33,55 +37,111 @@ You can choose to set up a build environment locally or use a container image. B
 
 ### Build site locally
 
-#### Using a container
+#### Prerequisites
 
-  You will have to authenticate to GitHub container registry using your personal access token (YOUR_PA). 
-  You need to have repo and read/write packages permissions for the token.
+  The site requires:
+  - **Ruby** (3.0+) and **Bundler** -- for Jekyll
+  - **Node.js** (18+) and **npm** -- for Pagefind search indexing (optional)
+  - **Pagefind** binary -- for full-text search indexing (optional)
+
+  Using Docker avoids installing these manually. Otherwise, after getting Ruby and Bundler, make sure all Ruby dependencies are installed:
   ```
-  export CR_PAT=YOUR_PA
-  echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+  bundle install
   ```
-  Then you can pull the docker image: 
+
+#### Using Docker (recommended)
+
+  Pull the pre-built image from GitHub Container Registry:
   ```
   docker pull ghcr.io/taming-the-beast/ttb-web-build-env:latest
   ```
-  Using this image you can start a new container. To complete all steps successfully you may need to use the run options:
-  ```
-  docker run -it --env  GITHUB_TOKEN=YOUR_PA -p 4000:4000 ghcr.io/taming-the-beast/ttb-web-build-env sh
-  ```
-  
-  The first option is required to avoid API request limits and the second one allows you to view the built site on your local machine (the port 4000 on the container is exposed to port 4000 on your local machine).
-  
-  Withing the container you can build as you would on your local machine (see below), but you should skip step 2 as all required dependencies are installed.
-  At step 4 you may need to supply the option `--host=0.0.0.0` to be able to view the site.
 
-#### Build directly on local machine
+  You may need to authenticate first (requires a personal access token with `read:packages` permission):
+  ```
+  echo YOUR_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
+  ```
 
-  1. To build the website locally, clone the repo with:
-  
+  Alternatively, build the image locally from Dockerfile:
   ```
-  git clone https://github.com/Taming-the-BEAST/blotter.git
+  docker build -t ttb-web-build-env .
   ```
+
+  All of the commands below can be run inside the Docker container. Either prefix them with `docker run`, or start an interactive shell:
+  ```
+  docker run -it --rm -p 4000:4000 -v $(pwd):/page ttb-web-build-env bash
+  ```
+
+  The `-v $(pwd):/page` flag mounts your local files into the container. The `-p 4000:4000` flag exposes the Jekyll server to your browser at `http://localhost:4000/`.
+
+#### Build pipeline
+
+  Building the site has up to four stages. Depending on your needs, some can be skipped. See below for shortcuts, if you have npm (Node.js) available.
+
+  **1. Fetch tutorials** (only needed if tutorials are not already present locally):
+  ```
+  ruby _scripts/update-and-preprocess.rb
+  ```
+  Clones tutorial repos from GitHub into `tutorials/`, runs preprocessing, and generates `_data/tutorials.yml`.
+
+  **2. Preprocess tutorial markdown** (required before each build):
   
-  2. Then install necessary Ruby dependencies by running `bundle install` from within the `blotter` directory.
-     
-  3. After this, the site can be be built with:
+  Note: if you ran step 1, preprocessing was already included -- you can skip this step.
+
+  ```
+  ruby _scripts/preprocess-tutorial-markdown.rb
+  ```
+  Tutorials are stored as `README.md` in their repos. This script injects permalinks and layout metadata into the front matter so Jekyll renders them correctly. It also converts `.md` links to `.html`.
+
+  **3. Build the site with Jekyll:**
   ```
   bundle exec jekyll build
   ```
-  
-  - If you wish to build with tutorials, preprocessing scripts are necessary to clone tutorial repos and update Jekyll metadata. To do this, execute the following before the build command:
-    
-    ```
-    ruby _scripts/update-and-preprocess.rb
-    ```
-  - If you wish to skip tutorials (much faster), export the following env variable, before the build command:
-    ```
-    export JEKYLL_ENV=skip_tuts
-    ```
-  
-  4. To view the site, run `bundle exec jekyll serve --host=0.0.0.0` and point a browser to `http://localhost:4000/`. Option `--host=0.0.0.0` may not be needed, depending on your setup.  More information on Jekyll can be found [here](http://jekyllrb.com/).
-  
+  Generates the static site in `_site/`.
+
+  **4. Index for full-text search** (optional):
+  ```
+  pagefind --site _site --glob "tutorials/**/*.html"
+  ```
+  Generates the Pagefind search index in `_site/pagefind/`. Without this step, keyword search still works but full-text search will be unavailable.
+
+  **5. Serve the site:**
+  ```
+  bundle exec jekyll serve --host 0.0.0.0
+  ```
+  Starts a local server at `http://localhost:4000/`. The `--host 0.0.0.0` flag is needed when running inside Docker.
+
+  **Important:** `jekyll serve` rebuilds the site before serving, which overwrites `_site/` and removes the Pagefind index. To preserve the search index, add `--skip-initial-build`:
+  ```
+  bundle exec jekyll serve --host 0.0.0.0 --skip-initial-build
+  ```
+
+#### npm shortcuts
+
+  If you have npm available, `package.json` provides shortcuts that combine the steps above:
+
+  | Command | What it does |
+  |---------|-------------|
+  | `npm run fetch` | Step 1: clone/update tutorial repos + preprocess + generate data |
+  | `npm run preprocess` | Step 2: preprocess tutorial markdown |
+  | `npm run build` | Steps 2+3+4: preprocess + Jekyll build + Pagefind indexing |
+  | `npm run build:quick` | Steps 2+3: preprocess + Jekyll build (no search indexing) |
+  | `npm run serve:indexed` | Steps 2+3+4+5: full build + serve with full-text search |
+  | `npm run serve:quick` | Steps 2+3+5: quick build + serve (no full-text search) |
+  | `npm run index` | Step 4 only: run Pagefind indexing on existing `_site/` |
+  | `npm run serve` | Step 5 only: start Jekyll dev server (no build) |
+
+  Common workflows:
+  ```
+  # Tutorials already present locally -- build and serve with search
+  npm run serve:indexed
+
+  # Fetch tutorials from GitHub first, then build and serve
+  npm run fetch && npm run serve:indexed
+
+  # Quick iteration -- no search indexing
+  npm run serve:quick
+  ```
+
   See [Building a local copy of the site](https://taming-the-beast.github.io/contribute/Building-a-local-copy-of-the-site/) for more information.
 
 

@@ -16,6 +16,7 @@
 
     <!-- Our style -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/tutorial-styles.css">
 
     <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -41,7 +42,7 @@
       <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
     </a>
     
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -89,6 +90,35 @@
 			</ol>
 		</div>
 		<p>
+		<!-- Tutorial metadata badges -->
+		<!-- Read from `tutorial.*` (enriched _data/tutorials.yml, incl. the
+		     tutorials_metadata.yml fallback) rather than `page.*` (raw README
+		     frontmatter), so badges show even before a tutorial migrates its
+		     own frontmatter upstream. -->
+		<div class="tutorial-badges" style="margin-bottom: 15px;">
+			
+			
+			<span class="tag badge-workflow">Advanced analysis</span>
+			
+			
+			<span class="tag badge-domain">Macroevolution</span>
+			
+			<span class="tag badge-domain">Palaeontology</span>
+			
+			<span class="tag badge-domain">Phylogeography</span>
+			
+			
+			<span class="tag badge-package">BDMM-Prime</span>
+			
+			<span class="tag badge-package">MM</span>
+			
+			<span class="tag badge-package">BEAST_CLASSIC</span>
+			
+		</div>
+
+		<!-- Deprecated warning -->
+		
+
 		<div class="head">
 			
 				The fossilized birth-death process and extensions
@@ -115,14 +145,17 @@
 			
 		</div>
 		
-	</div>				
+
+		<!-- Keywords -->
+		
+	</div>
 </div>
 
 <div class="bigspacer"></div>
 
 <div class="row">
 	<div class="col-md-3">
-	<div id="sidebar">
+	<div id="sidebar" data-pagefind-ignore>
 		<div class="bigspacer"></div>
 		<div class="smallhead">
 			Tutorial
@@ -347,8 +380,870 @@ Updates with my and Ewan's comments</span>
 	</div>
 	</div>
 
-	<div class="col-md-8">				
-		<div class="post">
+	<div class="col-md-8">
+		<div class="post" data-pagefind-body>
+			<!-- Pagefind meta and filter tags -->
+			<!-- Weighted so a title/keyword/subtitle hit outranks a body-text hit.
+			     Pagefind default weight is 1; headings inside <h1 id="background">Background</h1>
+
+<p>The fossilized birth-death (FBD) process is a phylodynamic model that incorporates sampling through time and allows us to infer trees with sampled ancestors <a class="citation" href="#Stadler2010">(Stadler, 2010; Heath et al., 2014)</a>. This is important for phylogenies that incorporate fossils. In the original formulation of the model, the birth (speciation), death (extinction), and fossil sampling rates were treated as constant over time and across the tree. Since then, many model extensions have been published that relax the assumption of constant rates or uniform sampling (see <a class="citation" href="#Mulvey2025a">(Mulvey et al., 2025)</a> for an overview). The BEAST2 package BDMM-Prime <a class="citation" href="#Vaughan2025">(Vaughan &amp; Stadler, 2025)</a> incorporates several of these new models, including those that allow rates to vary across time or across different parts of the tree <a class="citation" href="#Gavryushkina2014">(Gavryushkina et al., 2014; Kühnert et al., 2016; Scire et al., 2022)</a>.</p>
+
+<p>This tutorial will provide an introduction of how the BDMM-Prime package can be applied in macroevolution. For an example in epidemiology see the <a href="https://tgvaughan.github.io/BDMM-Prime/#id-1-Introduction">BDMM-Prime package website</a>.</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<p>This tutorial assumes that you have already gained some experience using BEAST2. If you have not already done so, we recommend first completing the following tutorials:</p>
+
+<ul>
+  <li><a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">Introduction to BEAST2</a></li>
+  <li><a href="https://taming-the-beast.org/tutorials/FBD-tutorial/">Dating species divergences with the fossilized birth-death process</a> or <a href="https://taming-the-beast.org/tutorials/Total-Evidence-Tutorial/">Total-evidence dating using BEAST2</a></li>
+</ul>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014; Bouckaert et al., 2019)</a>. This tutorial uses BEAST v2.7.7.</p>
+
+<h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs, and the interface will be the same, on all computing platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<!-- Removing for now, it is only used to open the nexus file not to edit anything...
+### Any programmer-friendly text editor
+
+We will need to view our data input files to understand their format, for which we'll need a text editor. It's best to use one designed for programmers as these include nice features such as syntax highlighting, which makes the code more reader-friendly. [Sublime Text](https://www.sublimetext.com) is a good option which is available for MacOS, Windows and Linux.
+
+-->
+
+<h3 id="tracer">Tracer</h3>
+
+<p><a href="http://beast.community/tracer">Tracer</a> is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g., node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis.</p>
+
+<h3 id="icytree">IcyTree</h3>
+
+<p>IcyTree (<a href="https://icytree.org">https://icytree.org</a>) is a browser-based phylogenetic tree viewer. It is intended for rapid visualisation of phylogenetic tree files. It can also render phylogenetic networks provided in extended Newick format. IcyTree is compatible with current versions of Mozilla Firefox and Google Chrome.</p>
+
+<hr />
+
+<h1 id="practical-bdmm-prime-for-macroevolution">Practical: BDMM-Prime for Macroevolution</h1>
+
+<p>BDMM-Prime is a package written for flexible phylodynamic inference. It combines the functionality of multiple other BEAST2 packages, including the BDMM, BDSKY, and SA packages, and can be applied to a wide range of scenarios in epidemiology and macroevolution. Due to the flexibility and the large variety of ways in which model parameters can be combined using BDMM-Prime there are more options to consider when setting up your analysis.</p>
+
+<h2 id="the-data">The data</h2>
+
+<p>We’ll use a published dataset of <a href="https://en.wikipedia.org/wiki/Amniote">amniotes</a> that has been used previously to explore the early evolution of this group <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>.</p>
+
+<p>The data comprises 294 binary and multi-state characters for 70 fossils, as well as their age and locality information, spanning ~70 myr from the late Carboniferous to the mid Triassic. The specimens can be categorised into three broad geographic areas associated with the northern, mid, and southern areas of the supercontinent <a href="https://en.wikipedia.org/wiki/Pangaea">Pangea</a>,  corresponding approximately to what would be known today as Eurasia, North America, and South Africa.</p>
+
+<blockquote>
+  <p>Download the data file <code class="language-plaintext highlighter-rouge">amniotes.nex</code> and open it in a text editor of your choice. The file can be found on the left-hand panel, under the heading <strong>Data</strong> or in the <code class="language-plaintext highlighter-rouge">data/</code> folder if you cloned the GitHub repository.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:1"></a>
+	<img style="width:100%;" src="figures/0_data_file.png" alt="" />
+	<figcaption>Figure 1: The nexus file containing the morphological data.</figcaption>
+</figure>
+
+<p>Each row in the character matrix contains information for a single taxon. Note that the taxon labels contain information about the age of our samples (after the last underscore) and their geographic provenance (after the second underscore).</p>
+
+<p>Each column (or site) in the character matrix is a morphological character. An integer is used to represent different discrete states for each character, such that a binary character can only be 0 or 1, while a character with 3 possible states could be 0, 1 or 2. Question marks (<code class="language-plaintext highlighter-rouge">?</code>) are used to represent missing data, i.e., characters that could not be coded for a given taxon, e.g., due incomplete preservation. In contrast, dashes (<code class="language-plaintext highlighter-rouge">-</code>) are used to represent characters that do not apply to a given taxon, i.e., if a character describes the morphology of an anatomical feature that a taxon does not have it will be scored as non-applicable.</p>
+
+<h2 id="installing-the-bdmm-prime-and-mm-packages">Installing the BDMM-Prime and MM packages</h2>
+
+<p>The first thing we need to do is install the BDMM-Prime package. This package is not yet listed in the Package Manager in BEAUti, so we need to install it using the package URL.</p>
+
+<blockquote>
+  <ul>
+    <li>Open <strong>BEAUti</strong> and go to <strong>File &gt; Manage Packages</strong>.</li>
+    <li>Select <strong>Package repositories</strong> at the bottom of this window. This will open the <strong>Package Repository Manager</strong>.</li>
+    <li>
+      <p>At the bottom click <strong>Add URL</strong> and enter the following address: <code class="language-plaintext highlighter-rouge">https://tgvaughan.github.io/BDMM-Prime/package.xml</code></p>
+
+      <p>After you click ‘OK’ your window should look like this:</p>
+    </li>
+  </ul>
+</blockquote>
+
+<figure>
+	<a id="fig:2"></a>
+	<img style="width:70%;" src="figures/01-BDMMP-URL.png" alt="" />
+	<figcaption>Figure 2: The Package Repository Manager window.</figcaption>
+</figure>
+
+<blockquote>
+  <ul>
+    <li>Click <strong>Close</strong>. The BDMM-Prime package should now appear in your list of available packages.</li>
+    <li>Select the BDMM-Prime package and click <strong>Install/Upgrade</strong> at the bottom of the window. This should bring up a message that confirms the package has been successfully installed.</li>
+  </ul>
+</blockquote>
+
+<figure>
+	<a id="fig:3"></a>
+	<img style="width:100%;" src="figures/01b-BDMMP-install.png" alt="" />
+	<figcaption>Figure 3: The Package Manager window.</figcaption>
+</figure>
+
+<blockquote>
+  <p>If you haven’t done so already, you will also need to install the following two packages:</p>
+
+  <ul>
+    <li><strong>MM</strong> for models of morphological evolution</li>
+    <li><strong>BEAST_CLASSIC</strong> for the relaxed lognormal clock model</li>
+  </ul>
+
+  <p>These packages should already appear on the same list in the <strong>Package Manager</strong>. You just need to click <strong>Install/Upgrade</strong> for each one.</p>
+
+  <p>Restart <strong>BEAUti</strong> to reload packages so you can set up an analysis using <strong>BDMM-Prime</strong>.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="part-1-the-constant-rate-fbd-process">Part 1: The constant rate FBD process</h1>
+
+<h2 id="the-partitions-panel">The Partitions panel</h2>
+
+<p>Make sure you have downloaded the nexus file associated with this tutorial, <code class="language-plaintext highlighter-rouge">amniotes.nex</code>.</p>
+
+<blockquote>
+  <p>To input your data into BEAUti, either drag and drop the file into the <strong>Partitions</strong> panel and select <strong>Add Morphological Data</strong> and then <strong>OK</strong> or go to <strong>File &gt; Add Morphological Data</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:4"></a>
+	<img style="width:50%;" src="figures/02a-BDMMP-Partitions.png" alt="" />
+	<figcaption>Figure 4: Options for importing data.</figcaption>
+</figure>
+
+<p>This will bring up a window that asks, “Would you like to condition on recording variable characters only (Mkv)?” Since we typically don’t collect non-variable morphological characters this option makes sense for our dataset.</p>
+
+<blockquote>
+  <p>Click <strong>Yes</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:5"></a>
+	<img style="width:60%;" src="figures/02b-BDMMP-Partitions.png" alt="" />
+	<figcaption>Figure 5: Options for importing morphological data.</figcaption>
+</figure>
+
+<p>Your <strong>Partitions</strong> panel should now look like this:</p>
+
+<figure>
+	<a id="fig:6"></a>
+	<img style="width:100%;" src="figures/02c-BDMMP-Partitions.png" alt="" />
+	<figcaption>Figure 6: The Partitions panel.</figcaption>
+</figure>
+
+<p>By default the characters are separated into four partitions. This means that characters will be assigned to a substitution rate matrix where the number of possible states corresponds to the maximum observed state for each character. Our dataset contains characters with a maximum observed state number of one, two, three and four (respectively corresponding to characters with two, three, four and five observed states), hence we have four data partitions. The number of characters in each partition is listed under <strong>Sites</strong>.</p>
+
+<p>Note that the <strong>Site Model</strong> is <em>unlinked</em> across partitions, while the <strong>Clock Model</strong> and <strong>Tree</strong> are <em>linked</em> by default. This means that we will allow each partition to evolve under a separate substitution process, but we will assume that the underlying tree is the same and that the same clock model is shared across partitions.</p>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>Would it make any sense to link the site models across partitions here?</p>
+
+  <details>
+	<summary>Answer</summary>
+
+Not really. In this analysis we have four partitions, where each partition has a different number of possible states. If we were to link site models, the site model would need to have the maximum number of states for all the partitions. That means that we would use a model with 5 possible states for each site in our alignment, including sites where we've only observed 2, 3 or 4 states. While it is possible that these states exist and we just haven't observed them, in most cases this doesn't make sense. For instance, if a binary trait stands for presence/absence, allowing for substitutions to 3 further states is nonsensical. 
+
+</details>
+</blockquote>
+
+<h2 id="the-tip-dates-panel">The Tip Dates panel</h2>
+
+<blockquote>
+  <p>Navigate to the <strong>Tip Dates</strong> panel and select <strong>Use tip dates</strong>.</p>
+</blockquote>
+
+<p>Here we can extract information about the age of our samples from the tip labels. For our analysis, the time units are in millions of years, so we’ll leave <strong>year</strong> selected in the first drop down menu.</p>
+
+<blockquote>
+  <p>From the second drop down menu, change <strong>Since some time in the past</strong> to <strong>Before the present</strong>.</p>
+
+  <p>Next, select <strong>Auto-configure</strong>. Leave <strong>use everything</strong> selected and from the drop down menu, select <strong>after last</strong>, leaving the delimiter as <strong>“_“</strong>. This will extract age information from the end of each taxon label.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:7"></a>
+	<img style="width:80%;" src="figures/03_Tip_Dates.png" alt="" />
+	<figcaption>Figure 7: Options for extracting age information from taxon labels.</figcaption>
+</figure>
+
+<p>Note that although our samples span an interval in the past, internally BEAST rescales the tree such that the youngest sample in the tree is at t = 0. The rescaled values are shown under the <strong>Age/Height</strong> column.</p>
+
+<p>To make sure everything is set up correctly, if you scroll down, the youngest fossil, <code class="language-plaintext highlighter-rouge">Candelaria_barbouri_NAm_239.5</code>, should have a “0.0” next to it under the <strong>Age/Height</strong> column.</p>
+
+<figure>
+	<a id="fig:8"></a>
+	<img style="width:100%;" src="figures/03b_Tip_Dates.png" alt="" />
+	<figcaption>Figure 8: The Tip Dates panel.</figcaption>
+</figure>
+
+<h2 id="the-site-model-panel">The Site Model panel</h2>
+
+<p>Under the <strong>Site Model</strong> panel we can specify the model of morphological evolution. For this exercise we’ll use the simple Mkv Lewis model for each of our partitions and leave everything as it is.</p>
+
+<figure>
+	<a id="fig:9"></a>
+	<img style="width:100%;" src="figures/04_Site_model.png" alt="" />
+	<figcaption>Figure 9: The Site Model panel.</figcaption>
+</figure>
+
+<p>The Mk model is equivalent to the Jukes-Cantor model for molecular sequence evolution. It can be applied to discrete characters with any given number of states and assumes that transitions between all states within a given partition occur at the same rate. The “v” indicates that we will add the correction for ascertainment bias, which we already specified when we loaded the data into BEAUti (see above).</p>
+
+<h2 id="the-clock-model-panel">The Clock Model panel</h2>
+
+<blockquote>
+  <p>Navigate to the <strong>Clock Model</strong> panel and select <strong>Relaxed Clock Log Normal</strong> from the drop down menu. This will allow rates of evolution to vary across branches in our tree.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:10"></a>
+	<img style="width:100%;" src="figures/05_Clock_model.png" alt="" />
+	<figcaption>Figure 10: The Clock Model panel.</figcaption>
+</figure>
+
+<h2 id="the-priors-panel">The Priors panel</h2>
+
+<p>Here we will set up the tree model and all the prior parameters associated with our analysis.</p>
+
+<blockquote>
+  <p>Navigate to the <strong>Priors</strong> panel.</p>
+</blockquote>
+
+<h3 id="clock-model-parameters">Clock model parameters</h3>
+
+<p>Let’s start with clock model parameters <strong>ucldMean</strong> and <strong>ucldStdev</strong>, which you should already see listed here. This is the mean and standard deviation of the lognormal distribution from which branch (clock) rates are drawn.</p>
+
+<blockquote>
+  <p>Expand the options for <strong>ucldMean</strong> by clicking the triangle to the left of this parameter.</p>
+
+  <p>For the mean on the overall clock rate we will use a <strong>Normal</strong> prior, following the original study, with a <strong>Mean</strong> of <strong>0.001</strong> and a standard deviation (<strong>Sigma</strong>) of <strong>0.01</strong>. Clock rates cannot be negative so the distribution is truncated at zero.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:11"></a>
+	<img style="width:100%;" src="figures/06a_Clock_priors.png" alt="" />
+	<figcaption>Figure 11: The prior on the mean of the lognormal distribition of branch rates, ucldMean.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Select the <strong>initial</strong> value option next to the distribution and change <strong>Value</strong> to 0.001. This ensures our analysis starts in a reasonable part of the parameter space. Click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:12"></a>
+	<img style="width:80%;" src="figures/06b_Clock_priors.png" alt="" />
+	<figcaption>Figure 12: Setting the initial value for the mean clock rate, ucldMean.</figcaption>
+</figure>
+
+<blockquote>
+  <p>For the standard deviation of the distribution of clock rates, <strong>ucldStdev</strong>, we’ll use an <strong>Exponential</strong> prior with a mean of <strong>0.1</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:13"></a>
+	<img style="width:100%;" src="figures/06c_Clock_priors.png" alt="" />
+	<figcaption>Figure 13: The prior on the standard deviation of the lognormal distribition of branch rates, ucldStdev.</figcaption>
+</figure>
+
+<p>These prior choices match our expectations about rates of morphological evolution estimated in previous analyses of terrestrial vertebrates, i.e., the rates tend to be relatively low, with some degree of variation across branches.</p>
+
+<h3 id="bdmm-prime">BDMM-Prime</h3>
+
+<p>Next let’s set up the phylodynamic model.</p>
+
+<blockquote>
+  <p>Select <strong>BDMMPrime</strong> from drop down menu at the top of the <strong>Priors</strong> panel next to <strong>Tree.t:amniotes</strong> and expand the options by clicking on the triangle to the left.</p>
+</blockquote>
+
+<p>There are a lot of options for combining parameters using BDMM-Prime, so we need to be careful to select parameter combinations that make sense for our dataset.</p>
+
+<p>First, we need to choose how we want to parameterize our model - that is, which parameters we want to operate on and add prior information for. Currently, there are three options for parameterising the birth-death model using BDMM-Prime available in BEAUti. For macroevolution we can choose between two options:</p>
+
+<ul>
+  <li>The <strong>Canonical Parameterization</strong>, which is parameterized using the birth (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span></span></span></span>), death (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>), and sampling rates (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>). In this parameterization, and in the context of macroevolution, births usually correspond to speciation events, deaths to extinctions and sampling events to fossilizations.</li>
+  <li>The <strong>Fossilized Birth Death Parameterization</strong>, which is parameterized using the net diversification rate (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span>), turnover rate (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span>), and sampling proportion (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span>).</li>
+</ul>
+
+<p>The relationship between the parameterizations is shown in <a href="#table:1">Table 1</a>. Both are useful in macroevolution and your choice might depend on which parameters are of most interest to you or what prior information you have available. In other cases inference under one parameterization might be numerically more stable than another or converge faster. Note that after your analysis is complete, you can always go from one set of parameters to the other via the transformations shown in the table below.</p>
+
+<p><a id="table:1"></a></p>
+
+<!-- inline fractions -- MISTAKE IN EQN FOR MU!
+| Parameter    | Transformation |
+| :-------- | :-------: |
+| Speciation (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span></span></span></span>)  | <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>d</mi><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\lambda = d / (1 - v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>    |
+| Extinction (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>)  | <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo stretchy="false">(</mo><mi>v</mi><mi>d</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mu = (vd)(1-v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">d</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>    |
+| Sampling (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>)  | <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><mo stretchy="false">(</mo><mi>s</mi><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>s</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>v</mi><mi>d</mi><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>v</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\psi = (s/ (1-s))((vd)/(1-v))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">s</span><span class="mclose">))</span><span class="mopen">((</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">d</span><span class="mclose">)</span><span class="mord">/</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">))</span></span></span></span>    |
+| Net diversification (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span>)  | <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>λ</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">d = \lambda - \mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>    |
+| Turnover (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span>) | <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>μ</mi><mi mathvariant="normal">/</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">v = \mu/\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">μ</span><span class="mord">/</span><span class="mord mathnormal">λ</span></span></span></span>     |
+| Sampling proportion (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span>) | <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>ψ</mi><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mi>μ</mi><mo>+</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s = \psi/(\mu + \psi)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mord">/</span><span class="mopen">(</span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mclose">)</span></span></span></span>     |
+-->
+
+<!-- I prefer fractions, fewer parentheses and easier to read -->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: center">Transformation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Speciation (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span></span></span></span>)</td>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mn>1</mn><mo>−</mo><mi>v</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\lambda = \frac{d}{1 - v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2834em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Extinction (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span>)</td>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mfrac><mrow><mi>v</mi><mi>d</mi></mrow><mrow><mn>1</mn><mo>−</mo><mi>v</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mu = \frac{vd}{1-v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2834em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Sampling (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>)</td>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><mrow><mo fence="true">(</mo><mfrac><mi>s</mi><mrow><mn>1</mn><mo>−</mo><mi>s</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mrow><mo fence="true">(</mo><mfrac><mrow><mi>v</mi><mi>d</mi></mrow><mrow><mn>1</mn><mo>−</mo><mi>v</mi></mrow></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\psi = \left( \frac{s}{1-s} \right) \left(  \frac{vd}{1-v} \right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2834em;vertical-align:-0.4033em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">s</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span></span></span></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Net diversification (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span>)</td>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>λ</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">d = \lambda - \mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">μ</span></span></span></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Turnover (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span>)</td>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mfrac><mi>μ</mi><mi>λ</mi></mfrac></mrow><annotation encoding="application/x-tex">v = \frac{\mu}{\lambda}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0925em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">λ</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Sampling proportion (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span>)</td>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mi>ψ</mi><mrow><mi>μ</mi><mo>+</mo><mi>ψ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">s = \frac{\psi}{\mu + \psi}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.4133em;vertical-align:-0.4811em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">μ</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">ψ</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">ψ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>After you’ve chosen which parameterization to use, there are still a lot of options left for setting up the model in BDMM-Prime. Later, in Part 2 we will assign taxa to “types” based on their geographic provenance but for the first analysis in this tutorial we’ll assume that birth, death, and sampling are all constant through time and across our tree.</p>
+
+<blockquote>
+  <p>In this tutorial we’ll use the <strong>Canonical Parameterization</strong>, which is the default. Alternatives can be selected from the drop down menu next to <strong>Parameterization</strong>. The canonical option can be applied to scenarios in both epidemiology and macroevolution.</p>
+
+  <p>The only change we’ll make here is to the value for <strong>Birth Rate</strong> and <strong>Death Rate</strong>, next to <strong>ALL</strong> and under <strong>Epoch 1</strong>, from <strong>1.0</strong> to <strong>0.1</strong> - these are the initial values for these parameters. Double click on each value to edit it and make sure to press enter. Notice that <strong>Estimate values</strong> is checked for all three of these parameters, which means they will be estimated and not fixed during inference.</p>
+
+  <p>We’ll leave <strong>Number of change times</strong> for each of these parameters as <strong>0</strong> meaning these rates are assumed to stay constant over time.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:14"></a>
+	<img style="width:100%;" src="figures/07a_tree-priors.png" alt="" />
+	<figcaption>Figure 14: Options for the birth, death, and sampling rates.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Scroll down to the next set of parameters of interest.</p>
+</blockquote>
+
+<p><strong>Rho Sampling</strong> is the probability of sampling a lineage at a given time. In macroevolution this is usually associated with the extant sampling probability at t = 0 (the present). In our case study, we have no sampling beyond the period of interest, i.e., the youngest sample included in our dataset is from the Triassic period and is therefore <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>-sampled. There are many amniotes that persisted beyond this interval until the present but these are not included in our dataset. This means we have no rho-sampled taxa and it makes sense to leave <strong>Rho = 0.0</strong>.</p>
+
+<p>The next parameter of note is <strong>Removal Prob</strong> - this is the probability that a lineage is removed from the population upon sampling (through a <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>-sampling event) and it makes more sense in an epidemiological context. In macroevolution a removal after sampling implies that a species went extinct after a fossilization event. Since we are convinced this is not the case we need to change the removal probability to 0.0.</p>
+
+<blockquote>
+  <p>Select the value listed next to <strong>ALL</strong> and below <strong>Epoch 1</strong> for <strong>Removal Prob</strong> and change it to <strong>0.0</strong>.</p>
+</blockquote>
+
+<p>Note that we are not estimating the removal probability!</p>
+
+<figure>
+	<a id="fig:15"></a>
+	<img style="width:100%;" src="figures/07b_tree-priors.png" alt="" />
+	<figcaption>Figure 15: Options for the rho sampling and removal probability parameters.</figcaption>
+</figure>
+
+<p><strong>Process Length</strong> refers to the duration of the process and is usually a parameter that we estimate. In our case the process will begin at the origin, which is a time point older than the root of our tree or the age of any of our fossil samples. We will use a prior to constrain the age of the origin time.</p>
+
+<p>For now you can leave everything else under this tab as it is. If you close this tab and scroll down you should now be able to see an additional set of parameters listed in the <strong>Priors</strong> panel for the birth, death, sampling rates and the origin time parameter.</p>
+
+<p>For the birth, death, and sampling rate parameters we’ll use exponential priors with mean = 0.1. This matches values that are typically estimated for these parameters in paleobiology.</p>
+
+<blockquote>
+  <p>From the drop down menu next to <strong>birthRateCanonical</strong> select <strong>Exponential</strong> and expand the options. Change the mean of this distribution to <strong>0.1</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:16"></a>
+	<img style="width:100%;" src="figures/07c_tree-priors.png" alt="" />
+	<figcaption>Figure 16: Prior options for the birth rate parameter.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Go ahead and do the same for the <strong>deathRateCanonical</strong> and <strong>samplingRateCanonical</strong> parameters.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:17"></a>
+	<img style="width:100%;" src="figures/07d_tree-priors.png" alt="" />
+	<figcaption>Figure 17: Prior options for the death rate parameter.</figcaption>
+</figure>
+
+<figure>
+	<a id="fig:18"></a>
+	<img style="width:100%;" src="figures/07e_tree-priors.png" alt="" />
+	<figcaption>Figure 18: Prior options for the death rate parameter.</figcaption>
+</figure>
+
+<p>For the origin time parameter, we’ll also use an exponential distribution following the original study, with an offset of 318.1 Ma and a mean of 327.5 Ma. However, recall that BEAST scales the tree such the youngest sample is always zero, so these values will be defined relative to t = 0.</p>
+
+<blockquote>
+  <p>Select <strong>Exponential</strong> from the drop down menu next to <strong>originBDMMPrime</strong> and expand the options. Change the <strong>offset</strong> to <strong>81.1</strong>, which is 318.1 minus the youngest age of our sampling interval (237), and change the <strong>Mean</strong> to <strong>10.0</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:19"></a>
+	<img style="width:80%;" src="figures/07f_tree-priors.png" alt="" />
+	<figcaption>Figure 19: Prior options for the origin time parameter.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Finally, select the <strong>initial</strong> value box for the origin and change <strong>Value</strong> to <strong>100.0</strong>. The origin time of the process needs to be older than all our fossils, otherwise the process cannot be initialised. Click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:20"></a>
+	<img style="width:70%;" src="figures/07g_tree-priors.png" alt="" />
+	<figcaption>Figure 20: Setting the initial value for the origin time parameter.</figcaption>
+</figure>
+
+<h3 id="adding-taxonomic-constraints">Adding taxonomic constraints</h3>
+
+<p>We’re going to use two taxonomic constraints for this analysis.</p>
+
+<blockquote>
+  <p>Scroll down to the bottom of the Priors panel and click <strong>+Add Prior</strong>. From the drop down menu select <strong>MRCA prior</strong>. Click <strong>OK</strong>. This will open a box where you can define groups of taxa.</p>
+
+  <p>For the first constraint, type <strong>‘ingroup1’</strong> into the box next to <strong>Taxon set label</strong>. From the list of taxa on the left click on any taxa and use select all (e.g., <strong>Cmd+A</strong> on MacOS or <strong>Ctrl+A</strong> on Windows) to highlight all of them. Scroll down to <code class="language-plaintext highlighter-rouge">Gephyrostegus_bohemicus_Eu_309</code> and deselect this taxon using <strong>Cmd+click</strong> or <strong>Ctrl+click</strong>. Click the <strong>»</strong> button. Now all taxa except <em>Gephyrostegus</em> should appear on the right.</p>
+
+  <p>Alternatively, you can select all of them, move them to the right and simply move <em>Gephyrostegus</em> back to the left using the <strong>«</strong> button.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:21"></a>
+	<img style="width:60%;" src="figures/08a_tcons.png" alt="" />
+	<figcaption>Figure 21: Creating the first taxonomic constraint.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Click <strong>OK</strong> and then select the checkbox that says <strong>monophyletic</strong> that appears next to this constraint.</p>
+</blockquote>
+
+<blockquote>
+  <p>To add the next constraint, click <strong>+Add Prior</strong> again. From the drop down menu select <strong>MRCA prior</strong>. Click <strong>OK</strong>.</p>
+
+  <p>For the second constraint, type <strong>‘ingroup2’</strong> into the box next to <strong>Taxon set label</strong>. This next constraint will include all taxa except <code class="language-plaintext highlighter-rouge">Gephyrostegus_bohemicus_Eu_309</code> and <code class="language-plaintext highlighter-rouge">Seymouria_spp_NAm_288.51</code>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:22"></a>
+	<img style="width:60%;" src="figures/08b_tcons.png" alt="" />
+	<figcaption>Figure 22: Creating the second taxonomic constraint.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Click <strong>OK</strong> and then select the checkbox that says <strong>monophyletic</strong> that appears next to this constraint.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:23"></a>
+	<img style="width:100%;" src="figures/08c_tcons.png" alt="" />
+	<figcaption>Figure 23: The final set of options for the Priors panel.</figcaption>
+</figure>
+
+<p>Use the screenshot above to ensure all your prior distributions and initial values have been set up as described.</p>
+
+<h2 id="the-mcmc-panel">The MCMC panel</h2>
+
+<blockquote>
+  <p>Navigate to the <strong>MCMC</strong> panel and change the <strong>Chain Length</strong> to <strong>1,000,000</strong> (just delete one of the zeros).</p>
+</blockquote>
+
+<figure>
+	<a id="fig:24"></a>
+	<img style="width:100%;" src="figures/09_MCMC.png" alt="" />
+	<figcaption>Figure 24: The MCMC panel.</figcaption>
+</figure>
+
+<p>BDMM-Prime allows us to output additional tree files using the <strong>typedTree</strong> and <strong>nodeTypedTree</strong> loggers - these are not useful for our initial analysis and make the analysis more computationally expensive, so we will disable these options for now (but see Part 2 below).</p>
+
+<blockquote>
+  <p>Uncheck the boxes next to <strong>Enable Logger</strong> for <strong>typedTreeLogger</strong> and <strong>nodeTypedTreeLogger</strong> after expanding the options for both trees.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:25"></a>
+	<img style="width:100%;" src="figures/09b_MCMC.png" alt="" />
+	<figcaption>Figure 25: Switching off the typed tree and node typed tree loggers.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Go to <strong>File &gt; Save as</strong> to save your xml input file. Call it something like <code class="language-plaintext highlighter-rouge">amniotes_constant_rates_FBD.xml</code> or anything you like.</p>
+</blockquote>
+
+<blockquote>
+  <p>You can leave BEAUti open for the next part of the exercise! However, if you do close BEAUti you can simply go to <strong>File &gt; Load</strong> and select your xml file - all the BDMM-Prime specifications should be reloaded.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="running-beast">Running BEAST</h2>
+
+<blockquote>
+  <p>To run your analysis open the <strong>BEAST</strong> application and navigate to the right working directory. Select your xml file and click <strong>Run</strong>.</p>
+</blockquote>
+
+<p>This analysis should only take about a minute to run.</p>
+
+<hr />
+
+<h2 id="examining-the-output">Examining the output</h2>
+
+<p>This analysis should have generated the following results files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">amniotes_constant_rates_FBD.log</code> - this file contains all the numerical parameters sampled during MCMC.</li>
+  <li><code class="language-plaintext highlighter-rouge">amniotes.trees</code> - this file contains the trees sampled during MCMC.</li>
+</ul>
+
+<blockquote>
+  <p>First open the <code class="language-plaintext highlighter-rouge">.log</code> file in <strong>Tracer</strong> and explore the output. It should look something like this.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:26"></a>
+	<img style="width:100%;" src="figures/tracer.png" alt="" />
+	<figcaption>Figure 26: The tracer window for the constant rates FBD model.</figcaption>
+</figure>
+
+<p>Of particular interest are the parameters <strong>birthRateSPCanonical</strong>, <strong>deathRateSPCanonical</strong>, and <strong>samplingRateSPCanonical</strong>. The speciation and extinction rates (birth and death) are both ~0.35, while the sampling rate is ~0.01. This suggests that sampling is low relative to the overall diversity of the group.</p>
+
+<p>Note that this analysis hasn’t fully converged and would ideally be run much longer.</p>
+
+<p>If you want you can also generate a consensus tree using the standard <code class="language-plaintext highlighter-rouge">.trees</code> file (<code class="language-plaintext highlighter-rouge">amniotes.trees</code>) as the input and the approach described in <a href="https://taming-the-beast.org/tutorials/Total-Evidence-Tutorial/">previous tutorials</a> for trees with sampled ancestors.</p>
+
+<blockquote>
+  <p>Open <strong>TreeAnnotator</strong>. For the <strong>Target tree type</strong> stick with the default <strong>Maximum clade credibility tree</strong> and for the <strong>Node Heights</strong> select <strong>Median heights</strong> from the drop down menu. Load <code class="language-plaintext highlighter-rouge">amniotes.trees</code> under <strong>Input Tree File</strong> and set the <strong>Output file</strong> to something sensible.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:27"></a>
+	<img style="width:80%;" src="figures/treeann.png" alt="" />
+	<figcaption>Figure 27: The TreeAnnotator window.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Open the program <a href="https://icytree.org">IcyTree</a> in your internet browser. Drag and drop your summary tree file onto the page or go to <strong>File &gt; Load from file…</strong>.</p>
+</blockquote>
+
+<blockquote>
+  <p>To generate an image like the one below you can select the following options:</p>
+
+  <ul>
+    <li><strong>Style &gt; Mark singletons</strong> (to show sampled ancestors)</li>
+    <li><strong>Style &gt; Internal node text &gt; posterior</strong></li>
+    <li><strong>Style &gt; Label precision limit &gt; 2 sig. figures</strong></li>
+    <li><strong>Style &gt; Node height error bars &gt; height_95%_HPD</strong></li>
+    <li><strong>Style &gt; Axis &gt; Age</strong></li>
+    <li><strong>Style &gt; Set axis offset…</strong> and enter 237 in the box, which is end of our sampling window. Click <strong>Ok</strong>.</li>
+  </ul>
+</blockquote>
+
+<figure>
+	<a id="fig:28"></a>
+	<img style="width:100%;" src="figures/icytree_cbds.png" alt="" />
+	<figcaption>Figure 28: Summary tree plotted in IcyTree.</figcaption>
+</figure>
+
+<hr />
+
+<h1 id="part-2-the-multi-type-birth-death-process">Part 2: The multi-type birth-death process</h1>
+
+<p>In the second part of this tutorial we will take geographic provenance of the fossils into account and allow the birth, death, and sampling rates to vary between geographic areas. To achieve this we will incorporate a migration rate parameter into the model and in addition, we will allow the migration rate to vary through time, to acknowledge the observation that the interconnectedness of the geographic areas changes considerably over the course of our sampling interval.</p>
+
+<blockquote>
+  <p>First, create a new folder to run this next analysis.</p>
+</blockquote>
+
+<h2 id="the-priors-panel-1">The Priors Panel</h2>
+
+<blockquote>
+  <p>Return to the Priors panel in <strong>BEAUti</strong>. Next we’re going to extract information about geographic area. Expand the tree model options and scroll down to <strong>Type Trait Set</strong>. Click <strong>Auto-configure</strong>.</p>
+
+  <p>Select <strong>split on character</strong> and from the drop down menu next to <strong>and take group(s):</strong> select 3, leaving the character to split on as <strong>“_“</strong>. Click <strong>OK</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:29"></a>
+	<img style="width:80%;" src="figures/10a_types.png" alt="" />
+	<figcaption>Figure 29: Options for extracting type information from taxon labels.</figcaption>
+</figure>
+
+<p>You should now be able to see the geographic area associated with each fossil in the <strong>Type</strong> column, corresponding to Eurasia (Eu), North America (NAm), and South Africa (SA).</p>
+
+<figure>
+	<a id="fig:30"></a>
+	<img style="width:100%;" src="figures/10b_types.png" alt="" />
+	<figcaption>Figure 30: Type information associated with each sample.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Scroll up and you should see some additional options have been added for the tree model. In particular, options will have been added for the <strong>Migration Rate</strong> and <strong>Birth Rate Among Demes</strong> parameters.</p>
+</blockquote>
+
+<p>The migration rate can be interpreted as the rate of change between types (in our case, the migration between geographic areas). We’ll estimate this parameter and allow it to vary over time (see below).</p>
+
+<p>The birth rate among demes is the rate at which individuals in deme <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> give birth to individuals in deme <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span>, such that new births in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> will be proportional to the number of individuals in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>. This parameter doesn’t have an analogous meaning in our macroevolutionary context, so we’ll simply fix this parameter to zero.</p>
+
+<blockquote>
+  <p>Double click on the box for <strong>Birth Rate Among Demes</strong> next to <strong>ALL</strong> and enter <strong>0.0</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:31"></a>
+	<img style="width:100%;" src="figures/10c_types.png" alt="" />
+	<figcaption>Figure 31: The migration rate and birth rate among demes parameters.</figcaption>
+</figure>
+
+<p>In this analysis we want to allow birth, death, and sampling to vary across geographic areas.</p>
+
+<blockquote>
+  <p>Scroll back up. Note that the initial values for the <strong>Birth Rate</strong> and <strong>Death Rate</strong> may have reverted back to <strong>1.0</strong> after setting the type trait. Change it back to <strong>0.1</strong> for each of the three rates.</p>
+
+  <p>You’ll see that next to some of the parameters is a checked box called <strong>Scalar values</strong> - this indicates that a single rate applies to all types. Starting with <strong>Birth Rate</strong>, if you uncheck this box, a separate rate will appear next to each type. You can select <strong>Display epoch visualisation</strong> to make sure things are set up correctly.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:32"></a>
+	<img style="width:100%;" src="figures/10d_types.png" alt="" />
+	<figcaption>Figure 32: Type specific birth rates.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Do the same for the <strong>Death Rate</strong> and <strong>Sampling Rate</strong> parameters.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:33"></a>
+	<img style="width:100%;" src="figures/10e_types.png" alt="" />
+	<figcaption>Figure 33: Type specific death and sampling rates.</figcaption>
+</figure>
+
+<p>Over the course of our sampling interval, the late Carboniferous to the mid Triassic, we see major changes in continental configuration and the relative connectedness of geographic areas - to quantify the impact this has on migration we can allow the overall migration rate to change through time, assuming piecewise constant variation in the rate.</p>
+
+<blockquote>
+  <p>Return to the options associated with <strong>Migration Rate</strong>.
+ First double click the the initial value for this parameter and change it to 0.1 and make sure the box next to <strong>Estimate values</strong> is checked.</p>
+
+  <p>Next change <strong>Number of change times:</strong> to 2. Check the box that says <strong>Relative to process length</strong> and click <strong>Distribute evenly</strong> - this means that the time between the origin of the process and the end will be divided into 3 equal-length intervals and each one will be assigned an independent rate parameter.</p>
+
+  <p>Finally, select <strong>Display epoch visualisation</strong> to make sure things are set up correctly.</p>
+</blockquote>
+
+<p>Note that BDMM-prime sometimes shifts focus to a different parameter after changing a setting. Be careful that you don’t accidentally start editing the wrong parameter after one of these jumps!</p>
+
+<blockquote>
+  <p>Go through the previous few steps again and check that all settings are as in Figures 31-34.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:34"></a>
+	<img style="width:100%;" src="figures/10f_types.png" alt="" />
+	<figcaption>Figure 34: Time varying mirgration rates.</figcaption>
+</figure>
+
+<p>Note that we can specify the probability of each type at the beginning of the process, i.e., at the origin or root. By default these are set to be equal but you can change them in the box next to <strong>Start Type Prior Probs</strong>. This probability can be estimated or you might have strong prior evidence for the root type, but we’ll leave this for now.</p>
+
+<blockquote>
+  <p>Finally, scroll down and assign an <strong>Exponential</strong> prior with a mean of <strong>0.1</strong> to the <strong>migrationRateCanonical</strong> parameter. Each migration rate will be independently drawn from the same exponential prior distribution.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:35"></a>
+	<img style="width:100%;" src="figures/10g_types.png" alt="" />
+	<figcaption>Figure 35: Prior options for migration rate.</figcaption>
+</figure>
+
+<h2 id="the-mcmc-panel-1">The MCMC panel</h2>
+
+<blockquote>
+  <p>Navigate to the <strong>MCMC</strong> panel. We’ll leave all the MCMC chain settings as above, i.e., we’ll use a chain length of 1,000,000 steps.</p>
+</blockquote>
+
+<p>Now that we’ve added information about types, we can take advantage of some other output options. In particular, BDMM-Prime can use a stochastic mapping approach to generate <em>edge-typed trees</em>. These are trees that include information about the phylogenetic history of types. We can generate both <em>typed trees</em>, which show where along internal branches type changes (migration events) have occurred or <em>node typed trees</em>, which includes type information at internal nodes only.
+This can done using the <strong>typedTreeLogger</strong> and  <strong>nodeTypedTreeLogger</strong>, respectively. In this analysis, we’re going to use the latter, as shown below, because <em>node type trees</em> are more computationally efficient to generate and easier to summarise.</p>
+
+<blockquote>
+  <p>Expand the options next to <strong>nodeTypedTreeLogger</strong> and check the box next to <strong>Enable logger</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:36"></a>
+	<img style="width:100%;" src="figures/11b_MCMC.png" alt="" />
+	<figcaption>Figure 36: Options for the node typed tree logger.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Go to <strong>File &gt; Save as</strong> to save your xml input file in your new folder. Call it something like <code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.xml</code>.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="running-beast-1">Running BEAST</h2>
+
+<blockquote>
+  <p>As above, to run your analysis open the <strong>BEAST</strong> application and navigate to the right working directory. Select your xml file and click <strong>Run</strong>.</p>
+</blockquote>
+
+<p>This analysis will take ~20 minutes to run. Ideally this analysis would be run for much longer, e.g., 10,000,000+ iterations.</p>
+
+<hr />
+
+<h2 id="examining-the-output-1">Examining the output</h2>
+
+<p>This analysis should have generated the following results files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.log</code>: this file contains all the numerical parameters sampled during MCMC.</li>
+  <li><code class="language-plaintext highlighter-rouge">amniotes.trees</code>: this file contains the trees sampled during MCMC.</li>
+  <li><code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.typed.node.trees</code>: this file contains the trees sampled during MCMC with ancestral types mapped onto internal nodes.</li>
+</ul>
+
+<blockquote>
+  <p>Open the <code class="language-plaintext highlighter-rouge">.log</code> file in <strong>Tracer</strong> and explore the output. It should look something like this.</p>
+
+  <p>You might need to expand and adjust the Tracer window so you can see parameter names.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:37"></a>
+	<img style="width:100%;" src="figures/12a_tracer.png" alt="" />
+	<figcaption>Figure 37: The tracer window for the multi-type FBD model.</figcaption>
+</figure>
+
+<p>Now we have some additional parameters of interest. In particular, we have three estimates for birth, death, and sampling rates, associated with each type or geographic region.</p>
+
+<blockquote>
+  <p>Select the <strong>birthRateSPCanonical</strong>, <strong>deathRateSPCanonical</strong>, and <strong>samplingRateSPCanonical</strong> parameters for all three types simultaneously using the shift key. You should be able to higher relative rates of birth and death associated with North America.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:38"></a>
+	<img style="width:100%;" src="figures/12b_tracer.png" alt="" />
+	<figcaption>Figure 38: The tracer window for the multi-type FBD model showing the birth rates associated with each type.</figcaption>
+</figure>
+
+<blockquote>
+  <p>Scroll down and explore the estimates for the migration rate associated with different intervals. The intervals are labelled from youngest to oldest, <strong>i0</strong>, <strong>i1</strong>, and <strong>i2s</strong>.</p>
+</blockquote>
+
+<figure>
+	<a id="fig:39"></a>
+	<img style="width:100%;" src="figures/12c_tracer.png" alt="" />
+	<figcaption>Figure 39: The tracer window for the multi-type FBD model showing the migration rates associated with each interval.</figcaption>
+</figure>
+
+<p>You should be able to see a larger estimate for migration in the final time bin, which we might expect based on the increase in connectivity between regions in the Triassic. Recall that we defined 3 equal intervals relative to the origin time of the process. The variables appended <strong>_endtime</strong> are the estimated endpoints of each interval, relative to the origin age.</p>
+
+<p>We can summarise information about ancestral types across our posterior distribution of trees using TreeAnnotator.</p>
+
+<blockquote>
+  <p>Open <strong>TreeAnnotator</strong> and select <code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.typed.node.trees</code> as your <strong>Input Tree File</strong>.</p>
+
+  <p>For the <strong>Target tree type</strong> stick with the default <strong>Maximum clade credibility tree</strong> and for the <strong>Node Heights</strong> select <strong>Median heights</strong> from the drop down menu. Call your <strong>Output File</strong> something like <code class="language-plaintext highlighter-rouge">amniotes_multi_type_FBD.typed.node.con.tre</code>. See <a href="#fig:27">Figure 27</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Open the program <a href="https://icytree.org">IcyTree</a> in your internet browser. Drag and drop your summary tree file onto the page or go to <strong>File &gt; Load from file…</strong>.</p>
+</blockquote>
+
+<blockquote>
+  <p>To generate an image like the one below you can select the following options:</p>
+
+  <ul>
+    <li><strong>Style &gt; Mark singletons</strong> (to show sampled ancestors)</li>
+    <li><strong>Style &gt; Colour nodes by &gt; type</strong></li>
+    <li><strong>Style &gt; Internal node text &gt; type.prob</strong></li>
+    <li><strong>Style &gt; Label precision limit &gt; 2 sig. figures</strong></li>
+    <li><strong>Style &gt; Display legend</strong></li>
+    <li><strong>Style &gt; Axis &gt; Age</strong></li>
+    <li><strong>Style &gt; Set axis offset…</strong> and enter 237 in the box, which is end of our sampling window. Click <strong>Ok</strong>.</li>
+  </ul>
+</blockquote>
+
+<figure>
+	<a id="fig:40"></a>
+	<img style="width:100%;" src="figures/icytree.png" alt="" />
+	<figcaption>Figure 40: Summary tree plotted in IcyTree showing the ancestral types.</figcaption>
+</figure>
+
+<p>We can use this tree to explore hypotheses about the geographic origins of different lineages. Note that based on node typed trees, it is not possible to make any statements about where and when along a given branch a type change may have occurred. To learn more about options for exploring migration history check out the <a href="https://tgvaughan.github.io/BDMM-Prime/">BDMM-Prime package website</a>.</p>
+
+<blockquote>
+  <p><strong>Topic for discussion</strong></p>
+
+  <p>In our analysis we only have one migration rate for each time interval, making three migration rates in total, for 3 geographical areas. What are the implications of this assumption? How can we relax it?</p>
+
+  <details>
+	<summary>Answer</summary>
+
+The implication is that migration between any two locations is equal within a given time interval. In general we may want to relax this, so that we can have different migration rates between different pairs of locations. We may either want symmetric migration rates (3 rates per time interval) or nonsymmetric (6 rates per time interval). 
+
+To allow nonequal migration rates, simply untick the <b>Scalar values</b> checkbox under <b>Migration Rate</b> within the <b>BDMMPrime</b> options in the <b>Priors</b> panel. You can use the <b>Link identical values</b> checkbox to set up a symmetric rate matrix.
+
+</details>
+</blockquote>
+
+<hr />
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li><a href="https://tgvaughan.github.io/BDMM-Prime/">BDMM-Prime package website</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="Stadler2010">Stadler, T. (2010). Sampling-through-time in birth–death trees. <i>Journal of Theoretical Biology</i>, <i>267</i>(3), 396–404. https://doi.org/10.1016/j.jtbi.2010.09.010</span></li>
+<li><span id="Heath2014">Heath, T. A., Huelsenbeck, J. P., &amp; Stadler, T. (2014). The fossilized birth–death process for coherent calibration of divergence-time estimates. <i>Proceedings of the National Academy of Sciences</i>, <i>111</i>(29), E2957–E2966.</span></li>
+<li><span id="Mulvey2025a">Mulvey, L. P. A., Nikolic, M. C., Allen, B. J., Heath, T. A., &amp; Warnock, R. C. M. (2025). From fossils to phylogenies: exploring the integration of paleontological data into Bayesian phylogenetic inference. <i>Paleobiology</i>, <i>51</i>(1), 214–236. https://doi.org/10.1017/pab.2024.47</span></li>
+<li><span id="Vaughan2025">Vaughan, T. G., &amp; Stadler, T. (2025). Bayesian Phylodynamic Inference of Multitype Population Trajectories Using Genomic Data. <i>Molecular Biology and Evolution</i>, <i>42</i>(6), msaf130. https://doi.org/10.1093/molbev/msaf130</span></li>
+<li><span id="Gavryushkina2014">Gavryushkina, A., Welch, D., Stadler, T., &amp; Drummond, A. J. (2014). Bayesian Inference of Sampled Ancestor Trees for Epidemiology and Fossil Calibration. <i>PLoS Computational Biology</i>, <i>10</i>(12), e1003919. https://doi.org/10.1371/journal.pcbi.1003919</span></li>
+<li><span id="Kuhnert2016">Kühnert, D., Stadler, T., Vaughan, T. G., &amp; Drummond, A. J. (2016). Phylodynamics with migration: a computational framework to quantify population structure from genomic data. <i>Molecular Biology and Evolution</i>, <i>33</i>(8), 2102–2116.</span></li>
+<li><span id="Scire2022">Scire, J., Barido-Sottani, J., Kühnert, D., Vaughan, T. G., &amp; Stadler, T. (2022). Robust phylodynamic analysis of genetic sequencing data from structured populations. <i>Viruses</i>, <i>14</i>(8), 1648.</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="Bouckaert2019">Bouckaert, R., Vaughan, T. G., Barido-Sottani, J., Duchêne, S., Fourment, M., Gavryushkina, A., Heled, J., Jones, G., Kühnert, D., Maio, N. D., Matschiner, M., Mendes, F. K., Müller, N. F., Ogilvie, H. A., Plessis, L. du, Popinga, A., Rambaut, A., Rasmussen, D., Siveroni, I., … Drummond, A. J. (2019). BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. <i>PLOS Computational Biology</i>, <i>15</i>(4).</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+ are
+			     auto-weighted by level (h1 highest), so only these need boosting. -->
+			<h1 data-pagefind-meta="title" data-pagefind-weight="10" style="display:none;">BDMM-Prime for Macroevolution</h1>
+			
+			
+			
+			<div data-pagefind-weight="5" style="display:none;">The fossilized birth-death process and extensions</div>
+			
+			
+			
+			
+
 			<p>
 			<h1 id="background">Background</h1>
 

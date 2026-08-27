@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "fetch": "bundle exec ruby _scripts/update-and-preprocess.rb",
+    "preprocess": "bundle exec ruby _scripts/preprocess-tutorial-markdown.rb",
+    "build": "npm run preprocess && bundle exec jekyll build ${BASEURL:+--baseurl $BASEURL} && npm run index",
+    "build:quick": "npm run preprocess && bundle exec jekyll build ${BASEURL:+--baseurl $BASEURL}",
+    "index": "pagefind --site _site --glob \"tutorials/**/*.html\"",
+    "serve": "bundle exec jekyll serve --host 0.0.0.0",
+    "serve:indexed": "npm run build && bundle exec jekyll serve --host 0.0.0.0 --skip-initial-build",
+    "serve:quick": "npm run build:quick && npm run serve"
+  }
+}

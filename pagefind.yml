@@ -1,0 +1,17 @@
+# Pagefind configuration for BEAST2 Tutorials
+# Only index tutorial pages, not the rest of the website
+
+site: _site
+glob: "tutorials/**/*.html"
+force_language: en
+
+# Exclude common navigation and boilerplate
+exclude_selectors:
+  - "[data-pagefind-ignore]"
+  - "nav"
+  - "header"
+  - "footer"
+  - ".breadcrumb"
+
+# Output directory for generated assets, relative to `site`
+output_subdir: pagefind

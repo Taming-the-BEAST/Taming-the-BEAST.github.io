@@ -16,6 +16,7 @@
 
     <!-- Our style -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/tutorial-styles.css">
 
     <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -41,7 +42,7 @@
       <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
     </a>
     
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -89,6 +90,27 @@
 			</ol>
 		</div>
 		<p>
+		<!-- Tutorial metadata badges -->
+		<!-- Read from `tutorial.*` (enriched _data/tutorials.yml, incl. the
+		     tutorials_metadata.yml fallback) rather than `page.*` (raw README
+		     frontmatter), so badges show even before a tutorial migrates its
+		     own frontmatter upstream. -->
+		<div class="tutorial-badges" style="margin-bottom: 15px;">
+			
+			
+			<span class="tag badge-workflow">Advanced analysis</span>
+			
+			
+			<span class="tag badge-domain">Macroevolution</span>
+			
+			
+			<span class="tag badge-package">MSBD</span>
+			
+		</div>
+
+		<!-- Deprecated warning -->
+		
+
 		<div class="head">
 			
 				Inferring lineage-dependent birth and death rates
@@ -107,14 +129,17 @@
 			
 		</div>
 		
-	</div>				
+
+		<!-- Keywords -->
+		
+	</div>
 </div>
 
 <div class="bigspacer"></div>
 
 <div class="row">
 	<div class="col-md-3">
-	<div id="sidebar">
+	<div id="sidebar" data-pagefind-ignore>
 		<div class="bigspacer"></div>
 		<div class="smallhead">
 			Tutorial
@@ -355,8 +380,369 @@
 	</div>
 	</div>
 
-	<div class="col-md-8">				
-		<div class="post">
+	<div class="col-md-8">
+		<div class="post" data-pagefind-body>
+			<!-- Pagefind meta and filter tags -->
+			<!-- Weighted so a title/keyword/subtitle hit outranks a body-text hit.
+			     Pagefind default weight is 1; headings inside <h1 id="background">Background</h1>
+
+<p>This tutorial will show how to configure and run a model with lineage-dependent birth and death rates, using the BEAST2 package MSBD.</p>
+
+<p>The MSBD package relies on a multi-type birth death model which is composed of a number of evolutionary regimes, also called types or states, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">n^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>.</p>
+
+<p>Each type is associated with a birth rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and a death rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. A lineage in type <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> will change to any another type <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> with a uniform rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mi>γ</mi><mrow><msup><mi>n</mi><mo>∗</mo></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">m_{i,j} = \frac{\gamma}{n^* - 1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1508em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6183em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span> is the total type change rate.
+The MSBD package is able to infer <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">n^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> for all types, as well as the locations of types and type changes on the tree.</p>
+
+<p>More details on the model and an evaluation of its performance in various conditions can be found in the original publication <a class="citation" href="#MSBD2020">(Barido-Sottani et al., 2020)</a>.</p>
+
+<p>You may notice similarities between MSBD and the model used in another BEAST2 package, BDMM. The main difference is that MSBD is able to infer the number of types as well as the types at the tips of the tree, whereas BDMM requires you to fix them. Thus MSBD is more appropriate if the character driving the differences in rates is unobserved or unknown. On the other hand, BDMM integrates more complex dynamics than the current implementation of MSBD: in particular, it includes asymmetrical transition rates as well as mixed birth events (where the two lineages produced by a birth event are of different types), which are not currently available in MSBD.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses BEAST2 version 2.7.4.</p>
+
+<h3 id="beauti--bayesian-evolutionary-analysis-utility">BEAUti – Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti is a utility program with a graphical user interface for creating BEAST2 input files, which are written in XML. The eXtensible Markup Language (XML) is a general-purpose markup language, which allows for the combination of text and additional information. The use of the XML makes analysis specification very flexible and readable by both the program and people. The XML file specifies all the components of the analysis, including sequences, node calibrations, models, priors, output file names.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree and summarize the posterior estimates of other parameters that can be easily visualized on the tree (e.g. node height). This program is also useful for comparing a specific tree topology and branching times to the set of trees sampled in the MCMC analysis.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p>Tracer is used for assessing and summarizing the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and assessment of convergence and it also calculates 95% credible intervals (which approximate the 95% highest posterior density intervals) and effective sample sizes (ESS) of parameters. Contrary to the other software in this section, Tracer is not distributed with BEAST2 and needs to be downloaded separately <a href="http://beast.community/tracer">here</a>.</p>
+
+<hr />
+
+<h1 id="practical-lineage-specific-birth-and-death-rate-inference">Practical: Lineage-specific Birth and Death Rate Inference</h1>
+
+<h2 id="dataset-hummingbird-phylogeny">Dataset: Hummingbird Phylogeny</h2>
+
+<p>The dataset used in this tutorial is a time-calibrated phylogeny of 284 species of hummingbirds, which was estimated by <a class="citation" href="#McGuire2014">(McGuire et al., 2014)</a>. This phylogeny was built from an alignment of 436 sequences representing six genes (four nuclear and two mitochondrial).</p>
+
+<p>In this tutorial, we focus on estimating the MSBD model and its parameters, and so we are going to fix this phylogeny in our analysis. However, it is also possible to co-estimate both the phylogeny and the MSBD model from an alignment in BEAST2.</p>
+
+<h2 id="setting-up-the-xml-file">Setting up the XML file</h2>
+
+<p>This section will demonstrate how to create an XML configuration file using BEAUti, which will then be used to run the analysis in BEAST2.</p>
+
+<h3 id="package-installation">Package installation</h3>
+
+<p>The first step is to install the MSBD package, which will allow us to set up and run an analysis with lineage-specific birth and death rates.</p>
+
+<blockquote>
+  <p>Open the <strong>BEAST2 Package Manager</strong> by navigating to <strong>File &gt; Manage Packages</strong>. (<a href="#packageManage1">Figure 1</a>)</p>
+
+</blockquote>
+
+<figure>
+	<a id="packageManage1"></a>
+	<img style="width:75.0%;" src="figures/package_manager.png" alt="" />
+	<figcaption>Figure 1: Finding the BEAST2 Package Manager.</figcaption>
+</figure>
+<p><br /></p>
+
+<blockquote>
+  <p>Install the <strong>MSBD</strong> package by selecting it and clicking the <strong>Install/Upgrade</strong> button. (<a href="#packageManage2">Figure 2</a>)</p>
+
+</blockquote>
+
+<figure>
+	<a id="packageManage2"></a>
+	<img style="width:65.0%;" src="figures/packageMSBD.png" alt="" />
+	<figcaption>Figure 2: The BEAST2 Package Manager.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>BEAUti needs to be restarted for the newly installed package to be loaded properly.</p>
+
+<blockquote>
+  <p>Close the <strong>BEAST2 Package Manager</strong> and <strong><em>restart</em></strong> BEAUti to fully load the <strong>MSBD</strong> package.</p>
+
+</blockquote>
+
+<h3 id="setting-the-templates">Setting the templates</h3>
+
+<p>BEAUti uses templates to define specific model configurations. The MSBD template needs to be selected to set up an analysis using the MSBD model.</p>
+
+<blockquote>
+  <p>Select the <strong>MSBD template</strong> by navigating to <strong>File &gt; Template</strong>. (<a href="#template">Figure 3</a>)</p>
+
+</blockquote>
+
+<figure>
+	<a id="template"></a>
+	<img style="width:75.0%;" src="figures/template.png" alt="" />
+	<figcaption>Figure 3: Selecting the MSBD template.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="importing-the-alignment">Importing the alignment</h3>
+
+<p>This analysis will be run with a fixed tree topology, however BEAUti requires an alignment to be loaded in order to set the other components of the model. As a result, we will load a dummy alignment, which is just the sequence “A” for all taxa.</p>
+
+<blockquote>
+  <p>In the <strong>Partitions</strong> panel, import the alignment by navigating to <strong>File &gt; Import Alignment</strong> in the menu (<a href="#importAlignment">Figure 4</a>) and then finding the <code class="language-plaintext highlighter-rouge">hummingbirds.nex</code> file on your computer <strong>or</strong> simply drag and drop the file into the <strong>BEAUti</strong> window.</p>
+
+</blockquote>
+
+<figure>
+	<a id="importAlignment"></a>
+	<img style="width:75.0%;" src="figures/alignment.png" alt="" />
+	<figcaption>Figure 4: Importing the alignment into BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="importing-the-tree">Importing the tree</h3>
+
+<p>As mentioned earlier, we want to run this analysis with a fixed tree topology. First, we need to specify that our tree is fixed and will not be changed during the inference.</p>
+
+<blockquote>
+  <p>In the <strong>Tree</strong> panel, uncheck the <strong>Estimate Topology</strong> checkbox.</p>
+
+</blockquote>
+
+<p>Then we need to actually provide the tree to use. By default BEAUti generates a random starting tree compatible with the alignment, so we need to change this to our fixed tree.</p>
+
+<blockquote>
+  <p>In the <strong>Starting Tree</strong> panel, set the dropdown to <strong>Tree From Newick</strong>.
+Copy-paste the Newick tree found in the <code class="language-plaintext highlighter-rouge">hummingbirds_initial_tree.tre</code> file into the <strong>Newick</strong> field.</p>
+
+</blockquote>
+
+<p>The final tree configuration is shown in <a href="#importTree">Figure 5</a>.</p>
+
+<figure>
+	<a id="importTree"></a>
+	<img style="width:75.0%;" src="figures/tree.png" alt="" />
+	<figcaption>Figure 5: Importing the tree into BEAUti.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="the-parameter-priors">The parameter priors</h3>
+
+<p>The next step is to look at the parameter priors, in the <strong>Priors</strong> panel. The default priors on the birth rates (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>), death rates (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>) and total number of types (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">n^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>) are reasonable for this dataset so we will not change them.</p>
+
+<p>The expected average number of type changes across the entire tree is given by <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi>γ</mi><mo>×</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">n = \gamma \times L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>, where L is the total length of the tree. The length of the fixed tree used in this analysis is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>1482</mn></mrow><annotation encoding="application/x-tex">\approx 1482</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1482</span></span></span></span>, so the default prior on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span> would lead to a high expected number of type changes. From the previous analysis performed in BAMM, we expect only a few type changes across this phylogeny, so we will set the prior on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span> to a lower range, using a <strong>LogNormal(-4.0, 1.0)</strong> distribution.</p>
+
+<blockquote>
+  <p>Click on the arrow next to <strong>gamma</strong> and change the value for <strong>M</strong> (mean) of the default log normal distribution to <strong>-4</strong> (<a href="#gammaPrior">Figure 6</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="gammaPrior"></a>
+	<img style="width:75.0%;" src="figures/gammaprior.png" alt="" />
+	<figcaption>Figure 6: Setting the prior on the type change rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<h3 id="the-tree-prior">The tree prior</h3>
+
+<p>Next, we will specify the tree prior, i.e. the MSBD model. By default most of the parameters of the model are estimated, so it is not necessary to change their starting values. However, the extant sampling proportion (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span></span></span></span>) and extinct sampling probability (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span></span>) are fixed. There are no extinct samples in this dataset, and we have sampled 86% of the extant hummingbirds species so we will set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sigma = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mn>0.86</mn></mrow><annotation encoding="application/x-tex">\rho = 0.86</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.86</span></span></span></span>.</p>
+
+<blockquote>
+  <p>Click on the arrow next to <strong>Tree</strong> and change the value for <strong>rho</strong> (extant sampling proportion) of the MSBD model to <strong>0.86</strong> (<a href="#treePrior">Figure 7</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="treePrior"></a>
+	<img style="width:75.0%;" src="figures/treeprior.png" alt="" />
+	<figcaption>Figure 7: Setting the MSBD tree prior.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Note that many other options are available in this section, such as fixing the number of states or the value of some parameters (<strong>estimate</strong> checkboxes), setting the birth rate or the death rate to be shared between states (<strong>identical across states</strong> checkboxes), or setting the model to only use sampling-through-time (<strong>To The Present</strong> checkbox) .</p>
+
+<h3 id="mcmc-options">MCMC options</h3>
+
+<p>The next step is to set the options for running the chain, in the <strong>MCMC</strong> panel. We can see that several loggers are set by default:</p>
+
+<ul>
+  <li>the regular trace log, which in our case only records the posterior, likelihood and prior, as we are not using a substitution or clock model.</li>
+  <li>the screenlog, which shows the advancement of the chain to the screen.</li>
+  <li>the tree log, which will log the trees in Nexus format, with the birth and death rate on each edge as metadata.</li>
+  <li>the state change model log, which logs the parameters associated with the model, i.e. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">n^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>, the number of sampled states and the birth and death rates for each state (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mu_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>).</li>
+  <li>the tip rates log, which logs the birth and death rates at each tip (optionally, at each node if the <strong>nodeLog</strong> option is activated).</li>
+</ul>
+
+<p>These last three logs are specific to MSBD. The only thing we will change here is the number of states recorded in the model. By default, only the sampled states are recorded, however this results in a log that is not in table format and so cannot be easily loaded into Tracer. Fixing the number of recorded states solves this problem.</p>
+
+<blockquote>
+  <p>In the <strong>MCMC</strong> panel, click on the arrow next to <strong>stdStateslog</strong> and click on the  <strong>Edit</strong> button to the right of the <strong>StateChangeModelLogger</strong> (<a href="#logs">Figure 8</a>).</p>
+
+</blockquote>
+
+<figure>
+	<a id="logs"></a>
+	<img style="width:75.0%;" src="figures/logs.png" alt="" />
+	<figcaption>Figure 8: Opening the state change model log.</figcaption>
+</figure>
+<p><br /></p>
+
+<blockquote>
+  <p>In the new panel, set the value of <strong>maxStates</strong> to 10 (<a href="#logpanel">Figure 9</a>).
+ Close the panel by clicking on <strong>OK</strong>.</p>
+
+</blockquote>
+
+<figure>
+	<a id="logpanel"></a>
+	<img style="width:65.0%;" src="figures/logstates.png" alt="" />
+	<figcaption>Figure 9: Setting the state change model log.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Once all the options have been set, the final step is to save the XML.</p>
+
+<blockquote>
+  <p>Save the XML file as <code class="language-plaintext highlighter-rouge">hummingbirds.xml</code> by navigating to <strong>File &gt; Save</strong>.</p>
+
+</blockquote>
+
+<h2 id="running-the-analysis-in-beast2">Running the analysis in BEAST2</h2>
+
+<blockquote>
+  <p>Start <strong>BEAST2</strong> and choose the file <code class="language-plaintext highlighter-rouge">hummingbirds.xml</code>.</p>
+
+  <p>If you have <strong>BEAGLE</strong> installed tick the box to <strong>Use BEAGLE library if available</strong>, which will make the run faster.</p>
+
+  <p>Hit <strong>Run</strong> to start the analysis.</p>
+
+</blockquote>
+
+<p>The run should take about 15-20 minutes.</p>
+
+<h2 id="analyzing-the-output">Analyzing the output</h2>
+
+<h3 id="output-files">Output files</h3>
+
+<p>Our run has generated 4 different files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">hummingbirds.log</code> which is the general trace log.</li>
+  <li><code class="language-plaintext highlighter-rouge">hummingbirds.hummingbirds.states.log</code> which recorded the parameters associated with the state model.</li>
+  <li><code class="language-plaintext highlighter-rouge">hummingbirds.hummingbirds.rates.log</code> which recorded the rates on tips of the tree.</li>
+  <li><code class="language-plaintext highlighter-rouge">hummingbirds.hummingbirds.rates.trees</code> which recorded the sampled trees in Nexus format.</li>
+</ul>
+
+<h3 id="analyzing-the-log-files">Analyzing the log files</h3>
+
+<p>We will use the software Tracer to analyze the log files. The general trace log is not very interesting in our case, as we used a fixed tree. Next, we will look at the MSBD model log, contained in the file <code class="language-plaintext highlighter-rouge">hummingbirds.hummingbirds.states.log</code>.
+<a href="#gamma">Figure 10</a> shows the estimated posterior distribution for the type change rate, which in this analysis has a median estimate of 5.35E-3, with a 95% HPD of [4.04E-4 ; 0.014].</p>
+
+<figure>
+	<a id="gamma"></a>
+	<img src="figures/tracer_gamma.png" alt="" />
+	<figcaption>Figure 10: Estimated posterior distribution of the type change rate, as shown in Tracer.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>One important thing to note is that the estimates of <code class="language-plaintext highlighter-rouge">lambda</code> and <code class="language-plaintext highlighter-rouge">mu</code> in this log should not be directly used. This is due to the fact that the types in our model are not tied to tips, so they may not represent the same evolutionary regimes in all samples. For instance, in the presence of two regimes, there may be samples where type 0 corresponds to the regime with higher birth, while in other samples this regime is represented by type 1. We can see this in <a href="#lbda">Figure 11</a>, where the estimate for <code class="language-plaintext highlighter-rouge">lambda_0</code> shows a discrepancy around 6.5E7 samples, which corresponds to <code class="language-plaintext highlighter-rouge">lambda_0</code> and <code class="language-plaintext highlighter-rouge">lambda_1</code> exchanging values. This also means that ESS values for these parameters may be low even if the chain has converged.</p>
+
+<figure>
+	<a id="lbda"></a>
+	<img src="figures/tracer_lambda.png" alt="" />
+	<figcaption>Figure 11: Trace of the birth rate for type 0, as shown in Tracer.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>In order to look at the actual birth and death rates estimates, we can look at the tip rates log, stored in the file <code class="language-plaintext highlighter-rouge">hummingbirds.hummingbirds.rates.log</code>. <a href="#tip_uni">Figure 12</a> and <a href="#tip_bi">Figure 13</a> show examples of the estimated posterior distributions of the birth rate for two different tips.</p>
+
+<figure>
+	<a id="tip_uni"></a>
+	<img src="figures/tracer_tip_unim.png" alt="" />
+	<figcaption>Figure 12: Estimated posterior distribution of the birth rate at tip Topaza.pella, as shown in Tracer.</figcaption>
+</figure>
+<p><br /></p>
+
+<figure>
+	<a id="tip_bi"></a>
+	<img src="figures/tracer_tip_bim.png" alt="" />
+	<figcaption>Figure 13: Estimated posterior distribution of the birth rate at tip Amazilia.leucogaster, as shown in Tracer.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We can see that these two tips present two very different configurations. The first tip shows a unimodal posterior distribution, which indicates that it is confidently assigned to one particular evolutionary regime. On the other hand, the second tip presents a bimodal distribution, indicating that there are two distinct evolutionary regimes, with two distinct birth rates, which it can be assigned to. 
+This is important to note because the usual metrics used to summarize posterior distributions, i.e. the median and 95% HPD interval, work well in the first case but can give a misleading representation of the posterior in the second case. In this case the median estimate for the birth rate of <em>Amazilia.leucogaster</em> is 0.40, which corresponds approximately to the second mode of the distribution, however neither the median nor the 95% HPD interval show the existence of a second possible regime, with birth rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mrel">≈</span></span></span></span>0.22.</p>
+
+<h3 id="analyzing-the-trees">Analyzing the trees</h3>
+
+<p>Another way to visualize the results is to look at the rates as plotted on the tree. We can use TreeAnnotator to build an MCC tree from the tree log in the file <code class="language-plaintext highlighter-rouge">hummingbirds.hummingbirds.rates.trees</code>. Since we also logged the birth and death rates for each edge in the tree log, these parameters will also be summarized along with the tree.</p>
+
+<blockquote>
+  <p>Start <strong>TreeAnnotator</strong> and set the input tree to the tree file <code class="language-plaintext highlighter-rouge">hummingbirds.hummingbirds.rates.trees</code>.</p>
+
+  <p>Give a name to the output file, for instance <code class="language-plaintext highlighter-rouge">hummingbirds.MCC.tre</code>.</p>
+
+  <p>Finally, click <strong>Run</strong> to start the summary.</p>
+</blockquote>
+
+<p>The MCC tree can be loaded into any tree visualization software, such as FigTree or IcyTree. We are going to use the R script provided in this tutorial <code class="language-plaintext highlighter-rouge">plot_MCC.R</code>. This script takes as input the MCC tree file and an output file to store the plot, and it will plot the MCC tree with edges coloured by the median estimates of the birth and death rates.
+Run the following commands in an R console to create the plots:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span><span class="p">(</span><span class="s2">"plot_MCC.R"</span><span class="p">)</span><span class="w">
+</span><span class="n">MCC_colour_plot</span><span class="p">(</span><span class="s2">"hummingbirds.MCC.tre"</span><span class="p">,</span><span class="w"> </span><span class="n">plotfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hummingbirds_MCC.pdf"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#mcc_birth">Figure 14</a> and <a href="#mcc_death">Figure 15</a> show the resulting plots for the birth rate and the death rate, respectively.</p>
+
+<figure>
+	<a id="mcc_birth"></a>
+	<img src="figures/mcc_birth.png" alt="" />
+	<figcaption>Figure 14: MCC tree with edges coloured by the median birth rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<figure>
+	<a id="mcc_death"></a>
+	<img src="figures/mcc_death.png" alt="" />
+	<figcaption>Figure 15: MCC tree with edges coloured by the median death rate.</figcaption>
+</figure>
+<p><br /></p>
+
+<p>We can see that while most of the tree shares one evolutionary regime (in red), some clades are inferred to have evolved under a second regime (in green), with higher birth and death rates. 
+From this figure it is not possible to tell whether the clades coloured in yellow-orange represent a third intermediate regime, or whether there is uncertainty as to which of the two regimes they belong to.</p>
+
+<p>Going back to the rates log file and using the full posterior distribution rather than just the median, we see that the intermediate colour is likely due to uncertainty rather than a third regime.</p>
+
+<h1 id="useful-links">Useful Links</h1>
+
+<ul>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>BEAST 1 website and documentation: <a href="http://beast.bio.ed.ac.uk">http://beast.bio.ed.ac.uk</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="MSBD2020">Barido-Sottani, J., Vaughan, T. G., &amp; Stadler, T. (2020). A Multi-Type Birth-Death model for Bayesian inference of lineage-specific birth and death rates. <i>Systematic Biology</i>. https://doi.org/10.1093/sysbio/syaa016</span></li>
+<li><span id="Bouckaert2014">Bouckaert, R., Heled, J., Kühnert, D., Vaughan, T., Wu, C.-H., Xie, D., Suchard, M. A., Rambaut, A., &amp; Drummond, A. J. (2014). BEAST 2: a software platform for Bayesian evolutionary analysis. <i>PLoS Computational Biology</i>, <i>10</i>(4), e1003537. https://doi.org/10.1371/journal.pcbi.1003537</span></li>
+<li><span id="McGuire2014">McGuire, J. A., Witt, C. C., Remsen, J. V., Corl, A., Rabosky, D. L., Altshuler, D. L., &amp; Dudley, R. (2014). Molecular Phylogenetics and the Diversification of Hummingbirds. <i>Current Biology</i>, <i>24</i>(8), 910–916. https://doi.org/10.1016/j.cub.2014.03.016</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li></ol>
+
+<hr />
+ are
+			     auto-weighted by level (h1 highest), so only these need boosting. -->
+			<h1 data-pagefind-meta="title" data-pagefind-weight="10" style="display:none;">The MSBD package</h1>
+			
+			
+			
+			<div data-pagefind-weight="5" style="display:none;">Inferring lineage-dependent birth and death rates</div>
+			
+			
+			
+			
+
 			<p>
 			<h1 id="background">Background</h1>
 

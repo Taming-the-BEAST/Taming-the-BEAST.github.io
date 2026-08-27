@@ -1,0 +1,506 @@
+# Central fallback metadata for tutorials that haven't migrated their own
+# frontmatter yet (see MIGRATION_PLAN.md, task 1).
+#
+# Every tutorial's own README.md frontmatter is the source of truth. This
+# file only fills in fields a tutorial does not define itself. Once a
+# tutorial defines a field upstream, `generate-tutorial-data.rb` will
+# print a build warning suggesting to remove the field here.
+#
+# Keyed by the same "owner/repo" string used in the `tutorials:` list in
+# _config.yml.
+#
+# Supported fields (mirrors tutorials/tutorial_schema.yml):
+#   beastversion_tutorial   - BEAST2 version the tutorial was written/tested with
+#   workflow                - one of tutorial_schema.yml's `workflows`
+#   status                  - one of tutorial_schema.yml's `status_values`
+#   keywords                - list, 3-10 entries recommended
+#   packages                - list of BEAST2 package names
+#   domains                 - list of application domains
+#   beastversion_package    - most recent BEAST2 version supporting the packages
+#
+# ---------------------------------------------------------------------------
+
+taming-the-beast/Introduction-to-BEAST2:
+  beastversion_tutorial: '2.7.x'
+  workflow: Getting started
+  status: current
+  keywords:
+  - molecular clock
+  - substitution models
+  - site models
+  - nucleotide
+  - Bayesian inference
+  packages:
+  - CCD
+  domains:
+  - macroevolution
+taming-the-beast/Troubleshooting-convergence-issues:
+  beastversion_tutorial: '2.7.x'
+  workflow: Troubleshooting
+  status: current
+  keywords:
+  - convergence
+  - MCMC
+  - molecular clock
+  - parameter estimation
+taming-the-beast/Troubleshooting-initialization-issues:
+  beastversion_tutorial: '2.7.x'
+  workflow: Troubleshooting
+  status: current
+  keywords:
+  - initialization
+  - morphological
+  - relaxed clock
+  - calibration
+  packages:
+  - SA
+  - ORC
+  beastversion_package: '2.7'
+nicfel/AIM-Tutorial:
+  beastversion_tutorial: '2.5.2'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - multispecies coalescent
+  - migration
+  - population structure
+  - gene flow
+  packages:
+  - StarBEAST2
+  - CoupledMCMC
+  domains:
+  - population genetics
+  - macroevolution
+taming-the-beast/Bacter-Tutorial:
+  beastversion_tutorial: '2.5.0'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - coalescent
+  - recombination
+  - nucleotide
+  packages:
+  - bacter
+  domains:
+  - population genetics
+  - epidemiology
+nicfel/CoupledMCMC-Tutorial:
+  beastversion_tutorial: '2.6.0'
+  workflow: Troubleshooting
+  status: current
+  keywords:
+  - parallel tempering
+  - MCMC
+  - skyline
+  - coalescent
+  - molecular clock
+  packages:
+  - CoupledMCMC
+  domains:
+  - epidemiology
+rachelwarnock/BDMM-Prime-for-macroevolution:
+  beastversion_tutorial: '2.7.7'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - fossilized birth-death
+  - birth-death
+  - population structure
+  - tip dating
+  packages:
+  - BDMM-Prime
+  - MM
+  - BEAST_CLASSIC
+  domains:
+  - macroevolution
+  - palaeontology
+  - phylogeography
+  beastversion_package: '2.7'
+genomescale/calibrated-species-trees:
+  beastversion_tutorial: '2.4.4'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - multispecies coalescent
+  - calibration
+  - molecular clock
+  - relaxed clock
+  packages:
+  - StarBEAST2
+  domains:
+  - macroevolution
+  - population genetics
+mmatschiner/CladeAge-Tutorial:
+  beastversion_tutorial: '2.5.0'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - birth-death
+  - calibration
+  - molecular clock
+  - relaxed clock
+  - divergence time
+  packages:
+  - CA
+  domains:
+  - macroevolution
+  - palaeontology
+bjoelle/ClaDS-tutorial:
+  beastversion_tutorial: '2.7.x'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - birth-death
+  - diversification
+  - relaxed clock
+  packages:
+  - ClaDS
+  domains:
+  - macroevolution
+taming-the-beast/FBD-tutorial:
+  beastversion_tutorial: '2.7.x'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - fossilized birth-death
+  - birth-death
+  - calibration
+  - relaxed clock
+  - tip dating
+  - morphological
+  packages:
+  - SA
+  - ORC
+  domains:
+  - palaeontology
+  - macroevolution
+  beastversion_package: '2.7'
+nicfel/Reassortment-Tutorial:
+  beastversion_tutorial: '2.6.0'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - coalescent
+  - reassortment
+  - recombination
+  - tip dating
+  packages:
+  - CoalRe
+  domains:
+  - epidemiology
+KonstantinHoffmann/LanguagePhylogenies:
+  beastversion_tutorial: '2.5.2'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - strict clock
+  - substitution models
+  - calibration
+  - cognate data
+  packages:
+  - Babel
+  - BDSKY
+  - SA
+  domains:
+  - language evolution
+  beastversion_package: '2.7'
+taming-the-BEAST/Mascot-Tutorial:
+  beastversion_tutorial: '2.7.x'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - structured coalescent
+  - migration
+  - population structure
+  - phylogeography
+  packages:
+  - Mascot
+  - CCD
+  domains:
+  - phylogeography
+  - epidemiology
+taming-the-beast/Molecular-Dating-Tutorial:
+  beastversion_tutorial: '2.5'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - relaxed clock
+  - molecular clock
+  - tip dating
+  - substitution models
+  - model averaging
+  packages:
+  - bModelTest
+  domains:
+  - epidemiology
+duchene/adequacy_tutorial:
+  beastversion_tutorial: '2.4.x'
+  workflow: Validation
+  status: current
+  keywords:
+  - model adequacy
+  - substitution models
+  - molecular clock
+  - posterior prediction
+sgtRoberty/NS-tutorial:
+  beastversion_tutorial: '2.7.x'
+  workflow: Validation
+  status: current
+  keywords:
+  - model selection
+  - marginal likelihood
+  - nested sampling
+  - molecular clock
+  packages:
+  - NS
+taming-the-beast/Molecular-clock-dating-and-modelling-rate-variation:
+  beastversion_tutorial: '2.7.7'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - relaxed clock
+  - molecular clock
+  - substitution models
+  - site models
+  - calibration
+  packages:
+  - bModelTest
+  - CCD
+  domains:
+  - macroevolution
+bjoelle/MSBD-tutorial:
+  beastversion_tutorial: '2.7.x'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - birth-death
+  - diversification
+  packages:
+  - MSBD
+  domains:
+  - macroevolution
+boskovav/PIQMEE-Tutorial:
+  beastversion_tutorial: '2.6.3'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - birth-death
+  - skyline
+  - tip dating
+  - duplicate sequences
+  packages:
+  - PIQMEE
+  domains:
+  - epidemiology
+  beastversion_package: '2.7'
+taming-the-beast/Prior-selection:
+  beastversion_tutorial: '2.7.x'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - priors
+  - molecular clock
+  - calibration
+  - tip dating
+  packages:
+  - BDSKY
+  domains:
+  - epidemiology
+  beastversion_package: '2.7'
+taming-the-beast/SCOTTI-Tutorial:
+  beastversion_tutorial: '2.4.7'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - structured coalescent
+  - transmission tree
+  - migration
+  - population structure
+  packages:
+  - SCOTTI
+  domains:
+  - epidemiology
+  beastversion_package: '2.7'
+bethany-j-allen/Skyline-analyses-for-macroevolution:
+  beastversion_tutorial: '2.6.6'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - skyline
+  - fossilized birth-death
+  - coalescent
+  - diversification
+  packages:
+  - BDSKY
+  - feast
+  domains:
+  - macroevolution
+  - palaeontology
+  beastversion_package: '2.7'
+taming-the-beast/Skyline-plots:
+  beastversion_tutorial: '2.7.x'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - skyline
+  - coalescent
+  - birth-death
+  - population dynamics
+  packages:
+  - BDSKY
+  domains:
+  - epidemiology
+  beastversion_package: '2.7'
+bjoelle/BFD_snapper_tutorial:
+  beastversion_tutorial: '2.7.x'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - multispecies coalescent
+  - species delimitation
+  - marginal likelihood
+  - SNP data
+  packages:
+  - snapper
+  domains:
+  - population genetics
+  - macroevolution
+genomescale/starbeast2-tutorial:
+  beastversion_tutorial: '2.7.x'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - multispecies coalescent
+  - species tree
+  - molecular clock
+  - relaxed clock
+  packages:
+  - StarBEAST2
+  domains:
+  - macroevolution
+  - population genetics
+taming-the-beast/StarBeast3-Tutorial:
+  beastversion_tutorial: '2.7.8'
+  beastversion_package: '2.7'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - multispecies coalescent
+  - species tree
+  - morphological
+  - total evidence
+  - relaxed clock
+  packages:
+  - starbeast3
+  - CCD
+  domains:
+  - macroevolution
+  - population genetics
+taming-the-beast/Structured-coalescent:
+  beastversion_tutorial: '2.7.x'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - structured coalescent
+  - migration
+  - population structure
+  - phylogeography
+  packages:
+  - MultiTypeTree
+  domains:
+  - phylogeography
+  - epidemiology
+  beastversion_package: '2.7'
+taming-the-beast/Structured-birth-death-model:
+  beastversion_tutorial: '2.7.4'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - birth-death
+  - population structure
+  - migration
+  packages:
+  - bdmm
+  domains:
+  - phylogeography
+  - epidemiology
+  beastversion_package: '2.7'
+taming-the-beast/Substitution-model-averaging:
+  beastversion_tutorial: '2.7.x'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - substitution models
+  - site models
+  - model averaging
+  - model selection
+  packages:
+  - bModelTest
+laduplessis/TiDeTree-Tutorial:
+  beastversion_tutorial: '>= 2.7'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - birth-death
+  - molecular clock
+  - tip dating
+  - lineage tracing
+  - single-cell
+  packages:
+  - TiDeTree
+  - CCD
+  domains:
+  - single-cell
+walterxie/MEP-tutorial:
+  beastversion_tutorial: '2.7.8'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - molecular clock
+  - tip dating
+  - coalescent
+  - substitution models
+  packages:
+  - CCD
+  domains:
+  - epidemiology
+bethany-j-allen/Total-Evidence-Tutorial:
+  beastversion_tutorial: '2.7.7'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - fossilized birth-death
+  - morphological
+  - tip dating
+  - calibration
+  packages:
+  - MM
+  - SA
+  domains:
+  - macroevolution
+  - palaeontology
+  beastversion_package: '2.7'
+taming-the-beast/Visualizing-BEAST2-results:
+  beastversion_tutorial: '2.7.x'
+  workflow: Basic workflow
+  status: current
+  keywords:
+  - visualization
+  - R
+  - tree visualization
+  - phylodynamics
+tgvaughan/Structured-birth-death-BDMM-Prime:
+  beastversion_tutorial: '2.7.7'
+  workflow: Advanced analysis
+  status: current
+  keywords:
+  - birth-death
+  - population structure
+  - migration
+  - phylogeography
+  packages:
+  - BDMM-Prime
+  domains:
+  - phylogeography
+  - epidemiology
+  beastversion_package: '2.7'

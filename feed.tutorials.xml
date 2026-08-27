@@ -46,9 +46,6 @@
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
 				</description>
 				<pubDate>Wed, 03 Jun 2026 09:42:08 +0000</pubDate>
 				<category>Beginner</category>
@@ -86,9 +83,6 @@
 					: MCMC doesn't need to be this long, remove archive and just add shorter log and trees files
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Mon, 01 Jun 2026 14:24:51 +0000</pubDate>
@@ -135,9 +129,6 @@
 					: Update figure and text
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Mon, 01 Jun 2026 09:07:54 +0000</pubDate>
@@ -189,9 +180,6 @@
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
 				</description>
 				<pubDate>Mon, 18 May 2026 08:35:20 +0000</pubDate>
 				<category>Intermediate</category>
@@ -234,9 +222,6 @@
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
 				</description>
 				<pubDate>Thu, 06 Nov 2025 10:58:31 +0000</pubDate>
 				<category>Intermediate</category>
@@ -278,9 +263,6 @@
 					: fixes
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
 					
 				</description>
 				<pubDate>Wed, 27 Aug 2025 12:34:33 +0000</pubDate>
@@ -325,9 +307,6 @@
 Updated TtB tutorial to work with BEAUti template upgrade
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Mon, 11 Aug 2025 10:06:34 +0000</pubDate>
@@ -377,9 +356,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
 				</description>
 				<pubDate>Thu, 17 Jul 2025 05:44:51 +0000</pubDate>
 				<category>Intermediate</category>
@@ -422,9 +398,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.8
-					
 				</description>
 				<pubDate>Wed, 16 Jul 2025 19:07:47 +0000</pubDate>
 				<category>Intermediate</category>
@@ -462,9 +435,6 @@ Fix liquid error and two other tiny changes
 					: Update figure file names
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v>= 2.7
 					
 				</description>
 				<pubDate>Tue, 15 Jul 2025 12:58:09 +0000</pubDate>
@@ -512,9 +482,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
 				</description>
 				<pubDate>Sun, 13 Jul 2025 14:47:15 +0000</pubDate>
 				<category>Intermediate</category>
@@ -557,9 +524,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.7
-					
 				</description>
 				<pubDate>Fri, 11 Jul 2025 09:59:40 +0000</pubDate>
 				<category>Beginner</category>
@@ -597,9 +561,6 @@ Fix liquid error and two other tiny changes
 					: Fixed some typos
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Thu, 10 Jul 2025 15:22:33 +0000</pubDate>
@@ -646,9 +607,6 @@ Fix liquid error and two other tiny changes
 					: Update README.md
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Tue, 08 Jul 2025 09:07:01 +0000</pubDate>
@@ -700,9 +658,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.8
-					
 				</description>
 				<pubDate>Thu, 03 Jul 2025 05:11:41 +0000</pubDate>
 				<category>Beginner</category>
@@ -741,9 +696,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
 				</description>
 				<pubDate>Thu, 19 Jun 2025 13:10:53 +0000</pubDate>
 				<category>Intermediate</category>
@@ -781,9 +733,6 @@ Fix liquid error and two other tiny changes
 					: modified starting tree setup
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Thu, 19 Jun 2025 12:00:54 +0000</pubDate>
@@ -827,9 +776,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.4
-					
 				</description>
 				<pubDate>Wed, 04 Jun 2025 09:23:45 +0000</pubDate>
 				<category>Professional</category>
@@ -867,9 +813,6 @@ Fix liquid error and two other tiny changes
 					: Revert bullet points
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Mon, 02 Jun 2025 17:51:38 +0000</pubDate>
@@ -913,9 +856,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
 				</description>
 				<pubDate>Fri, 23 May 2025 15:59:22 +0000</pubDate>
 				<category>Intermediate</category>
@@ -958,9 +898,6 @@ Fix liquid error and two other tiny changes
 					&lt;br&gt;&lt;br&gt;
 					Level: Beginner
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
 				</description>
 				<pubDate>Tue, 11 Jun 2024 08:22:24 +0000</pubDate>
 				<category>Beginner</category>
@@ -1000,9 +937,6 @@ Fix liquid error and two other tiny changes
 Update to BEAST 2.7
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
 					
 				</description>
 				<pubDate>Tue, 15 Aug 2023 17:40:53 +0000</pubDate>
@@ -1052,9 +986,6 @@ updated for 2.7
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
 					
-						&lt;br&gt;
-						Requires: BEAST v2.7.x
-					
 				</description>
 				<pubDate>Mon, 24 Jul 2023 12:37:34 +0000</pubDate>
 				<category>Intermediate</category>
@@ -1092,9 +1023,6 @@ updated for 2.7
 					: Remove citation section
 					&lt;br&gt;&lt;br&gt;
 					Level: Professional
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.6
 					
 				</description>
 				<pubDate>Wed, 15 Mar 2023 11:17:43 +0000</pubDate>
@@ -1135,9 +1063,6 @@ updated for 2.7
 Removed non-matching HA and NA sequences (both from Helsinki)
 					&lt;br&gt;&lt;br&gt;
 					Level: Intermediate
-					
-						&lt;br&gt;
-						Requires: BEAST v2.6.0
 					
 				</description>
 				<pubDate>Fri, 01 Apr 2022 12:50:24 +0000</pubDate>

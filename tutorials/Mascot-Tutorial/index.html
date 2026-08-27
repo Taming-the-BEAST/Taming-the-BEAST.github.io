@@ -16,6 +16,7 @@
 
     <!-- Our style -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/tutorial-styles.css">
 
     <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -41,7 +42,7 @@
       <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
     </a>
     
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -89,6 +90,31 @@
 			</ol>
 		</div>
 		<p>
+		<!-- Tutorial metadata badges -->
+		<!-- Read from `tutorial.*` (enriched _data/tutorials.yml, incl. the
+		     tutorials_metadata.yml fallback) rather than `page.*` (raw README
+		     frontmatter), so badges show even before a tutorial migrates its
+		     own frontmatter upstream. -->
+		<div class="tutorial-badges" style="margin-bottom: 15px;">
+			
+			
+			<span class="tag badge-workflow">Advanced analysis</span>
+			
+			
+			<span class="tag badge-domain">Phylogeography</span>
+			
+			<span class="tag badge-domain">Epidemiology</span>
+			
+			
+			<span class="tag badge-package">Mascot</span>
+			
+			<span class="tag badge-package">CCD</span>
+			
+		</div>
+
+		<!-- Deprecated warning -->
+		
+
 		<div class="head">
 			
 				Parameter and State inference using the approximate structured coalescent
@@ -107,14 +133,17 @@
 			
 		</div>
 		
-	</div>				
+
+		<!-- Keywords -->
+		
+	</div>
 </div>
 
 <div class="bigspacer"></div>
 
 <div class="row">
 	<div class="col-md-3">
-	<div id="sidebar">
+	<div id="sidebar" data-pagefind-ignore>
 		<div class="bigspacer"></div>
 		<div class="smallhead">
 			Tutorial
@@ -357,8 +386,371 @@ Update MASCOT tutorial</span>
 	</div>
 	</div>
 
-	<div class="col-md-8">				
-		<div class="post">
+	<div class="col-md-8">
+		<div class="post" data-pagefind-body>
+			<!-- Pagefind meta and filter tags -->
+			<!-- Weighted so a title/keyword/subtitle hit outranks a body-text hit.
+			     Pagefind default weight is 1; headings inside <h1 id="background">Background</h1>
+
+<p>Phylogeographic methods can help reveal the movement of genes between populations of organisms. This has been widely used to quantify pathogen movement between different host populations, the migration history of humans, and the geographic spread of languages or the gene flow between species using the location or state of samples alongside sequence data. Phylogenies therefore offer insights into migration processes not available from classic epidemiological or occurrence data alone.</p>
+
+<p>The structured coalescent allows to coherently model the migration and coalescent process, but struggles with complex datasets due to the need to infer ancestral migration histories. Thus, approximations to the structured coalescent, which integrate over all ancestral migration histories, have been developed. This tutorial gives an introduction into how a MASCOT analysis in BEAST2 can be set-up. MASCOT is short for <strong>M</strong>arginal <strong>A</strong>pproximation of the <strong>S</strong>tructured <strong>CO</strong>alescen <strong>T</strong> <a class="citation" href="#mueller2017mascot">(Müller et al., 2018)</a> and implements a structured coalescent approximation <a class="citation" href="#Mueller2017">(Müller et al., 2017)</a>. This approximation doesn’t require migration histories to be sampled using MCMC and therefore allows to analyse phylogenies with more than three or four states.</p>
+
+<hr />
+
+<h1 id="programs-used-in-this-exercise">Programs used in this Exercise</h1>
+
+<h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
+
+<p>BEAST2 (<a href="http://www.beast2.org">http://www.beast2.org</a>) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.7.x <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a>.</p>
+
+<h3 id="beauti2---bayesian-evolutionary-analysis-utility">BEAUti2 - Bayesian Evolutionary Analysis Utility</h3>
+
+<p>BEAUti2 is a graphical user interface tool for generating BEAST2 XML configuration files.</p>
+
+<p>Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="treeannotator">TreeAnnotator</h3>
+
+<p>TreeAnnotator is used to produce a summary tree from the posterior sample of trees using one of the available algorithms. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).</p>
+
+<p>TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.</p>
+
+<h3 id="tracer">Tracer</h3>
+
+<p>Tracer (<a href="http://tree.bio.ed.ac.uk/software/tracer">http://tree.bio.ed.ac.uk/software/tracer</a>) is used to summarise the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.7.2.</p>
+
+<h3 id="figtree">FigTree</h3>
+
+<p>FigTree (<a href="http://tree.bio.ed.ac.uk/software/figtree">http://tree.bio.ed.ac.uk/software/figtree</a>) is a program for viewing trees and producing publication-quality figures. It can interpret the node-annotations created on the summary trees by TreeAnnotator, allowing the user to display node-based statistics (e.g. posterior probabilities). We will be using FigTree v1.4.4.</p>
+
+<hr />
+
+<h1 id="practical-parameter-and-state-inference-using-the-approximate-structured-coalescent">Practical: Parameter and State inference using the approximate structured coalescent</h1>
+
+<p>In this tutorial, we will estimate migration rates, effective population sizes and locations of internal nodes using the marginal approximation of the structured coalescent implemented in BEAST2, MASCOT <a class="citation" href="#mueller2017mascot">(Müller et al., 2018)</a>.</p>
+
+<p>The aim is to:</p>
+
+<ul>
+  <li>Learn how to infer structure from trees with sampling location</li>
+  <li>Get to know how to choose the set-up of such an analysis</li>
+  <li>Learn how to read the output of a MASCOT analysis</li>
+</ul>
+
+<h2 id="setting-up-an-analysis-in-beauti">Setting up an analysis in BEAUti</h2>
+
+<h3 id="download-mascot">Download MASCOT</h3>
+
+<p>First, we have to download the package MASCOT using the BEAUTi package manager. Go to <strong>File</strong> » <strong>Manage Packages</strong> and download the package MASCOT.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/MascotDownload.png" style="width:80%;" />
+
+<figcaption>Figure 1: Download the MASCOT package.</figcaption>
+
+</figure>
+
+<p>MASCOT will only be available in BEAUti once you close and restart the program.</p>
+
+<h3 id="loading-the-influenza-ah3n2-sequences-partitions">Loading the Influenza A/H3N2 Sequences (Partitions)</h3>
+
+<p>The sequence alignment is in the file <a href="http://github.com/nicfel/Mascot-Tutorial/raw/master/data/H3N2.nexus">H3N2.nexus</a>. Right-click on this link and save it to a folder on your computer. Once downloaded, this file can either be drag-and-dropped into BEAUti or added by using BEAUti’s menu system via <strong>File</strong> » <strong>Import Alignment</strong>. Once the sequences are added, we need to specify the sampling dates.</p>
+
+<h3 id="get-the-sampling-times-tip-dates">Get the sampling times (Tip Dates)</h3>
+
+<p>Open the <em>Tip Dates</em> tab and then select the “Use tip dates” checkbox.</p>
+
+<p>The sampling times are encoded in the sequence names. We can tell BEAUti to use these by clicking the <strong>Auto-configure</strong> button. The sampling times appear following the third vertical bar “|” in the sequence name. To extract these times, select “split on character”, enter “|” (without the quotes) in the text box immediately to the right, and then select “3” from the drop-down box to the right, as shown in the figure below.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/TipDates.png" style="width:80%;" />
+
+<figcaption>Figure 2: Guess sampling times.</figcaption>
+
+</figure>
+
+<p>Clicking “Ok” should now populate the table with the sample times extracted from the sequence names: the column <strong>Date</strong> should now have values between 2000 and 2002 and the column <strong>Height</strong> should have values from 0 to 2. The heights denote the time difference from a sequence to the most recently sampled sequence. If everything is specified correctly, the sequence with Height 0.0 should have Date 2001.9.</p>
+
+<h3 id="specify-the-site-model-site-model">Specify the Site Model (Site Model)</h3>
+
+<p>Next, we have to specify the site model. To do this, choose the <em>Site Model</em> tab. For Influenza Hemagluttanin sequences as we have here, HKY is the most commonly used model of nucleotide evolution. This model allows for differences in transversion and transition rates, meaning that changes between bases that are chemically more closely related (transitions) are allowed to have a different rate to changes between bases that chemically more distinct (transversions).</p>
+
+<p>Additionally, we should allow for different rate categories for different sites in the alignment. This can be done by setting the <strong>“Gamma Category Count” to 4</strong>, which is just a value that has typically been used. Make sure that estimate is checked next to the shape parameter. To reduce the number of parameters we have to estimate, we can set Frequencies to Empirical.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/SiteModel.png" style="width:80%;" />
+
+<figcaption>Figure 4: Set the site model.</figcaption>
+
+</figure>
+
+<h3 id="set-the-clock-model-clock-model">Set the clock model (Clock Model)</h3>
+
+<p>Now, we move to the <em>Clock Model</em> tab. For rapidly evolving viruses, the assumption of a strict molecular clock is often made, meaning that the molecular clock is the same on each branch of the phylogeny. To reduce the burn-in phase, we can set the <strong>initial value to 0.005</strong>. Please note that this is <strong>not</strong> the prior on the clock rate (yet), but the <strong>starting value</strong> of the parameter in MCMC.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/ClockRate.png" style="width:80%;" />
+
+<figcaption>Figure 5: Set the initial clock rate.</figcaption>
+
+</figure>
+
+<h3 id="get-the-sampling-locations-tip-locations">Get the sampling locations (Tip Locations)</h3>
+<p>Next, we switch to the <em>Priors</em> tab.</p>
+
+<p>We first have to choose the tree prior, which in this case is MASCOT. Search the drop down menu next to <code class="language-plaintext highlighter-rouge">Tree.t:H3N2</code> and choose MASCOT. By default, the rate dynamics is <code class="language-plaintext highlighter-rouge">Constant</code>, which means that effective population sizes and migration rates are assumed to be constant through time. We next have to define the sampling location of the individual tips.</p>
+
+<p>Initially the column <strong>Location</strong> should be <em>NOT_SET</em> for every sequence. After clicking the <strong>Guess</strong> button, you can split the sequence on the vertical bar “|” again by selecting “split on character” and entering “|” in the box. However, the locations are in the fourth group, so this time choose “4” from the drop-down menu. After clicking the <strong>OK</strong> button, the window should look like the one shown in the figure below:</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/TipLocations.png" style="width:80%;" />
+
+<figcaption>Figure 3: Configuring sample locations.</figcaption>
+
+</figure>
+
+<h3 id="specify-the-priors-priors">Specify the priors (Priors)</h3>
+
+<p>Now, we need to set the priors for the various parameters of the model. Under the <em>Priors</em> tab, you can find the parameter priors below the tree prior.</p>
+
+<p>First, consider the <strong>effective population size <em>Ne</em></strong>. Since we have only a few samples per location, meaning little information about the different effective population sizes, we will need an informative prior. In this case, we will use a log normal prior with parameters <strong>M=0</strong> and <strong>S=1</strong>. (These are respectively the <strong>mean</strong> and <strong>variance</strong> of the corresponding normal distribution in log space.) To use this prior, choose “Log Normal” from the drop down menu to the right of the <code class="language-plaintext highlighter-rouge">Ne.t:H3N2</code> parameter label, then click the arrow to the left of the same label and fill in the parameter values appropriately (i.e., <strong>M=0</strong> and <strong>S=1</strong>). Ensure that the “Mean In Real Space” checkbox remains unchecked.</p>
+
+<p>The existing exponential distribution as a prior on the <strong>migration rate</strong> puts much weight on lower values while not prohibiting larger ones. For migration rates, a prior that prohibits too large values while not greatly distinguishing between very small and <em>very</em> very small values is generally a good choice. However, be aware that the exponential distribution is quite an informative prior: one should be careful when choosing its mean so that feasible migration rates lie within the 95% interval of the prior distribution. (This can be determined by clicking the arrow to the left of the parameter name and looking at the values below the graph that appears on the right.) We keep the default <strong>mean value of 1</strong> for <code class="language-plaintext highlighter-rouge">migrationConstant</code>.</p>
+
+<p>Finally, set the prior for the <strong>clock rate</strong>. We have a good idea about the clock rate of Influenza A/H3N2 Hemagglutinin. From previous work by other people, we know that the clock rate will be around 0.005 substitution per site per year. To include that prior knowledge, we can set the prior on the <code class="language-plaintext highlighter-rouge">clockRate</code> to a Log Normal distribution with <strong>a mean of 0.005 in real space</strong>. To specify the mean in real space, make sure that the box “Mean In Real Space” is checked. If we set the <strong>S value to 0.25</strong>, we expect the clock rate to be between 0.00321 and 0.00731 with 95% uncertainty.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/Priors.png" style="width:80%;" />
+
+<figcaption>Figure 6: Set up of the prior distributions.</figcaption>
+
+</figure>
+
+<p>We keep the default priors for the site model parameters <code class="language-plaintext highlighter-rouge">gammaShape</code> and <code class="language-plaintext highlighter-rouge">kappa</code>.</p>
+
+<h3 id="specify-the-mcmc-chain-length-mcmc">Specify the MCMC chain length (MCMC)</h3>
+
+<p>Now switch to the <em>MCMC</em> tab. Here we can set the length of the MCMC chain and decide how frequently the parameter and trees are logged. For this dataset, 2 million iterations should be sufficient. In order to have enough samples but not create too large files, we can set the logEvery to 2000, so we have 1001 samples overall. Do this for the tracelog and the treelog. Next, we have to save the <code class="language-plaintext highlighter-rouge">*.xml</code> file using <strong>File</strong> » <strong>Save as</strong>.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/MCMC.png" style="width:80%;" />
+
+<figcaption>Figure 7: save the \*.xml.</figcaption>
+
+</figure>
+
+<h3 id="run-the-analysis-using-beast2">Run the analysis using BEAST2</h3>
+
+<p>Run the <code class="language-plaintext highlighter-rouge">*.xml</code> using BEAST2 or use finished runs from the <em>precooked-runs</em> folder. The analysis should take about 6 to 7 minutes.</p>
+
+<p>If you want to learn some more about what the migration rates we actually estimate, have a look at this blog post of Peter Beerli <a href="http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html">http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html</a>.</p>
+
+<h3 id="analyse-the-log-file-using-tracer">Analyse the log file using Tracer</h3>
+
+<p>First, we can open the <code class="language-plaintext highlighter-rouge">*.log</code> file in tracer to check if the MCMC has converged. The ESS value should be above 200 for almost all values and especially for the posterior estimates.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/LogPosterior.png" style="width:80%;" />
+
+<figcaption>Figure 8: Check if the posterior converged.</figcaption>
+
+</figure>
+
+<p>We can have a look at the marginal posterior distributions for the effective population sizes. New York is inferred to have the largest effective population size before Hong Kong and New Zealand. This tells us that two lineages that are in New Zealand are expected to coalesce quicker than two lineages in Hong Kong or New York.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/LogNe.png" style="width:80%;" />
+
+<figcaption>Figure 9: Compare the different inferred effective population sizes.</figcaption>
+
+</figure>
+
+<p>In this example, we have relatively little information about the effective population sizes of each location. This can lead to estimates that are greatly informed by the prior. Additionally, there can be great differences between median and mean estimates. The median estimates are generally more reliable since they are less influence by extreme values.</p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/MeanMedian.png" style="width:80%;" />
+
+<figcaption>Figure 10: Differences between mean and median estimates.</figcaption>
+
+</figure>
+
+<p>We can then look at the inferred migration rates. The migration rates have the label b_migration.*, meaning that they are <strong>backwards-in-time</strong> migration rates. The highest rates are from New York to Hong Kong. Because they are backwards-in-time migration rates, lineages from New York are inferred to be likely from Hong Kong if we’re going backwards in time. In the inferred phylogenies, we should therefore make the observation that lineages ancestral to samples from New York are inferred to be from Hong Kong.</p>
+
+<p>A more in depth explanation of what backwards migration really are can be found here <a href="http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html">http://popgen.sc.fsu.edu/Migrate/Blog/Entries/2013/3/22_forward-backward_migration_rates.html</a></p>
+
+<figure>
+
+<a id="fig:example1"></a> <img src="figures/LogMigration.png" style="width:80%;" />
+
+<figcaption>Figure 11: Compare the inferred migration rates.</figcaption>
+
+</figure>
+
+<h3 id="make-the-summary-tree-using-treeannotator">Make the summary tree using TreeAnnotator</h3>
+
+<p>Next, we want to summarize the trees. This we can do using TreeAnnotator. Until recently the <strong><em>maximum clade credibility</em> tree (MCC)</strong> has been the default summary method in TreeAnotator. To produce MCC trees TreeAnotator takes the set of trees and find the best supported tree by maximising the product of the posterior clade probabilities. It will then annotate this representative summary tree with the mean ages of all the nodes and the corresponding 95% HPD ranges as well as the posterior clade probability for each node.</p>
+
+<p>A new point estimate, called a <strong><em>conditional clade distribution</em> tree (CCD)</strong> has been proposed <a class="citation" href="#berling2025">(Berling et al., 2025)</a>. It has been shown to outperform MCC in terms of accuracy (based on Robinson-Foulds distance to the true tree) and precision (how different the point estimates calculated for replicate MCMC chains are). CCD methods may produce a tree that would be well supported but has not been sampled during MCMC. This is beneficial for large trees and complex parameter regimes. Since both methods are still widely used, we show how to use them to summarise the posterior tree distribution. <strong>To save time, you may run just one method and compare it to the other using the example below.</strong></p>
+
+<h4 id="producing-mcc-tree">Producing MCC tree</h4>
+
+<blockquote>
+  <p>Open <strong>TreeAnnotator</strong> and then set the options as in the <a href="#fig:mcc">Figure 12</a> below. You have to specify the <strong>Burnin percentage</strong>, <strong>Target tree type</strong>, <strong>Node heights</strong>, <strong>Input Tree File</strong> and the <strong>Output File</strong>.</p>
+
+  <p>Use the typed trees in the file <code class="language-plaintext highlighter-rouge">H3N2-typed.trees</code> as <strong>Input Tree File</strong>. Name output file <code class="language-plaintext highlighter-rouge">H3N2.mcc.tree</code>.</p>
+
+  <p>After clicking <strong>Run</strong> the program should summarize the trees.</p>
+</blockquote>
+
+<figure>
+
+<a id="fig:mcc"></a> <img src="figures/treeannotator.mcc.png" style="width:80%;" />
+
+<figcaption>Figure 12: Make the maximum clade credibility tree.</figcaption>
+
+</figure>
+
+<h4 id="producing-ccd0-tree">Producing CCD0 tree</h4>
+
+<p>To produce CCD0 summary tree, you will first need to install the CCD package.</p>
+<blockquote>
+  <p>Open BEAUTi</p>
+
+  <p>Select <strong>File</strong> » <strong>Manage packages</strong></p>
+
+  <p>Select <strong>CCD</strong> package in the list and select <strong>Install/Upgrade</strong></p>
+
+  <p>Close BEAUTi</p>
+</blockquote>
+
+<figure>
+	<a id="fig:installCCD"></a>
+	<img style="width:80%;" src="figures/installCCD0.png" />
+	<figcaption>Figure 13: Install CCD package</figcaption>
+</figure>
+<p><br /></p>
+
+<p>Now you can proceed to make CCD0 tree:</p>
+
+<blockquote>
+  <p>Open <strong>TreeAnnotator</strong> and then set the options as in the <a href="#fig:ccd0">Figure 14</a> below. You have to specify the <strong>Burnin percentage</strong>, the <strong>Node heights</strong>, <strong>Input Tree File</strong> and the <strong>Output File</strong>.</p>
+
+  <p>Use the typed trees in the file <code class="language-plaintext highlighter-rouge">H3N2-typed.trees</code> as <strong>Input Tree File</strong>. Name output file <code class="language-plaintext highlighter-rouge">H3N2.ccd0.tree</code>.</p>
+
+  <p>After clicking <strong>Run</strong> the program should summarize the trees.</p>
+</blockquote>
+
+<figure>
+
+<a id="fig:ccd0"></a> <img src="figures/treeannotator.ccd0.png" width="80%" />
+
+<figcaption>Figure 14: Make the conditional clade credibility tree.</figcaption>
+
+</figure>
+
+<h3 id="analyse-and-compare-the-mcc-and-ccd0-summary-trees">Analyse and compare the MCC and CCD0 summary trees</h3>
+
+<p>In each logging step of the tree during the MCMC, MASCOT logs several different things. It logs the inferred probability of each node being in any possible location. In this example, these would be the inferred probabilities of being in Hong Kong, New York and New Zealand. Additonally, it logs the most likely location of each node.</p>
+
+<blockquote>
+  <p>Open <strong>FigTree</strong> and load your chosen summary tree (<code class="language-plaintext highlighter-rouge">H3N2.mcc.tree or H3N2.ccd0.tree</code>).</p>
+
+  <p>On the left hand menu, select <strong>Appearance</strong> &gt;&gt; <strong>Colour by</strong> and select <strong>max</strong>. This is the location that was inferred to be most often the most likely location of the node.</p>
+
+  <p>Select <strong>Trees</strong> &gt;&gt; <strong>Order nodes</strong> &gt;&gt; <strong>increasing</strong>. The sorting step is only needed so we can compare trees better.</p>
+
+  <p>You may optionally increase line weight (<strong>Appearance</strong> &gt;&gt; <strong>Line weight</strong>) and tip label font (<strong>Tip Labels</strong> &gt;&gt; <strong>Font size</strong>).</p>
+</blockquote>
+
+<p>Figures <a href="#fig:figtree.mcc">15</a> and <a href="#fig:figtree.ccd0">16</a> show the MCC and CCD0 trees respectively. First analyse tree for the method you followed.</p>
+
+<p>We can determine if lineages ancestral to samples from New York are actually inferred to be from Hong Kong, or the probability of the root being in any of the locations.</p>
+
+<p>To get the actual inferred probabilities of each node being in any of the 3 locations, you can go to <strong>Node Labels</strong> » <strong>Display</strong> an then choose Hong_Kong, New_York or New_Zealand. These are the actual inferred probabilities of the nodes being in any location.</p>
+
+<p>It should however be mentioned that the inference of nodes being in a particular location makes some simplifying assumptions, such as that there are no other locations (i.e. apart from the sampled locations) where lineages could have been.</p>
+
+<p>Another important thing to know is that currently, we assume rates to be constant. This means that we assume that the population size of the different locations does not change over time. We also make the same assumption about the migration rates through time.</p>
+
+<figure>
+
+<a id="fig:figtree.mcc"></a> <img src="figures/figtree.mcc.png" style="width:100%;" />
+
+<figcaption>Figure 15: MCC tree, inferred node locations.</figcaption>
+
+</figure>
+
+<figure>
+
+<a id="fig:figtree.ccd0"></a> <img src="figures/figtree.ccd0.png" style="width:100%;" />
+
+<figcaption>Figure 16: CCD0 tree, inferred node locations.</figcaption>
+
+</figure>
+
+<blockquote>
+  <p>Now, compare the figures for MCC and CCD0 summary trees. Can you see some differences?</p>
+
+  <p>One advantage of the CCD0 summary method is that it can evaluate tree topologies that were not sampled during the MCMC. This is why it usually performs better on high-entropy (uncertain, spread-out) tree posterior. Knowing this, what observations can you make about our sample?</p>
+</blockquote>
+
+<h3 id="errors-that-can-occur-work-in-progress">Errors that can occur (Work in progress)</h3>
+
+<p>One of the errors message that can occur regularly is the following: <code class="language-plaintext highlighter-rouge">too many iterations, return negative infinity</code> This occurs when the integration step size of the ODE’s to compute the probability of observing a phylogenetic tree in MASCOT is becoming too small. This generally occurs if at least one migration rate is really large or at least one effective population size is really small (i.e. the coalescent rate is really high). This causes integration steps to be extremely small, which in turn would require a lot of time to compute the probability of a phylogenetic tree under MASCOT. Instead of doing that, this state is rejected by assigning its log probability the value negative infinity.</p>
+
+<p>This error can have different origins and a likely incomplete list is the following:</p>
+
+<ul>
+  <li>The prior on <strong>migration rates</strong> puts too much weight on really <strong>high</strong> rates. To fix this, reconsider your prior on the migration rates. Particularly, check if the prior on the migration rates makes sense in comparison to the height of the tree. If, for example, the tree has a height of 1000 years, but the prior on the migration rate is exponential with mean 1, then the prior assumption is that between any two states, we expect approximately 1000 migration events.</li>
+  <li>The prior on the <strong>effective population sizes</strong> is too <strong>low</strong>. This means that the prior on the coalescent rate (1 over the effective population size) is too high. This can occur when the prior on the effective population size was chosen to be 1/X. To fix, reconsider your prior on the effective population size.</li>
+  <li>There are substantial changes of effective population sizes and/or migration rates over time that are not modelled. In that case, changes in the effective population sizes or migration rates have to be explained by population structure, which can again lead to some very low effective population sizes and very high migration rates. There is unfortunately not much that can be done here since MASCOT is not an appropriate model for the dataset.</li>
+  <li>There is strong sub-population structure within the populations we assgined. In that case, reconsider if the individual populations used are reasonable.</li>
+</ul>
+
+<hr />
+
+<h1 id="useful-links">Useful Links</h1>
+
+<p>If you interested in the derivations of the marginal approximation of the structured coalescent, you can find them here <a class="citation" href="#Mueller2017">(Müller et al., 2017)</a>. This paper also explains the mathematical differences to other methods such as the theory underlying BASTA. To get a better idea of how the states of internal nodes are calculated, have a look in this paper <a class="citation" href="#mueller2017mascot">(Müller et al., 2018)</a>.</p>
+
+<ul>
+  <li>MASCOT source code: <a href="https://github.com/nicfel/Mascot">https://github.com/nicfel/Mascot</a></li>
+  <li><a href="http://www.beast2.org/book.html">Bayesian Evolutionary Analysis with BEAST 2</a> <a class="citation" href="#BEAST2book2014">(Drummond &amp; Bouckaert, 2014)</a></li>
+  <li>BEAST 2 website and documentation: <a href="http://www.beast2.org/">http://www.beast2.org/</a></li>
+  <li>Join the BEAST user discussion: <a href="http://groups.google.com/group/beast-users">http://groups.google.com/group/beast-users</a></li>
+</ul>
+
+<hr />
+
+<h1 id="relevant-references">Relevant References</h1>
+
+<ol class="bibliography"><li><span id="mueller2017mascot">Müller, N. F., Rasmussen, D., &amp; Stadler, T. (2018). MASCOT: Parameter and state inference under the marginal structured coalescent approximation. <i>Bioinformatics</i>, bty406. https://doi.org/10.1093/bioinformatics/bty406</span></li>
+<li><span id="Mueller2017">Müller, N. F., Rasmussen, D. A., &amp; Stadler, T. (2017). The Structured Coalescent and its Approximations. <i>Molecular Biology and Evolution</i>, msx186.</span></li>
+<li><span id="BEAST2book2014">Drummond, A. J., &amp; Bouckaert, R. R. (2014). <i>Bayesian evolutionary analysis with BEAST 2</i>. Cambridge University Press.</span></li>
+<li><span id="berling2025">Berling, L., Klawitter, J., Bouckaert, R., Xie, D., Gavryushkin, A., &amp; Drummond, A. J. (2025). Accurate Bayesian phylogenetic point estimation using a tree distribution parameterized by clade probabilities. <i>PLOS Computational Biology</i>, <i>21</i>(2), e1012789.</span></li></ol>
+ are
+			     auto-weighted by level (h1 highest), so only these need boosting. -->
+			<h1 data-pagefind-meta="title" data-pagefind-weight="10" style="display:none;">MASCOT v3.0.0 Tutorial</h1>
+			
+			
+			
+			<div data-pagefind-weight="5" style="display:none;">Parameter and State inference using the approximate structured coalescent</div>
+			
+			
+			
+			
+
 			<p>
 			<h1 id="background">Background</h1>
 

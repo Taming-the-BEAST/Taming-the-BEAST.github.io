@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8"/>
-	<title>Taming the BEAST / tutorials</title>
+	<title>BEAST2 Tutorials</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- RSS feed -->
@@ -16,6 +16,7 @@
 
     <!-- Our style -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/tutorial-styles.css">
 
     <!-- JQuery and Bootstrap JS (necessary for collapsing navbar) -->
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -41,7 +42,7 @@
       <img src="/images/logo_bw.svg" style="height:2em">Taming the BEAST
     </a>
     
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -72,1652 +73,2504 @@
 	
 	<div class="container">	
 		
-	<div class="row">
-  <div class="col-md-12">
-    <ul class="nav nav-pills justify-content-center">
-      <li class="nav-item">
-      
-        <a class="nav-link active" href="/tutorials/">
+	
+
+
+
+<div class="tutorial-index" data-baseurl="">
+  <!-- Filter Controls -->
+  <div class="bg-light p-3 rounded mb-3">
+
+    <!-- Search -->
+    <div class="filter-row mb-2">
+      <label for="tutorial-search" class="form-label fw-semibold filter-label">Search:</label>
+      <div class="filter-controls">
+        <div class="d-flex gap-2 align-items-stretch">
+          <div class="btn-group btn-group-sm flex-shrink-0 search-mode-toggle" role="group" aria-label="Search mode">
+            <input type="radio" class="btn-check" name="search-mode" id="search-mode-keyword" value="keyword" checked>
+            <label class="btn btn-outline-secondary" for="search-mode-keyword">Keyword</label>
+            <input type="radio" class="btn-check" name="search-mode" id="search-mode-fulltext" value="fulltext">
+            <label class="btn btn-outline-secondary" for="search-mode-fulltext">Full-Text</label>
+          </div>
+          <div id="keyword-search-container" class="flex-grow-1 min-w-0 position-relative">
+            <input type="text" id="tutorial-search" class="form-control form-control-sm" placeholder="Search by title, author, keywords, packages..." list="keyword-suggestions" autocomplete="off">
+            <datalist id="keyword-suggestions">
+              
+              
+              
+              <option value="Bayesian inference">
+              
+              <option value="MCMC">
+              
+              <option value="R">
+              
+              <option value="SNP data">
+              
+              <option value="birth-death">
+              
+              <option value="calibration">
+              
+              <option value="coalescent">
+              
+              <option value="cognate data">
+              
+              <option value="convergence">
+              
+              <option value="divergence time">
+              
+              <option value="diversification">
+              
+              <option value="duplicate sequences">
+              
+              <option value="fossilized birth-death">
+              
+              <option value="gene flow">
+              
+              <option value="initialization">
+              
+              <option value="lineage tracing">
+              
+              <option value="marginal likelihood">
+              
+              <option value="migration">
+              
+              <option value="model adequacy">
+              
+              <option value="model averaging">
+              
+              <option value="model selection">
+              
+              <option value="molecular clock">
+              
+              <option value="morphological">
+              
+              <option value="multispecies coalescent">
+              
+              <option value="nested sampling">
+              
+              <option value="nucleotide">
+              
+              <option value="parallel tempering">
+              
+              <option value="parameter estimation">
+              
+              <option value="phylodynamics">
+              
+              <option value="phylogeography">
+              
+              <option value="population dynamics">
+              
+              <option value="population structure">
+              
+              <option value="posterior prediction">
+              
+              <option value="priors">
+              
+              <option value="reassortment">
+              
+              <option value="recombination">
+              
+              <option value="relaxed clock">
+              
+              <option value="single-cell">
+              
+              <option value="site models">
+              
+              <option value="skyline">
+              
+              <option value="species delimitation">
+              
+              <option value="species tree">
+              
+              <option value="strict clock">
+              
+              <option value="structured coalescent">
+              
+              <option value="substitution models">
+              
+              <option value="tip dating">
+              
+              <option value="total evidence">
+              
+              <option value="transmission tree">
+              
+              <option value="tree visualization">
+              
+              <option value="visualization">
+              
+              
+              <option value="BDMM-Prime">
+              
+              <option value="BDSKY">
+              
+              <option value="BEAST_CLASSIC">
+              
+              <option value="Babel">
+              
+              <option value="CA">
+              
+              <option value="CCD">
+              
+              <option value="ClaDS">
+              
+              <option value="CoalRe">
+              
+              <option value="CoupledMCMC">
+              
+              <option value="MM">
+              
+              <option value="MSBD">
+              
+              <option value="Mascot">
+              
+              <option value="MultiTypeTree">
+              
+              <option value="NS">
+              
+              <option value="ORC">
+              
+              <option value="PIQMEE">
+              
+              <option value="SA">
+              
+              <option value="SCOTTI">
+              
+              <option value="StarBEAST2">
+              
+              <option value="TiDeTree">
+              
+              <option value="bModelTest">
+              
+              <option value="bacter">
+              
+              <option value="bdmm">
+              
+              <option value="feast">
+              
+              <option value="snapper">
+              
+              <option value="starbeast3">
+              
+              
+              <option value="epidemiology">
+              
+              <option value="language evolution">
+              
+              <option value="macroevolution">
+              
+              <option value="palaeontology">
+              
+              <option value="phylogeography">
+              
+              <option value="population genetics">
+              
+              <option value="single-cell">
+              
+            </datalist>
+            <button type="button" class="btn-clear-search d-none" id="keyword-clear" aria-label="Clear search">&times;</button>
+          </div>
+          <div id="fulltext-search-container" class="flex-grow-1 min-w-0 position-relative" style="display: none;">
+            <input type="text" id="fulltext-search" class="form-control form-control-sm" placeholder="Search tutorial content..." autocomplete="off">
+            <button type="button" class="btn-clear-search d-none" id="fulltext-clear" aria-label="Clear search">&times;</button>
+          </div>
+        </div>
+
+        <!-- Suggestions / status: full control width, no indent under the toggle -->
+        <div id="keyword-chips-row" class="mt-1">
+          <span id="keyword-chips" class="d-inline-flex flex-wrap gap-1">
+            
+            
+            
+            
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="coalescent">coalescent</button>
+            
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="birth-death">birth-death</button>
+            
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="molecular clock">molecular clock</button>
+            
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="phylogeography">phylogeography</button>
+            
+            
+            
+              
+              
+            
+              
+              
+            
+              
+              
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="relaxed clock">relaxed clock</button>
+                
+              
+            
+              
+              
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="tip dating">tip dating</button>
+                
+              
+            
+              
+              
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="calibration">calibration</button>
+                
+              
+            
+              
+              
+            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill keyword-chip" data-keyword="substitution models">substitution models</button>
+                
+              
+            
+              
+          </span>
+        </div>
+        <div id="fulltext-status" class="text-muted small mt-1" style="display: none;" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <!-- Sort options -->
+    <div class="filter-row mb-2">
+      <label class="form-label fw-semibold filter-label">Sort by:</label>
+      <div class="filter-controls d-flex flex-wrap gap-1">
+        <button class="btn btn-sm btn-outline-secondary rounded-pill active" data-sort="date">Recently updated</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-sort="title">Title (A-Z)</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-sort="beastversion">BEAST version</button>
+      </div>
+    </div>
+
+    <!-- Workflow filter -->
+    <div class="filter-row mb-2">
+      <label class="form-label fw-semibold filter-label">Workflow:</label>
+      <div class="filter-controls d-flex flex-wrap gap-1">
+        <button class="btn btn-sm btn-outline-secondary rounded-pill active" data-filter="workflow" data-value="all">All</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="workflow" data-value="Getting started">Getting started</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="workflow" data-value="Basic workflow">Basic workflow</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="workflow" data-value="Advanced analysis">Advanced analysis</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="workflow" data-value="Troubleshooting">Troubleshooting</button>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="workflow" data-value="Validation">Validation</button>
+      </div>
+    </div>
+
+    <!-- Domain filter (dynamic) -->
+    
+    <div class="filter-row mb-2">
+      <label class="form-label fw-semibold filter-label">Domain:</label>
+      <div class="filter-controls d-flex flex-wrap gap-1">
+        <button class="btn btn-sm btn-outline-secondary rounded-pill active" data-filter="domain" data-value="all">All</button>
         
-          <i class="bi bi-reply-all"></i> All
-        </a>
-      </li>				
-      <li class="nav-item">
-      
-        <a class="nav-link" href="/tutorials/beginner/">
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="domain" data-value="epidemiology">Epidemiology</button>
         
-          <i class="bi bi-person"></i> Beginner
-        </a>
-      </li>				
-      <li class="nav-item">
-      
-        <a class="nav-link" href="/tutorials/intermediate/">
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="domain" data-value="language evolution">Language evolution</button>
         
-          <i class="bi bi-truck"></i> Intermediate
-        </a>
-      </li>				
-      <li class="nav-item">
-      
-        <a class="nav-link" href="/tutorials/professional/">
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="domain" data-value="macroevolution">Macroevolution</button>
         
-          <i class="bi bi-lightning"></i> Professional
-        </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" type="application/rss+xml" href="/feed.tutorials.xml"><i class="bi bi-rss"></i> Subscribe</a>
-        </a>
-      </li>
-    </ul>
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="domain" data-value="palaeontology">Palaeontology</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="domain" data-value="phylogeography">Phylogeography</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="domain" data-value="population genetics">Population genetics</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="domain" data-value="single-cell">Single-cell</button>
+        
+      </div>
+    </div>
+    
+
+    <!-- Package filter (ranked by tutorial count; top N shown, rest behind "Show all") -->
+    
+    
+    
+    <div class="filter-row mb-2">
+      <label class="form-label fw-semibold filter-label">Package:</label>
+      <div class="filter-controls d-flex flex-wrap gap-1">
+        <button class="btn btn-sm btn-outline-secondary rounded-pill active" data-filter="package" data-value="all">All</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="package" data-value="CCD">CCD</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="package" data-value="BDSKY">BDSKY</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="package" data-value="SA">SA</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="package" data-value="StarBEAST2">StarBEAST2</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill" data-filter="package" data-value="bModelTest">bModelTest</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="CoupledMCMC">CoupledMCMC</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="MM">MM</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="ORC">ORC</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="BDMM-Prime">BDMM-Prime</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="BEAST_CLASSIC">BEAST_CLASSIC</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="Babel">Babel</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="CA">CA</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="ClaDS">ClaDS</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="CoalRe">CoalRe</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="MSBD">MSBD</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="Mascot">Mascot</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="MultiTypeTree">MultiTypeTree</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="NS">NS</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="PIQMEE">PIQMEE</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="SCOTTI">SCOTTI</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="TiDeTree">TiDeTree</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="bacter">bacter</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="bdmm">bdmm</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="feast">feast</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="snapper">snapper</button>
+        
+        <button class="btn btn-sm btn-outline-secondary rounded-pill package-extra d-none" data-filter="package" data-value="starbeast3">starbeast3</button>
+        
+        
+        <button type="button" class="btn btn-sm rounded-pill border-0 text-secondary" id="package-show-all" data-expanded="false">Show all (26)</button>
+        
+      </div>
+    </div>
+    
+
+    <!-- Deprecated toggle -->
+    <div class="form-check mb-0">
+      <input type="checkbox" class="form-check-input" id="show-legacy">
+      <label class="form-check-label" for="show-legacy">Show deprecated tutorials</label>
+    </div>
+  </div>
+
+  <div class="text-muted small mb-2">
+    <span id="tutorial-count">35</span> tutorials found
+  </div>
+
+  <!-- Tutorial Grid -->
+  <div class="tutorial-grid" id="tutorial-grid">
+    
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Troubleshooting"
+         data-packages="SA,ORC"
+         data-domains=""
+         data-keywords="initialization,morphological,relaxed clock,calibration"
+         data-status="current"
+         data-title="Troubleshooting initialization issues"
+         data-date="20260603"
+         data-beastversion="2.7"
+         data-search="troubleshooting initialization issues getting beast2 to start joëlle barido-sottani,louis du plessis sa orc initialization morphological relaxed clock calibration">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Troubleshooting-initialization-issues/" class="text-decoration-none">Troubleshooting initialization issues</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Getting BEAST2 to start</p>
+        <p class="text-secondary small mb-2">Joëlle Barido-Sottani,Louis du Plessis</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2026
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Troubleshooting</span>
+          
+
+          
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">SA</span>
+          
+          <span class="badge rounded-pill badge-package">ORC</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Troubleshooting"
+         data-packages=""
+         data-domains=""
+         data-keywords="convergence,MCMC,molecular clock,parameter estimation"
+         data-status="current"
+         data-title="Troubleshooting-convergence-issues"
+         data-date="20260601"
+         data-beastversion="2.7"
+         data-search="troubleshooting-convergence-issues post-processing and improving performance david a. rasmussen  convergence mcmc molecular clock parameter estimation">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Troubleshooting-convergence-issues/" class="text-decoration-none">Troubleshooting-convergence-issues</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Post-processing and improving performance</p>
+        <p class="text-secondary small mb-2">David A. Rasmussen</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2026
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Troubleshooting</span>
+          
+
+          
+          
+          
+
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="BDSKY"
+         data-domains="epidemiology"
+         data-keywords="priors,molecular clock,calibration,tip dating"
+         data-status="current"
+         data-title="Prior-selection"
+         data-date="20260601"
+         data-beastversion="2.7"
+         data-search="prior-selection prior selection and clock calibration using influenza a data. veronika bošková,venelin mitov,louis du plessis bdsky priors molecular clock calibration tip dating">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Prior-selection/" class="text-decoration-none">Prior-selection</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Prior selection and clock calibration using Influenza A data.</p>
+        <p class="text-secondary small mb-2">Veronika Bošková,Venelin Mitov,Louis du Plessis</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2026
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">BDSKY</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow=""
+         data-packages=""
+         data-domains=""
+         data-keywords=""
+         data-status=""
+         data-title="Structured birth-death model with BDMM-Prime"
+         data-date="20260518"
+         data-beastversion="2.7"
+         data-search="structured birth-death model with bdmm-prime population structure using the multi-type birth-death model denise kühnert, jūlija pečerska, ugnė stolz, tim vaughan  ">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Structured-birth-death-BDMM-Prime/" class="text-decoration-none">Structured birth-death model with BDMM-Prime</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Population structure using the multi-type birth-death model</p>
+        <p class="text-secondary small mb-2">Denise Kühnert, Jūlija Pečerska, Ugnė Stolz, Tim Vaughan</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated May 2026
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+
+          
+          
+          
+
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="snapper"
+         data-domains="population genetics,macroevolution"
+         data-keywords="multispecies coalescent,species delimitation,marginal likelihood,SNP data"
+         data-status="current"
+         data-title="Species Trees and Species Delimitation with SNAPPER"
+         data-date="20251106"
+         data-beastversion="2.7"
+         data-search="species trees and species delimitation with snapper analyzing snp or aflp data adam leaché, remco bouckaert snapper multispecies coalescent species delimitation marginal likelihood snp data">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/BFD_snapper_tutorial/" class="text-decoration-none">Species Trees and Species Delimitation with SNAPPER</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Analyzing SNP or AFLP data</p>
+        <p class="text-secondary small mb-2">Adam Leaché, Remco Bouckaert</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Nov 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Population genetics</span>
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">snapper</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="MM,SA"
+         data-domains="macroevolution,palaeontology"
+         data-keywords="fossilized birth-death,morphological,tip dating,calibration"
+         data-status="current"
+         data-title="Total Evidence Tutorial"
+         data-date="20250827"
+         data-beastversion="2.7"
+         data-search="total evidence tutorial inferring phylogenies using genetic sequences and morphological characters bethany j. allen,joëlle barido-sottani mm sa fossilized birth-death morphological tip dating calibration">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Total-Evidence-Tutorial/" class="text-decoration-none">Total Evidence Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Inferring phylogenies using genetic sequences and morphological characters</p>
+        <p class="text-secondary small mb-2">Bethany J. Allen,Joëlle Barido-Sottani</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Aug 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          <span class="badge rounded-pill badge-domain">Palaeontology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">MM</span>
+          
+          <span class="badge rounded-pill badge-package">SA</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="MultiTypeTree"
+         data-domains="phylogeography,epidemiology"
+         data-keywords="structured coalescent,migration,population structure,phylogeography"
+         data-status="current"
+         data-title="Structured coalescent"
+         data-date="20250811"
+         data-beastversion="2.7"
+         data-search="structured coalescent population structure using multitypetree nicola f. müller,tim vaughan multitypetree structured coalescent migration population structure phylogeography">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Structured-coalescent/" class="text-decoration-none">Structured coalescent</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Population structure using MultiTypeTree</p>
+        <p class="text-secondary small mb-2">Nicola F. Müller,Tim Vaughan</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Aug 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Phylogeography</span>
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">MultiTypeTree</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="BDMM-Prime,MM,BEAST_CLASSIC"
+         data-domains="macroevolution,palaeontology,phylogeography"
+         data-keywords="fossilized birth-death,birth-death,population structure,tip dating"
+         data-status="current"
+         data-title="BDMM-Prime for Macroevolution"
+         data-date="20250717"
+         data-beastversion="2.7"
+         data-search="bdmm-prime for macroevolution the fossilized birth-death process and extensions rachel c. m. warnock,timothy g. vaughan,louis du plessis bdmm-prime mm beast_classic fossilized birth-death birth-death population structure tip dating">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/BDMM-Prime-for-macroevolution/" class="text-decoration-none">BDMM-Prime for Macroevolution</a></h5>
+        <p class="card-subtitle text-muted small mb-2">The fossilized birth-death process and extensions</p>
+        <p class="text-secondary small mb-2">Rachel C. M. Warnock,Timothy G. Vaughan,Louis du Plessis</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          <span class="badge rounded-pill badge-domain">Palaeontology</span>
+          
+          <span class="badge rounded-pill badge-domain">Phylogeography</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">BDMM-Prime</span>
+          
+          <span class="badge rounded-pill badge-package">MM</span>
+          
+          <span class="badge rounded-pill badge-package">BEAST_CLASSIC</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="starbeast3,CCD"
+         data-domains="macroevolution,population genetics"
+         data-keywords="multispecies coalescent,species tree,morphological,total evidence,relaxed clock"
+         data-status="current"
+         data-title="StarBeast3 Tutorial"
+         data-date="20250716"
+         data-beastversion="2.7"
+         data-search="starbeast3 tutorial estimating species trees using starbeast3 ugne stolz, jordan douglas starbeast3 ccd multispecies coalescent species tree morphological total evidence relaxed clock">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/StarBeast3-Tutorial/" class="text-decoration-none">StarBeast3 Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Estimating species trees using StarBeast3</p>
+        <p class="text-secondary small mb-2">Ugne Stolz, Jordan Douglas</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          <span class="badge rounded-pill badge-domain">Population genetics</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">starbeast3</span>
+          
+          <span class="badge rounded-pill badge-package">CCD</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="TiDeTree,CCD"
+         data-domains="single-cell"
+         data-keywords="birth-death,molecular clock,tip dating,lineage tracing,single-cell"
+         data-status="current"
+         data-title="TiDeTree Tutorial"
+         data-date="20250715"
+         data-beastversion="2.7"
+         data-search="tidetree tutorial reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data sophie seidel tidetree ccd birth-death molecular clock tip dating lineage tracing single-cell">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/TiDeTree-Tutorial/" class="text-decoration-none">TiDeTree Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data</p>
+        <p class="text-secondary small mb-2">Sophie Seidel</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Single-cell</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">TiDeTree</span>
+          
+          <span class="badge rounded-pill badge-package">CCD</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="SA,ORC"
+         data-domains="palaeontology,macroevolution"
+         data-keywords="fossilized birth-death,birth-death,calibration,relaxed clock,tip dating,morphological"
+         data-status="current"
+         data-title="Divergence Time Estimation"
+         data-date="20250713"
+         data-beastversion="2.7"
+         data-search="divergence time estimation dating species divergences with the fossilized birth-death process tracy a. heath,rachel warnock,bethany j. allen sa orc fossilized birth-death birth-death calibration relaxed clock tip dating morphological">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/FBD-tutorial/" class="text-decoration-none">Divergence Time Estimation</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Dating Species Divergences with the Fossilized Birth-Death Process</p>
+        <p class="text-secondary small mb-2">Tracy A. Heath,Rachel Warnock,Bethany J. Allen</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Palaeontology</span>
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">SA</span>
+          
+          <span class="badge rounded-pill badge-package">ORC</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="bModelTest,CCD"
+         data-domains="macroevolution"
+         data-keywords="relaxed clock,molecular clock,substitution models,site models,calibration"
+         data-status="current"
+         data-title="Molecular clock dating and modelling rate variation"
+         data-date="20250711"
+         data-beastversion="2.7"
+         data-search="molecular clock dating and modelling rate variation accounting for evolutionary rate variation in passerine birds simon ho,jacqueline nguyen bmodeltest ccd relaxed clock molecular clock substitution models site models calibration">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Molecular-clock-dating-and-modelling-rate-variation/" class="text-decoration-none">Molecular clock dating and modelling rate variation</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Accounting for evolutionary rate variation in passerine birds</p>
+        <p class="text-secondary small mb-2">Simon Ho,Jacqueline Nguyen</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">bModelTest</span>
+          
+          <span class="badge rounded-pill badge-package">CCD</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Validation"
+         data-packages="NS"
+         data-domains=""
+         data-keywords="model selection,marginal likelihood,nested sampling,molecular clock"
+         data-status="current"
+         data-title="Model selection"
+         data-date="20250710"
+         data-beastversion="2.7"
+         data-search="model selection model selection with nested sampling remco bouckaert ns model selection marginal likelihood nested sampling molecular clock">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/NS-tutorial/" class="text-decoration-none">Model selection</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Model selection with nested sampling</p>
+        <p class="text-secondary small mb-2">Remco Bouckaert</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Validation</span>
+          
+
+          
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">NS</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Getting started"
+         data-packages="CCD"
+         data-domains="macroevolution"
+         data-keywords="molecular clock,substitution models,site models,nucleotide,Bayesian inference"
+         data-status="current"
+         data-title="Introduction to BEAST2"
+         data-date="20250708"
+         data-beastversion="2.7"
+         data-search="introduction to beast2 this is a simple introductory tutorial to help you get started with using beast2 and its accomplices. jūlija pečerska,veronika bošková,louis du plessis ccd molecular clock substitution models site models nucleotide bayesian inference">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Introduction-to-BEAST2/" class="text-decoration-none">Introduction to BEAST2</a></h5>
+        <p class="card-subtitle text-muted small mb-2">This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.</p>
+        <p class="text-secondary small mb-2">Jūlija Pečerska,Veronika Bošková,Louis du Plessis</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Getting started</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">CCD</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="CCD"
+         data-domains="epidemiology"
+         data-keywords="molecular clock,tip dating,coalescent,substitution models"
+         data-status="current"
+         data-title="Time-stamped data"
+         data-date="20250703"
+         data-beastversion="2.7"
+         data-search="time-stamped data time-stamped data remco bouckaert, walter xie, fábio k. mendes, eva li and alexei drummond ccd molecular clock tip dating coalescent substitution models">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/MEP-tutorial/" class="text-decoration-none">Time-stamped data</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Time-stamped data</p>
+        <p class="text-secondary small mb-2">Remco Bouckaert, Walter Xie, Fábio K. Mendes, Eva Li and Alexei Drummond</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">CCD</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="ClaDS"
+         data-domains="macroevolution"
+         data-keywords="birth-death,diversification,relaxed clock"
+         data-status="current"
+         data-title="The ClaDS package"
+         data-date="20250619"
+         data-beastversion="2.7"
+         data-search="the clads package inferring progressive changes in birth and death rates joëlle barido-sottani clads birth-death diversification relaxed clock">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/ClaDS-tutorial/" class="text-decoration-none">The ClaDS package</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Inferring progressive changes in birth and death rates</p>
+        <p class="text-secondary small mb-2">Joëlle Barido-Sottani</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">ClaDS</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="MSBD"
+         data-domains="macroevolution"
+         data-keywords="birth-death,diversification"
+         data-status="current"
+         data-title="The MSBD package"
+         data-date="20250619"
+         data-beastversion="2.7"
+         data-search="the msbd package inferring lineage-dependent birth and death rates joëlle barido-sottani msbd birth-death diversification">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/MSBD-tutorial/" class="text-decoration-none">The MSBD package</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Inferring lineage-dependent birth and death rates</p>
+        <p class="text-secondary small mb-2">Joëlle Barido-Sottani</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">MSBD</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="bdmm"
+         data-domains="phylogeography,epidemiology"
+         data-keywords="birth-death,population structure,migration"
+         data-status="current"
+         data-title="Structured birth-death model"
+         data-date="20250604"
+         data-beastversion="2.7"
+         data-search="structured birth-death model population structure using the multi-type birth-death model denise kühnert, jūlija pečerska bdmm birth-death population structure migration">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Structured-birth-death-model/" class="text-decoration-none">Structured birth-death model</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Population structure using the multi-type birth-death model</p>
+        <p class="text-secondary small mb-2">Denise Kühnert, Jūlija Pečerska</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Phylogeography</span>
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">bdmm</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="Mascot,CCD"
+         data-domains="phylogeography,epidemiology"
+         data-keywords="structured coalescent,migration,population structure,phylogeography"
+         data-status="current"
+         data-title="MASCOT v3.0.0 Tutorial"
+         data-date="20250602"
+         data-beastversion="2.7"
+         data-search="mascot v3.0.0 tutorial parameter and state inference using the approximate structured coalescent nicola f. müller mascot ccd structured coalescent migration population structure phylogeography">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Mascot-Tutorial/" class="text-decoration-none">MASCOT v3.0.0 Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Parameter and State inference using the approximate structured coalescent</p>
+        <p class="text-secondary small mb-2">Nicola F. Müller</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Phylogeography</span>
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">Mascot</span>
+          
+          <span class="badge rounded-pill badge-package">CCD</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages=""
+         data-domains=""
+         data-keywords="visualization,R,tree visualization,phylodynamics"
+         data-status="current"
+         data-title="Visualizing BEAST2 results in R"
+         data-date="20250523"
+         data-beastversion="2.7"
+         data-search="visualizing beast2 results in r tutorial on visualising results from beast2 analyses. cecilia valenzuela agüí, ugnė stolz  visualization r tree visualization phylodynamics">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Visualizing-BEAST2-results/" class="text-decoration-none">Visualizing BEAST2 results in R</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Tutorial on visualising results from BEAST2 analyses.</p>
+        <p class="text-secondary small mb-2">Cecilia Valenzuela Agüí, Ugnė Stolz</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated May 2025
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          
+
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="BDSKY"
+         data-domains="epidemiology"
+         data-keywords="skyline,coalescent,birth-death,population dynamics"
+         data-status="current"
+         data-title="Skyline plots"
+         data-date="20240611"
+         data-beastversion="2.7"
+         data-search="skyline plots inference of past population dynamics using bayesian coalescent skyline and birth-death skyline plots. nicola f. müller,louis du plessis bdsky skyline coalescent birth-death population dynamics">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Skyline-plots/" class="text-decoration-none">Skyline plots</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.</p>
+        <p class="text-secondary small mb-2">Nicola F. Müller,Louis du Plessis</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2024
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">BDSKY</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="StarBEAST2"
+         data-domains="macroevolution,population genetics"
+         data-keywords="multispecies coalescent,species tree,molecular clock,relaxed clock"
+         data-status="current"
+         data-title="StarBEAST2 v1.0.0 tutorial"
+         data-date="20230815"
+         data-beastversion="2.7"
+         data-search="starbeast2 v1.0.0 tutorial estimating species trees using starbeast2 huw a. ogilvie starbeast2 multispecies coalescent species tree molecular clock relaxed clock">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/starbeast2-tutorial/" class="text-decoration-none">StarBEAST2 v1.0.0 tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Estimating species trees using StarBEAST2</p>
+        <p class="text-secondary small mb-2">Huw A. Ogilvie</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Aug 2023
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          <span class="badge rounded-pill badge-domain">Population genetics</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">StarBEAST2</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="bModelTest"
+         data-domains=""
+         data-keywords="substitution models,site models,model averaging,model selection"
+         data-status="current"
+         data-title="Substitution-model-averaging"
+         data-date="20230724"
+         data-beastversion="2.7"
+         data-search="substitution-model-averaging a tutorial using bmodeltest david a. rasmussen,carsten magnus,remco bouckaert bmodeltest substitution models site models model averaging model selection">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.7</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Substitution-model-averaging/" class="text-decoration-none">Substitution-model-averaging</a></h5>
+        <p class="card-subtitle text-muted small mb-2">A tutorial using bModelTest</p>
+        <p class="text-secondary small mb-2">David A. Rasmussen,Carsten Magnus,Remco Bouckaert</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2023
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">bModelTest</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="BDSKY,feast"
+         data-domains="macroevolution,palaeontology"
+         data-keywords="skyline,fossilized birth-death,coalescent,diversification"
+         data-status="current"
+         data-title="Skyline analyses for macroevolution"
+         data-date="20230315"
+         data-beastversion="2.6"
+         data-search="skyline analyses for macroevolution estimating evolutionary parameters from species phylogenies bethany j. allen bdsky feast skyline fossilized birth-death coalescent diversification">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.6</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Skyline-analyses-for-macroevolution/" class="text-decoration-none">Skyline analyses for macroevolution</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Estimating evolutionary parameters from species phylogenies</p>
+        <p class="text-secondary small mb-2">Bethany J. Allen</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Mar 2023
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          <span class="badge rounded-pill badge-domain">Palaeontology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">BDSKY</span>
+          
+          <span class="badge rounded-pill badge-package">feast</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="CoalRe"
+         data-domains="epidemiology"
+         data-keywords="coalescent,reassortment,recombination,tip dating"
+         data-status="current"
+         data-title="Estimating Reassortment Networks with CoalRe"
+         data-date="20220401"
+         data-beastversion="2.6"
+         data-search="estimating reassortment networks with coalre estimating reassortment networks with coalre nicola f. müller coalre coalescent reassortment recombination tip dating">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.6</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Reassortment-Tutorial/" class="text-decoration-none">Estimating Reassortment Networks with CoalRe</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Estimating Reassortment Networks with CoalRe</p>
+        <p class="text-secondary small mb-2">Nicola F. Müller</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Apr 2022
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">CoalRe</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="PIQMEE"
+         data-domains="epidemiology"
+         data-keywords="birth-death,skyline,tip dating,duplicate sequences"
+         data-status="current"
+         data-title="PIQMEE-Tutorial"
+         data-date="20220228"
+         data-beastversion="2.6"
+         data-search="piqmee-tutorial how to efficiently analyze large data sets containing duplicates veronika bošková piqmee birth-death skyline tip dating duplicate sequences">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.6</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/PIQMEE-Tutorial/" class="text-decoration-none">PIQMEE-Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">How to efficiently analyze large data sets containing duplicates</p>
+        <p class="text-secondary small mb-2">Veronika Bošková</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Feb 2022
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">PIQMEE</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="StarBEAST2,CoupledMCMC"
+         data-domains="population genetics,macroevolution"
+         data-keywords="multispecies coalescent,migration,population structure,gene flow"
+         data-status="current"
+         data-title="AIM in StarBeast2 v0.15.2 Tutorial"
+         data-date="20200914"
+         data-beastversion="2.5"
+         data-search="aim in starbeast2 v0.15.2 tutorial inferring species trees and gene flow from multiple loci nicola f. müller starbeast2 coupledmcmc multispecies coalescent migration population structure gene flow">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.5</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/AIM-Tutorial/" class="text-decoration-none">AIM in StarBeast2 v0.15.2 Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Inferring species trees and gene flow from multiple loci</p>
+        <p class="text-secondary small mb-2">Nicola F. Müller</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Sep 2020
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Population genetics</span>
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">StarBEAST2</span>
+          
+          <span class="badge rounded-pill badge-package">CoupledMCMC</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Troubleshooting"
+         data-packages="CoupledMCMC"
+         data-domains="epidemiology"
+         data-keywords="parallel tempering,MCMC,skyline,coalescent,molecular clock"
+         data-status="current"
+         data-title="Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial"
+         data-date="20191206"
+         data-beastversion="2.6"
+         data-search="bayesian skyline with adaptive parallel tempering with coupledmcmc tutorial adaptive parallel tempering nicola f. müller coupledmcmc parallel tempering mcmc skyline coalescent molecular clock">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.6</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/CoupledMCMC-Tutorial/" class="text-decoration-none">Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Adaptive parallel Tempering</p>
+        <p class="text-secondary small mb-2">Nicola F. Müller</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Dec 2019
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Troubleshooting</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">CoupledMCMC</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="Babel,BDSKY,SA"
+         data-domains="language evolution"
+         data-keywords="strict clock,substitution models,calibration,cognate data"
+         data-status="current"
+         data-title="Language Phylogenies"
+         data-date="20190729"
+         data-beastversion="2.5"
+         data-search="language phylogenies using babel to analyse linguistic data simon j. greenhill, konstantin hoffmann babel bdsky sa strict clock substitution models calibration cognate data">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.5</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/LanguagePhylogenies/" class="text-decoration-none">Language Phylogenies</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Using Babel to analyse linguistic data</p>
+        <p class="text-secondary small mb-2">Simon J. Greenhill, Konstantin Hoffmann</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2019
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Language evolution</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">Babel</span>
+          
+          <span class="badge rounded-pill badge-package">BDSKY</span>
+          
+          <span class="badge rounded-pill badge-package">SA</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="CA"
+         data-domains="macroevolution,palaeontology"
+         data-keywords="birth-death,calibration,molecular clock,relaxed clock,divergence time"
+         data-status="current"
+         data-title="CladeAge Tutorial"
+         data-date="20190221"
+         data-beastversion="2.5"
+         data-search="cladeage tutorial fossil-based divergence-time estimation with cladeage michael matschiner ca birth-death calibration molecular clock relaxed clock divergence time">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.5</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/CladeAge-Tutorial/" class="text-decoration-none">CladeAge Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Fossil-based divergence-time estimation with CladeAge</p>
+        <p class="text-secondary small mb-2">Michael Matschiner</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Feb 2019
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          <span class="badge rounded-pill badge-domain">Palaeontology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">CA</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="bModelTest"
+         data-domains="epidemiology"
+         data-keywords="relaxed clock,molecular clock,tip dating,substitution models,model averaging"
+         data-status="current"
+         data-title="Molecular dating using heterochronous data and substitution model averaging"
+         data-date="20181105"
+         data-beastversion="2.5"
+         data-search="molecular dating using heterochronous data and substitution model averaging estimating the time of origin of the 2009 h1n1 pandemic in north america sebastian duchene, tim vaughan, veronika boskova bmodeltest relaxed clock molecular clock tip dating substitution models model averaging">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.5</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Molecular-Dating-Tutorial/" class="text-decoration-none">Molecular dating using heterochronous data and substitution model averaging</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Estimating the time of origin of the 2009 H1N1 pandemic in North America</p>
+        <p class="text-secondary small mb-2">Sebastian Duchene, Tim Vaughan, Veronika Boskova</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Nov 2018
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">bModelTest</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="bacter"
+         data-domains="population genetics,epidemiology"
+         data-keywords="coalescent,recombination,nucleotide"
+         data-status="current"
+         data-title="Bacter Tutorial"
+         data-date="20180621"
+         data-beastversion="2.5"
+         data-search="bacter tutorial inferring args from bacterial sequence data. tim vaughan bacter coalescent recombination nucleotide">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.5</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/Bacter-Tutorial/" class="text-decoration-none">Bacter Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Inferring ARGs from bacterial sequence data.</p>
+        <p class="text-secondary small mb-2">Tim Vaughan</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jun 2018
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Population genetics</span>
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">bacter</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Advanced analysis"
+         data-packages="SCOTTI"
+         data-domains="epidemiology"
+         data-keywords="structured coalescent,transmission tree,migration,population structure"
+         data-status="current"
+         data-title="SCOTTI Tutorial"
+         data-date="20170724"
+         data-beastversion="2.4"
+         data-search="scotti tutorial transmission tree reconstruction with the structured coalescent louis du plessis,nicola de maio scotti structured coalescent transmission tree migration population structure">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.4</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/SCOTTI-Tutorial/" class="text-decoration-none">SCOTTI Tutorial</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Transmission tree reconstruction with the structured coalescent</p>
+        <p class="text-secondary small mb-2">Louis du Plessis,Nicola de Maio</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Jul 2017
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Advanced analysis</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Epidemiology</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">SCOTTI</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Validation"
+         data-packages=""
+         data-domains=""
+         data-keywords="model adequacy,substitution models,molecular clock,posterior prediction"
+         data-status="current"
+         data-title="Model adequacy using BEAST2"
+         data-date="20170209"
+         data-beastversion="2.4"
+         data-search="model adequacy using beast2 assessing clock and substitution models david duchêne  model adequacy substitution models molecular clock posterior prediction">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.4</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/adequacy_tutorial/" class="text-decoration-none">Model adequacy using BEAST2</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Assessing clock and substitution models</p>
+        <p class="text-secondary small mb-2">David Duchêne</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Feb 2017
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Validation</span>
+          
+
+          
+          
+          
+
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <div class="card tutorial-card "
+         data-workflow="Basic workflow"
+         data-packages="StarBEAST2"
+         data-domains="macroevolution,population genetics"
+         data-keywords="multispecies coalescent,calibration,molecular clock,relaxed clock"
+         data-status="current"
+         data-title="Calibrated Species Trees"
+         data-date="20170202"
+         data-beastversion="2.4"
+         data-search="calibrated species trees estimating species divergence times using starbeast2 huw a. ogilvie starbeast2 multispecies coalescent calibration molecular clock relaxed clock">
+
+      <div class="card-body">
+        <!-- Status and version badges -->
+        <div class="mb-2">
+          
+
+          
+          <span class="badge bg-secondary me-1">BEAST 2.4</span>
+          
+        </div>
+
+        <h5 class="card-title"><a href="/tutorials/calibrated-species-trees/" class="text-decoration-none">Calibrated Species Trees</a></h5>
+        <p class="card-subtitle text-muted small mb-2">Estimating species divergence times using StarBEAST2</p>
+        <p class="text-secondary small mb-2">Huw A. Ogilvie</p>
+
+        <!-- Last updated -->
+        
+        <p class="text-muted small mb-2">
+          <i class="bi bi-clock-history"></i> Updated Feb 2017
+        </p>
+        
+
+        <!-- Prerequisites -->
+        
+
+        <!-- Tags: workflow, domains, packages -->
+        <div class="d-flex flex-wrap gap-1 mt-2">
+          
+          <span class="badge rounded-pill badge-workflow">Basic workflow</span>
+          
+
+          
+          
+          <span class="badge rounded-pill badge-domain">Macroevolution</span>
+          
+          <span class="badge rounded-pill badge-domain">Population genetics</span>
+          
+          
+
+          
+          
+          <span class="badge rounded-pill badge-package">StarBEAST2</span>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    
   </div>
 </div>
 
-<div class="bigspacer"></div>
-
-
-
-
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Introduction-to-BEAST2/" class="off">Introduction to BEAST2</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Introduction-to-BEAST2/" class="off">This is a simple introductory tutorial to help you get started with using BEAST2 and its accomplices.</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Jūlija Pečerska
-					
-			
-				
-						, Veronika Bošková
-				
-			
-				
-						
-							and Louis du Plessis
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Introduction-to-BEAST2/commit/4388a674bdbba62f927a94d1a6212723bee66d41">
-				8 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/jugne">				
-				jugne
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Troubleshooting-convergence-issues/" class="off">Troubleshooting convergence issues</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Troubleshooting-convergence-issues/" class="off">Post-processing and improving performance</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						David A. Rasmussen
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-convergence-issues/commit/350fce17b19beab198550009ddf2fa5bc65d2638">
-				1 Jun 2026
-				</a>
-				by
-				<a class="off" href="https://github.com/laduplessis">				
-				laduplessis
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Troubleshooting-initialization-issues/" class="off">Troubleshooting initialization issues</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Troubleshooting-initialization-issues/" class="off">Getting BEAST2 to start</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Joëlle Barido-Sottani
-					
-			
-				
-						
-							and Louis du Plessis
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Troubleshooting-initialization-issues/commit/478c7675eeda0144520cce4cbbe3b20c50debbc3">
-				3 Jun 2026
-				</a>
-				by
-				<a class="off" href="https://github.com/NicoNeureiter">				
-				NicoNeureiter
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/AIM-Tutorial/" class="off">AIM in StarBeast2 v0.15.2 Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/AIM-Tutorial/" class="off">Inferring species trees and gene flow from multiple loci</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Nicola F. Müller
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/nicfel/AIM-Tutorial/commit/f8c88590e02d789143541f4c1b5fcd54e9bcc425">
-				14 Sep 2020
-				</a>
-				by
-				<a class="off" href="https://github.com/nicfel">				
-				nicfel
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Bacter-Tutorial/" class="off">Bacter Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Bacter-Tutorial/" class="off">Inferring ARGs from bacterial sequence data.</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Tim Vaughan
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Bacter-Tutorial/commit/ac12bf7ade609ef59c60a426035ae5021aceaf39">
-				21 Jun 2018
-				</a>
-				by
-				<a class="off" href="https://github.com/tgvaughan">				
-				tgvaughan
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/CoupledMCMC-Tutorial/" class="off">Bayesian Skyline with adaptive parallel Tempering with CoupledMCMC Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/CoupledMCMC-Tutorial/" class="off">Adaptive parallel Tempering</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Nicola F. Müller
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/nicfel/CoupledMCMC-Tutorial/commit/63a0145c1ada7717aa2117b0b1da91bb0248dac3">
-				6 Dec 2019
-				</a>
-				by
-				<a class="off" href="https://github.com/nicfel">				
-				nicfel
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/BDMM-Prime-for-macroevolution/" class="off">BDMM Prime for Macroevolution</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/BDMM-Prime-for-macroevolution/" class="off">The fossilized birth-death process and extensions</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Rachel C. M. Warnock
-					
-			
-				
-						, Timothy G. Vaughan
-				
-			
-				
-						
-							and Louis du Plessis
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/rachelwarnock/BDMM-Prime-for-macroevolution/commit/4dea8be6f7fe9973a3249d285f6c9a8af3b0818e">
-				17 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/rachelwarnock">				
-				rachelwarnock
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/calibrated-species-trees/" class="off">Calibrated Species Trees</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/calibrated-species-trees/" class="off">Estimating species divergence times using StarBEAST2</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Huw A. Ogilvie
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/genomescale/calibrated-species-trees/commit/aee98367a106c7ae9c09fa02d8a2339a3ba4e3cf">
-				2 Feb 2017
-				</a>
-				by
-				<a class="off" href="">				
-				Unknown
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/CladeAge-Tutorial/" class="off">CladeAge Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/CladeAge-Tutorial/" class="off">Fossil-based divergence-time estimation with CladeAge</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Michael Matschiner
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/mmatschiner/CladeAge-Tutorial/commit/64dee2c3e902340cec82edfbfc6c77cf794e4335">
-				21 Feb 2019
-				</a>
-				by
-				<a class="off" href="https://github.com/mmatschiner">				
-				mmatschiner
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/ClaDS-tutorial/" class="off">The ClaDS package</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/ClaDS-tutorial/" class="off">Inferring progressive changes in birth and death rates</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Joëlle Barido-Sottani
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/bjoelle/ClaDS-tutorial/commit/7b587f6008e2584a48427ebff0866274565537f4">
-				19 Jun 2025
-				</a>
-				by
-				<a class="off" href="">				
-				Unknown
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/FBD-tutorial/" class="off">Divergence Time Estimation</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/FBD-tutorial/" class="off">Dating Species Divergences with the Fossilized Birth-Death Process</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Tracy A. Heath
-					
-			
-				
-						, Rachel Warnock
-				
-			
-				
-						
-							and Bethany J. Allen
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/FBD-tutorial/commit/1e237463b0cc2e647e25027fd42b99c5d1797411">
-				13 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/laduplessis">				
-				laduplessis
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Reassortment-Tutorial/" class="off">Estimating Reassortment Networks with CoalRe</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Reassortment-Tutorial/" class="off">Estimating Reassortment Networks with CoalRe</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Nicola F. Müller
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/nicfel/Reassortment-Tutorial/commit/7ce8ebceea31bdbd9c379b062cd200405fa87527">
-				1 Apr 2022
-				</a>
-				by
-				<a class="off" href="https://github.com/tgvaughan">				
-				tgvaughan
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/LanguagePhylogenies/" class="off">Language Phylogenies</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/LanguagePhylogenies/" class="off">Using Babel to analyse linguistic data</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Simon J. Greenhill
-					
-			
-				
-						
-							and  Konstantin Hoffmann
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/KonstantinHoffmann/LanguagePhylogenies/commit/04c6a4a164e03bd24886625f33191e334ed9207e">
-				29 Jul 2019
-				</a>
-				by
-				<a class="off" href="https://github.com/KonstantinHoffmann">				
-				KonstantinHoffmann
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Mascot-Tutorial/" class="off">MASCOT v3.0.0 Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Mascot-Tutorial/" class="off">Parameter and State inference using the approximate structured coalescent</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Nicola F. Müller
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Mascot-Tutorial/commit/6d5b9b8e19ee78fcacc3f3632903672d759523cd">
-				2 Jun 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/jugne">				
-				jugne
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Molecular-Dating-Tutorial/" class="off">Molecular dating using heterochronous data and substitution model averaging</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Molecular-Dating-Tutorial/" class="off">Estimating the time of origin of the 2009 H1N1 pandemic in North America</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Sebastian Duchene
-					
-			
-				
-						,  Tim Vaughan
-				
-			
-				
-						
-							and  Veronika Boskova
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Molecular-Dating-Tutorial/commit/7962c1fb07bed1e415bc732ecf75c1df0e3acf54">
-				5 Nov 2018
-				</a>
-				by
-				<a class="off" href="https://github.com/tgvaughan">				
-				tgvaughan
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/adequacy_tutorial/" class="off">Model adequacy using BEAST2</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/adequacy_tutorial/" class="off">Assessing clock and substitution models</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						David Duchêne
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/duchene/adequacy_tutorial/commit/d91fb88ec94359166fe5fc3aafd5a9229ee73fd2">
-				9 Feb 2017
-				</a>
-				by
-				<a class="off" href="">				
-				Unknown
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/NS-tutorial/" class="off">Model selection</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/NS-tutorial/" class="off">Model selection with nested sampling</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Remco Bouckaert
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/sgtRoberty/NS-tutorial/commit/a481162683bf0af2d39798d13780bee2808849b4">
-				10 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/jugne">				
-				jugne
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Molecular-clock-dating-and-modelling-rate-variation/" class="off">Molecular clock dating and modelling rate variation</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Molecular-clock-dating-and-modelling-rate-variation/" class="off">Accounting for evolutionary rate variation in passerine birds</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Simon Ho
-					
-			
-				
-						
-							and Jacqueline Nguyen
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Molecular-clock-dating-and-modelling-rate-variation/commit/4839559db294ea6aa746e062757e456a4186d1a2">
-				11 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/laduplessis">				
-				laduplessis
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/MSBD-tutorial/" class="off">The MSBD package</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/MSBD-tutorial/" class="off">Inferring lineage-dependent birth and death rates</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Joëlle Barido-Sottani
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/bjoelle/MSBD-tutorial/commit/11da13c2068c8423255f8f2315d38fbf6a5fe3b4">
-				19 Jun 2025
-				</a>
-				by
-				<a class="off" href="">				
-				Unknown
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/PIQMEE-Tutorial/" class="off">PIQMEE Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/PIQMEE-Tutorial/" class="off">How to efficiently analyze large data sets containing duplicates</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Veronika Bošková
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/boskovav/PIQMEE-Tutorial/commit/b6051e191da19b952fd9eba445a4d895d5d499c5">
-				28 Feb 2022
-				</a>
-				by
-				<a class="off" href="https://github.com/boskovav">				
-				boskovav
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Prior-selection/" class="off">Prior selection</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Prior-selection/" class="off">Prior selection and clock calibration using Influenza A data.</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Veronika Bošková
-					
-			
-				
-						, Venelin Mitov
-				
-			
-				
-						
-							and Louis du Plessis
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Prior-selection/commit/38fd94b5eaee0fb56ad80d3e1b0fe028aa9a12db">
-				1 Jun 2026
-				</a>
-				by
-				<a class="off" href="https://github.com/sgtRoberty">				
-				sgtRoberty
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/SCOTTI-Tutorial/" class="off">SCOTTI Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/SCOTTI-Tutorial/" class="off">Transmission tree reconstruction with the structured coalescent</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Louis du Plessis
-					
-			
-				
-						
-							and Nicola de Maio
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/SCOTTI-Tutorial/commit/12254bfaf2ca38f8db7d8673b8eab744031b77d1">
-				24 Jul 2017
-				</a>
-				by
-				<a class="off" href="https://github.com/laduplessis">				
-				laduplessis
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Skyline-analyses-for-macroevolution/" class="off">Skyline analyses for macroevolution</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Skyline-analyses-for-macroevolution/" class="off">Estimating evolutionary parameters from species phylogenies</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Bethany J. Allen
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/86ce23519b976d2a0df401ea83cd206062e42b80">
-				15 Mar 2023
-				</a>
-				by
-				<a class="off" href="https://github.com/bethany-j-allen">				
-				bethany-j-allen
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Skyline-plots/" class="off">Skyline plots</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Skyline-plots/" class="off">Inference of past population dynamics using Bayesian Coalescent Skyline and Birth-Death Skyline plots.</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Nicola F. Müller
-					
-			
-				
-						
-							and Louis du Plessis
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Skyline-plots/commit/88760582fc27518227916e3115b57fd7cd2bff9c">
-				11 Jun 2024
-				</a>
-				by
-				<a class="off" href="https://github.com/tgvaughan">				
-				tgvaughan
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/BFD_snapper_tutorial/" class="off">Species Trees and Species Delimitation with SNAPPER</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/BFD_snapper_tutorial/" class="off">Analyzing SNP or AFLP data</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Adam Leaché
-					
-			
-				
-						
-							and  Remco Bouckaert
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/bjoelle/BFD_snapper_tutorial/commit/0d8e9bed18b64d5c21aafef4aedf79db2f3b8ab6">
-				6 Nov 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/bjoelle">				
-				bjoelle
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/starbeast2-tutorial/" class="off">StarBEAST2 v1.0.0 tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/starbeast2-tutorial/" class="off">Estimating species trees using StarBEAST2</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Huw A. Ogilvie
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/genomescale/starbeast2-tutorial/commit/21af15493a5cf564d064686526b03c54712bbd50">
-				15 Aug 2023
-				</a>
-				by
-				<a class="off" href="">				
-				Unknown
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/StarBeast3-Tutorial/" class="off">StarBeast3 Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/StarBeast3-Tutorial/" class="off">Estimating species trees using StarBeast3</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Ugne Stolz
-					
-			
-				
-						
-							and  Jordan Douglas
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/StarBeast3-Tutorial/commit/80ed599f8d385ef9a6f09c5e06dddf5dea3eda27">
-				16 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/laduplessis">				
-				laduplessis
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Structured-coalescent/" class="off">Structured coalescent</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Structured-coalescent/" class="off">Population structure using MultiTypeTree</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Nicola F. Müller
-					
-			
-				
-						
-							and Tim Vaughan
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Structured-coalescent/commit/27ed57077fe9d37618634c890f1ccd60abd86fec">
-				11 Aug 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/jugne">				
-				jugne
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Structured-birth-death-model/" class="off">Structured birth death model</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Structured-birth-death-model/" class="off">Population structure using the multi-type birth-death model</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Denise Kühnert
-					
-			
-				
-						
-							and  Jūlija Pečerska
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-model/commit/2b1076bd8f0a118453c06e2df64f4e91efd5d86f">
-				4 Jun 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/tgvaughan">				
-				tgvaughan
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Structured-birth-death-BDMM-Prime/" class="off">Structured birth death model with BDMM Prime</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Structured-birth-death-BDMM-Prime/" class="off">Population structure using the multi-type birth-death model</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Denise Kühnert
-					
-			
-				
-						,  Jūlija Pečerska
-				
-			
-				
-						,  Ugnė Stolz
-				
-			
-				
-						
-							and  Tim Vaughan
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Structured-birth-death-BDMM-Prime/commit/451ac3bdd4fc4036db6dc3929a88f2e41a4a9db8">
-				18 May 2026
-				</a>
-				by
-				<a class="off" href="https://github.com/tgvaughan">				
-				tgvaughan
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Substitution-model-averaging/" class="off">Substitution model averaging</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Substitution-model-averaging/" class="off">A tutorial using bModelTest</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						David A. Rasmussen
-					
-			
-				
-						, Carsten Magnus
-				
-			
-				
-						
-							and Remco Bouckaert
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Substitution-model-averaging/commit/5d2f29beb56fbefd9483bbaca46c4fbc3eefd4cf">
-				24 Jul 2023
-				</a>
-				by
-				<a class="off" href="https://github.com/laduplessis">				
-				laduplessis
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/TiDeTree-Tutorial/" class="off">TiDeTree Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/TiDeTree-Tutorial/" class="off">Reconstructing time-scaled single-cell phylogenies from genetic lineage tracing data</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Sophie Seidel
-					
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/laduplessis/TiDeTree-Tutorial/commit/e141b2fb13bd1b67675487e5b87241e73820638c">
-				15 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/laduplessis">				
-				laduplessis
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/MEP-tutorial/" class="off">Time stamped data</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/MEP-tutorial/" class="off">Time-stamped data</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Remco Bouckaert
-					
-			
-				
-						,  Walter Xie
-				
-			
-				
-						,  Fábio K. Mendes
-				
-			
-				
-						
-							and  Eva Li and Alexei Drummond
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/walterxie/MEP-tutorial/commit/e91e4763e48eb2db4a58a70240b18bcdedbd1e21">
-				3 Jul 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/walterxie">				
-				walterxie
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	</div>
-
-
-	
-
-		 
-			
-		<div class="row">
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Total-Evidence-Tutorial/" class="off">Total Evidence Tutorial</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Total-Evidence-Tutorial/" class="off">Inferring phylogenies using genetic sequences and morphological characters</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Bethany J. Allen
-					
-			
-				
-						
-							and Joëlle Barido-Sottani
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/e76886160a6f5b5b3eeae6ad047af1c7750443a2">
-				27 Aug 2025
-				</a>
-				by
-				<a class="off" href="">				
-				Unknown
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-		 
-			
-		
-	    			
-		<div class="col-md-4 tutorialbox"> 
-			<div class="head">
-				<a href="/tutorials/Visualizing-BEAST2-results/" class="off">Visualizing BEAST2 results in R</a>
-			</div>	
-			<div class="smallspacer"></div>
-			<div class="note">
-				<a href="/tutorials/Visualizing-BEAST2-results/" class="off">Tutorial on visualising results from BEAST2 analyses.</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote text-gray">
-			
-			
-				
-						Cecilia Valenzuela Agüí
-					
-			
-				
-						
-							and  Ugnė Stolz
-						
-					
-			
-			</div>
-			<div class="smallnote text-gray">
-				Updated
-				<a class="off" href="https://github.com/Taming-the-BEAST/Visualizing-BEAST2-results/commit/cd24ed430e6e6663a32ea49288bee98ed7052c83">
-				23 May 2025
-				</a>
-				by
-				<a class="off" href="https://github.com/jugne">				
-				jugne
-				</a>
-			</div>
-			<div class="bigspacer"></div>
-			<div class="spacer"></div>
-		</div>
-
-	   	
-
-
-	
-
-	</div>
-
-
-
 <hr>
-
 
 <p>If you found <strong>Taming the BEAST</strong> helpful in designing your research, please cite the following paper:</p>
 
 <p style="margin-left: 40px">
 Joëlle Barido-Sottani, Veronika Bošková, Louis du Plessis, Denise Kühnert, Carsten Magnus, Venelin Mitov, Nicola F. Müller, Jūlija Pečerska, David A. Rasmussen, Chi Zhang, Alexei J. Drummond, Tracy A. Heath, Oliver G. Pybus, Timothy G. Vaughan, Tanja Stadler (2018). Taming the BEAST – A community teaching material resource for BEAST 2. <em>Systematic Biology</em>, <em>67(1)</em>, 170–-174. doi: <a target="_blank" href="https://doi.org/10.1093/sysbio/syx060">10.1093/sysbio/syx060</a>
-</p> 
+</p>
+
+<!-- Tutorial filter (uses Pagefind API for full-text search) -->
+<script type="module" src="/js/tutorial-filter.js"></script>
 
 	
 	</div>
