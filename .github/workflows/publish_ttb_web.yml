@@ -34,10 +34,10 @@ jobs:
           ruby _scripts/update-and-preprocess.rb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the site
+      - name: Build and index the site
         run: |
           cd blotter
-          bundle exec jekyll build
+          npm run build
       - name: Check if _site was created
         run: |
           if [[ ${{ hashFiles('_site/') == '' }} ]];
