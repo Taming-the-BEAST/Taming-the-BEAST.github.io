@@ -29,6 +29,22 @@
     <link rel="stylesheet" href="/css/katex.css">
     <script src="/js/katex.min.js"></script>
 
+	<!-- Matomo -->
+	<script>
+  		var _paq = window._paq = window._paq || [];
+		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="https://matomo.sib.swiss/";
+    		_paq.push(['setTrackerUrl', u+'matomo.php']);
+    		_paq.push(['setSiteId', '244']);
+    		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    		g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  		})();
+	</script>
+	<!-- End Matomo Code -->
+	
 </head>
 
 
@@ -135,6 +151,27 @@
 		
 
 		<!-- Keywords -->
+		
+		<div class="smallnote" style="margin-top: 10px;">
+			<strong>Keywords:</strong>
+			
+			<span class="tag tag-keyword" style="background: #e9ecef; padding: 3px 6px; margin-right: 4px; border-radius: 3px; font-size: 10px;">
+				skyline
+			</span>
+			
+			<span class="tag tag-keyword" style="background: #e9ecef; padding: 3px 6px; margin-right: 4px; border-radius: 3px; font-size: 10px;">
+				fossilized birth-death
+			</span>
+			
+			<span class="tag tag-keyword" style="background: #e9ecef; padding: 3px 6px; margin-right: 4px; border-radius: 3px; font-size: 10px;">
+				coalescent
+			</span>
+			
+			<span class="tag tag-keyword" style="background: #e9ecef; padding: 3px 6px; margin-right: 4px; border-radius: 3px; font-size: 10px;">
+				diversification
+			</span>
+			
+		</div>
 		
 	</div>
 </div>
@@ -332,6 +369,16 @@
  				
 			<div class="smallspacer"></div>				
 			<div>
+				<a class="off" href="https://github.com/NicoNeureiter">
+    			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/2188796?v=4&s=50">
+    			<div class="handlebox" style="padding-left:5px;">
+    				NicoNeureiter
+    			</div>
+ 				</a>
+ 			</div>			
+ 				
+			<div class="smallspacer"></div>				
+			<div>
 				<a class="off" href="https://github.com/tgvaughan">
     			<img class="pull-left avatar" src="https://avatars.githubusercontent.com/u/512538?v=4&s=50">
     			<div class="handlebox" style="padding-left:5px;">
@@ -347,6 +394,24 @@
 		</div>		
 		<div class="pad-left smallnote">
 			<ul class="list-unstyled">
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/9c8339625389e6eedb8531dee9ceb96d02671cf2">
+					03 Sep 2026 - <span class="text-gray">Merge pull request #2 from NicoNeureiter/tutorial-metadata-migration
+
+Migrate README frontmatter to the new tutorial metadata schema</span>
+					</a> 
+				</li>
+			
+				<div class="smallspacer"></div>
+				<li> 
+					<i class="bi bi-check-square"></i>
+					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/4c3d1e1f636d59358c41e7a1977a95be6dc762f6">
+					27 Aug 2026 - <span class="text-gray">Migrate README frontmatter to the new tutorial metadata schema</span>
+					</a> 
+				</li>
 			
 				<div class="smallspacer"></div>
 				<li> 
@@ -372,22 +437,6 @@
 					</a> 
 				</li>
 			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/208f91fe9c3583d9a558e8da3ed306533146c0d3">
-					13 Mar 2023 - <span class="text-gray">Add time estimates</span>
-					</a> 
-				</li>
-			
-				<div class="smallspacer"></div>
-				<li> 
-					<i class="bi bi-check-square"></i>
-					<a class="off" href="https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/843b964d84c668c3608911f9f4fa841682a303ff">
-					13 Mar 2023 - <span class="text-gray">Fix mistake in R code</span>
-					</a> 
-				</li>
-			
 			</ul>
 		</div>		
 		<div class="spacer"></div>	
@@ -408,7 +457,7 @@
 
 <h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p><a href="http://www.beast2.org">BEAST2</a> is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST v2.6.6.</p>
+<p><a href="http://www.beast2.org">BEAST2</a> is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST v.</p>
 
 <h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
 
@@ -1521,12 +1570,24 @@ samplingRateChangeTimes="0 32.55 77.05 133.35"
 			     auto-weighted by level (h1 highest), so only these need boosting. -->
 			<h1 data-pagefind-meta="title" data-pagefind-weight="10" style="display:none;">Skyline analyses for macroevolution</h1>
 			
+			<div data-pagefind-weight="7" style="display:none;">skyline fossilized birth-death coalescent diversification</div>
+			
 			
 			
 			<div data-pagefind-weight="5" style="display:none;">Estimating evolutionary parameters from species phylogenies</div>
 			
 			
+			<span data-pagefind-filter="workflow" style="display:none;">Advanced analysis</span>
 			
+			
+			<span data-pagefind-filter="package" style="display:none;">BDSKY</span>
+			
+			<span data-pagefind-filter="package" style="display:none;">feast</span>
+			
+			
+			<span data-pagefind-filter="domain" style="display:none;">macroevolution</span>
+			
+			<span data-pagefind-filter="domain" style="display:none;">palaeontology</span>
 			
 
 			<p>
@@ -1540,7 +1601,7 @@ samplingRateChangeTimes="0 32.55 77.05 133.35"
 
 <h3 id="beast2---bayesian-evolutionary-analysis-sampling-trees-2">BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2</h3>
 
-<p><a href="http://www.beast2.org">BEAST2</a> is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST v2.6.6.</p>
+<p><a href="http://www.beast2.org">BEAST2</a> is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees <a class="citation" href="#Bouckaert2014">(Bouckaert et al., 2014)</a>. This tutorial uses the BEAST v.</p>
 
 <h3 id="beauti---bayesian-evolutionary-analysis-utility">BEAUti - Bayesian Evolutionary Analysis Utility</h3>
 

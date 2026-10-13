@@ -12,6 +12,90 @@
 		</image>
 				
 			<item>
+				<title>Total Evidence Tutorial</title>
+				<description>
+					Inferring phylogenies using genetic sequences and morphological characters
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Bethany J. Allen
+							
+					
+						
+								
+									and Joëlle Barido-Sottani
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/38dc8749569516529f9ca7d75902f9a0a369c4fb'
+					&gt;
+						3 Sep 2026
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen'
+					&gt;
+						bethany-j-allen
+					&lt;/a&gt;
+					: Merge pull request #5 from NicoNeureiter/tutorial-metadata-migration
+
+Migrate README frontmatter to the new tutorial metadata schema
+					&lt;br&gt;&lt;br&gt;
+					Level: 
+					
+				</description>
+				<pubDate>Thu, 03 Sep 2026 08:23:06 +0000</pubDate>
+				<category></category>
+				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
+			</item>
+				
+			<item>
+				<title>Skyline analyses for macroevolution</title>
+				<description>
+					Estimating evolutionary parameters from species phylogenies
+					&lt;br&gt;
+					By 
+					
+					
+						
+								Bethany J. Allen
+							
+								
+							
+					
+					&lt;br&gt;&lt;br&gt;
+					Updated on 
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/9c8339625389e6eedb8531dee9ceb96d02671cf2'
+					&gt;
+						3 Sep 2026
+					&lt;/a&gt;
+					by
+					&lt;a class=&apos;off&apos; href=
+						'https://github.com/bethany-j-allen'
+					&gt;
+						bethany-j-allen
+					&lt;/a&gt;
+					: Merge pull request #2 from NicoNeureiter/tutorial-metadata-migration
+
+Migrate README frontmatter to the new tutorial metadata schema
+					&lt;br&gt;&lt;br&gt;
+					Level: 
+					
+				</description>
+				<pubDate>Thu, 03 Sep 2026 08:21:34 +0000</pubDate>
+				<category></category>
+				<link>https://taming-the-beast.org//tutorials/Skyline-analyses-for-macroevolution/</link>
+				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-analyses-for-macroevolution/</guid>
+			</item>
+				
+			<item>
 				<title>Troubleshooting initialization issues</title>
 				<description>
 					Getting BEAST2 to start
@@ -227,48 +311,6 @@
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/BFD_snapper_tutorial/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/BFD_snapper_tutorial/</guid>
-			</item>
-				
-			<item>
-				<title>Total Evidence Tutorial</title>
-				<description>
-					Inferring phylogenies using genetic sequences and morphological characters
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Bethany J. Allen
-							
-					
-						
-								
-									and Joëlle Barido-Sottani
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bethany-j-allen/Total-Evidence-Tutorial/commit/e76886160a6f5b5b3eeae6ad047af1c7750443a2'
-					&gt;
-						27 Aug 2025
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						''
-					&gt;
-						Unknown
-					&lt;/a&gt;
-					: fixes
-					&lt;br&gt;&lt;br&gt;
-					Level: Intermediate
-					
-				</description>
-				<pubDate>Wed, 27 Aug 2025 12:34:33 +0000</pubDate>
-				<category>Intermediate</category>
-				<link>https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Total-Evidence-Tutorial/</guid>
 			</item>
 				
 			<item>
@@ -991,44 +1033,6 @@ updated for 2.7
 				<category>Intermediate</category>
 				<link>https://taming-the-beast.org//tutorials/Substitution-model-averaging/</link>
 				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Substitution-model-averaging/</guid>
-			</item>
-				
-			<item>
-				<title>Skyline analyses for macroevolution</title>
-				<description>
-					Estimating evolutionary parameters from species phylogenies
-					&lt;br&gt;
-					By 
-					
-					
-						
-								Bethany J. Allen
-							
-								
-							
-					
-					&lt;br&gt;&lt;br&gt;
-					Updated on 
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bethany-j-allen/Skyline-analyses-for-macroevolution/commit/86ce23519b976d2a0df401ea83cd206062e42b80'
-					&gt;
-						15 Mar 2023
-					&lt;/a&gt;
-					by
-					&lt;a class=&apos;off&apos; href=
-						'https://github.com/bethany-j-allen'
-					&gt;
-						bethany-j-allen
-					&lt;/a&gt;
-					: Remove citation section
-					&lt;br&gt;&lt;br&gt;
-					Level: Professional
-					
-				</description>
-				<pubDate>Wed, 15 Mar 2023 11:17:43 +0000</pubDate>
-				<category>Professional</category>
-				<link>https://taming-the-beast.org//tutorials/Skyline-analyses-for-macroevolution/</link>
-				<guid isPermaLink="true">https://taming-the-beast.org//tutorials/Skyline-analyses-for-macroevolution/</guid>
 			</item>
 				
 			<item>
