@@ -19,7 +19,7 @@ jobs:
         - ${{ github.workspace }}:/app
     steps:
       - name: Check out the blotter repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: Taming-the-BEAST/blotter
           token: ${{secrets.GITHUB_TOKEN}}
